@@ -19,25 +19,19 @@
   --warning: #f59e0b;
   --error: #ef4444;
   --text-muted: #64748b;
+  
+  /* Performance optimizations */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --font-display: swap;
+  --text-rendering: optimizeLegibility;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom theme variables */
-:root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --color-card: var(--card);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Optimize dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Modern Dark Theme */
     --background: #0f172a;
     --foreground: #f1f5f9;
     --primary: #3b82f6;
@@ -54,18 +48,234 @@
   }
 }
 
+/* Optimize font loading */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Inter.var.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Base styles with performance in mind */
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'kern';
+  font-feature-settings: 'kern';
+  font-kerning: normal;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Performance optimized images */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+/* Optimize media elements */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimized transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optimize scroll performance */
+.optimize-scrolling {
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+  overscroll-behavior: contain;
+}
+
+/* Optimize text rendering */
+h1, h2, h3, h4, h5, h6,
+p, a, li, span, small, strong, em {
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Enhanced scrollbar styling */
+/* Optimize focus states */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  transition: none;
+}
+
+/* Optimize selection */
+::selection {
+  background: var(--primary);
+  color: white;
+  text-shadow: none;
+}
+
+/* Optimize print styles */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4;
+    word-spacing: 1.1pt;
+    letter-spacing: 0.2pt;
+  }
+  
+  h2, h3, h4 {
+    page-break-after: avoid;
+  }
+  
+  img {
+    page-break-inside: avoid;
+  }
+}
+
+/* Optimize content visibility */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 5000px;
+}
+
+/* Optimize for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize focus states for keyboard navigation */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Optimize for touch devices */
+@media (hover: none) {
+  .hover\:bg-transparent:hover {
+    background-color: transparent;
+  }
+}
+
+/* Optimize print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print\:block {
+    display: block !important;
+  }
+  
+  .break-inside-avoid {
+    break-inside: avoid;
+  }
+}
+
+/* Optimize for high contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: #1a56db;
+    --error: #b91c1c;
+    --success: #047857;
+    --warning: #b45309;
+  }
+}
+
+/* Optimize for forced colors mode */
+@media (forced-colors: active) {
+  :root {
+    --primary: LinkText;
+    --error: LinkText;
+    --success: LinkText;
+    --warning: LinkText;
+  }
+  
+  button,
+  [role="button"],
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    forced-color-adjust: none;
+  }
+}
+
+/* Optimize scrollbar for WebKit/Blink browsers */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -75,27 +285,237 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
 
-/* Smooth transitions for better UX */
+/* Optimize for Firefox */
 * {
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) var(--muted);
 }
 
-/* Focus states for accessibility */
-:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
+/* Optimize for print */
+@page {
+  margin: 2cm;
 }
 
-/* Selection styling */
-::selection {
-  background: var(--primary);
-  color: white;
+@page :first {
+  margin-top: 0;
+}
+
+/* Optimize for print links */
+a {
+  text-decoration: underline;
+}
+
+a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-size: 0.8em;
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+/* Optimize for print buttons */
+button,
+[role="button"],
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 500;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Optimize for print forms */
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Optimize for print tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--muted);
+  font-weight: 600;
+}
+
+/* Optimize for print code blocks */
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+/* Optimize for print blockquotes */
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 0.25rem solid var(--border);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Optimize for print images */
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize for print SVG */
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+/* Optimize for print buttons */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 500;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Optimize for print forms */
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Optimize for print tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--muted);
+  font-weight: 600;
+}
+
+/* Optimize for print code blocks */
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+/* Optimize for print blockquotes */
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 0.25rem solid var(--border);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Optimize for print images */
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize for print SVG */
+svg {
+  overflow: hidden;
+  vertical-align: middle;
 }
 
 /* Input and placeholder styling - Force override */

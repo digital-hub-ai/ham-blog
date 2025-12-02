@@ -31,10 +31,23 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
+  {
+    key: 'Cache-Control',
+    value: 'public, max-age=31536000, immutable',
+  },
 ];
 
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   images: {
+    minimumCacheTTL: 60 * 60 * 24 * 7, // 1 week
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ['image/webp'],
     domains: ['www.google.com'],
     remotePatterns: [
       {
@@ -44,15 +57,15 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**', // This allows all domains - consider being more specific for production
+        hostname: '**',
       },
     ],
   },
   experimental: {
-    // Removed optimizeCss as it's causing build performance issues
+    optimizeCss: true,
+    scrollRestoration: true,
     optimizePackageImports: ['three', 'd3', 'framer-motion'],
   },
-  // Enable SWC minification
   swcMinify: true,
   // Enable static optimization for all pages
   reactStrictMode: true,

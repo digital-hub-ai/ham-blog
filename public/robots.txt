@@ -25,22 +25,40 @@ Disallow: /api/
 Disallow: /admin/
 Crawl-delay: 0.5
 Clean-param: ref /search/
-Clean-param: session /tools/
+# Global rules for all crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.json$
+Allow: /sitemap.xml
+Allow: /sitemap-*.xml
 
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Googlebot-Image specific rules
 User-agent: Googlebot-Image
+Allow: /images/
 Allow: /public/images/
 Disallow: /private/images/
 Allow: /*.jpg$
 Allow: /*.png$
 Allow: /*.gif$
 Allow: /*.webp$
+Allow: /*.svg$
 
+# Bingbot specific rules
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Crawl-delay: 1
-Request-rate: 10/1m
 
 User-agent: Applebot
 Allow: /
