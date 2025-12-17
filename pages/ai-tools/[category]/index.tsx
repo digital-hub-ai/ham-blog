@@ -2,8 +2,19 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FiArrowRight, FiSearch, FiFilter, FiArrowLeft } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  FiArrowRight, 
+  FiSearch, 
+  FiFilter, 
+  FiArrowLeft, 
+  FiGrid, 
+  FiList, 
+  FiStar, 
+  FiClock, 
+  FiTrendingUp,
+  FiX
+} from 'react-icons/fi';
 
 // Import categories data from data file
 import { categories } from '../../../data/categories';
@@ -33,11 +44,76 @@ interface Category {
   subcategories: Subcategory[];
 }
 
-const CategoryPage = () => {
+// Glass card component
+const GlassCard = ({ 
+  children, 
+  className = '', 
+  ...props 
+}: { 
+  children: React.ReactNode; 
+  className?: string; 
+  [key: string]: any 
+}) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    className={`bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg rounded-xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-purple-500/20 ${className}`}
+    whileHover={{ y: -5, scale: 1.02 }}
+    {...props}
+  >
+    {children}
+  </motion.div>
+);
+
+// Filter chips component
+const FilterChip = ({ 
+  label, 
+  active, 
+  onClick,
+  icon: Icon 
+}: { 
+  label: string; 
+  active: boolean; 
+  onClick: () => void;
+  icon: React.ComponentType<{ size?: number }>;
+}) => (
+  <button
+    onClick={onClick}
+    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+      active 
+        ? 'bg-purple-600 text-white' 
+        : 'bg-white/5 text-gray-300 hover:bg-white/10'
+    }`}
+  >
+    <Icon size={16} />
+    {label}
+  </button>
+);
+
+export default function CategoryPage() {
   const router = useRouter();
   const { category: categorySlug } = router.query;
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredSubcategories, setFilteredSubcategories] = useState<Subcategory[]>([]);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [activeFilter, setActiveFilter] = useState('all');
+  const [hoveredSubcategory, setHoveredSubcategory] = useState('');
+
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
 
   // Find the current category with more robust matching
   const normalizeString = (str: string) => {
@@ -219,32 +295,33 @@ const CategoryPage = () => {
               className="block"
             >
               <motion.div 
-                className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 h-full"
+                className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 h-full flex flex-col"
                 whileHover={{ y: -5 }}
               >
-                <div className="flex items-center mb-3">
-                  {subcategory.favicon && (
-                    <span className="text-2xl mr-3">{subcategory.favicon}</span>
-                  )}
-                  <h2 className="text-xl font-semibold">{subcategory.name}</h2>
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center text-2xl mr-3">
+                    {category.icon || subcategory.name.charAt(0).toUpperCase()}
+                  </div>
+                  <h3 className="text-xl font-semibold">{subcategory.name}</h3>
                 </div>
-                <div className="flex justify-between items-center text-sm text-gray-400">
-                  <span>{subcategory.tools?.length || 0} tools available</span>
-                  <FiArrowRight className="ml-2" />
+                <p className="text-sm text-gray-400 mt-2">
+                  {subcategory.tools?.length || 0} tools available
+                </p>
+                <div className="mt-4 pt-4 border-t border-white/10">
+                  <span className="inline-flex items-center text-sm text-blue-400">
+                    Explore <FiArrowRight className="ml-1" />
+                  </span>
                 </div>
               </motion.div>
             </Link>
           ))}
+          {filteredSubcategories.length === 0 && (
+            <div className="col-span-full text-center py-12">
+              <p className="text-gray-400">No subcategories found matching your search.</p>
+            </div>
+          )}
         </div>
-
-        {filteredSubcategories.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-400">No subcategories found matching your search.</p>
-          </div>
-        )}
       </div>
     </div>
   );
 };
-
-export default CategoryPage;

@@ -1,4 +1,4 @@
-﻿// This file is auto-generated. Do not edit manually.
+// This file is auto-generated. Do not edit manually.
 import { v4 as uuidv4 } from 'uuid';
 
 export const tools = [
@@ -821,7 +821,7 @@ export const tools = [
     "subcategory": "Livestock Monitoring",
     "rating": 4.4,
     "description": "Rumen monitoring system that provides real-time data on cow health and nutrition.",
-    "pricing": "Â£1,500 - Â£2,500 per unit",
+    "pricing": "£1,500 - £2,500 per unit",
     "tags": ["Rumen Monitoring", "Dairy Health", "Nutrition Management", "Fertility Tracking"],
     "url": "https://ecow.co.uk/",
     "favicon": "https://ecow.co.uk/favicon.ico"
@@ -1558,7 +1558,7 @@ export const tools = [
   },
   {
     "id": "pd-rb-006",
-    "name": "AgapÃ©",
+    "name": "Agapé",
     "category": "AI for Personal Development",
     "subcategory": "Relationship Building",
     "rating": 4.6,
@@ -2632,7 +2632,7 @@ export const tools = [
     "category": "AI for Real Estate",
     "subcategory": "Virtual Tours",
     "rating": 4.4,
-    "description": "AI-powered 360Â° virtual tour platform for real estate professionals with automated measurement tools.",
+    "description": "AI-powered 360° virtual tour platform for real estate professionals with automated measurement tools.",
     "pricing": "From $29/month",
     "tags": ["Virtual Tours", "Floor Plans", "Property Measurement", "Real Estate Tech"],
     "url": "https://www.eyespy360.com",
@@ -2893,7 +2893,7 @@ export const tools = [
     "subcategory": "SEO & Analytics",
     "rating": 4.8,
     "description": "SEO tool for crawling websites to analyze technical SEO issues and gather data.",
-    "pricing": "Free, Pro version Â£149/year",
+    "pricing": "Free, Pro version £149/year",
     "tags": ["SEO Spider", "Website Crawler", "Technical SEO", "Site Audit"],
     "url": "https://www.screamingfrog.co.uk/seo-spider/",
     "favicon": "https://www.screamingfrog.co.uk/favicon.ico"
@@ -21953,6 +21953,7 @@ export const tools = [
   },
   {
     "id": "retail-008",
+    "name": "PersonalizeShop AI",
     "category": "AI for Retail & E-commerce",
     "subcategory": "Personalization",
     "rating": 4.8,
@@ -41004,6 +41005,7 @@ export const tools = [
   },
   {
     "id": "retail-008",
+    "name": "PersonalizeShop AI",
     "category": "AI for Retail & E-commerce",
     "subcategory": "Personalization",
     "rating": 4.8,
