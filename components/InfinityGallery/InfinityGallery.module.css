@@ -1,0 +1,172 @@
+.infinityGallery {
+  position: relative;
+  width: 100%;
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #0a0a0f 0%, #151520 100%);
+  overflow: hidden;
+}
+
+.segmentWrapper {
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.segment {
+  position: relative;
+  min-height: 80vh;
+  padding: 4rem;
+  border-radius: 12px;
+  background: rgba(20, 20, 30, 0.8);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.segment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+}
+
+.segmentHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.segmentHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 1rem 0;
+  background: linear-gradient(90deg, #fff, #00f3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.segmentHeader p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.5rem 0 0;
+}
+
+.luxuryBadge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #00f3ff, #9d4edd);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+/* Ribbon Connector */
+.ribbonConnector {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.connectorLine {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #FFD700,
+    #C0C0C0,
+    #FFD700,
+    transparent
+  );
+  transform: translateY(-50%);
+  animation: flowAlong 3s infinite linear;
+}
+
+.connectorOrnament {
+  position: relative;
+  color: #FFD700;
+  font-size: 1.5rem;
+  text-shadow: 0 0 20px #FFD700;
+  background: #0a0a0f;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+/* Segment-specific styles */
+.museumSegment {
+  /* Add specific museum styles */
+}
+
+.comparisonSegment {
+  /* Add specific comparison styles */
+}
+
+.librarySegment {
+  /* Add specific library styles */
+}
+
+.starfieldSegment {
+  /* Add specific starfield styles */
+}
+
+/* Animations */
+@keyframes flowAlong {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .segment {
+    padding: 2rem 1rem;
+    min-height: 60vh;
+  }
+  
+  .segmentHeader h2 {
+    font-size: 1.8rem;
+  }
+  
+  .segmentHeader p {
+    font-size: 1rem;
+  }
+  
+  .ribbonConnector {
+    height: 60px;
+  }
+}
+
+/* Glass morphism effect */
+.segment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: -1;
+}

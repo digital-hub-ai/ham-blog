@@ -1,1175 +1,853 @@
+import React, { useState, useEffect, useRef } from "react";
+import Head from "next/head";
+import dynamic from 'next/dynamic';
 
-import { useState, useEffect, useCallback } from "react";
-import { default as NextHead } from "next/head";
-import Link from "next/link";
-import { categories } from "../data/categories";
-import { tools } from "../data/tools";
-import CategoryCard from "../components/CategoryCard";
-import { ToolCard } from "../components/ToolCard";
-import SmartSearch from "../components/SmartSearch/SmartSearch";
-import { Tool } from "../types/tool";
-import Disclaimer from '../components/Disclaimer';
+// Dynamically import components with no SSR
+const InfinityStream = dynamic(
+  () => import('../components/InfinityStream'),
+  { ssr: false }
+);
 
-export default function Home() {
-  const [search, setSearch] = useState("");
-  const [pricing, setPricing] = useState<string[]>([]);
-  const [minRating, setMinRating] = useState(0);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+// Dynamically import the CelestialNexus component with no SSR
+const CelestialNexus = dynamic(
+  () => import('../components/CelestialNexus'),
+  { ssr: false }
+);
+
+// Dynamically import the LuminaCore component with no SSR
+const LuminaCore = dynamic(
+  () => import('../components/LuminaCore'),
+  { ssr: false }
+);
+
+// Dynamically import the InfinityGallery component with no SSR
+const InfinityGallery = dynamic(
+  () => import('../components/InfinityGallery'),
+  { ssr: false }
+);
+
+export default function OrbitalBlogCosmos() {
+  const [isClient, setIsClient] = useState(false);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [biometricStatus, setBiometricStatus] = useState("SCANNING");
-  const [toolOfDestiny, setToolOfDestiny] = useState("Augmented Reality Core");
-  const [liveStats, setLiveStats] = useState({
-    professionals: "4.8M+",
-    toolsForged: "1,000+",
-    newToolTime: "47",
-    seoWeapon: "Backlink Annihilator"
-  });
-  
-  // Engagement tracking state
-  const [timeSpent, setTimeSpent] = useState(0);
-  const [toolsViewed, setToolsViewed] = useState<string[]>([]);
-  const [achievements, setAchievements] = useState<string[]>([]);
+  const [time, setTime] = useState(new Date());
+  const [activePlanet, setActivePlanet] = useState(null);
+  const canvasRef = useRef(null);
+  const orbitCanvasRef = useRef(null);
 
-  // Type guard to check if a tool is valid
-  const isValidTool = (tool: any): tool is Tool => {
-    return tool && 
-           typeof tool === 'object' &&
-           'id' in tool &&
-           'name' in tool &&
-           'category' in tool &&
-           'subcategory' in tool &&
-           'description' in tool &&
-           'pricing' in tool &&
-           'tags' in tool &&
-           'url' in tool;
-  };
+  const texts = [
+    "Orbit Through Infinite Blogging Galaxies",
+    "Navigate 100,000+ Cosmic Articles", 
+    "Command the Ultimate Storytelling Engine",
+    "Shape the Future of Digital Narratives"
+  ];
 
-  // Filter out invalid tools
-  const validTools = tools.filter(isValidTool);
-
+  // Set isClient to true after component mounts
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    setIsClient(true);
+  }, []);
+
+  // Update time every second
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Mouse tracking for interactive effects
+  useEffect(() => {
+    const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
+    
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
-    // Biometric initiation sequence
-    setTimeout(() => {
-      setBiometricStatus("AUTHORIZED");
-      setIsLoaded(true);
-    }, 2000);
-
-    // Live stats updates
-    const statsInterval = setInterval(() => {
-      setLiveStats(prev => ({
-        ...prev,
-        professionals: `${(4.8 + Math.random() * 0.1).toFixed(1)}M+`,
-        newToolTime: `${Math.floor(40 + Math.random() * 20)}`
-      }));
-    }, 3000);
-
-    // Time tracking for engagement
-    const timeInterval = setInterval(() => {
-      setTimeSpent(prev => prev + 1);
+  // Typewriter effect
+  useEffect(() => {
+    const handleType = () => {
+      const i = loopNum % texts.length;
+      const fullText = texts[i];
       
-      // Award achievements based on time spent
-      if (timeSpent === 60 && !achievements.includes('1_minute_explorer')) {
-        setAchievements(prev => [...prev, '1_minute_explorer']);
+      setCurrentText(
+        isDeleting 
+          ? fullText.substring(0, currentText.length - 1)
+          : fullText.substring(0, currentText.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 50 : 150);
+
+      if (!isDeleting && currentText === fullText) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && currentText === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
       }
-      if (timeSpent === 300 && !achievements.includes('5_minute_researcher')) {
-        setAchievements(prev => [...prev, '5_minute_researcher']);
-      }
-    }, 1000);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
-      clearInterval(statsInterval);
-      clearInterval(timeInterval);
     };
-  }, [timeSpent, achievements]);
 
-  // Enhanced filter function with support for natural language queries
-  const filterTools = useCallback((searchQuery: string, filters: any) => {
-    const q = searchQuery.toLowerCase().trim();
-    
-    // Extract potential filters from natural language query
-    const priceKeywords = {
-      free: 'Free',
-      freemium: 'Freemium',
-      paid: 'Paid',
-      contact: 'Contact',
-      'open source': 'Open Source'
-    };
-    
-    // Check if query contains any price keywords
-    const priceInQuery = Object.entries(priceKeywords).find(([key]) => 
-      q.includes(key)
-    )?.[1];
-    
-    // Check for rating in query (e.g., "4 star tools")
-    const ratingMatch = q.match(/(\d+)\s*(?:star|★|⭐)/i);
-    const ratingInQuery = ratingMatch ? parseInt(ratingMatch[1], 10) : null;
-    
-    // Extract tags from query (words starting with #)
-    const tagsInQuery = q.match(/#(\w+)/g)?.map(tag => tag.slice(1).toLowerCase()) || [];
-    
-    return validTools.filter((tool) => {
-      // Additional safety check
-      if (!tool) return false;
-      
-      // Apply search query - add safety checks for potentially undefined properties
-      const matchesSearch = q === '' || 
-        (tool.name && tool.name.toLowerCase().includes(q)) ||
-        (tool.description && tool.description.toLowerCase().includes(q)) ||
-        (tool.tags && tool.tags.some(tag => 
-          tag.toLowerCase().includes(q) ||
-          q.includes(tag.toLowerCase())
-        ));
-      
-      // Apply filters from UI
-      const matchesPricing = filters.pricing.length === 0 || 
-        (priceInQuery ? 
-          tool.pricing === priceInQuery : 
-          filters.pricing.includes(tool.pricing)
-        );
-        
-      const minRatingValue = ratingInQuery || filters.minRating;
-      const matchesRating = minRatingValue === 0 || (tool.rating || 0) >= minRatingValue;
-      
-      const tagsToCheck = [...(filters.tags || []), ...tagsInQuery];
-      const matchesTags = tagsToCheck.length === 0 || 
-        (tool.tags && tagsToCheck.every(tag => 
-          tool.tags.some(t => t.toLowerCase() === tag.toLowerCase())
-        ));
-      
-      return matchesSearch && matchesPricing && matchesRating && matchesTags;
-    });
-  }, [validTools]);
-  
-  // Filter tools based on search and filters
-  const filteredTools = filterTools(search, { pricing, minRating, tags: selectedTags });
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, loopNum, texts, typingSpeed]);
 
-  const allTags = Array.from(new Set(validTools.reduce<string[]>((acc, tool) => {
-    if (tool && tool.tags) {
-      acc.push(...tool.tags);
+  // Advanced orbital particle system
+  useEffect(() => {
+    if (!isClient) return; // Only run on client side
+    
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const particles = [];
+    const particleCount = 300;
+    
+    // Create orbital particles with physics
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        z: Math.random() * 1000,
+        radius: Math.random() * 2 + 1,
+        speed: Math.random() * 0.5 + 0.1,
+        angle: Math.random() * Math.PI * 2,
+        hue: Math.random() * 360,
+        opacity: Math.random() * 0.8 + 0.2,
+        orbitRadius: Math.random() * 200 + 50,
+        orbitAngle: Math.random() * Math.PI * 2,
+        orbitSpeed: Math.random() * 0.02 + 0.005
+      });
     }
-    return acc;
-  }, [])));
+    
+    let animationFrameId;
+    
+    const render = () => {
+      // Semi-transparent clear for trail effect
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      particles.forEach(particle => {
+        // Update orbital motion
+        particle.orbitAngle += particle.orbitSpeed;
+        particle.x = canvas.width/2 + Math.cos(particle.orbitAngle) * particle.orbitRadius;
+        particle.y = canvas.height/2 + Math.sin(particle.orbitAngle) * particle.orbitRadius;
+        
+        // Draw particle with glow effect
+        const gradient = ctx.createRadialGradient(particle.x, particle.y, 0, particle.x, particle.y, particle.radius * 3);
+        gradient.addColorStop(0, `hsla(${particle.hue}, 100%, 80%, ${particle.opacity})`);
+        gradient.addColorStop(1, `hsla(${particle.hue}, 100%, 50%, 0)`);
+        
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+      });
+      
+      animationFrameId = requestAnimationFrame(render);
+    };
+    
+    render();
+    
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isClient]);
+
+  // Orbital blog visualization
+  useEffect(() => {
+    if (!isClient) return; // Only run on client side
+    
+    const orbitCanvas = orbitCanvasRef.current;
+    if (!orbitCanvas) return;
+    
+    const ctx = orbitCanvas.getContext('2d');
+    orbitCanvas.width = 500;
+    orbitCanvas.height = 500;
+    
+    const centerX = orbitCanvas.width / 2;
+    const centerY = orbitCanvas.height / 2;
+    
+    // Planet data
+    const planets = [
+      { name: "Story", radius: 20, distance: 80, color: "#FF6B6B", speed: 0.01, articles: "15K" },
+      { name: "Tech", radius: 25, distance: 130, color: "#4ECDC4", speed: 0.008, articles: "22K" },
+      { name: "Life", radius: 18, distance: 180, color: "#FFE66D", speed: 0.006, articles: "18K" },
+      { name: "Art", radius: 22, distance: 230, color: "#6A0572", speed: 0.004, articles: "12K" },
+      { name: "Science", radius: 28, distance: 280, color: "#1A936F", speed: 0.003, articles: "25K" }
+    ];
+    
+    let angles = planets.map(() => Math.random() * Math.PI * 2);
+    
+    const drawOrbit = () => {
+      ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+      
+      // Draw central star (blog platform)
+      const starGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 40);
+      starGradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+      starGradient.addColorStop(1, 'rgba(255, 215, 0, 0)');
+      ctx.fillStyle = starGradient;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, 40, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Draw orbit paths
+      planets.forEach(planet => {
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, planet.distance, 0, Math.PI * 2);
+        ctx.stroke();
+      });
+      
+      // Draw planets
+      planets.forEach((planet, index) => {
+        angles[index] += planet.speed;
+        const x = centerX + Math.cos(angles[index]) * planet.distance;
+        const y = centerY + Math.sin(angles[index]) * planet.distance;
+        
+        // Planet glow
+        const planetGlow = ctx.createRadialGradient(x, y, 0, x, y, planet.radius * 2);
+        planetGlow.addColorStop(0, planet.color);
+        planetGlow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = planetGlow;
+        ctx.beginPath();
+        ctx.arc(x, y, planet.radius * 2, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Planet body
+        ctx.fillStyle = planet.color;
+        ctx.beginPath();
+        ctx.arc(x, y, planet.radius, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Planet ring for Science
+        if (planet.name === "Science") {
+          ctx.strokeStyle = 'rgba(63, 221, 174, 0.5)';
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.ellipse(x, y, planet.radius * 1.5, planet.radius * 0.3, angles[index], 0, Math.PI * 2);
+          ctx.stroke();
+        }
+        
+        // Planet label
+        ctx.fillStyle = 'white';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(planet.name, x, y + planet.radius + 20);
+        ctx.font = '10px Arial';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+        ctx.fillText(`${planet.articles} articles`, x, y + planet.radius + 35);
+      });
+      
+      // Draw connections between planets
+      for (let i = 0; i < planets.length; i++) {
+        for (let j = i + 1; j < planets.length; j++) {
+          const planet1 = planets[i];
+          const planet2 = planets[j];
+          const x1 = centerX + Math.cos(angles[i]) * planet1.distance;
+          const y1 = centerY + Math.sin(angles[i]) * planet1.distance;
+          const x2 = centerX + Math.cos(angles[j]) * planet2.distance;
+          const y2 = centerY + Math.sin(angles[j]) * planet2.distance;
+          
+          // Draw connection line with gradient
+          const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
+          gradient.addColorStop(0, planets[i].color);
+          gradient.addColorStop(1, planets[j].color);
+          ctx.strokeStyle = gradient;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.stroke();
+        }
+      }
+    };
+    
+    const interval = setInterval(drawOrbit, 50);
+    return () => clearInterval(interval);
+  }, [isClient]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <NextHead>
-        <title>Cerebrum - The AI Search Engine & Intelligence Platform</title>
-        <meta name="description" content="The world's most advanced search engine and real-time intelligence platform exclusively for Artificial Intelligence. Discover, compare, and master 1000+ AI tools across all industries." />
+    <div className="w-full relative overflow-hidden bg-black rounded-xl shadow-2xl">
+      <Head>
+        <title>Orbital Blog Cosmos - World's Largest Blogging Platform</title>
+        <meta name="description" content="Navigate through infinite blogging galaxies with our orbital knowledge engine" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="AI tools, artificial intelligence, machine learning, digital tools, productivity tools, AI directory, image generation, writing tools, video animation" />
-        <meta name="author" content="AI Vault Team" />
-        <link rel="canonical" href="https://aether-nexus.vercel.app" />
-        <link rel="alternate" hrefLang="en-US" href="https://aether-nexus.vercel.app" />
-        <link rel="alternate" hrefLang="x-default" href="https://aether-nexus.vercel.app" />
-        
-        {/* Search Engine Verification Tags */}
-        <meta name="google-site-verification" content="_xAnSYTjZ9yWZeJ4e2YXlHtZ7Of6p3A5TFCMbgDeO-I" />
-        <meta name="msvalidate.01" content="843BA93192F072AE3F606EF8C86137D2" />
-        
-        {/* Open Graph meta tags */}
-        <meta property="og:title" content="AI Tools Directory - Digital Superorganism" />
-        <meta property="og:description" content="Discover 1000+ battle-tested AI tools across 300+ categories. Find the perfect AI solutions for writing, image generation, video animation, productivity, and more." />
-        <meta property="og:url" content="https://aether-nexus.vercel.app" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="AI Tools Directory" />
-        <meta property="og:image" content="/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="AI Tools Directory" />
-        
-        {/* Twitter meta tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Tools Directory - Digital Superorganism" />
-        <meta name="twitter:description" content="Discover 1000+ battle-tested AI tools across 300+ categories. Find the perfect AI solutions for writing, image generation, video animation, productivity, and more." />
-        <meta name="twitter:image" content="/twitter-image.jpg" />
-        <meta name="twitter:site" content="@aitoolsdirectory" />
-        
-        {/* Structured Data - Organization */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "AI Tools Directory",
-            "url": "https://aether-nexus.vercel.app",
-            "logo": "https://aether-nexus.vercel.app/logo.png",
-            "sameAs": [
-              "https://twitter.com/aitoolsdirectory",
-              "https://www.linkedin.com/company/aitoolsdirectory",
-              "https://www.facebook.com/aitoolsdirectory"
-            ],
-            "description": "Comprehensive directory of AI tools with detailed comparisons, user reviews, and expert recommendations to help you find the perfect AI solution."
-          })}
-        </script>
-        
-        {/* Structured Data - Website */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "AI Tools Directory",
-            "url": "https://aether-nexus.vercel.app",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://aether-nexus.vercel.app/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          })}
-        </script>
-        
-        {/* Structured Data - Breadcrumb */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://aether-nexus.vercel.app"
-            }]
-          })}
-        </script>
-        
-        {/* Structured Data - FAQ for Answer Engine Optimization */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What are the best AI tools for content creation?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Our directory features top AI tools for content creation including ChatGPT for writing, Midjourney for image generation, and Runway ML for video editing. Each tool is rated and reviewed by our expert team to help you find the perfect solution for your content needs."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do I choose the right AI tool for my business?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Consider your specific needs, budget, and technical requirements. Our AI Tools Directory categorizes tools by function, pricing, and user ratings. Use our smart search and filtering features to find tools that match your exact requirements."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What are the latest AI tools in 2025?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "2025 has seen breakthrough AI tools in areas like agentic AI, multimodal models, and specialized industry solutions. Our 'New Tools' section highlights the latest additions to our directory with detailed reviews and comparisons."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Which AI tools are best for SEO optimization?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "For SEO optimization, we recommend tools like Surfer SEO for content optimization, Ahrefs for backlink analysis, SEMrush for keyword research, and Frase for AI-powered content creation. These tools help improve search rankings and drive organic traffic to your website."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What AI tools can help with social media management?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Popular AI tools for social media management include Hootsuite for scheduling and analytics, Buffer for content planning, Later for visual content management, and Chatfuel for AI chatbots. These tools automate posting, analyze performance, and engage with your audience more effectively."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How can AI improve email marketing campaigns?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "AI enhances email marketing through personalized content generation with tools like Persado, automated segmentation with Seventh Sense, send time optimization with SendGrid, and subject line optimization with Phrasee. These tools increase open rates, engagement, and conversions."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What are the top AI tools for video editing?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Leading AI video editing tools include Runway ML for AI-powered effects, Descript for transcription and editing, Pictory for automatic video creation from text, and Synthesia for AI avatar videos. These tools simplify the editing process and enable non-experts to create professional-quality videos."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Which AI tools are best for customer service?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Top AI customer service tools include Zendesk for ticket management with AI suggestions, Intercom for live chat bots, Drift for conversational marketing, and Freshdesk for automated responses. These tools reduce response times and improve customer satisfaction through 24/7 availability."
-                }
-              }
-            ]
-          })}
-        </script>
-      </NextHead>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      {/* Ultra-Premium Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        {/* Dynamic Mouse-Following Gradient */}
+      {/* Orbital Particle Canvas */}
+      <canvas 
+        ref={canvasRef} 
+        className="absolute inset-0 z-0"
+        style={{ display: isClient ? 'block' : 'none' }}
+      />
+
+      {/* Deep Space Background */}
+      <div className="absolute inset-0 z-10">
+        <div className="absolute inset-0 bg-gradient-radial from-black via-purple-900/5 to-black"></div>
+        
+        {/* Nebula effects */}
         <div 
-          className="absolute w-[800px] h-[800px] rounded-full blur-3xl opacity-30 transition-all duration-1000 ease-out"
-          style={{
-            left: mousePosition.x - 400,
-            top: mousePosition.y - 400,
-            background: `radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(147, 51, 234, 0.3) 25%, rgba(236, 72, 153, 0.3) 50%, rgba(34, 197, 94, 0.3) 75%, rgba(59, 130, 246, 0.3) 100%)`,
-            transform: `translate(${scrollY * 0.1}px, ${scrollY * 0.05}px)`
+          className="absolute w-96 h-96 bg-blue-500/3 rounded-full blur-3xl animate-pulse"
+          style={{ 
+            top: `${30 + Math.sin(time.getSeconds() * 0.05) * 20}%`,
+            left: `${30 + Math.cos(time.getSeconds() * 0.05) * 20}%`,
           }}
-        />
-        
-        {/* Floating Orbs */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-green-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
-            backgroundSize: '50px 50px',
-            animation: 'grid-move 20s linear infinite'
-          }}></div>
-        </div>
-
-        {/* Particle System */}
-        <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white/20 rounded-full animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${5 + Math.random() * 10}s`
-              }}
-            />
-          ))}
-        </div>
+        ></div>
+        <div 
+          className="absolute w-80 h-80 bg-purple-500/3 rounded-full blur-3xl animate-pulse"
+          style={{ 
+            top: `${70 + Math.sin(time.getSeconds() * 0.07) * 15}%`,
+            right: `${30 + Math.cos(time.getSeconds() * 0.07) * 15}%`,
+            animationDelay: "1s"
+          }}
+        ></div>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative z-10">
-        {/* THE ASCENSION PORTAL - Biometric Initiation */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Biometric Scanner Overlay */}
-          <div className={`absolute inset-0 flex items-center justify-center z-20 transition-all duration-2000 ${isLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-            <div className="text-center">
-              <div className="w-32 h-32 border-4 border-blue-500 rounded-full flex items-center justify-center mb-8 animate-pulse">
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-4xl">👁️</span>
-                </div>
-              </div>
-              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                BIOMETRIC INITIATION
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">{biometricStatus}</p>
-              <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse"></div>
-              </div>
+      {/* Interactive Cursor Orbital Effect */}
+      <div 
+        className="absolute w-64 h-64 rounded-full bg-gradient-radial from-blue-500/5 to-transparent pointer-events-none z-10 transition-all duration-700 ease-out"
+        style={{
+          left: mousePosition.x - 128,
+          top: mousePosition.y - 128,
+          display: isClient ? 'block' : 'none'
+        }}
+      ></div>
+
+      {/* Main Content */}
+      <div className="relative z-20 min-h-screen flex flex-col items-center justify-center p-4 text-center">
+        {/* Orbital Portal Entrance */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          {/* Orbital rings */}
+          <div 
+            className="absolute w-[700px] h-[700px] rounded-full border border-blue-500/10 animate-spin-slow"
+            style={{ animationDuration: "40s" }}
+          ></div>
+          <div 
+            className="absolute w-[500px] h-[500px] rounded-full border border-purple-500/10 animate-spin-slow"
+            style={{ animationDuration: "30s", animationDirection: "reverse" }}
+          ></div>
+          <div 
+            className="absolute w-[300px] h-[300px] rounded-full border border-indigo-500/10 animate-spin-slow"
+            style={{ animationDuration: "20s" }}
+          ></div>
+          
+          {/* Central energy core */}
+          <div 
+            className="absolute w-48 h-48 rounded-full bg-gradient-radial from-yellow-400/20 via-orange-500/10 to-transparent animate-pulse"
+            style={{
+              transform: `scale(${1 + Math.sin(time.getSeconds() * 3) * 0.1})`
+            }}
+          ></div>
+        </div>
+
+        <main className="flex flex-col items-center justify-center w-full max-w-7xl">
+          {/* Orbital Greeting */}
+          <div className="mb-16 relative">
+            <h1 className="text-6xl md:text-8xl font-black text-white mb-10 animate-fade-in-drop-orbital">
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">Orbital</span> Blog <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 bg-clip-text text-transparent">Cosmos</span>
+            </h1>
+            
+            <div className="h-24 md:h-32 flex items-center justify-center mb-8">
+              <p className="text-4xl md:text-5xl text-gray-100 font-extralight tracking-wider animate-text-shine">
+                {currentText}
+                <span className="ml-2 animate-blink-orbital">|</span>
+              </p>
+            </div>
+            
+            <p className="text-2xl text-gray-200 mt-6 max-w-4xl mx-auto font-light tracking-wider">
+              Navigate through{" "}
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 animate-pulse">100,000+</span>{" "}
+              cosmic articles across infinite blogging galaxies
+            </p>
+            
+            {/* Real-time cosmic clock */}
+            <div className="mt-8 text-lg text-gray-400 font-mono">
+              Galactic Time: {time.toLocaleTimeString()}
             </div>
           </div>
 
-          {/* Hero Background Effects */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-gradient-x"></div>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
-          </div>
-
-          <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-            {/* Main Title with Ultra-Premium Animation */}
-            <div className={`transition-all duration-2000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-              <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-text-shine drop-shadow-2xl" style={{textShadow: '0 0 30px rgba(59, 130, 246, 0.8)'}}>
-                  CEREBRUM
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent animate-text-shine-delayed drop-shadow-2xl" style={{textShadow: '0 0 30px rgba(168, 85, 247, 0.8)'}}>
-                  AI INTELLIGENCE PLATFORM
-                </span>
-              </h1>
-              
-              {/* Subtitle with Premium Typography */}
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-bold" style={{textShadow: '0 0 20px rgba(59, 130, 246, 0.6)'}}>Neural Search Engine</span> – 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300 font-bold" style={{textShadow: '0 0 20px rgba(59, 130, 246, 0.6)'}}> Real-Time AI Ecosystem Intelligence</span>
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 font-bold" style={{textShadow: '0 0 20px rgba(168, 85, 247, 0.6)'}}>1,000+ AI Tools - Intent-Based Discovery</span>
-              </p>
-
-              {/* Neural Search Features */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-4xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                  <div className="text-2xl mb-2">🧠</div>
-                  <h3 className="font-bold text-lg mb-1">Neural Search</h3>
-                  <p className="text-sm text-gray-300">Conversational query input with real-time suggestions</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                  <div className="text-2xl mb-2">🔍</div>
-                  <h3 className="font-bold text-lg mb-1">Multi-Modal Search</h3>
-                  <p className="text-sm text-gray-300">Task, industry, and technical specs dimensions</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                  <div className="text-2xl mb-2">⚡</div>
-                  <h3 className="font-bold text-lg mb-1">Real-Time Intelligence</h3>
-                  <p className="text-sm text-gray-300">Live AI ecosystem pulse dashboard</p>
-                </div>
-              </div>
-
-              {/* Tool of Destiny - Central Holographic Display */}
-              <div className="relative max-w-4xl mx-auto mb-12">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-xl"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">👑</div>
-                    <h3 className="text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent" style={{textShadow: '0 0 25px rgba(251, 191, 36, 0.8)'}}>
-                      TOOL OF DESTINY
-                    </h3>
-                    <p className="text-xl text-gray-300 mb-4">{toolOfDestiny}</p>
-                    <div className="text-sm text-gray-400">Geelgrantißel Ceaocry Yeepsrtey Fe 80 oji Hodos</div>
+          {/* Orbital Search with Gravitational Pull */}
+          <div className="w-full max-w-4xl mb-20 relative">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 rounded-3xl blur opacity-30 group-hover:opacity-75 transition-all duration-1000 animate-gradient-shift"></div>
+              <div className="relative bg-black/50 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-2 shadow-2xl">
+                <div className="flex flex-col md:flex-row">
+                  <div className="flex-1 flex">
+                    <input
+                      type="text"
+                      placeholder="Speak your cosmic query into the void..."
+                      className="flex-1 px-8 py-6 bg-transparent text-white placeholder-gray-400 focus:outline-none text-xl font-light"
+                    />
+                    <button className="px-10 py-6 bg-gradient-to-r from-yellow-600 to-red-600 rounded-2xl text-white font-bold hover:from-yellow-700 hover:to-red-700 transition-all duration-500 transform hover:scale-105 shadow-2xl">
+                      <span className="flex items-center">
+                        <span>Search</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-3" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
-
-              {/* Live Stats Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            </div>
+            
+            {/* AI-Powered Predictive Results */}
+            <div className="absolute left-0 right-0 mt-6 bg-black/70 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-gray-200 font-bold text-lg">Gravitational Search Suggestions</h3>
+                <span className="px-3 py-1 bg-gradient-to-r from-yellow-900/50 to-red-900/50 text-yellow-300 rounded-full text-xs">Orbital AI Engine</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {[
-                  { 
-                    number: liveStats.professionals, 
-                    label: "Professionals", 
-                    icon: "⚙️",
-                    subtitle: "Browting Historg:"
-                  },
-                  { 
-                    number: liveStats.toolsForged, 
-                    label: "Tools Forged", 
-                    icon: "🔨",
-                    subtitle: "Digital Arsenal"
-                  },
-                  { 
-                    number: `${liveStats.newToolTime}min`, 
-                    label: "New Tool Time", 
-                    icon: "🚀",
-                    subtitle: "Forging Speed"
-                  }
-                ].map((stat, index) => (
-                  <div
-                    key={index}
-                    className={`bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 transform transition-all duration-1000 hover:scale-110 hover:bg-white/20 ${
-                      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                    }`}
-                    style={{ transitionDelay: `${index * 200}ms` }}
+                  "Best storytelling techniques for bloggers",
+                  "AI tools revolutionizing content creation",
+                  "How to build a loyal readership",
+                  "Monetization strategies for writers",
+                  "The future of digital publishing",
+                  "Content marketing trends 2024"
+                ].map((item, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-center p-3 bg-gray-900/50 hover:bg-gray-800/50 rounded-xl cursor-pointer transition-all duration-300 transform hover:scale-105 border border-gray-700/30"
                   >
-                    <div className="text-3xl mb-2">{stat.icon}</div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300">{stat.label}</div>
-                    <div className="text-xs text-gray-400">{stat.subtitle}</div>
+                    <div className="w-2 h-2 rounded-full bg-yellow-500 mr-3 animate-pulse"></div>
+                    <span className="text-gray-300 text-sm">{item}</span>
                   </div>
                 ))}
               </div>
-
-              {/* Enhanced Smart Search - Making it more search-engine-like */}
-              <div className="w-full max-w-6xl mx-auto mb-12 px-4">
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 md:p-8 shadow-2xl">
-                  <div className="text-center mb-6">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                      Search the AI Universe
-                    </h2>
-                    <p className="text-gray-300 max-w-2xl mx-auto">
-                      Discover 1,000+ AI tools, resources, and insights with our neural search engine
-                    </p>
-                  </div>
-                  
-                  <SmartSearch
-                    search={search}
-                    onSearchChange={setSearch}
-                    onFilterChange={(filters) => {
-                      setPricing(filters.pricing || []);
-                      setMinRating(filters.minRating || 0);
-                      setSelectedTags(filters.tags || []);
-                    }}
-                    allTags={allTags}
-                    tools={validTools as Tool[]}
-                  />
-                  
-                  {/* Search Tips */}
-                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <div className="font-semibold text-blue-300 mb-1">Try natural queries</div>
-                      <div className="text-sm text-gray-400">"Best image generators for 2025"</div>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <div className="font-semibold text-purple-300 mb-1">Filter by rating</div>
-                      <div className="text-sm text-gray-400">"4+ stars free writing tools"</div>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <div className="font-semibold text-cyan-300 mb-1">Use category tags</div>
-                      <div className="text-sm text-gray-400">"#SEO #content #free"</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-            </div>
-          </div>
-        </section>
-
-        {/* THE DARK ARMORY - Status Management */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-                THE DARK ARMORY
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Tools so powerful they require 2FA + blood sample. Auto-delete after use.
-              </p>
-            </div>
-
-            {/* Status Management Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                  STATUS MANAGEMENT
-                </h3>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-3xl">🧠</div>
-                  <div>
-                    <div className="text-lg font-semibold">Most Devastating SEO Weapon</div>
-                    <div className="text-gray-300">Current: {liveStats.seoWeapon}</div>
-                  </div>
-                </div>
-                <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-red-500 to-orange-600 rounded-full animate-pulse"></div>
-                </div>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI TOOL OF THE CENTURY
-                </h3>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-3xl">🌍</div>
-                  <div>
-                    <div className="text-lg font-semibold">Global Activation Map</div>
-                    <div className="text-gray-300">Real-time tool activations</div>
-                  </div>
-                </div>
-                <div className="w-full h-32 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
-                  <span className="text-gray-400">🌍 Live World Map</span>
-                </div>
-              </div>
-            </div>
-
-            {/* VIP War Room */}
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-8 mb-16">
-              <h3 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                VIP WAR ROOM
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">👑</div>
-                  <div className="text-xl font-semibold">Platinum Members</div>
-                  <div className="text-gray-300">Elite Access</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-2">⚔️</div>
-                  <div className="text-xl font-semibold">Battle-Tested</div>
-                  <div className="text-gray-300">Proven Results</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🔒</div>
-                  <div className="text-xl font-semibold">Secure Access</div>
-                  <div className="text-gray-300">2FA Required</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Personalized Dashboard */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                YOUR COMMAND CENTER
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Track your exploration progress and unlock achievements as you discover powerful AI tools.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {/* Time Spent Card */}
-              <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105">
-                <div className="text-center">
-                  <div className="text-5xl mb-4">⏱️</div>
-                  <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                    Time Invested
-                  </h3>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">
-                    {Math.floor(timeSpent / 60)}:{String(timeSpent % 60).padStart(2, '0')}
-                  </div>
-                  <div className="text-gray-300 text-sm">Minutes:Seconds</div>
-                </div>
-              </div>
-
-              {/* Tools Viewed Card */}
-              <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105">
-                <div className="text-center">
-                  <div className="text-5xl mb-4">👁️</div>
-                  <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">
-                    Tools Viewed
-                  </h3>
-                  <div className="text-3xl font-bold text-purple-400 mb-2">
-                    {toolsViewed.length}
-                  </div>
-                  <div className="text-gray-300 text-sm">Unique Tools</div>
-                </div>
-              </div>
-
-              {/* Achievements Card */}
-              <div className="bg-gradient-to-r from-green-500/20 to-cyan-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105">
-                <div className="text-center">
-                  <div className="text-5xl mb-4">🏆</div>
-                  <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
-                    Achievements
-                  </h3>
-                  <div className="text-3xl font-bold text-green-400 mb-2">
-                    {achievements.length}
-                  </div>
-                  <div className="text-gray-300 text-sm">Unlocked</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Achievements Display */}
-            {achievements.length > 0 && (
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 mb-16">
-                <h3 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                  Your Achievements
-                </h3>
-                <div className="flex flex-wrap gap-4 justify-center">
-                  {achievements.map((achievement, index) => (
-                    <div 
-                      key={index}
-                      className="px-6 py-3 bg-gradient-to-r from-yellow-500/30 to-orange-500/30 border border-yellow-500/50 rounded-xl flex items-center gap-3 animate-bounce-in"
-                      style={{ animationDelay: `${index * 0.2}s` }}
-                    >
-                      <span className="text-2xl">🏆</span>
-                      <span className="font-semibold text-yellow-200">
-                        {achievement === '1_minute_explorer' && '1-Minute Explorer'}
-                        {achievement === '5_minute_researcher' && '5-Minute Researcher'}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Engagement Tips */}
-            <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-8">
-              <h3 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                Pro Tips for Maximum Discovery
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-start gap-4">
-                  <div className="text-2xl mt-1">🔍</div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Use Smart Search</h4>
-                    <p className="text-gray-300">Try natural language queries like "best free image generators" or "#SEO tools with 4+ stars"</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="text-2xl mt-1">⭐</div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Filter by Ratings</h4>
-                    <p className="text-gray-300">Focus on highly-rated tools by setting minimum star ratings in the filters</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="text-2xl mt-1">🏷️</div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Explore by Tags</h4>
-                    <p className="text-gray-300">Click on any tag to find similar tools across different categories</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="text-2xl mt-1">🔄</div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Visit Tool Websites</h4>
-                    <p className="text-gray-300">Click the "Visit" button on any tool card to explore the tool directly</p>
+          {/* Orbital Blog Planets */}
+          <div className="w-full mb-20">
+            <h2 className="text-4xl font-bold text-white mb-12 relative inline-block">
+              <span className="relative z-10 bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">Orbital Blogging Planets</span>
+              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-yellow-500/70 via-orange-500/70 to-red-500/70 rounded-full"></div>
+            </h2>
+            
+            <div className="flex justify-center mb-12">
+              <div className="relative">
+                <canvas 
+                  ref={orbitCanvasRef} 
+                  className="w-96 h-96 rounded-full border border-gray-700/30"
+                  style={{ display: isClient ? 'block' : 'none' }}
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-gray-400 text-sm">Interactive Orbital Blog Map</div>
+                    <div className="text-gray-500 text-xs mt-1">Hover over planets to explore</div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* GEFORE HALL OF TOOLS */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                GEFORE HALL OF TOOLS
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover AI tools organized across cutting-edge categories, from traditional applications to the latest quantum computing innovations.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {categories.map((category, index) => (
-                <div
-                  key={category.name}
-                  className={`transform transition-all duration-1000 hover:scale-105 ${
-                    isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {[
+                { name: "Story Planet", articles: "15,420", color: "from-red-500 to-red-700", icon: "📖", desc: "Narrative & Fiction" },
+                { name: "Tech Planet", articles: "22,870", color: "from-blue-500 to-blue-700", icon: "💻", desc: "Technology & Innovation" },
+                { name: "Life Planet", articles: "18,560", color: "from-yellow-500 to-yellow-700", icon: "🌱", desc: "Lifestyle & Wellness" },
+                { name: "Art Planet", articles: "12,420", color: "from-purple-500 to-purple-700", icon: "🎨", desc: "Creativity & Design" },
+                { name: "Science Planet", articles: "25,420", color: "from-green-500 to-green-700", icon: "🔬", desc: "Research & Discovery" }
+              ].map((planet, index) => (
+                <div 
+                  key={index}
+                  className="group relative bg-black/40 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 hover:border-yellow-500/50 transition-all duration-700 hover:-translate-y-3 cursor-pointer overflow-hidden shadow-2xl"
+                  onMouseEnter={() => setActivePlanet(index)}
+                  onMouseLeave={() => setActivePlanet(null)}
                 >
-                  <CategoryCard
-                    icon={category.icon}
-                    name={category.name}
-                    toolCount={category.toolCount}
-                  />
+                  <div className="absolute inset-0 rounded-3xl overflow-hidden">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${planet.color} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <div className={`w-24 h-24 rounded-full bg-gradient-to-r ${planet.color} flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform duration-500 mx-auto shadow-2xl border-4 border-white/10`}>
+                      {planet.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{planet.name}</h3>
+                    <p className="text-gray-400 mb-4">{planet.desc}</p>
+                    <div className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-red-400 animate-pulse">{planet.articles}</div>
+                    
+                    <div className="mt-6 flex items-center">
+                      <div className="relative">
+                        <div className="w-3 h-3 rounded-full bg-yellow-500 animate-pulse"></div>
+                        <div className="absolute inset-0 w-3 h-3 rounded-full bg-yellow-500 animate-ripple"></div>
+                      </div>
+                      <span className="text-xs text-gray-500 ml-2">Active Orbit</span>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* PSYCHOLOGICAL POWER ZONES */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">
-                PSYCHOLOGICAL POWER ZONES
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Handpicked AI tools that are revolutionizing industries and transforming the way we work.
-              </p>
-            </div>
+          {/* Lumina Core */}
+          <div className="w-full py-20 relative overflow-hidden">
+            <LuminaCore />
+          </div>
 
-            {/* Premium Filters */}
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 mb-12">
-              <div className="flex flex-wrap gap-4 items-center justify-center">
-                <select
-                  value={minRating}
-                  onChange={(e) => setMinRating(Number(e.target.value))}
-                  className="px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white"
+          {/* Author Constellation */}
+          <div className="w-full mb-20">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Featured Author Constellation</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { name: "Alex Morgan", articles: "1,240", followers: "45.2K", specialty: "Tech Innovation", avatar: "👨‍💻" },
+                { name: "Samantha Lee", articles: "890", followers: "32.7K", specialty: "Creative Writing", avatar: "👩‍🎨" },
+                { name: "Marcus Johnson", articles: "1,560", followers: "67.3K", specialty: "Business Strategy", avatar: "👨‍💼" },
+                { name: "Elena Rodriguez", articles: "2,100", followers: "89.5K", specialty: "Science Communication", avatar: "👩‍🔬" }
+              ].map((author, index) => (
+                <div 
+                  key={index}
+                  className="group relative bg-black/40 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 hover:border-yellow-500/50 transition-all duration-700 hover:-translate-y-3 cursor-pointer overflow-hidden shadow-2xl"
                 >
-                  <option value={0}>All Ratings</option>
-                  <option value={4}>4+ Stars</option>
-                  <option value={4.5}>4.5+ Stars</option>
-                </select>
-
-                <div className="flex gap-2">
-                  {["Free", "Freemium", "Paid"].map((p) => (
-                    <button
-                      key={p}
-                      onClick={() => setPricing(pricing.includes(p) ? pricing.filter(price => price !== p) : [...pricing, p])}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
-                        pricing.includes(p)
-                          ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-                          : "bg-white/10 text-gray-300 hover:bg-white/20"
-                      }`}
-                    >
-                      {p}
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 flex items-center justify-center text-3xl mr-4">
+                        {author.avatar}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">{author.name}</h3>
+                        <p className="text-gray-400 text-sm">{author.specialty}</p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="bg-gray-900/50 rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-yellow-400">{author.articles}</div>
+                        <div className="text-gray-400 text-sm">Articles</div>
+                      </div>
+                      <div className="bg-gray-900/50 rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-yellow-400">{author.followers}</div>
+                        <div className="text-gray-400 text-sm">Followers</div>
+                      </div>
+                    </div>
+                    <button className="w-full py-3 bg-gradient-to-r from-yellow-600 to-red-600 rounded-xl text-white font-medium hover:from-yellow-700 hover:to-red-700 transition-all duration-300">
+                      Follow Author
                     </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Special Blogging Features */}
+          <div className="w-full mb-20">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Galactic Blogging Features</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { 
+                  title: "AI Story Weaver", 
+                  desc: "Transform ideas into compelling narratives with our AI-powered storytelling engine", 
+                  icon: "🖋️", 
+                  color: "from-blue-500 to-blue-700",
+                  feature: "NEW"
+                },
+                { 
+                  title: "Orbital Analytics", 
+                  desc: "Track your content's journey through the blogging cosmos with real-time metrics", 
+                  icon: "📊", 
+                  color: "from-purple-500 to-purple-700",
+                  feature: "PRO"
+                },
+                { 
+                  title: "Community Constellation", 
+                  desc: "Connect with fellow bloggers across the galaxy in our collaborative network", 
+                  icon: "👥", 
+                  color: "from-green-500 to-green-700",
+                  feature: "SOCIAL"
+                },
+                { 
+                  title: "Content Black Hole", 
+                  desc: "Automatically archive and organize your content for easy retrieval", 
+                  icon: "🕳️", 
+                  color: "from-red-500 to-red-700",
+                  feature: "STORAGE"
+                }
+              ].map((feature, index) => (
+                <div 
+                  key={index}
+                  className="group relative bg-black/40 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 hover:border-yellow-500/50 transition-all duration-700 hover:-translate-y-3 cursor-pointer overflow-hidden shadow-2xl"
+                >
+                  <div className="absolute inset-0 rounded-3xl overflow-hidden">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-700`}></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-6">
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl shadow-xl`}>
+                        {feature.icon}
+                      </div>
+                      <span className="px-3 py-1 bg-gradient-to-r from-yellow-600 to-red-600 text-white text-xs font-bold rounded-full">
+                        {feature.feature}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                    <p className="text-gray-300 mb-6">{feature.desc}</p>
+                    <button className="w-full py-3 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl text-white font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300">
+                      Explore Feature
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Interactive Blog Timeline */}
+          <div className="w-full max-w-6xl mb-20">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Cosmic Blog Timeline</h2>
+            
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-yellow-500 via-orange-500 to-red-500 rounded-full"></div>
+              
+              {/* Timeline events */}
+              <div className="space-y-12">
+                {[
+                  { 
+                    date: "2024", 
+                    title: "Platform Launch", 
+                    desc: "Orbital Blog Cosmos officially launched with 10,000 founding articles",
+                    icon: "🚀",
+                    side: "left"
+                  },
+                  { 
+                    date: "2023", 
+                    title: "AI Integration", 
+                    desc: "Revolutionary AI writing assistant introduced to help bloggers craft better content",
+                    icon: "🤖",
+                    side: "right"
+                  },
+                  { 
+                    date: "2022", 
+                    title: "Community Expansion", 
+                    desc: "Reached 1 million active readers across the blogging cosmos",
+                    icon: "🌍",
+                    side: "left"
+                  },
+                  { 
+                    date: "2021", 
+                    title: "Mobile Revolution", 
+                    desc: "Launched mobile app allowing bloggers to create content from anywhere in the galaxy",
+                    icon: "📱",
+                    side: "right"
+                  }
+                ].map((event, index) => (
+                  <div 
+                    key={index}
+                    className={`flex items-center ${event.side === "left" ? "flex-row" : "flex-row-reverse"}`}
+                  >
+                    <div className={`w-1/2 ${event.side === "left" ? "pr-8 text-right" : "pl-8 text-left"}`}>
+                      <div className="bg-black/40 backdrop-blur-2xl border border-gray-700/30 rounded-2xl p-6 shadow-xl">
+                        <div className="text-yellow-400 font-bold text-lg mb-2">{event.date}</div>
+                        <h3 className="text-2xl font-bold text-white mb-3">{event.title}</h3>
+                        <p className="text-gray-300">{event.desc}</p>
+                      </div>
+                    </div>
+                    <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 text-2xl shadow-xl border-4 border-black">
+                      {event.icon}
+                    </div>
+                    <div className="w-1/2"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Author Constellation */}
+          <div className="w-full mb-20">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Featured Author Constellation</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { name: "Alex Morgan", articles: "1,240", followers: "45.2K", specialty: "Tech Innovation", avatar: "👨‍💻" },
+                { name: "Samantha Lee", articles: "890", followers: "32.7K", specialty: "Creative Writing", avatar: "👩‍🎨" },
+                { name: "Marcus Johnson", articles: "1,560", followers: "67.3K", specialty: "Business Strategy", avatar: "👨‍💼" },
+                { name: "Elena Rodriguez", articles: "2,100", followers: "89.5K", specialty: "Science Communication", avatar: "👩‍🔬" }
+              ].map((author, index) => (
+                <div 
+                  key={index}
+                  className="group relative bg-black/40 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 hover:border-yellow-500/50 transition-all duration-700 hover:-translate-y-3 cursor-pointer overflow-hidden shadow-2xl"
+                >
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 flex items-center justify-center text-3xl mr-4">
+                        {author.avatar}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">{author.name}</h3>
+                        <p className="text-gray-400 text-sm">{author.specialty}</p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="bg-gray-900/50 rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-yellow-400">{author.articles}</div>
+                        <div className="text-gray-400 text-sm">Articles</div>
+                      </div>
+                      <div className="bg-gray-900/50 rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-yellow-400">{author.followers}</div>
+                        <div className="text-gray-400 text-sm">Followers</div>
+                      </div>
+                    </div>
+                    <button className="w-full py-3 bg-gradient-to-r from-yellow-600 to-red-600 rounded-xl text-white font-medium hover:from-yellow-700 hover:to-red-700 transition-all duration-300">
+                      Follow Author
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Orbital Call to Action */}
+          <div className="w-full max-w-6xl mb-20 text-center">
+            <div className="bg-gradient-to-r from-yellow-900/10 via-orange-900/10 to-red-900/10 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-16 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMwMDAiLz48Y2lyY2xlIGN4PSIxMCUiIGN5PSIxMCUiIHI9IjIiIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PGNpcmNsZSBjeD0iOTAlIiBjeT0iNTAlIiByPSIzIiBmaWxsPSIjRkZGIiBmaWxsLW9wYWNpdHk9IjAuMDgiLz48Y2lyY2xlIGN4PSI1MCUiIGN5PSI5MCUiIHI9IjEiIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <h2 className="text-5xl font-black text-white mb-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+                  Ready to Chart Your Course Through the Blogging Cosmos?
+                </h2>
+                <p className="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-light">
+                  Join 10 million explorers in the world's most advanced orbital blogging platform
+                </p>
+                
+                <div className="flex flex-col sm:flex-row justify-center gap-8">
+                  <button className="px-12 py-5 bg-gradient-to-r from-yellow-600 to-red-600 rounded-2xl text-white font-bold text-xl hover:from-yellow-700 hover:to-red-700 transition-all duration-500 transform hover:scale-110 shadow-2xl border-2 border-yellow-500/30">
+                    Begin Your Orbital Journey
+                  </button>
+                  <button className="px-12 py-5 bg-transparent border-2 border-gray-600 rounded-2xl text-white font-bold text-xl hover:border-white transition-all duration-500 transform hover:scale-110 backdrop-blur-xl">
+                    Explore the Article Archive
+                  </button>
+                </div>
+                
+                {/* Trust badges */}
+                <div className="mt-12 flex flex-wrap justify-center gap-8">
+                  {[
+                    { name: "World's #1 Blogging Platform", icon: "🏆" },
+                    { name: "100,000+ Cosmic Articles", icon: "📚" },
+                    { name: "10M+ Active Readers", icon: "👥" },
+                    { name: "5 Major Blogging Planets", icon: "🪐" }
+                  ].map((badge, index) => (
+                    <div key={index} className="flex items-center bg-black/30 backdrop-blur-xl px-6 py-3 rounded-full border border-gray-700/30">
+                      <span className="text-2xl mr-3">{badge.icon}</span>
+                      <span className="text-gray-300 font-medium">{badge.name}</span>
+                    </div>
                   ))}
                 </div>
-
-                <select
-                  value={selectedTags[0] || ""}
-                  onChange={(e) => setSelectedTags(e.target.value ? [e.target.value] : [])}
-                  className="px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white"
-                >
-                  <option value="">All Tags</option>
-                  {allTags.map((tag) => (
-                    <option key={tag} value={tag}>{tag}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Tools Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTools.slice(0, 9).map((tool, index) => {
-                // Type assertion since we've already filtered out invalid tools
-                const validTool = tool as Tool;
-                
-                return (
-                  <div
-                    key={validTool.name}
-                    className={`transform transition-all duration-1000 hover:scale-105 ${
-                      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                    }`}
-                    style={{ transitionDelay: `${index * 150}ms` }}
-                  >
-                    <ToolCard
-                      name={validTool.name || 'Unknown Tool'}
-                      category={validTool.category || 'Unknown'}
-                      subcategory={validTool.subcategory || 'Unknown'}
-                      rating={validTool.rating !== undefined ? validTool.rating : 0}
-                      description={validTool.description || 'No description available'}
-                      pricing={validTool.pricing || 'Unknown'}
-                      tags={validTool.tags || []}
-                      url={validTool.url || '#'}
-                      favicon={(validTool as any).favicon || validTool.logo}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* View All Button */}
-            <div className="text-center mt-12">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-2xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                View All Tools
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* WAR CRY GENERATOR */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-                WAR CRY GENERATOR
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                AI creates personalized battle chants from your data profile.
-              </p>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-8">
-                <p className="text-lg text-gray-200 italic">
-                  "Sarah from Marketing needs the 'Chainsword SEO' tool NOW"
-                </p>
-              </div>
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-bold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
-                GENERATE WAR CRY
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Ultra-Premium Newsletter Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                Stay Updated
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Get the latest AI tools and industry insights delivered to your inbox.
-              </p>
-              <div className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-400/50"
-                />
-                <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Subscribe
-                </button>
               </div>
             </div>
           </div>
-                 </section>
 
-        {/* COMMUNITY HUB */}
-        <section id="community" className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                COMMUNITY HUB
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join our thriving community of AI enthusiasts, professionals, and innovators. Share knowledge, collaborate on projects, and stay ahead of the curve.
-              </p>
-            </div>
+          {/* Add the InfinityStream component */}
+          <InfinityStream />
+        </main>
+      </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                <div className="text-5xl mb-6">💬</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Discussion Forums</h3>
-                <p className="text-gray-300 mb-6">Engage in deep technical discussions, share insights, and get help from experts in the field.</p>
-                <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all">
-                  Join Discussions
-                </button>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                <div className="text-5xl mb-6">🚀</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Project Showcase</h3>
-                <p className="text-gray-300 mb-6">Showcase your AI projects, get feedback, and discover inspiring work from the community.</p>
-                <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all">
-                  View Projects
-                </button>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                <div className="text-5xl mb-6">🎓</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Learning Hub</h3>
-                <p className="text-gray-300 mb-6">Access tutorials, courses, and expert-led workshops to advance your AI skills.</p>
-                <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all">
-                  Start Learning
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-12 text-center">
-              <h3 className="text-3xl font-bold text-white mb-4">Become a Community Member</h3>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Unlock exclusive content, early access to new tools, and networking opportunities with industry leaders.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
-                  Sign Up Free
-                </button>
-                <button className="px-8 py-4 bg-white/10 border border-white/20 text-white font-bold rounded-xl hover:bg-white/20 transition-all">
-                  View Benefits
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* THE OBLIVION BUTTON */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-500/20 to-black/20 backdrop-blur-xl border border-red-500/20 rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-                THE OBLIVION BUTTON
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                One click nukes all competitors' sites. (Actually just books a strategy call)
-              </p>
-              <button className="px-12 py-6 bg-gradient-to-r from-red-600 to-black text-white font-bold rounded-2xl hover:from-red-700 hover:to-black transition-all duration-300 transform hover:scale-105 border border-red-500/50">
-                ACTIVATE OBLIVION
-              </button>
-            </div>
-          </div>
-                 </section>
-
-         {/* Ultra-Premium Footer */}
-         <footer className="relative z-10 py-20 px-4 bg-black/20 backdrop-blur-xl border-t border-white/10">
-           <div className="max-w-7xl mx-auto">
-             {/* Main Footer Content */}
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-               {/* Brand Section */}
-               <div className="lg:col-span-2">
-                 <div className="flex items-center gap-3 mb-6">
-                   <span className="text-3xl font-black bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                    DIGITAL SUPERORGANISM
-                   </span>
-                   <span className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold">
-                     2025
-                   </span>
-                 </div>
-                 <p className="text-gray-300 text-lg leading-relaxed mb-6 max-w-md">
-                  Not a Website – A Digital Superorganism. The ultimate destination for discovering, comparing, and mastering the best AI tools across all industries and use cases.
-                 </p>
-                 <div className="flex gap-4">
-                   <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
-                     <span className="text-xl">🐦</span>
-                   </a>
-                   <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
-                     <span className="text-xl">💼</span>
-                   </a>
-                   <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
-                     <span className="text-xl">📺</span>
-                   </a>
-                   <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110">
-                     <span className="text-xl">📷</span>
-                   </a>
-                 </div>
-               </div>
-
-               {/* Quick Links */}
-               <div>
-                 <h4 className="text-xl font-bold text-white mb-6">Quick Links</h4>
-                 <ul className="space-y-4">
-                   <li><Link href="/compare" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">Compare Tools</Link></li>
-                   <li><Link href="/new-tools" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">New Tools</Link></li>
-                   <li><Link href="/suggest-tool" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">Suggest a Tool</Link></li>
-                   <li><Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">Blog</Link></li>
-                   <li><a href="#community" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">Community</a></li>
-                 </ul>
-               </div>
-
-               {/* Legal */}
-               <div>
-                 <h4 className="text-xl font-bold text-white mb-6">Legal</h4>
-                 <ul className="space-y-4">
-                   <li><Link href="/terms-of-service" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">Terms of Service</Link></li>
-                   <li><Link href="/privacy-policy" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">Privacy Policy</Link></li>
-                   <li><Link href="/ai-updates" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">AI Updates</Link></li>
-                   <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">Contact Us</Link></li>
-                 </ul>
-               </div>
-             </div>
-
-             {/* Premium Stats Section */}
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center">
-                 <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                   1000+
-                 </div>
-                 <div className="text-gray-300 text-sm">AI Tools</div>
-               </div>
-               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center">
-                 <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                   300+
-                 </div>
-                 <div className="text-gray-300 text-sm">Categories</div>
-               </div>
-               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center">
-                 <div className="text-3xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent mb-2">
-                   50+
-                 </div>
-                 <div className="text-gray-300 text-sm">Industries</div>
-               </div>
-               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center">
-                 <div className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-2">
-                   24/7
-                 </div>
-                 <div className="text-gray-300 text-sm">Updated</div>
-               </div>
-             </div>
-
-             {/* Newsletter Section */}
-             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 mb-12">
-               <div className="text-center">
-                 <h3 className="text-2xl font-bold text-white mb-4">Stay Ahead of AI Innovation</h3>
-                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                   Get exclusive access to the latest AI tools, expert reviews, and industry insights delivered straight to your inbox.
-                 </p>
-                 <div className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-                   <input
-                     type="email"
-                     placeholder="Enter your email address"
-                     className="flex-1 px-6 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-400/50"
-                   />
-                   <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                     Subscribe
-                   </button>
-                 </div>
-               </div>
-             </div>
-
-             {/* Bottom Bar */}
-             <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/10">
-               <div className="text-gray-400 text-sm">
-                © 2025 Digital Superorganism. All rights reserved. | Made with ❤️ for the AI community
-               </div>
-               <div className="flex gap-6 text-sm text-gray-400">
-                 <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
-                 <a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a>
-                 <a href="#" className="hover:text-white transition-colors duration-300">Cookie Policy</a>
-                 <a href="#" className="hover:text-white transition-colors duration-300">Contact Us</a>
-               </div>
-             </div>
-           </div>
-         </footer>
-        </div>
-
-      {/* Ultra-Premium CSS Animations */}
-      <style jsx>{`
-        @keyframes gradient-x {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
+      {/* Custom Styles */}
+      <style jsx global>{`
+        @keyframes fade-in-drop-orbital {
+          from { 
+            opacity: 0; 
+            transform: translateY(-50px) rotate(5deg);
+          }
+          to { 
+            opacity: 1; 
+            transform: translateY(0) rotate(0);
+          }
         }
         
         @keyframes text-shine {
-          0% { background-position: 0% 50%; }
-          100% { background-position: 100% 50%; }
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
         }
         
-        @keyframes text-shine-delayed {
-          0% { background-position: 100% 50%; }
+        @keyframes blink-orbital {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+        
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes gradient-shift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
         
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(180deg); }
+        @keyframes ripple {
+          0% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(2);
+            opacity: 0;
+          }
         }
         
-        @keyframes grid-move {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
-        }
-        
-        @keyframes pulse-glow {
-          0%, 100% { box-shadow: 0 0 15px rgba(99, 102, 241, 0.5); }
-          50% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.8); }
-        }
-        
-        @keyframes bounce-in {
-          0% { transform: scale(0.8); opacity: 0; }
-          70% { transform: scale(1.05); }
-          100% { transform: scale(1); opacity: 1; }
-        }
-        
-        .animate-gradient-x {
-          background-size: 200% 200%;
-          animation: gradient-x 15s ease infinite;
+        .animate-fade-in-drop-orbital {
+          animation: fade-in-drop-orbital 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
         }
         
         .animate-text-shine {
-          background-size: 200% 200%;
-          animation: text-shine 3s ease-in-out infinite;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+          background-size: 200% auto;
+          animation: text-shine 3s linear infinite;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
         
-        .animate-text-shine-delayed {
-          background-size: 200% 200%;
-          animation: text-shine-delayed 3s ease-in-out infinite;
+        .animate-blink-orbital {
+          animation: blink-orbital 0.6s infinite;
         }
         
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
+        .animate-spin-slow {
+          animation: spin-slow linear infinite;
         }
         
-        .animate-grid-move {
-          animation: grid-move 20s linear infinite;
+        .animate-gradient-shift {
+          background-size: 200% auto;
+          animation: gradient-shift 3s linear infinite;
         }
         
-        .animate-pulse-glow {
-          animation: pulse-glow 2s ease-in-out infinite;
+        .animate-ripple {
+          animation: ripple 2s infinite;
         }
         
-        .animate-bounce-in {
-          animation: bounce-in 0.8s ease-out forwards;
+        .bg-gradient-radial {
+          background: radial-gradient(circle, var(--tw-gradient-stops));
         }
         
-        .duration-2000 {
-          transition-duration: 2000ms;
+        .backdrop-blur-2xl {
+          backdrop-filter: blur(40px);
+          -webkit-backdrop-filter: blur(40px);
         }
       `}</style>
+      
+      {/* Infinity Gallery */}
+      <div className="w-full py-20">
+        <InfinityGallery />
+      </div>
     </div>
   );
 }

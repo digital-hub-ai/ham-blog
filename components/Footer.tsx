@@ -10,14 +10,31 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              © {new Date().getFullYear()} AI Tools Directory. All rights reserved.
+              © {new Date().getFullYear()} Ham Blog. All rights reserved.
             </p>
           </div>
+          <div className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
+            <Link href="/" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+              Blog
+            </Link>
+            <Link href="/compare" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+              Compare
+            </Link>
+            <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+              Contact
+            </Link>
+          </div>
           <div className="flex space-x-6">
-            <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+            <Link href="/privacy-policy" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+            <Link href="/terms-of-service" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
               Terms of Service
             </Link>
             <a 

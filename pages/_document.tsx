@@ -73,7 +73,7 @@ export default function Document() {
           sizes="180x180"
         />
       </Head>
-      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+      <body className="min-h-screen antialiased">
         <Main />
         <NextScript />
       </body>
