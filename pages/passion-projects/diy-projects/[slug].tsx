@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import { getPostBySlug, getAllPosts, Post } from '../../../../lib/api';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
@@ -31,9 +32,9 @@ export default function Post({ post }: PostPageProps) {
       <article className="max-w-4xl mx-auto px-4 py-12">
         <header className="mb-12">
           <div className="text-sm text-indigo-600 font-semibold mb-4">
-            <a href="/passion-projects/diy-projects" className="hover:underline">
+            <Link href="/passion-projects/diy-projects" className="hover:underline">
               DIY Projects
-            </a>
+            </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">{post.title}</h1>
           
