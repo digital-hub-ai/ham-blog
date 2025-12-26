@@ -128,7 +128,7 @@ export default function VentureCapitalStartupFundingTrends2025() {
             </p>
             
             <p className="mb-4">
-              The convergence of technology innovation with global challenges including climate change, healthcare accessibility, and economic inequality presents unprecedented opportunities for impact-oriented entrepreneurs and socially conscious investors. Venture capital's role in addressing these challenges while generating competitive returns represents a fundamental evolution toward stakeholder capitalism that balances profit maximization with positive societal outcomes.
+              The convergence of technology innovation with global challenges including climate change, healthcare accessibility, and economic inequality presents unprecedented opportunities for impact-oriented entrepreneurs and socially conscious investors. Venture capital&apos;s role in addressing these challenges while generating competitive returns represents a fundamental evolution toward stakeholder capitalism that balances profit maximization with positive societal outcomes.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
