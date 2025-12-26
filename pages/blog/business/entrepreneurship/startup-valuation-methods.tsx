@@ -169,7 +169,7 @@ export default function StartupValuationMethods() {
             </ul>
             
             <p className="mb-4">
-              SaaS companies with >50% annual growth command 2.3x higher revenue multiples than slower-growing peers.
+              SaaS companies with {'>'}50% annual growth command 2.3x higher revenue multiples than slower-growing peers.
             </p>
             
             <h3 className="text-xl font-semibold mt-6 mb-3">Healthcare and Biotechnology</h3>
