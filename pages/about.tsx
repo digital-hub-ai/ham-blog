@@ -25,7 +25,7 @@ export default function About() {
             <section className="mb-10">
               <h2 className="text-2xl font-bold mb-4 text-white">Our Mission</h2>
               <p className="mb-4 text-gray-300">
-                At AI Tools Directory, we're on a mission to democratize access to artificial intelligence tools and make cutting-edge AI technology accessible to everyone. We believe that AI should empower individuals and businesses to achieve more, create better, and solve complex problems.
+                At AI Tools Directory, we&apos;re on a mission to democratize access to artificial intelligence tools and make cutting-edge AI technology accessible to everyone. We believe that AI should empower individuals and businesses to achieve more, create better, and solve complex problems.
               </p>
               <p className="mb-4 text-gray-300">
                 Our platform serves as a comprehensive directory of AI tools across various categories, helping users discover, compare, and select the perfect tools for their specific needs.
@@ -88,7 +88,7 @@ export default function About() {
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-white">Innovation</h3>
                     <p className="text-gray-300">
-                      We're constantly exploring new AI technologies and trends to keep our users at the forefront of innovation.
+                      We&apos;re constantly exploring new AI technologies and trends to keep our users at the forefront of innovation.
                     </p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function About() {
             <section className="mb-10">
               <h2 className="text-2xl font-bold mb-4 text-white">Get In Touch</h2>
               <p className="mb-4 text-gray-300">
-                Have questions, suggestions, or want to partner with us? We'd love to hear from you!
+                Have questions, suggestions, or want to partner with us? We&apos;d love to hear from you!
               </p>
               <p className="text-gray-300">
                 Email us at: contact@aitoolsdirectory.com

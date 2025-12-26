@@ -35,12 +35,12 @@ export default function Custom404() {
         <h1 className="text-4xl font-bold mb-6">Page Not Found</h1>
         
         <p className="text-xl text-gray-300 mb-8">
-          Oops! The page you're looking for doesn't exist or has been moved.
+          Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         
         <div className="mb-8">
           <p className="text-lg text-gray-300">
-            You'll be redirected to the homepage in <span className="font-bold text-blue-400">{countdown}</span> seconds.
+            You&apos;ll be redirected to the homepage in <span className="font-bold text-blue-400">{countdown}</span> seconds.
           </p>
         </div>
         
