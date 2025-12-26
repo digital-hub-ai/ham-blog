@@ -73,7 +73,7 @@ export default function CryptocurrencyAdoptionTrends() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Central Bank Digital Currencies</h3>
             <p className="mb-4">
-              Central bank digital currencies (CBDCs) represent a hybrid approach to cryptocurrency adoption, combining government backing with blockchain technology benefits. Over 80 countries are actively developing or piloting CBDCs, with China's digital yuan leading in transaction volume and user adoption. These government-backed digital currencies aim to provide the efficiency of cryptocurrency transactions while maintaining regulatory oversight and monetary policy control.
+              Central bank digital currencies (CBDCs) represent a hybrid approach to cryptocurrency adoption, combining government backing with blockchain technology benefits. Over 80 countries are actively developing or piloting CBDCs, with China&apos;s digital yuan leading in transaction volume and user adoption. These government-backed digital currencies aim to provide the efficiency of cryptocurrency transactions while maintaining regulatory oversight and monetary policy control.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Cross-Border Payment Networks</h3>

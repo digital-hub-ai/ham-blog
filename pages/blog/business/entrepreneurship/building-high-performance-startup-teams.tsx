@@ -27,7 +27,7 @@ export default function BuildingHighPerformanceStartupTeams() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              Startup success depends more on team quality than individual brilliance, with high-performance teams delivering 2.3 times faster product development and 31% higher customer satisfaction compared to average teams. In the competitive talent market of 2025, startups must differentiate themselves through compelling culture, meaningful mission alignment, and growth opportunities that rival established companies' resources. Founders who master team building create exponential value through collective capability while establishing organizational foundations that scale with business growth.
+              Startup success depends more on team quality than individual brilliance, with high-performance teams delivering 2.3 times faster product development and 31% higher customer satisfaction compared to average teams. In the competitive talent market of 2025, startups must differentiate themselves through compelling culture, meaningful mission alignment, and growth opportunities that rival established companies&apos; resources. Founders who master team building create exponential value through collective capability while establishing organizational foundations that scale with business growth.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-4">Foundations of High-Performance Teams</h2>
@@ -277,7 +277,7 @@ export default function BuildingHighPerformanceStartupTeams() {
             <h2 className="text-2xl font-bold mt-12 mb-4">Future of Startup Team Building</h2>
             
             <p className="mb-4">
-              Emerging trends shaping talent strategies for tomorrow's startups:
+              Emerging trends shaping talent strategies for tomorrow&apos;s startups:
             </p>
             
             <ul className="list-disc pl-6 mb-6">
@@ -288,7 +288,7 @@ export default function BuildingHighPerformanceStartupTeams() {
             </ul>
             
             <p className="mb-4">
-              As the war for talent intensifies and work models evolve, successful startups will be those that view team building as a strategic capability rather than an administrative function. The companies that thrive will be those that combine compelling missions with exceptional employee experiences, creating environments where top performers choose to stay and grow rather than constantly seeking new opportunities. Ultimately, the strongest startups are built not by individual genius but by collective capability that amplifies everyone's contributions.
+              As the war for talent intensifies and work models evolve, successful startups will be those that view team building as a strategic capability rather than an administrative function. The companies that thrive will be those that combine compelling missions with exceptional employee experiences, creating environments where top performers choose to stay and grow rather than constantly seeking new opportunities. Ultimately, the strongest startups are built not by individual genius but by collective capability that amplifies everyone&apos;s contributions.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">

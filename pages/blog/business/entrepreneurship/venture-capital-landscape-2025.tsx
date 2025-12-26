@@ -76,7 +76,7 @@ export default function VentureCapitalLandscape2025() {
             </p>
             
             <ul className="list-disc pl-6 mb-6">
-              <li>Southeast Asia's fintech and e-commerce ecosystems attracting $12B+ annually</li>
+              <li>Southeast Asia&apos;s fintech and e-commerce ecosystems attracting $12B+ annually</li>
               <li>African agritech and financial inclusion startups gaining institutional attention</li>
               <li>Latin American unicorn emergence creating regional fund opportunities</li>
               <li>Indian deep tech and enterprise SaaS sectors drawing global capital</li>

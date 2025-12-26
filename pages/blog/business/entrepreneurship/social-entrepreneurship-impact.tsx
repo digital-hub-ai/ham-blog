@@ -27,7 +27,7 @@ export default function SocialEntrepreneurshipImpact() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              Social entrepreneurship represents a powerful convergence of profit motive and purpose-driven impact, creating sustainable solutions to humanity's most pressing challenges. Organizations pursuing dual bottom-line strategies report 23% higher employee engagement and 31% stronger customer loyalty compared to traditional for-profit enterprises. As conscious capitalism gains momentum and stakeholder expectations evolve, social entrepreneurs are pioneering business models that prove financial success and positive societal change are not mutually exclusive but mutually reinforcing.
+              Social entrepreneurship represents a powerful convergence of profit motive and purpose-driven impact, creating sustainable solutions to humanity&apos;s most pressing challenges. Organizations pursuing dual bottom-line strategies report 23% higher employee engagement and 31% stronger customer loyalty compared to traditional for-profit enterprises. As conscious capitalism gains momentum and stakeholder expectations evolve, social entrepreneurs are pioneering business models that prove financial success and positive societal change are not mutually exclusive but mutually reinforcing.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-4">Defining Social Entrepreneurship</h2>
