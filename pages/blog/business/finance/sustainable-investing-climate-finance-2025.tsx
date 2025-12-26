@@ -45,7 +45,7 @@ export default function SustainableInvestingClimateFinance2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Environmental Criteria and Carbon Accounting</h3>
             <p className="mb-4">
-              Environmental criteria encompass a company's impact on natural ecosystems, resource consumption, pollution generation, and climate change contributions. Advanced carbon accounting methodologies now enable precise measurement of corporate greenhouse gas emissions across entire value chains, including Scope 3 emissions from suppliers and product use. Companies achieving net-zero emissions by 2025 report 12% lower cost of capital and 8% higher customer loyalty compared to high-emission peers. Regulatory frameworks mandating carbon disclosure have standardized reporting practices, enabling accurate cross-company comparisons and informed investment decisions.
+              Environmental criteria encompass a company&apos;s impact on natural ecosystems, resource consumption, pollution generation, and climate change contributions. Advanced carbon accounting methodologies now enable precise measurement of corporate greenhouse gas emissions across entire value chains, including Scope 3 emissions from suppliers and product use. Companies achieving net-zero emissions by 2025 report 12% lower cost of capital and 8% higher customer loyalty compared to high-emission peers. Regulatory frameworks mandating carbon disclosure have standardized reporting practices, enabling accurate cross-company comparisons and informed investment decisions.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Social Responsibility and Stakeholder Engagement</h3>

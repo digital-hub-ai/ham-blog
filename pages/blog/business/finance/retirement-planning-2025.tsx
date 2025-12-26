@@ -44,14 +44,14 @@ export default function RetirementPlanning2025() {
             </p>
             
             <p className="mb-4">
-              Changing work patterns including gig economy participation, remote work opportunities, and entrepreneurial ventures have created new possibilities for income generation throughout traditional retirement years. Many individuals now pursue "unretirement" - continuing to work in fulfilling capacities while drawing down retirement assets strategically. This evolution requires flexible planning approaches that account for variable income streams, irregular tax implications, and evolving healthcare needs throughout extended retirement periods.
+              Changing work patterns including gig economy participation, remote work opportunities, and entrepreneurial ventures have created new possibilities for income generation throughout traditional retirement years. Many individuals now pursue &quot;unretirement&quot; - continuing to work in fulfilling capacities while drawing down retirement assets strategically. This evolution requires flexible planning approaches that account for variable income streams, irregular tax implications, and evolving healthcare needs throughout extended retirement periods.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Longevity and Healthcare Planning</h2>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Extended Lifespan Considerations</h3>
             <p className="mb-4">
-              With life expectancy reaching 85+ years in developed nations, retirement planning must account for potential 30+ year retirement periods that require substantial financial resources. Longevity risk - the possibility of outliving one's savings - necessitates conservative withdrawal strategies, annuity considerations, and regular portfolio rebalancing to maintain purchasing power. Actuarial tools now help individuals assess personal longevity probabilities based on family history, lifestyle factors, and health indicators to create more personalized retirement plans.
+              With life expectancy reaching 85+ years in developed nations, retirement planning must account for potential 30+ year retirement periods that require substantial financial resources. Longevity risk - the possibility of outliving one&apos;s savings - necessitates conservative withdrawal strategies, annuity considerations, and regular portfolio rebalancing to maintain purchasing power. Actuarial tools now help individuals assess personal longevity probabilities based on family history, lifestyle factors, and health indicators to create more personalized retirement plans.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Healthcare Cost Projections</h3>
