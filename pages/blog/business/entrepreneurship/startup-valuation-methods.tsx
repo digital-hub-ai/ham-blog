@@ -163,7 +163,7 @@ export default function StartupValuationMethods() {
             
             <ul className="list-disc pl-6 mb-6">
               <li>Annual recurring revenue (ARR) multiples of 5-20x depending on growth</li>
-              <li>Gross margin premiums for >80% efficiency businesses</li>
+              <li>Gross margin premiums for {'>'}80% efficiency businesses</li>
               <li>Network effects and switching cost advantages</li>
               <li>Patent portfolio strength and defensive positioning</li>
             </ul>
