@@ -29,7 +29,7 @@ export default function ChangeManagementOrganizationalTransformation() {
       <main className="container mx-auto px-4 py-8">
         <div className="prose max-w-none">
           <p className="text-xl mb-6">
-            In today's rapidly evolving business landscape, organizations face constant pressure to adapt, innovate, and transform. Research by Prosci reveals that 70% of change initiatives fail to achieve their intended outcomes, primarily due to ineffective change management practices. Successful leaders understand that transformation is not just about implementing new processes but about guiding people through transitions with empathy, clarity, and purpose.
+            In today&rsquo;s rapidly evolving business landscape, organizations face constant pressure to adapt, innovate, and transform. Research by Prosci reveals that 70% of change initiatives fail to achieve their intended outcomes, primarily due to ineffective change management practices. Successful leaders understand that transformation is not just about implementing new processes but about guiding people through transitions with empathy, clarity, and purpose.
           </p>
 
           <ImagePlaceholder 
@@ -64,7 +64,7 @@ export default function ChangeManagementOrganizationalTransformation() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Loss Aversion</h3>
           
           <p>
-            Nobel laureate Daniel Kahneman's research demonstrates that humans feel the pain of loss approximately twice as intensely as the pleasure of gain. During organizational change, employees experience loss of familiar routines, established relationships, and perceived control, triggering resistance mechanisms.
+            Nobel laureate Daniel Kahneman&rsquo;s research demonstrates that humans feel the pain of loss approximately twice as intensely as the pleasure of gain. During organizational change, employees experience loss of familiar routines, established relationships, and perceived control, triggering resistance mechanisms.
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Uncertainty Anxiety</h3>
@@ -76,7 +76,7 @@ export default function ChangeManagementOrganizationalTransformation() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Identity Threat</h3>
           
           <p>
-            Professional identities become intertwined with roles, responsibilities, and organizational structures. Significant changes can trigger existential questioning: "Who am I if my job changes?" Addressing identity concerns requires acknowledging emotional impacts and helping employees reconstruct their professional narratives.
+            Professional identities become intertwined with roles, responsibilities, and organizational structures. Significant changes can trigger existential questioning: &quot;Who am I if my job changes?&quot; Addressing identity concerns requires acknowledging emotional impacts and helping employees reconstruct their professional narratives.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Leading Transformation Initiatives</h2>
@@ -88,7 +88,7 @@ export default function ChangeManagementOrganizationalTransformation() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Establishing Urgency</h3>
           
           <p>
-            John Kotter's 8-step change model begins with creating a sense of urgency that motivates action. This involves:
+            John Kotter&rsquo;s 8-step change model begins with creating a sense of urgency that motivates action. This involves:
           </p>
           
           <ul className="list-disc pl-6 mb-6">
@@ -164,7 +164,7 @@ export default function ChangeManagementOrganizationalTransformation() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Continuous Improvement Mindset</h3>
           
           <p>
-            Today's successful transformations establish feedback loops that enable ongoing refinement rather than treating change as discrete projects. Agile methodologies, regular pulse surveys, and rapid experimentation cycles create organizational learning engines that continuously optimize performance.
+            Today&rsquo;s successful transformations establish feedback loops that enable ongoing refinement rather than treating change as discrete projects. Agile methodologies, regular pulse surveys, and rapid experimentation cycles create organizational learning engines that continuously optimize performance.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Conclusion</h2>

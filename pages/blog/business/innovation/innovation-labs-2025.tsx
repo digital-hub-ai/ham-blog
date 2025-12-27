@@ -55,7 +55,7 @@ export default function InnovationLabs2025() {
             <h2 className="text-2xl font-bold mt-12 mb-4">Evolution of Innovation Lab Design</h2>
             
             <p className="mb-4">
-              Modern innovation labs have moved beyond the open-concept layouts of the early 2000s to sophisticated environments designed for specific innovation phases and cognitive activities. Today's most effective labs incorporate:
+              Modern innovation labs have moved beyond the open-concept layouts of the early 2000s to sophisticated environments designed for specific innovation phases and cognitive activities. Today&rsquo;s most effective labs incorporate:
             </p>
             
             <ul className="list-disc pl-6 mb-6">

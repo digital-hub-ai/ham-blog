@@ -29,7 +29,7 @@ export default function InnovationLeadershipCreativeProblemSolving() {
       <main className="container mx-auto px-4 py-8">
         <div className="prose max-w-none">
           <p className="text-xl mb-6">
-            In today's hypercompetitive business environment, organizations that fail to innovate consistently face obsolescence. Boston Consulting Group research reveals that companies in the top quartile of innovation maturity achieve 2.5 times higher revenue growth and 3.2 times higher total shareholder returns than their peers. However, fostering innovation requires more than allocating R&D budgets—it demands leadership that cultivates creative thinking, embraces calculated risk-taking, and systematically approaches complex problem-solving.
+            In today&rsquo;s hypercompetitive business environment, organizations that fail to innovate consistently face obsolescence. Boston Consulting Group research reveals that companies in the top quartile of innovation maturity achieve 2.5 times higher revenue growth and 3.2 times higher total shareholder returns than their peers. However, fostering innovation requires more than allocating R&D budgets—it demands leadership that cultivates creative thinking, embraces calculated risk-taking, and systematically approaches complex problem-solving.
           </p>
 
           <ImagePlaceholder 
@@ -47,7 +47,7 @@ export default function InnovationLeadershipCreativeProblemSolving() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Growth-Oriented Thinking</h3>
           
           <p>
-            Carol Dweck's research on mindset theory illuminates how innovative leaders embrace challenges as opportunities for development:
+            Carol Dweck&rsquo;s research on mindset theory illuminates how innovative leaders embrace challenges as opportunities for development:
           </p>
           
           <ul className="list-disc pl-6 mb-6">
@@ -128,7 +128,7 @@ export default function InnovationLeadershipCreativeProblemSolving() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Psychological Safety Foundations</h3>
           
           <p>
-            Google's Project Aristotle identified psychological safety as the primary predictor of team effectiveness:
+            Google&rsquo;s Project Aristotle identified psychological safety as the primary predictor of team effectiveness:
           </p>
           
           <ul className="list-disc pl-6 mb-6">
@@ -168,7 +168,7 @@ export default function InnovationLeadershipCreativeProblemSolving() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Disruptive Innovation Navigation</h3>
           
           <p>
-            Clayton Christensen's disruptive innovation theory explains how market leaders can maintain relevance:
+            Clayton Christensen&rsquo;s disruptive innovation theory explains how market leaders can maintain relevance:
           </p>
           
           <ul className="list-disc pl-6 mb-6">

@@ -6,7 +6,7 @@ export default function CoachingMentoringLeaderDevelopment() {
   return (
     <div className="min-h-screen bg-white text-black">
       <Head>
-        <title>Coaching and Mentoring for Leader Development: Cultivating Tomorrow's Leaders | Corporate Consciousness</title>
+        <title>Coaching and Mentoring for Leader Development: Cultivating Tomorrow&rsquo;s Leaders | Corporate Consciousness</title>
         <meta name="description" content="Unlock the power of coaching and mentoring to develop exceptional leaders and build strong organizational leadership pipelines." />
         <meta name="keywords" content="leadership coaching, mentoring, leader development, executive coaching, talent development" />
         <meta name="author" content="Leadership Development Expert Dr. Growth Catalyst" />
@@ -15,7 +15,7 @@ export default function CoachingMentoringLeaderDevelopment() {
 
       <header className="bg-white py-8">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">Coaching and Mentoring for Leader Development: Cultivating Tomorrow's Leaders</h1>
+          <h1 className="text-4xl font-bold mb-4">Coaching and Mentoring for Leader Development: Cultivating Tomorrow&rsquo;s Leaders</h1>
           <div className="flex items-center text-gray-600">
             <span>Dr. Growth Catalyst</span>
             <span className="mx-2">•</span>
@@ -89,19 +89,19 @@ export default function CoachingMentoringLeaderDevelopment() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Neuroplasticity Activation</h3>
           
           <p>
-            Quality coaching stimulates neuroplasticity—the brain's ability to reorganize neural pathways based on new experiences. Through reflective questioning and goal-setting exercises, coaches help clients create new mental models that translate into changed behaviors. Studies show that individuals engaged in coaching demonstrate measurable changes in brain activity patterns associated with self-awareness and executive functioning.
+            Quality coaching stimulates neuroplasticity—the brain&rsquo;s ability to reorganize neural pathways based on new experiences. Through reflective questioning and goal-setting exercises, coaches help clients create new mental models that translate into changed behaviors. Studies show that individuals engaged in coaching demonstrate measurable changes in brain activity patterns associated with self-awareness and executive functioning.
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Psychological Safety Creation</h3>
           
           <p>
-            Effective coaches establish psychological safety that enables risk-taking and vulnerability. Amy Edmondson's research at Harvard demonstrates that teams with high psychological safety are 3.5 times more likely to be high-performing. Coaches model acceptance and curiosity, reducing the fear of judgment that inhibits authentic self-expression and learning.
+            Effective coaches establish psychological safety that enables risk-taking and vulnerability. Amy Edmondson&rsquo;s research at Harvard demonstrates that teams with high psychological safety are 3.5 times more likely to be high-performing. Coaches model acceptance and curiosity, reducing the fear of judgment that inhibits authentic self-expression and learning.
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Goal-Directed Neurotransmitter Release</h3>
           
           <p>
-            Setting and pursuing meaningful goals triggers dopamine release, activating the brain's reward system and enhancing motivation. Skilled coaches help clients articulate compelling visions and break them into achievable milestones, maintaining optimal dopamine levels that sustain effort and persistence through challenges.
+            Setting and pursuing meaningful goals triggers dopamine release, activating the brain&rsquo;s reward system and enhancing motivation. Skilled coaches help clients articulate compelling visions and break them into achievable milestones, maintaining optimal dopamine levels that sustain effort and persistence through challenges.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Building Effective Mentoring Programs</h2>

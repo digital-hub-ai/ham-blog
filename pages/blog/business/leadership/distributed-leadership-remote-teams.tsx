@@ -27,7 +27,7 @@ export default function DistributedLeadershipRemoteTeams() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              The shift to remote and hybrid work models has fundamentally transformed leadership requirements. Today's successful leaders must master new competencies while fostering connection, productivity, and innovation across distributed teams.
+              The shift to remote and hybrid work models has fundamentally transformed leadership requirements. Today&rsquo;s successful leaders must master new competencies while fostering connection, productivity, and innovation across distributed teams.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-4">The Evolution of Leadership Models</h2>

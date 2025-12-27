@@ -104,7 +104,7 @@ export default function LeadershipTimesUncertainty() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Emotional Intelligence Application</h3>
           
           <p>
-            Uncertainty amplifies emotional responses, requiring leaders to manage both their own emotions and others':
+            Uncertainty amplifies emotional responses, requiring leaders to manage both their own emotions and others&rsquo;:
           </p>
           
           <ul className="list-disc pl-6 mb-6">

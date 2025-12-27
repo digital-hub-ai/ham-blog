@@ -29,7 +29,7 @@ export default function EthicalLeadershipCorporateGovernance() {
       <main className="container mx-auto px-4 py-8">
         <div className="prose max-w-none">
           <p className="text-xl mb-6">
-            Organizations led by ethical principles consistently outperform their peers in long-term financial metrics, with Ethisphere Institute data showing that World's Most Ethical Companies outperformed the S&P 500 by 10.5% annually over a five-year period. Despite these compelling benefits, ethical leadership remains challenging to implement systematically, requiring deliberate commitment to values that sometimes conflict with short-term profit maximization pressures.
+            Organizations led by ethical principles consistently outperform their peers in long-term financial metrics, with Ethisphere Institute data showing that World&rsquo;s Most Ethical Companies outperformed the S&P 500 by 10.5% annually over a five-year period. Despite these compelling benefits, ethical leadership remains challenging to implement systematically, requiring deliberate commitment to values that sometimes conflict with short-term profit maximization pressures.
           </p>
 
           <ImagePlaceholder 

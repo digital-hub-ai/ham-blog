@@ -41,20 +41,20 @@ export default function ServantLeadershipEmpowerment() {
           <h2 className="text-2xl font-bold mt-8 mb-4">Core Principles of Servant Leadership</h2>
           
           <p>
-            Robert Greenleaf's seminal work established ten core characteristics that define servant leadership philosophy:
+            Robert Greenleaf&rsquo;s seminal work established ten core characteristics that define servant leadership philosophy:
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Listening and Empathy</h3>
           
           <p>
-            Servant leaders prioritize understanding others' perspectives before seeking to be understood:
+            Servant leaders prioritize understanding others&rsquo; perspectives before seeking to be understood:
           </p>
           
           <ul className="list-disc pl-6 mb-6">
             <li>Active listening that seeks to comprehend underlying concerns and motivations</li>
             <li>Empathetic connection that acknowledges emotional dimensions of workplace experiences</li>
             <li>Patience in allowing others to express themselves fully without interruption</li>
-            <li>Openness to feedback and willingness to adjust based on others' insights</li>
+            <li>Openness to feedback and willingness to adjust based on others&rsquo; insights</li>
           </ul>
           
           <p>
@@ -199,14 +199,14 @@ export default function ServantLeadershipEmpowerment() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Balancing Service with Accountability</h3>
           
           <p>
-            Servant leadership doesn't mean avoiding difficult conversations or compromising performance standards:
+            Servant leadership doesn&rsquo;t mean avoiding difficult conversations or compromising performance standards:
           </p>
           
           <ul className="list-disc pl-6 mb-6">
             <li>Maintaining clear expectations while supporting individual development</li>
             <li>Providing candid feedback focused on growth rather than blame</li>
             <li>Holding people accountable through coaching rather than punishment</li>
-            <li>Ensuring service to team members doesn't neglect customer or stakeholder needs</li>
+            <li>Ensuring service to team members doesn&rsquo;t neglect customer or stakeholder needs</li>
           </ul>
           
           <p>
@@ -233,7 +233,7 @@ export default function ServantLeadershipEmpowerment() {
           <h2 className="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
           
           <p>
-            Servant leadership represents a fundamental shift from viewing leadership as authority exercise to understanding it as service provision. In knowledge economies where human capital drives competitive advantage, empowering employees through servant leadership principles creates virtuous cycles of engagement, innovation, and performance excellence. Organizations that embrace this approach discover that putting others first doesn't diminish leadership effectiveness but amplifies it through multiplied human potential. As workforce expectations evolve toward purpose-driven, values-aligned employment relationships, servant leadership offers a roadmap for building organizations where people thrive while delivering exceptional results for all stakeholders.
+            Servant leadership represents a fundamental shift from viewing leadership as authority exercise to understanding it as service provision. In knowledge economies where human capital drives competitive advantage, empowering employees through servant leadership principles creates virtuous cycles of engagement, innovation, and performance excellence. Organizations that embrace this approach discover that putting others first doesn&rsquo;t diminish leadership effectiveness but amplifies it through multiplied human potential. As workforce expectations evolve toward purpose-driven, values-aligned employment relationships, servant leadership offers a roadmap for building organizations where people thrive while delivering exceptional results for all stakeholders.
           </p>
         </div>
 

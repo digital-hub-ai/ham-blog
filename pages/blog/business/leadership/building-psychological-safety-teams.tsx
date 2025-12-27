@@ -116,7 +116,7 @@ export default function BuildingPsychologicalSafetyTeams() {
             <li>Admitting mistakes and sharing lessons learned openly</li>
             <li>Asking for help and acknowledging knowledge gaps</li>
             <li>Expressing uncertainty and seeking input on difficult decisions</li>
-            <li>Sharing personal challenges and how they're addressing them</li>
+            <li>Sharing personal challenges and how they&rsquo;re addressing them</li>
           </ul>
           
           <p>
@@ -126,7 +126,7 @@ export default function BuildingPsychologicalSafetyTeams() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Active Listening and Validation</h3>
           
           <p>
-            Demonstrating genuine interest in others' perspectives builds connection and safety:
+            Demonstrating genuine interest in others&rsquo; perspectives builds connection and safety:
           </p>
           
           <ul className="list-disc pl-6 mb-6">

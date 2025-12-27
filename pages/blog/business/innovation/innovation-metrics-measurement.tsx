@@ -55,7 +55,7 @@ export default function InnovationMetricsMeasurement() {
             <h2 className="text-2xl font-bold mt-12 mb-4">The Innovation Measurement Challenge</h2>
             
             <p className="mb-4">
-              Innovation's inherent uncertainty and long-term payoff horizons complicate traditional performance measurement approaches:
+              Innovation&rsquo;s inherent uncertainty and long-term payoff horizons complicate traditional performance measurement approaches:
             </p>
             
             <h3 className="text-xl font-semibold mt-6 mb-3">Timing Mismatches</h3>

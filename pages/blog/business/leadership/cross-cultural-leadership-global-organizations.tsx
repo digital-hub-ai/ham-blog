@@ -41,7 +41,7 @@ export default function CrossCulturalLeadershipGlobalOrganizations() {
           <h2 className="text-2xl font-bold mt-8 mb-4">Understanding Cultural Dimensions</h2>
           
           <p>
-            Effective cross-cultural leadership begins with recognizing fundamental cultural differences that shape behavior and expectations. Geert Hofstede's cultural dimensions theory provides a foundational framework:
+            Effective cross-cultural leadership begins with recognizing fundamental cultural differences that shape behavior and expectations. Geert Hofstede&rsquo;s cultural dimensions theory provides a foundational framework:
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Power Distance</h3>

@@ -29,7 +29,7 @@ export default function DevelopingHighPerformanceTeams() {
       <main className="container mx-auto px-4 py-8">
         <div className="prose max-w-none">
           <p className="text-xl mb-6">
-            High-performance teams consistently outperform their counterparts by 20-30% in productivity while achieving higher quality outcomes and greater employee satisfaction. Google's extensive research on team effectiveness, analyzing over 180 variables across 115 teams, revealed that psychological safety and clear structure account for the majority of performance differences. Yet building such teams requires more than assembling talented individuals—it demands deliberate attention to team composition, dynamics, and leadership practices that amplify collective capability beyond individual contributions.
+            High-performance teams consistently outperform their counterparts by 20-30% in productivity while achieving higher quality outcomes and greater employee satisfaction. Google&rsquo;s extensive research on team effectiveness, analyzing over 180 variables across 115 teams, revealed that psychological safety and clear structure account for the majority of performance differences. Yet building such teams requires more than assembling talented individuals—it demands deliberate attention to team composition, dynamics, and leadership practices that amplify collective capability beyond individual contributions.
           </p>
 
           <ImagePlaceholder 
