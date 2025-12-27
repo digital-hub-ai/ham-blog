@@ -41,7 +41,7 @@ export default function BuildingPsychologicalSafetyTeams() {
           <h2 className="text-2xl font-bold mt-8 mb-4">Understanding Psychological Safety</h2>
           
           <p>
-            Amy Edmondson of Harvard Business School defines psychological safety as "a shared belief held by members of a team that the team is safe for interpersonal risk taking." This concept encompasses several key dimensions:
+            Amy Edmondson of Harvard Business School defines psychological safety as &quot;a shared belief held by members of a team that the team is safe for interpersonal risk taking.&quot; This concept encompasses several key dimensions:
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Inclusion and Belonging</h3>

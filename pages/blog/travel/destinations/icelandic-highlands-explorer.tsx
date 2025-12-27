@@ -15,7 +15,7 @@ export default function IcelandicHighlandsExplorer() {
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
-          {
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Icelandic Highlands: Untouched Wilderness and Geothermal Wonders",
@@ -34,7 +34,7 @@ export default function IcelandicHighlandsExplorer() {
             },
             "datePublished": "2025-12-18",
             "dateModified": "2025-12-18"
-          }
+          })}
         </script>
       </Head>
 

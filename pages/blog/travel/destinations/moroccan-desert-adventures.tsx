@@ -15,7 +15,7 @@ export default function MoroccanDesertAdventures() {
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
-          {
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Moroccan Desert Adventures: Golden Dunes and Ancient Traditions",
@@ -34,7 +34,7 @@ export default function MoroccanDesertAdventures() {
             },
             "datePublished": "2025-12-19",
             "dateModified": "2025-12-19"
-          }
+          })}
         </script>
       </Head>
 
