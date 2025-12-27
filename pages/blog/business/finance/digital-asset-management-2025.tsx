@@ -78,7 +78,7 @@ export default function DigitalAssetManagement2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Estate Planning and Legacy Transfer</h3>
             <p className="mb-4">
-              Digital asset estate planning addresses the unique challenges of transferring cryptographic keys and digital holdings to beneficiaries. Legal frameworks have evolved to recognize digital assets as legitimate property, enabling traditional estate planning tools to be applied to cryptocurrency holdings. Multi-signature arrangements, social recovery mechanisms, and professional executor services help ensure that digital assets can be accessed and transferred according to investors' wishes.
+              Digital asset estate planning addresses the unique challenges of transferring cryptographic keys and digital holdings to beneficiaries. Legal frameworks have evolved to recognize digital assets as legitimate property, enabling traditional estate planning tools to be applied to cryptocurrency holdings. Multi-signature arrangements, social recovery mechanisms, and professional executor services help ensure that digital assets can be accessed and transferred according to investors&apos; wishes.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Tokenized Securities and Traditional Assets</h2>

@@ -40,7 +40,7 @@ export default function FintechInnovation2025() {
             <h2 className="text-3xl font-bold mt-12 mb-6">The Evolution of Financial Technology</h2>
             
             <p className="mb-4">
-              The fintech revolution has progressed through distinct phases, from early payment digitization to today's comprehensive ecosystem of interconnected financial services. Initially focused on disrupting specific banking functions like payments and lending, fintech has evolved into a holistic transformation of the entire financial services landscape. Today's fintech companies are not merely competing with traditional banks but collaborating with them to create hybrid models that combine the agility and innovation of startups with the stability and regulatory expertise of established institutions.
+              The fintech revolution has progressed through distinct phases, from early payment digitization to today&apos;s comprehensive ecosystem of interconnected financial services. Initially focused on disrupting specific banking functions like payments and lending, fintech has evolved into a holistic transformation of the entire financial services landscape. Today&apos;s fintech companies are not merely competing with traditional banks but collaborating with them to create hybrid models that combine the agility and innovation of startups with the stability and regulatory expertise of established institutions.
             </p>
             
             <p className="mb-4">

@@ -163,14 +163,14 @@ export default function FinancialInclusionBlockchain() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Transparency and Community Governance</h3>
             <p className="mb-4">
-              Transparent governance structures and community involvement in decision-making help build trust in blockchain-based financial services. Open-source development, public audit trails, and community advisory boards ensure that services operate in users' best interests. Participatory governance models allow communities to influence service features, fee structures, and operational policies.
+              Transparent governance structures and community involvement in decision-making help build trust in blockchain-based financial services. Open-source development, public audit trails, and community advisory boards ensure that services operate in users&apos; best interests. Participatory governance models allow communities to influence service features, fee structures, and operational policies.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Impact Measurement and Sustainability</h2>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Social Impact Assessment</h3>
             <p className="mb-4">
-              Comprehensive impact measurement frameworks assess the social, economic, and environmental effects of blockchain-based financial inclusion initiatives. Key metrics include financial service adoption rates, income improvements, women's empowerment indicators, and community development outcomes. Regular impact assessments help refine services and demonstrate value to stakeholders including donors, investors, and regulators.
+              Comprehensive impact measurement frameworks assess the social, economic, and environmental effects of blockchain-based financial inclusion initiatives. Key metrics include financial service adoption rates, income improvements, women&apos;s empowerment indicators, and community development outcomes. Regular impact assessments help refine services and demonstrate value to stakeholders including donors, investors, and regulators.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Long-Term Sustainability Models</h3>

@@ -67,7 +67,7 @@ export default function SustainableInvestingClimateFinance2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Sustainability-Linked Loans and Credit Facilities</h3>
             <p className="mb-4">
-              Sustainability-linked loans tie interest rates to borrowers' achievement of predefined environmental targets, creating financial incentives for improved sustainability performance. These instruments have gained popularity among corporations seeking flexible financing solutions that align with ESG objectives. Loan agreements typically include key performance indicators related to carbon intensity reduction, renewable energy adoption, or circular economy metrics. Companies achieving sustainability milestones receive interest rate discounts of 25-50 basis points, while failure to meet targets triggers penalty increases. This innovative financing mechanism has mobilized over $800 billion in climate-aligned capital since inception.
+              Sustainability-linked loans tie interest rates to borrowers&apos; achievement of predefined environmental targets, creating financial incentives for improved sustainability performance. These instruments have gained popularity among corporations seeking flexible financing solutions that align with ESG objectives. Loan agreements typically include key performance indicators related to carbon intensity reduction, renewable energy adoption, or circular economy metrics. Companies achieving sustainability milestones receive interest rate discounts of 25-50 basis points, while failure to meet targets triggers penalty increases. This innovative financing mechanism has mobilized over $800 billion in climate-aligned capital since inception.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Transition Finance and Brownfield Investments</h3>
@@ -106,7 +106,7 @@ export default function SustainableInvestingClimateFinance2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Thematic Investment Strategies</h3>
             <p className="mb-4">
-              Thematic strategies focus on specific sustainability challenges including clean energy, electric mobility, water security, and circular economy solutions. These approaches enable investors to capitalize on structural megatrends while contributing to positive environmental outcomes. Clean energy exchange-traded funds now outperform traditional energy indices by 25% annually, reflecting the sector's rapid growth and improving economics. Water security funds target companies developing desalination technologies, wastewater treatment solutions, and precision irrigation systems to address growing global water scarcity challenges.
+              Thematic strategies focus on specific sustainability challenges including clean energy, electric mobility, water security, and circular economy solutions. These approaches enable investors to capitalize on structural megatrends while contributing to positive environmental outcomes. Clean energy exchange-traded funds now outperform traditional energy indices by 25% annually, reflecting the sector&apos;s rapid growth and improving economics. Water security funds target companies developing desalination technologies, wastewater treatment solutions, and precision irrigation systems to address growing global water scarcity challenges.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Future Outlook and Emerging Opportunities</h2>

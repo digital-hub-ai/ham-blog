@@ -44,7 +44,7 @@ export default function EsgInvestingMainstream() {
             </p>
             
             <p className="mb-4">
-              Regulatory momentum has accelerated ESG adoption, with governments worldwide mandating sustainability disclosures and establishing frameworks for responsible investing. The European Union's Sustainable Finance Disclosure Regulation (SFDR) and similar initiatives in North America and Asia have created standardized reporting requirements that enable meaningful comparison between investment opportunities. These regulations have eliminated greenwashing concerns while providing investors with reliable data for decision-making.
+              Regulatory momentum has accelerated ESG adoption, with governments worldwide mandating sustainability disclosures and establishing frameworks for responsible investing. The European Union&apos;s Sustainable Finance Disclosure Regulation (SFDR) and similar initiatives in North America and Asia have created standardized reporting requirements that enable meaningful comparison between investment opportunities. These regulations have eliminated greenwashing concerns while providing investors with reliable data for decision-making.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Environmental Investing Strategies</h2>
@@ -129,7 +129,7 @@ export default function EsgInvestingMainstream() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Real-Time Monitoring and Engagement</h3>
             <p className="mb-4">
-              Real-time ESG monitoring platforms provide continuous assessment of portfolio companies' sustainability performance, enabling proactive engagement and timely adjustments to investment positions. These systems track regulatory developments, stakeholder sentiment, and emerging risks that could impact portfolio companies. Active ownership strategies leverage this intelligence to engage constructively with company management on ESG improvements that enhance long-term value.
+              Real-time ESG monitoring platforms provide continuous assessment of portfolio companies&apos; sustainability performance, enabling proactive engagement and timely adjustments to investment positions. These systems track regulatory developments, stakeholder sentiment, and emerging risks that could impact portfolio companies. Active ownership strategies leverage this intelligence to engage constructively with company management on ESG improvements that enhance long-term value.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Regulatory Environment and Policy Developments</h2>
@@ -146,7 +146,7 @@ export default function EsgInvestingMainstream() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Sustainable Finance Regulations</h3>
             <p className="mb-4">
-              Sustainable finance regulations are expanding globally, with requirements for ESG disclosure, sustainable investment labeling, and fiduciary duty considerations that explicitly include sustainability factors. The European Union's taxonomy for sustainable activities, the United States' climate risk disclosure proposals, and similar initiatives in Asia-Pacific markets are creating consistent frameworks for sustainable investing. These regulations are driving capital toward genuinely sustainable activities while constraining greenwashing practices.
+              Sustainable finance regulations are expanding globally, with requirements for ESG disclosure, sustainable investment labeling, and fiduciary duty considerations that explicitly include sustainability factors. The European Union&apos;s taxonomy for sustainable activities, the United States&apos; climate risk disclosure proposals, and similar initiatives in Asia-Pacific markets are creating consistent frameworks for sustainable investing. These regulations are driving capital toward genuinely sustainable activities while constraining greenwashing practices.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Future Trends and Opportunities</h2>

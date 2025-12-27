@@ -61,7 +61,7 @@ export default function DecentralizedFinanceFuture() {
             
             <h3 className="text-xl font-semibold mt-6 mb-3">Traditional Banks Enter DeFi</h3>
             <p className="mb-4">
-              Major financial institutions are launching their own DeFi products and services. JPMorgan's Onyx platform and Goldman Sachs' cryptocurrency trading desk represent significant validation of decentralized financial models.
+              Major financial institutions are launching their own DeFi products and services. JPMorgan&apos;s Onyx platform and Goldman Sachs&apos; cryptocurrency trading desk represent significant validation of decentralized financial models.
             </p>
             
             <h3 className="text-xl font-semibold mt-6 mb-3">Corporate Treasury Allocation</h3>
@@ -71,7 +71,7 @@ export default function DecentralizedFinanceFuture() {
             
             <h3 className="text-xl font-semibold mt-6 mb-3">Central Bank Digital Currencies (CBDCs)</h3>
             <p className="mb-4">
-              Over 80 countries are exploring or developing CBDCs, which could bridge traditional monetary systems with blockchain-based infrastructure. China's digital yuan pilot program has processed over 100 billion transactions.
+              Over 80 countries are exploring or developing CBDCs, which could bridge traditional monetary systems with blockchain-based infrastructure. China&apos;s digital yuan pilot program has processed over 100 billion transactions.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-4">Risk Management in DeFi</h2>

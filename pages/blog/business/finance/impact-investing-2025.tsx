@@ -78,7 +78,7 @@ export default function ImpactInvesting2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Impact Attribution and Additionality</h3>
             <p className="mb-4">
-              Rigorous impact assessment requires distinguishing between outcomes that would have occurred anyway and those directly attributable to investment capital. Additionality analysis evaluates whether investments create new value that wouldn't exist without intentional capital deployment. Counterfactual analysis and randomized control trials help establish causation between investment activities and social outcomes, ensuring that impact claims are credible and meaningful rather than merely correlational.
+              Rigorous impact assessment requires distinguishing between outcomes that would have occurred anyway and those directly attributable to investment capital. Additionality analysis evaluates whether investments create new value that wouldn&apos;t exist without intentional capital deployment. Counterfactual analysis and randomized control trials help establish causation between investment activities and social outcomes, ensuring that impact claims are credible and meaningful rather than merely correlational.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Sector-Specific Impact Opportunities</h2>
@@ -153,7 +153,7 @@ export default function ImpactInvesting2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Sustainable Finance Regulations</h3>
             <p className="mb-4">
-              Regulatory frameworks for sustainable finance are expanding globally, with requirements for ESG disclosure, sustainable investment labeling, and fiduciary duty considerations that explicitly include sustainability factors. The European Union's Sustainable Finance Disclosure Regulation (SFDR) and taxonomy for sustainable activities, along with similar initiatives in North America and Asia, are creating consistent standards for impact investing. These regulations increase transparency while helping investors identify genuinely sustainable investment opportunities.
+              Regulatory frameworks for sustainable finance are expanding globally, with requirements for ESG disclosure, sustainable investment labeling, and fiduciary duty considerations that explicitly include sustainability factors. The European Union&apos;s Sustainable Finance Disclosure Regulation (SFDR) and taxonomy for sustainable activities, along with similar initiatives in North America and Asia, are creating consistent standards for impact investing. These regulations increase transparency while helping investors identify genuinely sustainable investment opportunities.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Tax Incentives and Government Support</h3>
@@ -174,7 +174,7 @@ export default function ImpactInvesting2025() {
             
             <ul className="list-disc pl-6 mb-4">
               <li className="mb-2">Natural capital investing addressing biodiversity loss and ecosystem restoration</li>
-              <li className="mb-2">Gender lens investing targeting women's economic empowerment and gender equality</li>
+              <li className="mb-2">Gender lens investing targeting women&apos;s economic empowerment and gender equality</li>
               <li className="mb-2">Just transition investing supporting workers and communities during economic transformation</li>
               <li className="mb-2">Place-based investing revitalizing underserved communities through integrated development</li>
               <li className="mb-2">Technology-enabled impact measurement improving accuracy and reducing costs</li>
@@ -185,7 +185,7 @@ export default function ImpactInvesting2025() {
             </p>
             
             <p className="mb-4">
-              The convergence of traditional finance with impact considerations represents a fundamental transformation in how capital is allocated globally. Investors who successfully integrate impact objectives with financial performance will achieve sustainable competitive advantages while contributing to solutions for humanity's greatest challenges.
+              The convergence of traditional finance with impact considerations represents a fundamental transformation in how capital is allocated globally. Investors who successfully integrate impact objectives with financial performance will achieve sustainable competitive advantages while contributing to solutions for humanity&apos;s greatest challenges.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
