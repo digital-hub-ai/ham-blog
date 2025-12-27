@@ -15,15 +15,33 @@ export default function DestinationsIndex() {
   return (
     <>
       <Head>
-        <title>Destinations | Chrono-Wanderer's Atlas</title>
+        <title>Destinations | Chrono-Wanderer&rsquo;s Atlas</title>
         <meta name="description" content="Explore destinations around the world through our curated travel guides." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "headline": "Destinations",
+            "description": "Explore destinations around the world through our curated travel guides.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chrono-Wanderer's Atlas",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ai-tools-directory.com/images/logo.png"
+              }
+            },
+            "datePublished": "2025-12-27",
+            "dateModified": "2025-12-27"
+          })}
+        </script>
       </Head>
 
       <div className="min-h-screen bg-white text-black">
         <div className="container mx-auto px-4 py-12 max-w-6xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&rsquo;s Atlas
           </Link>
 
           <div className="mb-12">

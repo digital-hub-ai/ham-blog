@@ -10,6 +10,28 @@ export default function InnovationMetricsMeasurement() {
         <meta name="keywords" content="innovation metrics, ROI measurement, creative output, innovation KPIs, performance tracking" />
         <meta name="author" content="Innovation Analytics Expert Dr. Metric Mind" />
         <link rel="canonical" href="https://yourdomain.com/blog/business/innovation/innovation-metrics-measurement" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Innovation Metrics: Measuring and Managing Creative Output",
+            "description": "Frameworks for tracking innovation performance and ROI on creative investments.",
+            "author": {
+              "@type": "Person",
+              "name": "Innovation Analytics Expert Dr. Metric Mind"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Corporate Consciousness",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ai-tools-directory.com/images/logo.png"
+              }
+            },
+            "datePublished": "2025-11-23",
+            "dateModified": "2025-11-23"
+          })}
+        </script>
       </Head>
 
       <div className="container mx-auto px-4 py-12 max-w-4xl">
