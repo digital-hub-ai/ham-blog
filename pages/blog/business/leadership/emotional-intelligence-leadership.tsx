@@ -79,12 +79,12 @@ export default function EmotionalIntelligenceLeadership() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Assessment and Feedback Mechanisms</h3>
             <p className="mb-4">
-              Developing EQ begins with honest self-assessment and comprehensive feedback from trusted colleagues, team members, and mentors. 360-degree evaluations reveal how others perceive a leader's emotional capabilities and highlight areas for improvement. Journaling practices help leaders track emotional patterns, identify triggers, and reflect on the effectiveness of different responses. Regular check-ins with team members provide real-time insights into the emotional climate of the workplace and opportunities to adjust leadership approaches accordingly.
+              Developing EQ begins with honest self-assessment and comprehensive feedback from trusted colleagues, team members, and mentors. 360-degree evaluations reveal how others perceive a leader&rsquo;s emotional capabilities and highlight areas for improvement. Journaling practices help leaders track emotional patterns, identify triggers, and reflect on the effectiveness of different responses. Regular check-ins with team members provide real-time insights into the emotional climate of the workplace and opportunities to adjust leadership approaches accordingly.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Mindfulness and Emotional Regulation Practices</h3>
             <p className="mb-4">
-              Mindfulness techniques including meditation, deep breathing exercises, and body awareness practices enhance leaders' ability to recognize emotional states as they arise. These tools create space between stimulus and response, enabling more intentional and effective leadership behaviors. Regular mindfulness practice improves focus, reduces stress reactivity, and enhances empathy by increasing leaders' capacity to be present with others' experiences without becoming overwhelmed by their emotions.
+              Mindfulness techniques including meditation, deep breathing exercises, and body awareness practices enhance leaders&rsquo; ability to recognize emotional states as they arise. These tools create space between stimulus and response, enabling more intentional and effective leadership behaviors. Regular mindfulness practice improves focus, reduces stress reactivity, and enhances empathy by increasing leaders&rsquo; capacity to be present with others&rsquo; experiences without becoming overwhelmed by their emotions.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Coaching and Professional Development</h3>

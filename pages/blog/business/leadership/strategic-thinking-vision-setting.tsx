@@ -29,7 +29,7 @@ export default function StrategicThinkingVisionSetting() {
       <main className="container mx-auto px-4 py-8">
         <div className="prose max-w-none">
           <p className="text-xl mb-6">
-            Organizations that thrive in today's volatile business environment share one critical characteristic: leaders who excel at strategic thinking and vision setting. Research by the Harvard Business Review reveals that companies with clearly articulated long-term visions outperform their competitors by 12.5% in revenue growth.
+            Organizations that thrive in today&rsquo;s volatile business environment share one critical characteristic: leaders who excel at strategic thinking and vision setting. Research by the Harvard Business Review reveals that companies with clearly articulated long-term visions outperform their competitors by 12.5% in revenue growth.
           </p>
 
           <ImagePlaceholder 
@@ -53,7 +53,7 @@ export default function StrategicThinkingVisionSetting() {
           </ul>
           
           <p>
-            According to McKinsey's Global Institute, leaders who consistently engage in strategic thinking allocate 25% more time to future-oriented activities compared to their peers, resulting in 18% higher profitability metrics.
+            According to McKinsey&rsquo;s Global Institute, leaders who consistently engage in strategic thinking allocate 25% more time to future-oriented activities compared to their peers, resulting in 18% higher profitability metrics.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">The Foundation of Effective Vision Setting</h2>
@@ -106,7 +106,7 @@ export default function StrategicThinkingVisionSetting() {
           
           <ul className="list-disc pl-6 mb-6">
             <li>What if our biggest assumption proves wrong?</li>
-            <li>Who aren't we serving that we could be?</li>
+            <li>Who aren&rsquo;t we serving that we could be?</li>
             <li>What would success look like in five years?</li>
             <li>What external forces could render our strategy obsolete?</li>
           </ul>

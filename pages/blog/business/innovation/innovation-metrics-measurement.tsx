@@ -241,7 +241,7 @@ export default function InnovationMetricsMeasurement() {
               <li>Over-reliance on easily measurable but potentially misleading vanity metrics</li>
               <li>Infrequent measurement cycles that miss important trend changes</li>
               <li>Siloed metrics that fail to capture cross-functional collaboration value</li>
-              <li>Static measurement systems that don't evolve with changing business needs</li>
+              <li>Static measurement systems that don&rsquo;t evolve with changing business needs</li>
             </ul>
             
             <p className="mb-4">
