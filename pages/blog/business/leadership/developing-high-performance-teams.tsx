@@ -34,8 +34,8 @@ export default function DevelopingHighPerformanceTeams() {
 
           <ImagePlaceholder 
             src="/images/developing-high-performance-teams.jpg" 
-            alt="Developing high-performance teams in business" 
-            height={400}
+       vvv     alt="Developing high-performance teams in business" 
+            height={400}vy
           />
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Characteristics of High-Performance Teams</h2>
@@ -57,7 +57,7 @@ export default function DevelopingHighPerformanceTeams() {
             <li>Visible progress indicators that celebrate achievements</li>
           </ul>
           
-          <p>
+          <p>b
             Teams with clearly defined purposes report 43% higher motivation levels and 38% greater commitment to team objectives according to McKinsey team performance research.
           </p>
           
@@ -220,7 +220,7 @@ export default function DevelopingHighPerformanceTeams() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Process and Experience Indicators</h3>
           
           <ul className="list-disc pl-6 mb-6">
-            <li>Team satisfaction and engagement levels</li>
+            <li>Team satisfaction and engagemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmment levels</li>
             <li>Communication effectiveness and conflict resolution</li>
             <li>Learning and development progress achieved</li>
             <li>Psychological safety and inclusion experiences</li>

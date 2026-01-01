@@ -177,10 +177,10 @@ const ComposabilityImperative = () => {
           <section id="the-lego-revolution" className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">The Lego Revolution in Software</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="text-xl leading-relaxed mb-6">Imagine building complex applications the way kids build with Lego blocks - snapping together standardized pieces to create something entirely new, then rearranging them instantly when you want to change something. This isn't a fantasy; it's the future of software architecture.</p>
+              <p className="text-xl leading-relaxed mb-6">Imagine building complex applications the way kids build with Lego blocks - snapping together standardized pieces to create something entirely new, then rearranging them instantly when you want to change something. This isn&rsquo;t a fantasy; it&rsquo;s the future of software architecture.</p>
               
               <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8">
-                <p className="text-purple-800 font-medium">Composability is transforming how we think about software. Instead of building monolithic applications from scratch, we're assembling solutions from interchangeable, specialized components that work together seamlessly.</p>
+                <p className="text-purple-800 font-medium">Composability is transforming how we think about software. Instead of building monolithic applications from scratch, we&rsquo;re assembling solutions from interchangeable, specialized components that work together seamlessly.</p>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">From Monoliths to Modular</h3>
@@ -206,10 +206,10 @@ const ComposabilityImperative = () => {
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Business Imperative</h3>
-              <p className="mb-6">This isn't just an architectural trend - it's a business necessity. In a world where market conditions change overnight, businesses need the ability to adapt their technology stack as quickly as their strategy. Composability provides that agility.</p>
+              <p className="mb-6">This isn&rsquo;t just an architectural trend - it&rsquo;s a business necessity. In a world where market conditions change overnight, businesses need the ability to adapt their technology stack as quickly as their strategy. Composability provides that agility.</p>
 
               <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="text-gray-800 italic">"The question is no longer whether to go composable, but how fast you can get there. The companies that master composability will out-innovate and out-perform those that don't."</p>
+                <p className="text-gray-800 italic">&quot;The question is no longer whether to go composable, but how fast you can get there. The companies that master composability will out-innovate and out-perform those that don&rsquo;t.&quot;</p>
                 <p className="text-gray-600 text-sm mt-2">- Gartner, Strategic Planning Assumption</p>
               </div>
             </div>
@@ -220,7 +220,7 @@ const ComposabilityImperative = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">What Is Composability, Really?</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Beyond Microservices</h3>
-              <p className="mb-6">Composability is often confused with microservices, but they're fundamentally different approaches. While microservices break down monoliths into smaller services, composability creates truly independent, swappable components with standardized interfaces.</p>
+              <p className="mb-6">Composability is often confused with microservices, but they&rsquo;re fundamentally different approaches. While microservices break down monoliths into smaller services, composability creates truly independent, swappable components with standardized interfaces.</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-blue-50 p-6 rounded-lg">
@@ -341,7 +341,7 @@ const ComposabilityImperative = () => {
                   <p className="text-purple-800 mb-4">The API economy has reached critical mass, with standardized protocols and widespread adoption</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold text-purple-700 mb-2">What's Changed:</h4>
+                      <h4 className="font-semibold text-purple-700 mb-2">What&rsquo;s Changed:</h4>
                       <ul className="text-sm text-purple-600 space-y-1">
                         <li>• REST and GraphQL standards established</li>
                         <li>• API management platforms matured</li>
@@ -450,7 +450,7 @@ const ComposabilityImperative = () => {
                   </div>
                   <div className="flex items-center">
                     <span className="bg-yellow-500 text-white rounded-full w-3 h-3 mr-3"></span>
-                    <span className="text-gray-700">2026-2028: Non-composable companies can't compete</span>
+                    <span className="text-gray-700">2026-2028: Non-composable companies can&rsquo;t compete</span>
                   </div>
                   <div className="flex items-center">
                     <span className="bg-green-500 text-white rounded-full w-3 h-3 mr-3"></span>
@@ -530,11 +530,11 @@ const ComposabilityImperative = () => {
                         <li>✅ Use standards like OpenAPI/Swagger</li>
                       </ul>
                       <ul className="text-sm text-purple-700 space-y-1">
-                        <li>❌ Don't break backward compatibility</li>
+                        <li>❌ Don&rsquo;t break backward compatibility</li>
                         <li>❌ Avoid nested resources beyond 3 levels</li>
-                        <li>❌ Don't expose internal data structures</li>
-                        <li>❌ Don't ignore security best practices</li>
-                        <li>❌ Don't forget error handling standards</li>
+                        <li>❌ Don&rsquo;t expose internal data structures</li>
+                        <li>❌ Don&rsquo;t ignore security best practices</li>
+                        <li>❌ Don&rsquo;t forget error handling standards</li>
                       </ul>
                     </div>
                   </div>
@@ -769,7 +769,7 @@ const ComposabilityImperative = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">The Business Benefits of Going Composable</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Measurable Business Impact</h3>
-              <p className="mb-6">Composability isn't just an architectural choice - it delivers concrete business benefits that directly impact the bottom line.</p>
+              <p className="mb-6">Composability isn&rsquo;t just an architectural choice - it delivers concrete business benefits that directly impact the bottom line.</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl">
@@ -929,7 +929,7 @@ const ComposabilityImperative = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Implementing Composability: A Strategic Approach</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Migration Journey</h3>
-              <p className="mb-6">Moving to a composable architecture is a journey, not a flip of a switch. Here's how to approach it strategically:</p>
+              <p className="mb-6">Moving to a composable architecture is a journey, not a flip of a switch. Here&rsquo;s how to approach it strategically:</p>
 
               <div className="space-y-8">
                 <div className="bg-purple-50 p-8 rounded-xl">
@@ -1252,7 +1252,7 @@ const ComposabilityImperative = () => {
           <section id="future" className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">The Future of Composable Business</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-900">What's Next in Composability</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">What&rsquo;s Next in Composability</h3>
               <p className="mb-6">The composability revolution is just getting started. Here are the trends that will shape the future:</p>
 
               <div className="space-y-8">

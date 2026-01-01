@@ -217,7 +217,7 @@ export default function DigitalGardener() {
                   </svg>
                 </div>
                 <p className="text-sm">Your garden is thriving!</p>
-                <p className="text-xs">I'll notify you of any insights.</p>
+                <p className="text-xs">I&rsquo;ll notify you of any insights.</p>
               </div>
             ) : (
               messages.map((message) => (

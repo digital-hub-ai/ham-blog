@@ -235,13 +235,13 @@ const BeyondRAG = () => {
                 </div>
                 
                 <div className="relative">
-                  <div className="absolute -left-12 w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">3</div>
-                  <h3 className="text-xl font-semibold mb-2">Agentic Search (2024-2025)</h3>
-                  <p className="text-gray-700">AI agents that can understand intent, plan actions, use tools, and reason through complex problems. These systems don't just retrieve information - they can perform tasks and solve problems.</p>
+                    <div className="absolute -left-12 w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">3</div>
+                    <h3 className="text-xl font-semibold mb-2">Agentic Search (2024-2025)</h3>
+                    <p className="text-gray-700">AI agents that can understand intent, plan actions, use tools, and reason through complex problems. These systems don&rsquo;t just retrieve information - they can perform tasks and solve problems.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            
+              
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-8">
               <p className="text-yellow-700">
                 <span className="font-semibold">Note:</span> While RAG remains a critical component, agentic search represents a fundamental shift in how we think about AI assistants - from information retrieval systems to autonomous problem solvers.
@@ -384,7 +384,7 @@ const BeyondRAG = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-6 border-b pb-2">Implementation Roadmap</h2>
             <p className="mb-6">
-              Transitioning from RAG to agentic search is a journey. Here's a phased approach to implementation:
+              Transitioning from RAG to agentic search is a journey. Here&rsquo;s a phased approach to implementation:
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -563,7 +563,7 @@ const BeyondRAG = () => {
                     <li><span className="font-medium">DevOps:</span> Experience with containerization, cloud services, and MLOps</li>
                     <li><span className="font-medium">Domain knowledge:</span> Understanding of your specific use case and requirements</li>
                   </ul>
-                  Many teams find success by upskilling existing team members rather than hiring specialized "agent engineers."
+                  Many teams find success by upskilling existing team members rather than hiring specialized &quot;agent engineers.&quot;
                 </p>
               </div>
             </div>
@@ -573,11 +573,11 @@ const BeyondRAG = () => {
             <h3 className="text-xl font-semibold mb-3">Explore More AI & ML Content</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <Link href="/blog/gpu-poor-guide-ai-training" className="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                <h4 className="font-medium text-blue-600">The GPU Poor's Guide to AI: Training Models on a Budget in 2025</h4>
+                <h4 className="font-medium text-blue-600">The GPU Poor&rsquo;s Guide to AI: Training Models on a Budget in 2025</h4>
                 <p className="text-sm text-gray-600 mt-1">Learn how to train AI models without breaking the bank with our comprehensive guide to affordable cloud GPUs and optimization techniques.</p>
               </Link>
               <Link href="/blog/llm-ops-stack-guide" className="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                <h4 className="font-medium text-blue-600">The "LLM Ops" Stack: Taming the Chaos of Production Large Language Models</h4>
+                <h4 className="font-medium text-blue-600">The &quot;LLM Ops&quot; Stack: Taming the Chaos of Production Large Language Models</h4>
                 <p className="text-sm text-gray-600 mt-1">Comprehensive guide to LLM Ops tools and best practices for managing large language models in production.</p>
               </Link>
             </div>

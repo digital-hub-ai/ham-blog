@@ -458,7 +458,7 @@ const MLModelVersioning = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Metadata Standards</h2>
             <p className="text-gray-700 mb-6">
-              Comprehensive metadata is essential for model versioning. Here's what to track for each model version:
+              Comprehensive metadata is essential for model versioning. Here&rsquo;s what to track for each model version:
             </p>
             
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 mb-8">
@@ -528,7 +528,7 @@ const MLModelVersioning = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Experiment Tracking</h2>
             <p className="text-gray-700 mb-6">
-              Effective experiment tracking goes beyond just versioning models. Here's what to track for 
+              Effective experiment tracking goes beyond just versioning models. Here&rsquo;s what to track for 
               complete experiment reproducibility:
             </p>
             
@@ -614,7 +614,7 @@ const MLModelVersioning = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Tools Comparison</h2>
             <p className="text-gray-700 mb-6">
-              The ML tooling landscape has evolved significantly. Here's how the top tools for model 
+              The ML tooling landscape has evolved significantly. Here&rsquo;s how the top tools for model 
               versioning and experiment tracking compare in 2025:
             </p>
             
@@ -786,7 +786,7 @@ const MLModelVersioning = () => {
                 <div>
                   <h4 className="font-medium text-gray-800 mb-2">2. Automate Everything</h4>
                   <p className="text-gray-700 text-sm">
-                    Manual processes don't scale. Automate versioning, testing, and deployment 
+                    Manual processes don&rsquo;t scale. Automate versioning, testing, and deployment 
                     to reduce errors and save time.
                   </p>
                 </div>

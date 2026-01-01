@@ -105,7 +105,7 @@ export default function TwoFactorSetupForm() {
         </div>
         
         <p className="text-sm text-red-600 mb-4">
-          Warning: These codes won't be shown again. Make sure to save them now!
+          Warning: These codes won&rsquo;t be shown again. Make sure to save them now!
         </p>
         
         <button

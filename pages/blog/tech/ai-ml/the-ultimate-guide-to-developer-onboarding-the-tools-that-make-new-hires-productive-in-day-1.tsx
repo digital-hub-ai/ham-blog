@@ -97,7 +97,7 @@ const DeveloperOnboardingGuide = () => {
               },
               {
                 "@type": "Question",
-                "name": "What's the biggest mistake in developer onboarding?",
+                "name": "What&rsquo;s the biggest mistake in developer onboarding?"
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "The biggest mistake is treating onboarding as a one-time event rather than an ongoing process. Successful onboarding requires continuous support, regular check-ins, and iterative improvement of the process itself."
@@ -108,7 +108,7 @@ const DeveloperOnboardingGuide = () => {
                 "name": "How do you measure onboarding success?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Key metrics include: time to first commit, time to first production deployment, code review participation rate, bug fix velocity, and 90-day retention rate. The most important metric is the new hire's self-reported confidence and productivity."
+                  "text": "Key metrics include: time to first commit, time to first production deployment, code review participation rate, bug fix velocity, and 90-day retention rate. The most important metric is the new hire&rsquo;s self-reported confidence and productivity."
                 }
               }
             ]
@@ -175,10 +175,10 @@ const DeveloperOnboardingGuide = () => {
           <section id="the-cost-of-bad-onboarding" className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">The Hidden Cost of Bad Developer Onboarding</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="text-xl leading-relaxed mb-6">A new developer joins your team. Excitement is high. But 90 days later, they're still struggling with basic setup questions, drowning in context, and not yet productive. Sound familiar?</p>
+              <p className="text-xl leading-relaxed mb-6">A new developer joins your team. Excitement is high. But 90 days later, they&rsquo;re still struggling with basic setup questions, drowning in context, and not yet productive. Sound familiar?</p>
               
               <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-                <p className="text-red-800 font-medium">The reality: 70% of companies lose $30,000-$50,000 per new hire in productivity costs during the first 3 months. The problem isn't talent—it's process.</p>
+                <p className="text-red-800 font-medium">The reality: 70% of companies lose $30,000-$50,000 per new hire in productivity costs during the first 3 months. The problem isn&rsquo;t talent—it&rsquo;s process.</p>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Numbers That Should Wake You Up</h3>
@@ -201,7 +201,7 @@ const DeveloperOnboardingGuide = () => {
                 </li>
               </ul>
 
-              <p className="text-lg leading-relaxed">This isn't magic. It's systematic onboarding with the right tools, processes, and mindset. Here's exactly how we do it.</p>
+              <p className="text-lg leading-relaxed">This isn&rsquo;t magic. It&rsquo;s systematic onboarding with the right tools, processes, and mindset. Here&rsquo;s exactly how we do it.</p>
             </div>
           </section>
 
@@ -210,7 +210,7 @@ const DeveloperOnboardingGuide = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Phase 1: Pre-Onboarding Preparation (Before Day 1)</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The 48-Hour Head Start</h3>
-              <p className="mb-6">Great onboarding starts before the developer's first day. Here's our pre-boarding checklist:</p>
+              <p className="mb-6">Great onboarding starts before the developer&rsquo;s first day. Here&rsquo;s our pre-boarding checklist:</p>
 
               <div className="space-y-6 mb-8">
                 <div className="bg-green-50 p-6 rounded-lg">
@@ -229,7 +229,7 @@ const DeveloperOnboardingGuide = () => {
                   <ul className="space-y-2 text-blue-700">
                     <li>• Create personalized onboarding dashboard in Notion</li>
                     <li>• Prepare team introduction schedule with bios</li>
-                    <li>• Set up first week's project tasks in Jira</li>
+                    <li>• Set up first week&rsquo;s project tasks in Jira</li>
                     <li>• Create development environment troubleshooting guide</li>
                     <li>• Prepare code review buddy assignments</li>
                   </ul>
@@ -253,8 +253,8 @@ const DeveloperOnboardingGuide = () => {
 
 Hi [Name],
 
-We're incredibly excited to have you join our engineering team! 
-I've prepared everything you need to hit the ground running.
+We&rsquo;re incredibly excited to have you join our engineering team! 
+I&rsquo;ve prepared everything you need to hit the ground running.
 
 🚀 Your Development Environment
 - Machine: MacBook Pro M3 Max (ready for pickup)
@@ -287,7 +287,7 @@ Engineering Manager`}</pre>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Phase 2: Day 1 - Zero to Development Ready</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The 2-Hour Setup Miracle</h3>
-              <p className="mb-6">Here's our exact Day 1 schedule that gets new hires coding by 10:30 AM:</p>
+              <p className="mb-6">Here&rsquo;s our exact Day 1 schedule that gets new hires coding by 10:30 AM:</p>
 
               <div className="space-y-6 mb-8">
                 <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg">
@@ -313,7 +313,7 @@ Engineering Manager`}</pre>
                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg">
                   <h4 className="font-semibold text-green-800 mb-3">10:15 AM - First Commit</h4>
                   <div className="space-y-2 text-green-700">
-                    <p>• Fix a simple "good first issue" (15 minutes)</p>
+                    <p>• Fix a simple &quot;good first issue&quot; (15 minutes)</p>
                     <p>• Create pull request with proper template</p>
                     <p>• Experience code review process with buddy</p>
                     <p>• Deploy to staging environment</p>
@@ -332,7 +332,7 @@ Engineering Manager`}</pre>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Magic Setup Script</h3>
-              <p className="mb-4">This script automates 95% of environment setup. Here's the macOS version:</p>
+              <p className="mb-4">This script automates 95% of environment setup. Here&rsquo;s the macOS version:</p>
               
               <div className="bg-gray-900 text-green-400 p-4 rounded-lg mb-6 font-mono text-sm">
                 <pre>{`#!/bin/bash
@@ -386,7 +386,7 @@ git clone git@github.com:company/docs.git
 cd frontend && npm install && npm run build
 cd ../backend && npm install && npm run build
 
-echo "✅ Setup complete! You're ready to code!"`}</pre>
+echo "✅ Setup complete! You&rsquo;re ready to code!"`}</pre>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-500 p-6">
@@ -449,7 +449,7 @@ echo "✅ Setup complete! You're ready to code!"`}</pre>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Buddy System That Works</h3>
-              <p className="mb-4">Every new hire gets a dedicated buddy for their first 2 weeks. Here's the buddy checklist:</p>
+              <p className="mb-4">Every new hire gets a dedicated buddy for their first 2 weeks. Here&rsquo;s the buddy checklist:</p>
 
               <div className="bg-gray-100 p-4 rounded-lg mb-6">
                 <ul className="space-y-2">
@@ -489,7 +489,7 @@ echo "✅ Setup complete! You're ready to code!"`}</pre>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Phase 4: First Month - Deep Integration</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Weeks 2-4: From Contributor to Owner</h3>
-              <p className="mb-6">The first month transitions from learning to owning. Here's our progressive responsibility framework:</p>
+              <p className="mb-6">The first month transitions from learning to owning. Here&rsquo;s our progressive responsibility framework:</p>
 
               <div className="space-y-6 mb-8">
                 <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-lg">
@@ -527,7 +527,7 @@ echo "✅ Setup complete! You're ready to code!"`}</pre>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The 30-Day Review Framework</h3>
-              <p className="mb-4">We conduct comprehensive reviews at day 30. Here's our framework:</p>
+              <p className="mb-4">We conduct comprehensive reviews at day 30. Here&rsquo;s our framework:</p>
 
               <div className="bg-gray-900 text-gray-300 p-6 rounded-lg font-mono text-sm mb-8">
                 <pre>{`30-Day Review Template
@@ -569,7 +569,7 @@ echo "✅ Setup complete! You're ready to code!"`}</pre>
           <section id="essential-tools-stack" className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Essential Onboarding Tools Stack</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="mb-6">Here's the exact tool stack that makes our onboarding process seamless:</p>
+              <p className="mb-6">Here&rsquo;s the exact tool stack that makes our onboarding process seamless:</p>
 
               <div className="space-y-6">
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -794,7 +794,7 @@ Subject: Day 1: Welcome to the Engineering Team! 🚀
 
 Hi {{name}},
 
-Your development environment is ready and waiting! Here's what you need to know:
+Your development environment is ready and waiting! Here&rsquo;s what you need to know:
 
 🔐 Your Credentials
 - GitHub: {{github_username}}
@@ -806,7 +806,7 @@ Your development environment is ready and waiting! Here's what you need to know:
 - Documentation: {{docs_url}}
 - Team Channel: #engineering
 
-📅 Today's Schedule
+📅 Today&rsquo;s Schedule
 - 9:00 AM: Welcome breakfast
 - 10:00 AM: Environment setup
 - 11:30 AM: Team introductions
@@ -818,17 +818,17 @@ Your buddy {{buddy_name}} will be with you every step of the way.
 See you soon!
 
 # Day 3 Check-in Email
-Subject: How's it going, {{name}}?
+Subject: How&rsquo;s it going, {{name}}?
 
 Hi {{name}},
 
 Hope your first couple of days have been great! Quick check-in:
 
-✅ What's working well?
+✅ What&rsquo;s working well?
 ❓ What questions do you have?
 🎯 Any blockers I can help with?
 
-Reply to this email or ping me on Slack. Let's make sure you have everything you need to succeed.
+Reply to this email or ping me on Slack. Let&rsquo;s make sure you have everything you need to succeed.
 
 Best,
 {{manager_name}}`}</pre>
@@ -953,7 +953,7 @@ Best,
 
                 <div className="bg-red-50 border-l-4 border-red-500 p-6">
                   <h3 className="text-xl font-semibold mb-3 text-red-800">Pitfall 2: Vague Expectations</h3>
-                  <p className="text-red-700 mb-3">"Learn the codebase" is not a helpful goal for new developers.</p>
+                  <p className="text-red-700 mb-3">&quot;Learn the codebase&quot; is not a helpful goal for new developers.</p>
                   <p className="text-red-600"><strong>Solution:</strong> Provide specific, measurable goals with clear deliverables and timelines.</p>
                 </div>
 

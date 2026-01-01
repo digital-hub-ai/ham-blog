@@ -6,7 +6,7 @@ const BeyondFeatureLists = () => {
   return (
     <>
       <Head>
-        <title>Beyond Feature Lists: The Executive's Framework for Strategic SaaS Procurement | Atlas Neo</title>
+        <title>Beyond Feature Lists: The Executive&rsquo;s Framework for Strategic SaaS Procurement | Atlas Neo</title>
         <meta name="description" content="Executive guide to strategic SaaS procurement with ROI calculators, vendor evaluation frameworks, and TCO analysis tools. Make data-driven software investment decisions." />
         <meta name="keywords" content="SaaS procurement, enterprise software evaluation, ROI calculator, vendor selection framework, TCO analysis, software investment strategy" />
         <meta name="author" content="Atlas Neo Team" />
@@ -106,7 +106,7 @@ const BeyondFeatureLists = () => {
                 Beyond Feature Lists
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                The Executive's Framework for Strategic SaaS Procurement
+                The Executive&rsquo;s Framework for Strategic SaaS Procurement
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <span className="bg-white/20 px-4 py-2 rounded-full">20 min read</span>
@@ -141,7 +141,7 @@ const BeyondFeatureLists = () => {
           <section id="introduction" className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Introduction: The Procurement Problem</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              In today's enterprise landscape, SaaS procurement has evolved from simple feature comparisons to complex strategic decisions that impact organizational efficiency, financial performance, and competitive advantage. Yet many executives still approach software selection with outdated checklists and feature matrices that fail to capture the true business impact.
+              In today&rsquo;s enterprise landscape, SaaS procurement has evolved from simple feature comparisons to complex strategic decisions that impact organizational efficiency, financial performance, and competitive advantage. Yet many executives still approach software selection with outdated checklists and feature matrices that fail to capture the true business impact.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
               The average enterprise now uses over 200 SaaS applications, with software spending exceeding $500 billion annually. Despite this massive investment, 71% of executives report that their software procurement processes are ineffective, leading to wasted budgets, poor adoption, and strategic misalignment.
@@ -216,7 +216,7 @@ const BeyondFeatureLists = () => {
                       <td className="border border-gray-300 px-4 py-3 font-semibold">Financial ROI</td>
                       <td className="border border-gray-300 px-4 py-3 text-center">25%</td>
                       <td className="border border-gray-300 px-4 py-3 text-center">3-Year ROI %</td>
-                      <td className="border border-gray-300 px-4 py-3 text-left">What's the payback period and long-term value?</td>
+                      <td className="border border-gray-300 px-4 py-3 text-left">What&rsquo;s the payback period and long-term value?</td>
                     </tr>
                     <tr>
                       <td className="border border-gray-300 px-4 py-3 font-semibold">Implementation Risk</td>
@@ -737,7 +737,7 @@ const BeyondFeatureLists = () => {
                   <ul className="text-sm text-gray-700 space-y-1 ml-4">
                     <li>• Define BATNA (Best Alternative to Negotiated Agreement)</li>
                     <li>• Establish clear negotiation objectives and limits</li>
-                    <li>• Research vendor's position and alternatives</li>
+                    <li>• Research vendor&rsquo;s position and alternatives</li>
                     <li>• Prepare cross-functional negotiation team</li>
                   </ul>
                 </div>
@@ -756,7 +756,7 @@ const BeyondFeatureLists = () => {
                   <h4 className="font-semibold text-gray-800 mb-2">Phase 3: Concession Trading</h4>
                   <ul className="text-sm text-gray-700 space-y-1 ml-4">
                     <li>• Trade concessions across multiple categories</li>
-                    <li>• Use "if-then" negotiation tactics</li>
+                    <li>• Use &quot;if-then&quot; negotiation tactics</li>
                     <li>• Maintain relationship focus throughout</li>
                     <li>• Document all agreements clearly</li>
                   </ul>
@@ -1137,7 +1137,7 @@ const BeyondFeatureLists = () => {
           <section id="conclusion" className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Conclusion</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Strategic SaaS procurement is far more than comparing feature lists and negotiating prices. It's about making investment decisions that drive business value, enable growth, and create competitive advantage. By adopting a comprehensive framework that considers financial impact, operational efficiency, risk management, and strategic alignment, executives can transform software procurement from a tactical function into a strategic capability.
+              Strategic SaaS procurement is far more than comparing feature lists and negotiating prices. It&rsquo;s about making investment decisions that drive business value, enable growth, and create competitive advantage. By adopting a comprehensive framework that considers financial impact, operational efficiency, risk management, and strategic alignment, executives can transform software procurement from a tactical function into a strategic capability.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
               The most successful organizations treat software procurement as a continuous process rather than a one-time decision. They establish governance frameworks, monitor performance metrics, and continuously optimize their software portfolios to ensure maximum business value.

@@ -224,7 +224,7 @@ const DataScienceWorkstation = () => {
 
           <section className="mb-12">
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              As we move further into the AI revolution of 2025, the demands on data science workstations have never been higher. The ideal setup now requires a careful balance of raw computational power, efficient workflows, and AI-assisted development tools. This guide will walk you through building the ultimate data science workstation for 2025, whether you're a solo researcher or part of a larger team.
+              As we move further into the AI revolution of 2025, the demands on data science workstations have never been higher. The ideal setup now requires a careful balance of raw computational power, efficient workflows, and AI-assisted development tools. This guide will walk you through building the ultimate data science workstation for 2025, whether you&rsquo;re a solo researcher or part of a larger team.
             </p>
           </section>
 
@@ -421,7 +421,7 @@ const DataScienceWorkstation = () => {
                 <p className="text-sm text-gray-600 mt-1">Discover the ultimate AI-powered content creation stack for 2025. Learn about the best tools for writing, design, video, and more to supercharge your content marketing efforts.</p>
               </Link>
               <Link href="/blog/one-person-game-dev-arsenal-2025" className="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                <h4 className="font-medium text-blue-600">The 'One-Person Game Dev' Arsenal: Building Professional-Quality Games Solo in 2025</h4>
+                <h4 className="font-medium text-blue-600">The &rsquo;One-Person Game Dev&rsquo; Arsenal: Building Professional-Quality Games Solo in 2025</h4>
                 <p className="text-sm text-gray-600 mt-1">Comprehensive guide to the essential tools, workflows, and strategies for solo game developers to create professional-quality games in 2025.</p>
               </Link>
             </div>

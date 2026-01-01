@@ -117,7 +117,7 @@ export default function Contact() {
                     Get in Touch
                   </h1>
                   <p className="text-gray-300 mb-8">
-                    Have questions or feedback? We'd love to hear from you! Fill out the form and our team will get back to you as soon as possible.
+                    Have questions or feedback? We&rsquo;d love to hear from you! Fill out the form and our team will get back to you as soon as possible.
                   </p>
                   
                   {submitSuccess ? (

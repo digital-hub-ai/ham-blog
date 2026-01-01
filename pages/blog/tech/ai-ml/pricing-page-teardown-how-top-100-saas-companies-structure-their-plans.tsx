@@ -135,10 +135,10 @@ const PricingPageTeardown = () => {
           <section id="introduction" className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Introduction: The Science of Pricing</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Pricing is both an art and a science. After analyzing the pricing pages of the top 100 SaaS companies, we've uncovered patterns, strategies, and psychological tactics that separate the $100M+ ARR companies from those struggling to convert visitors into customers.
+              Pricing is both an art and a science. After analyzing the pricing pages of the top 100 SaaS companies, we&rsquo;ve uncovered patterns, strategies, and psychological tactics that separate the $100M+ ARR companies from those struggling to convert visitors into customers.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              This comprehensive teardown reveals how successful SaaS companies structure their pricing tiers, what psychological techniques they employ, and how they optimize for maximum conversion. We'll show you exactly what works, what doesn't, and how you can apply these insights to your own pricing strategy.
+              This comprehensive teardown reveals how successful SaaS companies structure their pricing tiers, what psychological techniques they employ, and how they optimize for maximum conversion. We&rsquo;ll show you exactly what works, what doesn&rsquo;t, and how you can apply these insights to your own pricing strategy.
             </p>
             
             <div className="bg-green-50 border-l-4 border-green-500 p-4 mt-6">
@@ -510,7 +510,7 @@ const PricingPageTeardown = () => {
                     <h5 className="font-semibold text-gray-800 mb-2">High Anchor Strategy</h5>
                     <ul className="text-gray-700 space-y-1">
                       <li>• Show Enterprise price first</li>
-                      <li>• Display "was" pricing</li>
+                      <li>• Display &quot;was&quot; pricing</li>
                       <li>• Compare to competitors</li>
                       <li>• Show annual savings</li>
                     </ul>
@@ -540,7 +540,7 @@ const PricingPageTeardown = () => {
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-2">High Impact</h5>
                     <ul className="text-gray-700 space-y-1">
-                      <li>• "Most Popular" badges</li>
+                      <li>• &quot;Most Popular&quot; badges</li>
                       <li>• Customer count</li>
                       <li>• Testimonials</li>
                       <li>• Trust badges</li>
@@ -745,11 +745,11 @@ const PricingPageTeardown = () => {
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-semibold text-green-800 mb-3">High-Converting CTAs</h4>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• <strong>"Start Free Trial":</strong> 35% conversion</li>
-                    <li>• <strong>"Get Started":</strong> 32% conversion</li>
-                    <li>• <strong>"Start Your Free Trial":</strong> 30% conversion</li>
-                    <li>• <strong>"Try for Free":</strong> 28% conversion</li>
-                    <li>• <strong>"Sign Up Free":</strong> 25% conversion</li>
+                    <li>• <strong>&quot;Start Free Trial&quot;:</strong> 35% conversion</li>
+                    <li>• <strong>&quot;Get Started&quot;:</strong> 32% conversion</li>
+                    <li>• <strong>&quot;Start Your Free Trial&quot;:</strong> 30% conversion</li>
+                    <li>• <strong>&quot;Try for Free&quot;:</strong> 28% conversion</li>
+                    <li>• <strong>&quot;Sign Up Free&quot;:</strong> 25% conversion</li>
                     <li>• <strong>Best Practice:</strong> Include benefit in CTA</li>
                   </ul>
                 </div>
@@ -757,11 +757,11 @@ const PricingPageTeardown = () => {
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-semibold text-red-800 mb-3">Low-Converting CTAs</h4>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• <strong>"Sign Up":</strong> 15% conversion</li>
-                    <li>• <strong>"Register":</strong> 12% conversion</li>
-                    <li>• <strong>"Create Account":</strong> 10% conversion</li>
-                    <li>• <strong>"Join":</strong> 8% conversion</li>
-                    <li>• <strong>"Submit":</strong> 5% conversion</li>
+                    <li>• <strong>&quot;Sign Up&quot;:</strong> 15% conversion</li>
+                    <li>• <strong>&quot;Register&quot;:</strong> 12% conversion</li>
+                    <li>• <strong>&quot;Create Account&quot;:</strong> 10% conversion</li>
+                    <li>• <strong>&quot;Join&quot;:</strong> 8% conversion</li>
+                    <li>• <strong>&quot;Submit&quot;:</strong> 5% conversion</li>
                     <li>• <strong>Mistake:</strong> Generic, no benefit</li>
                   </ul>
                 </div>
@@ -876,7 +876,7 @@ const PricingPageTeardown = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Enterprise Pricing Strategies</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">The "Contact Us" Approach</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">The &quot;Contact Us&quot; Approach</h3>
               <p className="text-gray-700 mb-4">
                 Enterprise pricing requires a different approach. 85% of successful companies use custom pricing for enterprise tiers.
               </p>
@@ -1436,7 +1436,7 @@ const PricingPageTeardown = () => {
                     <h4 className="font-semibold text-gray-800 mb-2">This Week</h4>
                     <ul className="text-gray-700 space-y-1">
                       <li>• Implement charm pricing (end in 9)</li>
-                      <li>• Add "Most Popular" badge to middle tier</li>
+                      <li>• Add &quot;Most Popular&quot; badge to middle tier</li>
                       <li>• Improve CTA copy with benefits</li>
                       <li>• Add social proof above pricing</li>
                     </ul>
@@ -1505,7 +1505,7 @@ const PricingPageTeardown = () => {
             <div className="bg-indigo-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-indigo-800 mb-3">The Pricing Optimization Framework</h3>
               <p className="text-sm text-gray-700 mb-4">
-                Successful pricing optimization follows a systematic approach. Here's the framework used by top-performing SaaS companies.
+                Successful pricing optimization follows a systematic approach. Here&rsquo;s the framework used by top-performing SaaS companies.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-sm">
                 <div className="bg-white p-3 rounded border border-indigo-200">
@@ -1535,7 +1535,7 @@ const PricingPageTeardown = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">The Science and Art of Pricing</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Pricing is not just about numbers—it's about psychology, value perception, and strategic positioning. Our analysis of the top 100 SaaS companies reveals clear patterns that separate the winners from those struggling to convert visitors into customers.
+                Pricing is not just about numbers—it&rsquo;s about psychology, value perception, and strategic positioning. Our analysis of the top 100 SaaS companies reveals clear patterns that separate the winners from those struggling to convert visitors into customers.
               </p>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -1543,7 +1543,7 @@ const PricingPageTeardown = () => {
               </p>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Whether you're a startup just figuring out your pricing or an established company looking to optimize, the patterns and insights from this analysis provide a roadmap for pricing success. The key is to combine data-driven decisions with psychological understanding and continuous optimization.
+                Whether you&rsquo;re a startup just figuring out your pricing or an established company looking to optimize, the patterns and insights from this analysis provide a roadmap for pricing success. The key is to combine data-driven decisions with psychological understanding and continuous optimization.
               </p>
             </div>
 
@@ -1588,7 +1588,7 @@ const PricingPageTeardown = () => {
             <div className="bg-indigo-50 border-l-4 border-indigo-500 p-4">
               <h3 className="text-lg font-semibold text-indigo-800 mb-2">The Final Word</h3>
               <p className="text-sm text-gray-700">
-                Pricing is both the most important and most overlooked element of SaaS success. Companies that master pricing psychology, structure, and optimization consistently outperform those that don't. The patterns are clear, the data is compelling, and the opportunity is massive. The question is not whether you should optimize your pricing—it's how quickly you can start.
+                Pricing is both the most important and most overlooked element of SaaS success. Companies that master pricing psychology, structure, and optimization consistently outperform those that don&rsquo;t. The patterns are clear, the data is compelling, and the opportunity is massive. The question is not whether you should optimize your pricing—it&rsquo;s how quickly you can start.
               </p>
             </div>
           </section>

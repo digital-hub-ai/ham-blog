@@ -62,7 +62,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
           <h3 className="text-xl font-bold">Thank you for subscribing!</h3>
         </div>
         <p className="mt-2 text-blue-100 text-center">
-          We've sent a confirmation email to your inbox.
+          We&rsquo;ve sent a confirmation email to your inbox.
         </p>
       </div>
     );

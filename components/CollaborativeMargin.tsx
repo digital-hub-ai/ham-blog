@@ -254,7 +254,7 @@ const CollaborativeMargin: React.FC<CollaborativeMarginProps> = ({
             >
               <div className="mb-3">
                 <p className="text-cyan-400 text-sm font-medium mb-2">Annotate Selection:</p>
-                <p className="text-gray-300 text-sm italic">"{selectedText.text}"</p>
+                <p className="text-gray-300 text-sm italic">&quot;{selectedText.text}&quot;</p>
               </div>
               
               <textarea

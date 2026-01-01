@@ -79,7 +79,7 @@ const GreatConsolidation = () => {
             },
             {
               "@type": "Question",
-              "name": "What's driving SaaS consolidation?",
+              "name": "What&rsquo;s driving SaaS consolidation?"
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Key drivers include platform convergence, customer demand for integration, economic pressures, AI capabilities, and the need for single data sources across organizations."
@@ -138,7 +138,7 @@ const GreatConsolidation = () => {
               The SaaS industry is experiencing its most significant consolidation wave since the cloud computing revolution began. What was once a landscape of thousands of specialized point solutions is rapidly converging into a handful of dominant platforms and a smaller set of thriving category leaders.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              This consolidation isn't just about market dynamics—it's fundamentally reshaping how businesses buy, implement, and use software. The era of the "best-of-breed" stack is ending, replaced by the age of the integrated platform. Companies are abandoning complex multi-tool ecosystems in favor of unified solutions that promise better data flow, reduced costs, and simplified management.
+              This consolidation isn&rsquo;t just about market dynamics—it&rsquo;s fundamentally reshaping how businesses buy, implement, and use software. The era of the &quot;best-of-breed&quot; stack is ending, replaced by the age of the integrated platform. Companies are abandoning complex multi-tool ecosystems in favor of unified solutions that promise better data flow, reduced costs, and simplified management.
             </p>
             
             <div className="bg-purple-50 border-l-4 border-purple-500 p-4 mt-6">
@@ -1086,7 +1086,7 @@ const GreatConsolidation = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">The Platform Playbook</h3>
               <p className="text-gray-700 mb-4">
-                For startups that want to become platforms, here's the playbook for success in the consolidation era.
+                For startups that want to become platforms, here&rsquo;s the playbook for success in the consolidation era.
               </p>
               
               <div className="bg-blue-50 p-6 rounded-lg">
@@ -1143,7 +1143,7 @@ const GreatConsolidation = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">The Consolidation Imperative</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                The great consolidation of SaaS is not a temporary trend—it's a fundamental restructuring of the software industry. The forces driving this change—economic pressure, technical convergence, and customer demand—are too powerful to reverse. Companies that fail to adapt will be absorbed or eliminated.
+                The great consolidation of SaaS is not a temporary trend—it&rsquo;s a fundamental restructuring of the software industry. The forces driving this change—economic pressure, technical convergence, and customer demand—are too powerful to reverse. Companies that fail to adapt will be absorbed or eliminated.
               </p>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -1196,7 +1196,7 @@ const GreatConsolidation = () => {
             <div className="bg-indigo-50 border-l-4 border-indigo-500 p-4">
               <h3 className="text-lg font-semibold text-indigo-800 mb-2">The Final Word</h3>
               <p className="text-sm text-gray-700">
-                The great consolidation is both a threat and an opportunity. It will eliminate many companies but create enormous value for those who navigate it successfully. The key is understanding that we're moving from a world of tools to a world of platforms, from point solutions to integrated experiences, and from human-driven workflows to AI-augmented processes. Those who build for this future will thrive; those who cling to the past will be consolidated away.
+                The great consolidation is both a threat and an opportunity. It will eliminate many companies but create enormous value for those who navigate it successfully. The key is understanding that we&rsquo;re moving from a world of tools to a world of platforms, from point solutions to integrated experiences, and from human-driven workflows to AI-augmented processes. Those who build for this future will thrive; those who cling to the past will be consolidated away.
               </p>
             </div>
           </section>

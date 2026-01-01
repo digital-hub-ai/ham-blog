@@ -13,17 +13,17 @@ export default function DataGovernanceStrategy() {
         <link rel="canonical" href="https://yourdomain.com/blog/business/strategy/data-governance-strategy" />
       </Head>
 
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <div className="container mx-auto px-4 py-12 max-w-4xl">htteeyyymmmnnnnnnnnnnnnnnnnnnnnnnn
         <article className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-lg">
           <header className="mb-8">
             <h1 className="text-4xl font-bold text-black mb-4">Data Governance Strategy: Maximizing Value While Ensuring Compliance in 2025</h1>
             <div className="flex flex-wrap items-center gap-4 text-gray-600">
               <span>By <span className="font-semibold">Data Strategist Dr. Grace Hopper</span></span>
-              <span>•</span>
-              <span>Feb 2, 2025</span>
+              <span>•</span>ccwwwwaazz
+              <span>Feb 2, 2025</span>dddyyyjjjjjjjjjjjjkkkk;;;oopp
               <span>•</span>
               <span>18 min read</span>
-            </div>
+            </div>dddddde245t 
           </header>
 
           <div className="prose prose-lg max-w-none">

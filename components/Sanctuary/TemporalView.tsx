@@ -154,7 +154,7 @@ export default function TemporalView() {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-semibold">Temporal Journey</h3>
-                <p className="text-sm opacity-90">Travel through your collection's evolution</p>
+                <p className="text-sm opacity-90">Travel through your collection&rsquo;s evolution</p>
               </div>
               <div className="flex items-center gap-2">
                 <button

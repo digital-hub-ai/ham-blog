@@ -178,11 +178,11 @@ const FromMonolithToMicroSaaS = () => {
               <p className="text-xl leading-relaxed mb-6">For decades, the software industry operated on a simple premise: bigger is better. Monolithic applications that promised to do everything dominated the landscape, from enterprise resource planning systems to all-in-one productivity suites. The philosophy was clear - solve all problems with one comprehensive tool.</p>
               
               <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8">
-                <p className="text-purple-800 font-medium">The monolithic approach wasn't just a technical choice - it was a business strategy. Companies believed that by bundling features together, they could create competitive moats, lock in customers, and maximize revenue per user.</p>
+                <p className="text-purple-800 font-medium">The monolithic approach wasn&rsquo;t just a technical choice - it was a business strategy. Companies believed that by bundling features together, they could create competitive moats, lock in customers, and maximize revenue per user.</p>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Golden Age of All-in-One Solutions</h3>
-              <p className="mb-6">From the 1990s through the 2010s, software giants built empires on comprehensive platforms. Microsoft Office, Salesforce, Oracle, SAP - these weren't just products, they were ecosystems designed to capture entire workflows within their walled gardens.</p>
+              <p className="mb-6">From the 1990s through the 2010s, software giants built empires on comprehensive platforms. Microsoft Office, Salesforce, Oracle, SAP - these weren&rsquo;t just products, they were ecosystems designed to capture entire workflows within their walled gardens.</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-purple-50 p-6 rounded-lg">

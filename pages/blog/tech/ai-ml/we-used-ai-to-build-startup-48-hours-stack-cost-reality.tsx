@@ -136,10 +136,10 @@ const WeUsedAIToBuildStartup = () => {
           <section id="introduction" className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Introduction: The 48-Hour Challenge</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Everyone's talking about AI revolutionizing software development. "AI can 10x your productivity!" "Build anything in hours instead of months!" But how much of this is hype and how much is reality? We decided to find out by attempting the impossible: building a complete, functional startup in just 48 hours using only AI-assisted development.
+              Everyone&rsquo;s talking about AI revolutionizing software development. &quot;AI can 10x your productivity!&quot; &quot;Build anything in hours instead of months!&quot; But how much of this is hype and how much is reality? We decided to find out by attempting the impossible: building a complete, functional startup in just 48 hours using only AI-assisted development.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              This isn't another theoretical article about AI's potential. This is a real, documented case study with actual results, real costs, and honest lessons learned. We tracked everything: lines of code generated, time spent on each task, costs incurred, and problems encountered. No cherry-picking, no hype—just the raw truth about building a startup with AI in 2025.
+              This isn&rsquo;t another theoretical article about AI&rsquo;s potential. This is a real, documented case study with actual results, real costs, and honest lessons learned. We tracked everything: lines of code generated, time spent on each task, costs incurred, and problems encountered. No cherry-picking, no hype—just the raw truth about building a startup with AI in 2025.
             </p>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 mt-6">
               <p className="text-green-700">
@@ -155,7 +155,7 @@ const WeUsedAIToBuildStartup = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">TaskFlow AI - Smart Project Management</h3>
               <p className="text-gray-700 mb-6">
-                We chose a project management tool because it's complex enough to be meaningful but simple enough to potentially complete in 48 hours. The concept: an AI-powered project management tool that automatically categorizes tasks, predicts timelines, and suggests optimizations.
+                We chose a project management tool because it&rsquo;s complex enough to be meaningful but simple enough to potentially complete in 48 hours. The concept: an AI-powered project management tool that automatically categorizes tasks, predicts timelines, and suggests optimizations.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -224,7 +224,7 @@ const WeUsedAIToBuildStartup = () => {
                 <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg">
                   <h4 className="font-semibold text-purple-800 mb-3">Database: PostgreSQL (Vercel Postgres)</h4>
                   <p className="text-sm text-gray-700 mb-3">
-                    Managed PostgreSQL for complex relationships and real-time capabilities. Vercel's offering for zero setup.
+                    Managed PostgreSQL for complex relationships and real-time capabilities. Vercel&rsquo;s offering for zero setup.
                   </p>
                   <div className="text-xs text-gray-600">
                     <strong>AI Assist:</strong> Claude for schema optimization, Copilot for query writing
@@ -606,7 +606,7 @@ export default function TaskDashboard({ project }) {
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h4 className="font-semibold text-blue-800 mb-3">Cost Analysis</h4>
                 <p className="text-sm text-gray-700 mb-3">
-                  The 48-hour cost was surprisingly low at under $50. However, this doesn't include our time (valued at $200/hour, that's $16,000 in labor costs) or the ongoing monthly expenses of ~$210.
+                  The 48-hour cost was surprisingly low at under $50. However, this doesn&rsquo;t include our time (valued at $200/hour, that&rsquo;s $16,000 in labor costs) or the ongoing monthly expenses of ~$210.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div>
@@ -628,7 +628,7 @@ export default function TaskDashboard({ project }) {
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
               <h3 className="text-lg font-semibold text-yellow-800 mb-2">Cost Reality Check</h3>
               <p className="text-sm text-gray-700">
-                While the direct costs were low, building a real business requires significant ongoing investment in tools, marketing, and infrastructure. AI reduces development costs but doesn't eliminate business costs.
+                While the direct costs were low, building a real business requires significant ongoing investment in tools, marketing, and infrastructure. AI reduces development costs but doesn&rsquo;t eliminate business costs.
               </p>
             </div>
           </section>
@@ -672,19 +672,19 @@ export default function TaskDashboard({ project }) {
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-2">Positive Feedback</h5>
                     <ul className="text-gray-700 space-y-1">
-                      <li>• "Clean, intuitive interface"</li>
-                      <li>• "AI categorization is surprisingly accurate"</li>
-                      <li>• "Fast and responsive"</li>
-                      <li>• "Great for simple projects"</li>
+                      <li>• &quot;Clean, intuitive interface&quot;</li>
+                      <li>• &quot;AI categorization is surprisingly accurate&quot;</li>
+                      <li>• &quot;Fast and responsive&quot;</li>
+                      <li>• &quot;Great for simple projects&quot;</li>
                     </ul>
                   </div>
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-2">Common Complaints</h5>
                     <ul className="text-gray-700 space-y-1">
-                      <li>• "Missing advanced features"</li>
-                      <li>• "Limited customization options"</li>
-                      <li>• "Mobile app needed"</li>
-                      <li>• "Integration with other tools"</li>
+                      <li>• &quot;Missing advanced features&quot;</li>
+                      <li>• &quot;Limited customization options&quot;</li>
+                      <li>• &quot;Mobile app needed&quot;</li>
+                      <li>• &quot;Integration with other tools&quot;</li>
                     </ul>
                   </div>
                 </div>
@@ -741,7 +741,7 @@ export default function TaskDashboard({ project }) {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">What Went Wrong</h3>
               <p className="text-gray-700 mb-6">
-                Despite the successful launch, we faced numerous challenges. AI helped with code generation but couldn't solve everything. Here's an honest breakdown of our failures and setbacks.
+                Despite the successful launch, we faced numerous challenges. AI helped with code generation but couldn&rsquo;t solve everything. Here&rsquo;s an honest breakdown of our failures and setbacks.
               </p>
               
               <div className="space-y-6">
@@ -760,8 +760,8 @@ export default function TaskDashboard({ project }) {
                   <ul className="text-sm text-gray-700 space-y-2">
                     <li>• <strong>Context Loss:</strong> AI forgot earlier code decisions, created inconsistencies</li>
                     <li>• <strong>Generic Solutions:</strong> Generated code was too generic, required customization</li>
-                    <li>• <strong>Debugging:</strong> AI couldn't solve complex bugs, human intervention required</li>
-                    <li>• <strong>Integration Issues:</strong> AI-generated components didn't always integrate well</li>
+                    <li>• <strong>Debugging:</strong> AI couldn&rsquo;t solve complex bugs, human intervention required</li>
+                    <li>• <strong>Integration Issues:</strong> AI-generated components didn&rsquo;t always integrate well</li>
                   </ul>
                 </div>
                 
@@ -824,11 +824,11 @@ export default function TaskDashboard({ project }) {
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-semibold text-red-800 mb-3">What AI Struggles With</h4>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• <strong>Complex Architecture:</strong> Can't design sophisticated systems</li>
+                    <li>• <strong>Complex Architecture:</strong> Can&rsquo;t design sophisticated systems</li>
                     <li>• <strong>Creative Problem Solving:</strong> Limited for unique challenges</li>
                     <li>• <strong>Context Management:</strong> Loses track of project-wide decisions</li>
                     <li>• <strong>Integration Complexity:</strong> Struggles with connecting multiple systems</li>
-                    <li>• <strong>Quality Assurance:</strong> Can't replace comprehensive testing</li>
+                    <li>• <strong>Quality Assurance:</strong> Can&rsquo;t replace comprehensive testing</li>
                   </ul>
                 </div>
                 
@@ -836,7 +836,7 @@ export default function TaskDashboard({ project }) {
                   <h4 className="font-semibold text-blue-800 mb-3">Development Strategy Insights</h4>
                   <ul className="text-sm text-gray-700 space-y-2">
                     <li>• <strong>Start Simple:</strong> AI works best with well-defined, simple problems</li>
-                    <li>• <strong>Iterate Quickly:</strong> Generate, test, refine - don't try for perfection</li>
+                    <li>• <strong>Iterate Quickly:</strong> Generate, test, refine - don&rsquo;t try for perfection</li>
                     <li>• <strong>Human Oversight:</strong> Always review AI-generated code carefully</li>
                     <li>• <strong>Tool Selection:</strong> Choose tools with good AI integration</li>
                     <li>• <strong>Time Boxing:</strong> Strict time limits prevent scope creep</li>
@@ -848,7 +848,7 @@ export default function TaskDashboard({ project }) {
             <div className="bg-purple-50 border-l-4 border-purple-500 p-4">
               <h3 className="text-lg font-semibold text-purple-800 mb-2">The Most Important Lesson</h3>
               <p className="text-sm text-gray-700">
-                AI is a force multiplier, not a replacement for developers. It can 2-3x productivity for well-defined tasks but can't solve complex architectural problems or replace strategic thinking. The human developer becomes an orchestra conductor rather than a musician.
+                AI is a force multiplier, not a replacement for developers. It can 2-3x productivity for well-defined tasks but can&rsquo;t solve complex architectural problems or replace strategic thinking. The human developer becomes an orchestra conductor rather than a musician.
               </p>
             </div>
           </section>
@@ -950,12 +950,12 @@ export default function TaskDashboard({ project }) {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">Separating Hype from Reality</h3>
               <p className="text-gray-700 mb-6">
-                After 48 hours of intense AI-assisted development, what's the real verdict? Can AI really replace developers and enable anyone to build sophisticated applications? The answer is more nuanced than the hype suggests.
+                After 48 hours of intense AI-assisted development, what&rsquo;s the real verdict? Can AI really replace developers and enable anyone to build sophisticated applications? The answer is more nuanced than the hype suggests.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-green-800 mb-3">What's Possible Now</h4>
+                  <h4 className="font-semibold text-green-800 mb-3">What&rsquo;s Possible Now</h4>
                   <ul className="text-sm text-gray-700 space-y-2">
                     <li>• <strong>MVP Development:</strong> 2-3x faster for simple applications</li>
                     <li>• <strong>Code Quality:</strong> Consistent, well-documented code generation</li>
@@ -968,11 +968,11 @@ export default function TaskDashboard({ project }) {
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-semibold text-red-800 mb-3">What's Still Hard</h4>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• <strong>Complex Architecture:</strong> AI can't design sophisticated systems</li>
+                    <li>• <strong>Complex Architecture:</strong> AI can&rsquo;t design sophisticated systems</li>
                     <li>• <strong>Quality Assurance:</strong> Testing still requires human expertise</li>
                     <li>• <strong>Creative Solutions:</strong> Innovation comes from humans, not AI</li>
                     <li>• <strong>Production Readiness:</strong> Security, scalability, reliability</li>
-                    <li>• <strong>Team Coordination:</strong> AI can't replace collaboration</li>
+                    <li>• <strong>Team Coordination:</strong> AI can&rsquo;t replace collaboration</li>
                   </ul>
                 </div>
               </div>
@@ -981,7 +981,7 @@ export default function TaskDashboard({ project }) {
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6">
               <h3 className="text-lg font-semibold text-yellow-800 mb-2">The Truth About AI Development</h3>
               <p className="text-sm text-gray-700">
-                AI is an incredible tool that accelerates development, but it doesn't eliminate the need for skilled developers. It changes what developers do—from writing code to directing AI, solving complex problems, and ensuring quality.
+                AI is an incredible tool that accelerates development, but it doesn&rsquo;t eliminate the need for skilled developers. It changes what developers do—from writing code to directing AI, solving complex problems, and ensuring quality.
               </p>
             </div>
 
@@ -1098,11 +1098,11 @@ export default function TaskDashboard({ project }) {
               </p>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
-                AI is a revolutionary tool that transforms how we build software. It accelerates development, reduces repetitive work, and makes sophisticated applications accessible to more people. But it doesn't eliminate the need for human expertise, creativity, and judgment. The best developers won't be replaced by AI—they'll be the ones who master AI as a tool.
+                AI is a revolutionary tool that transforms how we build software. It accelerates development, reduces repetitive work, and makes sophisticated applications accessible to more people. But it doesn&rsquo;t eliminate the need for human expertise, creativity, and judgment. The best developers won&rsquo;t be replaced by AI—they&rsquo;ll be the ones who master AI as a tool.
               </p>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
-                For aspiring founders and developers, the message is hopeful: you can build more, faster, and better than ever before. But success still requires technical knowledge, strategic thinking, and the hard work of turning ideas into reality. AI changes the game, but it doesn't change the rules of winning.
+                For aspiring founders and developers, the message is hopeful: you can build more, faster, and better than ever before. But success still requires technical knowledge, strategic thinking, and the hard work of turning ideas into reality. AI changes the game, but it doesn&rsquo;t change the rules of winning.
               </p>
             </div>
 
@@ -1111,7 +1111,7 @@ export default function TaskDashboard({ project }) {
                 <h4 className="font-semibold text-green-800 mb-3">Key Takeaways</h4>
                 <ul className="text-sm text-gray-700 space-y-2">
                   <li>• <strong>AI Works:</strong> You can build a functional startup in 48 hours with AI assistance</li>
-                  <li>• <strong>Not Magic:</strong> AI accelerates development but doesn't eliminate complexity</li>
+                  <li>• <strong>Not Magic:</strong> AI accelerates development but doesn&rsquo;t eliminate complexity</li>
                   <li>• <strong>Right Tools:</strong> GitHub Copilot and Claude were essential to our success</li>
                   <li>• <strong>Human Expertise:</strong> Still required for architecture, debugging, and decisions</li>
                   <li>• <strong>Cost Effective:</strong> Under $50 in direct costs, but significant time investment</li>
@@ -1146,7 +1146,7 @@ export default function TaskDashboard({ project }) {
             <div className="bg-indigo-50 border-l-4 border-indigo-500 p-4">
               <h3 className="text-lg font-semibold text-indigo-800 mb-2">The Future is AI-Assisted</h3>
               <p className="text-sm text-gray-700">
-                AI-assisted development isn't a trend—it's the new normal. The question isn't whether to use AI, but how to master it. Those who learn to work effectively with AI will build the future. Those who don't will be left behind.
+                AI-assisted development isn&rsquo;t a trend—it&rsquo;s the new normal. The question isn&rsquo;t whether to use AI, but how to master it. Those who learn to work effectively with AI will build the future. Those who don&rsquo;t will be left behind.
               </p>
             </div>
           </section>

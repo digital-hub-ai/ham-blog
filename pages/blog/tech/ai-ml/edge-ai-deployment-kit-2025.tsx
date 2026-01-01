@@ -273,7 +273,7 @@ const EdgeAIDeployment = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Edge AI Frameworks Compared</h2>
             
             <p className="mb-4">
-              Choosing the right framework is crucial for successful edge AI deployment. Here's a comparison of the top 
+              Choosing the right framework is crucial for successful edge AI deployment. Here&rsquo;s a comparison of the top 
               frameworks in 2025:
             </p>
 
@@ -400,7 +400,7 @@ const EdgeAIDeployment = () => {
             
             <p className="mb-4">
               Modern edge devices come with specialized hardware accelerators for AI workloads. 
-              Here's how they compare in 2025:
+              Here&rsquo;s how they compare in 2025:
             </p>
 
             <div className="mt-8 overflow-x-auto">

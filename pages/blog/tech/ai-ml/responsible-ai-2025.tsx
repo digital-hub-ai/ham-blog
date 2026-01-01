@@ -171,7 +171,7 @@ const ResponsibleAI: NextPage = () => {
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Imperative for Responsible AI</h2>
             
             <p>
-              The rapid advancement of AI technologies has brought both unprecedented opportunities and significant ethical challenges. From biased hiring algorithms to discriminatory loan approval systems, the consequences of unethical AI can be far-reaching and damaging. Responsible AI is not just a moral obligation but a business imperative in today's increasingly regulated and socially conscious landscape.
+              The rapid advancement of AI technologies has brought both unprecedented opportunities and significant ethical challenges. From biased hiring algorithms to discriminatory loan approval systems, the consequences of unethical AI can be far-reaching and damaging. Responsible AI is not just a moral obligation but a business imperative in today&rsquo;s increasingly regulated and socially conscious landscape.
             </p>
             
             <div className="bg-purple-50 border-l-4 border-purple-400 p-4 my-6 rounded-r">
@@ -624,7 +624,7 @@ for feature in X_train.columns[:3]:  # Top 3 features
               <h3 className="text-lg font-medium text-gray-900">Additional Resources</h3>
               <ul className="mt-4 space-y-2">
                 <li>
-                  <a href="https://ai.google/responsibility/" className="text-blue-600 hover:text-blue-800">Google's Responsible AI Practices</a>
+                  <a href="https://ai.google/responsibility/" className="text-blue-600 hover:text-blue-800">Google&rsquo;s Responsible AI Practices</a>
                 </li>
                 <li>
                   <a href="https://www.microsoft.com/en-us/ai/responsible-ai" className="text-blue-600 hover:text-blue-800">Microsoft Responsible AI Resources</a>

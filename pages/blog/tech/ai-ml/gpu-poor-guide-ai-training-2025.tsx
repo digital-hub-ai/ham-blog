@@ -74,7 +74,7 @@ const GPUPoorGuide = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>The "GPU Poor's" Guide to Training Large Models: Cloud vs. On-Premise vs. Hybrid (2025) | AI Vault</title>
+        <title>The &quot;GPU Poor&rsquo;s&quot; Guide to Training Large Models: Cloud vs. On-Premise vs. Hybrid (2025) | AI Vault</title>
         <meta name="description" content="Cost-benefit analysis of different compute strategies for AI training in 2025. Compare cloud, on-premise, and hybrid approaches for training large AI models affordably." />
         <meta name="keywords" content="AI training cost, GPU cloud comparison, on-premise AI, hybrid AI infrastructure, affordable AI training, spot instances, fractional GPUs, 2025 AI infrastructure" />
         
@@ -128,7 +128,7 @@ const GPUPoorGuide = () => {
         <article className="prose lg:prose-xl max-w-none">
           <header className="mb-12">
             <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
-              The "GPU Poor's" Guide to Training Large Models: Cloud vs. On-Premise vs. Hybrid (2025)
+              The &quot;GPU Poor&rsquo;s&quot; Guide to Training Large Models: Cloud vs. On-Premise vs. Hybrid (2025)
             </h1>
             <div className="flex items-center text-sm text-gray-500">
               <span>By AI Vault Infrastructure Team</span>
@@ -188,7 +188,7 @@ const GPUPoorGuide = () => {
             <div className="bg-blue-50 p-4 rounded-lg my-6">
               <h3 className="font-semibold text-blue-800 mb-2">Key Trends Shaping AI Training in 2025</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li><strong>Rise of Specialized AI Chips:</strong> New entrants like Groq's LPUs and Cerebras' Wafer-Scale Engines are challenging NVIDIA's dominance.</li>
+                <li><strong>Rise of Specialized AI Chips:</strong> New entrants like Groq&rsquo;s LPUs and Cerebras&rsquo; Wafer-Scale Engines are challenging NVIDIA&rsquo;s dominance.</li>
                 <li><strong>Federated Learning Maturity:</strong> Distributed training across edge devices has become more practical with new privacy-preserving techniques.</li>
                 <li><strong>Energy-Efficient Models:</strong> Models like LLaMA 3 and Mistral 2 demonstrate that smaller, more efficient architectures can rival larger models.</li>
                 <li><strong>Regulatory Pressures:</strong> New AI compute reporting requirements in the EU and US are affecting how organizations track and optimize their training costs.</li>
@@ -196,8 +196,8 @@ const GPUPoorGuide = () => {
             </div>
 
             <p className="mb-4">
-              In this guide, we'll explore the three primary approaches to AI training in 2025: cloud, on-premise, and hybrid. 
-              We'll provide a detailed cost-benefit analysis of each, along with real-world case studies and practical 
+              In this guide, we&rsquo;ll explore the three primary approaches to AI training in 2025: cloud, on-premise, and hybrid. 
+              We&rsquo;ll provide a detailed cost-benefit analysis of each, along with real-world case studies and practical 
               recommendations based on your organization's specific needs and constraints.
             </p>
           </section>

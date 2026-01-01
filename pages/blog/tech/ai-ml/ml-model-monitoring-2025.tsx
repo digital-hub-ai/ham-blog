@@ -509,7 +509,7 @@ const MLModelMonitoring = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Monitoring Tools and Platforms</h2>
             <p className="text-gray-700 mb-6">
               The ML monitoring landscape has evolved significantly, with both open-source and commercial solutions 
-              available. Here's a comparison of popular monitoring tools in 2025:
+              available. Here&rsquo;s a comparison of popular monitoring tools in 2025:
             </p>
             
             <div className="overflow-x-auto">
@@ -563,7 +563,7 @@ const MLModelMonitoring = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Alerting Strategy</h2>
             <p className="text-gray-700 mb-6">
               An effective alerting strategy ensures that the right people are notified about the right issues 
-              at the right time, without causing alert fatigue. Here's a comprehensive approach to ML alerting:
+              at the right time, without causing alert fatigue. Here&rsquo;s a comprehensive approach to ML alerting:
             </p>
             
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 mb-8">

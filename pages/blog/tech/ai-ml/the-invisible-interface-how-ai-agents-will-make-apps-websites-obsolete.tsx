@@ -136,10 +136,10 @@ const TheInvisibleInterface = () => {
           <section id="introduction" className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Introduction: The Interface Revolution</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              We're standing at the precipice of the most profound shift in human-computer interaction since the invention of the graphical user interface. For forty years, we've interacted with digital systems through windows, icons, menus, and pointers. We've learned to think in terms of clicks, swipes, and taps. But that paradigm is dying.
+              We&rsquo;re standing at the precipice of the most profound shift in human-computer interaction since the invention of the graphical user interface. For forty years, we&rsquo;ve interacted with digital systems through windows, icons, menus, and pointers. We&rsquo;ve learned to think in terms of clicks, swipes, and taps. But that paradigm is dying.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              The future isn't about better interfaces—it's about no interface at all. AI agents that understand context, intent, and natural language are making traditional apps and websites obsolete. Instead of navigating complex UIs, we'll simply talk to our devices. Instead of searching through menus, we'll state our needs. Instead of learning how software works, the software will learn how we work.
+              The future isn&rsquo;t about better interfaces—it&rsquo;s about no interface at all. AI agents that understand context, intent, and natural language are making traditional apps and websites obsolete. Instead of navigating complex UIs, we&rsquo;ll simply talk to our devices. Instead of searching through menus, we&rsquo;ll state our needs. Instead of learning how software works, the software will learn how we work.
             </p>
             <div className="bg-purple-50 border-l-4 border-purple-500 p-4 mt-6">
               <p className="text-purple-700">
@@ -264,9 +264,9 @@ const TheInvisibleInterface = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Understanding the Invisible Interface</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">What Makes an Interface "Invisible"?</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">What Makes an Interface &quot;Invisible&quot;?</h3>
               <p className="text-gray-700 mb-6">
-                An invisible interface is one that users don't consciously interact with. It anticipates needs, understands context, and acts proactively without requiring explicit commands or navigation. The interface becomes so natural that users forget they're using technology at all.
+                An invisible interface is one that users don&rsquo;t consciously interact with. It anticipates needs, understands context, and acts proactively without requiring explicit commands or navigation. The interface becomes so natural that users forget they&rsquo;re using technology at all.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -406,10 +406,10 @@ const TheInvisibleInterface = () => {
                     <strong>Traditional:</strong> Open calendar app → Click new event → Fill form → Set reminder
                   </p>
                   <p className="text-sm text-gray-700 mb-4">
-                    <strong>Invisible:</strong> "Schedule a meeting with Sarah about the project next Tuesday afternoon"
+                    <strong>Invisible:</strong> &quot;Schedule a meeting with Sarah about the project next Tuesday afternoon&quot;
                   </p>
                   <p className="text-sm text-gray-600">
-                    The AI understands Sarah's availability, project context, optimal meeting times, and schedules everything automatically.
+                    The AI understands Sarah&rsquo;s availability, project context, optimal meeting times, and schedules everything automatically.
                   </p>
                 </div>
                 
@@ -419,7 +419,7 @@ const TheInvisibleInterface = () => {
                     <strong>Traditional:</strong> Open airline app → Search flights → Compare prices → Open hotel app → Search hotels → Book separately
                   </p>
                   <p className="text-sm text-gray-700 mb-4">
-                    <strong>Invisible:</strong> "Plan a business trip to San Francisco next month, budget under $2000, near the convention center"
+                    <strong>Invisible:</strong> &quot;Plan a business trip to San Francisco next month, budget under $2000, near the convention center&quot;
                   </p>
                   <p className="text-sm text-gray-600">
                     The AI coordinates flights, hotels, transportation, and creates an itinerary based on preferences and constraints.
@@ -432,7 +432,7 @@ const TheInvisibleInterface = () => {
                     <strong>Traditional:</strong> Check thermostat → Adjust temperature → Open lights app → Turn on lights → Set security system
                   </p>
                   <p className="text-sm text-gray-700 mb-4">
-                    <strong>Invisible:</strong> "I'm heading home" (or automatically detected via location)
+                    <strong>Invisible:</strong> &quot;I&rsquo;m heading home&quot; (or automatically detected via location)
                   </p>
                   <p className="text-sm text-gray-600">
                     The AI adjusts temperature, turns on lights, starts music, and disables security based on learned preferences and current conditions.
@@ -804,7 +804,7 @@ const TheInvisibleInterface = () => {
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-3">The Ultimate Interface</h3>
               <p className="text-sm text-gray-700">
-                The final evolution of human-computer interaction is no interaction at all. Technology becomes so seamlessly integrated into our lives that we forget it's there—like electricity or air conditioning, it just works.
+                The final evolution of human-computer interaction is no interaction at all. Technology becomes so seamlessly integrated into our lives that we forget it&rsquo;s there—like electricity or air conditioning, it just works.
               </p>
             </div>
           </section>
@@ -846,7 +846,7 @@ const TheInvisibleInterface = () => {
                   <li>1. <strong>Start Experimenting:</strong> Integrate conversational AI into existing products</li>
                   <li>2. <strong>Invest in Data:</strong> Build the data infrastructure needed for personalization</li>
                   <li>3. <strong>Rethink Design:</strong> Hire conversation designers and AI interaction specialists</li>
-                  <li>4. <strong>Prepare for Disruption:</strong> Plan business models that don't depend on traditional interfaces</li>
+                  <li>4. <strong>Prepare for Disruption:</strong> Plan business models that don&rsquo;t depend on traditional interfaces</li>
                   <li>5. <strong>Focus on Trust:</strong> Implement privacy-first approaches from the beginning</li>
                 </ol>
               </div>
@@ -855,7 +855,7 @@ const TheInvisibleInterface = () => {
             <div className="bg-indigo-50 border-l-4 border-indigo-500 p-4">
               <h3 className="text-lg font-semibold text-indigo-800 mb-2">The Final Word</h3>
               <p className="text-sm text-gray-700">
-                We're not just building better interfaces—we're eliminating interfaces entirely. The future of human-computer interaction is invisible, conversational, and profoundly human. The question isn't whether this future will arrive, but whether you'll be ready when it does.
+                We&rsquo;re not just building better interfaces—we&rsquo;re eliminating interfaces entirely. The future of human-computer interaction is invisible, conversational, and profoundly human. The question isn&rsquo;t whether this future will arrive, but whether you&rsquo;ll be ready when it does.
               </p>
             </div>
           </section>

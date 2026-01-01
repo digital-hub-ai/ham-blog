@@ -79,10 +79,10 @@ const StateOfOpenSource2025 = () => {
             },
             {
               "@type": "Question",
-              "name": "What's causing open source fragmentation?",
+              "name": "What&rsquo;s causing open source fragmentation?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Fragmentation is driven by corporate forks, licensing disagreements, governance disputes, and the rise of alternative ecosystems. Companies are creating their own versions when they can't control the direction of popular projects."
+                "text": "Fragmentation is driven by corporate forks, licensing disagreements, governance disputes, and the rise of alternative ecosystems. Companies are creating their own versions when they can&rsquo;t control the direction of popular projects."
               }
             }
           ]
@@ -124,7 +124,7 @@ const StateOfOpenSource2025 = () => {
               <a href="#sustainability" className="text-orange-600 hover:text-orange-800 transition-colors">6. Sustainability: The Hard Questions</a>
               <a href="#success-stories" className="text-orange-600 hover:text-orange-800 transition-colors">7. Success Stories: What Works</a>
               <a href="#failures" className="text-orange-600 hover:text-orange-800 transition-colors">8. Failures: Lessons from the Graveyard</a>
-              <a href="#future-trends" className="text-orange-600 hover:text-orange-800 transition-colors">9. Future Trends: What's Coming</a>
+              <a href="#future-trends" className="text-orange-600 hover:text-orange-800 transition-colors">9. Future Trends: What&rsquo;s Coming</a>
               <a href="#predictions" className="text-orange-600 hover:text-orange-800 transition-colors">10. 2030 Predictions</a>
               <a href="#recommendations" className="text-orange-600 hover:text-orange-800 transition-colors">11. Recommendations for Stakeholders</a>
               <a href="#conclusion" className="text-orange-600 hover:text-orange-800 transition-colors">12. Conclusion</a>
@@ -135,10 +135,10 @@ const StateOfOpenSource2025 = () => {
           <section id="introduction" className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Introduction: The Crossroads Moment</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Open source in 2025 stands at a critical crossroads. What began as a grassroots movement for software freedom has become the foundation of modern technology, powering everything from smartphones to cloud infrastructure. Yet this success has created new challenges that threaten the movement's core values and sustainability.
+              Open source in 2025 stands at a critical crossroads. What began as a grassroots movement for software freedom has become the foundation of modern technology, powering everything from smartphones to cloud infrastructure. Yet this success has created new challenges that threaten the movement&rsquo;s core values and sustainability.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              The ecosystem is more fragmented than ever, funding models are in flux, and the very definition of "open source" is being contested. Corporate interests now dominate major projects, while independent maintainers struggle to keep pace. This report analyzes the current state of open source and explores what the future might hold.
+              The ecosystem is more fragmented than ever, funding models are in flux, and the very definition of &quot;open source&quot; is being contested. Corporate interests now dominate major projects, while independent maintainers struggle to keep pace. This report analyzes the current state of open source and explores what the future might hold.
             </p>
             
             <div className="bg-orange-50 border-l-4 border-orange-500 p-4 mt-6">
@@ -153,7 +153,7 @@ const StateOfOpenSource2025 = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">The Funding Crisis: Reality Check</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">The Numbers Don't Lie</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">The Numbers Don&rsquo;t Lie</h3>
               <p className="text-gray-700 mb-4">
                 The funding gap in open source has reached crisis proportions. Despite generating trillions in economic value, most projects operate on shoestring budgets or volunteer labor.
               </p>
@@ -253,7 +253,7 @@ const StateOfOpenSource2025 = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">The Enterprise Open Source Model</h3>
               <p className="text-gray-700 mb-4">
-                The most successful funding model in 2025 is the "open core" approach, where basic features are open source but advanced features require paid licenses.
+                The most successful funding model in 2025 is the &quot;open core&quot; approach, where basic features are open source but advanced features require paid licenses.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -413,7 +413,7 @@ const StateOfOpenSource2025 = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">The License Wars</h3>
               <p className="text-gray-700 mb-4">
-                The battle over open source licenses has intensified. Companies are increasingly adopting "source available" licenses that restrict commercial use.
+                The battle over open source licenses has intensified. Companies are increasingly adopting &quot;source available&quot; licenses that restrict commercial use.
               </p>
               
               <div className="bg-purple-50 p-6 rounded-lg">
@@ -432,7 +432,7 @@ const StateOfOpenSource2025 = () => {
                     <h5 className="font-semibold text-gray-800 mb-2">Source Available</h5>
                     <ul className="text-gray-700 space-y-1">
                       <li>• Business Source License (BSL) growing</li>
-                      <li>• Custom "fair use" restrictions</li>
+                      <li>• Custom &quot;fair use&quot; restrictions</li>
                       <li>• Time-limited open source provisions</li>
                       <li>• Service provider exclusions common</li>
                     </ul>
@@ -593,7 +593,7 @@ const StateOfOpenSource2025 = () => {
             <div className="bg-orange-50 border-l-4 border-orange-500 p-4">
               <h3 className="text-lg font-semibold text-orange-800 mb-2">The Balance Question</h3>
               <p className="text-sm text-gray-700">
-                The key question is whether corporate control is sustainable for open source's long-term health. While corporations bring needed resources, their profit motives may ultimately conflict with open source values of collaboration and freedom.
+                The key question is whether corporate control is sustainable for open source&rsquo;s long-term health. While corporations bring needed resources, their profit motives may ultimately conflict with open source values of collaboration and freedom.
               </p>
             </div>
           </section>
@@ -678,7 +678,7 @@ const StateOfOpenSource2025 = () => {
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-3">The Open Source Tax</h3>
               <p className="text-sm text-gray-700 mb-4">
-                A growing movement advocates for an "open source tax" - a mandatory contribution from companies that profit from open source software.
+                A growing movement advocates for an &quot;open source tax&quot; - a mandatory contribution from companies that profit from open source software.
               </p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -875,14 +875,14 @@ const StateOfOpenSource2025 = () => {
             <div className="bg-purple-50 border-l-4 border-purple-500 p-4">
               <h3 className="text-lg font-semibold text-purple-800 mb-2">Lessons Learned</h3>
               <p className="text-sm text-gray-700">
-                Failed projects teach us that sustainability isn't optional—it's essential. Projects need diverse funding, inclusive governance, and succession planning from day one.
+                Failed projects teach us that sustainability isn&rsquo;t optional—it&rsquo;s essential. Projects need diverse funding, inclusive governance, and succession planning from day one.
               </p>
             </div>
           </section>
 
           {/* Future Trends */}
           <section id="future-trends" className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Future Trends: What's Coming</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">Future Trends: What&rsquo;s Coming</h2>
             
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg">

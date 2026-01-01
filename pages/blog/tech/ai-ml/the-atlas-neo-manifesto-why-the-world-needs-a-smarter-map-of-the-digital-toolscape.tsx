@@ -176,7 +176,7 @@ const TheAtlasNeoManifesto = () => {
               <p className="text-xl leading-relaxed mb-6">We live in an unprecedented era of software abundance. Over 50,000 SaaS companies compete for our attention, each promising to solve our problems better than the last. Yet, paradoxically, this abundance has created a crisis of choice that leaves users more confused, frustrated, and inefficient than ever before.</p>
               
               <div className="bg-indigo-50 border-l-4 border-indigo-500 p-6 mb-8">
-                <p className="text-indigo-800 font-medium">The digital toolscape has become a wilderness without maps. Users wander aimlessly, wasting precious time and resources on tools that don't fit, don't integrate, and don't deliver value. It's time we built a compass.</p>
+                <p className="text-indigo-800 font-medium">The digital toolscape has become a wilderness without maps. Users wander aimlessly, wasting precious time and resources on tools that don&rsquo;t fit, don&rsquo;t integrate, and don&rsquo;t deliver value. It&rsquo;s time we built a compass.</p>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Scale of the Challenge</h3>
@@ -205,8 +205,8 @@ const TheAtlasNeoManifesto = () => {
                   <h4 className="font-semibold text-red-800 mb-3">⚠️ What Users Are Experiencing</h4>
                   <ul className="space-y-2 text-red-700">
                     <li>• <strong>Analysis Paralysis:</strong> Spending weeks researching tools only to feel more confused</li>
-                    <li>• <strong>Buyer's Remorse:</strong> Realizing months later that the chosen tool doesn't actually solve the problem</li>
-                    <li>• <strong>Integration Hell:</strong> Discovering that promising tools don't work with existing systems</li>
+                    <li>• <strong>Buyer&rsquo;s Remorse:</strong> Realizing months later that the chosen tool doesn&rsquo;t actually solve the problem</li>
+                    <li>• <strong>Integration Hell:</strong> Discovering that promising tools don&rsquo;t work with existing systems</li>
                     <li>• <strong>Subscription Creep:</strong> Waking up to dozens of small charges that add up to significant waste</li>
                     <li>• <strong>Team Fragmentation:</strong> Different departments using incompatible tools for similar tasks</li>
                   </ul>
@@ -241,12 +241,12 @@ const TheAtlasNeoManifesto = () => {
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Information Gap</h3>
-              <p className="mb-6">The core problem isn't lack of information - it's lack of <em>actionable intelligence</em>. Current resources provide fragmented, biased, or superficial insights that don't help users make confident decisions.</p>
+              <p className="mb-6">The core problem isn&rsquo;t lack of information - it&rsquo;s lack of <em>actionable intelligence</em>. Current resources provide fragmented, biased, or superficial insights that don&rsquo;t help users make confident decisions.</p>
 
               <div className="bg-gray-100 p-6 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-3">What's Available:</h4>
+                    <h4 className="font-semibold text-gray-800 mb-3">What&rsquo;s Available:</h4>
                     <ul className="space-y-2 text-gray-700">
                       <li>• Marketing-driven review sites</li>
                       <li>• Vendor-sponsored comparisons</li>
@@ -256,7 +256,7 @@ const TheAtlasNeoManifesto = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-3">What's Missing:</h4>
+                    <h4 className="font-semibold text-gray-800 mb-3">What&rsquo;s Missing:</h4>
                     <ul className="space-y-2 text-gray-700">
                       <li>• Unbiased, comprehensive analysis</li>
                       <li>• Real-world implementation insights</li>
@@ -286,7 +286,7 @@ const TheAtlasNeoManifesto = () => {
                       <ul className="space-y-2 text-red-600">
                         <li>• Paid rankings masquerading as organic</li>
                         <li>• Fake reviews and rating manipulation</li>
-                        <li>• Outdated information that's never updated</li>
+                        <li>• Outdated information that&rsquo;s never updated</li>
                         <li>• Lack of contextual relevance</li>
                         <li>• Superficial star ratings without substance</li>
                       </ul>
@@ -349,7 +349,7 @@ const TheAtlasNeoManifesto = () => {
                         <li>• Over-reliance on incomplete data</li>
                         <li>• Missing qualitative factors</li>
                         <li>• No understanding of team dynamics</li>
-                        <li>• Can't assess long-term strategic fit</li>
+                        <li>• Can&rsquo;t assess long-term strategic fit</li>
                       </ul>
                     </div>
                     <div>
@@ -370,7 +370,7 @@ const TheAtlasNeoManifesto = () => {
                   <div className="space-y-6">
                     <div className="bg-white p-6 rounded-lg">
                       <h4 className="font-semibold text-purple-700 mb-3">The Community Contribution Paradox</h4>
-                      <p className="text-purple-800 mb-4">Community platforms like Reddit, Slack communities, and forums contain incredible insights, but they're impossible to navigate systematically.</p>
+                      <p className="text-purple-800 mb-4">Community platforms like Reddit, Slack communities, and forums contain incredible insights, but they&rsquo;re impossible to navigate systematically.</p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                           <h5 className="font-medium text-purple-600 mb-2">Strengths:</h5>
@@ -400,11 +400,11 @@ const TheAtlasNeoManifesto = () => {
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Fundamental Flaw: Treating Symptoms, Not Disease</h3>
               <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="text-gray-800 mb-4">Current solutions focus on helping users choose individual tools, but they miss the bigger picture. The real problem isn't tool selection - it's <em>toolscape navigation</em>.</p>
+                <p className="text-gray-800 mb-4">Current solutions focus on helping users choose individual tools, but they miss the bigger picture. The real problem isn&rsquo;t tool selection - it&rsquo;s <em>toolscape navigation</em>.</p>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs mr-3">✗</span>
-                    <span className="text-gray-700">Current approach: Help users pick the "best" CRM</span>
+                    <span className="text-gray-700">Current approach: Help users pick the &quot;best&quot; CRM</span>
                   </div>
                   <div className="flex items-center">
                     <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs mr-3">✓</span>
@@ -428,7 +428,7 @@ const TheAtlasNeoManifesto = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Vision: The Atlas Neo Approach</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Beyond Maps to Navigation Systems</h3>
-              <p className="mb-6">Atlas Neo isn't just another directory or review site. We're building a comprehensive navigation system for the digital toolscape - one that doesn't just show you what's out there, but helps you understand where you are, where you need to go, and the best path to get there.</p>
+              <p className="mb-6">Atlas Neo isn&rsquo;t just another directory or review site. We&rsquo;re building a comprehensive navigation system for the digital toolscape - one that doesn&rsquo;t just show you what&rsquo;s out there, but helps you understand where you are, where you need to go, and the best path to get there.</p>
 
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl">
@@ -520,7 +520,7 @@ const TheAtlasNeoManifesto = () => {
 
                 <div className="bg-purple-50 p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-4 text-purple-900">🚀 From Information to Action</h3>
-                  <p className="text-purple-800 mb-4">Our ultimate goal isn't just to inform - it's to enable confident, successful action.</p>
+                  <p className="text-purple-800 mb-4">Our ultimate goal isn&rsquo;t just to inform - it&rsquo;s to enable confident, successful action.</p>
                   <div className="space-y-6">
                     <div className="bg-white p-6 rounded-lg">
                       <h4 className="font-semibold text-purple-700 mb-3">Action-Oriented Outputs</h4>
@@ -584,13 +584,13 @@ const TheAtlasNeoManifesto = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Core Principles of the Atlas Neo Manifesto</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Foundation of Our Approach</h3>
-              <p className="mb-6">Everything we build at Atlas Neo is guided by a set of core principles that ensure we serve our users' best interests and maintain the highest standards of quality and integrity.</p>
+              <p className="mb-6">Everything we build at Atlas Neo is guided by a set of core principles that ensure we serve our users&rsquo; best interests and maintain the highest standards of quality and integrity.</p>
 
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-4 text-blue-900">🎯 Principle 1: User-First, Always</h3>
                   <div className="space-y-4">
-                    <p className="text-blue-800">Our loyalty is to users, not vendors. Every decision we make, every feature we build, every recommendation we provide is designed to serve the user's best interests.</p>
+                    <p className="text-blue-800">Our loyalty is to users, not vendors. Every decision we make, every feature we build, every recommendation we provide is designed to serve the user&rsquo;s best interests.</p>
                     <div className="bg-white p-6 rounded-lg">
                       <h4 className="font-semibold text-blue-700 mb-3">How We Live This Principle:</h4>
                       <ul className="space-y-2 text-blue-600">
@@ -624,7 +624,7 @@ const TheAtlasNeoManifesto = () => {
                 <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-4 text-purple-900">🧠 Principle 3: Intelligence Over Information</h3>
                   <div className="space-y-4">
-                    <p className="text-purple-800">The world doesn't need more information - it needs more intelligence. We focus on turning raw data into actionable insights that help users make better decisions.</p>
+                    <p className="text-purple-800">The world doesn&rsquo;t need more information - it needs more intelligence. We focus on turning raw data into actionable insights that help users make better decisions.</p>
                     <div className="bg-white p-6 rounded-lg">
                       <h4 className="font-semibold text-purple-700 mb-3">From Data to Intelligence:</h4>
                       <ul className="space-y-2 text-purple-600">
@@ -641,7 +641,7 @@ const TheAtlasNeoManifesto = () => {
                 <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-4 text-orange-900">🔄 Principle 4: Continuous Evolution</h3>
                   <div className="space-y-4">
-                    <p className="text-orange-800">The digital toolscape never stops changing, and neither do we. We're committed to continuous improvement and adaptation to serve our users better.</p>
+                    <p className="text-orange-800">The digital toolscape never stops changing, and neither do we. We&rsquo;re committed to continuous improvement and adaptation to serve our users better.</p>
                     <div className="bg-white p-6 rounded-lg">
                       <h4 className="font-semibold text-orange-700 mb-3">Evolution Mechanisms:</h4>
                       <ul className="space-y-2 text-orange-600">
@@ -1053,7 +1053,7 @@ const TheAtlasNeoManifesto = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Community-Driven Evolution</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Wisdom of the Crowd</h3>
-              <p className="mb-6">Atlas Neo is not built by a single team - it's co-created with our community of users, experts, and contributors. Every insight, correction, and improvement helps make the map more accurate and valuable for everyone.</p>
+              <p className="mb-6">Atlas Neo is not built by a single team - it&rsquo;s co-created with our community of users, experts, and contributors. Every insight, correction, and improvement helps make the map more accurate and valuable for everyone.</p>
 
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-xl">
@@ -1177,7 +1177,7 @@ const TheAtlasNeoManifesto = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">The Impact We Envision</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Transforming How the World Chooses Software</h3>
-              <p className="mb-6">Our vision extends far beyond building a better tool directory. We're fundamentally changing how organizations and individuals approach software selection, implementation, and optimization. The impact we seek is measured in better decisions, wasted resources saved, and businesses enabled to thrive.</p>
+              <p className="mb-6">Our vision extends far beyond building a better tool directory. We&rsquo;re fundamentally changing how organizations and individuals approach software selection, implementation, and optimization. The impact we seek is measured in better decisions, wasted resources saved, and businesses enabled to thrive.</p>
 
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-8 rounded-xl">
@@ -1312,13 +1312,13 @@ const TheAtlasNeoManifesto = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Call to Action: Join the Mapping Revolution</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Be Part of the Solution</h3>
-              <p className="mb-6">The digital toolscape won't map itself. It requires collective effort, diverse perspectives, and shared commitment to building something better than what exists today. Whether you're a tool user, vendor, expert, or enthusiast, you have a role to play in this revolution.</p>
+              <p className="mb-6">The digital toolscape won&rsquo;t map itself. It requires collective effort, diverse perspectives, and shared commitment to building something better than what exists today. Whether you&rsquo;re a tool user, vendor, expert, or enthusiast, you have a role to play in this revolution.</p>
 
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-4 text-white">🚀 The Journey Begins Now</h3>
                   <div className="space-y-4">
-                    <p className="text-lg">We're building Atlas Neo because we believe everyone deserves better guidance in navigating the complex world of software. The current state of tool selection is broken, but together, we can fix it.</p>
+                    <p className="text-lg">We&rsquo;re building Atlas Neo because we believe everyone deserves better guidance in navigating the complex world of software. The current state of tool selection is broken, but together, we can fix it.</p>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                       <div>
@@ -1354,7 +1354,7 @@ const TheAtlasNeoManifesto = () => {
                         </div>
                         <div className="flex items-center">
                           <span className="bg-white text-blue-600 rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm mr-3">3</span>
-                          <span>Help validate tools you've used</span>
+                          <span>Help validate tools you&rsquo;ve used</span>
                         </div>
                         <div className="flex items-center">
                           <span className="bg-white text-blue-600 rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm mr-3">4</span>
@@ -1370,7 +1370,7 @@ const TheAtlasNeoManifesto = () => {
                 </div>
 
                 <div className="bg-green-50 p-8 rounded-xl">
-                  <h3 className="text-xl font-bold mb-4 text-green-900">🌟 The Future We're Building Together</h3>
+                  <h3 className="text-xl font-bold mb-4 text-green-900">🌟 The Future We&rsquo;re Building Together</h3>
                   <div className="space-y-6">
                     <div className="bg-white p-6 rounded-lg">
                       <h4 className="font-semibold text-green-700 mb-3">Our Commitment to You</h4>
@@ -1399,7 +1399,7 @@ const TheAtlasNeoManifesto = () => {
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Map is Not the Territory</h3>
               <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="text-gray-800 mb-4">Atlas Neo is not just about mapping what exists - it's about creating what should exist. We're building a world where:</p>
+                <p className="text-gray-800 mb-4">Atlas Neo is not just about mapping what exists - it&rsquo;s about creating what should exist. We&rsquo;re building a world where:</p>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs mr-3">✓</span>

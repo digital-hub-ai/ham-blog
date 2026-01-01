@@ -6,7 +6,7 @@ const DigitalWellnessFramework = () => {
   return (
     <>
       <Head>
-        <title>Your Team Is Drowning in Notifications. Here's a Systematic Framework for Digital Wellness. | Atlas Neo</title>
+        <title>Your Team Is Drowning in Notifications. Here&rsquo;s a Systematic Framework for Digital Wellness. | Atlas Neo</title>
         <meta name="description" content="A systematic framework to solve notification overload and restore digital wellness. Learn how to reduce distractions, improve focus, and create a healthier work environment for your team." />
         <meta name="keywords" content="digital wellness, notification overload, team productivity, focus management, workplace distractions, communication strategy, remote work wellness" />
         <meta name="author" content="Atlas Neo Team" />
@@ -124,7 +124,7 @@ const DigitalWellnessFramework = () => {
           <div className="relative max-w-6xl mx-auto px-6 py-24">
             <div className="text-center">
               <h1 className="text-5xl font-bold mb-6">Your Team Is Drowning in Notifications</h1>
-              <p className="text-2xl mb-8 text-purple-100">Here's a Systematic Framework for Digital Wellness</p>
+              <p className="text-2xl mb-8 text-purple-100">Here&rsquo;s a Systematic Framework for Digital Wellness</p>
               <div className="flex items-center justify-center space-x-6 text-purple-100">
                 <span className="flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -154,7 +154,7 @@ const DigitalWellnessFramework = () => {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-2xl font-bold mb-6 text-gray-900">Table of Contents</h2>
             <nav className="space-y-3">
-              <a href="#the-notification-crisis" className="block text-purple-600 hover:text-purple-700 font-medium">The Silent Crisis Killing Your Team's Productivity</a>
+              <a href="#the-notification-crisis" className="block text-purple-600 hover:text-purple-700 font-medium">The Silent Crisis Killing Your Team&rsquo;s Productivity</a>
               <a href="#the-true-cost" className="block text-gray-600 hover:text-gray-800 ml-4">The True Cost of Notification Overload</a>
               <a href="#four-pillars" className="block text-purple-600 hover:text-purple-700 font-medium">The Four Pillars of Digital Wellness</a>
               <a href="#intentional-communication" className="block text-gray-600 hover:text-gray-800 ml-4">Pillar 1: Intentional Communication Architecture</a>
@@ -175,12 +175,12 @@ const DigitalWellnessFramework = () => {
           
           {/* The Notification Crisis */}
           <section id="the-notification-crisis" className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">The Silent Crisis Killing Your Team's Productivity</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">The Silent Crisis Killing Your Team&rsquo;s Productivity</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="text-xl leading-relaxed mb-6">Sarah stares at her screen. Slack pings. Email dings. Teams notification flashes. Phone buzzes. Calendar reminder pops up. In the last 10 minutes, she's received 7 notifications and hasn't written a single line of code.</p>
+              <p className="text-xl leading-relaxed mb-6">Sarah stares at her screen. Slack pings. Email dings. Teams notification flashes. Phone buzzes. Calendar reminder pops up. In the last 10 minutes, she&rsquo;s received 7 notifications and hasn't written a single line of code.</p>
               
               <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-                <p className="text-red-800 font-medium">This isn't multitasking. This's cognitive assault. Your team is drowning in a sea of digital noise, and the cost is staggering.</p>
+                <p className="text-red-800 font-medium">This isn't multitasking. This&rsquo;s cognitive assault. Your team is drowning in a sea of digital noise, and the cost is staggering.</p>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Numbers That Should Scare You</h3>
@@ -208,20 +208,20 @@ const DigitalWellnessFramework = () => {
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Why Traditional Solutions Fail</h3>
               <div className="space-y-4 mb-8">
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">❌ "Just turn off notifications"</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">❌ &quot;Just turn off notifications&quot;</h4>
                   <p className="text-gray-600">Impossible in collaborative environments. Critical information gets missed.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">❌ "Check messages at set times"</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">❌ &quot;Check messages at set times&quot;</h4>
                   <p className="text-gray-600">Creates bottlenecks and delays urgent communication.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">❌ "Use focus mode"</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">❌ &quot;Use focus mode&quot;</h4>
                   <p className="text-gray-600">Treats symptoms, not the systemic problem.</p>
                 </div>
               </div>
 
-              <p className="text-lg leading-relaxed">The solution isn't fewer notifications—it's smarter notification architecture. Here's the systematic framework that saved our team from digital drowning.</p>
+              <p className="text-lg leading-relaxed">The solution isn't fewer notifications—it&rsquo;s smarter notification architecture. Here's the systematic framework that saved our team from digital drowning.</p>
             </div>
           </section>
 

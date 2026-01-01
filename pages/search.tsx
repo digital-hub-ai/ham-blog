@@ -490,7 +490,7 @@ export default function SearchPage() {
                 <div className="text-gray-400 dark:text-gray-500 mb-3 sm:mb-4">
                   <FontAwesomeIcon icon={faSearch} className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4" />
                   <h2 className="text-base sm:text-xl font-medium">Search our AI tools and resources</h2>
-                  <p className="mt-1 sm:mt-2 text-sm sm:text-base">Enter a search term above to find what you're looking for</p>
+                  <p className="mt-1 sm:mt-2 text-sm sm:text-base">Enter a search term above to find what you&rsquo;re looking for</p>
                 </div>
               </div>
             ) : isLoading ? (
@@ -499,7 +499,7 @@ export default function SearchPage() {
                   icon={faSpinner} 
                   className="h-6 w-6 sm:h-8 sm:w-8 text-blue-500 animate-spin mx-auto mb-3 sm:mb-4" 
                 />
-                <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Searching for "{q}"...</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Searching for &quot;{q}&quot;...</p>
               </div>
             ) : error ? (
               <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-3 sm:p-4">
@@ -518,7 +518,7 @@ export default function SearchPage() {
               <>
                 <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-4">
                   <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                    Found {results.length} {results.length === 1 ? 'result' : 'results'} for "{q}"
+                    Found {results.length} {results.length === 1 ? 'result' : 'results'} for &quot;{q}&quot;
                   </div>
                   
                   {/* Cluster Toggle */}
@@ -788,7 +788,7 @@ export default function SearchPage() {
                   <svg className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h2 className="text-base sm:text-xl font-medium">No results found for "{q}"</h2>
+                  <h2 className="text-base sm:text-xl font-medium">No results found for &quot;{q}&quot;</h2>
                   <p className="mt-1 sm:mt-2 text-sm sm:text-base">Try different keywords or check your spelling</p>
                   
                   <div className="mt-4 sm:mt-6">

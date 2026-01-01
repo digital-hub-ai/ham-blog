@@ -404,7 +404,7 @@ const AdvancedSearch = () => {
               <FaSearch className="mx-auto h-12 w-12 text-gray-400" />
               <h3 className="mt-2 text-lg font-medium text-gray-900">No results found</h3>
               <p className="mt-1 text-gray-500">
-                Try adjusting your search or filters to find what you're looking for.
+                Try adjusting your search or filters to find what you&rsquo;re looking for.
               </p>
             </div>
           ) : null}

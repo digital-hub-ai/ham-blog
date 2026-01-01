@@ -277,7 +277,7 @@ const BillionParameterTraining = () => {
             
             <p className="mb-4">
               Choosing the right distributed training strategy is crucial for efficient large-scale model training. 
-              Here's a comparison of the main approaches used in 2025:
+              Here&rsquo;s a comparison of the main approaches used in 2025:
             </p>
 
             <div className="mt-8 grid md:grid-cols-2 gap-6">
@@ -397,7 +397,7 @@ const BillionParameterTraining = () => {
             
             <p className="mb-4">
               Training billion-parameter models requires careful planning of compute, memory, network, and storage resources. 
-              Here's a breakdown of typical infrastructure requirements in 2025:
+              Here&rsquo;s a breakdown of typical infrastructure requirements in 2025:
             </p>
 
             <div className="mt-8 overflow-x-auto">

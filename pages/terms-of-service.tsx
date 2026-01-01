@@ -52,7 +52,7 @@ export default function TermsOfService() {
                 <section className="mb-10">
                   <h2 className="text-2xl font-bold mb-4 text-white">1. Acceptance of Terms</h2>
                   <p className="mb-4 text-gray-300">
-                    By accessing or using the AI Tools Directory ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms.
+                    By accessing or using the AI Tools Directory (&quot;Service&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms.
                   </p>
                 </section>
 
@@ -100,7 +100,7 @@ export default function TermsOfService() {
                 <section className="mb-10">
                   <h2 className="text-2xl font-bold mb-4 text-white">7. Disclaimer</h2>
                   <p className="mb-4 text-gray-300">
-                    Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.
+                    Your use of the Service is at your sole risk. The Service is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.
                   </p>
                 </section>
 
@@ -121,7 +121,7 @@ export default function TermsOfService() {
                 <section className="mb-10">
                   <h2 className="text-2xl font-bold mb-4 text-white">10. Changes</h2>
                   <p className="mb-4 text-gray-300">
-                    We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+                    We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days&rsquo; notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
                   </p>
                 </section>
 
