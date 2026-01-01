@@ -65,7 +65,7 @@ export default function StrategicThinkingVisionSetting() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Clarity and Simplicity</h3>
           
           <p>
-            The most enduring organizational visions are remarkably simple yet profound. Google's "to organize the world's information" and Tesla's "to accelerate the world's transition to sustainable energy" demonstrate how clarity drives alignment across thousands of employees.
+            The most enduring organizational visions are remarkably simple yet profound. Google&rsquo;s &quot;to organize the world&rsquo;s information&quot; and Tesla&rsquo;s &quot;to accelerate the world&rsquo;s transition to sustainable energy&quot; demonstrate how clarity drives alignment across thousands of employees.
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Future Orientation</h3>

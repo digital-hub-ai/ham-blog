@@ -70,7 +70,7 @@ export default function ChangeManagementOrganizationalTransformation() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Uncertainty Anxiety</h3>
           
           <p>
-            The amygdala, our brain's threat detection center, becomes hyperactive when facing ambiguous situations. Leaders can mitigate this response by providing clear communication, establishing predictable routines, and offering consistent support throughout transitions.
+            The amygdala, our brain&rsquo;s threat detection center, becomes hyperactive when facing ambiguous situations. Leaders can mitigate this response by providing clear communication, establishing predictable routines, and offering consistent support throughout transitions.
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3">Identity Threat</h3>
@@ -116,7 +116,7 @@ export default function ChangeManagementOrganizationalTransformation() {
           </ul>
           
           <p>
-            Companies with strong guiding coalitions report 38% higher success rates in major transformation initiatives, according to McKinsey's organizational health research.
+            Companies with strong guiding coalitions report 38% higher success rates in major transformation initiatives, according to McKinsey&rsquo;s organizational health research.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Digital Transformation Challenges</h2>

@@ -250,7 +250,7 @@ export default function Contact() {
                   <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-6 rounded-xl border border-white/10">
                     <h2 className="text-2xl font-bold mb-4 text-white">Contact Information</h2>
                     <p className="text-gray-300 mb-6">
-                      We're here to help and answer any questions you might have. Reach out to us through any of these channels:
+                      We&rsquo;re here to help and answer any questions you might have. Reach out to us through any of these channels:
                     </p>
                     
                     <div className="space-y-5">
