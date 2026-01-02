@@ -40,11 +40,11 @@ export default function NeuroscienceConsumerBehavior() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Foundations of Neuromarketing</h2>
             
             <p className="mb-4">
-              Neuromarketing combines neuroscience techniques with marketing research to understand how consumers' brains respond to products, brands, and advertising. Using tools like functional magnetic resonance imaging (fMRI), electroencephalography (EEG), and eye-tracking technology, researchers can observe real-time brain activity during purchasing decisions without relying on potentially biased self-reporting.
+              Neuromarketing combines neuroscience techniques with marketing research to understand how consumers&rsquo; brains respond to products, brands, and advertising. Using tools like functional magnetic resonance imaging (fMRI), electroencephalography (EEG), and eye-tracking technology, researchers can observe real-time brain activity during purchasing decisions without relying on potentially biased self-reporting.
             </p>
             
             <p className="mb-4">
-              Key insights from neuromarketing research reveal that emotions drive most purchasing decisions, with rational justification often occurring after the choice is made. The brain's limbic system, responsible for emotions and memory, activates before the prefrontal cortex, which handles logical analysis. This understanding has profound implications for marketing strategy, emphasizing the importance of emotional connection over purely rational appeals.
+              Key insights from neuromarketing research reveal that emotions drive most purchasing decisions, with rational justification often occurring after the choice is made. The brain&rsquo;s limbic system, responsible for emotions and memory, activates before the prefrontal cortex, which handles logical analysis. This understanding has profound implications for marketing strategy, emphasizing the importance of emotional connection over purely rational appeals.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Brain Regions and Decision Making</h2>
@@ -61,7 +61,7 @@ export default function NeuroscienceConsumerBehavior() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">The Reward System and Dopamine Release</h3>
             <p className="mb-4">
-              The brain's reward system, centered around the nucleus accumbens, releases dopamine in anticipation of pleasure or reward. This neurotransmitter drives motivation and creates feelings of satisfaction that reinforce purchasing behavior. Scarcity marketing, exclusive offers, and surprise elements trigger dopamine release, making shopping experiences literally addictive and encouraging repeat purchases.
+              The brain&rsquo;s reward system, centered around the nucleus accumbens, releases dopamine in anticipation of pleasure or reward. This neurotransmitter drives motivation and creates feelings of satisfaction that reinforce purchasing behavior. Scarcity marketing, exclusive offers, and surprise elements trigger dopamine release, making shopping experiences literally addictive and encouraging repeat purchases.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Sensory Marketing and Perception</h2>
@@ -85,17 +85,17 @@ export default function NeuroscienceConsumerBehavior() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Fear and Loss Aversion</h3>
             <p className="mb-4">
-              The brain's negativity bias makes losses feel twice as painful as equivalent gains feel pleasurable. Marketing messages emphasizing what customers will lose by not purchasing are often more effective than those focusing on potential gains. Limited-time offers, exclusive access, and fear-of-missing-out (FOMO) strategies tap into loss aversion to prompt immediate action.
+              The brain&rsquo;s negativity bias makes losses feel twice as painful as equivalent gains feel pleasurable. Marketing messages emphasizing what customers will lose by not purchasing are often more effective than those focusing on potential gains. Limited-time offers, exclusive access, and fear-of-missing-out (FOMO) strategies tap into loss aversion to prompt immediate action.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Social Proof and Mirror Neurons</h3>
             <p className="mb-4">
-              Mirror neurons activate when observing others' actions and emotions, creating feelings of empathy and shared experience. Social proof elements like customer testimonials, user-generated content, and influencer endorsements trigger mirror neuron activity, making viewers feel they're experiencing others' satisfaction and encouraging similar behavior. This neurological mechanism explains the power of social validation in purchasing decisions.
+              Mirror neurons activate when observing others&rsquo; actions and emotions, creating feelings of empathy and shared experience. Social proof elements like customer testimonials, user-generated content, and influencer endorsements trigger mirror neuron activity, making viewers feel they&rsquo;re experiencing others&rsquo; satisfaction and encouraging similar behavior. This neurological mechanism explains the power of social validation in purchasing decisions.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Status and Social Identity</h3>
             <p className="mb-4">
-              The brain's social cognition networks drive desires for status, belonging, and self-expression through consumption. Luxury brands activate reward circuits associated with social dominance and peer recognition. Products that signal group membership or individual uniqueness satisfy fundamental social needs, making them more appealing than functionally equivalent alternatives that lack identity expression potential.
+              The brain&rsquo;s social cognition networks drive desires for status, belonging, and self-expression through consumption. Luxury brands activate reward circuits associated with social dominance and peer recognition. Products that signal group membership or individual uniqueness satisfy fundamental social needs, making them more appealing than functionally equivalent alternatives that lack identity expression potential.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Cognitive Biases and Decision Shortcuts</h2>
@@ -107,12 +107,12 @@ export default function NeuroscienceConsumerBehavior() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Choice Overload and Decision Fatigue</h3>
             <p className="mb-4">
-              Too many options overwhelm the brain's decision-making capacity, leading to paralysis or poor choices. The prefrontal cortex can only evaluate a limited number of alternatives before becoming fatigued, resulting in impulsive decisions or avoidance altogether. Curated selections, guided choices, and progressive disclosure reduce cognitive load while maintaining customer satisfaction.
+              Too many options overwhelm the brain&rsquo;s decision-making capacity, leading to paralysis or poor choices. The prefrontal cortex can only evaluate a limited number of alternatives before becoming fatigued, resulting in impulsive decisions or avoidance altogether. Curated selections, guided choices, and progressive disclosure reduce cognitive load while maintaining customer satisfaction.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Reciprocity and Social Obligation</h3>
             <p className="mb-4">
-              The brain's social exchange networks create automatic responses to perceived gifts or favors, triggering feelings of obligation to reciprocate. Free samples, helpful content, and personalized service activate reciprocity mechanisms that increase purchase likelihood. This neurological response to social exchange predates monetary systems, making it a fundamental driver of commercial behavior.
+              The brain&rsquo;s social exchange networks create automatic responses to perceived gifts or favors, triggering feelings of obligation to reciprocate. Free samples, helpful content, and personalized service activate reciprocity mechanisms that increase purchase likelihood. This neurological response to social exchange predates monetary systems, making it a fundamental driver of commercial behavior.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Technology Applications and Measurement</h2>
