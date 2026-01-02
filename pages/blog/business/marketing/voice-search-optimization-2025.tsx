@@ -40,7 +40,7 @@ export default function VoiceSearchOptimization2025() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Understanding Voice Search Behavior</h2>
             
             <p className="mb-4">
-              Voice search queries differ fundamentally from typed searches in length, structure, and intent. Spoken queries tend to be longer, more conversational, and phrased as complete questions rather than keyword fragments. Users asking "Where can I find the best Italian restaurant near me that's open right now?" demonstrate local intent with temporal constraints, requiring different optimization strategies than the typed equivalent "Italian restaurant nearby."
+              Voice search queries differ fundamentally from typed searches in length, structure, and intent. Spoken queries tend to be longer, more conversational, and phrased as complete questions rather than keyword fragments. Users asking &quot;Where can I find the best Italian restaurant near me that&rsquo;s open right now?&quot; demonstrate local intent with temporal constraints, requiring different optimization strategies than the typed equivalent &quot;Italian restaurant nearby.&quot;
             </p>
             
             <p className="mb-4">
@@ -73,7 +73,7 @@ export default function VoiceSearchOptimization2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Long-Tail Keyword Integration</h3>
             <p className="mb-4">
-              Voice searches typically contain 3-4 times more words than typed queries, creating opportunities for long-tail keyword targeting that's less competitive and more intent-specific than broad keywords. Content optimized for phrases like "best running shoes for flat feet under $100" captures highly qualified traffic with clear purchase intent, often resulting in higher conversion rates than generic keyword targeting.
+              Voice searches typically contain 3-4 times more words than typed queries, creating opportunities for long-tail keyword targeting that&rsquo;s less competitive and more intent-specific than broad keywords. Content optimized for phrases like &quot;best running shoes for flat feet under $100&quot; captures highly qualified traffic with clear purchase intent, often resulting in higher conversion rates than generic keyword targeting.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Natural Language Writing Style</h3>
