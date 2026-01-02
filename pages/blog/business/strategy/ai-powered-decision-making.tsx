@@ -44,7 +44,7 @@ export default function AiPoweredDecisionMaking() {
             </p>
             
             <p className="mb-4">
-              Today's AI-powered decision platforms integrate multiple data sources including market intelligence, financial metrics, customer feedback, and operational performance indicators. These systems provide executives with comprehensive situational awareness that dramatically improves decision quality and reduces response times to market changes.
+              Today&rsquo;s AI-powered decision platforms integrate multiple data sources including market intelligence, financial metrics, customer feedback, and operational performance indicators. These systems provide executives with comprehensive situational awareness that dramatically improves decision quality and reduces response times to market changes.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Core Capabilities of AI Decision Systems</h2>
