@@ -28,7 +28,7 @@ export default function InnovationPortfolioManagement() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              In today's rapidly evolving business landscape, innovation has become a critical determinant of competitive advantage and long-term sustainability. Organizations that effectively manage diverse innovation portfolios balance incremental improvements with breakthrough discoveries, core business enhancements with adjacent opportunities, and short-term performance with long-term transformation. Companies with disciplined innovation portfolio management report 28% higher revenue growth from new products and 22% improved market share compared to those with ad-hoc innovation approaches. As disruption accelerates across industries, systematic portfolio management has evolved from a nice-to-have capability to a business necessity.
+              In today&rsquo;s rapidly evolving business landscape, innovation has become a critical determinant of competitive advantage and long-term sustainability. Organizations that effectively manage diverse innovation portfolios balance incremental improvements with breakthrough discoveries, core business enhancements with adjacent opportunities, and short-term performance with long-term transformation. Companies with disciplined innovation portfolio management report 28% higher revenue growth from new products and 22% improved market share compared to those with ad-hoc innovation approaches. As disruption accelerates across industries, systematic portfolio management has evolved from a nice-to-have capability to a business necessity.
             </p>
 
             <ImagePlaceholder 

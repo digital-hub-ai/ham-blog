@@ -124,7 +124,7 @@ export default function GlobalExpansionStrategies() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Transfer Pricing and Tax Optimization</h3>
             <p className="mb-4">
-              Arm's length transfer pricing policies, tax-efficient entity structures, and compliance with OECD guidelines ensure regulatory adherence while optimizing global tax burden. Organizations must balance aggressive tax planning with reputational risks and evolving regulatory scrutiny of multinational tax strategies.
+              Arm&rsquo;s length transfer pricing policies, tax-efficient entity structures, and compliance with OECD guidelines ensure regulatory adherence while optimizing global tax burden. Organizations must balance aggressive tax planning with reputational risks and evolving regulatory scrutiny of multinational tax strategies.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Investment and Funding Strategies</h3>
