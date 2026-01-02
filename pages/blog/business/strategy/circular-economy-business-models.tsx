@@ -28,7 +28,7 @@ export default function CircularEconomyBusinessModels() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              The traditional linear economy model of "take-make-dispose" is reaching its physical and environmental limits. In 2025, businesses worldwide are embracing circular economy principles that decouple growth from finite resource consumption while creating new sources of competitive advantage. These models eliminate waste through thoughtful design, extend product lifecycles, and regenerate natural systems rather than depleting them.
+              The traditional linear economy model of &quot;take-make-dispose&quot; is reaching its physical and environmental limits. In 2025, businesses worldwide are embracing circular economy principles that decouple growth from finite resource consumption while creating new sources of competitive advantage. These models eliminate waste through thoughtful design, extend product lifecycles, and regenerate natural systems rather than depleting them.
             </p>
 
             <ImagePlaceholder 
@@ -51,7 +51,7 @@ export default function CircularEconomyBusinessModels() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Product-as-a-Service</h3>
             <p className="mb-4">
-              Companies are shifting from selling products to providing outcomes through service-based offerings. Rolls-Royce sells "power-by-the-hour" for aircraft engines rather than engines themselves, maintaining ownership and responsibility for performance throughout the product lifecycle. This model incentivizes durability, efficiency, and continuous improvement while creating predictable revenue streams.
+              Companies are shifting from selling products to providing outcomes through service-based offerings. Rolls-Royce sells &quot;power-by-the-hour&quot; for aircraft engines rather than engines themselves, maintaining ownership and responsibility for performance throughout the product lifecycle. This model incentivizes durability, efficiency, and continuous improvement while creating predictable revenue streams.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Resource Recovery and Upcycling</h3>
@@ -68,7 +68,7 @@ export default function CircularEconomyBusinessModels() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Modular Product Architecture</h3>
             <p className="mb-4">
-              Products designed with modular components can be easily upgraded, repaired, or repurposed rather than replaced entirely. Fairphone's modular smartphones exemplify this approach, allowing users to replace individual components rather than discarding entire devices. This design philosophy extends product lifecycles while reducing electronic waste.
+              Products designed with modular components can be easily upgraded, repaired, or repurposed rather than replaced entirely. Fairphone&rsquo;s modular smartphones exemplify this approach, allowing users to replace individual components rather than discarding entire devices. This design philosophy extends product lifecycles while reducing electronic waste.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Material Health and Reusability</h3>
@@ -102,12 +102,12 @@ export default function CircularEconomyBusinessModels() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Automotive Sector Transformation</h3>
             <p className="mb-4">
-              Renault's Choisy-le-Roi facility remanufactures automotive components to original equipment quality while using 80% less energy and 85% fewer raw materials than new production. This approach generates significant cost savings while creating new revenue streams from recovered materials and extending vehicle lifecycles.
+              Renault&rsquo;s Choisy-le-Roi facility remanufactures automotive components to original equipment quality while using 80% less energy and 85% fewer raw materials than new production. This approach generates significant cost savings while creating new revenue streams from recovered materials and extending vehicle lifecycles.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Fashion Industry Innovation</h3>
             <p className="mb-4">
-              H&M's garment collection program and Stella McCartney's commitment to sustainable materials demonstrate how fashion brands are addressing industry waste through take-back programs, innovative materials, and rental services. These initiatives reduce environmental impact while creating customer loyalty through values alignment.
+              H&M&rsquo;s garment collection program and Stella McCartney&rsquo;s commitment to sustainable materials demonstrate how fashion brands are addressing industry waste through take-back programs, innovative materials, and rental services. These initiatives reduce environmental impact while creating customer loyalty through values alignment.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Construction Materials Revolution</h3>
@@ -151,7 +151,7 @@ export default function CircularEconomyBusinessModels() {
             </p>
             
             <p className="mb-4">
-              As circular economy principles become mainstream, we're witnessing a fundamental shift toward more resilient, regenerative, and equitable business ecosystems. Companies that embrace this transformation will create lasting value for shareholders, stakeholders, and society while contributing to planetary health and human prosperity.
+              As circular economy principles become mainstream, we&rsquo;re witnessing a fundamental shift toward more resilient, regenerative, and equitable business ecosystems. Companies that embrace this transformation will create lasting value for shareholders, stakeholders, and society while contributing to planetary health and human prosperity.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
