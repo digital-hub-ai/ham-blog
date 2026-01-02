@@ -40,7 +40,7 @@ export default function SeoOptimization2025() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Understanding Modern Search Algorithms</h2>
             
             <p className="mb-4">
-              Modern search algorithms have become incredibly sophisticated, incorporating machine learning, natural language processing, and behavioral analysis to understand content quality, user intent, and relevance beyond simple keyword matching. Google's core updates, including BERT, MUM, and helpful content updates, emphasize understanding context, evaluating expertise, and rewarding content that genuinely helps users accomplish their goals. Search engines now consider hundreds of ranking factors including page experience, content depth, author credibility, and user engagement signals to determine which pages deserve to rank for specific queries.
+              Modern search algorithms have become incredibly sophisticated, incorporating machine learning, natural language processing, and behavioral analysis to understand content quality, user intent, and relevance beyond simple keyword matching. Google&rsquo;s core updates, including BERT, MUM, and helpful content updates, emphasize understanding context, evaluating expertise, and rewarding content that genuinely helps users accomplish their goals. Search engines now consider hundreds of ranking factors including page experience, content depth, author credibility, and user engagement signals to determine which pages deserve to rank for specific queries.
             </p>
             
             <p className="mb-4">
