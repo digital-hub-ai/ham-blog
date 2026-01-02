@@ -28,7 +28,7 @@ export default function InfluencerMarketingStrategy() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              Influencer marketing has matured from a novel experiment to a fundamental component of modern marketing strategies, with brands recognizing the power of authentic endorsements from trusted voices in their target communities. Today's most successful programs move beyond celebrity partnerships to cultivate relationships with micro and nano influencers who possess highly engaged audiences and genuine expertise in specific niches. Brands implementing comprehensive influencer strategies report 11x higher ROI than traditional digital marketing approaches, with 89% of marketers saying influencer marketing delivers better ROI than other marketing channels. The key to influencer marketing success lies in identifying partners whose values align with brand mission, creating authentic collaborations that provide value to both parties, and measuring impact through meaningful business metrics rather than vanity indicators.
+              Influencer marketing has matured from a novel experiment to a fundamental component of modern marketing strategies, with brands recognizing the power of authentic endorsements from trusted voices in their target communities. Today&rsquo;s most successful programs move beyond celebrity partnerships to cultivate relationships with micro and nano influencers who possess highly engaged audiences and genuine expertise in specific niches. Brands implementing comprehensive influencer strategies report 11x higher ROI than traditional digital marketing approaches, with 89% of marketers saying influencer marketing delivers better ROI than other marketing channels. The key to influencer marketing success lies in identifying partners whose values align with brand mission, creating authentic collaborations that provide value to both parties, and measuring impact through meaningful business metrics rather than vanity indicators.
             </p>
 
             <ImagePlaceholder 
@@ -51,7 +51,7 @@ export default function InfluencerMarketingStrategy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Audience Alignment and Authenticity</h3>
             <p className="mb-4">
-              Effective influencer partnerships begin with thorough evaluation of potential partners' audiences, content quality, and brand alignment to ensure authentic connections with target customers. Brands should assess not just follower counts but engagement rates, audience demographics, content themes, and past brand collaborations to gauge compatibility and potential effectiveness. Authenticity indicators include organic content quality, genuine audience interactions, and consistent messaging that reflects the influencer's personality and values.
+              Effective influencer partnerships begin with thorough evaluation of potential partners&rsquo; audiences, content quality, and brand alignment to ensure authentic connections with target customers. Brands should assess not just follower counts but engagement rates, audience demographics, content themes, and past brand collaborations to gauge compatibility and potential effectiveness. Authenticity indicators include organic content quality, genuine audience interactions, and consistent messaging that reflects the influencer&rsquo;s personality and values.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Tier-Based Partnership Strategies</h3>
@@ -68,7 +68,7 @@ export default function InfluencerMarketingStrategy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Co-Creation and Creative Collaboration</h3>
             <p className="mb-4">
-              Successful influencer campaigns involve influencers as creative partners rather than content distributors, leveraging their expertise and audience understanding to develop authentic, engaging materials. Brands that provide creative briefs and brand guidelines while allowing influencers freedom to express their unique voices achieve better engagement and more natural brand integration. This collaborative approach respects influencers' content expertise while ensuring brand message consistency and campaign objectives.
+              Successful influencer campaigns involve influencers as creative partners rather than content distributors, leveraging their expertise and audience understanding to develop authentic, engaging materials. Brands that provide creative briefs and brand guidelines while allowing influencers freedom to express their unique voices achieve better engagement and more natural brand integration. This collaborative approach respects influencers&rsquo; content expertise while ensuring brand message consistency and campaign objectives.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Multi-Platform and Cross-Channel Integration</h3>
@@ -185,7 +185,7 @@ export default function InfluencerMarketingStrategy() {
             </p>
             
             <p className="mb-4">
-              As influencer marketing continues evolving, success will increasingly depend on brands' ability to create authentic, valuable partnerships that benefit all stakeholders. Companies that treat influencers as strategic partners rather than tactical tools will build sustainable competitive advantages through trust, advocacy, and customer loyalty.
+              As influencer marketing continues evolving, success will increasingly depend on brands&rsquo; ability to create authentic, valuable partnerships that benefit all stakeholders. Companies that treat influencers as strategic partners rather than tactical tools will build sustainable competitive advantages through trust, advocacy, and customer loyalty.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
