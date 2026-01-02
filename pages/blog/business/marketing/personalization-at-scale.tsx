@@ -68,7 +68,7 @@ export default function PersonalizationAtScale() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Predictive Personalization Models</h3>
             <p className="mb-4">
-              Predictive models use historical data and machine learning algorithms to anticipate customer needs, preferences, and behaviors before they're explicitly expressed. These systems can recommend products, content, and experiences that align with individual tastes while suggesting new discoveries that expand customer interests. Advanced implementations continuously refine predictions based on new data and feedback, improving accuracy and relevance over time.
+              Predictive models use historical data and machine learning algorithms to anticipate customer needs, preferences, and behaviors before they&rsquo;re explicitly expressed. These systems can recommend products, content, and experiences that align with individual tastes while suggesting new discoveries that expand customer interests. Advanced implementations continuously refine predictions based on new data and feedback, improving accuracy and relevance over time.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Natural Language Processing for Content Personalization</h3>
@@ -90,7 +90,7 @@ export default function PersonalizationAtScale() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Contextual Continuity and Recognition</h3>
             <p className="mb-4">
-              Customers expect brands to recognize them and acknowledge previous interactions regardless of channel or device used for subsequent contacts. This recognition extends beyond simple identification to include context awareness that understands where customers left off in previous interactions and what information they've already received. Systems that provide contextual continuity reduce customer effort and frustration while demonstrating brand competence and care.
+              Customers expect brands to recognize them and acknowledge previous interactions regardless of channel or device used for subsequent contacts. This recognition extends beyond simple identification to include context awareness that understands where customers left off in previous interactions and what information they&rsquo;ve already received. Systems that provide contextual continuity reduce customer effort and frustration while demonstrating brand competence and care.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Sequential and Journey-Based Personalization</h3>
@@ -153,7 +153,7 @@ export default function PersonalizationAtScale() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Transparency and Consent</h3>
             <p className="mb-4">
-              Effective personalization requires transparent communication about data usage and clear consent mechanisms that respect customer preferences and regulatory requirements. Customers should understand what data is collected, how it's used for personalization, and have easy options to control their preferences and withdraw consent. Transparent personalization builds customer trust and engagement while ensuring regulatory compliance.
+              Effective personalization requires transparent communication about data usage and clear consent mechanisms that respect customer preferences and regulatory requirements. Customers should understand what data is collected, how it&rsquo;s used for personalization, and have easy options to control their preferences and withdraw consent. Transparent personalization builds customer trust and engagement while ensuring regulatory compliance.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Algorithmic Fairness and Bias Prevention</h3>
