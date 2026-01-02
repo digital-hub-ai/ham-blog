@@ -28,7 +28,7 @@ export default function CustomerEngagementStrategies2025() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              The digital marketing landscape in 2025 is characterized by unprecedented levels of personalization, interactivity, and technological sophistication. Marketers who master these new paradigms are achieving engagement rates and conversion metrics that seemed impossible just a few years ago. This comprehensive guide explores the strategies and tactics that define marketing success in today's hyper-connected, AI-driven world.
+              The digital marketing landscape in 2025 is characterized by unprecedented levels of personalization, interactivity, and technological sophistication. Marketers who master these new paradigms are achieving engagement rates and conversion metrics that seemed impossible just a few years ago. This comprehensive guide explores the strategies and tactics that define marketing success in today&rsquo;s hyper-connected, AI-driven world.
             </p>
 
             <ImagePlaceholder 
@@ -40,7 +40,7 @@ export default function CustomerEngagementStrategies2025() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Hyper-Personalization at Scale</h2>
             
             <p className="mb-4">
-              Advanced AI and machine learning have enabled a new era of hyper-personalization that goes far beyond simple name substitutions in email templates. Today's most successful marketers leverage comprehensive customer data profiles to deliver individually tailored experiences across every touchpoint in the customer journey.
+              Advanced AI and machine learning have enabled a new era of hyper-personalization that goes far beyond simple name substitutions in email templates. Today&rsquo;s most successful marketers leverage comprehensive customer data profiles to deliver individually tailored experiences across every touchpoint in the customer journey.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Predictive Customer Intelligence</h3>
@@ -70,7 +70,7 @@ export default function CustomerEngagementStrategies2025() {
             <h3 className="text-2xl font-semibold mt-8 mb-4">Augmented Reality Marketing</h3>
             
             <p className="mb-4">
-              AR technology has matured to the point where it's accessible to marketers of all sizes. From virtual product试穿 to immersive brand experiences, AR campaigns are generating 65% higher conversion rates than traditional digital marketing approaches by allowing customers to experience products in their own environments.
+              AR technology has matured to the point where it&rsquo;s accessible to marketers of all sizes. From virtual product试穿 to immersive brand experiences, AR campaigns are generating 65% higher conversion rates than traditional digital marketing approaches by allowing customers to experience products in their own environments.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Gamification and Engagement Loops</h3>
@@ -82,7 +82,7 @@ export default function CustomerEngagementStrategies2025() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Multi-Channel Orchestration</h2>
             
             <p className="mb-4">
-              Customers today interact with brands across dozens of touchpoints, from social media to email to in-store experiences. Successful marketers orchestrate seamless journeys across all these channels, ensuring consistent messaging while optimizing for each platform's unique characteristics.
+              Customers today interact with brands across dozens of touchpoints, from social media to email to in-store experiences. Successful marketers orchestrate seamless journeys across all these channels, ensuring consistent messaging while optimizing for each platform&rsquo;s unique characteristics.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Cross-Platform Identity Management</h3>
@@ -94,7 +94,7 @@ export default function CustomerEngagementStrategies2025() {
             <h3 className="text-2xl font-semibold mt-8 mb-4">Channel-Specific Optimization</h3>
             
             <p className="mb-4">
-              While maintaining brand consistency, successful marketers tailor their approaches to each platform's unique culture and user expectations. What works on LinkedIn differs significantly from TikTok, and the most effective campaigns leverage platform-specific features and content formats.
+              While maintaining brand consistency, successful marketers tailor their approaches to each platform&rsquo;s unique culture and user expectations. What works on LinkedIn differs significantly from TikTok, and the most effective campaigns leverage platform-specific features and content formats.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Privacy-First Marketing Strategies</h2>
@@ -144,7 +144,7 @@ export default function CustomerEngagementStrategies2025() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Conclusion: Marketing as Experience Design</h2>
             
             <p className="mb-4">
-              Marketing in 2025 is less about interrupting consumers and more about designing compelling experiences that naturally become part of their lives. The brands that thrive are those that view marketing not as a cost center but as an investment in customer relationships. By combining technological sophistication with human-centered design principles, marketers can create campaigns that don't just drive sales but build lasting brand loyalty and advocacy.
+              Marketing in 2025 is less about interrupting consumers and more about designing compelling experiences that naturally become part of their lives. The brands that thrive are those that view marketing not as a cost center but as an investment in customer relationships. By combining technological sophistication with human-centered design principles, marketers can create campaigns that don&rsquo;t just drive sales but build lasting brand loyalty and advocacy.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
