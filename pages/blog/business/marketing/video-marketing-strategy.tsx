@@ -56,12 +56,12 @@ export default function VideoMarketingStrategy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">TikTok and Short-Form Vertical Video</h3>
             <p className="mb-4">
-              TikTok has revolutionized video marketing by prioritizing authentic, entertaining content over polished productions and established brand authority. The platform's algorithm favors creativity, trend participation, and genuine personality over follower count or brand recognition, creating opportunities for nimble marketers to achieve viral success. Successful TikTok strategies embrace platform culture, participate in trends, and showcase authentic brand personalities rather than traditional marketing messages.
+              TikTok has revolutionized video marketing by prioritizing authentic, entertaining content over polished productions and established brand authority. The platform&rsquo;s algorithm favors creativity, trend participation, and genuine personality over follower count or brand recognition, creating opportunities for nimble marketers to achieve viral success. Successful TikTok strategies embrace platform culture, participate in trends, and showcase authentic brand personalities rather than traditional marketing messages.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Instagram Reels and Stories</h3>
             <p className="mb-4">
-              Instagram's video features combine the visual appeal of the platform with the engagement power of motion content to create compelling marketing opportunities. Reels leverage short-form vertical video optimized for the main feed, while Stories provide ephemeral content that encourages immediate engagement through polls, questions, and interactive stickers. Successful Instagram video strategies balance promotional content with entertaining, educational, and behind-the-scenes material that maintains audience interest and encourages sharing.
+              Instagram&rsquo;s video features combine the visual appeal of the platform with the engagement power of motion content to create compelling marketing opportunities. Reels leverage short-form vertical video optimized for the main feed, while Stories provide ephemeral content that encourages immediate engagement through polls, questions, and interactive stickers. Successful Instagram video strategies balance promotional content with entertaining, educational, and behind-the-scenes material that maintains audience interest and encourages sharing.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Content Planning and Storytelling</h2>
@@ -85,7 +85,7 @@ export default function VideoMarketingStrategy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Equipment and Setup Recommendations</h3>
             <p className="mb-4">
-              Modern video production doesn't require expensive equipment, with smartphone cameras and basic lighting setups capable of producing professional-quality content for most marketing applications. Key considerations include stable footage through tripods or gimbals, adequate lighting for clear visibility, and clear audio through external microphones when possible. Successful productions prioritize good storytelling and clear messaging over technical perfection that might delay content creation.
+              Modern video production doesn&rsquo;t require expensive equipment, with smartphone cameras and basic lighting setups capable of producing professional-quality content for most marketing applications. Key considerations include stable footage through tripods or gimbals, adequate lighting for clear visibility, and clear audio through external microphones when possible. Successful productions prioritize good storytelling and clear messaging over technical perfection that might delay content creation.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Editing Software and Techniques</h3>
@@ -102,7 +102,7 @@ export default function VideoMarketingStrategy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Multi-Platform Publishing Strategies</h3>
             <p className="mb-4">
-              Effective video marketing requires strategic distribution across multiple platforms to maximize reach and engagement while optimizing for each platform's unique characteristics. Content should be adapted for different aspect ratios, lengths, and audience expectations while maintaining consistent messaging and brand identity. Cross-platform promotion through teasers, highlights, and platform-specific content helps drive traffic between channels and expand overall audience reach.
+              Effective video marketing requires strategic distribution across multiple platforms to maximize reach and engagement while optimizing for each platform&rsquo;s unique characteristics. Content should be adapted for different aspect ratios, lengths, and audience expectations while maintaining consistent messaging and brand identity. Cross-platform promotion through teasers, highlights, and platform-specific content helps drive traffic between channels and expand overall audience reach.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">SEO and Discoverability Optimization</h3>
@@ -141,7 +141,7 @@ export default function VideoMarketingStrategy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Conversion and Business Impact</h3>
             <p className="mb-4">
-              Video marketing should demonstrate clear business impact through lead generation, website traffic, conversion rates, and revenue attribution that connects video activities to tangible outcomes. Tracking links, promo codes, and UTM parameters enable precise measurement of video's contribution to business results. Multi-touch attribution models reveal how video interactions contribute to overall customer journeys and lifetime value.
+              Video marketing should demonstrate clear business impact through lead generation, website traffic, conversion rates, and revenue attribution that connects video activities to tangible outcomes. Tracking links, promo codes, and UTM parameters enable precise measurement of video&rsquo;s contribution to business results. Multi-touch attribution models reveal how video interactions contribute to overall customer journeys and lifetime value.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">A/B Testing and Continuous Optimization</h3>
