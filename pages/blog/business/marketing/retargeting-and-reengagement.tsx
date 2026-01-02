@@ -28,7 +28,7 @@ export default function RetargetingAndReengagement() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              Retargeting and reengagement strategies focus on recovering revenue from visitors who showed interest in products or services but didn't complete desired actions during their initial interactions. In 2025, sophisticated retargeting programs leverage behavioral data, predictive analytics, and cross-channel coordination to deliver personalized messages that address specific reasons for abandonment and encourage return visits. Organizations with mature retargeting strategies report 70% higher conversion rates among targeted audiences, 40% increased customer lifetime value, and 300% better return on ad spend compared to acquisition-focused approaches. The key to retargeting success lies in understanding visitor intent, delivering relevant messaging that addresses abandonment reasons, and coordinating efforts across channels to create consistent, persuasive experiences that bring customers back to complete their journeys.
+              Retargeting and reengagement strategies focus on recovering revenue from visitors who showed interest in products or services but didn&rsquo;t complete desired actions during their initial interactions. In 2025, sophisticated retargeting programs leverage behavioral data, predictive analytics, and cross-channel coordination to deliver personalized messages that address specific reasons for abandonment and encourage return visits. Organizations with mature retargeting strategies report 70% higher conversion rates among targeted audiences, 40% increased customer lifetime value, and 300% better return on ad spend compared to acquisition-focused approaches. The key to retargeting success lies in understanding visitor intent, delivering relevant messaging that addresses abandonment reasons, and coordinating efforts across channels to create consistent, persuasive experiences that bring customers back to complete their journeys.
             </p>
 
             <ImagePlaceholder 
@@ -44,7 +44,7 @@ export default function RetargetingAndReengagement() {
             </p>
             
             <p className="mb-4">
-              Understanding why visitors abandon interactions is crucial for developing effective retargeting messages and offers. Common abandonment reasons include price concerns, product questions, comparison shopping, technical issues, or simply getting distracted. Successful retargeting programs segment audiences based on abandonment reasons and tailor approaches accordingly, rather than using generic "we miss you" messages that fail to address specific barriers to conversion.
+              Understanding why visitors abandon interactions is crucial for developing effective retargeting messages and offers. Common abandonment reasons include price concerns, product questions, comparison shopping, technical issues, or simply getting distracted. Successful retargeting programs segment audiences based on abandonment reasons and tailor approaches accordingly, rather than using generic &quot;we miss you&quot; messages that fail to address specific barriers to conversion.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Types of Retargeting Strategies</h2>
@@ -56,7 +56,7 @@ export default function RetargetingAndReengagement() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Search Retargeting and Keyword Targeting</h3>
             <p className="mb-4">
-              Search retargeting targets users based on their recent search behavior and keyword queries, regardless of whether they've visited a specific website. This approach can identify users actively researching products or services in relevant categories and deliver targeted messaging that positions offerings as solutions to their search queries. Search retargeting is particularly effective for capturing high-intent prospects who are further along in the buying journey.
+              Search retargeting targets users based on their recent search behavior and keyword queries, regardless of whether they&rsquo;ve visited a specific website. This approach can identify users actively researching products or services in relevant categories and deliver targeted messaging that positions offerings as solutions to their search queries. Search retargeting is particularly effective for capturing high-intent prospects who are further along in the buying journey.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Email Retargeting and Behavioral Triggers</h3>
@@ -209,7 +209,7 @@ export default function RetargetingAndReengagement() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Personalize Messaging and Offers</h3>
             <p className="mb-4">
-              Successful retargeting moves beyond generic "we miss you" messages to deliver personalized content that addresses specific visitor interests, concerns, and abandonment reasons. Personalization should consider browsing history, product preferences, engagement patterns, and lifecycle stage to create relevant, compelling messages. Dynamic personalization capabilities enable real-time adjustment of content and offers based on individual visitor data.
+              Successful retargeting moves beyond generic &quot;we miss you&quot; messages to deliver personalized content that addresses specific visitor interests, concerns, and abandonment reasons. Personalization should consider browsing history, product preferences, engagement patterns, and lifecycle stage to create relevant, compelling messages. Dynamic personalization capabilities enable real-time adjustment of content and offers based on individual visitor data.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Coordinate Across Channels</h3>
