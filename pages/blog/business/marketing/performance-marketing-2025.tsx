@@ -51,7 +51,7 @@ export default function PerformanceMarketing2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Revenue-Based Metrics</h3>
             <p className="mb-4">
-              Revenue-based metrics provide the clearest connection between marketing activities and business outcomes, tracking direct contributions to sales, customer acquisition, and lifetime value generation. Key metrics include return on ad spend (ROAS), customer acquisition cost (CAC), lifetime value (LTV), and revenue per visitor that demonstrate marketing's financial impact. These measurements require sophisticated attribution models and integration with sales and financial systems to provide accurate performance assessment.
+              Revenue-based metrics provide the clearest connection between marketing activities and business outcomes, tracking direct contributions to sales, customer acquisition, and lifetime value generation. Key metrics include return on ad spend (ROAS), customer acquisition cost (CAC), lifetime value (LTV), and revenue per visitor that demonstrate marketing&rsquo;s financial impact. These measurements require sophisticated attribution models and integration with sales and financial systems to provide accurate performance assessment.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Conversion and Funnel Metrics</h3>
@@ -73,7 +73,7 @@ export default function PerformanceMarketing2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Cross-Channel and Cross-Device Tracking</h3>
             <p className="mb-4">
-              Today's customer journeys span multiple channels, devices, and touchpoints that require sophisticated tracking to create unified customer views and accurate performance measurement. Cross-channel tracking consolidates information from websites, mobile apps, social media, email systems, and offline sources to enable comprehensive analytics and personalized marketing. These systems must handle real-time data streams, batch processing requirements, and varying data formats while maintaining accuracy and consistency across sources.
+              Today&rsquo;s customer journeys span multiple channels, devices, and touchpoints that require sophisticated tracking to create unified customer views and accurate performance measurement. Cross-channel tracking consolidates information from websites, mobile apps, social media, email systems, and offline sources to enable comprehensive analytics and personalized marketing. These systems must handle real-time data streams, batch processing requirements, and varying data formats while maintaining accuracy and consistency across sources.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Privacy-First Measurement Approaches</h3>
