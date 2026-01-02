@@ -40,7 +40,7 @@ export default function SocialCommerceEvolution() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Understanding Social Commerce Evolution</h2>
             
             <p className="mb-4">
-              Social commerce represents the natural convergence of social media's influence power and e-commerce's transactional efficiency. Unlike traditional online shopping that requires users to leave social platforms to complete purchases, modern social commerce integrates buying capabilities directly into social experiences. This integration reduces friction, leverages social proof, and capitalizes on impulse purchasing behaviors that are amplified by community engagement and real-time interaction.
+              Social commerce represents the natural convergence of social media&rsquo;s influence power and e-commerce&rsquo;s transactional efficiency. Unlike traditional online shopping that requires users to leave social platforms to complete purchases, modern social commerce integrates buying capabilities directly into social experiences. This integration reduces friction, leverages social proof, and capitalizes on impulse purchasing behaviors that are amplified by community engagement and real-time interaction.
             </p>
             
             <p className="mb-4">
@@ -95,7 +95,7 @@ export default function SocialCommerceEvolution() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Peer-to-Peer Marketplace Integration</h3>
             <p className="mb-4">
-              Social platforms are integrating peer-to-peer marketplace features that allow users to buy and sell directly within their networks. Facebook Marketplace, Instagram Resale, and TikTok's growing P2P features enable users to monetize unused items while discovering unique products unavailable through traditional retail channels. These integrations extend platform engagement and create new revenue streams while maintaining user loyalty through convenient, trusted transactions.
+              Social platforms are integrating peer-to-peer marketplace features that allow users to buy and sell directly within their networks. Facebook Marketplace, Instagram Resale, and TikTok&rsquo;s growing P2P features enable users to monetize unused items while discovering unique products unavailable through traditional retail channels. These integrations extend platform engagement and create new revenue streams while maintaining user loyalty through convenient, trusted transactions.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Payment and Transaction Innovation</h2>
@@ -136,7 +136,7 @@ export default function SocialCommerceEvolution() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Omnichannel Social Commerce</h3>
             <p className="mb-4">
-              Effective social commerce strategies span multiple platforms, each serving distinct roles in the customer journey. TikTok drives discovery through viral content, Instagram facilitates consideration through lifestyle imagery, Facebook supports community building and customer service, and Pinterest inspires through aspirational content. Coordinated strategies across platforms create cohesive brand experiences while leveraging each platform's unique strengths and audience characteristics.
+              Effective social commerce strategies span multiple platforms, each serving distinct roles in the customer journey. TikTok drives discovery through viral content, Instagram facilitates consideration through lifestyle imagery, Facebook supports community building and customer service, and Pinterest inspires through aspirational content. Coordinated strategies across platforms create cohesive brand experiences while leveraging each platform&rsquo;s unique strengths and audience characteristics.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Social Media to E-Commerce Integration</h3>
