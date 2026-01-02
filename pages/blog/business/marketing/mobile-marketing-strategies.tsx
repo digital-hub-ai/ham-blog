@@ -28,7 +28,7 @@ export default function MobileMarketingStrategies() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              Mobile marketing has become the cornerstone of modern digital strategies as smartphone usage surpasses traditional computing for most consumers worldwide. In 2025, successful brands recognize that mobile isn't just another channel but the primary interface through which customers discover, evaluate, and purchase products and services. Organizations with comprehensive mobile marketing strategies report 40% higher customer engagement, 35% increased conversion rates, and 50% improved customer retention compared to those with desktop-centric approaches. The key to mobile marketing success lies in understanding mobile-first user behavior, creating seamless app and web experiences, and delivering contextual, permission-based communications that add value to customers' daily lives.
+              Mobile marketing has become the cornerstone of modern digital strategies as smartphone usage surpasses traditional computing for most consumers worldwide. In 2025, successful brands recognize that mobile isn&rsquo;t just another channel but the primary interface through which customers discover, evaluate, and purchase products and services. Organizations with comprehensive mobile marketing strategies report 40% higher customer engagement, 35% increased conversion rates, and 50% improved customer retention compared to those with desktop-centric approaches. The key to mobile marketing success lies in understanding mobile-first user behavior, creating seamless app and web experiences, and delivering contextual, permission-based communications that add value to customers&rsquo; daily lives.
             </p>
 
             <ImagePlaceholder 
@@ -219,7 +219,7 @@ export default function MobileMarketingStrategies() {
             </p>
             
             <p className="mb-4">
-              As mobile marketing continues evolving, success will increasingly depend on organizations' ability to create seamless, valuable experiences that enhance rather than interrupt mobile user activities. Companies that prioritize mobile-first thinking and invest in mobile-specific capabilities will build sustainable competitive advantages through deeper customer engagement and loyalty.
+              As mobile marketing continues evolving, success will increasingly depend on organizations&rsquo; ability to create seamless, valuable experiences that enhance rather than interrupt mobile user activities. Companies that prioritize mobile-first thinking and invest in mobile-specific capabilities will build sustainable competitive advantages through deeper customer engagement and loyalty.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
