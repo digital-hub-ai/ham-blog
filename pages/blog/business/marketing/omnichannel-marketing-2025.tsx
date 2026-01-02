@@ -78,7 +78,7 @@ export default function OmnichannelMarketing2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Contextual Continuity and Recognition</h3>
             <p className="mb-4">
-              Customers expect brands to recognize them and acknowledge previous interactions regardless of channel or device used for subsequent contacts. This recognition extends beyond simple identification to include context awareness that understands where customers left off in previous interactions and what information they've already received. Systems that provide contextual continuity reduce customer effort and frustration while demonstrating brand competence and care.
+              Customers expect brands to recognize them and acknowledge previous interactions regardless of channel or device used for subsequent contacts. This recognition extends beyond simple identification to include context awareness that understands where customers left off in previous interactions and what information they&rsquo;ve already received. Systems that provide contextual continuity reduce customer effort and frustration while demonstrating brand competence and care.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Technology Architecture and Integration</h2>
@@ -153,7 +153,7 @@ export default function OmnichannelMarketing2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Legacy System Integration</h3>
             <p className="mb-4">
-              Many organizations struggle with integrating legacy systems that weren't designed for cross-channel data sharing or real-time coordination. Successful integration approaches include phased migration strategies, middleware solutions, and API development that bridge old and new systems. Investment prioritization frameworks help organizations focus on highest-impact integration opportunities while managing costs and complexity.
+              Many organizations struggle with integrating legacy systems that weren&rsquo;t designed for cross-channel data sharing or real-time coordination. Successful integration approaches include phased migration strategies, middleware solutions, and API development that bridge old and new systems. Investment prioritization frameworks help organizations focus on highest-impact integration opportunities while managing costs and complexity.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Change Management and Adoption</h3>
