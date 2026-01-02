@@ -56,7 +56,7 @@ export default function MetaverseCommerceBuildingEconomy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Augmented Reality Integration</h3>
             <p className="mb-4">
-              Augmented reality bridges physical and virtual commerce by overlaying digital information onto real-world environments. IKEA's AR app lets customers visualize furniture in their homes before purchasing, while beauty brands like Sephora enable virtual makeup trials. These technologies reduce return rates, increase customer confidence, and create engaging pre-purchase experiences that drive conversion.
+              Augmented reality bridges physical and virtual commerce by overlaying digital information onto real-world environments. IKEA&rsquo;s AR app lets customers visualize furniture in their homes before purchasing, while beauty brands like Sephora enable virtual makeup trials. These technologies reduce return rates, increase customer confidence, and create engaging pre-purchase experiences that drive conversion.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Blockchain and Digital Ownership</h3>
@@ -68,7 +68,7 @@ export default function MetaverseCommerceBuildingEconomy() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Virtual Storefronts and Showrooms</h3>
             <p className="mb-4">
-              Successful brands in the metaverse create immersive environments that reflect their physical identity while leveraging virtual capabilities. Nike's virtual showroom allows customers to customize shoes in 3D, while automotive brands create virtual test drive experiences that showcase vehicle features in impossible physical environments. These spaces serve as both retail venues and brand experience centers.
+              Successful brands in the metaverse create immersive environments that reflect their physical identity while leveraging virtual capabilities. Nike&rsquo;s virtual showroom allows customers to customize shoes in 3D, while automotive brands create virtual test drive experiences that showcase vehicle features in impossible physical environments. These spaces serve as both retail venues and brand experience centers.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Digital-First Product Lines</h3>
