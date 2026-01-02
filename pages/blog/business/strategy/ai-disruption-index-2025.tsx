@@ -44,7 +44,7 @@ export default function AiDisruptionIndex2025() {
             </p>
             
             <p className="mb-4">
-              Our methodology combines quantitative metrics with qualitative assessments from industry experts, resulting in a comprehensive view of AI's transformative power across 50 major industries.
+              Our methodology combines quantitative metrics with qualitative assessments from industry experts, resulting in a comprehensive view of AI&rsquo;s transformative power across 50 major industries.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Tier 1: Immediate Transformation (2025-2026)</h2>
