@@ -14,28 +14,7 @@ export default function HolographicUI() {
         <meta property="og:description" content="The challenges and opportunities of creating interfaces for augmented and mixed reality environments." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Holographic User Interfaces: Designing in 3D Space",
-            "description": "The challenges and opportunities of creating interfaces for augmented and mixed reality environments.",
-            "author": {
-              "@type": "Person",
-              "name": "Spatial Designer Zoe Depth"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-17",
-            "dateModified": "2025-12-17"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Holographic User Interfaces: Designing in 3D Space","description": "The challenges and opportunities of creating interfaces for augmented and mixed reality environments.","author": {"@type": "Person","name": "Spatial Designer Zoe Depth"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-17","dateModified": "2025-12-17"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

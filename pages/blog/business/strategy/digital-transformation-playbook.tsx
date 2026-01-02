@@ -40,7 +40,7 @@ export default function DigitalTransformationPlaybook() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Strategic Foundation</h2>
             
             <p className="mb-4">
-              Effective digital transformation begins with clear strategic alignment between business objectives and technology capabilities. Organizations must articulate specific outcomes they seek to achieve, whether that's improving customer experience, increasing operational efficiency, entering new markets, or developing innovative products and services.
+              Effective digital transformation begins with clear strategic alignment between business objectives and technology capabilities. Organizations must articulate specific outcomes they seek to achieve, whether that&rsquo;s improving customer experience, increasing operational efficiency, entering new markets, or developing innovative products and services.
             </p>
             
             <p className="mb-4">
@@ -107,7 +107,7 @@ export default function DigitalTransformationPlaybook() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Change Management Frameworks</h3>
             <p className="mb-4">
-              Prosci's ADKAR model, Kotter's 8-Step Process, and Bridges Transition Model provide structured approaches for managing human aspects of transformation. These frameworks address awareness, desire, knowledge, ability, and reinforcement factors that determine whether organizational changes take root and deliver intended benefits.
+              Prosci&rsquo;s ADKAR model, Kotter&rsquo;s 8-Step Process, and Bridges Transition Model provide structured approaches for managing human aspects of transformation. These frameworks address awareness, desire, knowledge, ability, and reinforcement factors that determine whether organizational changes take root and deliver intended benefits.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Performance Measurement</h3>

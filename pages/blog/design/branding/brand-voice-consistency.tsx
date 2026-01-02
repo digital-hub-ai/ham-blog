@@ -14,28 +14,7 @@ export default function BrandVoiceConsistency() {
         <meta property="og:description" content="Maintaining authentic brand voice across digital and physical touchpoints in an omnichannel world." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Brand Voice Consistency: Speaking as One Across Channels",
-            "description": "Maintaining authentic brand voice across digital and physical touchpoints in an omnichannel world.",
-            "author": {
-              "@type": "Person",
-              "name": "Brand Strategist Echo Tone"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-03",
-            "dateModified": "2025-12-03"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Brand Voice Consistency: Speaking as One Across Channels","description": "Maintaining authentic brand voice across digital and physical touchpoints in an omnichannel world.","author": {"@type": "Person","name": "Brand Strategist Echo Tone"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-03","dateModified": "2025-12-03"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

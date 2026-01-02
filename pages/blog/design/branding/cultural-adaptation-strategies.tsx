@@ -14,28 +14,7 @@ export default function CulturalAdaptationStrategies() {
         <meta property="og:description" content="Effective approaches for adapting brand identities across diverse cultural contexts while maintaining core values." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Cultural Adaptation Strategies: Global Brands, Local Voices",
-            "description": "Effective approaches for adapting brand identities across diverse cultural contexts while maintaining core values.",
-            "author": {
-              "@type": "Person",
-              "name": "Global Brand Strategist Maya Culture"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-08",
-            "dateModified": "2025-12-08"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Cultural Adaptation Strategies: Global Brands, Local Voices","description": "Effective approaches for adapting brand identities across diverse cultural contexts while maintaining core values.","author": {"@type": "Person","name": "Global Brand Strategist Maya Culture"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-08","dateModified": "2025-12-08"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">
