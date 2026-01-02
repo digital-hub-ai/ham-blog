@@ -28,7 +28,7 @@ export default function MarketingAnalytics2025() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              Marketing analytics has evolved from simple campaign tracking to sophisticated data science that drives strategic business decisions and proves marketing's direct contribution to revenue growth. In 2025, successful marketers leverage artificial intelligence, real-time data streams, and advanced attribution models to optimize campaigns dynamically and allocate budgets with unprecedented precision. Organizations with mature analytics capabilities report 23x faster conversion rates, 6x higher customer lifetime value, and 5x greater profit margins compared to those relying on intuition-based decision making. The key to marketing analytics success lies in collecting comprehensive data, applying advanced analytical techniques, and translating insights into actionable business strategies that drive measurable results.
+              Marketing analytics has evolved from simple campaign tracking to sophisticated data science that drives strategic business decisions and proves marketing&rsquo;s direct contribution to revenue growth. In 2025, successful marketers leverage artificial intelligence, real-time data streams, and advanced attribution models to optimize campaigns dynamically and allocate budgets with unprecedented precision. Organizations with mature analytics capabilities report 23x faster conversion rates, 6x higher customer lifetime value, and 5x greater profit margins compared to those relying on intuition-based decision making. The key to marketing analytics success lies in collecting comprehensive data, applying advanced analytical techniques, and translating insights into actionable business strategies that drive measurable results.
             </p>
 
             <ImagePlaceholder 
@@ -202,7 +202,7 @@ export default function MarketingAnalytics2025() {
             </p>
             
             <p className="mb-4">
-              As marketing analytics continues evolving, success will increasingly depend on organizations' ability to transform data into actionable insights that drive business growth. Companies that embrace data-driven decision making and invest in analytical capabilities will build sustainable competitive advantages through more effective marketing and stronger customer relationships.
+              As marketing analytics continues evolving, success will increasingly depend on organizations&rsquo; ability to transform data into actionable insights that drive business growth. Companies that embrace data-driven decision making and invest in analytical capabilities will build sustainable competitive advantages through more effective marketing and stronger customer relationships.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
