@@ -77,7 +77,7 @@ export default function StrategicThinkingVisionSetting() {
           <h3 className="text-xl font-semibold mt-6 mb-3">Inspiration and Motivation</h3>
           
           <p>
-            Visions that resonate emotionally with stakeholders generate higher engagement levels. Gallup research indicates that employees who understand their organization's vision are 3.8 times more likely to be engaged in their work.
+            Visions that resonate emotionally with stakeholders generate higher engagement levels. Gallup research indicates that employees who understand their organization&rsquo;s vision are 3.8 times more likely to be engaged in their work.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Developing Strategic Thinking Capabilities</h2>

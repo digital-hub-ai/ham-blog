@@ -185,7 +185,7 @@ export default function ContentMarketingStrategy2025() {
             </p>
             
             <p className="mb-4">
-              As content marketing continues evolving, success will increasingly depend on brands' ability to create authentic, valuable experiences that build lasting relationships with their audiences. Companies that treat content as a strategic asset rather than a tactical tool will build sustainable competitive advantages through trust, authority, and customer loyalty.
+              As content marketing continues evolving, success will increasingly depend on brands&rsquo; ability to create authentic, valuable experiences that build lasting relationships with their audiences. Companies that treat content as a strategic asset rather than a tactical tool will build sustainable competitive advantages through trust, authority, and customer loyalty.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">

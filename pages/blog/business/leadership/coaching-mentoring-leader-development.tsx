@@ -69,7 +69,7 @@ export default function CoachingMentoringLeaderDevelopment() {
           </p>
           
           <ul className="list-disc pl-6 mb-6">
-            <li>Possess significant experience in the mentee's field or organization</li>
+            <li>Possess significant experience in the mentee&rsquo;s field or organization</li>
             <li>Share wisdom accumulated through personal experiences</li>
             <li>Provide networking opportunities and introductions</li>
             <li>Offer long-term perspective on career trajectories</li>

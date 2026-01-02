@@ -28,7 +28,7 @@ export default function AiPoweredCustomerJourneys() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              In today's hyper-connected digital landscape, customers expect personalized experiences that anticipate their needs and preferences across every interaction. Artificial intelligence is transforming how brands understand, predict, and respond to individual customer behaviors throughout their journey from awareness to advocacy. By processing vast amounts of data in real-time, AI systems can deliver individualized content, product recommendations, and service interactions that feel tailor-made for each customer while scaling to serve millions simultaneously. Organizations leveraging AI-powered customer journeys report 25% higher customer satisfaction, 30% increased conversion rates, and 40% improved customer lifetime value compared to traditional marketing approaches.
+              In today&rsquo;s hyper-connected digital landscape, customers expect personalized experiences that anticipate their needs and preferences across every interaction. Artificial intelligence is transforming how brands understand, predict, and respond to individual customer behaviors throughout their journey from awareness to advocacy. By processing vast amounts of data in real-time, AI systems can deliver individualized content, product recommendations, and service interactions that feel tailor-made for each customer while scaling to serve millions simultaneously. Organizations leveraging AI-powered customer journeys report 25% higher customer satisfaction, 30% increased conversion rates, and 40% improved customer lifetime value compared to traditional marketing approaches.
             </p>
 
             <ImagePlaceholder 
@@ -40,7 +40,7 @@ export default function AiPoweredCustomerJourneys() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Understanding AI-Powered Customer Journeys</h2>
             
             <p className="mb-4">
-              AI-powered customer journeys leverage machine learning algorithms, predictive analytics, and real-time data processing to create dynamic, individualized experiences that adapt to each customer's behavior, preferences, and context. Unlike traditional segmentation approaches that group customers into broad categories, AI systems treat each interaction as an opportunity to learn and refine understanding of individual needs and motivations.
+              AI-powered customer journeys leverage machine learning algorithms, predictive analytics, and real-time data processing to create dynamic, individualized experiences that adapt to each customer&rsquo;s behavior, preferences, and context. Unlike traditional segmentation approaches that group customers into broad categories, AI systems treat each interaction as an opportunity to learn and refine understanding of individual needs and motivations.
             </p>
             
             <p className="mb-4">
@@ -56,7 +56,7 @@ export default function AiPoweredCustomerJourneys() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Behavioral Pattern Recognition</h3>
             <p className="mb-4">
-              Machine learning algorithms excel at identifying complex behavioral patterns that human analysts might miss, such as subtle shifts in engagement timing, content preferences, or purchase intent signals. These insights enable predictive interventions that address customer needs before they're explicitly expressed, creating experiences that feel intuitive and anticipatory rather than reactive.
+              Machine learning algorithms excel at identifying complex behavioral patterns that human analysts might miss, such as subtle shifts in engagement timing, content preferences, or purchase intent signals. These insights enable predictive interventions that address customer needs before they&rsquo;re explicitly expressed, creating experiences that feel intuitive and anticipatory rather than reactive.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Real-Time Decision Engines</h3>

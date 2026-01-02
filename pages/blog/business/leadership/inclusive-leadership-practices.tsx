@@ -116,7 +116,7 @@ export default function InclusiveLeadershipPractices() {
             </p>
             
             <p className="mb-4">
-              As the business landscape becomes increasingly diverse and interconnected, inclusive leadership will become a fundamental requirement rather than a competitive differentiator. Organizations that invest in developing these capabilities today will be better positioned to attract top talent, drive innovation, and serve diverse customer bases in tomorrow's global economy. The leaders who master inclusive practices will not only create better workplaces but also build more resilient and adaptable organizations capable of thriving in an ever-changing world.
+              As the business landscape becomes increasingly diverse and interconnected, inclusive leadership will become a fundamental requirement rather than a competitive differentiator. Organizations that invest in developing these capabilities today will be better positioned to attract top talent, drive innovation, and serve diverse customer bases in tomorrow&rsquo;s global economy. The leaders who master inclusive practices will not only create better workplaces but also build more resilient and adaptable organizations capable of thriving in an ever-changing world.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">

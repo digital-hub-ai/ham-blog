@@ -116,7 +116,7 @@ export default function CrisisLeadershipResilience() {
             </p>
             
             <p className="mb-4">
-              The future belongs to organizations whose leaders can transform crisis from a threat into an opportunity for growth, innovation, and strengthened stakeholder relationships. By developing robust crisis leadership capabilities today, executives can position their organizations not just to survive tomorrow's inevitable disruptions but to emerge from them as stronger, more resilient, and more successful enterprises. Crisis leadership is no longer a specialized skill for exceptional circumstances but a fundamental competency required of all leaders seeking to build sustainable organizational success in an uncertain world.
+              The future belongs to organizations whose leaders can transform crisis from a threat into an opportunity for growth, innovation, and strengthened stakeholder relationships. By developing robust crisis leadership capabilities today, executives can position their organizations not just to survive tomorrow&rsquo;s inevitable disruptions but to emerge from them as stronger, more resilient, and more successful enterprises. Crisis leadership is no longer a specialized skill for exceptional circumstances but a fundamental competency required of all leaders seeking to build sustainable organizational success in an uncertain world.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
