@@ -185,7 +185,7 @@ export default function EmailMarketingAutomation2025() {
             </p>
             
             <p className="mb-4">
-              As email marketing continues evolving, success will increasingly depend on brands' ability to create personalized, valuable experiences that build lasting relationships with their audiences. Companies that treat email as a customer relationship tool rather than just a promotional channel will build sustainable competitive advantages through engagement, loyalty, and lifetime value.
+              As email marketing continues evolving, success will increasingly depend on brands&rsquo; ability to create personalized, valuable experiences that build lasting relationships with their audiences. Companies that treat email as a customer relationship tool rather than just a promotional channel will build sustainable competitive advantages through engagement, loyalty, and lifetime value.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
