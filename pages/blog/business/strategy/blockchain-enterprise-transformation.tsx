@@ -85,12 +85,12 @@ export default function BlockchainEnterpriseTransformation() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Food Safety and Traceability</h3>
             <p className="mb-4">
-              Walmart's blockchain-based food traceability system reduced the time to track mango origins from seven days to 2.2 seconds. This capability proved invaluable during contamination incidents, enabling precise recalls that protected consumer health while minimizing product waste and brand damage.
+              Walmart&rsquo;s blockchain-based food traceability system reduced the time to track mango origins from seven days to 2.2 seconds. This capability proved invaluable during contamination incidents, enabling precise recalls that protected consumer health while minimizing product waste and brand damage.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Financial Services Settlement</h3>
             <p className="mb-4">
-              JPMorgan's blockchain platform processes cross-border payments in real-time compared to traditional systems that take days. The bank reports 70% reduction in settlement times and significant cost savings from eliminated intermediaries and reduced reconciliation requirements.
+              JPMorgan&rsquo;s blockchain platform processes cross-border payments in real-time compared to traditional systems that take days. The bank reports 70% reduction in settlement times and significant cost savings from eliminated intermediaries and reduced reconciliation requirements.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Intellectual Property Protection</h3>
@@ -134,7 +134,7 @@ export default function BlockchainEnterpriseTransformation() {
             </p>
             
             <p className="mb-4">
-              As enterprise blockchain matures, we're witnessing a fundamental shift toward more transparent, efficient, and trustworthy business ecosystems. Companies that embrace this transformation will gain significant competitive advantages through reduced costs, improved customer trust, and new revenue opportunities that were impossible in traditional centralized systems.
+              As enterprise blockchain matures, we&rsquo;re witnessing a fundamental shift toward more transparent, efficient, and trustworthy business ecosystems. Companies that embrace this transformation will gain significant competitive advantages through reduced costs, improved customer trust, and new revenue opportunities that were impossible in traditional centralized systems.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">
