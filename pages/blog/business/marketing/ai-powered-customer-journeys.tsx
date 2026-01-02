@@ -119,7 +119,7 @@ export default function AiPoweredCustomerJourneys() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Data Protection and Consent</h3>
             <p className="mb-4">
-              As AI systems process increasingly detailed customer information, organizations must implement robust data protection measures and transparent consent mechanisms that comply with privacy regulations like GDPR and CCPA. Customers should understand what data is collected, how it's used, and have easy options to control their privacy preferences while still receiving valuable personalized experiences.
+              As AI systems process increasingly detailed customer information, organizations must implement robust data protection measures and transparent consent mechanisms that comply with privacy regulations like GDPR and CCPA. Customers should understand what data is collected, how it&rsquo;s used, and have easy options to control their privacy preferences while still receiving valuable personalized experiences.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Bias Detection and Mitigation</h3>

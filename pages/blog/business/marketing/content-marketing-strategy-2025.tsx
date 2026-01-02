@@ -78,7 +78,7 @@ export default function ContentMarketingStrategy2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Podcasts and Audio Content</h3>
             <p className="mb-4">
-              Podcasts and audio content reach audiences during commutes, workouts, and other multitasking scenarios where visual media isn't practical. Branded podcasts that feature industry experts, customer stories, and thought leadership discussions build intimate relationships with engaged listeners who spend significant time consuming content. Audio content complements visual marketing efforts by extending brand presence into new contexts and lifestyles.
+              Podcasts and audio content reach audiences during commutes, workouts, and other multitasking scenarios where visual media isn&rsquo;t practical. Branded podcasts that feature industry experts, customer stories, and thought leadership discussions build intimate relationships with engaged listeners who spend significant time consuming content. Audio content complements visual marketing efforts by extending brand presence into new contexts and lifestyles.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">SEO and Content Optimization</h2>
