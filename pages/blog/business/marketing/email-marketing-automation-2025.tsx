@@ -44,7 +44,7 @@ export default function EmailMarketingAutomation2025() {
             </p>
             
             <p className="mb-4">
-              The integration of artificial intelligence and machine learning has enabled predictive email marketing that anticipates customer needs and preferences before they're explicitly expressed. These systems analyze vast amounts of behavioral data to identify patterns and opportunities for engagement that human marketers might miss, creating automated workflows that feel intuitive and helpful rather than intrusive or repetitive.
+              The integration of artificial intelligence and machine learning has enabled predictive email marketing that anticipates customer needs and preferences before they&rsquo;re explicitly expressed. These systems analyze vast amounts of behavioral data to identify patterns and opportunities for engagement that human marketers might miss, creating automated workflows that feel intuitive and helpful rather than intrusive or repetitive.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Customer Journey Mapping and Automation</h2>
@@ -90,7 +90,7 @@ export default function EmailMarketingAutomation2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Abandoned Cart and Browse Abandonment</h3>
             <p className="mb-4">
-              Cart abandonment emails recover significant revenue by reminding customers of items left in their shopping carts and providing incentives to complete purchases. Advanced systems can personalize these messages with product recommendations, shipping estimates, and dynamic pricing that adapts to inventory levels or promotional periods. Browse abandonment campaigns target visitors who viewed products but didn't add them to carts, using educational content and social proof to build interest and confidence.
+              Cart abandonment emails recover significant revenue by reminding customers of items left in their shopping carts and providing incentives to complete purchases. Advanced systems can personalize these messages with product recommendations, shipping estimates, and dynamic pricing that adapts to inventory levels or promotional periods. Browse abandonment campaigns target visitors who viewed products but didn&rsquo;t add them to carts, using educational content and social proof to build interest and confidence.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Win-Back and Re-Engagement Campaigns</h3>
@@ -119,7 +119,7 @@ export default function EmailMarketingAutomation2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Data Protection and Consent Management</h3>
             <p className="mb-4">
-              Email marketing automation requires robust data protection measures and transparent consent mechanisms that comply with privacy regulations like GDPR and CCPA. Subscribers should understand what data is collected, how it's used, and have easy options to control their preferences and withdraw consent. Privacy-by-design approaches embed compliance considerations into system architecture and workflow design rather than treating them as afterthoughts.
+              Email marketing automation requires robust data protection measures and transparent consent mechanisms that comply with privacy regulations like GDPR and CCPA. Subscribers should understand what data is collected, how it&rsquo;s used, and have easy options to control their preferences and withdraw consent. Privacy-by-design approaches embed compliance considerations into system architecture and workflow design rather than treating them as afterthoughts.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Preference Centers and Subscriber Control</h3>
@@ -153,7 +153,7 @@ export default function EmailMarketingAutomation2025() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">List Building and Subscriber Acquisition</h3>
             <p className="mb-4">
-              Successful email marketing begins with high-quality subscriber lists acquired through ethical means that attract engaged, interested recipients. Lead magnets, content upgrades, and value-exchange offers can grow subscriber bases while ensuring that new contacts understand what they're signing up for. Regular list hygiene practices remove invalid addresses and disengaged subscribers to maintain deliverability and performance metrics.
+              Successful email marketing begins with high-quality subscriber lists acquired through ethical means that attract engaged, interested recipients. Lead magnets, content upgrades, and value-exchange offers can grow subscriber bases while ensuring that new contacts understand what they&rsquo;re signing up for. Regular list hygiene practices remove invalid addresses and disengaged subscribers to maintain deliverability and performance metrics.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Content Strategy and Editorial Planning</h3>

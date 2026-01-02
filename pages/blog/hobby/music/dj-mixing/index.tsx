@@ -119,7 +119,7 @@ export default function DJMixing() {
                 <li><strong>Effect Integration:</strong> Apply reverb, delay, or other effects to enhance transitions</li>
                 <li><strong>Looping Techniques:</strong> Use loops to extend breakdowns or extend musical phrases</li>
                 <li><strong>Creative Effects:</strong> Add excitement with flangers, phasers, and other modulations</li>
-                <li><strong>Structure Awareness:</h3> Understand song structures to plan seamless transitions</li>
+                <li><strong>Structure Awareness:</strong> Understand song structures to plan seamless transitions</li>
               </ol>
 
               <h2 className="text-2xl font-bold text-blue-400 mt-8 mb-4">Reading the Crowd</h2>

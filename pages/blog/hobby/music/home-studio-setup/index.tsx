@@ -98,8 +98,8 @@ export default function HomeStudioSetup() {
               <ol className="list-decimal pl-6 mb-6 space-y-2">
                 <li><strong>Start Small:</strong> Begin with essential equipment and expand over time</li>
                 <li><strong>Buy Used:</strong> Many quality used pieces are available at significant savings</li>
-                <li><strong>DIY Acoustics:</h3> Create acoustic panels using affordable materials</li>
-                <li><strong>Free Software:</h3> Utilize free DAW options while learning</li>
+                <li><strong>DIY Acoustics:</strong> Create acoustic panels using affordable materials</li>
+                <li><strong>Free Software:</strong> Utilize free DAW options while learning</li>
                 <li><strong>Multi-Purpose Gear:</strong> Choose equipment that serves multiple functions</li>
                 <li><strong>Bundle Deals:</strong> Look for starter packages that include multiple components</li>
               </ol>
