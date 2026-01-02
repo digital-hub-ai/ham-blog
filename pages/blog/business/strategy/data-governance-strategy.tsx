@@ -28,7 +28,7 @@ export default function DataGovernanceStrategy() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              In today's data-driven economy, organizations that effectively govern their data assets gain significant competitive advantages through improved decision-making, enhanced customer experiences, and accelerated innovation. However, realizing these benefits requires sophisticated data governance strategies that balance business enablement with regulatory compliance and stakeholder trust. As privacy regulations tighten and data volumes explode, successful organizations are implementing comprehensive frameworks that treat data as a strategic asset rather than a technical challenge.
+              In today&rsquo;s data-driven economy, organizations that effectively govern their data assets gain significant competitive advantages through improved decision-making, enhanced customer experiences, and accelerated innovation. However, realizing these benefits requires sophisticated data governance strategies that balance business enablement with regulatory compliance and stakeholder trust. As privacy regulations tighten and data volumes explode, successful organizations are implementing comprehensive frameworks that treat data as a strategic asset rather than a technical challenge.
             </p>
 
             <ImagePlaceholder 
