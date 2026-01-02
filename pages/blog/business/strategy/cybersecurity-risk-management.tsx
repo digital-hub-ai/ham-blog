@@ -40,7 +40,7 @@ export default function CybersecurityRiskManagement() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Modern Threat Landscape</h2>
             
             <p className="mb-4">
-              Today's cyber threat landscape encompasses nation-state actors, organized criminal syndicates, insider threats, and opportunistic attackers exploiting vulnerabilities across expanded attack surfaces. The proliferation of Internet of Things (IoT) devices, cloud services, and remote work environments has exponentially increased potential entry points for malicious actors.
+              Today&rsquo;s cyber threat landscape encompasses nation-state actors, organized criminal syndicates, insider threats, and opportunistic attackers exploiting vulnerabilities across expanded attack surfaces. The proliferation of Internet of Things (IoT) devices, cloud services, and remote work environments has exponentially increased potential entry points for malicious actors.
             </p>
             
             <p className="mb-4">
