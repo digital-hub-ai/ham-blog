@@ -86,7 +86,7 @@ export default function SustainableDesignPrinciples() {
             </p>
             
             <p className="mb-6">
-              Today's consumers demand transparency about environmental impact, seeking products 
+              Today&rsquo;s consumers demand transparency about environmental impact, seeking products 
               that align with their values while delivering exceptional functionality and aesthetics. 
               This shift has prompted designers to reimagine traditional approaches, integrating 
               sustainability considerations from concept to disposal rather than treating them as 
@@ -104,7 +104,7 @@ export default function SustainableDesignPrinciples() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Insight</h3>
               <p>
                 Material selection should consider the entire supply chain, including sourcing, 
                 processing, transportation, and end-of-life scenarios. Local materials often 

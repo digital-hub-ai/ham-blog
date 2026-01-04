@@ -58,7 +58,7 @@ export default function BrandVoiceConsistency() {
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <span className="text-rose-600 mr-2">✓</span>
-                  <span>Define your brand's core personality traits and communication style</span>
+                  <span>Define your brand&rsquo;s core personality traits and communication style</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-rose-600 mr-2">✓</span>
@@ -78,7 +78,7 @@ export default function BrandVoiceConsistency() {
             <h2 className="text-3xl font-bold mb-6 text-black">The Foundation of Brand Voice</h2>
             
             <p className="mb-6">
-              In today's hyperconnected world, consumers interact with brands across dozens of touchpoints daily. 
+              In today&rsquo;s hyperconnected world, consumers interact with brands across dozens of touchpoints daily. 
               From social media posts to customer service interactions, from packaging to in-store experiences, 
               every communication shapes brand perception. A consistent brand voice serves as the thread that 
               weaves these disparate interactions into a cohesive narrative that customers recognize and trust.
@@ -96,14 +96,14 @@ export default function BrandVoiceConsistency() {
             
             <p className="mb-6">
               Effective brand voice guidelines move beyond abstract adjectives to provide concrete examples 
-              of how the brand speaks in various situations. Rather than simply stating "be friendly," 
+              of how the brand speaks in various situations. Rather than simply stating &ldquo;be friendly&rdquo;," 
               guidelines should demonstrate what friendly sounds like through sample copy, dialogue examples, 
-              and clear dos and don'ts. These guidelines become living documents that evolve with the brand 
+              and clear dos and don&rsquo;ts. These guidelines become living documents that evolve with the brand 
               while maintaining core personality anchors.
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Strategist's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Strategist&rsquo;s Insight</h3>
               <p>
                 Create voice persona profiles that treat your brand as a character with distinct traits, 
                 background, motivations, and communication habits. This anthropomorphic approach makes 
@@ -115,7 +115,7 @@ export default function BrandVoiceConsistency() {
             <h2 className="text-3xl font-bold mb-6 text-black">Contextual Adaptation Without Losing Identity</h2>
             
             <p className="mb-6">
-              Consistency doesn't mean rigidity. Effective brand voices adapt to different contexts, 
+              Consistency doesn&rsquo;t mean rigidity. Effective brand voices adapt to different contexts, 
               audiences, and channels while maintaining core personality traits. A tech brand known for 
               clarity and precision might adopt a more conversational tone for social media while 
               maintaining technical accuracy in documentation. The key is identifying which voice 
@@ -124,7 +124,7 @@ export default function BrandVoiceConsistency() {
             
             <p className="mb-6">
               Channel-specific adaptations acknowledge platform conventions and audience expectations 
-              without compromising brand identity. Twitter's brevity requires more direct communication, 
+              without compromising brand identity. Twitter&rsquo;s brevity requires more direct communication, 
               while LinkedIn audiences expect more professional discourse. Successful brands develop 
               channel-specific voice variations that honor both platform norms and brand personality.
             </p>
@@ -149,7 +149,7 @@ export default function BrandVoiceConsistency() {
             
             <p className="mb-6">
               Regular voice audits assess consistency across touchpoints and identify areas for improvement. 
-              These evaluations examine not just what is said but how it's expressed, looking for patterns 
+              These evaluations examine not just what is said but how it&rsquo;s expressed, looking for patterns 
               of deviation or opportunities for enhancement. Customer feedback, sentiment analysis, and 
               brand perception studies provide valuable insights into how voice consistency impacts 
               brand recognition and customer relationships.

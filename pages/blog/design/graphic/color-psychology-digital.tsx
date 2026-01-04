@@ -99,7 +99,7 @@ export default function ColorPsychologyDigital() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Insight</h3>
               <p>
                 When designing for global audiences, create culturally modular color systems that allow for regional adaptations 
                 while maintaining brand recognition. This approach preserves core identity while respecting cultural sensitivities 

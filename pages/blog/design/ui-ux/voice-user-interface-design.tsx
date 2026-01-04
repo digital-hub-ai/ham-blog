@@ -78,7 +78,7 @@ export default function VoiceUserInterfaceDesign() {
             <h2 className="text-3xl font-bold mb-6 text-black">The Art of Conversational Flow</h2>
             
             <p className="mb-6">
-              Voice user interfaces represent a return to humanity's most natural form of communication – 
+              Voice user interfaces represent a return to humanity&rsquo;s most natural form of communication – 
               spoken language. In 2025, successful voice interfaces feel less like interacting with machines 
               and more like conversations with knowledgeable assistants. This transformation requires 
               designers to understand the nuances of human dialogue, including turn-taking, context 
@@ -89,7 +89,7 @@ export default function VoiceUserInterfaceDesign() {
               Effective conversational flow design anticipates user needs and provides helpful 
               guidance without overwhelming users with options or requiring precise phrasing. 
               The best voice interfaces strike a balance between being helpful and being 
-              unobtrusive, offering assistance when needed while respecting users' desire 
+              unobtrusive, offering assistance when needed while respecting users&rsquo; desire 
               for efficiency and control.
             </p>
 
@@ -104,7 +104,7 @@ export default function VoiceUserInterfaceDesign() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Insight</h3>
               <p>
                 Test voice interfaces with users from diverse linguistic backgrounds and 
                 communication styles. People express themselves differently based on region, 

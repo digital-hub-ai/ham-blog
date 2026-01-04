@@ -102,7 +102,7 @@ export default function AiPoweredDesignSystems() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Tip</h3>
               <p>
                 Establish clear design principle guidelines before implementing AI generation tools. Well-defined design 
                 principles help AI systems make better decisions when interpreting ambiguous design elements and generating 

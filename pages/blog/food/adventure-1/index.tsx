@@ -53,7 +53,7 @@ export default function StreetFoodTour() {
 
               <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">Navigating the Night Markets</h2>
               <p className="mb-4">
-                Bangkok's night markets vary in size and specialty, each offering unique culinary experiences:
+                Bangkok&rsquo;s night markets vary in size and specialty, each offering unique culinary experiences:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gray-800/50 p-4 rounded-lg">
@@ -76,7 +76,7 @@ export default function StreetFoodTour() {
 
               <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">Signature Dishes to Try</h2>
               <p className="mb-4">
-                Bangkok's street food scene offers an incredible variety of dishes, each with distinct flavors and preparation methods:
+                Bangkok&rsquo;s street food scene offers an incredible variety of dishes, each with distinct flavors and preparation methods:
               </p>
               
               <h3 className="text-xl font-semibold text-orange-400 mt-6 mb-3">Pad Thai Mastery</h3>
@@ -96,7 +96,7 @@ export default function StreetFoodTour() {
               <ul className="list-disc pl-6 mb-6 space-y-2">
                 <li><strong>Phrik Khing:</strong> The fundamental Thai curry paste that forms the base of many dishes</li>
                 <li><strong>Phrik Pon:</strong> Dried red chilies that provide heat and depth of flavor</li>
-                <li><strong>Phrik Kee Noo:</strong> Tiny bird's eye chilies that pack intense heat</li>
+                <li><strong>Phrik Kee Noo:</strong> Tiny bird&rsquo;s eye chilies that pack intense heat</li>
                 <li><strong>Fresh Herbs:</strong> Thai basil, cilantro, and green onions that add aromatic complexity</li>
               </ul>
 

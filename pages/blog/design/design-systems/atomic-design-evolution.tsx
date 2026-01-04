@@ -89,7 +89,7 @@ export default function AtomicDesignEvolution() {
               This evolution reflects the growing complexity of digital product ecosystems, 
               where consistency across multiple platforms, devices, and touchpoints requires 
               more sophisticated coordination mechanisms than isolated component collections 
-              can provide. Today's design systems integrate seamlessly with development 
+              can provide. Today&rsquo;s design systems integrate seamlessly with development 
               workflows, content management systems, and business processes to create unified 
               digital experiences.
             </p>
@@ -105,7 +105,7 @@ export default function AtomicDesignEvolution() {
             </p>
             
             <div class="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Architect's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Architect&rsquo;s Insight</h3>
               <p>
                 Focus on creating adaptable foundations rather than prescriptive templates. 
                 The most successful design systems provide guardrails that ensure consistency 

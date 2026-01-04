@@ -79,7 +79,7 @@ export default function CulturalAdaptationStrategies() {
             
             <p className="mb-6">
               As businesses expand their reach across international markets, they face the complex challenge of maintaining brand consistency 
-              while adapting to diverse cultural contexts. Successful global brands in 2025 understand that cultural adaptation isn't about 
+              while adapting to diverse cultural contexts. Successful global brands in 2025 understand that cultural adaptation isn&rsquo;t about 
               diluting their identity but rather about expressing it in ways that resonate with local audiences.
             </p>
             
@@ -98,7 +98,7 @@ export default function CulturalAdaptationStrategies() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Strategist's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Strategist&rsquo;s Insight</h3>
               <p>
                 Think of your brand as a person with unchanging character traits who learns to speak different languages and adapt their 
                 wardrobe to different climates and social situations. Their essence remains the same, but their expression varies appropriately 

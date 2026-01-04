@@ -106,7 +106,7 @@ export default function EmotionalBrandArchitecture() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Psychologist's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Psychologist&rsquo;s Insight</h3>
               <p>
                 Emotions drive decision-making more than logic, even for B2B purchases. 
                 Customers may justify decisions rationally, but emotional connections 

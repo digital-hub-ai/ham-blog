@@ -103,7 +103,7 @@ export default function GenerativeArtAlgorithms() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Artist's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Artist&rsquo;s Tip</h3>
               <p>
                 Begin with simple geometric primitives and gradually introduce complexity. Start with basic shapes like 
                 circles and lines, then layer parametric variations such as size, rotation, and color. This incremental 

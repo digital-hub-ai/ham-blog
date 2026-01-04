@@ -78,7 +78,7 @@ export default function MicrointeractionsThatDelight() {
             <h2 className="text-3xl font-bold mb-6 text-black">The Power of Microinteractions</h2>
             
             <p className="mb-6">
-              In the world of digital design, it's often the smallest details that leave the biggest impressions. Microinteractions, 
+              In the world of digital design, it&rsquo;s often the smallest details that leave the biggest impressions. Microinteractions, 
               those subtle moments of interface feedback and animation, play a crucial role in shaping user experiences in 2025. 
               These seemingly minor design elements can transform mundane tasks into delightful interactions that build emotional 
               connections between users and products.
@@ -100,7 +100,7 @@ export default function MicrointeractionsThatDelight() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Tip</h3>
               <p>
                 Always start with the functional requirement before adding delight. A microinteraction that looks beautiful 
                 but fails to communicate necessary information is ultimately useless. Begin with clear feedback mechanisms, 

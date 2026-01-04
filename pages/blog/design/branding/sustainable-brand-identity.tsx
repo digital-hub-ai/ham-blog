@@ -101,7 +101,7 @@ export default function SustainableBrandIdentity() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Brand Strategist's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Brand Strategist&rsquo;s Tip</h3>
               <p>
                 Conduct environmental impact audits of your visual materials and production processes. Consumers increasingly 
                 expect brands to practice what they preach, so ensure your brand applications align with your sustainability 
@@ -131,7 +131,7 @@ export default function SustainableBrandIdentity() {
               Effective sustainable brand identities weave environmental responsibility into compelling narratives that 
               connect emotionally with audiences. These stories go beyond product features to explore the brand's origin, 
               mission, and impact on communities and ecosystems. The most successful brands position themselves as allies 
-              in customers' sustainability journeys rather than distant corporations selling products.
+              in customers&rsquo; sustainability journeys rather than distant corporations selling products.
             </p>
             
             <p className="mb-6">

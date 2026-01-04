@@ -103,7 +103,7 @@ export default function HolographicUI() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Insight</h3>
               <p>
                 Design for fatigue-free interactions by minimizing sustained gestures and providing 
                 multiple interaction methods for the same actions. Users should be able to switch 
@@ -123,7 +123,7 @@ export default function HolographicUI() {
             
             <p className="mb-6">
               Anchoring interfaces to real-world objects and surfaces creates more intuitive interactions 
-              that feel integrated with users' physical environments. Virtual elements that respond to 
+              that feel integrated with users&rsquo; physical environments. Virtual elements that respond to 
               real-world lighting, shadows, and textures appear more convincing and are easier to 
               understand and manipulate.
             </p>
@@ -140,8 +140,8 @@ export default function HolographicUI() {
             <p className="mb-6">
               Asset streaming and predictive loading anticipate user needs based on gaze direction 
               and movement patterns, preloading relevant content before it's needed. This proactive 
-              approach minimizes latency and creates more seamless experiences that don't interrupt 
-              users' workflow or break immersion.
+              approach minimizes latency and creates more seamless experiences that don&rsquo;t interrupt 
+              users&rsquo; workflow or break immersion
             </p>
 
             <h2 className="text-3xl font-bold mb-6 text-black">Accessibility in Spatial Environments</h2>

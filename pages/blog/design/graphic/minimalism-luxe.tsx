@@ -108,10 +108,10 @@ export default function MinimalismLuxe() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Insight</h3>
               <p>
                 Resist the urge to fill every available space. White space is not 
-                wasted space—it's an opportunity to give your design elements 
+                wasted space—it&rsquo;s an opportunity to give your design elements 
                 room to breathe and express themselves fully. Trust your audience 
                 to engage with fewer, better-chosen elements rather than overwhelming 
                 them with excessive visual information.

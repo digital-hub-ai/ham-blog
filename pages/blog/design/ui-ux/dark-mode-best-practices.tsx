@@ -84,7 +84,7 @@ export default function DarkModeBestPractices() {
             </p>
             
             <p className="mb-6">
-              However, simply inverting colors isn't enough to create an effective dark mode experience. True dark mode implementation 
+              However, simply inverting colors isn&rsquo;t enough to create an effective dark mode experience. True dark mode implementation 
               requires careful consideration of contrast, readability, visual hierarchy, and accessibility standards. This guide explores 
               the essential best practices that separate exceptional dark mode implementations from merely functional ones.
             </p>
@@ -98,7 +98,7 @@ export default function DarkModeBestPractices() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Tip</h3>
               <p>
                 Use a combination of deep blues and grays rather than pure black for backgrounds. Pure black (#000000) can cause eye strain 
                 and make text appear to vibrate against it. Instead, opt for dark grays (#121212 to #1E1E1E) or deep blues (#0A0A1A to #121220) 
@@ -157,8 +157,8 @@ export default function DarkModeBestPractices() {
             
             <p>
               Consider offering multiple dark mode variations to accommodate different user needs. Some users prefer true dark interfaces, 
-              while others benefit from softer dark themes that reduce blue light exposure. Providing options like "True Dark," "Dimmed Dark," 
-              and "Solarized Dark" can significantly improve user satisfaction and accessibility.
+              while others benefit from softer dark themes that reduce blue light exposure. Providing options like &ldquo;True Dark,&rdquo; &ldquo;Dimmed Dark,&rdquo; 
+              and &ldquo;Solarized Dark&rdquo; can significantly improve user satisfaction and accessibility.
             </p>
           </article>
 

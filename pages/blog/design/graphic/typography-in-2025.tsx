@@ -102,7 +102,7 @@ export default function TypographyIn2025() {
             </p>
             
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer's Insight</h3>
+              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Insight</h3>
               <p>
                 When incorporating kinetic typography, always prioritize readability and user experience 
                 over visual spectacle. Animated text should enhance meaning rather than distract from it. 
@@ -136,7 +136,7 @@ export default function TypographyIn2025() {
             </p>
             
             <p className="mb-6">
-              These AI-assisted workflows don't replace human creativity but rather augment it, 
+              These AI-assisted workflows don&rsquo;t replace human creativity but rather augment it, 
               handling routine tasks like kerning adjustments and glyph consistency while freeing 
               designers to focus on conceptual and artistic aspects of type design. The result is 
               higher quality typography produced more efficiently than ever before.
