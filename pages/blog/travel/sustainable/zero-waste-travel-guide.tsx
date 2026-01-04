@@ -6,7 +6,7 @@ export default function ZeroWasteTravelGuide2025() {
   return (
     <>
       <Head>
-        <title>Zero Waste Travel: Packing and Living Sustainably on the Road | Chrono-Wanderer's Atlas</title>
+        <title>Zero Waste Travel: Packing and Living Sustainably on the Road | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Comprehensive guide to reducing waste while traveling through mindful packing and conscious consumption for environmentally conscious travelers in 2025." />
         <meta name="keywords" content="zero waste travel, sustainable travel, eco-friendly travel, conscious consumption, sustainable packing, green travel tips" />
         <meta name="author" content="Sustainable Travel Editor" />
@@ -14,35 +14,38 @@ export default function ZeroWasteTravelGuide2025() {
         <meta property="og:description" content="Comprehensive guide to reducing waste while traveling through mindful packing and conscious consumption." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Zero Waste Travel: Packing and Living Sustainably on the Road",
-            "description": "Comprehensive guide to reducing waste while traveling through mindful packing and conscious consumption.",
-            "author": {
-              "@type": "Person",
-              "name": "Sustainable Travel Editor"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-19",
-            "dateModified": "2025-12-19"
-          }
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": "Zero Waste Travel: Packing and Living Sustainably on the Road",
+              "description": "Comprehensive guide to reducing waste while traveling through mindful packing and conscious consumption.",
+              "author": {
+                "@type": "Person",
+                "name": "Sustainable Travel Editor"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Chrono-Wanderer&apos;s Atlas",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://ai-tools-directory.com/images/logo.png"
+                }
+              },
+              "datePublished": "2025-12-19",
+              "dateModified": "2025-12-19"
+            })
+          }}
+        />
       </Head>
 
       <div className="min-h-screen bg-white text-black">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -100,14 +103,14 @@ export default function ZeroWasteTravelGuide2025() {
             
             <p className="mb-6">
               Zero waste travel represents a fundamental shift in how we approach exploration, emphasizing mindfulness 
-              and responsibility in every aspect of our journeys. This philosophy goes beyond simple waste reduction—it's 
+              and responsibility in every aspect of our journeys. This philosophy goes beyond simple waste reduction—it&rsquo;s 
               about creating a positive impact on the destinations we visit while preserving them for future generations.
             </p>
             
             <p className="mb-6">
-              The concept centers on the five R's: Refuse, Reduce, Reuse, Recycle, and Rot (composting). By refusing 
+              The concept centers on the five R&rsquo;s: Refuse, Reduce, Reuse, Recycle, and Rot (composting). By refusing 
               single-use plastics, reducing overall consumption, reusing materials whenever possible, recycling what 
-              we can't reuse, and composting organic waste, travelers can dramatically decrease their environmental 
+              we can&rsquo;t reuse, and composting organic waste, travelers can dramatically decrease their environmental 
               footprint without sacrificing the quality of their experiences.
             </p>
 
@@ -121,7 +124,7 @@ export default function ZeroWasteTravelGuide2025() {
             </p>
             
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
               <p>
                 Invest in high-quality refillable containers made from durable materials like stainless steel or glass. 
                 These will last for years and can be used for everything from shampoo to salad dressing at local markets.

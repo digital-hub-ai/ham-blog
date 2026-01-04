@@ -14,28 +14,7 @@ export default function ColorPsychologyDigital() {
         <meta property="og:description" content="Understanding how color influences digital experiences and creates emotional connections with users across cultures." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Color Psychology in the Digital Age: Emotional Resonance",
-            "description": "Understanding how color influences digital experiences and creates emotional connections with users across cultures.",
-            "author": {
-              "@type": "Person",
-              "name": "Color Psychologist Iris Spectrum"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-04",
-            "dateModified": "2025-12-04"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Color Psychology in the Digital Age: Emotional Resonance","description": "Understanding how color influences digital experiences and creates emotional connections with users across cultures.","author": {"@type": "Person","name": "Color Psychologist Iris Spectrum"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-04","dateModified": "2025-12-04"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

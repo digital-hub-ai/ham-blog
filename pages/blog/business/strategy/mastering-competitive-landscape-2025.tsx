@@ -6,7 +6,7 @@ export default function MasteringCompetitiveLandscape2025() {
   return (
     <div className="min-h-screen bg-white text-black">
       <Head>
-        <title>Business Strategy Insights: Mastering 2025's Competitive Landscape | Corporate Consciousness</title>
+        <title>Business Strategy Insights: Mastering 2025&rsquo;s Competitive Landscape | Corporate Consciousness</title>
         <meta name="description" content="Comprehensive guide to modern business strategy in 2025, covering adaptive planning, digital transformation, and sustainable competitive advantage." />
         <meta name="keywords" content="business strategy, enterprise planning, digital transformation, competitive advantage, 2025 trends" />
         <meta name="author" content="Strategic Insights Team" />
@@ -16,7 +16,7 @@ export default function MasteringCompetitiveLandscape2025() {
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <article className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-lg">
           <header className="mb-8">
-            <h1 className="text-4xl font-bold text-black mb-4">Business Strategy Insights: Mastering 2025's Competitive Landscape</h1>
+            <h1 className="text-4xl font-bold text-black mb-4">Business Strategy Insights: Mastering 2025&rsquo;s Competitive Landscape</h1>
             <div className="flex flex-wrap items-center gap-4 text-gray-600">
               <span>By <span className="font-semibold">Strategic Insights Team</span></span>
               <span>•</span>
@@ -28,7 +28,7 @@ export default function MasteringCompetitiveLandscape2025() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              In today's rapidly evolving business environment, traditional strategic planning approaches are no longer sufficient. Companies must embrace adaptive strategies that allow them to pivot quickly while maintaining their core mission and values. This comprehensive guide explores the key principles that separate thriving organizations from those struggling to keep pace.
+              In today&rsquo;s rapidly evolving business environment, traditional strategic planning approaches are no longer sufficient. Companies must embrace adaptive strategies that allow them to pivot quickly while maintaining their core mission and values. This comprehensive guide explores the key principles that separate thriving organizations from those struggling to keep pace.
             </p>
 
             <ImagePlaceholder 
@@ -52,7 +52,7 @@ export default function MasteringCompetitiveLandscape2025() {
             <h3 className="text-2xl font-semibold mt-8 mb-4">Technology-Enabled Operations</h3>
             
             <p className="mb-4">
-              Digital transformation isn't just about adopting new tools—it's about fundamentally rethinking how work gets done. Organizations that successfully integrate technology into their core operations achieve higher efficiency, better decision-making, and enhanced customer experiences.
+              Digital transformation isn&rsquo;t just about adopting new tools—it&rsquo;s about fundamentally rethinking how work gets done. Organizations that successfully integrate technology into their core operations achieve higher efficiency, better decision-making, and enhanced customer experiences.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Building Sustainable Competitive Advantage</h2>
@@ -108,7 +108,7 @@ export default function MasteringCompetitiveLandscape2025() {
             <h3 className="text-2xl font-semibold mt-8 mb-4">What role does data play in modern strategic planning?</h3>
             
             <p className="mb-4">
-              Data is the foundation of evidence-based decision making. However, it's important to remember that data informs strategy rather than dictating it. The best strategic decisions combine analytical insights with human judgment and experience.
+              Data is the foundation of evidence-based decision making. However, it&rsquo;s important to remember that data informs strategy rather than dictating it. The best strategic decisions combine analytical insights with human judgment and experience.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">How can small businesses compete with larger competitors?</h3>

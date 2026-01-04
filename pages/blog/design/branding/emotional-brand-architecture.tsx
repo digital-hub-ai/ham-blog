@@ -14,28 +14,7 @@ export default function EmotionalBrandArchitecture() {
         <meta property="og:description" content="Creating brand architectures that evoke specific emotional responses and build deeper customer relationships." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Emotional Brand Architecture: Designing for Feelings",
-            "description": "Creating brand architectures that evoke specific emotional responses and build deeper customer relationships.",
-            "author": {
-              "@type": "Person",
-              "name": "Brand Psychologist Emotion Lane"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-11-28",
-            "dateModified": "2025-11-28"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Emotional Brand Architecture: Designing for Feelings","description": "Creating brand architectures that evoke specific emotional responses and build deeper customer relationships.","author": {"@type": "Person","name": "Brand Psychologist Emotion Lane"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-11-28","dateModified": "2025-11-28"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

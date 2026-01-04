@@ -40,12 +40,12 @@ export default function StreetFoodTour() {
 
             <div className="prose prose-invert max-w-none">
               <p className="text-xl text-gray-300 mb-6">
-                Bangkok's night markets represent one of the world's most vibrant and diverse street food scenes. As the sun sets and the city comes alive with neon lights, thousands of vendors set up their stalls, creating a culinary landscape that has become synonymous with Thai culture. For food enthusiasts, navigating these bustling markets is both an adventure and a lesson in authentic Thai cuisine.
+                Bangkok&rsquo;s night markets represent one of the world&rsquo;s most vibrant and diverse street food scenes. As the sun sets and the city comes alive with neon lights, thousands of vendors set up their stalls, creating a culinary landscape that has become synonymous with Thai culture. For food enthusiasts, navigating these bustling markets is both an adventure and a lesson in authentic Thai cuisine.
               </p>
 
               <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">The Art of Bangkok Street Food</h2>
               <p className="mb-4">
-                Street food in Bangkok is more than just quick, affordable meals—it's a complex ecosystem of flavors, techniques, and traditions passed down through generations. Each vendor specializes in specific dishes, often perfected over decades of practice. The competition is fierce, which ensures consistently high quality and innovation in traditional recipes.
+                Street food in Bangkok is more than just quick, affordable meals—it&rsquo;s a complex ecosystem of flavors, techniques, and traditions passed down through generations. Each vendor specializes in specific dishes, often perfected over decades of practice. The competition is fierce, which ensures consistently high quality and innovation in traditional recipes.
               </p>
               <p className="mb-4">
                 The night markets serve as living museums of Thai culinary heritage, where ancient recipes blend with modern creativity. From the famous Pad Thai to regional specialties, these markets offer an authentic taste of Thailand that cannot be replicated in restaurants.

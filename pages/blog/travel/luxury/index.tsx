@@ -15,7 +15,7 @@ export default function LuxuryTravelIndex() {
   return (
     <>
       <Head>
-        <title>Luxury Travel Experiences | Chrono-Wanderer's Atlas</title>
+        <title>Luxury Travel Experiences | Chrono-Wanderer&rsquo;s Atlas</title>
         <meta name="description" content="Explore exclusive luxury travel experiences and premium accommodations for discerning travelers seeking exceptional adventures in 2025." />
         <meta name="keywords" content="luxury travel, premium travel, exclusive vacations, private island getaways, superyacht charters, ultra-luxury resorts" />
       </Head>
@@ -24,7 +24,7 @@ export default function LuxuryTravelIndex() {
         <div className="container mx-auto px-4 py-12 max-w-6xl">
           <Link href="/blog/travel" className="inline-flex items-center text-purple-600 hover:text-purple-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&rsquo;s Atlas
           </Link>
 
           <div className="mb-12">

@@ -6,7 +6,7 @@ export default function UltraLuxuryResorts2025() {
   return (
     <>
       <Head>
-        <title>Ultra-Luxury Resorts Redefining Hospitality Standards | Chrono-Wanderer's Atlas</title>
+        <title>Ultra-Luxury Resorts Redefining Hospitality Standards | Chrono-Wanderer&rsquo;s Atlas</title>
         <meta name="description" content="Discover resorts that exceed expectations with innovative architecture, Michelin-starred dining, and transformative wellness experiences for discerning travelers in 2025." />
         <meta name="keywords" content="ultra-luxury resorts, premium hospitality, Michelin-starred dining, wellness retreats, innovative architecture, exclusive travel" />
         <meta name="author" content="Luxury Travel Editor" />
@@ -14,8 +14,9 @@ export default function UltraLuxuryResorts2025() {
         <meta property="og:description" content="Discover resorts that exceed expectations with innovative architecture, Michelin-starred dining, and transformative wellness experiences." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
+        <script 
+          type="application/ld+json" 
+          dangerouslySetInnerHTML={{__html: `{
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Ultra-Luxury Resorts Redefining Hospitality Standards",
@@ -34,15 +35,15 @@ export default function UltraLuxuryResorts2025() {
             },
             "datePublished": "2025-12-19",
             "dateModified": "2025-12-19"
-          }
-        </script>
+          }`}}
+        />
       </Head>
 
       <div className="min-h-screen bg-white text-black">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&rsquo;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -115,12 +116,12 @@ export default function UltraLuxuryResorts2025() {
             
             <p className="mb-6">
               The culinary programs at premier luxury resorts have evolved into comprehensive gastronomic experiences that 
-              rival the world's finest restaurants. Many properties feature multiple Michelin-starred chefs who create 
+              rival the world&rsquo;s finest restaurants. Many properties feature multiple Michelin-starred chefs who create 
               exclusive menus incorporating hyper-local ingredients sourced from on-site gardens or regional producers.
             </p>
             
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&rsquo;s Tip</h3>
               <p>
                 Book culinary experiences well in advance, as many resorts offer limited seating for exclusive dining events. 
                 Private chef consultations allow for completely customized menus based on dietary restrictions, preferences, 
@@ -132,7 +133,7 @@ export default function UltraLuxuryResorts2025() {
             
             <p className="mb-6">
               Modern luxury wellness programs extend far beyond spa treatments to encompass holistic approaches to physical, 
-              mental, and spiritual well-being. Biohacking technologies monitor guests' physiological responses to various 
+              mental, and spiritual well-being. Biohacking technologies monitor guests&rsquo; physiological responses to various 
               treatments, enabling personalized protocols that optimize results.
             </p>
             

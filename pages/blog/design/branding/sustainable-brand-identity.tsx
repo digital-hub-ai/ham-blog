@@ -14,28 +14,7 @@ export default function SustainableBrandIdentity() {
         <meta property="og:description" content="Building brand identities that communicate environmental responsibility and resonate with conscious consumers." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Sustainable Brand Identity: Eco-Conscious Visual Storytelling",
-            "description": "Building brand identities that communicate environmental responsibility and resonate with conscious consumers.",
-            "author": {
-              "@type": "Person",
-              "name": "Brand Strategy Consultant"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-12",
-            "dateModified": "2025-12-12"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Sustainable Brand Identity: Eco-Conscious Visual Storytelling","description": "Building brand identities that communicate environmental responsibility and resonate with conscious consumers.","author": {"@type": "Person","name": "Brand Strategy Consultant"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-12","dateModified": "2025-12-12"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

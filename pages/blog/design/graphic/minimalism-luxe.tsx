@@ -14,28 +14,7 @@ export default function MinimalismLuxe() {
         <meta property="og:description" content="The sophistication of restraint in contemporary graphic design and how simplicity creates powerful visual impact." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Minimalism in 2025: Less is Luxe",
-            "description": "The sophistication of restraint in contemporary graphic design and how simplicity creates powerful visual impact.",
-            "author": {
-              "@type": "Person",
-              "name": "Minimalist Designer Simple Luxe"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-11-29",
-            "dateModified": "2025-11-29"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Minimalism in 2025: Less is Luxe","description": "The sophistication of restraint in contemporary graphic design and how simplicity creates powerful visual impact.","author": {"@type": "Person","name": "Minimalist Designer Simple Luxe"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-11-29","dateModified": "2025-11-29"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

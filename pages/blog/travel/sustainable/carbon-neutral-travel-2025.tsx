@@ -6,7 +6,7 @@ export default function CarbonNeutralTravel2025() {
   return (
     <>
       <Head>
-        <title>Achieving Carbon Neutral Travel in 2025 | Chrono-Wanderer's Atlas</title>
+        <title>Achieving Carbon Neutral Travel in 2025 | Chrono-Wanderer&rsquo;s Atlas</title>
         <meta name="description" content="Practical strategies for offsetting travel emissions and choosing low-carbon transportation options for environmentally conscious travelers in 2025." />
         <meta name="keywords" content="carbon neutral travel, sustainable travel, eco-friendly travel, low carbon transportation, travel emissions, climate conscious travel" />
         <meta name="author" content="Sustainable Travel Editor" />
@@ -32,7 +32,7 @@ export default function CarbonNeutralTravel2025() {
             "dateModified": "2025-12-20T09:00:00Z",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&rsquo;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://example.com/logo.png"
@@ -141,7 +141,7 @@ export default function CarbonNeutralTravel2025() {
                 After minimizing emissions through conscious choices, offset remaining impacts through verified carbon reduction projects. High-quality offsets fund renewable energy installations, reforestation initiatives, methane capture systems, and community-based conservation programs.
               </p>
               <p className="mb-6">
-                Effective offset programs meet rigorous standards including additionality (projects wouldn't exist without offset funding), permanence (benefits last decades), and leakage prevention (protecting surrounding areas). Look for certifications from Gold Standard, Verra, or Climate Action Reserve when selecting offset providers.
+                Effective offset programs meet rigorous standards including additionality (projects wouldn&rsquo;t exist without offset funding), permanence (benefits last decades), and leakage prevention (protecting surrounding areas). Look for certifications from Gold Standard, Verra, or Climate Action Reserve when selecting offset providers.
               </p>
 
               <h2 className="text-3xl font-bold mb-6 text-black">Emerging Technologies and Future Outlook</h2>

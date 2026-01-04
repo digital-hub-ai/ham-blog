@@ -14,28 +14,7 @@ export default function GenerativeArtAlgorithms() {
         <meta property="og:description" content="Harnessing algorithmic processes to create unique visual compositions that evolve and adapt in real-time." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Generative Art Algorithms: Code as Creative Partner",
-            "description": "Harnessing algorithmic processes to create unique visual compositions that evolve and adapt in real-time.",
-            "author": {
-              "@type": "Person",
-              "name": "Digital Art Pioneer"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-14",
-            "dateModified": "2025-12-14"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Generative Art Algorithms: Code as Creative Partner","description": "Harnessing algorithmic processes to create unique visual compositions that evolve and adapt in real-time.","author": {"@type": "Person","name": "Digital Art Pioneer"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-14","dateModified": "2025-12-14"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

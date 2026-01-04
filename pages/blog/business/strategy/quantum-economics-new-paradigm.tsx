@@ -56,7 +56,7 @@ export default function QuantumEconomicsNewParadigm() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Option Pricing Models</h3>
             <p className="mb-4">
-              Traditional Black-Scholes models rely on simplifying assumptions that don't reflect real market conditions. Quantum-enhanced models incorporate volatility clustering, fat-tailed distributions, and market sentiment to produce more accurate option valuations.
+              Traditional Black-Scholes models rely on simplifying assumptions that don&rsquo;t reflect real market conditions. Quantum-enhanced models incorporate volatility clustering, fat-tailed distributions, and market sentiment to produce more accurate option valuations.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Risk Assessment and Management</h3>

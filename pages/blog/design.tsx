@@ -83,15 +83,7 @@ export default function DesignReality() {
         <meta property="og:title" content="Aesthetic Forge - Design Cosmos" />
         <meta property="og:description" content="Where creativity ignites and pixels become portals to infinite possibilities." />
         <meta property="og:type" content="website" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Aesthetic Forge - Design Cosmos",
-            "description": "Where creativity ignites and pixels become portals to infinite possibilities.",
-            "url": "https://ai-tools-directory.com/blog/design"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "WebPage","name": "Aesthetic Forge - Design Cosmos","description": "Where creativity ignites and pixels become portals to infinite possibilities.","url": "https://ai-tools-directory.com/blog/design"}`}} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-rose-900 to-black text-white overflow-hidden">

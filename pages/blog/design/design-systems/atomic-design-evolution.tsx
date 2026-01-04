@@ -14,28 +14,7 @@ export default function AtomicDesignEvolution() {
         <meta property="og:description" content="How design systems have evolved beyond simple component libraries to become comprehensive frameworks for digital product creation." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Atomic Design Evolution: Beyond Components to Systems",
-            "description": "How design systems have evolved beyond simple component libraries to become comprehensive frameworks for digital product creation.",
-            "author": {
-              "@type": "Person",
-              "name": "Design Systems Architect Pattern Master"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-19",
-            "dateModified": "2025-12-19"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Atomic Design Evolution: Beyond Components to Systems","description": "How design systems have evolved beyond simple component libraries to become comprehensive frameworks for digital product creation.","author": {"@type": "Person","name": "Design Systems Architect Pattern Master"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-19","dateModified": "2025-12-19"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

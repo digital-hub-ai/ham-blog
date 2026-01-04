@@ -14,28 +14,7 @@ export default function VoiceUserInterfaceDesign() {
         <meta property="og:description" content="Designing intuitive voice interfaces that feel natural and enhance user interactions with voice-enabled products." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Voice User Interface Design: Conversational UX Principles",
-            "description": "Designing intuitive voice interfaces that feel natural and enhance user interactions with voice-enabled products.",
-            "author": {
-              "@type": "Person",
-              "name": "Voice Experience Designer Echo Smith"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-11-30",
-            "dateModified": "2025-11-30"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Voice User Interface Design: Conversational UX Principles","description": "Designing intuitive voice interfaces that feel natural and enhance user interactions with voice-enabled products.","author": {"@type": "Person","name": "Voice Experience Designer Echo Smith"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-11-30","dateModified": "2025-11-30"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

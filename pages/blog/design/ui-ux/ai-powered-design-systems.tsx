@@ -14,28 +14,7 @@ export default function AiPoweredDesignSystems() {
         <meta property="og:description" content="How artificial intelligence is revolutionizing design systems and component libraries for more consistent and efficient UI development." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "AI-Powered Design Systems: The Next Evolution",
-            "description": "How artificial intelligence is revolutionizing design systems and component libraries for more consistent and efficient UI development.",
-            "author": {
-              "@type": "Person",
-              "name": "Design Technology Specialist"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-15",
-            "dateModified": "2025-12-15"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "AI-Powered Design Systems: The Next Evolution","description": "How artificial intelligence is revolutionizing design systems and component libraries for more consistent and efficient UI development.","author": {"@type": "Person","name": "Design Technology Specialist"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-15","dateModified": "2025-12-15"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

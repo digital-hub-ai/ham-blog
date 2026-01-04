@@ -6,7 +6,7 @@ export default function PrivateIslandGetaways2025() {
   return (
     <>
       <Head>
-        <title>Private Island Getaways: Ultimate Luxury Retreats | Chrono-Wanderer's Atlas</title>
+        <title>Private Island Getaways: Ultimate Luxury Retreats | Chrono-Wanderer&rsquo;s Atlas</title>
         <meta name="description" content="Discover exclusive private island experiences offering unparalleled privacy, bespoke services, and pristine natural environments for discerning travelers in 2025." />
         <meta name="keywords" content="private island getaways, luxury travel, exclusive vacations, bespoke travel, premium accommodations, tropical destinations" />
         <meta name="author" content="Luxury Travel Editor" />
@@ -18,8 +18,9 @@ export default function PrivateIslandGetaways2025() {
         <meta property="article:tag" content="Private Islands" />
         <meta property="article:tag" content="Luxury Travel" />
         <meta property="article:tag" content="Exclusive Vacations" />
-        <script type="application/ld+json">
-          {JSON.stringify({
+        <script 
+          type="application/ld+json" 
+          dangerouslySetInnerHTML={{__html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Private Island Getaways: Ultimate Luxury Retreats",
@@ -38,8 +39,8 @@ export default function PrivateIslandGetaways2025() {
                 "url": "https://example.com/logo.png"
               }
             }
-          })}
-        </script>
+          })}}
+        />
       </Head>
 
       <div className="min-h-screen bg-white text-black">
@@ -118,7 +119,7 @@ export default function PrivateIslandGetaways2025() {
                 Contemporary private island villas blend architectural excellence with environmental sensitivity. Floor-to-ceiling glass walls maximize ocean views while maintaining climate control through advanced HVAC systems. Infinity pools seemingly merge with the sea, while outdoor kitchens enable alfresco dining experiences prepared by private chefs using locally-sourced ingredients.
               </p>
               <p className="mb-6">
-                Wellness facilities rival luxury spas, featuring treatment rooms, yoga pavilions, fitness centers with personal trainers, and meditation spaces positioned to capture sunrise or sunset views. Entertainment amenities include private cinemas, game rooms, water sports equipment, and docking facilities for guests' vessels.
+                Wellness facilities rival luxury spas, featuring treatment rooms, yoga pavilions, fitness centers with personal trainers, and meditation spaces positioned to capture sunrise or sunset views. Entertainment amenities include private cinemas, game rooms, water sports equipment, and docking facilities for guests&rsquo; vessels.
               </p>
 
               <h2 className="text-3xl font-bold mb-6 text-black">Bespoke Experiences and Services</h2>

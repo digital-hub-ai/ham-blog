@@ -24,8 +24,9 @@ const FigmaVsSketchVsPenpot = () => {
         <link rel="canonical" href="https://atlas-neo.com/blog/figma-vs-sketch-vs-penpot-2025-ultimate-ui-ux-platform-showdown" />
         
         {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">
-        {`{
+        <script 
+          type="application/ld+json" 
+          dangerouslySetInnerHTML={{__html: `{
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": "Figma vs. Sketch vs. Penpot in 2025: The Ultimate UI/UX Platform Showdown",
@@ -52,12 +53,13 @@ const FigmaVsSketchVsPenpot = () => {
           "articleSection": "Design Tools",
           "wordCount": 2800,
           "keywords": ["Figma", "Sketch", "Penpot", "UI design", "UX design", "design tools comparison"]
-        }`}
-        </script>
+        }`}}
+        />
         
         {/* FAQ Schema */}
-        <script type="application/ld+json">
-        {`{
+        <script 
+          type="application/ld+json" 
+          dangerouslySetInnerHTML={{__html: `{
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
@@ -86,8 +88,8 @@ const FigmaVsSketchVsPenpot = () => {
               }
             }
           ]
-        }`}
-        </script>
+        }`}}
+        />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -133,14 +135,14 @@ const FigmaVsSketchVsPenpot = () => {
           <section id="introduction" className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Introduction: The Design Platform Wars</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              In 2025, the UI/UX design landscape is more competitive than ever. Three platforms dominate the conversation: Figma, the cloud-based collaboration powerhouse; Sketch, the macOS native champion; and Penpot, the rising open-source challenger. Each brings unique strengths to the table, but which one deserves your team's investment?
+              In 2025, the UI/UX design landscape is more competitive than ever. Three platforms dominate the conversation: Figma, the cloud-based collaboration powerhouse; Sketch, the macOS native champion; and Penpot, the rising open-source challenger. Each brings unique strengths to the table, but which one deserves your team&rsquo;s investment?
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              This comprehensive comparison goes beyond surface-level features to examine real-world performance, collaboration workflows, ecosystem integration, and total cost of ownership. We've tested all three platforms extensively, interviewed design teams, and analyzed usage data to bring you the definitive showdown.
+              This comprehensive comparison goes beyond surface-level features to examine real-world performance, collaboration workflows, ecosystem integration, and total cost of ownership. We&rsquo;ve tested all three platforms extensively, interviewed design teams, and analyzed usage data to bring you the definitive showdown.
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
               <p className="text-blue-700">
-                <strong>Key Insight:</strong> The "best" platform depends entirely on your team's workflow, platform preferences, and collaboration needs.
+                <strong>Key Insight:</strong> The &quot;best&quot; platform depends entirely on your team&rsquo;s workflow, platform preferences, and collaboration needs.
               </p>
             </div>
           </section>
@@ -418,7 +420,7 @@ const FigmaVsSketchVsPenpot = () => {
                 </div>
                 <div className="bg-white p-4 rounded border border-blue-200">
                   <h4 className="font-semibold text-gray-800 mb-2">Figma Balances Speed and Features</h4>
-                  <p className="text-sm text-gray-700">While not the fastest, Figma's web-based performance is impressive considering the feature set and collaboration capabilities.</p>
+                  <p className="text-sm text-gray-700">While not the fastest, Figma&rsquo;s web-based performance is impressive considering the feature set and collaboration capabilities.</p>
                 </div>
                 <div className="bg-white p-4 rounded border border-blue-200">
                   <h4 className="font-semibold text-gray-800 mb-2">Penpot Improving Rapidly</h4>
@@ -479,7 +481,7 @@ const FigmaVsSketchVsPenpot = () => {
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
               <h3 className="text-lg font-semibold text-yellow-800 mb-2">Collaboration Winner: Figma</h3>
               <p className="text-sm text-gray-700">
-                Figma's collaboration features are unmatched, making it the clear choice for distributed teams and organizations prioritizing real-time collaboration.
+                Figma&rsquo;s collaboration features are unmatched, making it the clear choice for distributed teams and organizations prioritizing real-time collaboration.
               </p>
             </div>
           </section>
@@ -656,7 +658,7 @@ const FigmaVsSketchVsPenpot = () => {
             
             <div className="space-y-6">
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-purple-800 mb-3">Figma's 2025 Roadmap</h3>
+                <h3 className="text-xl font-semibold text-purple-800 mb-3">Figma&rsquo;s 2025 Roadmap</h3>
                 <ul className="text-gray-700 space-y-2 text-sm">
                   <li>• Enhanced AI-powered design suggestions</li>
                   <li>• Advanced motion design capabilities</li>
@@ -667,7 +669,7 @@ const FigmaVsSketchVsPenpot = () => {
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-orange-800 mb-3">Sketch's 2025 Roadmap</h3>
+                <h3 className="text-xl font-semibold text-orange-800 mb-3">Sketch&rsquo;s 2025 Roadmap</h3>
                 <ul className="text-gray-700 space-y-2 text-sm">
                   <li>• Improved web-based collaboration features</li>
                   <li>• Enhanced plugin development tools</li>
@@ -678,7 +680,7 @@ const FigmaVsSketchVsPenpot = () => {
               </div>
               
               <div className="bg-green-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-green-800 mb-3">Penpot's 2025 Roadmap</h3>
+                <h3 className="text-xl font-semibold text-green-800 mb-3">Penpot&rsquo;s 2025 Roadmap</h3>
                 <ul className="text-gray-700 space-y-2 text-sm">
                   <li>• Performance improvements and optimizations</li>
                   <li>• Expanded plugin ecosystem</li>
@@ -720,7 +722,7 @@ const FigmaVsSketchVsPenpot = () => {
                 <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg">
                   <h4 className="font-semibold text-green-800 mb-2">Most Flexible: Penpot</h4>
                   <p className="text-gray-700 mb-3">
-                    Penpot's open-source nature and self-hosting options make it the most flexible choice for organizations prioritizing data control and customization. While still maturing, it's rapidly becoming a viable alternative for many use cases.
+                    Penpot&rsquo;s open-source nature and self-hosting options make it the most flexible choice for organizations prioritizing data control and customization. While still maturing, it&rsquo;s rapidly becoming a viable alternative for many use cases.
                   </p>
                   <p className="text-sm text-gray-600">
                     Best for: Open-source advocates, privacy-focused organizations, and teams needing custom hosting solutions.

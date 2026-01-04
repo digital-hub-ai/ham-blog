@@ -14,28 +14,7 @@ export default function DarkModeBestPractices() {
         <meta property="og:description" content="Essential guidelines for implementing dark mode that enhances user experience without compromising accessibility or functionality." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Dark Mode Best Practices: Designing for All Conditions",
-            "description": "Essential guidelines for implementing dark mode that enhances user experience without compromising accessibility or functionality.",
-            "author": {
-              "@type": "Person",
-              "name": "UX Specialist Luna Eclipse"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-10",
-            "dateModified": "2025-12-10"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Dark Mode Best Practices: Designing for All Conditions","description": "Essential guidelines for implementing dark mode that enhances user experience without compromising accessibility or functionality.","author": {"@type": "Person","name": "UX Specialist Luna Eclipse"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-10","dateModified": "2025-12-10"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

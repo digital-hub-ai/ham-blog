@@ -28,7 +28,7 @@ export default function MergerAcquisitionStrategy() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-8">
-              In today's rapidly evolving business landscape, mergers and acquisitions remain powerful vehicles for accelerated growth, capability expansion, and competitive positioning. However, the complexity of modern M&A transactions has increased significantly, requiring sophisticated strategies that encompass deal sourcing, rigorous due diligence, seamless integration, and sustained value realization. Organizations executing successful M&A strategies in 2025 report 32% higher revenue growth and 28% improved profitability compared to organic growth strategies alone. With market volatility, regulatory scrutiny, and stakeholder expectations at elevated levels, systematic M&A approaches have become essential for sustainable value creation.
+              In today&rsquo;s rapidly evolving business landscape, mergers and acquisitions remain powerful vehicles for accelerated growth, capability expansion, and competitive positioning. However, the complexity of modern M&A transactions has increased significantly, requiring sophisticated strategies that encompass deal sourcing, rigorous due diligence, seamless integration, and sustained value realization. Organizations executing successful M&A strategies in 2025 report 32% higher revenue growth and 28% improved profitability compared to organic growth strategies alone. With market volatility, regulatory scrutiny, and stakeholder expectations at elevated levels, systematic M&A approaches have become essential for sustainable value creation.
             </p>
 
             <ImagePlaceholder 

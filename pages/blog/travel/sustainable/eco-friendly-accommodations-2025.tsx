@@ -6,7 +6,7 @@ export default function EcoFriendlyAccommodations2025() {
   return (
     <>
       <Head>
-        <title>Eco-Friendly Accommodations: Green Hotels Leading the Way | Chrono-Wanderer's Atlas</title>
+        <title>Eco-Friendly Accommodations: Green Hotels Leading the Way | Chrono-Wanderer&rsquo;s Atlas</title>
         <meta name="description" content="Discover hotels and resorts implementing sustainable practices that minimize environmental impact while maximizing guest comfort and luxury in 2025." />
         <meta name="keywords" content="eco-friendly accommodations, green hotels, sustainable travel, environmental impact, luxury eco-resorts, carbon neutral hotels" />
         <meta name="author" content="Sustainable Travel Journalist" />
@@ -32,7 +32,7 @@ export default function EcoFriendlyAccommodations2025() {
             "dateModified": "2025-12-21T12:00:00Z",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&rsquo;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://example.com/logo.png"

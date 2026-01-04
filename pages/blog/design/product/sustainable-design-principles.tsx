@@ -14,28 +14,7 @@ export default function SustainableDesignPrinciples() {
         <meta property="og:description" content="Building products that communicate environmental responsibility and resonate with conscious consumers." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Sustainable Design Principles: Eco-Conscious Product Creation",
-            "description": "Building products that communicate environmental responsibility and resonate with conscious consumers.",
-            "author": {
-              "@type": "Person",
-              "name": "Product Designer Eco Craft"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-18",
-            "dateModified": "2025-12-18"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Sustainable Design Principles: Eco-Conscious Product Creation","description": "Building products that communicate environmental responsibility and resonate with conscious consumers.","author": {"@type": "Person","name": "Product Designer Eco Craft"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-18","dateModified": "2025-12-18"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

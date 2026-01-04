@@ -95,14 +95,14 @@ export default function StrategicInflectionPoints() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Microsoft: Cloud-First Transformation</h3>
             <p className="mb-4">
-              Under Satya Nadella's leadership, Microsoft pivoted from desktop software dominance to cloud-first strategy, embracing open-source technologies and subscription models. This transformation revitalized the company's growth trajectory and restored its position as a technology leader.
+              Under Satya Nadella&rsquo;s leadership, Microsoft pivoted from desktop software dominance to cloud-first strategy, embracing open-source technologies and subscription models. This transformation revitalized the company&rsquo;s growth trajectory and restored its position as a technology leader.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Common Pitfalls and How to Avoid Them</h2>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Denial and Delay</h3>
             <p className="mb-4">
-              Many organizations fail to recognize inflection points until it's too late, clinging to past successes and dismissing early warning signals. Regular environmental scanning and diverse perspective inclusion in strategic discussions help overcome this tendency.
+              Many organizations fail to recognize inflection points until it&rsquo;s too late, clinging to past successes and dismissing early warning signals. Regular environmental scanning and diverse perspective inclusion in strategic discussions help overcome this tendency.
             </p>
             
             <h3 className="text-2xl font-semibold mt-8 mb-4">Overreaction and Premature Commitment</h3>
@@ -130,7 +130,7 @@ export default function StrategicInflectionPoints() {
             </ul>
             
             <p className="mb-4">
-              Strategic inflection points are inevitable in today's rapidly changing business environment. Companies that develop systematic approaches to identifying and responding to these pivotal moments will not only survive but thrive as industry leaders. The key lies in balancing vigilance with patience, boldness with caution, and continuity with transformation.
+              Strategic inflection points are inevitable in today&rsquo;s rapidly changing business environment. Companies that develop systematic approaches to identifying and responding to these pivotal moments will not only survive but thrive as industry leaders. The key lies in balancing vigilance with patience, boldness with caution, and continuity with transformation.
             </p>
 
             <div className="border-t border-gray-300 pt-6 mt-12">

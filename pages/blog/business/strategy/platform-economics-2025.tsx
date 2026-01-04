@@ -40,7 +40,7 @@ export default function PlatformEconomics2025() {
             <h2 className="text-3xl font-bold mt-12 mb-6">Evolution of Platform Economics</h2>
             
             <p className="mb-4">
-              Traditional platform economics focused on connecting two or more distinct user groups to facilitate exchanges, with value derived primarily from network effects. Today's platforms are far more sophisticated, orchestrating multi-sided ecosystems that blur the lines between producers, consumers, and intermediaries.
+              Traditional platform economics focused on connecting two or more distinct user groups to facilitate exchanges, with value derived primarily from network effects. Today&rsquo;s platforms are far more sophisticated, orchestrating multi-sided ecosystems that blur the lines between producers, consumers, and intermediaries.
             </p>
             
             <p className="mb-4">

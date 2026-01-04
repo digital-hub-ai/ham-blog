@@ -6,7 +6,7 @@ export default function ArTravelApps2025() {
   return (
     <>
       <Head>
-        <title>Augmented Reality Travel Apps Changing How We Explore | Chrono-Wanderer's Atlas</title>
+        <title>Augmented Reality Travel Apps Changing How We Explore | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="How AR apps are transforming city exploration with real-time translations, historical overlays, and navigation assistance for 2025 travelers." />
         <meta name="keywords" content="AR travel apps, augmented reality travel, travel technology, city exploration, real-time translation, historical overlays" />
         <meta name="author" content="Travel Tech Reporter" />
@@ -14,35 +14,38 @@ export default function ArTravelApps2025() {
         <meta property="og:description" content="How AR apps are transforming city exploration with real-time translations, historical overlays, and navigation assistance." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Augmented Reality Travel Apps Changing How We Explore",
-            "description": "How AR apps are transforming city exploration with real-time translations, historical overlays, and navigation assistance.",
-            "author": {
-              "@type": "Person",
-              "name": "Travel Tech Reporter"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-20",
-            "dateModified": "2025-12-20"
-          }
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": "Augmented Reality Travel Apps Changing How We Explore",
+              "description": "How AR apps are transforming city exploration with real-time translations, historical overlays, and navigation assistance.",
+              "author": {
+                "@type": "Person",
+                "name": "Travel Tech Reporter"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Chrono-Wanderer&apos;s Atlas",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://ai-tools-directory.com/images/logo.png"
+                }
+              },
+              "datePublished": "2025-12-20",
+              "dateModified": "2025-12-20"
+            })
+          }}
+        />
       </Head>
 
       <div className="min-h-screen bg-white text-black">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -122,7 +125,7 @@ export default function ArTravelApps2025() {
             </p>
             
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
               <p>
                 Enable offline mode before traveling to ensure continuous functionality even in areas with limited connectivity. 
                 Most AR travel apps now offer downloadable destination packages that include detailed 3D maps and translation databases.

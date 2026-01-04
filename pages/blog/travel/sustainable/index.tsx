@@ -15,7 +15,7 @@ export default function SustainableTravelIndex() {
   return (
     <>
       <Head>
-        <title>Sustainable Travel | Chrono-Wanderer's Atlas</title>
+        <title>Sustainable Travel | Chrono-Wanderer&rsquo;s Atlas</title>
         <meta name="description" content="Explore sustainable travel practices and eco-friendly tourism options for responsible adventurers in 2025." />
         <meta name="keywords" content="sustainable travel, eco-friendly tourism, carbon neutral travel, green hotels, responsible tourism" />
       </Head>
@@ -24,7 +24,7 @@ export default function SustainableTravelIndex() {
         <div className="container mx-auto px-4 py-12 max-w-6xl">
           <Link href="/blog/travel" className="inline-flex items-center text-green-600 hover:text-green-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&rsquo;s Atlas
           </Link>
 
           <div className="mb-12">

@@ -14,28 +14,7 @@ export default function TypographyIn2025() {
         <meta property="og:description" content="The evolution of typography in the digital age with variable fonts, responsive lettering, and kinetic type." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Typography in 2025: Variable Fonts and Expressive Letterforms",
-            "description": "The evolution of typography in the digital age with variable fonts, responsive lettering, and kinetic type.",
-            "author": {
-              "@type": "Person",
-              "name": "Type Designer Glyph Master"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-09",
-            "dateModified": "2025-12-09"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Typography in 2025: Variable Fonts and Expressive Letterforms","description": "The evolution of typography in the digital age with variable fonts, responsive lettering, and kinetic type.","author": {"@type": "Person","name": "Type Designer Glyph Master"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-09","dateModified": "2025-12-09"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">

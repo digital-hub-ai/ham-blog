@@ -14,28 +14,7 @@ export default function MicrointeractionsThatDelight() {
         <meta property="og:description" content="The art and science of crafting microinteractions that enhance usability and create memorable user experiences." />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Microinteractions That Delight: Small Details, Big Impact",
-            "description": "The art and science of crafting microinteractions that enhance usability and create memorable user experiences.",
-            "author": {
-              "@type": "Person",
-              "name": "Interaction Designer Pixel Joy"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Aesthetic Forge",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-tools-directory.com/images/logo.png"
-              }
-            },
-            "datePublished": "2025-12-05",
-            "dateModified": "2025-12-05"
-          }
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Microinteractions That Delight: Small Details, Big Impact","description": "The art and science of crafting microinteractions that enhance usability and create memorable user experiences.","author": {"@type": "Person","name": "Interaction Designer Pixel Joy"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-05","dateModified": "2025-12-05"}`}} />
       </Head>
 
       <div className="min-h-screen bg-white text-black">
