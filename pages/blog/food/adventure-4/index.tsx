@@ -76,7 +76,7 @@ export default function WinePairing() {
 
               <h2 className="text-2xl font-bold text-purple-400 mt-8 mb-4">Classic Pairing Principles</h2>
               <p className="mb-4">
-                Traditional wine pairing guidelines have been refined over centuries, but they're based on sound scientific principles:
+                Traditional wine pairing guidelines have been refined over centuries, but they&rsquo;re based on sound scientific principles:
               </p>
               
               <h3 className="text-xl font-semibold text-pink-400 mt-6 mb-3">Regional Pairings</h3>
@@ -232,8 +232,8 @@ export default function WinePairing() {
                   <li>Start with simple pairings and gradually experiment with more complex combinations</li>
                   <li>Consider the preparation method of the food, not just the main ingredient</li>
                   <li>Match the intensity of wine and food to avoid one overpowering the other</li>
-                  <li>When in doubt, choose a wine with higher acidity—it's more versatile</li>
-                  <li>Don't be afraid to break traditional rules if you enjoy the combination</li>
+                  <li>When in doubt, choose a wine with higher acidity—it&rsquo;s more versatile</li>
+                  <li>Don&rsquo;t be afraid to break traditional rules if you enjoy the combination</li>
                 </ul>
               </div>
 

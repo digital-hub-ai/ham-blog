@@ -212,7 +212,7 @@ export default function FermentationFundamentals() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Q: How do I know if my ferment has gone bad?</h3>
-                    <p className="text-gray-300">A: Signs of spoilage include pink or orange mold, foul odors, or slimy textures. A white surface mold can often be removed, but colored molds require discarding the entire batch. Trust your senses—if something smells or looks off, it's better to discard it.</p>
+                    <p className="text-gray-300">A: Signs of spoilage include pink or orange mold, foul odors, or slimy textures. A white surface mold can often be removed, but colored molds require discarding the entire batch. Trust your senses—if something smells or looks off, it&rsquo;s better to discard it.</p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Q: How long do fermented foods last?</h3>
