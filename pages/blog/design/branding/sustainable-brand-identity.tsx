@@ -129,7 +129,7 @@ export default function SustainableBrandIdentity() {
             
             <p className="mb-6">
               Effective sustainable brand identities weave environmental responsibility into compelling narratives that 
-              connect emotionally with audiences. These stories go beyond product features to explore the brand's origin, 
+              connect emotionally with audiences. These stories go beyond product features to explore the brand&rsquo;s origin, 
               mission, and impact on communities and ecosystems. The most successful brands position themselves as allies 
               in customers&rsquo; sustainability journeys rather than distant corporations selling products.
             </p>
@@ -138,7 +138,7 @@ export default function SustainableBrandIdentity() {
               Community engagement plays a crucial role in sustainable branding, with brands partnering with environmental 
               organizations, supporting conservation efforts, and creating platforms for customers to participate in 
               positive environmental action. This participatory approach transforms passive consumers into active 
-              advocates who feel personally invested in the brand's success.
+              advocates who feel personally invested in the brand&rsquo;s success.
             </p>
 
             <h2 className="text-3xl font-bold mb-6 text-black">Future Trends in Sustainable Branding</h2>

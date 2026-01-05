@@ -102,7 +102,7 @@ export default function StreetFoodTour() {
 
               <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">Regional Specialties</h2>
               <p className="mb-4">
-                Bangkok's street food scene includes dishes from all over Thailand, representing the country's diverse regional cuisines:
+                Bangkok&rsquo;s street food scene includes dishes from all over Thailand, representing the country&rsquo;s diverse regional cuisines:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gray-800/50 p-4 rounded-lg">
@@ -125,7 +125,7 @@ export default function StreetFoodTour() {
 
               <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">Etiquette and Tips</h2>
               <p className="mb-4">
-                To fully appreciate Bangkok's street food scene, understanding local customs and practices enhances the experience:
+                To fully appreciate Bangkok&rsquo;s street food scene, understanding local customs and practices enhances the experience:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
                 <li><strong>Hygiene Assessment:</strong> Look for busy stalls with high turnover—this usually indicates fresh food</li>
@@ -136,7 +136,7 @@ export default function StreetFoodTour() {
 
               <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">Health and Safety Considerations</h2>
               <p className="mb-4">
-                While Bangkok's street food is generally safe, following some guidelines ensures an enjoyable experience:
+                While Bangkok&rsquo;s street food is generally safe, following some guidelines ensures an enjoyable experience:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gray-800/50 p-4 rounded-lg">
@@ -166,7 +166,7 @@ export default function StreetFoodTour() {
 
               <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">Conclusion</h2>
               <p className="mb-8">
-                Bangkok's night markets offer an unparalleled culinary adventure that combines authentic flavors, cultural immersion, and sensory excitement. Each visit reveals new discoveries, from a perfectly balanced bowl of noodles to a vendor who has perfected their recipe over decades. The experience extends beyond taste, encompassing the sights, sounds, and aromas that define Thai street food culture. For any food enthusiast, exploring these markets is essential to understanding the heart of Thai cuisine.
+                Bangkok&rsquo;s night markets offer an unparalleled culinary adventure that combines authentic flavors, cultural immersion, and sensory excitement. Each visit reveals new discoveries, from a perfectly balanced bowl of noodles to a vendor who has perfected their recipe over decades. The experience extends beyond taste, encompassing the sights, sounds, and aromas that define Thai street food culture. For any food enthusiast, exploring these markets is essential to understanding the heart of Thai cuisine.
               </p>
 
               <div className="bg-gradient-to-r from-yellow-900/50 to-orange-900/50 rounded-xl p-6 mb-8 border border-yellow-700/30">
@@ -174,14 +174,14 @@ export default function StreetFoodTour() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Q: Is it safe for tourists to eat street food in Bangkok?</h3>
-                    <p className="text-gray-300">A: Yes, Bangkok's street food is generally safe for tourists. Choose busy stalls with high turnover, ensure food is cooked fresh when ordering, and stick to vendors who follow good hygiene practices. The key is using common sense and observing local practices.</p>
+                    <p className="text-gray-300">A: Yes, Bangkok&rsquo;s street food is generally safe for tourists. Choose busy stalls with high turnover, ensure food is cooked fresh when ordering, and stick to vendors who follow good hygiene practices. The key is using common sense and observing local practices.</p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Q: How spicy is Bangkok street food typically?</h3>
                     <p className="text-gray-300">A: Spice levels vary widely. Most vendors will adjust heat according to your preference if you communicate clearly. Start with "mai pet" (not spicy) and gradually increase if desired. Remember that Thai chilies are quite hot compared to other cuisines.</p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Q: What's the typical cost of street food in Bangkok?</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">Q: What&rsquo;s the typical cost of street food in Bangkok?</h3>
                     <p className="text-gray-300">A: Street food in Bangkok is extremely affordable. Most dishes cost between 30-100 THB (approximately $1-3 USD). Even high-quality street food remains budget-friendly compared to restaurant prices.</p>
                   </div>
                 </div>

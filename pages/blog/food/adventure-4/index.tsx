@@ -40,7 +40,7 @@ export default function WinePairing() {
 
             <div className="prose prose-invert max-w-none">
               <p className="text-xl text-gray-300 mb-6">
-                Wine and food pairing is both an art and a science, combining sensory perception, cultural traditions, and chemical interactions. The perfect pairing creates a harmonious experience where both the wine and food enhance each other's flavors. Understanding the principles behind successful pairings allows you to make informed choices that elevate your dining experience, whether you're enjoying a simple meal at home or dining at an upscale restaurant.
+                Wine and food pairing is both an art and a science, combining sensory perception, cultural traditions, and chemical interactions. The perfect pairing creates a harmonious experience where both the wine and food enhance each other&rsquo;s flavors. Understanding the principles behind successful pairings allows you to make informed choices that elevate your dining experience, whether you're enjoying a simple meal at home or dining at an upscale restaurant.
               </p>
 
               <h2 className="text-2xl font-bold text-purple-400 mt-8 mb-4">The Science of Taste</h2>
@@ -62,7 +62,7 @@ export default function WinePairing() {
                 </div>
                 <div className="bg-gray-800/50 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-purple-400 mb-2">Tannins</h3>
-                  <p className="text-gray-300 text-sm">These compounds in red wine create a dry, puckering sensation. Tannins pair beautifully with proteins, especially red meat, as proteins soften the tannins' astringency.</p>
+                  <p className="text-gray-300 text-sm">These compounds in red wine create a dry, puckering sensation. Tannins pair beautifully with proteins, especially red meat, as proteins soften the tannins&rsquo; astringency.</p>
                 </div>
                 <div className="bg-gray-800/50 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-purple-400 mb-2">Alcohol</h3>
@@ -186,7 +186,7 @@ export default function WinePairing() {
                     <p className="text-gray-300">A: Not necessarily. While regional pairings often work well due to shared history and climate, many successful pairings cross regional boundaries. The key is matching the wine's characteristics with the food's flavors and textures.</p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Q: What if I don't like the "recommended" pairing?</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">Q: What if I don&rsquo;t like the "recommended" pairing?</h3>
                     <p className="text-gray-300">A: Personal preference is paramount. Wine pairing guidelines are just that—guidelines. If you enjoy a particular combination, that's the right pairing for you. The goal is to enhance your dining pleasure.</p>
                   </div>
                   <div>

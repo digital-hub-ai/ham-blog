@@ -45,7 +45,7 @@ export default function PlantBasedProteins() {
 
               <h2 className="text-2xl font-bold text-green-400 mt-8 mb-4">Understanding Plant Proteins</h2>
               <p className="mb-4">
-                Plant proteins differ from animal proteins in their amino acid profiles. While animal proteins typically contain all essential amino acids in optimal ratios, many plant proteins are &ldquo;incomplete,&rdquo; meaning they lack one or more essential amino acids in sufficient quantities. However, by combining different plant foods throughout the day, it's entirely possible to obtain all essential amino acids.
+                Plant proteins differ from animal proteins in their amino acid profiles. While animal proteins typically contain all essential amino acids in optimal ratios, many plant proteins are &ldquo;incomplete,&rdquo; meaning they lack one or more essential amino acids in sufficient quantities. However, by combining different plant foods throughout the day, it&rsquo;s entirely possible to obtain all essential amino acids.
               </p>
               <p className="mb-4">
                 The key to successful plant-based protein consumption lies in variety and complementarity. Different plant foods contain different amino acid profiles, and when combined, they can provide a complete amino acid spectrum similar to animal proteins.

@@ -68,7 +68,7 @@ export default function SourdoughStarter() {
 
               <h2 className="text-2xl font-bold text-amber-400 mt-8 mb-4">Environmental Factors</h2>
               <p className="mb-4">
-                Several environmental factors affect your starter's health and activity:
+                Several environmental factors affect your starter&rsquo;s health and activity:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gray-800/50 p-4 rounded-lg">
@@ -96,12 +96,12 @@ export default function SourdoughStarter() {
               
               <h3 className="text-xl font-semibold text-orange-400 mt-6 mb-3">The 1:1:1 Ratio</h3>
               <p className="mb-4">
-                The most common feeding ratio is 1:1:1 (starter:water:flour by weight). For example, if you have 50g of starter, feed it with 50g of water and 50g of flour. This creates a 100% hydration starter that's easy to manage.
+                The most common feeding ratio is 1:1:1 (starter:water:flour by weight). For example, if you have 50g of starter, feed it with 50g of water and 50g of flour. This creates a 100% hydration starter that&rsquo;s easy to manage.
               </p>
               
               <h3 className="text-xl font-semibold text-orange-400 mt-6 mb-3">Timing and Frequency</h3>
               <p className="mb-4">
-                Feed your starter when it's at peak activity, typically 4-8 hours after feeding depending on temperature and maturity. An active starter will be bubbly and have doubled in size. If you're baking regularly, keep your starter at room temperature and feed daily. For occasional baking, store it in the refrigerator and feed weekly.
+                Feed your starter when it's at peak activity, typically 4-8 hours after feeding depending on temperature and maturity. An active starter will be bubbly and have doubled in size. If you&rsquo;re baking regularly, keep your starter at room temperature and feed daily. For occasional baking, store it in the refrigerator and feed weekly.
               </p>
 
               <h2 className="text-2xl font-bold text-amber-400 mt-8 mb-4">Hydration Levels</h2>
@@ -170,7 +170,7 @@ export default function SourdoughStarter() {
                 If your starter develops problems, here are solutions to common issues:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li><strong>Pink or Orange Streaks:</strong> Discard the starter as it's contaminated with harmful bacteria</li>
+                <li><strong>Pink or Orange Streaks:</strong> Discard the starter as it&rsquo;s contaminated with harmful bacteria</li>
                 <li><strong>Very Strong Acetone Smell:</strong> The starter is hungry; increase feeding frequency</li>
                 <li><strong>No Rise After Feeding:</strong> May need more time to mature or a change in feeding routine</li>
                 <li><strong>Too Runny:</strong> Feed with a higher ratio of flour to water</li>
@@ -178,7 +178,7 @@ export default function SourdoughStarter() {
 
               <h2 className="text-2xl font-bold text-amber-400 mt-8 mb-4">Using Your Starter</h2>
               <p className="mb-4">
-                When your starter is active and healthy, it's ready to use for baking. Use it when it's at peak activity—typically 4-8 hours after feeding when it has doubled in size and is full of bubbles.
+                When your starter is active and healthy, it&rsquo;s ready to use for baking. Use it when it&rsquo;s at peak activity—typically 4-8 hours after feeding when it has doubled in size and is full of bubbles.
               </p>
 
               <h2 className="text-2xl font-bold text-amber-400 mt-8 mb-4">Conclusion</h2>

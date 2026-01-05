@@ -40,7 +40,7 @@ export default function FermentationFundamentals() {
 
             <div className="prose prose-invert max-w-none">
               <p className="text-xl text-gray-300 mb-6">
-                Fermentation is one of humanity's oldest food preservation techniques, dating back thousands of years. This ancient practice not only extends the shelf life of foods but also enhances their nutritional value, flavor, and digestibility. From Korean kimchi to German sauerkraut, from kombucha to yogurt, fermented foods are integral to cuisines worldwide. Understanding the science and techniques behind fermentation opens up a world of culinary possibilities while connecting us to our ancestral food wisdom.
+                Fermentation is one of humanity&rsquo;s oldest food preservation techniques, dating back thousands of years. This ancient practice not only extends the shelf life of foods but also enhances their nutritional value, flavor, and digestibility. From Korean kimchi to German sauerkraut, from kombucha to yogurt, fermented foods are integral to cuisines worldwide. Understanding the science and techniques behind fermentation opens up a world of culinary possibilities while connecting us to our ancestral food wisdom.
               </p>
 
               <h2 className="text-2xl font-bold text-cyan-400 mt-8 mb-4">The Science of Fermentation</h2>
