@@ -169,7 +169,7 @@ export default function AIRecipeGenerator() {
                   <p className="text-gray-300 text-sm">Taste preferences are highly individual and cultural, making universal recommendations difficult.</p>
                 </div>
                 <div className="bg-gray-800/50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-blue-400 mb-2">Ingredient Availability</h2>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-2">Ingredient Availability</h3>
                   <p className="text-gray-300 text-sm">AI systems must account for regional ingredient availability and pricing when generating recipes.</p>
                 </div>
               </div>

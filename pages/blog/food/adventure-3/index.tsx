@@ -80,7 +80,7 @@ export default function SourdoughStarter() {
                   <p className="text-gray-300 text-sm">Higher humidity can affect the consistency of your starter. You may need to adjust water ratios accordingly.</p>
                 </div>
                 <div className="bg-gray-800/50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-amber-400 mb-2">Altitude</h2>
+                  <h3 className="text-lg font-semibold text-amber-400 mb-2">Altitude</h3>
                   <p className="text-gray-300 text-sm">At higher altitudes, starters may be more active due to lower atmospheric pressure, requiring more frequent feedings.</p>
                 </div>
                 <div className="bg-gray-800/50 p-4 rounded-lg">
