@@ -88,7 +88,7 @@ export default function MinimalismLuxe() {
             </p>
             
             <p className="mb-6">
-              The "less is luxe" approach reflects cultural shifts toward mindfulness 
+              The &ldquo;less is luxe&rdquo; approach reflects cultural shifts toward mindfulness
               and intentionality, where consumers increasingly value experiences and 
               objects that promote clarity and focus. This mindset has transformed 
               minimalism from a stark, clinical aesthetic into a warm, inviting 

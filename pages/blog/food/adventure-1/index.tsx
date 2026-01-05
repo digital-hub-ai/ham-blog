@@ -129,7 +129,7 @@ export default function StreetFoodTour() {
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
                 <li><strong>Hygiene Assessment:</strong> Look for busy stalls with high turnover—this usually indicates fresh food</li>
-                <li><strong>Spice Communication:</strong> Learn the Thai words for spice levels: "mai pet" (not spicy), "pet nit noi" (a little spicy), "pet" (spicy)</li>
+                <li><strong>Spice Communication:</strong> Learn the Thai words for spice levels: &ldquo;mai pet&rdquo; (not spicy), &ldquo;pet nit noi&rdquo; (a little spicy), &ldquo;pet&rdquo; (spicy)</li>
                 <li><strong>Payment Practices:</strong> Carry small bills as many vendors may not have change for large notes</li>
                 <li><strong>Seating Etiquette:</strong> High turnover means you may need to share tables with strangers—this is normal and part of the experience</li>
               </ul>

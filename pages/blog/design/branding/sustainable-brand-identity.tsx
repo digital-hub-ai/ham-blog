@@ -80,7 +80,7 @@ export default function SustainableBrandIdentity() {
             <p className="mb-6">
               The contemporary consumer landscape has fundamentally shifted toward values-based purchasing decisions, with 
               environmental consciousness emerging as a primary driver of brand loyalty. Sustainable brand identity goes 
-              beyond superficial "green" aesthetics to embody genuine commitment to environmental stewardship through 
+              beyond superficial &ldquo;green&rdquo; aesthetics to embody genuine commitment to environmental stewardship through
               every touchpoint of the customer experience.
             </p>
             
