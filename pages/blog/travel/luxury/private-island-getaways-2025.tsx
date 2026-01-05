@@ -18,7 +18,7 @@ export default function PrivateIslandGetaways2025() {
         <meta property="article:tag" content="Private Islands" />
         <meta property="article:tag" content="Luxury Travel" />
         <meta property="article:tag" content="Exclusive Vacations" />
-        <script 
+        <scriptczxvbnmjk
           type="application/ld+json" 
           dangerouslySetInnerHTML={{__html: JSON.stringify({
             "@context": "https://schema.org",

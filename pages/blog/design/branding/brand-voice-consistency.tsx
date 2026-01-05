@@ -96,7 +96,7 @@ export default function BrandVoiceConsistency() {
             
             <p className="mb-6">
               Effective brand voice guidelines move beyond abstract adjectives to provide concrete examples 
-              of how the brand speaks in various situations. Rather than simply stating &ldquo;be friendly&rdquo;," 
+              of how the brand speaks in various situations. Rather than simply stating &ldquo;be friendly&rdquo;,&rdquo;" 
               guidelines should demonstrate what friendly sounds like through sample copy, dialogue examples, 
               and clear dos and don&rsquo;ts. These guidelines become living documents that evolve with the brand 
               while maintaining core personality anchors.

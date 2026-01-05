@@ -139,7 +139,7 @@ export default function HolographicUI() {
             
             <p className="mb-6">
               Asset streaming and predictive loading anticipate user needs based on gaze direction 
-              and movement patterns, preloading relevant content before it's needed. This proactive 
+              and movement patterns, preloading relevant content before it&rsquo;s needed. This proactive 
               approach minimizes latency and creates more seamless experiences that don&rsquo;t interrupt 
               users&rsquo; workflow or break immersion
             </p>
