@@ -113,7 +113,7 @@ const nextConfig = {
     config.plugins.push(
       new webpack.EnvironmentPlugin({
         NODE_ENV: process.env.NODE_ENV,
-        NEXT_PUBLIC_GA_TRACKING_ID: process.env.NEXT_PUBLIC_GA_TRACKING_ID || &apos;&apos;,
+        NEXT_PUBLIC_GA_TRACKING_ID: process.env.NEXT_PUBLIC_GA_TRACKING_ID || '',
       })
     );
 
@@ -128,7 +128,7 @@ const nextConfig = {
     if (!dev) {
       config.optimization.minimize = true;
       config.optimization.splitChunks = {
-        chunks: &apos;all&apos;,
+        chunks: 'all',
         maxInitialRequests: 25,
         minSize: 20000,
         maxSize: 244000,
@@ -139,7 +139,7 @@ const nextConfig = {
               const packageName = module.context.match(
                 /[\\/]node_modules[\\/](.*?)([\\/]|$)/
               )[1];
-              return `npm.${packageName.replace(&apos;@&apos;, &apos;&apos;)}`;
+              return `npm.${packageName.replace('@', '')}`;
             },
           },
         },
@@ -154,30 +154,30 @@ const nextConfig = {
     return [
       // Security headers for all routes
       {
-        source: &apos;/(.*)&apos;,
+        source: '/(.*)',
         headers: securityHeaders,
       },
       // API CORS headers
       {
-        source: &apos;/api/:path*&apos;,
+        source: '/api/:path*',
         headers: [
-          { key: &apos;Access-Control-Allow-Credentials&apos;, value: &apos;true&apos; },
-          { key: &apos;Access-Control-Allow-Origin&apos;, value: &apos;*&apos; },
-          { key: &apos;Access-Control-Allow-Methods&apos;, value: &apos;GET,OPTIONS,PATCH,DELETE,POST,PUT&apos; },
-          { key: &apos;Access-Control-Allow-Headers&apos;, value: &apos;X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version&apos; },
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT' },
+          { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version' },
         ],
       },
       // Cache static assets
       {
-        source: &apos;/_next/static/:path*&apos;,
+        source: '/_next/static/:path*',
         headers: [
-          { key: &apos;Cache-Control&apos;, value: &apos;public, max-age=31536000, immutable&apos; },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
       {
-        source: &apos;/static/:path*&apos;,
+        source: '/static/:path*',
         headers: [
-          { key: &apos;Cache-Control&apos;, value: &apos;public, max-age=31536000, immutable&apos; },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];
@@ -185,20 +185,20 @@ const nextConfig = {
 
   // Environment variables
   env: {
-    SITE_URL: process.env.SITE_URL || &apos;https://aitoolsdirectory.com&apos;,
+    SITE_URL: process.env.SITE_URL || 'https://aitoolsdirectory.com',
   },
 
   // Redirects and rewrites
   async redirects() {
     return [
       {
-        source: &apos;/privacy&apos;,
-        destination: &apos;/privacy-policy&apos;,
+        source: '/privacy',
+        destination: '/privacy-policy',
         permanent: true,
       },
       {
-        source: &apos;/tos&apos;,
-        destination: &apos;/terms-of-service&apos;,
+        source: '/tos',
+        destination: '/terms-of-service',
         permanent: true,
       },
     ];
@@ -206,15 +206,15 @@ const nextConfig = {
 
   // Internationalization (i18n) configuration
   i18n: {
-    locales: [&apos;en&apos;],
-    defaultLocale: &apos;en&apos;,
+    locales: ['en'],
+    defaultLocale: 'en',
   },
 };
 
 // Bundle analyzer for production builds
-if (process.env.ANALYZE === &apos;true&apos;) {
-  const withBundleAnalyzer = require(&apos;@next/bundle-analyzer&apos;)({
-    enabled: process.env.ANALYZE === &apos;true&apos;,
+if (process.env.ANALYZE === 'true') {
+  const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true',
   });
   module.exports = withBundleAnalyzer(nextConfig);
 } else {
