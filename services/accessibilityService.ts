@@ -4,33 +4,33 @@
 
 // Accessibility features
 export type AccessibilityFeature = 
-  | 'screen-reader'      // Screen reader optimization
-  | 'keyboard-nav'       // Keyboard navigation
-  | 'high-contrast'      // High contrast mode
-  | 'text-size'          // Text size adjustment
-  | 'color-blind'        // Color blindness support
-  | 'voice-control'      // Voice control support
-  | 'braille'            // Braille display support
-  | 'cognitive'          // Cognitive accessibility
-  | 'motor'              // Motor impairment support
-  | 'custom';            // Custom accessibility features
+  | &apos;screen-reader&apos;      // Screen reader optimization
+  | &apos;keyboard-nav&apos;       // Keyboard navigation
+  | &apos;high-contrast&apos;      // High contrast mode
+  | &apos;text-size&apos;          // Text size adjustment
+  | &apos;color-blind&apos;        // Color blindness support
+  | &apos;voice-control&apos;      // Voice control support
+  | &apos;braille&apos;            // Braille display support
+  | &apos;cognitive&apos;          // Cognitive accessibility
+  | &apos;motor&apos;              // Motor impairment support
+  | &apos;custom&apos;;            // Custom accessibility features
 
 // Accessibility compliance standards
 export type AccessibilityStandard = 
-  | 'wcag-2.1'           // Web Content Accessibility Guidelines 2.1
-  | 'wcag-2.2'           // Web Content Accessibility Guidelines 2.2
-  | 'section-508'        // Section 508 of the Rehabilitation Act
-  | 'ada'                // Americans with Disabilities Act
-  | 'en-301-549'         // European standard for accessibility
-  | 'custom';            // Custom accessibility standards
+  | &apos;wcag-2.1&apos;           // Web Content Accessibility Guidelines 2.1
+  | &apos;wcag-2.2&apos;           // Web Content Accessibility Guidelines 2.2
+  | &apos;section-508&apos;        // Section 508 of the Rehabilitation Act
+  | &apos;ada&apos;                // Americans with Disabilities Act
+  | &apos;en-301-549&apos;         // European standard for accessibility
+  | &apos;custom&apos;;            // Custom accessibility standards
 
 // User accessibility preferences
 export interface AccessibilityPreferences {
   userId?: string;
   features: AccessibilityFeature[];
-  textSize: 'small' | 'medium' | 'large' | 'extra-large';
-  contrast: 'normal' | 'high' | 'black-on-white' | 'white-on-black';
-  colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  textSize: &apos;small&apos; | &apos;medium&apos; | &apos;large&apos; | &apos;extra-large&apos;;
+  contrast: &apos;normal&apos; | &apos;high&apos; | &apos;black-on-white&apos; | &apos;white-on-black&apos;;
+  colorBlindMode: &apos;none&apos; | &apos;protanopia&apos; | &apos;deuteranopia&apos; | &apos;tritanopia&apos;;
   screenReader: boolean;
   keyboardNavigation: boolean;
   voiceControl: boolean;
@@ -54,7 +54,7 @@ export interface AccessibilityEvaluation {
 export interface AccessibilityIssue {
   id: string;
   type: AccessibilityIssueType;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos; | &apos;critical&apos;;
   description: string;
   element?: string; // Selector or description of affected element
   wcagCriterion?: string; // WCAG criterion if applicable
@@ -63,19 +63,19 @@ export interface AccessibilityIssue {
 
 // Accessibility issue types
 export type AccessibilityIssueType = 
-  | 'missing-alt-text'        // Missing alternative text for images
-  | 'insufficient-contrast'   // Text/background contrast too low
-  | 'missing-label'           // Form elements missing labels
-  | 'empty-heading'           // Empty heading elements
-  | 'missing-lang'            // Missing language attribute
-  | 'non-descriptive-link'    // Links with non-descriptive text
-  | 'missing-caption'         // Media missing captions
-  | 'keyboard-trap'           // Keyboard trap detected
-  | 'missing-title'           // Missing page title
-  | 'duplicate-id'            // Duplicate element IDs
-  | 'small-text'              // Text too small
-  | 'missing-aria'            // Missing ARIA attributes
-  | 'custom';                 // Custom issue type
+  | &apos;missing-alt-text&apos;        // Missing alternative text for images
+  | &apos;insufficient-contrast&apos;   // Text/background contrast too low
+  | &apos;missing-label&apos;           // Form elements missing labels
+  | &apos;empty-heading&apos;           // Empty heading elements
+  | &apos;missing-lang&apos;            // Missing language attribute
+  | &apos;non-descriptive-link&apos;    // Links with non-descriptive text
+  | &apos;missing-caption&apos;         // Media missing captions
+  | &apos;keyboard-trap&apos;           // Keyboard trap detected
+  | &apos;missing-title&apos;           // Missing page title
+  | &apos;duplicate-id&apos;            // Duplicate element IDs
+  | &apos;small-text&apos;              // Text too small
+  | &apos;missing-aria&apos;            // Missing ARIA attributes
+  | &apos;custom&apos;;                 // Custom issue type
 
 // Accessibility suggestion
 export interface AccessibilitySuggestion {
@@ -83,8 +83,8 @@ export interface AccessibilitySuggestion {
   issueId: string;
   description: string;
   implementation: string;
-  priority: 'low' | 'medium' | 'high';
-  estimatedEffort: 'minutes' | 'hours' | 'days';
+  priority: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos;;
+  estimatedEffort: &apos;minutes&apos; | &apos;hours&apos; | &apos;days&apos;;
 }
 
 // Accessible content result
@@ -117,10 +117,10 @@ export class AccessibilityService {
   constructor() {
     this.userPreferences = new Map();
     this.defaultPreferences = {
-      features: ['keyboard-nav', 'screen-reader'],
-      textSize: 'medium',
-      contrast: 'normal',
-      colorBlindMode: 'none',
+      features: [&apos;keyboard-nav&apos;, &apos;screen-reader&apos;],
+      textSize: &apos;medium&apos;,
+      contrast: &apos;normal&apos;,
+      colorBlindMode: &apos;none&apos;,
       screenReader: false,
       keyboardNavigation: true,
       voiceControl: false,
@@ -128,7 +128,7 @@ export class AccessibilityService {
       simplifiedInterface: false
     };
     this.supportedStandards = new Set([
-      'wcag-2.1', 'wcag-2.2', 'section-508'
+      &apos;wcag-2.1&apos;, &apos;wcag-2.2&apos;, &apos;section-508&apos;
     ]);
   }
 
@@ -241,8 +241,8 @@ export class AccessibilityService {
     const headings = optimizedContent.match(/(^|\n)#{1,6} .+/g);
     if (headings) {
       headings.forEach(heading => {
-        const level = (heading.match(/^#*/) || [''])[0].length;
-        const text = heading.replace(/^#*\s*/, '');
+        const level = (heading.match(/^#*/) || [&apos;&apos;])[0].length;
+        const text = heading.replace(/^#*\s*/, &apos;&apos;);
         const replacement = `<h${level}>${text}</h${level}>`;
         optimizedContent = optimizedContent.replace(heading, replacement);
         
@@ -262,12 +262,12 @@ export class AccessibilityService {
       images.forEach(image => {
         const altText = image.match(/!\[([^\]]*)\]/);
         if (altText && !altText[1]) {
-          const replacement = image.replace('![', '![Decorative image ');
+          const replacement = image.replace(&apos;![&apos;, &apos;![Decorative image &apos;);
           optimizedContent = optimizedContent.replace(image, replacement);
           
           modifications.push({
             id: `sr_alt_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-            feature: 'screen-reader',
+            feature: &apos;screen-reader&apos;,
             description: `Added descriptive alt text to image`,
             originalContent: image,
             modifiedContent: replacement
@@ -397,19 +397,19 @@ export class AccessibilityService {
       .replace(/(?:however|nevertheless|nonetheless|consequently|therefore)/gi, 'so')
       .replace(/(?:utilize|facilitate|implement)/gi, (match) => {
         const simplifications: Record<string, string> = {
-          'utilize': 'use',
-          'facilitate': 'help',
-          'implement': 'do'
+          &apos;utilize&apos;: &apos;use&apos;,
+          &apos;facilitate&apos;: &apos;help&apos;,
+          &apos;implement&apos;: &apos;do&apos;
         };
         return simplifications[match.toLowerCase()] || match;
       });
     
     modifications.push({
       id: `cog_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      feature: 'cognitive',
-      description: 'Simplified language and structure for cognitive accessibility',
-      originalContent: content.substring(0, 100) + '...',
-      modifiedContent: simplifiedContent.substring(0, 100) + '...'
+      feature: &apos;cognitive&apos;,
+      description: &apos;Simplified language and structure for cognitive accessibility&apos;,
+      originalContent: content.substring(0, 100) + &apos;...&apos;,
+      modifiedContent: simplifiedContent.substring(0, 100) + &apos;...&apos;
     });
     
     return {
@@ -430,10 +430,10 @@ export class AccessibilityService {
     // Increase touch target sizes and spacing
     modifications.push({
       id: `motor_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      feature: 'motor',
-      description: 'Enhanced touch targets and spacing for motor accessibility',
-      originalContent: content.substring(0, 100) + '...',
-      modifiedContent: 'Content with enhanced motor support'
+      feature: &apos;motor&apos;,
+      description: &apos;Enhanced touch targets and spacing for motor accessibility&apos;,
+      originalContent: content.substring(0, 100) + &apos;...&apos;,
+      modifiedContent: &apos;Content with enhanced motor support&apos;
     });
     
     return {
@@ -447,7 +447,7 @@ export class AccessibilityService {
    */
   evaluateAccessibility(
     content: string,
-    standards: AccessibilityStandard[] = ['wcag-2.1']
+    standards: AccessibilityStandard[] = [&apos;wcag-2.1&apos;]
   ): AccessibilityEvaluation {
     const issues: AccessibilityIssue[] = [];
     const suggestions: AccessibilitySuggestion[] = [];
@@ -459,21 +459,21 @@ export class AccessibilityService {
         const issueId = `issue_${Date.now()}_${index}`;
         issues.push({
           id: issueId,
-          type: 'missing-alt-text',
-          severity: 'high',
-          description: 'Image missing alternative text',
+          type: &apos;missing-alt-text&apos;,
+          severity: &apos;high&apos;,
+          description: &apos;Image missing alternative text&apos;,
           element: img,
-          wcagCriterion: '1.1.1',
-          recommendation: 'Add descriptive alt attribute to image'
+          wcagCriterion: &apos;1.1.1&apos;,
+          recommendation: &apos;Add descriptive alt attribute to image&apos;
         });
         
         suggestions.push({
           id: `suggestion_${Date.now()}_${index}`,
           issueId,
-          description: 'Add meaningful alternative text',
-          implementation: 'Add alt="descriptive text" attribute to the img tag',
-          priority: 'high',
-          estimatedEffort: 'minutes'
+          description: &apos;Add meaningful alternative text&apos;,
+          implementation: &apos;Add alt="descriptive text&quot; attribute to the img tag&apos;,
+          priority: &apos;high&apos;,
+          estimatedEffort: &apos;minutes&apos;
         });
       });
     }
@@ -487,20 +487,20 @@ export class AccessibilityService {
       const issueId = `issue_${Date.now()}_contrast`;
       issues.push({
         id: issueId,
-        type: 'insufficient-contrast',
-        severity: 'medium',
-        description: 'Potential insufficient color contrast',
-        wcagCriterion: '1.4.3',
-        recommendation: 'Ensure text and background colors have sufficient contrast ratio'
+        type: &apos;insufficient-contrast&apos;,
+        severity: &apos;medium&apos;,
+        description: &apos;Potential insufficient color contrast&apos;,
+        wcagCriterion: &apos;1.4.3&apos;,
+        recommendation: &apos;Ensure text and background colors have sufficient contrast ratio&apos;
       });
       
       suggestions.push({
         id: `suggestion_${Date.now()}_contrast`,
         issueId,
-        description: 'Improve color contrast',
-        implementation: 'Adjust text or background colors to meet WCAG contrast requirements',
-        priority: 'medium',
-        estimatedEffort: 'hours'
+        description: &apos;Improve color contrast&apos;,
+        implementation: &apos;Adjust text or background colors to meet WCAG contrast requirements&apos;,
+        priority: &apos;medium&apos;,
+        estimatedEffort: &apos;hours&apos;
       });
     }
     
@@ -511,21 +511,21 @@ export class AccessibilityService {
         const issueId = `issue_${Date.now()}_label_${index}`;
         issues.push({
           id: issueId,
-          type: 'missing-label',
-          severity: 'high',
-          description: 'Form input missing associated label',
+          type: &apos;missing-label&apos;,
+          severity: &apos;high&apos;,
+          description: &apos;Form input missing associated label&apos;,
           element: input,
-          wcagCriterion: '1.3.1, 3.3.2',
-          recommendation: 'Add label element or aria-label attribute'
+          wcagCriterion: &apos;1.3.1, 3.3.2&apos;,
+          recommendation: &apos;Add label element or aria-label attribute&apos;
         });
         
         suggestions.push({
           id: `suggestion_${Date.now()}_label_${index}`,
           issueId,
-          description: 'Associate input with label',
-          implementation: 'Add <label> element or aria-label attribute for the input',
-          priority: 'high',
-          estimatedEffort: 'minutes'
+          description: &apos;Associate input with label&apos;,
+          implementation: &apos;Add <label> element or aria-label attribute for the input&apos;,
+          priority: &apos;high&apos;,
+          estimatedEffort: &apos;minutes&apos;
         });
       });
     }
@@ -536,7 +536,7 @@ export class AccessibilityService {
     
     return {
       id: `eval_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      content: content.substring(0, 200) + '...',
+      content: content.substring(0, 200) + &apos;...&apos;,
       score,
       issues,
       suggestions,
@@ -593,7 +593,7 @@ export class AccessibilityService {
     const recommendations: string[] = [];
     Object.entries(issuesByType).forEach(([type, count]) => {
       if (count > 0) {
-        recommendations.push(`Address ${count} instances of ${type.replace(/-/g, ' ')}`);
+        recommendations.push(`Address ${count} instances of ${type.replace(/-/g, &apos; &apos;)}`);
       }
     });
     
@@ -616,8 +616,8 @@ export class AccessibilityService {
   } {
     return {
       features: [
-        'screen-reader', 'keyboard-nav', 'high-contrast', 'text-size',
-        'color-blind', 'voice-control', 'braille', 'cognitive', 'motor'
+        &apos;screen-reader&apos;, &apos;keyboard-nav&apos;, &apos;high-contrast&apos;, &apos;text-size&apos;,
+        &apos;color-blind&apos;, &apos;voice-control&apos;, &apos;braille&apos;, &apos;cognitive&apos;, &apos;motor&apos;
       ],
       standards: Array.from(this.supportedStandards)
     };
@@ -635,16 +635,16 @@ export class AccessibilityService {
     
     // In a real implementation, this would track actual feature usage
     const featuresUsage: Record<AccessibilityFeature, number> = {
-      'screen-reader': Math.floor(totalUsers * 0.1),
-      'keyboard-nav': Math.floor(totalUsers * 0.8),
-      'high-contrast': Math.floor(totalUsers * 0.15),
-      'text-size': Math.floor(totalUsers * 0.25),
-      'color-blind': Math.floor(totalUsers * 0.05),
-      'voice-control': Math.floor(totalUsers * 0.02),
-      'braille': Math.floor(totalUsers * 0.01),
-      'cognitive': Math.floor(totalUsers * 0.1),
-      'motor': Math.floor(totalUsers * 0.05),
-      'custom': Math.floor(totalUsers * 0.03)
+      &apos;screen-reader&apos;: Math.floor(totalUsers * 0.1),
+      &apos;keyboard-nav&apos;: Math.floor(totalUsers * 0.8),
+      &apos;high-contrast&apos;: Math.floor(totalUsers * 0.15),
+      &apos;text-size&apos;: Math.floor(totalUsers * 0.25),
+      &apos;color-blind&apos;: Math.floor(totalUsers * 0.05),
+      &apos;voice-control&apos;: Math.floor(totalUsers * 0.02),
+      &apos;braille&apos;: Math.floor(totalUsers * 0.01),
+      &apos;cognitive&apos;: Math.floor(totalUsers * 0.1),
+      &apos;motor&apos;: Math.floor(totalUsers * 0.05),
+      &apos;custom&apos;: Math.floor(totalUsers * 0.03)
     };
     
     // Simulated average accessibility score

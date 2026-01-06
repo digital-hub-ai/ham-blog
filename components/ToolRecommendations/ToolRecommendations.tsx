@@ -1,11 +1,11 @@
-'use client';
+&apos;use client&apos;;
 
-import { useState, useEffect } from 'react';
-import { Tool } from '@/types/tool';
-import Link from 'next/link';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faRandom } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from &apos;react&apos;;
+import { Tool } from &apos;@/types/tool&apos;;
+import Link from &apos;next/link&apos;;
+import Image from &apos;next/image&apos;;
+import { FontAwesomeIcon } from &apos;@fortawesome/react-fontawesome&apos;;
+import { faArrowRight, faRandom } from &apos;@fortawesome/free-solid-svg-icons&apos;;
 
 interface ToolRecommendationsProps {
   currentToolId?: string;
@@ -48,7 +48,7 @@ const ToolRecommendations: React.FC<ToolRecommendationsProps> = ({
     // Take top N tools
     const selectedTools = tools.slice(0, maxTools);
     
-    // If we don't have enough tools, fill with random ones
+    // If we don&apos;t have enough tools, fill with random ones
     if (selectedTools.length < maxTools) {
       const remaining = allTools
         .filter(tool => 
@@ -67,9 +67,9 @@ const ToolRecommendations: React.FC<ToolRecommendationsProps> = ({
 
   if (isLoading) {
     return (
-      <div className="animate-pulse space-y-4">
+      <div className="animate-pulse space-y-4&quot;>
         {[...Array(3)].map((_, i) => (
-          <div key={i} className="h-20 bg-gray-200 dark:bg-gray-700 rounded-lg"></div>
+          <div key={i} className="h-20 bg-gray-200 dark:bg-gray-700 rounded-lg&quot;></div>
         ))}
       </div>
     );
@@ -80,67 +80,67 @@ const ToolRecommendations: React.FC<ToolRecommendationsProps> = ({
   }
 
   return (
-    <div className="mt-12">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-          {category ? 'Similar Tools' : 'Recommended Tools'}
+    <div className="mt-12&quot;>
+      <div className="flex justify-between items-center mb-6&quot;>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white&quot;>
+          {category ? &apos;Similar Tools&apos; : &apos;Recommended Tools&apos;}
         </h2>
         <button 
           onClick={() => window.location.reload()}
-          className="flex items-center text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+          className="flex items-center text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors&quot;
         >
-          <FontAwesomeIcon icon={faRandom} className="mr-2" fixedWidth /> Refresh
+          <FontAwesomeIcon icon={faRandom} className="mr-2&quot; fixedWidth /> Refresh
         </button>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
         {recommendedTools.map((tool) => (
           <div 
             key={tool.id}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700&quot;
           >
-            <div className="p-5">
-              <div className="flex items-center mb-3">
+            <div className="p-5&quot;>
+              <div className="flex items-center mb-3&quot;>
                 {tool.logo && (
-                  <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center mr-3 overflow-hidden">
+                  <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center mr-3 overflow-hidden&quot;>
                     <Image 
                       src={tool.logo} 
                       alt={`${tool.name} logo`} 
-                      className="w-8 h-8 object-contain"
+                      className="w-8 h-8 object-contain&quot;
                       width={32}
                       height={32}
                     />
                   </div>
                 )}
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white&quot;>
                   {tool.name}
                 </h3>
               </div>
               
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2&quot;>
                 {tool.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-4&quot;>
                 {tool.tags.slice(0, 3).map((tag) => (
                   <span 
                     key={tag} 
-                    className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                    className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200&quot;
                   >
                     {tag}
                   </span>
                 ))}
               </div>
               
-              <div className="flex justify-between items-center">
-                <span className="text-sm font-medium px-3 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+              <div className="flex justify-between items-center&quot;>
+                <span className="text-sm font-medium px-3 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200&quot;>
                   {tool.pricing}
                 </span>
                 <Link 
                   href={`/tools/${tool.id}`}
-                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium flex items-center"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium flex items-center&quot;
                 >
-                  <FontAwesomeIcon icon={faArrowRight} className="ml-2" fixedWidth /> View Tool
+                  <FontAwesomeIcon icon={faArrowRight} className="ml-2&quot; fixedWidth /> View Tool
                 </Link>
               </div>
             </div>

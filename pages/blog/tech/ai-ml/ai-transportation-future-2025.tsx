@@ -7,73 +7,73 @@ const AiTransportationFuture2025 = () => {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50&quot;>
       <Head>
         <title>AI in Transportation: The Future of Autonomous Vehicles and Smart Mobility - AI Vault</title>
-        <meta name="description" content="Discover how AI is transforming transportation in 2025. Explore self-driving vehicles, smart traffic systems, and the future of urban mobility powered by artificial intelligence." />
-        <meta name="keywords" content="AI in transportation, autonomous vehicles 2025, self-driving cars, smart mobility, traffic management, transportation AI" />
-        <meta name="author" content="AI Vault Mobility Team" />
-        <link rel="canonical" href="https://aivault.com/blog/ai-transportation-future-2025" />
+        <meta name="description&quot; content="Discover how AI is transforming transportation in 2025. Explore self-driving vehicles, smart traffic systems, and the future of urban mobility powered by artificial intelligence.&quot; />
+        <meta name="keywords&quot; content="AI in transportation, autonomous vehicles 2025, self-driving cars, smart mobility, traffic management, transportation AI&quot; />
+        <meta name="author&quot; content="AI Vault Mobility Team&quot; />
+        <link rel="canonical&quot; href="https://aivault.com/blog/ai-transportation-future-2025&quot; />
         
         {/* Open Graph */}
-        <meta property="og:title" content="AI in Transportation: The Future of Autonomous Vehicles and Smart Mobility" />
-        <meta property="og:description" content="Discover how AI is revolutionizing transportation with self-driving vehicles, smart traffic systems, and next-generation mobility solutions in 2025." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://aivault.com/blog/ai-transportation-future-2025" />
-        <meta property="og:image" content="https://aivault.com/images/blog/ai-transportation-future-2025.jpg" />
-        <meta property="og:site_name" content="AI Vault" />
-        <meta property="article:published_time" content="2025-04-23" />
-        <meta property="article:modified_time" content="2025-04-23" />
-        <meta property="article:author" content="AI Vault Mobility Team" />
-        <meta property="article:tag" content="Transportation" />
-        <meta property="article:section" content="Technology" />
+        <meta property="og:title&quot; content="AI in Transportation: The Future of Autonomous Vehicles and Smart Mobility&quot; />
+        <meta property="og:description&quot; content="Discover how AI is revolutionizing transportation with self-driving vehicles, smart traffic systems, and next-generation mobility solutions in 2025.&quot; />
+        <meta property="og:type&quot; content="article&quot; />
+        <meta property="og:url&quot; content="https://aivault.com/blog/ai-transportation-future-2025&quot; />
+        <meta property="og:image&quot; content="https://aivault.com/images/blog/ai-transportation-future-2025.jpg&quot; />
+        <meta property="og:site_name&quot; content="AI Vault&quot; />
+        <meta property="article:published_time&quot; content="2025-04-23&quot; />
+        <meta property="article:modified_time&quot; content="2025-04-23&quot; />
+        <meta property="article:author&quot; content="AI Vault Mobility Team&quot; />
+        <meta property="article:tag&quot; content="Transportation&quot; />
+        <meta property="article:section&quot; content="Technology&quot; />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI in Transportation 2025" />
-        <meta name="twitter:description" content="How AI is driving the future of autonomous vehicles and smart mobility solutions." />
-        <meta name="twitter:image" content="https://aivault.com/images/blog/ai-transportation-future-2025.jpg" />
-        <meta name="twitter:site" content="@aivault" />
+        <meta name="twitter:card&quot; content="summary_large_image&quot; />
+        <meta name="twitter:title&quot; content="AI in Transportation 2025&quot; />
+        <meta name="twitter:description&quot; content="How AI is driving the future of autonomous vehicles and smart mobility solutions.&quot; />
+        <meta name="twitter:image&quot; content="https://aivault.com/images/blog/ai-transportation-future-2025.jpg&quot; />
+        <meta name="twitter:site&quot; content="@aivault&quot; />
         
         {/* Structured Data - Article */}
-        <script type="application/ld+json">
+        <script type="application/ld+json&quot;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "AI in Transportation: The Future of Autonomous Vehicles and Smart Mobility",
-            "description": "Discover how AI is revolutionizing transportation with self-driving vehicles, smart traffic systems, and next-generation mobility solutions in 2025.",
-            "author": {
-              "@type": "Organization",
-              "name": "AI Vault Mobility Team"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;Article&quot;,
+            &quot;headline&quot;: &quot;AI in Transportation: The Future of Autonomous Vehicles and Smart Mobility&quot;,
+            &quot;description&quot;: &quot;Discover how AI is revolutionizing transportation with self-driving vehicles, smart traffic systems, and next-generation mobility solutions in 2025.&quot;,
+            &quot;author&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;AI Vault Mobility Team&quot;
             },
-            "datePublished": "2025-04-23",
-            "image": "https://aivault.com/images/blog/ai-transportation-future-2025.jpg"
+            &quot;datePublished&quot;: &quot;2025-04-23&quot;,
+            &quot;image&quot;: &quot;https://aivault.com/images/blog/ai-transportation-future-2025.jpg&quot;
           })}
         </script>
       </Head>
 
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-gray-900">AI in Transportation 2025</h1>
-            <Link href="/blog" className="text-blue-600 hover:text-blue-800">
+      <header className="bg-white shadow-sm&quot;>
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;>
+          <div className="flex justify-between items-center&quot;>
+            <h1 className="text-3xl font-bold text-gray-900&quot;>AI in Transportation 2025</h1>
+            <Link href="/blog&quot; className="text-blue-600 hover:text-blue-800&quot;>
               ← Back to Blog
             </Link>
           </div>
-          <p className="mt-2 text-lg text-gray-600">The Future of Autonomous Vehicles and Smart Mobility</p>
-          <div className="mt-4 flex items-center text-sm text-gray-500">
+          <p className="mt-2 text-lg text-gray-600&quot;>The Future of Autonomous Vehicles and Smart Mobility</p>
+          <div className="mt-4 flex items-center text-sm text-gray-500&quot;>
             <span>By AI Vault Mobility Team</span>
-            <span className="mx-2">•</span>
-            <time dateTime="2025-04-23">April 23, 2025</time>
-            <span className="mx-2">•</span>
+            <span className="mx-2&quot;>•</span>
+            <time dateTime="2025-04-23&quot;>April 23, 2025</time>
+            <span className="mx-2&quot;>•</span>
             <span>52 min read</span>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
-          <div className="prose max-w-none">
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8&quot;>
+        <div className="px-4 py-6 sm:px-0&quot;>
+          <div className="prose max-w-none&quot;>
             <h2>Introduction</h2>
             <p>
               The transportation sector is undergoing its most significant transformation since the invention of the automobile, driven by rapid advancements in artificial intelligence. In 2025, AI-powered transportation systems are redefining how people and goods move, making travel safer, more efficient, and more sustainable. This article explores the cutting-edge AI technologies that are shaping the future of mobility.
@@ -81,14 +81,14 @@ const AiTransportationFuture2025 = () => {
             
             <h2>The Evolution of AI in Transportation</h2>
             <p>
-              AI in transportation has evolved from basic driver assistance systems to fully autonomous vehicles and intelligent transportation networks. Today's AI systems can process vast amounts of data from cameras, LIDAR, radar, and other sensors in real-time, enabling vehicles to navigate complex environments with human-like perception and decision-making capabilities. The integration of 5G and edge computing has further accelerated this transformation, allowing for near-instantaneous communication between vehicles and infrastructure.
+              AI in transportation has evolved from basic driver assistance systems to fully autonomous vehicles and intelligent transportation networks. Today&apos;s AI systems can process vast amounts of data from cameras, LIDAR, radar, and other sensors in real-time, enabling vehicles to navigate complex environments with human-like perception and decision-making capabilities. The integration of 5G and edge computing has further accelerated this transformation, allowing for near-instantaneous communication between vehicles and infrastructure.
             </p>
 
             <h2>Key Applications of AI in Transportation</h2>
             
             <h3>1. Autonomous Vehicles</h3>
             <p>
-              Self-driving cars have become a common sight on roads worldwide, with AI systems capable of handling complex urban environments, adverse weather conditions, and unpredictable human behavior. In 2025, we're seeing the widespread adoption of Level 4 and 5 autonomous vehicles for ride-sharing, freight transport, and personal mobility, significantly reducing accidents caused by human error.
+              Self-driving cars have become a common sight on roads worldwide, with AI systems capable of handling complex urban environments, adverse weather conditions, and unpredictable human behavior. In 2025, we&apos;re seeing the widespread adoption of Level 4 and 5 autonomous vehicles for ride-sharing, freight transport, and personal mobility, significantly reducing accidents caused by human error.
             </p>
             
             <h3>2. Smart Traffic Management</h3>
@@ -123,26 +123,26 @@ const AiTransportationFuture2025 = () => {
 
             <h2>Conclusion</h2>
             <p>
-              AI is not just changing how we move; it's redefining the very concept of transportation. As we progress through 2025, the integration of AI into transportation systems is creating safer, cleaner, and more efficient mobility solutions. While challenges remain, the potential benefits—from reduced emissions and traffic fatalities to increased accessibility and economic growth—are too significant to ignore. The transportation revolution powered by AI is well underway, and it's steering us toward a more connected and sustainable future.
+              AI is not just changing how we move; it&apos;s redefining the very concept of transportation. As we progress through 2025, the integration of AI into transportation systems is creating safer, cleaner, and more efficient mobility solutions. While challenges remain, the potential benefits—from reduced emissions and traffic fatalities to increased accessibility and economic growth—are too significant to ignore. The transportation revolution powered by AI is well underway, and it&apos;s steering us toward a more connected and sustainable future.
             </p>
           </div>
         </div>
       </main>
 
-      <footer className="bg-white border-t border-gray-200 mt-12">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-base text-gray-500">
+      <footer className="bg-white border-t border-gray-200 mt-12&quot;>
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8&quot;>
+          <div className="text-center&quot;>
+            <p className="text-base text-gray-500&quot;>
               &copy; 2025 AI Vault. All rights reserved.
             </p>
-            <div className="mt-4">
-              <Link href="/privacy" className="text-gray-600 hover:text-gray-900 mx-4">
+            <div className="mt-4&quot;>
+              <Link href="/privacy&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-600 hover:text-gray-900 mx-4">
+              <Link href="/terms&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Terms of Service
               </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-gray-900 mx-4">
+              <Link href="/contact&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Contact Us
               </Link>
             </div>

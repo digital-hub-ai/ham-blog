@@ -49,14 +49,14 @@ function extractFrontmatter(content: string): Record<string, any> {
     try {
       const yaml = yamlMatch[1];
       yaml.split('\n').forEach(line => {
-        const [key, ...value] = line.split(':');
+        const [key, ...value] = line.split(&apos;:&apos;);
         if (key && value) {
-          frontmatter[key.trim()] = value.join(':').trim()
-            .replace(/^['"](.*)['"]$/, '$1'); // Remove surrounding quotes
+          frontmatter[key.trim()] = value.join(&apos;:&apos;).trim()
+            .replace(/^[&apos;&quot;](.*)[&apos;&quot;]$/, &apos;$1&apos;); // Remove surrounding quotes
         }
       });
     } catch (e) {
-      console.warn('Failed to parse YAML frontmatter', e);
+      console.warn(&apos;Failed to parse YAML frontmatter&apos;, e);
     }
   }
   
@@ -67,19 +67,19 @@ function extractFrontmatter(content: string): Record<string, any> {
 function markdownToText(markdown: string): string {
   return markdown
     // Remove YAML frontmatter
-    .replace(/^---[\s\S]*?---/, '')
+    .replace(/^---[\s\S]*?---/, &apos;&apos;)
     // Remove code blocks
-    .replace(/```[\s\S]*?```/g, '')
+    .replace(/```[\s\S]*?```/g, &apos;&apos;)
     // Remove inline code
-    .replace(/`[^`]*`/g, '')
+    .replace(/`[^`]*`/g, &apos;&apos;)
     // Remove HTML tags
-    .replace(/<[^>]*>?/gm, '')
+    .replace(/<[^>]*>?/gm, &apos;&apos;)
     // Remove markdown links
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, &apos;$1&apos;)
     // Remove emphasis
-    .replace(/[*_]{1,3}([^*_]+)[*_]{1,3}/g, '$1')
+    .replace(/[*_]{1,3}([^*_]+)[*_]{1,3}/g, &apos;$1&apos;)
     // Normalize whitespace
-    .replace(/\s+/g, ' ')
+    .replace(/\s+/g, &apos; &apos;)
     .trim();
 }
 
@@ -90,9 +90,9 @@ async function loadBlogDocuments(): Promise<Document[]> {
     const files = await fs.readdir(blogDir);
     
     const blogFiles = files.filter(file => 
-      (file.endsWith('.tsx') || file.endsWith('.md')) && 
-      file !== 'index.tsx' && 
-      !file.startsWith('_')
+      (file.endsWith(&apos;.tsx&apos;) || file.endsWith(&apos;.md&apos;)) && 
+      file !== &apos;index.tsx&apos; && 
+      !file.startsWith(&apos;_&apos;)
     );
 
     const documents: Document[] = [];
@@ -100,7 +100,7 @@ async function loadBlogDocuments(): Promise<Document[]> {
     for (const file of blogFiles) {
       try {
         const filePath = path.join(blogDir, file);
-        const content = await fs.readFile(filePath, 'utf-8');
+        const content = await fs.readFile(filePath, &apos;utf-8&apos;);
         
         // Extract frontmatter if exists
         const frontmatter = extractFrontmatter(content);
@@ -404,11 +404,11 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error('Search error:', error);
+    console.error(&apos;Search error:&apos;, error);
     return res.status(500).json({ 
       success: false,
-      message: 'Error performing search',
-      error: error instanceof Error ? error.message : 'Unknown error',
+      message: &apos;Error performing search&apos;,
+      error: error instanceof Error ? error.message : &apos;Unknown error&apos;,
       results: []
     });
   }

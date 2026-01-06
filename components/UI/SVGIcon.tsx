@@ -52,7 +52,7 @@ const hoverVariants: Record<string, Variant> = {
   scale: {
     scale: 1.1,
     transition: { 
-      type: 'spring',
+      type: &apos;spring&apos;,
       stiffness: 400, 
       damping: 10 
     },
@@ -61,7 +61,7 @@ const hoverVariants: Record<string, Variant> = {
     rotate: 360,
     transition: { 
       duration: 1, 
-      ease: 'linear'
+      ease: &apos;linear&apos;
     },
   },
   pulse: {
@@ -95,10 +95,10 @@ const SVGIcon: React.FC<SVGIconProps> = ({
   const path = ICONS[name as IconName] || ICONS.circle;
   
   const iconStyle: CSSProperties = {
-    width: typeof size === 'number' ? `${size}px` : size,
-    height: typeof size === 'number' ? `${size}px` : size,
-    display: 'inline-block',
-    verticalAlign: 'middle',
+    width: typeof size === &apos;number&apos; ? `${size}px` : size,
+    height: typeof size === &apos;number&apos; ? `${size}px` : size,
+    display: &apos;inline-block&apos;,
+    verticalAlign: &apos;middle&apos;,
     fill: color,
     ...style,
   };
@@ -108,14 +108,14 @@ const SVGIcon: React.FC<SVGIconProps> = ({
       className={`svg-icon ${className}`}
       style={iconStyle}
       viewBox={viewBox}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg&quot;
       onClick={onClick}
     >
       <path d={path} />
     </svg>
   );
 
-  if (animate || hoverEffect !== 'none') {
+  if (animate || hoverEffect !== &apos;none&apos;) {
     return (
       <motion.div
         whileHover={hoverEffect !== 'none' ? hoverEffect : undefined}

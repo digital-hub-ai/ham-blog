@@ -1,9 +1,9 @@
-import { GetStaticProps, GetStaticPaths } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { getAllPosts, getPostsByCategory } from '../../../lib/api';
-import { Post } from '../../../types';
-import Layout from '../../../components/Layout';
+import { GetStaticProps, GetStaticPaths } from &apos;next&apos;;
+import Head from &apos;next/head&apos;;
+import Link from &apos;next/link&apos;;
+import { getAllPosts, getPostsByCategory } from &apos;../../../lib/api&apos;;
+import { Post } from &apos;../../../types&apos;;
+import Layout from &apos;../../../components/Layout&apos;;
 
 interface CategoryProps {
   posts: Post[];
@@ -13,67 +13,67 @@ interface CategoryProps {
 
 export default function CategoryPage({ posts, category, categoryName }: CategoryProps) {
   const emojiMap: Record<string, string> = {
-    'diy-projects': '🔨',
-    'arts-crafts': '✂️',
-    'music-audio': '🎵',
-    'gardening': '🌱',
-    'photography': '📸',
-    'collecting': '弆',
+    &apos;diy-projects&apos;: &apos;🔨&apos;,
+    &apos;arts-crafts&apos;: &apos;✂️&apos;,
+    &apos;music-audio&apos;: &apos;🎵&apos;,
+    &apos;gardening&apos;: &apos;🌱&apos;,
+    &apos;photography&apos;: &apos;📸&apos;,
+    &apos;collecting&apos;: &apos;弆&apos;,
   };
 
-  const emoji = emojiMap[category] || '✨';
+  const emoji = emojiMap[category] || &apos;✨&apos;;
 
   return (
     <Layout>
       <Head>
         <title>{categoryName} | Passion Projects</title>
-        <meta name="description" content={`Explore ${categoryName} projects and ideas`} />
+        <meta name="description&quot; content={`Explore ${categoryName} projects and ideas`} />
       </Head>
 
-      <div className="container mx-auto px-4 py-12">
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-2">
-            <span className="mr-2">{emoji}</span>
+      <div className="container mx-auto px-4 py-12&quot;>
+        <header className="mb-12 text-center&quot;>
+          <h1 className="text-4xl font-bold mb-2&quot;>
+            <span className="mr-2&quot;>{emoji}</span>
             {categoryName}
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600&quot;>
             {getCategoryDescription(categoryName)}
           </p>
         </header>
 
         {posts.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {posts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200">
+              <article key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200&quot;>
                 <img 
-                  className="h-48 w-full object-cover" 
-                  src={post.coverImage || '/images/placeholder.jpg'} 
+                  className="h-48 w-full object-cover&quot; 
+                  src={post.coverImage || &apos;/images/placeholder.jpg} 
                   alt={post.title} 
                 />
-                <div className="p-6">
-                  <div className="text-sm text-indigo-600 font-semibold mb-1">
+                <div className="p-6&quot;>
+                  <div className="text-sm text-indigo-600 font-semibold mb-1&quot;>
                     {post.category}
                   </div>
                   <Link 
                     href={`/passion-projects/${category}/${post.slug}`}
-                    className="block text-xl font-semibold text-gray-900 hover:text-indigo-600 mb-2"
+                    className="block text-xl font-semibold text-gray-900 hover:text-indigo-600 mb-2&quot;
                   >
                     {post.title}
                   </Link>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4&quot;>
                     {post.excerpt.length > 100 
                       ? `${post.excerpt.substring(0, 100)}...` 
                       : post.excerpt}
                   </p>
-                  <div className="flex items-center text-sm text-gray-500">
+                  <div className="flex items-center text-sm text-gray-500&quot;>
                     <span>
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
+                      {new Date(post.date).toLocaleDateString(&apos;en-US&apos;, {
+                        year: &apos;numeric&apos;,
+                        month: &apos;short&apos;,
+                        day: &apos;numeric&apos;,
                       })}
                     </span>
-                    <span className="mx-2">•</span>
+                    <span className="mx-2&quot;>•</span>
                     <span>{post.readingTime} min read</span>
                   </div>
                 </div>
@@ -81,8 +81,8 @@ export default function CategoryPage({ posts, category, categoryName }: Category
             ))}
           </div>
         ) : (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No posts found in this category yet. Check back soon!</p>
+          <div className="text-center py-12&quot;>
+            <p className="text-gray-500 text-lg&quot;>No posts found in this category yet. Check back soon!</p>
           </div>
         )}
       </div>

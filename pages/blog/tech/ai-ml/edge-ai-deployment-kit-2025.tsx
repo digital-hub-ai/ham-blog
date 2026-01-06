@@ -6,230 +6,230 @@ const EdgeAIDeployment = () => {
   // Edge AI frameworks comparison
   const edgeFrameworks = [
     {
-      name: 'TensorFlow Lite',
-      type: 'Open Source',
-      devices: ['Mobile', 'Microcontrollers', 'Embedded'],
-      keyFeatures: ['Model optimization', 'Hardware acceleration', 'Cross-platform'],
-      bestFor: 'General-purpose edge AI applications'
+      name: &apos;TensorFlow Lite&apos;,
+      type: &apos;Open Source&apos;,
+      devices: [&apos;Mobile&apos;, &apos;Microcontrollers&apos;, &apos;Embedded&apos;],
+      keyFeatures: [&apos;Model optimization&apos;, &apos;Hardware acceleration&apos;, &apos;Cross-platform&apos;],
+      bestFor: &apos;General-purpose edge AI applications&apos;
     },
     {
-      name: 'ONNX Runtime',
-      type: 'Open Source',
-      devices: ['Mobile', 'IoT', 'Embedded'],
-      keyFeatures: ['Framework agnostic', 'High performance', 'Cross-platform'],
-      bestFor: 'Deploying models across different frameworks'
+      name: &apos;ONNX Runtime&apos;,
+      type: &apos;Open Source&apos;,
+      devices: [&apos;Mobile&apos;, &apos;IoT&apos;, &apos;Embedded&apos;],
+      keyFeatures: [&apos;Framework agnostic&apos;, &apos;High performance&apos;, &apos;Cross-platform&apos;],
+      bestFor: &apos;Deploying models across different frameworks&apos;
     },
     {
-      name: 'PyTorch Mobile',
-      type: 'Open Source',
-      devices: ['Mobile', 'Embedded'],
-      keyFeatures: ['Python-first', 'TorchScript', 'Model optimization'],
-      bestFor: 'PyTorch-based applications'
+      name: &apos;PyTorch Mobile&apos;,
+      type: &apos;Open Source&apos;,
+      devices: [&apos;Mobile&apos;, &apos;Embedded&apos;],
+      keyFeatures: [&apos;Python-first&apos;, &apos;TorchScript&apos;, &apos;Model optimization&apos;],
+      bestFor: &apos;PyTorch-based applications&apos;
     },
     {
-      name: 'MediaPipe',
-      type: 'Open Source',
-      devices: ['Mobile', 'Web', 'IoT'],
-      keyFeatures: ['Pre-built solutions', 'Cross-platform', 'Real-time'],
-      bestFor: 'Media processing and perception tasks'
+      name: &apos;MediaPipe&apos;,
+      type: &apos;Open Source&apos;,
+      devices: [&apos;Mobile&apos;, &apos;Web&apos;, &apos;IoT&apos;],
+      keyFeatures: [&apos;Pre-built solutions&apos;, &apos;Cross-platform&apos;, &apos;Real-time&apos;],
+      bestFor: &apos;Media processing and perception tasks&apos;
     },
     {
-      name: 'TensorRT',
-      type: 'Proprietary (NVIDIA)',
-      devices: ['Jetson', 'NVIDIA GPUs'],
-      keyFeatures: ['High performance', 'Quantization', 'Optimized for NVIDIA'],
-      bestFor: 'High-performance edge computing'
+      name: &apos;TensorRT&apos;,
+      type: &apos;Proprietary (NVIDIA)&apos;,
+      devices: [&apos;Jetson&apos;, &apos;NVIDIA GPUs&apos;],
+      keyFeatures: [&apos;High performance&apos;, &apos;Quantization&apos;, &apos;Optimized for NVIDIA&apos;],
+      bestFor: &apos;High-performance edge computing&apos;
     }
   ];
 
   // Model optimization techniques
   const optimizationTechniques = [
     {
-      technique: 'Quantization',
-      description: 'Reduce precision of weights and activations',
-      benefits: ['4x smaller model', '2-4x faster inference', 'Lower power consumption'],
-      tools: ['TensorFlow Lite', 'ONNX Runtime', 'PyTorch Quantization']
+      technique: &apos;Quantization&apos;,
+      description: &apos;Reduce precision of weights and activations&apos;,
+      benefits: [&apos;4x smaller model&apos;, &apos;2-4x faster inference&apos;, &apos;Lower power consumption&apos;],
+      tools: [&apos;TensorFlow Lite&apos;, &apos;ONNX Runtime&apos;, &apos;PyTorch Quantization&apos;]
     },
     {
-      technique: 'Pruning',
-      description: 'Remove unnecessary weights',
-      benefits: ['Smaller model size', 'Faster inference', 'Lower memory bandwidth'],
-      tools: ['TensorFlow Model Optimization', 'PyTorch Pruning']
+      technique: &apos;Pruning&apos;,
+      description: &apos;Remove unnecessary weights&apos;,
+      benefits: [&apos;Smaller model size&apos;, &apos;Faster inference&apos;, &apos;Lower memory bandwidth&apos;],
+      tools: [&apos;TensorFlow Model Optimization&apos;, &apos;PyTorch Pruning&apos;]
     },
     {
-      technique: 'Knowledge Distillation',
-      description: 'Train smaller model to mimic larger one',
-      benefits: ['Smaller, faster model', 'Retains accuracy', 'Better generalization'],
-      tools: ['Hugging Face', 'Custom implementation']
+      technique: &apos;Knowledge Distillation&apos;,
+      description: &apos;Train smaller model to mimic larger one&apos;,
+      benefits: [&apos;Smaller, faster model&apos;, &apos;Retains accuracy&apos;, &apos;Better generalization&apos;],
+      tools: [&apos;Hugging Face&apos;, &apos;Custom implementation&apos;]
     },
     {
-      technique: 'Neural Architecture Search (NAS)',
-      description: 'Automatically find optimal architecture',
-      benefits: ['Optimized for target hardware', 'Better performance', 'Reduced manual effort'],
-      tools: ['Google Cloud AutoML', 'NNI', 'AutoKeras']
+      technique: &apos;Neural Architecture Search (NAS)&apos;,
+      description: &apos;Automatically find optimal architecture&apos;,
+      benefits: [&apos;Optimized for target hardware&apos;, &apos;Better performance&apos;, &apos;Reduced manual effort&apos;],
+      tools: [&apos;Google Cloud AutoML&apos;, &apos;NNI&apos;, &apos;AutoKeras&apos;]
     }
   ];
 
   // Hardware acceleration options
   const hardwareAccelerators = [
     {
-      type: 'GPU',
-      examples: ['NVIDIA Jetson', 'Qualcomm Adreno', 'ARM Mali'],
-      useCase: 'High-performance inference',
-      power: 'Medium-High',
-      latency: 'Low'
+      type: &apos;GPU&apos;,
+      examples: [&apos;NVIDIA Jetson&apos;, &apos;Qualcomm Adreno&apos;, &apos;ARM Mali&apos;],
+      useCase: &apos;High-performance inference&apos;,
+      power: &apos;Medium-High&apos;,
+      latency: &apos;Low&apos;
     },
     {
-      type: 'NPU',
-      examples: ['Google Edge TPU', 'Intel NPU', 'Huawei Ascend'],
-      useCase: 'Optimized AI workloads',
-      power: 'Low',
-      latency: 'Very Low'
+      type: &apos;NPU&apos;,
+      examples: [&apos;Google Edge TPU&apos;, &apos;Intel NPU&apos;, &apos;Huawei Ascend&apos;],
+      useCase: &apos;Optimized AI workloads&apos;,
+      power: &apos;Low&apos;,
+      latency: &apos;Very Low&apos;
     },
     {
-      type: 'VPU',
-      examples: ['Intel Myriad X', 'Hailo-8'],
-      useCase: 'Computer vision at the edge',
-      power: 'Very Low',
-      latency: 'Low'
+      type: &apos;VPU&apos;,
+      examples: [&apos;Intel Myriad X&apos;, &apos;Hailo-8&apos;],
+      useCase: &apos;Computer vision at the edge&apos;,
+      power: &apos;Very Low&apos;,
+      latency: &apos;Low&apos;
     },
     {
-      type: 'FPGA',
-      examples: ['Xilinx Zynq', 'Intel Cyclone'],
-      useCase: 'Custom hardware acceleration',
-      power: 'Medium',
-      latency: 'Very Low'
+      type: &apos;FPGA&apos;,
+      examples: [&apos;Xilinx Zynq&apos;, &apos;Intel Cyclone&apos;],
+      useCase: &apos;Custom hardware acceleration&apos;,
+      power: &apos;Medium&apos;,
+      latency: &apos;Very Low&apos;
     },
     {
-      type: 'MCU',
-      examples: ['ESP32', 'STM32', 'nRF52'],
-      useCase: 'Ultra-low power applications',
-      power: 'Ultra-Low',
-      latency: 'Medium-High'
+      type: &apos;MCU&apos;,
+      examples: [&apos;ESP32&apos;, &apos;STM32&apos;, &apos;nRF52&apos;],
+      useCase: &apos;Ultra-low power applications&apos;,
+      power: &apos;Ultra-Low&apos;,
+      latency: &apos;Medium-High&apos;
     }
   ];
 
   // Edge deployment challenges and solutions
   const deploymentChallenges = [
     {
-      challenge: 'Limited Compute Resources',
-      solution: 'Model optimization, quantization, and pruning',
-      tools: ['TensorFlow Lite', 'ONNX Runtime', 'TVM']
+      challenge: &apos;Limited Compute Resources&apos;,
+      solution: &apos;Model optimization, quantization, and pruning&apos;,
+      tools: [&apos;TensorFlow Lite&apos;, &apos;ONNX Runtime&apos;, &apos;TVM&apos;]
     },
     {
-      challenge: 'Power Constraints',
-      solution: 'Hardware acceleration, model optimization',
-      tools: ['TensorRT', 'Core ML', 'Qualcomm AI Engine']
+      challenge: &apos;Power Constraints&apos;,
+      solution: &apos;Hardware acceleration, model optimization&apos;,
+      tools: [&apos;TensorRT&apos;, &apos;Core ML&apos;, &apos;Qualcomm AI Engine&apos;]
     },
     {
-      challenge: 'Network Connectivity',
-      solution: 'On-device inference, federated learning',
-      tools: ['TensorFlow Federated', 'PySyft']
+      challenge: &apos;Network Connectivity&apos;,
+      solution: &apos;On-device inference, federated learning&apos;,
+      tools: [&apos;TensorFlow Federated&apos;, &apos;PySyft&apos;]
     },
     {
-      challenge: 'Security Concerns',
-      solution: 'Model encryption, secure enclaves',
-      tools: ['ARM TrustZone', 'Intel SGX', 'NVIDIA CUDA Secure']
+      challenge: &apos;Security Concerns&apos;,
+      solution: &apos;Model encryption, secure enclaves&apos;,
+      tools: [&apos;ARM TrustZone&apos;, &apos;Intel SGX&apos;, &apos;NVIDIA CUDA Secure&apos;]
     },
     {
-      challenge: 'Model Updates',
-      solution: 'Over-the-air updates, delta updates',
-      tools: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Coral']
+      challenge: &apos;Model Updates&apos;,
+      solution: &apos;Over-the-air updates, delta updates&apos;,
+      tools: [&apos;AWS IoT Greengrass&apos;, &apos;Azure IoT Edge&apos;, &apos;Google Coral&apos;]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50&quot;>
       <Head>
         <title>The Edge AI Deployment Kit: Running Models on Phones, Drones, and IoT Devices | AI Vault</title>
-        <meta name="description" content="Comprehensive guide to deploying AI models on edge devices. Learn optimization techniques, frameworks, and best practices for edge AI deployment in 2025." />
-        <meta name="keywords" content="edge AI, model deployment, IoT, mobile AI, model optimization, TensorFlow Lite, ONNX Runtime, PyTorch Mobile" />
+        <meta name="description&quot; content="Comprehensive guide to deploying AI models on edge devices. Learn optimization techniques, frameworks, and best practices for edge AI deployment in 2025.&quot; />
+        <meta name="keywords&quot; content="edge AI, model deployment, IoT, mobile AI, model optimization, TensorFlow Lite, ONNX Runtime, PyTorch Mobile&quot; />
         
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="The Edge AI Deployment Kit: Running Models on Phones, Drones, and IoT Devices" />
-        <meta property="og:description" content="Master edge AI deployment with this comprehensive guide. Learn how to optimize and deploy AI models on resource-constrained devices in 2025." />
-        <meta property="og:url" content="https://aivault.ai/blog/edge-ai-deployment-kit-2025" />
-        <meta property="og:image" content="https://aivault.ai/images/edge-ai-deployment-2025.jpg" />
+        <meta property="og:type&quot; content="article&quot; />
+        <meta property="og:title&quot; content="The Edge AI Deployment Kit: Running Models on Phones, Drones, and IoT Devices&quot; />
+        <meta property="og:description&quot; content="Master edge AI deployment with this comprehensive guide. Learn how to optimize and deploy AI models on resource-constrained devices in 2025.&quot; />
+        <meta property="og:url&quot; content="https://aivault.ai/blog/edge-ai-deployment-kit-2025&quot; />
+        <meta property="og:image&quot; content="https://aivault.ai/images/edge-ai-deployment-2025.jpg&quot; />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Edge AI Deployment Kit (2025)" />
-        <meta name="twitter:description" content="The complete guide to deploying AI models on edge devices. Tools, techniques, and best practices for 2025." />
-        <meta name="twitter:image" content="https://aivault.ai/images/edge-ai-deployment-2025-twitter.jpg" />
+        <meta name="twitter:card&quot; content="summary_large_image&quot; />
+        <meta name="twitter:title&quot; content="Edge AI Deployment Kit (2025)&quot; />
+        <meta name="twitter:description&quot; content="The complete guide to deploying AI models on edge devices. Tools, techniques, and best practices for 2025.&quot; />
+        <meta name="twitter:image&quot; content="https://aivault.ai/images/edge-ai-deployment-2025-twitter.jpg&quot; />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://aivault.ai/blog/edge-ai-deployment-kit-2025" />
+        <link rel="canonical&quot; href="https://aivault.ai/blog/edge-ai-deployment-kit-2025&quot; />
         
         {/* Structured Data */}
-        <script type="application/ld+json">
+        <script type="application/ld+json&quot;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "The Edge AI Deployment Kit: Running Models on Phones, Drones, and IoT Devices",
-            "description": "Comprehensive guide to deploying AI models on edge devices with optimization techniques, frameworks, and best practices for 2025.",
-            "author": {
-              "@type": "Organization",
-              "name": "AI Vault",
-              "url": "https://aivault.ai"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;BlogPosting&quot;,
+            &quot;headline&quot;: &quot;The Edge AI Deployment Kit: Running Models on Phones, Drones, and IoT Devices&quot;,
+            &quot;description&quot;: &quot;Comprehensive guide to deploying AI models on edge devices with optimization techniques, frameworks, and best practices for 2025.&quot;,
+            &quot;author&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;AI Vault&quot;,
+              &quot;url&quot;: &quot;https://aivault.ai&quot;
             },
-            "datePublished": "2025-03-29",
-            "image": "https://aivault.ai/images/edge-ai-deployment-2025.jpg",
-            "publisher": {
-              "@type": "Organization",
-              "name": "AI Vault",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://aivault.ai/logo.png"
+            &quot;datePublished&quot;: &quot;2025-03-29&quot;,
+            &quot;image&quot;: &quot;https://aivault.ai/images/edge-ai-deployment-2025.jpg&quot;,
+            &quot;publisher&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;AI Vault&quot;,
+              &quot;logo&quot;: {
+                &quot;@type&quot;: &quot;ImageObject&quot;,
+                &quot;url&quot;: &quot;https://aivault.ai/logo.png&quot;
               }
             },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://aivault.ai/blog/edge-ai-deployment-kit-2025"
+            &quot;mainEntityOfPage&quot;: {
+              &quot;@type&quot;: &quot;WebPage&quot;,
+              &quot;@id&quot;: &quot;https://aivault.ai/blog/edge-ai-deployment-kit-2025&quot;
             }
           })}
         </script>
       </Head>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <article className="prose lg:prose-xl max-w-none">
-          <header className="mb-12">
-            <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12&quot;>
+        <article className="prose lg:prose-xl max-w-none&quot;>
+          <header className="mb-12&quot;>
+            <h1 className="text-4xl font-extrabold text-gray-900 mb-4&quot;>
               The Edge AI Deployment Kit: Running Models on Phones, Drones, and IoT Devices
             </h1>
-            <div className="flex items-center text-sm text-gray-500">
+            <div className="flex items-center text-sm text-gray-500&quot;>
               <span>By AI Vault Edge Team</span>
-              <span className="mx-2">•</span>
-              <time dateTime="2025-03-29">March 29, 2025</time>
-              <span className="mx-2">•</span>
+              <span className="mx-2&quot;>•</span>
+              <time dateTime="2025-03-29&quot;>March 29, 2025</time>
+              <span className="mx-2&quot;>•</span>
               <span>22 min read</span>
             </div>
           </header>
 
-          <div className="bg-white shadow overflow-hidden sm:rounded-lg mb-12">
-            <div className="px-4 py-5 sm:px-6 bg-indigo-50">
-              <h3 className="text-lg leading-6 font-medium text-gray-900">Executive Summary</h3>
-              <p className="mt-1 max-w-2xl text-sm text-gray-600">
+          <div className="bg-white shadow overflow-hidden sm:rounded-lg mb-12&quot;>
+            <div className="px-4 py-5 sm:px-6 bg-indigo-50&quot;>
+              <h3 className="text-lg leading-6 font-medium text-gray-900&quot;>Executive Summary</h3>
+              <p className="mt-1 max-w-2xl text-sm text-gray-600&quot;>
                 Key insights for deploying AI models on edge devices
               </p>
             </div>
-            <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
-              <dl className="sm:divide-y sm:divide-gray-200">
-                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-gray-500">Key Benefit</dt>
-                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <div className="border-t border-gray-200 px-4 py-5 sm:p-0&quot;>
+              <dl className="sm:divide-y sm:divide-gray-200&quot;>
+                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6&quot;>
+                  <dt className="text-sm font-medium text-gray-500&quot;>Key Benefit</dt>
+                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2&quot;>
                     Real-time AI inference with low latency and enhanced privacy
                   </dd>
                 </div>
-                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-gray-500">Performance Gain</dt>
-                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6&quot;>
+                  <dt className="text-sm font-medium text-gray-500&quot;>Performance Gain</dt>
+                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2&quot;>
                     5-10x faster inference compared to cloud-based solutions
                   </dd>
                 </div>
-                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-gray-500">Cost Saving</dt>
-                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6&quot;>
+                  <dt className="text-sm font-medium text-gray-500&quot;>Cost Saving</dt>
+                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2&quot;>
                     60-90% reduction in cloud computing costs
                   </dd>
                 </div>
@@ -237,18 +237,18 @@ const EdgeAIDeployment = () => {
             </div>
           </div>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Introduction to Edge AI Deployment</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>1. Introduction to Edge AI Deployment</h2>
             
-            <p className="mb-4">
+            <p className="mb-4&quot;>
               Edge AI brings artificial intelligence directly to devices, enabling real-time processing and decision-making 
               without relying on cloud connectivity. In 2025, edge AI has become essential for applications requiring low 
               latency, privacy preservation, and offline functionality.
             </p>
 
-            <div className="my-8 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-lg font-medium text-blue-800 mb-3">Why Edge AI Matters in 2025</h3>
-              <ul className="list-disc pl-5 space-y-1 text-blue-700">
+            <div className="my-8 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500&quot;>
+              <h3 className="text-lg font-medium text-blue-800 mb-3&quot;>Why Edge AI Matters in 2025</h3>
+              <ul className="list-disc pl-5 space-y-1 text-blue-700&quot;>
                 <li><strong>Real-time processing:</strong> Sub-100ms inference for time-sensitive applications</li>
                 <li><strong>Bandwidth efficiency:</strong> Process data locally, reduce cloud dependency</li>
                 <li><strong>Enhanced privacy:</strong> Keep sensitive data on-device</li>
@@ -257,63 +257,63 @@ const EdgeAIDeployment = () => {
               </ul>
             </div>
 
-            <figure className="my-8">
+            <figure className="my-8&quot;>
               <img 
-                className="w-full rounded-lg border border-gray-200"
-                src="/images/edge-ai-ecosystem-2025.png" 
-                alt="Edge AI Ecosystem 2025"
+                className="w-full rounded-lg border border-gray-200&quot;
+                src="/images/edge-ai-ecosystem-2025.png&quot; 
+                alt="Edge AI Ecosystem 2025&quot;
               />
-              <figcaption className="mt-2 text-sm text-center text-gray-500">
+              <figcaption className="mt-2 text-sm text-center text-gray-500&quot;>
                 Figure 1: The Edge AI ecosystem in 2025 spans from tiny microcontrollers to powerful edge servers
               </figcaption>
             </figure>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Edge AI Frameworks Compared</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>2. Edge AI Frameworks Compared</h2>
             
-            <p className="mb-4">
+            <p className="mb-4&quot;>
               Choosing the right framework is crucial for successful edge AI deployment. Here&rsquo;s a comparison of the top 
               frameworks in 2025:
             </p>
 
-            <div className="mt-8 overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
+            <div className="mt-8 overflow-x-auto&quot;>
+              <table className="min-w-full divide-y divide-gray-200&quot;>
+                <thead className="bg-gray-50&quot;>
                   <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Framework</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Target Devices</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Features</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Best For</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Framework</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Type</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Target Devices</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Key Features</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Best For</th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="bg-white divide-y divide-gray-200&quot;>
                   {edgeFrameworks.map((framework, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <tr key={index} className={index % 2 === 0 ? &apos;bg-white&apos; : &apos;bg-gray-50}>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900&quot;>
                         {framework.name}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500&quot;>
                         {framework.type}
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
-                        <div className="flex flex-wrap gap-1">
+                      <td className="px-6 py-4 text-sm text-gray-500&quot;>
+                        <div className="flex flex-wrap gap-1&quot;>
                           {framework.devices.map((device, i) => (
-                            <span key={i} className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                            <span key={i} className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800&quot;>
                               {device}
                             </span>
                           ))}
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
-                        <ul className="list-disc pl-5 space-y-1">
+                      <td className="px-6 py-4 text-sm text-gray-500&quot;>
+                        <ul className="list-disc pl-5 space-y-1&quot;>
                           {framework.keyFeatures.map((feature, i) => (
                             <li key={i}>{feature}</li>
                           ))}
                         </ul>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
+                      <td className="px-6 py-4 text-sm text-gray-500&quot;>
                         {framework.bestFor}
                       </td>
                     </tr>
@@ -322,15 +322,15 @@ const EdgeAIDeployment = () => {
               </table>
             </div>
 
-            <div className="mt-8 p-6 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <svg className="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            <div className="mt-8 p-6 bg-yellow-50 rounded-lg border-l-4 border-yellow-400&quot;>
+              <div className="flex&quot;>
+                <div className="flex-shrink-0&quot;>
+                  <svg className="h-5 w-5 text-yellow-400&quot; xmlns="http://www.w3.org/2000/svg&quot; viewBox="0 0 20 20&quot; fill="currentColor&quot;>
+                    <path fillRule="evenodd&quot; d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z&quot; clipRule="evenodd&quot; />
                   </svg>
                 </div>
-                <div className="ml-3">
-                  <p className="text-sm text-yellow-700">
+                <div className="ml-3&quot;>
+                  <p className="text-sm text-yellow-700&quot;>
                     <strong>Framework Selection Tip:</strong> Consider your target hardware, model requirements, and development 
                     workflow when choosing an edge AI framework. For most applications, TensorFlow Lite and ONNX Runtime 
                     provide the best balance of performance and ecosystem support in 2025.
@@ -340,29 +340,29 @@ const EdgeAIDeployment = () => {
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Model Optimization Techniques</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>3. Model Optimization Techniques</h2>
             
-            <p className="mb-4">
+            <p className="mb-4&quot;>
               Optimizing models for edge deployment is essential for achieving real-time performance on resource-constrained 
               devices. Here are the most effective techniques in 2025:
             </p>
 
-            <div className="mt-8 grid md:grid-cols-2 gap-6">
+            <div className="mt-8 grid md:grid-cols-2 gap-6&quot;>
               {optimizationTechniques.map((technique, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-indigo-100 text-indigo-800 text-sm font-semibold mr-3">
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3&quot;>
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-indigo-100 text-indigo-800 text-sm font-semibold mr-3&quot;>
                       {index + 1}
                     </span>
                     {technique.technique}
                   </h3>
                   
-                  <p className="text-gray-700 mb-4">{technique.description}</p>
+                  <p className="text-gray-700 mb-4&quot;>{technique.description}</p>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-gray-500 mb-2">BENEFITS</h4>
-                    <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <div className="mb-4&quot;>
+                    <h4 className="text-sm font-medium text-gray-500 mb-2&quot;>BENEFITS</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                       {technique.benefits.map((benefit, i) => (
                         <li key={i}>{benefit}</li>
                       ))}
@@ -370,10 +370,10 @@ const EdgeAIDeployment = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-sm font-medium text-gray-500 mb-2">TOOLS</h4>
-                    <div className="flex flex-wrap gap-2">
+                    <h4 className="text-sm font-medium text-gray-500 mb-2&quot;>TOOLS</h4>
+                    <div className="flex flex-wrap gap-2&quot;>
                       {technique.tools.map((tool, i) => (
-                        <span key={i} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        <span key={i} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800&quot;>
                           {tool}
                         </span>
                       ))}
@@ -383,9 +383,9 @@ const EdgeAIDeployment = () => {
               ))}
             </div>
 
-            <div className="mt-8 p-6 bg-green-50 rounded-lg border-l-4 border-green-500">
-              <h3 className="text-lg font-medium text-green-800 mb-3">Optimization Workflow</h3>
-              <ol className="list-decimal pl-5 space-y-2 text-green-700">
+            <div className="mt-8 p-6 bg-green-50 rounded-lg border-l-4 border-green-500&quot;>
+              <h3 className="text-lg font-medium text-green-800 mb-3&quot;>Optimization Workflow</h3>
+              <ol className="list-decimal pl-5 space-y-2 text-green-700&quot;>
                 <li>Start with a pre-trained model from a model zoo</li>
                 <li>Apply quantization-aware training or post-training quantization</li>
                 <li>Prune the model to remove unnecessary weights</li>
@@ -395,48 +395,48 @@ const EdgeAIDeployment = () => {
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Hardware Acceleration for Edge AI</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>4. Hardware Acceleration for Edge AI</h2>
             
-            <p className="mb-4">
+            <p className="mb-4&quot;>
               Modern edge devices come with specialized hardware accelerators for AI workloads. 
               Here&rsquo;s how they compare in 2025:
             </p>
 
-            <div className="mt-8 overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
+            <div className="mt-8 overflow-x-auto&quot;>
+              <table className="min-w-full divide-y divide-gray-200&quot;>
+                <thead className="bg-gray-50&quot;>
                   <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Accelerator Type</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Examples</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Use Case</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Power</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Latency</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Accelerator Type</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Examples</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Use Case</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Power</th>
+                    <th scope="col&quot; className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&quot;>Latency</th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="bg-white divide-y divide-gray-200&quot;>
                   {hardwareAccelerators.map((accelerator, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <tr key={index} className={index % 2 === 0 ? &apos;bg-white&apos; : &apos;bg-gray-50}>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900&quot;>
                         {accelerator.type}
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
-                        {accelerator.examples.join(', ')}
+                      <td className="px-6 py-4 text-sm text-gray-500&quot;>
+                        {accelerator.examples.join(&apos;, &apos;)}
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-500">
+                      <td className="px-6 py-4 text-sm text-gray-500&quot;>
                         {accelerator.useCase}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500&quot;>
                         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                          accelerator.power === 'Ultra-Low' ? 'bg-green-100 text-green-800' :
-                          accelerator.power === 'Low' ? 'bg-blue-100 text-blue-800' :
-                          accelerator.power === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
-                          'bg-red-100 text-red-800'
+                          accelerator.power === &apos;Ultra-Low&apos; ? &apos;bg-green-100 text-green-800&apos; :
+                          accelerator.power === &apos;Low&apos; ? &apos;bg-blue-100 text-blue-800&apos; :
+                          accelerator.power === &apos;Medium&apos; ? &apos;bg-yellow-100 text-yellow-800&apos; :
+                          &apos;bg-red-100 text-red-800
                         }`}>
                           {accelerator.power}
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500&quot;>
                         {accelerator.latency}
                       </td>
                     </tr>
@@ -445,20 +445,20 @@ const EdgeAIDeployment = () => {
               </table>
             </div>
 
-            <div className="mt-8 p-6 bg-purple-50 rounded-lg">
-              <h3 className="text-lg font-medium text-purple-800 mb-3">Hardware Selection Guide</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+            <div className="mt-8 p-6 bg-purple-50 rounded-lg&quot;>
+              <h3 className="text-lg font-medium text-purple-800 mb-3&quot;>Hardware Selection Guide</h3>
+              <div className="grid md:grid-cols-2 gap-6&quot;>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">For Battery-Powered Devices</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>For Battery-Powered Devices</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Choose MCUs or NPUs with ultra-low power consumption</li>
                     <li>Prioritize power efficiency over raw performance</li>
                     <li>Consider duty cycling and sleep modes</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">For High-Performance Applications</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>For High-Performance Applications</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Opt for GPUs or high-end NPUs</li>
                     <li>Look for hardware with INT8/FP16 support</li>
                     <li>Consider thermal design power (TDP) requirements</li>
@@ -468,30 +468,30 @@ const EdgeAIDeployment = () => {
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">5. Deployment Challenges and Solutions</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>5. Deployment Challenges and Solutions</h2>
             
-            <p className="mb-4">
-              Deploying AI models to edge devices comes with unique challenges. Here's how to address them in 2025:
+            <p className="mb-4&quot;>
+              Deploying AI models to edge devices comes with unique challenges. Here&apos;s how to address them in 2025:
             </p>
 
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 space-y-6&quot;>
               {deploymentChallenges.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 bg-indigo-100 rounded-md p-3">
-                      <svg className="h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+                  <div className="flex items-start&quot;>
+                    <div className="flex-shrink-0 bg-indigo-100 rounded-md p-3&quot;>
+                      <svg className="h-6 w-6 text-indigo-600&quot; xmlns="http://www.w3.org/2000/svg&quot; fill="none&quot; viewBox="0 0 24 24&quot; stroke="currentColor&quot;>
+                        <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&quot; />
                       </svg>
                     </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-medium text-gray-900">{item.challenge}</h3>
-                      <p className="mt-1 text-gray-700">{item.solution}</p>
-                      <div className="mt-3">
-                        <h4 className="text-sm font-medium text-gray-500">TOOLS</h4>
-                        <div className="mt-1 flex flex-wrap gap-2">
+                    <div className="ml-4&quot;>
+                      <h3 className="text-lg font-medium text-gray-900&quot;>{item.challenge}</h3>
+                      <p className="mt-1 text-gray-700&quot;>{item.solution}</p>
+                      <div className="mt-3&quot;>
+                        <h4 className="text-sm font-medium text-gray-500&quot;>TOOLS</h4>
+                        <div className="mt-1 flex flex-wrap gap-2&quot;>
                           {item.tools.map((tool, i) => (
-                            <span key={i} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                            <span key={i} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800&quot;>
                               {tool}
                             </span>
                           ))}
@@ -504,29 +504,29 @@ const EdgeAIDeployment = () => {
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Edge AI Deployment Pipeline</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>6. Edge AI Deployment Pipeline</h2>
             
-            <p className="mb-4">
+            <p className="mb-4&quot;>
               A robust deployment pipeline is essential for maintaining and updating edge AI models. 
-              Here's a recommended workflow:
+              Here&apos;s a recommended workflow:
             </p>
 
-            <div className="mt-8 space-y-8">
-              <div className="relative">
-                <div className="absolute left-4 h-full w-0.5 bg-gray-200" aria-hidden="true"></div>
+            <div className="mt-8 space-y-8&quot;>
+              <div className="relative&quot;>
+                <div className="absolute left-4 h-full w-0.5 bg-gray-200&quot; aria-hidden="true&quot;></div>
                 
-                <div className="relative flex items-start group">
-                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center">
-                    <span className="text-white font-medium text-sm">1</span>
+                <div className="relative flex items-start group&quot;>
+                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center&quot;>
+                    <span className="text-white font-medium text-sm&quot;>1</span>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Model Development</h3>
-                    <div className="mt-2 text-gray-700 space-y-2">
+                  <div className="ml-4&quot;>
+                    <h3 className="text-lg font-medium text-gray-900&quot;>Model Development</h3>
+                    <div className="mt-2 text-gray-700 space-y-2&quot;>
                       <p>Train and optimize your model using frameworks like TensorFlow or PyTorch.</p>
-                      <div className="bg-gray-50 p-3 rounded-md">
-                        <pre className="text-xs overflow-x-auto">
-                          <code className="language-python">
+                      <div className="bg-gray-50 p-3 rounded-md&quot;>
+                        <pre className="text-xs overflow-x-auto&quot;>
+                          <code className="language-python&quot;>
 {`# Example: Exporting a model to ONNX format
 import torch
 import torchvision.models as models
@@ -542,11 +542,11 @@ dummy_input = torch.randn(1, 3, 224, 224)
 torch.onnx.export(
     model,                      # Model being run
     dummy_input,                # Model input
-    "resnet18.onnx",            # Output file
+    &quot;resnet18.onnx&quot;,            # Output file
     export_params=True,         # Store trained parameters
     opset_version=11,           # ONNX version
-    input_names=['input'],      # Input tensor name
-    output_names=['output']     # Output tensor name
+    input_names=[&apos;input&apos;],      # Input tensor name
+    output_names=[&apos;output&apos;]     # Output tensor name
 )`}
                           </code>
                         </pre>
@@ -555,17 +555,17 @@ torch.onnx.export(
                   </div>
                 </div>
                 
-                <div className="relative flex items-start group mt-8">
-                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center">
-                    <span className="text-white font-medium text-sm">2</span>
+                <div className="relative flex items-start group mt-8&quot;>
+                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center&quot;>
+                    <span className="text-white font-medium text-sm&quot;>2</span>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Model Optimization</h3>
-                    <div className="mt-2 text-gray-700 space-y-2">
+                  <div className="ml-4&quot;>
+                    <h3 className="text-lg font-medium text-gray-900&quot;>Model Optimization</h3>
+                    <div className="mt-2 text-gray-700 space-y-2&quot;>
                       <p>Apply optimization techniques like quantization and pruning.</p>
-                      <div className="bg-gray-50 p-3 rounded-md">
-                        <pre className="text-xs overflow-x-auto">
-                          <code className="language-bash">
+                      <div className="bg-gray-50 p-3 rounded-md&quot;>
+                        <pre className="text-xs overflow-x-auto&quot;>
+                          <code className="language-bash&quot;>
 # Quantize model with TensorFlow Lite
 python -m tensorflow.lite.toco \
   --saved_model_dir=./saved_model \
@@ -583,24 +583,24 @@ python -m tensorflow.lite.toco \
                   </div>
                 </div>
                 
-                <div className="relative flex items-start group mt-8">
-                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center">
-                    <span className="text-white font-medium text-sm">3</span>
+                <div className="relative flex items-start group mt-8&quot;>
+                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center&quot;>
+                    <span className="text-white font-medium text-sm&quot;>3</span>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Edge Deployment</h3>
-                    <div className="mt-2 text-gray-700 space-y-2">
+                  <div className="ml-4&quot;>
+                    <h3 className="text-lg font-medium text-gray-900&quot;>Edge Deployment</h3>
+                    <div className="mt-2 text-gray-700 space-y-2&quot;>
                       <p>Deploy the optimized model to target devices using the appropriate runtime.</p>
-                      <div className="bg-gray-50 p-3 rounded-md">
-                        <pre className="text-xs overflow-x-auto">
-                          <code className="language-python">
+                      <div className="bg-gray-50 p-3 rounded-md&quot;>
+                        <pre className="text-xs overflow-x-auto&quot;>
+                          <code className="language-python&quot;>
 {`# Example: Running inference with TensorFlow Lite on Android
 import org.tensorflow.lite.Interpreter;
 
 // Load the TFLite model
 Interpreter.Options options = new Interpreter.Options();
 options.setUseNNAPI(true);  // Use hardware acceleration
-Interpreter tflite = new Interpreter(loadModelFile(assetManager, "model.tflite"), options);
+Interpreter tflite = new Interpreter(loadModelFile(assetManager, &quot;model.tflite&quot;), options);
 
 // Prepare input/output buffers
 float[][] input = new float[1][INPUT_SIZE];
@@ -615,17 +615,17 @@ tflite.run(input, output);`}
                   </div>
                 </div>
                 
-                <div className="relative flex items-start group mt-8">
-                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center">
-                    <span className="text-white font-medium text-sm">4</span>
+                <div className="relative flex items-start group mt-8&quot;>
+                  <div className="flex-shrink-0 h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center&quot;>
+                    <span className="text-white font-medium text-sm&quot;>4</span>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Monitoring & Updates</h3>
-                    <div className="mt-2 text-gray-700 space-y-2">
+                  <div className="ml-4&quot;>
+                    <h3 className="text-lg font-medium text-gray-900&quot;>Monitoring & Updates</h3>
+                    <div className="mt-2 text-gray-700 space-y-2&quot;>
                       <p>Monitor model performance and deploy updates as needed.</p>
-                      <div className="bg-gray-50 p-3 rounded-md">
-                        <pre className="text-xs overflow-x-auto">
-                          <code className="language-python">
+                      <div className="bg-gray-50 p-3 rounded-md&quot;>
+                        <pre className="text-xs overflow-x-auto&quot;>
+                          <code className="language-python&quot;>
 {`# Example: Model update with Firebase ML Kit
 FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
     .requireWifi()
@@ -633,7 +633,7 @@ FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions
 
 FirebaseModelManager.getInstance()
     .getLatestModel(
-        FirebaseCustomRemoteModel.builder("my_model").build(),
+        FirebaseCustomRemoteModel.builder(&quot;my_model&quot;).build(),
         conditions,
         new CustomModelDownloadService.Builder().build()
     )
@@ -651,65 +651,65 @@ FirebaseModelManager.getInstance()
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">7. Real-World Edge AI Use Cases</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>7. Real-World Edge AI Use Cases</h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Smartphones & Cameras</h3>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <div className="grid md:grid-cols-2 gap-6&quot;>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3&quot;>Smartphones & Cameras</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700&quot;>
                   <li>Real-time photo and video enhancement</li>
                   <li>Augmented reality applications</li>
                   <li>On-device speech recognition</li>
                   <li>Gesture and pose estimation</li>
                 </ul>
-                <div className="mt-4 p-3 bg-blue-50 rounded-md">
-                  <p className="text-sm text-blue-700">
-                    <strong>Example:</strong> Google Pixel's Real Tone technology uses on-device AI to improve skin tone representation in photos.
+                <div className="mt-4 p-3 bg-blue-50 rounded-md&quot;>
+                  <p className="text-sm text-blue-700&quot;>
+                    <strong>Example:</strong> Google Pixel&apos;s Real Tone technology uses on-device AI to improve skin tone representation in photos.
                   </p>
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Industrial IoT</h3>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3&quot;>Industrial IoT</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700&quot;>
                   <li>Predictive maintenance</li>
                   <li>Quality control and defect detection</li>
                   <li>Worker safety monitoring</li>
                   <li>Supply chain optimization</li>
                 </ul>
-                <div className="mt-4 p-3 bg-green-50 rounded-md">
-                  <p className="text-sm text-green-700">
+                <div className="mt-4 p-3 bg-green-50 rounded-md&quot;>
+                  <p className="text-sm text-green-700&quot;>
                     <strong>Example:</strong> Siemens uses edge AI for real-time monitoring of manufacturing equipment to predict failures before they occur.
                   </p>
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Autonomous Vehicles</h3>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3&quot;>Autonomous Vehicles</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700&quot;>
                   <li>Object detection and tracking</li>
                   <li>Path planning and navigation</li>
                   <li>Driver monitoring systems</li>
                   <li>Sensor fusion</li>
                 </ul>
-                <div className="mt-4 p-3 bg-purple-50 rounded-md">
-                  <p className="text-sm text-purple-700">
-                    <strong>Example:</strong> Tesla's Full Self-Driving computer processes camera inputs in real-time using custom AI chips.
+                <div className="mt-4 p-3 bg-purple-50 rounded-md&quot;>
+                  <p className="text-sm text-purple-700&quot;>
+                    <strong>Example:</strong> Tesla&apos;s Full Self-Driving computer processes camera inputs in real-time using custom AI chips.
                   </p>
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Healthcare</h3>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3&quot;>Healthcare</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700&quot;>
                   <li>Wearable health monitoring</li>
                   <li>Medical imaging at the edge</li>
                   <li>Fall detection for elderly care</li>
                   <li>Personalized treatment recommendations</li>
                 </ul>
-                <div className="mt-4 p-3 bg-yellow-50 rounded-md">
-                  <p className="text-sm text-yellow-700">
+                <div className="mt-4 p-3 bg-yellow-50 rounded-md&quot;>
+                  <p className="text-sm text-yellow-700&quot;>
                     <strong>Example:</strong> Apple Watch uses on-device AI to detect irregular heart rhythms and potential falls.
                   </p>
                 </div>
@@ -717,16 +717,16 @@ FirebaseModelManager.getInstance()
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">8. Edge AI Security Best Practices</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>8. Edge AI Security Best Practices</h2>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">8.1 Model Protection</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4&quot;>8.1 Model Protection</h3>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6&quot;>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">Model Encryption</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>Model Encryption</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Encrypt models at rest and in transit</li>
                     <li>Use hardware-backed encryption when available</li>
                     <li>Implement secure key management</li>
@@ -734,8 +734,8 @@ FirebaseModelManager.getInstance()
                 </div>
                 
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">Model Obfuscation</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>Model Obfuscation</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Use model optimization to remove sensitive information</li>
                     <li>Apply model watermarking</li>
                     <li>Consider federated learning for sensitive data</li>
@@ -743,12 +743,12 @@ FirebaseModelManager.getInstance()
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">8.2 Device Security</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4&quot;>8.2 Device Security</h3>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6&quot;>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">Secure Boot</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>Secure Boot</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Verify firmware and software integrity at boot</li>
                     <li>Implement secure update mechanisms</li>
                     <li>Use hardware security modules (HSM) when possible</li>
@@ -756,8 +756,8 @@ FirebaseModelManager.getInstance()
                 </div>
                 
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">Runtime Protection</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>Runtime Protection</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Implement memory protection</li>
                     <li>Use address space layout randomization (ASLR)</li>
                     <li>Monitor for anomalous behavior</li>
@@ -765,12 +765,12 @@ FirebaseModelManager.getInstance()
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">8.3 Data Privacy</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4&quot;>8.3 Data Privacy</h3>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6&quot;>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">On-Device Processing</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>On-Device Processing</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Process sensitive data locally when possible</li>
                     <li>Minimize data collection and retention</li>
                     <li>Implement data anonymization techniques</li>
@@ -778,8 +778,8 @@ FirebaseModelManager.getInstance()
                 </div>
                 
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">Differential Privacy</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <h4 className="font-medium text-gray-800 mb-2&quot;>Differential Privacy</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-700&quot;>
                     <li>Add noise to model outputs when needed</li>
                     <li>Implement federated learning with secure aggregation</li>
                     <li>Use privacy-preserving techniques like homomorphic encryption</li>
@@ -787,9 +787,9 @@ FirebaseModelManager.getInstance()
                 </div>
               </div>
               
-              <div className="mt-8 p-6 bg-red-50 rounded-lg border-l-4 border-red-500">
-                <h3 className="text-lg font-medium text-red-800 mb-3">Security Checklist</h3>
-                <ul className="list-disc pl-5 space-y-1 text-red-700">
+              <div className="mt-8 p-6 bg-red-50 rounded-lg border-l-4 border-red-500&quot;>
+                <h3 className="text-lg font-medium text-red-800 mb-3&quot;>Security Checklist</h3>
+                <ul className="list-disc pl-5 space-y-1 text-red-700&quot;>
                   <li>Regularly update device firmware and software</li>
                   <li>Use strong authentication and access controls</li>
                   <li>Implement secure communication protocols (TLS 1.3+)</li>
@@ -800,67 +800,67 @@ FirebaseModelManager.getInstance()
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">9. Future Trends in Edge AI</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>9. Future Trends in Edge AI</h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-200">
-                <h3 className="text-xl font-semibold text-blue-800 mb-3">1. TinyML</h3>
-                <p className="text-gray-700">
+            <div className="grid md:grid-cols-2 gap-6&quot;>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-200&quot;>
+                <h3 className="text-xl font-semibold text-blue-800 mb-3&quot;>1. TinyML</h3>
+                <p className="text-gray-700&quot;>
                   Machine learning models are becoming small enough to run on microcontrollers with limited resources, 
                   enabling AI in ultra-low-power devices.
                 </p>
-                <div className="mt-3">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mr-2">
+                <div className="mt-3&quot;>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mr-2&quot;>
                     TensorFlow Lite for Microcontrollers
                   </span>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800&quot;>
                     Edge Impulse
                   </span>
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-green-200">
-                <h3 className="text-xl font-semibold text-green-800 mb-3">2. Federated Learning</h3>
-                <p className="text-gray-700">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-green-200&quot;>
+                <h3 className="text-xl font-semibold text-green-800 mb-3&quot;>2. Federated Learning</h3>
+                <p className="text-gray-700&quot;>
                   Models are trained across multiple edge devices while keeping data localized, 
                   improving privacy and reducing bandwidth requirements.
                 </p>
-                <div className="mt-3">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mr-2">
+                <div className="mt-3&quot;>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mr-2&quot;>
                     TensorFlow Federated
                   </span>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800&quot;>
                     PySyft
                   </span>
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-purple-200">
-                <h3 className="text-xl font-semibold text-purple-800 mb-3">3. Neuromorphic Computing</h3>
-                <p className="text-gray-700">
-                  Hardware that mimics the human brain's architecture for more efficient AI processing at the edge.
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-purple-200&quot;>
+                <h3 className="text-xl font-semibold text-purple-800 mb-3&quot;>3. Neuromorphic Computing</h3>
+                <p className="text-gray-700&quot;>
+                  Hardware that mimics the human brain&apos;s architecture for more efficient AI processing at the edge.
                 </p>
-                <div className="mt-3">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 mr-2">
+                <div className="mt-3&quot;>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 mr-2&quot;>
                     Intel Loihi
                   </span>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800&quot;>
                     IBM TrueNorth
                   </span>
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-yellow-200">
-                <h3 className="text-xl font-semibold text-yellow-800 mb-3">4. Edge-Cloud Collaboration</h3>
-                <p className="text-gray-700">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-yellow-200&quot;>
+                <h3 className="text-xl font-semibold text-yellow-800 mb-3&quot;>4. Edge-Cloud Collaboration</h3>
+                <p className="text-gray-700&quot;>
                   Hybrid approaches that combine the benefits of edge and cloud computing for optimal performance and efficiency.
                 </p>
-                <div className="mt-3">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mr-2">
+                <div className="mt-3&quot;>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mr-2&quot;>
                     AWS IoT Greengrass
                   </span>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800&quot;>
                     Azure IoT Edge
                   </span>
                 </div>
@@ -868,23 +868,23 @@ FirebaseModelManager.getInstance()
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Getting Started with Edge AI</h2>
+          <section className="mb-12&quot;>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6&quot;>10. Getting Started with Edge AI</h2>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Step-by-Step Guide</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200&quot;>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4&quot;>Step-by-Step Guide</h3>
               
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2">
-                    <span className="text-indigo-800 font-medium">1</span>
+              <div className="space-y-6&quot;>
+                <div className="flex items-start&quot;>
+                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2&quot;>
+                    <span className="text-indigo-800 font-medium&quot;>1</span>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-gray-900">Choose Your Hardware</h4>
-                    <p className="mt-1 text-gray-700">
+                  <div className="ml-4&quot;>
+                    <h4 className="text-lg font-medium text-gray-900&quot;>Choose Your Hardware</h4>
+                    <p className="mt-1 text-gray-700&quot;>
                       Select a development board based on your requirements:
                     </p>
-                    <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                    <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700&quot;>
                       <li><strong>Beginner:</strong> Raspberry Pi 5 with Google Coral USB Accelerator</li>
                       <li><strong>Intermediate:</strong> NVIDIA Jetson Nano or Xavier NX</li>
                       <li><strong>Advanced:</strong> Intel NUC with Neural Compute Stick 2</li>
@@ -892,18 +892,18 @@ FirebaseModelManager.getInstance()
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2">
-                    <span className="text-indigo-800 font-medium">2</span>
+                <div className="flex items-start&quot;>
+                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2&quot;>
+                    <span className="text-indigo-800 font-medium&quot;>2</span>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-gray-900">Set Up Your Development Environment</h4>
-                    <p className="mt-1 text-gray-700">
+                  <div className="ml-4&quot;>
+                    <h4 className="text-lg font-medium text-gray-900&quot;>Set Up Your Development Environment</h4>
+                    <p className="mt-1 text-gray-700&quot;>
                       Install the necessary tools and frameworks:
                     </p>
-                    <div className="mt-2 bg-gray-50 p-3 rounded-md">
-                      <pre className="text-xs overflow-x-auto">
-                        <code className="language-bash">
+                    <div className="mt-2 bg-gray-50 p-3 rounded-md&quot;>
+                      <pre className="text-xs overflow-x-auto&quot;>
+                        <code className="language-bash&quot;>
 # Install TensorFlow Lite
 pip install tflite-runtime
 
@@ -921,22 +921,22 @@ pip install onnx onnxruntime
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2">
-                    <span className="text-indigo-800 font-medium">3</span>
+                <div className="flex items-start&quot;>
+                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2&quot;>
+                    <span className="text-indigo-800 font-medium&quot;>3</span>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-gray-900">Optimize Your Model</h4>
-                    <p className="mt-1 text-gray-700">
+                  <div className="ml-4&quot;>
+                    <h4 className="text-lg font-medium text-gray-900&quot;>Optimize Your Model</h4>
+                    <p className="mt-1 text-gray-700&quot;>
                       Convert and optimize your model for edge deployment:
                     </p>
-                    <div className="mt-2 bg-gray-50 p-3 rounded-md">
-                      <pre className="text-xs overflow-x-auto">
-                        <code className="language-python">
+                    <div className="mt-2 bg-gray-50 p-3 rounded-md&quot;>
+                      <pre className="text-xs overflow-x-auto&quot;>
+                        <code className="language-python&quot;>
 import tensorflow as tf
 
 # Load your model
-model = tf.keras.models.load_model('your_model.h5')
+model = tf.keras.models.load_model(&apos;your_model.h5&apos;)
 
 # Convert to TensorFlow Lite
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
@@ -948,7 +948,7 @@ converter.optimizations = [tf.lite.Optimize.DEFAULT]
 tflite_model = converter.convert()
 
 # Save the model
-with open('model_quant.tflite', 'wb') as f:
+with open(&apos;model_quant.tflite&apos;, &apos;wb&apos;) as f:
     f.write(tflite_model)
                         </code>
                       </pre>
@@ -956,23 +956,23 @@ with open('model_quant.tflite', 'wb') as f:
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2">
-                    <span className="text-indigo-800 font-medium">4</span>
+                <div className="flex items-start&quot;>
+                  <div className="flex-shrink-0 bg-indigo-100 rounded-md p-2&quot;>
+                    <span className="text-indigo-800 font-medium&quot;>4</span>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-gray-900">Deploy to Your Device</h4>
-                    <p className="mt-1 text-gray-700">
+                  <div className="ml-4&quot;>
+                    <h4 className="text-lg font-medium text-gray-900&quot;>Deploy to Your Device</h4>
+                    <p className="mt-1 text-gray-700&quot;>
                       Deploy and run your model on the target device:
                     </p>
-                    <div className="mt-2 bg-gray-50 p-3 rounded-md">
-                      <pre className="text-xs overflow-x-auto">
-                        <code className="language-python">
+                    <div className="mt-2 bg-gray-50 p-3 rounded-md&quot;>
+                      <pre className="text-xs overflow-x-auto&quot;>
+                        <code className="language-python&quot;>
 import numpy as np
 import tflite_runtime.interpreter as tflite
 
 # Load the TFLite model and allocate tensors
-interpreter = tflite.Interpreter(model_path="model_quant.tflite")
+interpreter = tflite.Interpreter(model_path="model_quant.tflite&quot;)
 interpreter.allocate_tensors()
 
 # Get input and output tensors
@@ -980,18 +980,18 @@ input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 # Prepare your input data
-input_shape = input_details[0]['shape']
+input_shape = input_details[0][&apos;shape&apos;]
 input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
 
 # Set the tensor to point to the input data
-interpreter.set_tensor(input_details[0]['index'], input_data)
+interpreter.set_tensor(input_details[0][&apos;index&apos;], input_data)
 
 # Run inference
 interpreter.invoke()
 
 # Get the output
-output_data = interpreter.get_tensor(output_details[0]['index'])
-print("Output:", output_data)
+output_data = interpreter.get_tensor(output_details[0][&apos;index&apos;])
+print(&quot;Output:&quot;, output_data)
                         </code>
                       </pre>
                     </div>
@@ -999,27 +999,27 @@ print("Output:", output_data)
                 </div>
               </div>
               
-              <div className="mt-8 p-6 bg-indigo-50 rounded-lg">
-                <h3 className="text-lg font-medium text-indigo-800 mb-3">Learning Resources</h3>
-                <ul className="space-y-2">
+              <div className="mt-8 p-6 bg-indigo-50 rounded-lg&quot;>
+                <h3 className="text-lg font-medium text-indigo-800 mb-3&quot;>Learning Resources</h3>
+                <ul className="space-y-2&quot;>
                   <li>
-                    <a href="#" className="text-indigo-600 hover:underline">
+                    <a href="#&quot; className="text-indigo-600 hover:underline&quot;>
                       TensorFlow Lite Documentation
                     </a> - Official guides and tutorials
                   </li>
                   <li>
-                    <a href="#" className="text-indigo-600 hover:underline">
+                    <a href="#&quot; className="text-indigo-600 hover:underline&quot;>
                       ONNX Runtime GitHub
                     </a> - Examples and documentation
                   </li>
                   <li>
-                    <a href="#" className="text-indigo-600 hover:underline">
+                    <a href="#&quot; className="text-indigo-600 hover:underline&quot;>
                       Edge AI and IoT Learning Path
                     </a> - Free online courses
                   </li>
                   <li>
-                    <a href="#" className="text-indigo-600 hover:underline">
-                      Edge AI Hardware Buyer's Guide
+                    <a href="#&quot; className="text-indigo-600 hover:underline&quot;>
+                      Edge AI Hardware Buyer&apos;s Guide
                     </a> - Compare development boards
                   </li>
                 </ul>
@@ -1027,25 +1027,25 @@ print("Output:", output_data)
             </div>
           </section>
           
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Share this article</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Twitter</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          <div className="mt-12 pt-8 border-t border-gray-200&quot;>
+            <h3 className="text-lg font-medium text-gray-900 mb-4&quot;>Share this article</h3>
+            <div className="flex space-x-4&quot;>
+              <a href="#&quot; className="text-gray-400 hover:text-gray-500&quot;>
+                <span className="sr-only&quot;>Twitter</span>
+                <svg className="h-6 w-6&quot; fill="currentColor&quot; viewBox="0 0 24 24&quot;>
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84&quot; />
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              <a href="#&quot; className="text-gray-400 hover:text-gray-500&quot;>
+                <span className="sr-only&quot;>LinkedIn</span>
+                <svg className="h-6 w-6&quot; fill="currentColor&quot; viewBox="0 0 24 24&quot;>
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z&quot;/>
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Facebook</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+              <a href="#&quot; className="text-gray-400 hover:text-gray-500&quot;>
+                <span className="sr-only&quot;>Facebook</span>
+                <svg className="h-6 w-6&quot; fill="currentColor&quot; viewBox="0 0 24 24&quot;>
+                  <path fillRule="evenodd&quot; d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z&quot; clipRule="evenodd&quot; />
                 </svg>
               </a>
             </div>
@@ -1053,9 +1053,9 @@ print("Output:", output_data)
         </article>
       </main>
 
-      <footer className="bg-white border-t border-gray-200 mt-12">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500 text-sm">
+      <footer className="bg-white border-t border-gray-200 mt-12&quot;>
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8&quot;>
+          <p className="text-center text-gray-500 text-sm&quot;>
             &copy; 2025 AI Vault. All rights reserved.
           </p>
         </div>

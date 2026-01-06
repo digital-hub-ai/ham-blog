@@ -4,39 +4,39 @@
 
 // BCI device types
 export type BCI_DeviceType = 
-  | 'eeg'                // Electroencephalography
-  | 'ecog'               // Electrocorticography
-  | 'intracortical'      // Intracortical electrodes
-  | 'fnirs'              // Functional near-infrared spectroscopy
-  | 'emg'                // Electromyography
-  | 'eye-tracking'       // Eye tracking systems
-  | 'custom';            // Custom BCI devices
+  | &apos;eeg&apos;                // Electroencephalography
+  | &apos;ecog&apos;               // Electrocorticography
+  | &apos;intracortical&apos;      // Intracortical electrodes
+  | &apos;fnirs&apos;              // Functional near-infrared spectroscopy
+  | &apos;emg&apos;                // Electromyography
+  | &apos;eye-tracking&apos;       // Eye tracking systems
+  | &apos;custom&apos;;            // Custom BCI devices
 
 // Neural signal processing methods
 export type NeuralProcessing = 
-  | 'frequency-analysis' // Frequency domain analysis
-  | 'time-analysis'      // Time domain analysis
-  | 'machine-learning'   // ML-based neural decoding
-  | 'deep-learning'      // Deep learning neural networks
-  | 'hybrid';            // Hybrid processing approaches
+  | &apos;frequency-analysis&apos; // Frequency domain analysis
+  | &apos;time-analysis&apos;      // Time domain analysis
+  | &apos;machine-learning&apos;   // ML-based neural decoding
+  | &apos;deep-learning&apos;      // Deep learning neural networks
+  | &apos;hybrid&apos;;            // Hybrid processing approaches
 
 // BCI interaction modes
 export type BCIMode = 
-  | 'passive'            // Passive monitoring
-  | 'active'             // Active control
-  | 'reactive'           // Reactive responses
-  | 'brain-state'        // Brain state monitoring
-  | 'cognitive-load';    // Cognitive load assessment
+  | &apos;passive&apos;            // Passive monitoring
+  | &apos;active&apos;             // Active control
+  | &apos;reactive&apos;           // Reactive responses
+  | &apos;brain-state&apos;        // Brain state monitoring
+  | &apos;cognitive-load&apos;;    // Cognitive load assessment
 
 // Neural command types
 export type NeuralCommand = 
-  | 'select'             // Selection commands
-  | 'navigate'           // Navigation commands
-  | 'search'             // Search initiation
-  | 'filter'             // Filter application
-  | 'sort'               // Sorting commands
-  | 'voice'              // Voice synthesis triggers
-  | 'custom';            // Custom neural commands
+  | &apos;select&apos;             // Selection commands
+  | &apos;navigate&apos;           // Navigation commands
+  | &apos;search&apos;             // Search initiation
+  | &apos;filter&apos;             // Filter application
+  | &apos;sort&apos;               // Sorting commands
+  | &apos;voice&apos;              // Voice synthesis triggers
+  | &apos;custom&apos;;            // Custom neural commands
 
 // BCI configuration
 export interface BCIConfig {
@@ -51,7 +51,7 @@ export interface BCIConfig {
     normalization: boolean;
   };
   classification: {
-    algorithm: 'svm' | 'lda' | 'cnn' | 'rnn' | 'transformer';
+    algorithm: &apos;svm&apos; | &apos;lda&apos; | &apos;cnn&apos; | &apos;rnn&apos; | &apos;transformer&apos;;
     trainingSamples: number;
     confidenceThreshold: number; // 0-1
   };
@@ -92,7 +92,7 @@ export interface BCISearchRequest {
   context?: {
     previousSearch?: string;
     currentResults?: any[];
-    userIntent?: 'information' | 'navigation' | 'action';
+    userIntent?: &apos;information&apos; | &apos;navigation&apos; | &apos;action&apos;;
     cognitiveState?: {
       attention: number;
       meditation: number;
@@ -170,9 +170,9 @@ export class BCISearchService {
     this.apiKey = apiKey;
     this.simulationMode = simulationMode;
     this.defaultConfig = {
-      deviceType: 'eeg',
-      processingMethod: 'machine-learning',
-      mode: 'active',
+      deviceType: &apos;eeg&apos;,
+      processingMethod: &apos;machine-learning&apos;,
+      mode: &apos;active&apos;,
       samplingRate: 256,
       channels: 14,
       preprocessing: {
@@ -181,7 +181,7 @@ export class BCISearchService {
         normalization: true
       },
       classification: {
-        algorithm: 'svm',
+        algorithm: &apos;svm&apos;,
         trainingSamples: 1000,
         confidenceThreshold: 0.8
       },
@@ -204,33 +204,33 @@ export class BCISearchService {
    */
   private initializeClassifiers(): void {
     const defaultClassifier: BrainStateClassifier = {
-      id: 'default_classifier',
-      userId: 'system',
+      id: &apos;default_classifier&apos;,
+      userId: &apos;system&apos;,
       states: [
         {
-          name: 'search_intent',
+          name: &apos;search_intent&apos;,
           neuralSignature: [0.3, 0.5, 0.7, 0.4, 0.6],
           confidence: 0.9,
-          triggers: ['select', 'navigate', 'search']
+          triggers: [&apos;select&apos;, &apos;navigate&apos;, &apos;search&apos;]
         },
         {
-          name: 'information_seeking',
+          name: &apos;information_seeking&apos;,
           neuralSignature: [0.4, 0.6, 0.8, 0.5, 0.7],
           confidence: 0.85,
-          triggers: ['filter', 'sort']
+          triggers: [&apos;filter&apos;, &apos;sort&apos;]
         },
         {
-          name: 'cognitive_overload',
+          name: &apos;cognitive_overload&apos;,
           neuralSignature: [0.8, 0.3, 0.2, 0.9, 0.1],
           confidence: 0.95,
-          triggers: ['simplify', 'reduce']
+          triggers: [&apos;simplify&apos;, &apos;reduce&apos;]
         }
       ],
       accuracy: 0.88,
       lastTrained: Date.now()
     };
     
-    this.classifiers.set('default', defaultClassifier);
+    this.classifiers.set(&apos;default&apos;, defaultClassifier);
   }
 
   /**
@@ -462,7 +462,7 @@ export class BCISearchService {
    * Calculate similarity between frequency bands and signature
    */
   private calculateSimilarity(
-    bands: NeuralSignal['processedData']['frequencyBands'],
+    bands: NeuralSignal[&apos;processedData&apos;][&apos;frequencyBands&apos;],
     signature: number[]
   ): number {
     const bandValues = [
@@ -490,17 +490,17 @@ export class BCISearchService {
    */
   private decodeIntent(
     brainState: { state: string; confidence: number },
-    context?: BCISearchRequest['context']
-  ): BCISearchResult['decodedIntent'] {
+    context?: BCISearchRequest[&apos;context&apos;]
+  ): BCISearchResult[&apos;decodedIntent&apos;] {
     // Map brain states to commands
     const stateToCommand: Record<string, NeuralCommand> = {
-      'search_intent': 'search',
-      'information_seeking': 'filter',
-      'cognitive_overload': 'select',
-      'unknown': 'select'
+      &apos;search_intent&apos;: &apos;search&apos;,
+      &apos;information_seeking&apos;: &apos;filter&apos;,
+      &apos;cognitive_overload&apos;: &apos;select&apos;,
+      &apos;unknown&apos;: &apos;select&apos;
     };
     
-    const command = stateToCommand[brainState.state] || 'select';
+    const command = stateToCommand[brainState.state] || &apos;select&apos;;
     
     // Generate parameters based on context
     let parameters: Record<string, any> = {};
@@ -568,9 +568,9 @@ export class BCISearchService {
       monitor.recommendations = [];
       
       if (cognitiveLoad > monitor.threshold) {
-        monitor.recommendations.push('Consider simplifying search results');
-        monitor.recommendations.push('Reduce information density');
-        monitor.recommendations.push('Take a break to reduce cognitive load');
+        monitor.recommendations.push(&apos;Consider simplifying search results&apos;);
+        monitor.recommendations.push(&apos;Reduce information density&apos;);
+        monitor.recommendations.push(&apos;Take a break to reduce cognitive load&apos;);
       } else if (cognitiveLoad < monitor.baseline * 0.5) {
         monitor.recommendations.push('Increase engagement level');
         monitor.recommendations.push('Consider more complex search tasks');
@@ -628,9 +628,9 @@ export class BCISearchService {
     trainingData: Array<{ signals: NeuralSignal[]; state: string }>
   ): Promise<BrainStateClassifier> {
     // In a real implementation, this would train ML models
-    // For simulation, we'll create a classifier based on training data
+    // For simulation, we&apos;ll create a classifier based on training data
     
-    const states: BrainStateClassifier['states'] = [];
+    const states: BrainStateClassifier[&apos;states&apos;] = [];
     
     // Group training data by state
     const stateGroups: Record<string, NeuralSignal[]> = {};
@@ -681,14 +681,14 @@ export class BCISearchService {
    */
   private generateTriggersForState(state: string): string[] {
     const triggerMap: Record<string, string[]> = {
-      'search_intent': ['select', 'navigate', 'search'],
-      'information_seeking': ['filter', 'sort', 'refine'],
-      'cognitive_overload': ['simplify', 'reduce', 'pause'],
-      'focus': ['zoom', 'highlight', 'isolate'],
-      'curiosity': ['explore', 'discover', 'learn']
+      &apos;search_intent&apos;: [&apos;select&apos;, &apos;navigate&apos;, &apos;search&apos;],
+      &apos;information_seeking&apos;: [&apos;filter&apos;, &apos;sort&apos;, &apos;refine&apos;],
+      &apos;cognitive_overload&apos;: [&apos;simplify&apos;, &apos;reduce&apos;, &apos;pause&apos;],
+      &apos;focus&apos;: [&apos;zoom&apos;, &apos;highlight&apos;, &apos;isolate&apos;],
+      &apos;curiosity&apos;: [&apos;explore&apos;, &apos;discover&apos;, &apos;learn&apos;]
     };
     
-    return triggerMap[state] || ['select'];
+    return triggerMap[state] || [&apos;select&apos;];
   }
 
   /**
@@ -724,16 +724,16 @@ export class BCISearchService {
   } {
     return {
       supportedDevices: [
-        'eeg', 'ecog', 'intracortical', 'fnirs', 'emg', 'eye-tracking'
+        &apos;eeg&apos;, &apos;ecog&apos;, &apos;intracortical&apos;, &apos;fnirs&apos;, &apos;emg&apos;, &apos;eye-tracking&apos;
       ],
       processingMethods: [
-        'frequency-analysis', 'time-analysis', 'machine-learning', 'deep-learning', 'hybrid'
+        &apos;frequency-analysis&apos;, &apos;time-analysis&apos;, &apos;machine-learning&apos;, &apos;deep-learning&apos;, &apos;hybrid&apos;
       ],
       modes: [
-        'passive', 'active', 'reactive', 'brain-state', 'cognitive-load'
+        &apos;passive&apos;, &apos;active&apos;, &apos;reactive&apos;, &apos;brain-state&apos;, &apos;cognitive-load&apos;
       ],
       commands: [
-        'select', 'navigate', 'search', 'filter', 'sort', 'voice', 'custom'
+        &apos;select&apos;, &apos;navigate&apos;, &apos;search&apos;, &apos;filter&apos;, &apos;sort&apos;, &apos;voice&apos;, &apos;custom&apos;
       ],
       defaultConfig: this.defaultConfig
     };
@@ -765,7 +765,7 @@ export class BCISearchService {
     simulationMode: boolean;
   } {
     // In a real implementation, this would track actual usage
-    // For simulation, we'll generate plausible statistics
+    // For simulation, we&apos;ll generate plausible statistics
     return {
       totalProcessings: Math.floor(Math.random() * 50000),
       averageConfidence: 0.85 + Math.random() * 0.15, // 85-100%
@@ -827,7 +827,7 @@ export class BCISearchService {
     
     if (workloadMonitor) {
       if (workloadMonitor.current > workloadMonitor.baseline * 1.2) {
-        cognitiveLoad.trend = 'increasing';
+        cognitiveLoad.trend = &apos;increasing&apos;;
       } else if (workloadMonitor.current < workloadMonitor.baseline * 0.8) {
         cognitiveLoad.trend = 'decreasing';
       }
@@ -841,11 +841,11 @@ export class BCISearchService {
     }
     
     if (commonStates['cognitive_overload'] > 20) {
-      recommendations.push('Frequent cognitive overload events - review interface design');
+      recommendations.push(&apos;Frequent cognitive overload events - review interface design&apos;);
     }
     
     if (averageConfidence < 0.7) {
-      recommendations.push('Low classification confidence - consider additional training');
+      recommendations.push(&apos;Low classification confidence - consider additional training&apos;);
     }
     
     return {

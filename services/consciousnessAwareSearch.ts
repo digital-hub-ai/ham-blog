@@ -4,40 +4,40 @@
 
 // Consciousness states
 export type ConsciousnessState = 
-  | 'wakeful'            // Normal waking consciousness
-  | 'meditative'         // Meditative state
-  | 'dreaming'           // REM sleep/dreaming state
-  | 'hypnagogic'         // Between wake and sleep
-  | 'lucid-dream'        // Lucid dreaming
-  | 'altered'            // Altered states (psychedelic, etc.)
-  | 'flow'               // Flow state
-  | 'mind-wandering'     // Default mode network active
-  | 'focused'            // Highly focused attention
-  | 'transcendent';      // Transcendent consciousness
+  | &apos;wakeful&apos;            // Normal waking consciousness
+  | &apos;meditative&apos;         // Meditative state
+  | &apos;dreaming&apos;           // REM sleep/dreaming state
+  | &apos;hypnagogic&apos;         // Between wake and sleep
+  | &apos;lucid-dream&apos;        // Lucid dreaming
+  | &apos;altered&apos;            // Altered states (psychedelic, etc.)
+  | &apos;flow&apos;               // Flow state
+  | &apos;mind-wandering&apos;     // Default mode network active
+  | &apos;focused&apos;            // Highly focused attention
+  | &apos;transcendent&apos;;      // Transcendent consciousness
 
 // Awareness modalities
 export type AwarenessModality = 
-  | 'visual'             // Visual awareness
-  | 'auditory'           // Auditory awareness
-  | 'tactile'            // Tactile awareness
-  | 'intuitive'          // Intuitive/insightful awareness
-  | 'synesthetic'        // Synesthetic awareness
-  | 'empathic'           // Empathic awareness
-  | 'conceptual'         // Conceptual awareness
-  | 'embodied'           // Embodied awareness
-  | 'collective'         // Collective consciousness
-  | 'quantum';           // Quantum awareness
+  | &apos;visual&apos;             // Visual awareness
+  | &apos;auditory&apos;           // Auditory awareness
+  | &apos;tactile&apos;            // Tactile awareness
+  | &apos;intuitive&apos;          // Intuitive/insightful awareness
+  | &apos;synesthetic&apos;        // Synesthetic awareness
+  | &apos;empathic&apos;           // Empathic awareness
+  | &apos;conceptual&apos;         // Conceptual awareness
+  | &apos;embodied&apos;           // Embodied awareness
+  | &apos;collective&apos;         // Collective consciousness
+  | &apos;quantum&apos;;           // Quantum awareness
 
 // Consciousness processing paradigms
 export type ConsciousnessParadigm = 
-  | 'integrated-information' // Integrated Information Theory (IIT)
-  | 'global-workspace'       // Global Workspace Theory
-  | 'predictive-coding'      // Predictive Coding Theory
-  | 'embodied-cognition'     // Embodied Cognition
-  | 'extended-mind'          // Extended Mind Theory
-  | 'quantum-consciousness'  // Quantum Consciousness Theory
-  | 'panpsychist'            // Panpsychist approaches
-  | 'custom';                // Custom consciousness paradigms
+  | &apos;integrated-information&apos; // Integrated Information Theory (IIT)
+  | &apos;global-workspace&apos;       // Global Workspace Theory
+  | &apos;predictive-coding&apos;      // Predictive Coding Theory
+  | &apos;embodied-cognition&apos;     // Embodied Cognition
+  | &apos;extended-mind&apos;          // Extended Mind Theory
+  | &apos;quantum-consciousness&apos;  // Quantum Consciousness Theory
+  | &apos;panpsychist&apos;            // Panpsychist approaches
+  | &apos;custom&apos;;                // Custom consciousness paradigms
 
 // Consciousness-aware configuration
 export interface ConsciousnessConfig {
@@ -140,7 +140,7 @@ export interface QuantumConsciousnessChannel {
   coherence: number; // 0-1 quantum coherence
   bandwidth: number; // Information transfer capacity
   latency: number; // in milliseconds
-  status: 'active' | 'inactive' | 'resonating';
+  status: &apos;active&apos; | &apos;inactive&apos; | &apos;resonating&apos;;
   lastUsed: number;
 }
 
@@ -241,7 +241,7 @@ export class ConsciousnessAwareSearchService {
     
     // Validate request
     if (!request.query || !request.dataset || request.dataset.length === 0) {
-      throw new Error('Invalid consciousness search request: query and dataset are required');
+      throw new Error(&apos;Invalid consciousness search request: query and dataset are required&apos;);
     }
     
     // Perform classical search for comparison
@@ -341,7 +341,7 @@ export class ConsciousnessAwareSearchService {
       ).length;
       
       const bScore = keywords.filter(k => 
-        (b.title + ' ' + b.content).toLowerCase().includes(k)
+        (b.title + &apos; &apos; + b.content).toLowerCase().includes(k)
       ).length;
       
       return bScore - aScore;
@@ -429,7 +429,7 @@ export class ConsciousnessAwareSearchService {
     // Generate transcendent insights in high-coherence states
     return signature.coherence > 0.8 && 
            signature.phi > 0.7 && 
-           (signature.state === 'transcendent' || signature.state === 'lucid-dream');
+           (signature.state === &apos;transcendent&apos; || signature.state === &apos;lucid-dream&apos;);
   }
 
   /**
@@ -638,7 +638,7 @@ export class ConsciousnessAwareSearchService {
    */
   updateChannelStatus(
     channelId: string,
-    status: 'active' | 'inactive' | 'resonating'
+    status: &apos;active&apos; | &apos;inactive&apos; | &apos;resonating&apos;
   ): boolean {
     const channel = this.quantumChannels.get(channelId);
     if (!channel) {
@@ -670,17 +670,17 @@ export class ConsciousnessAwareSearchService {
   } {
     return {
       supportedStates: [
-        'wakeful', 'meditative', 'dreaming', 'hypnagogic', 'lucid-dream',
-        'altered', 'flow', 'mind-wandering', 'focused', 'transcendent'
+        &apos;wakeful&apos;, &apos;meditative&apos;, &apos;dreaming&apos;, &apos;hypnagogic&apos;, &apos;lucid-dream&apos;,
+        &apos;altered&apos;, &apos;flow&apos;, &apos;mind-wandering&apos;, &apos;focused&apos;, &apos;transcendent&apos;
       ],
       modalities: [
-        'visual', 'auditory', 'tactile', 'intuitive', 'synesthetic',
-        'empathic', 'conceptual', 'embodied', 'collective', 'quantum'
+        &apos;visual&apos;, &apos;auditory&apos;, &apos;tactile&apos;, &apos;intuitive&apos;, &apos;synesthetic&apos;,
+        &apos;empathic&apos;, &apos;conceptual&apos;, &apos;embodied&apos;, &apos;collective&apos;, &apos;quantum&apos;
       ],
       paradigms: [
-        'integrated-information', 'global-workspace', 'predictive-coding',
-        'embodied-cognition', 'extended-mind', 'quantum-consciousness',
-        'panpsychist'
+        &apos;integrated-information&apos;, &apos;global-workspace&apos;, &apos;predictive-coding&apos;,
+        &apos;embodied-cognition&apos;, &apos;extended-mind&apos;, &apos;quantum-consciousness&apos;,
+        &apos;panpsychist&apos;
       ],
       maxPhi: this.simulationMode ? 1.0 : 10.0,
       defaultConfig: this.defaultConfig
@@ -714,7 +714,7 @@ export class ConsciousnessAwareSearchService {
     simulationMode: boolean;
   } {
     // In a real implementation, this would track actual usage
-    // For simulation, we'll generate plausible statistics
+    // For simulation, we&apos;ll generate plausible statistics
     return {
       totalSearches: Math.floor(Math.random() * 15000),
       averageAwarenessAdvantage: 30.0 + Math.random() * 20.0, // 30-50x
@@ -748,19 +748,19 @@ export class ConsciousnessAwareSearchService {
     const recommendations: string[] = [];
     
     if (searchResult.awarenessAdvantage < 20) {
-      recommendations.push('Awareness advantage below expected threshold - review consciousness configuration');
+      recommendations.push(&apos;Awareness advantage below expected threshold - review consciousness configuration&apos;);
     }
     
     if (searchResult.consciousnessAlignment < 0.6) {
-      recommendations.push('Low consciousness alignment - consider adjusting awareness modalities');
+      recommendations.push(&apos;Low consciousness alignment - consider adjusting awareness modalities&apos;);
     }
     
     if (searchResult.insightDepth < 0.5) {
-      recommendations.push('Limited insight depth - explore transcendent consciousness states');
+      recommendations.push(&apos;Limited insight depth - explore transcendent consciousness states&apos;);
     }
     
     if (searchResult.consciousnessMetrics.coherence < 0.7) {
-      recommendations.push('Low consciousness coherence - practice meditation or mindfulness');
+      recommendations.push(&apos;Low consciousness coherence - practice meditation or mindfulness&apos;);
     }
     
     return {

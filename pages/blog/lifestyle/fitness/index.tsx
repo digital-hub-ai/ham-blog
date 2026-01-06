@@ -1,153 +1,153 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from &apos;react&apos;;
+import Head from &apos;next/head&apos;;
+import Link from &apos;next/link&apos;;
 
 export default function FitnessIndex() {
   // Fitness articles
   const fitnessArticles = [
     { 
-      id: 'strength-training-principles', 
-      title: 'Strength Training Principles: Building Muscle and Power', 
-      excerpt: 'Evidence-based approaches to resistance training for muscle growth, strength gains, and athletic performance enhancement.',
-      date: 'Dec 19, 2025',
-      author: 'Fitness Coach Dr. Muscle Gain',
-      readTime: '14 min read'
+      id: &apos;strength-training-principles&apos;, 
+      title: &apos;Strength Training Principles: Building Muscle and Power&apos;, 
+      excerpt: &apos;Evidence-based approaches to resistance training for muscle growth, strength gains, and athletic performance enhancement.&apos;,
+      date: &apos;Dec 19, 2025&apos;,
+      author: &apos;Fitness Coach Dr. Muscle Gain&apos;,
+      readTime: &apos;14 min read&apos;
     },
     { 
-      id: 'cardiovascular-fitness', 
-      title: 'Cardiovascular Fitness: Heart Health and Endurance', 
-      excerpt: 'Optimizing aerobic capacity, heart health, and metabolic function through strategic cardio training protocols.',
-      date: 'Dec 17, 2025',
-      author: 'Cardiologist Dr. Heart Strong',
-      readTime: '13 min read'
+      id: &apos;cardiovascular-fitness&apos;, 
+      title: &apos;Cardiovascular Fitness: Heart Health and Endurance&apos;, 
+      excerpt: &apos;Optimizing aerobic capacity, heart health, and metabolic function through strategic cardio training protocols.&apos;,
+      date: &apos;Dec 17, 2025&apos;,
+      author: &apos;Cardiologist Dr. Heart Strong&apos;,
+      readTime: &apos;13 min read&apos;
     },
     { 
-      id: 'flexibility-mobility', 
-      title: 'Flexibility and Mobility: Movement Quality and Injury Prevention', 
-      excerpt: 'Scientific approaches to improving range of motion, movement efficiency, and reducing injury risk through targeted stretching and mobility work.',
-      date: 'Dec 15, 2025',
-      author: 'Physical Therapist Dr. Flexibility',
-      readTime: '12 min read'
+      id: &apos;flexibility-mobility&apos;, 
+      title: &apos;Flexibility and Mobility: Movement Quality and Injury Prevention&apos;, 
+      excerpt: &apos;Scientific approaches to improving range of motion, movement efficiency, and reducing injury risk through targeted stretching and mobility work.&apos;,
+      date: &apos;Dec 15, 2025&apos;,
+      author: &apos;Physical Therapist Dr. Flexibility&apos;,
+      readTime: &apos;12 min read&apos;
     },
     { 
-      id: 'high-intensity-intervals', 
-      title: 'High-Intensity Interval Training: Maximizing Results in Minimal Time', 
-      excerpt: 'The science behind HIIT protocols for fat loss, cardiovascular improvement, and metabolic conditioning.',
-      date: 'Dec 13, 2025',
-      author: 'Exercise Physiologist Dr. Intensity',
-      readTime: '13 min read'
+      id: &apos;high-intensity-intervals&apos;, 
+      title: &apos;High-Intensity Interval Training: Maximizing Results in Minimal Time&apos;, 
+      excerpt: &apos;The science behind HIIT protocols for fat loss, cardiovascular improvement, and metabolic conditioning.&apos;,
+      date: &apos;Dec 13, 2025&apos;,
+      author: &apos;Exercise Physiologist Dr. Intensity&apos;,
+      readTime: &apos;13 min read&apos;
     },
     { 
-      id: 'recovery-nutrition', 
-      title: 'Recovery and Nutrition: Optimizing Adaptation Between Workouts', 
-      excerpt: 'Strategies for enhancing recovery, reducing fatigue, and maximizing training adaptations through proper nutrition and recovery protocols.',
-      date: 'Dec 11, 2025',
-      author: 'Sports Dietitian Dr. Recovery',
-      readTime: '14 min read'
+      id: &apos;recovery-nutrition&apos;, 
+      title: &apos;Recovery and Nutrition: Optimizing Adaptation Between Workouts&apos;, 
+      excerpt: &apos;Strategies for enhancing recovery, reducing fatigue, and maximizing training adaptations through proper nutrition and recovery protocols.&apos;,
+      date: &apos;Dec 11, 2025&apos;,
+      author: &apos;Sports Dietitian Dr. Recovery&apos;,
+      readTime: &apos;14 min read&apos;
     },
     { 
-      id: 'bodyweight-training', 
-      title: 'Bodyweight Training: Building Strength and Fitness Anywhere', 
-      excerpt: 'Master bodyweight exercises for strength development, functional fitness, and portable workout solutions.',
-      date: 'Dec 9, 2025',
-      author: 'Calisthenics Expert Dr. Bodyweight',
-      readTime: '12 min read'
+      id: &apos;bodyweight-training&apos;, 
+      title: &apos;Bodyweight Training: Building Strength and Fitness Anywhere&apos;, 
+      excerpt: &apos;Master bodyweight exercises for strength development, functional fitness, and portable workout solutions.&apos;,
+      date: &apos;Dec 9, 2025&apos;,
+      author: &apos;Calisthenics Expert Dr. Bodyweight&apos;,
+      readTime: &apos;12 min read&apos;
     },
     { 
-      id: 'core-stability', 
-      title: 'Core Stability and Functional Strength', 
-      excerpt: 'Develop rock-solid core stability and functional strength for improved posture, reduced injury risk, and enhanced athletic performance.',
-      date: 'Dec 7, 2025',
-      author: 'Core Strength Specialist Dr. Abdominal Fortitude',
-      readTime: '13 min read'
+      id: &apos;core-stability&apos;, 
+      title: &apos;Core Stability and Functional Strength&apos;, 
+      excerpt: &apos;Develop rock-solid core stability and functional strength for improved posture, reduced injury risk, and enhanced athletic performance.&apos;,
+      date: &apos;Dec 7, 2025&apos;,
+      author: &apos;Core Strength Specialist Dr. Abdominal Fortitude&apos;,
+      readTime: &apos;13 min read&apos;
     },
     { 
-      id: 'endurance-performance', 
-      title: 'Endurance Performance: Maximizing Aerobic Capacity and Stamina', 
-      excerpt: 'Evidence-based strategies for improving aerobic capacity, lactate threshold, and sustained performance in endurance activities.',
-      date: 'Dec 5, 2025',
-      author: 'Endurance Coach Dr. Stamina',
-      readTime: '14 min read'
+      id: &apos;endurance-performance&apos;, 
+      title: &apos;Endurance Performance: Maximizing Aerobic Capacity and Stamina&apos;, 
+      excerpt: &apos;Evidence-based strategies for improving aerobic capacity, lactate threshold, and sustained performance in endurance activities.&apos;,
+      date: &apos;Dec 5, 2025&apos;,
+      author: &apos;Endurance Coach Dr. Stamina&apos;,
+      readTime: &apos;14 min read&apos;
     },
     { 
-      id: 'flexibility-training', 
-      title: 'Flexibility Training and Stretching Techniques', 
-      excerpt: 'Master flexibility training with evidence-based stretching techniques. Improve range of motion, prevent injury, and enhance athletic performance.',
-      date: 'Dec 3, 2025',
-      author: 'Mobility Specialist Dr. Stretch Harmony',
-      readTime: '14 min read'
+      id: &apos;flexibility-training&apos;, 
+      title: &apos;Flexibility Training and Stretching Techniques&apos;, 
+      excerpt: &apos;Master flexibility training with evidence-based stretching techniques. Improve range of motion, prevent injury, and enhance athletic performance.&apos;,
+      date: &apos;Dec 3, 2025&apos;,
+      author: &apos;Mobility Specialist Dr. Stretch Harmony&apos;,
+      readTime: &apos;14 min read&apos;
     },
     { 
-      id: 'functional-ageing', 
-      title: 'Functional Ageing: Maintaining Strength and Mobility Throughout Life', 
-      excerpt: 'Strategies for preserving physical function, strength, and independence as we age through targeted fitness approaches.',
-      date: 'Dec 1, 2025',
-      author: 'Gerontology Specialist Dr. Age Well',
-      readTime: '13 min read'
+      id: &apos;functional-ageing&apos;, 
+      title: &apos;Functional Ageing: Maintaining Strength and Mobility Throughout Life&apos;, 
+      excerpt: &apos;Strategies for preserving physical function, strength, and independence as we age through targeted fitness approaches.&apos;,
+      date: &apos;Dec 1, 2025&apos;,
+      author: &apos;Gerontology Specialist Dr. Age Well&apos;,
+      readTime: &apos;13 min read&apos;
     },
     { 
-      id: 'functional-movement', 
-      title: 'Functional Movement: Training for Real-Life Activities', 
-      excerpt: 'Develop movement patterns that enhance daily activities and reduce injury risk through functional fitness principles.',
-      date: 'Nov 29, 2025',
-      author: 'Movement Specialist Dr. Functional Flow',
-      readTime: '12 min read'
+      id: &apos;functional-movement&apos;, 
+      title: &apos;Functional Movement: Training for Real-Life Activities&apos;, 
+      excerpt: &apos;Develop movement patterns that enhance daily activities and reduce injury risk through functional fitness principles.&apos;,
+      date: &apos;Nov 29, 2025&apos;,
+      author: &apos;Movement Specialist Dr. Functional Flow&apos;,
+      readTime: &apos;12 min read&apos;
     },
     { 
-      id: 'injury-prevention', 
-      title: 'Injury Prevention: Strategies for Safe and Sustainable Training', 
-      excerpt: 'Evidence-based approaches to reducing injury risk while maintaining consistent training progress and long-term fitness.',
-      date: 'Nov 27, 2025',
-      author: 'Injury Prevention Specialist Dr. Safe Training',
-      readTime: '13 min read'
+      id: &apos;injury-prevention&apos;, 
+      title: &apos;Injury Prevention: Strategies for Safe and Sustainable Training&apos;, 
+      excerpt: &apos;Evidence-based approaches to reducing injury risk while maintaining consistent training progress and long-term fitness.&apos;,
+      date: &apos;Nov 27, 2025&apos;,
+      author: &apos;Injury Prevention Specialist Dr. Safe Training&apos;,
+      readTime: &apos;13 min read&apos;
     },
     { 
-      id: 'periodization-strategies', 
-      title: 'Periodization Strategies: Structuring Training for Optimal Performance', 
-      excerpt: 'Scientific approaches to organizing training cycles for peak performance while preventing overtraining and burnout.',
-      date: 'Nov 25, 2025',
-      author: 'Performance Coach Dr. Cycle Master',
-      readTime: '14 min read'
+      id: &apos;periodization-strategies&apos;, 
+      title: &apos;Periodization Strategies: Structuring Training for Optimal Performance&apos;, 
+      excerpt: &apos;Scientific approaches to organizing training cycles for peak performance while preventing overtraining and burnout.&apos;,
+      date: &apos;Nov 25, 2025&apos;,
+      author: &apos;Performance Coach Dr. Cycle Master&apos;,
+      readTime: &apos;14 min read&apos;
     },
     { 
-      id: 'plyometric-power', 
-      title: 'Plyometric Training for Explosive Power', 
-      excerpt: 'Master plyometric exercises to develop explosive power and athletic performance. Learn safe progression techniques and advanced jump training methods.',
-      date: 'Nov 23, 2025',
-      author: 'Performance Coach Alex Jump',
-      readTime: '12 min read'
+      id: &apos;plyometric-power&apos;, 
+      title: &apos;Plyometric Training for Explosive Power&apos;, 
+      excerpt: &apos;Master plyometric exercises to develop explosive power and athletic performance. Learn safe progression techniques and advanced jump training methods.&apos;,
+      date: &apos;Nov 23, 2025&apos;,
+      author: &apos;Performance Coach Alex Jump&apos;,
+      readTime: &apos;12 min read&apos;
     },
     { 
-      id: 'power-speed-training', 
-      title: 'Power and Speed Training: Developing Explosive Athletic Performance', 
-      excerpt: 'Scientific approaches to developing explosive power, speed, and agility for athletic performance enhancement.',
-      date: 'Nov 21, 2025',
-      author: 'Speed Coach Dr. Velocity',
-      readTime: '13 min read'
+      id: &apos;power-speed-training&apos;, 
+      title: &apos;Power and Speed Training: Developing Explosive Athletic Performance&apos;, 
+      excerpt: &apos;Scientific approaches to developing explosive power, speed, and agility for athletic performance enhancement.&apos;,
+      date: &apos;Nov 21, 2025&apos;,
+      author: &apos;Speed Coach Dr. Velocity&apos;,
+      readTime: &apos;13 min read&apos;
     },
     { 
-      id: 'rehabilitation-fitness', 
-      title: 'Rehabilitation and Fitness: Returning Stronger After Injury', 
-      excerpt: 'Safe and effective strategies for transitioning from injury rehabilitation to fitness training.',
-      date: 'Nov 19, 2025',
-      author: 'Rehabilitation Specialist Dr. Comeback Strong',
-      readTime: '14 min read'
+      id: &apos;rehabilitation-fitness&apos;, 
+      title: &apos;Rehabilitation and Fitness: Returning Stronger After Injury&apos;, 
+      excerpt: &apos;Safe and effective strategies for transitioning from injury rehabilitation to fitness training.&apos;,
+      date: &apos;Nov 19, 2025&apos;,
+      author: &apos;Rehabilitation Specialist Dr. Comeback Strong&apos;,
+      readTime: &apos;14 min read&apos;
     },
     { 
-      id: 'strength-periodization', 
-      title: 'Strength Periodization: Maximizing Force Production and Muscle Development', 
-      excerpt: 'Advanced periodization strategies for strength development, muscle growth, and long-term athletic progression.',
-      date: 'Nov 17, 2025',
-      author: 'Strength Coach Dr. Periodization Pro',
-      readTime: '14 min read'
+      id: &apos;strength-periodization&apos;, 
+      title: &apos;Strength Periodization: Maximizing Force Production and Muscle Development&apos;, 
+      excerpt: &apos;Advanced periodization strategies for strength development, muscle growth, and long-term athletic progression.&apos;,
+      date: &apos;Nov 17, 2025&apos;,
+      author: &apos;Strength Coach Dr. Periodization Pro&apos;,
+      readTime: &apos;14 min read&apos;
     },
     { 
-      id: 'yoga-fitness', 
-      title: 'Yoga for Fitness: Strength, Flexibility, and Mind-Body Connection', 
-      excerpt: 'Integrate yoga practices into fitness routines for enhanced flexibility, strength, and mind-body awareness.',
-      date: 'Nov 15, 2025',
-      author: 'Yoga Instructor Dr. Mindful Motion',
-      readTime: '12 min read'
+      id: &apos;yoga-fitness&apos;, 
+      title: &apos;Yoga for Fitness: Strength, Flexibility, and Mind-Body Connection&apos;, 
+      excerpt: &apos;Integrate yoga practices into fitness routines for enhanced flexibility, strength, and mind-body awareness.&apos;,
+      date: &apos;Nov 15, 2025&apos;,
+      author: &apos;Yoga Instructor Dr. Mindful Motion&apos;,
+      readTime: &apos;12 min read&apos;
     }
   ];
 
@@ -155,46 +155,46 @@ export default function FitnessIndex() {
     <>
       <Head>
         <title>Fitness | Lifestyle Dimension</title>
-        <meta name="description" content="Discover evidence-based approaches to physical fitness and athletic performance." />
+        <meta name="description&quot; content="Discover evidence-based approaches to physical fitness and athletic performance.&quot; />
       </Head>
 
-      <div className="min-h-screen bg-white text-black">
-        <div className="container mx-auto px-4 py-12 max-w-6xl">
-          <Link href="/blog/lifestyle" className="inline-flex items-center text-violet-600 hover:text-violet-800 mb-8">
-            <span className="mr-2">←</span>
+      <div className="min-h-screen bg-white text-black&quot;>
+        <div className="container mx-auto px-4 py-12 max-w-6xl&quot;>
+          <Link href="/blog/lifestyle&quot; className="inline-flex items-center text-violet-600 hover:text-violet-800 mb-8&quot;>
+            <span className="mr-2&quot;>←</span>
             Back to Lifestyle
           </Link>
 
-          <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <div className="mb-12&quot;>
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4&quot;>
               Fitness
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl">
+            <p className="text-xl text-gray-700 max-w-3xl&quot;>
               Discover evidence-based approaches to physical fitness and athletic performance.
             </p>
           </div>
 
           {fitnessArticles.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {fitnessArticles.map((article) => (
                 <article 
                   key={article.id}
-                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300&quot;
                 >
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-black hover:text-violet-700 transition-colors">
+                  <div className="p-6&quot;>
+                    <h3 className="text-xl font-bold mb-3 text-black hover:text-violet-700 transition-colors&quot;>
                       <Link href={`/blog/lifestyle/fitness/${article.id}`}>
                         {article.title}
                       </Link>
                     </h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 mb-4&quot;>
                       {article.excerpt}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-500 text-sm">{article.date}</span>
+                    <div className="flex items-center justify-between&quot;>
+                      <span className="text-gray-500 text-sm&quot;>{article.date}</span>
                       <Link 
                         href={`/blog/lifestyle/fitness/${article.id}`}
-                        className="text-violet-600 hover:text-violet-800 text-sm"
+                        className="text-violet-600 hover:text-violet-800 text-sm&quot;
                       >
                         Read Guide →
                       </Link>
@@ -204,19 +204,19 @@ export default function FitnessIndex() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <div className="text-5xl mb-4">💪</div>
-              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
-              <p className="text-gray-600 max-w-md mx-auto">
-                We're working on bringing you the latest insights in fitness and athletic performance.
+            <div className="text-center py-12&quot;>
+              <div className="text-5xl mb-4&quot;>💪</div>
+              <h3 className="text-2xl font-bold mb-2&quot;>Coming Soon</h3>
+              <p className="text-gray-600 max-w-md mx-auto&quot;>
+                We&apos;re working on bringing you the latest insights in fitness and athletic performance.
               </p>
             </div>
           )}
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center&quot;>
             <Link 
-              href="/blog/lifestyle"
-              className="inline-flex items-center px-6 py-3 bg-violet-600 text-white rounded-lg font-semibold hover:bg-violet-700 transition-all duration-300"
+              href="/blog/lifestyle&quot;
+              className="inline-flex items-center px-6 py-3 bg-violet-600 text-white rounded-lg font-semibold hover:bg-violet-700 transition-all duration-300&quot;
             >
               ← Back to Lifestyle Dimension
             </Link>

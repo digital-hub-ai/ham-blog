@@ -1,8 +1,8 @@
 // components/insight-hub.tsx
-'use client';
+&apos;use client&apos;;
 
-import { useState, useEffect } from 'react';
-import { Insight } from '../lib/comparison-context';
+import { useState, useEffect } from &apos;react&apos;;
+import { Insight } from &apos;../lib/comparison-context&apos;;
 
 interface InsightHubProps {
   insights: Insight[];
@@ -89,34 +89,34 @@ export default function InsightHub({ insights, tools, isWorkspaceReady }: Insigh
 
   if (tools.length < 2) {
     return (
-      <div className="p-6">
-        <div className="text-center py-12">
-          <div className="text-4xl mb-4">🔍</div>
-          <h3 className="text-xl font-semibold mb-2">Select Tools to Analyze</h3>
-          <p className="text-gray-400">Add at least 2 tools to see intelligent insights</p>
+      <div className="p-6&quot;>
+        <div className="text-center py-12&quot;>
+          <div className="text-4xl mb-4&quot;>🔍</div>
+          <h3 className="text-xl font-semibold mb-2&quot;>Select Tools to Analyze</h3>
+          <p className="text-gray-400&quot;>Add at least 2 tools to see intelligent insights</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-6 space-y-6&quot;>
       {/* Header */}
       <div>
-        <h2 className="text-xl font-bold mb-2">Insight Hub</h2>
-        <p className="text-sm text-gray-400">AI-powered analysis and recommendations</p>
+        <h2 className="text-xl font-bold mb-2&quot;>Insight Hub</h2>
+        <p className="text-sm text-gray-400&quot;>AI-powered analysis and recommendations</p>
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-2 p-1 bg-white/10 rounded-lg">
-        {(['insights', 'differentiators', 'trends'] as const).map((tab) => (
+      <div className="flex gap-2 p-1 bg-white/10 rounded-lg&quot;>
+        {([&apos;insights&apos;, &apos;differentiators&apos;, &apos;trends&apos;] as const).map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
               activeTab === tab
-                ? 'bg-white/20 text-white'
-                : 'text-gray-400 hover:text-white hover:bg-white/10'
+                ? &apos;bg-white/20 text-white&apos;
+                : &apos;text-gray-400 hover:text-white hover:bg-white/10
             }`}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -126,34 +126,34 @@ export default function InsightHub({ insights, tools, isWorkspaceReady }: Insigh
 
       {/* Analysis Status */}
       {isAnalyzing && (
-        <div className="p-4 bg-blue-500/20 border border-blue-400/30 rounded-lg">
-          <div className="flex items-center gap-3">
-            <div className="animate-spin w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full"></div>
-            <span className="text-blue-300">AI Analysis in progress...</span>
+        <div className="p-4 bg-blue-500/20 border border-blue-400/30 rounded-lg&quot;>
+          <div className="flex items-center gap-3&quot;>
+            <div className="animate-spin w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full&quot;></div>
+            <span className="text-blue-300&quot;>AI Analysis in progress...</span>
           </div>
         </div>
       )}
 
       {/* Content based on active tab */}
-      <div className="space-y-4">
-        {activeTab === 'insights' && (
+      <div className="space-y-4&quot;>
+        {activeTab === &apos;insights&apos; && (
           <>
             {insights.length > 0 ? (
               insights.map((insight) => (
                 <div
                   key={insight.id}
-                  className="p-4 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition-colors"
+                  className="p-4 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition-colors&quot;
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3&quot;>
                     <div className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(insight.severity)}`}>
                       {insight.severity}
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-white mb-1">{insight.title}</h4>
-                      <p className="text-sm text-gray-300">{insight.description}</p>
-                      <div className="mt-2 flex flex-wrap gap-1">
+                    <div className="flex-1&quot;>
+                      <h4 className="font-semibold text-white mb-1&quot;>{insight.title}</h4>
+                      <p className="text-sm text-gray-300&quot;>{insight.description}</p>
+                      <div className="mt-2 flex flex-wrap gap-1&quot;>
                         {insight.tools.map((tool) => (
-                          <span key={tool} className="text-xs bg-blue-500/30 px-2 py-1 rounded">
+                          <span key={tool} className="text-xs bg-blue-500/30 px-2 py-1 rounded&quot;>
                             {tool}
                           </span>
                         ))}
@@ -163,31 +163,31 @@ export default function InsightHub({ insights, tools, isWorkspaceReady }: Insigh
                 </div>
               ))
             ) : (
-              <div className="text-center py-8 text-gray-400">
-                <div className="text-2xl mb-2">💡</div>
+              <div className="text-center py-8 text-gray-400&quot;>
+                <div className="text-2xl mb-2&quot;>💡</div>
                 <p>No insights generated yet</p>
               </div>
             )}
           </>
         )}
 
-        {activeTab === 'differentiators' && (
+        {activeTab === &apos;differentiators&apos; && (
           <>
             {mockDifferentiators.map((diff, index) => (
               <div
                 key={index}
-                className="p-4 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition-colors"
+                className="p-4 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition-colors&quot;
               >
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3&quot;>
                   <div className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(diff.impact)}`}>
                     {diff.impact} impact
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-white mb-1">{diff.title}</h4>
-                    <p className="text-sm text-gray-300">{diff.description}</p>
-                    <div className="mt-2 flex flex-wrap gap-1">
+                  <div className="flex-1&quot;>
+                    <h4 className="font-semibold text-white mb-1&quot;>{diff.title}</h4>
+                    <p className="text-sm text-gray-300&quot;>{diff.description}</p>
+                    <div className="mt-2 flex flex-wrap gap-1&quot;>
                       {diff.tools.map((tool) => (
-                        <span key={tool} className="text-xs bg-purple-500/30 px-2 py-1 rounded">
+                        <span key={tool} className="text-xs bg-purple-500/30 px-2 py-1 rounded&quot;>
                           {tool}
                         </span>
                       ))}
@@ -199,24 +199,24 @@ export default function InsightHub({ insights, tools, isWorkspaceReady }: Insigh
           </>
         )}
 
-        {activeTab === 'trends' && (
+        {activeTab === &apos;trends&apos; && (
           <>
             {mockTrends.map((trend, index) => (
               <div
                 key={index}
-                className="p-4 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition-colors"
+                className="p-4 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition-colors&quot;
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="text-2xl">{getTrendIcon(trend.trend)}</div>
+                <div className="flex items-center justify-between&quot;>
+                  <div className="flex items-center gap-3&quot;>
+                    <div className="text-2xl&quot;>{getTrendIcon(trend.trend)}</div>
                     <div>
-                      <h4 className="font-semibold text-white">{trend.title}</h4>
-                      <p className="text-sm text-gray-300">{trend.description}</p>
+                      <h4 className="font-semibold text-white&quot;>{trend.title}</h4>
+                      <p className="text-sm text-gray-300&quot;>{trend.description}</p>
                     </div>
                   </div>
                   <div className={`text-lg font-bold ${
-                    trend.trend === 'up' ? 'text-green-400' : 
-                    trend.trend === 'down' ? 'text-red-400' : 'text-gray-400'
+                    trend.trend === &apos;up&apos; ? &apos;text-green-400&apos; : 
+                    trend.trend === &apos;down&apos; ? &apos;text-red-400&apos; : &apos;text-gray-400
                   }`}>
                     {trend.change}
                   </div>
@@ -228,16 +228,16 @@ export default function InsightHub({ insights, tools, isWorkspaceReady }: Insigh
       </div>
 
       {/* Quick Actions */}
-      <div className="pt-4 border-t border-white/10">
-        <div className="space-y-2">
+      <div className="pt-4 border-t border-white/10&quot;>
+        <div className="space-y-2&quot;>
           <button
             onClick={runAnalysis}
             disabled={isAnalyzing}
-            className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50"
+            className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50&quot;
           >
-            {isAnalyzing ? 'Analyzing...' : 'Run AI Analysis'}
+            {isAnalyzing ? &apos;Analyzing...&apos; : &apos;Run AI Analysis&apos;}
           </button>
-          <button className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg hover:bg-white/20 transition-colors">
+          <button className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg hover:bg-white/20 transition-colors&quot;>
             Export Insights
           </button>
         </div>

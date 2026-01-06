@@ -9,10 +9,10 @@ function processFile(filePath) {
     const originalContent = content;
     
     // Fix Chrono-Wanderer's Atlas
-    content = content.replace(/Chrono-Wanderer's Atlas/g, "Chrono-Wanderer&apos;s Atlas");
+    content = content.replace(/Chrono-Wanderer's Atlas/g, &quot;Chrono-Wanderer&apos;s Atlas&quot;);
     
     // Fix Traveler's Tip
-    content = content.replace(/Traveler's Tip/g, "Traveler&apos;s Tip");
+    content = content.replace(/Traveler's Tip/g, &quot;Traveler&apos;s Tip&quot;);
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -32,7 +32,7 @@ function walkDir(dir) {
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {
           walkDir(filePath);
-        } else if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx') || filePath.endsWith('.js')) {
+        } else if (filePath.endsWith(&apos;.tsx&apos;) || filePath.endsWith(&apos;.jsx&apos;) || filePath.endsWith(&apos;.js&apos;)) {
           processFile(filePath);
         }
       } catch (error) {
@@ -44,6 +44,6 @@ function walkDir(dir) {
   }
 }
 
-console.log('🚀 Starting to fix unescaped entities...');
+console.log(&apos;🚀 Starting to fix unescaped entities...&apos;);
 walkDir(directory);
-console.log('✨ Finished processing files');
+console.log(&apos;✨ Finished processing files&apos;);

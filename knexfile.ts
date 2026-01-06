@@ -1,35 +1,35 @@
-import type Knex from 'knex';
-import path from 'path';
-import dotenv from 'dotenv';
+import type Knex from &apos;knex&apos;;
+import path from &apos;path&apos;;
+import dotenv from &apos;dotenv&apos;;
 
 // Load environment variables
 dotenv.config();
 
 const config: { [key: string]: Knex.Config } = {
   development: {
-    client: 'sqlite3',
+    client: &apos;sqlite3&apos;,
     connection: {
-      filename: path.join(__dirname, './dev.sqlite3')
+      filename: path.join(__dirname, &apos;./dev.sqlite3&apos;)
     },
     useNullAsDefault: true,
     migrations: {
-      directory: './migrations',
-      tableName: 'knex_migrations'
+      directory: &apos;./migrations&apos;,
+      tableName: &apos;knex_migrations&apos;
     },
     seeds: {
-      directory: './seeds'
+      directory: &apos;./seeds&apos;
     }
   },
   
   production: {
-    client: 'sqlite3',
+    client: &apos;sqlite3&apos;,
     connection: {
-      filename: process.env.DATABASE_URL || path.join(__dirname, './prod.sqlite3')
+      filename: process.env.DATABASE_URL || path.join(__dirname, &apos;./prod.sqlite3&apos;)
     },
     useNullAsDefault: true,
     migrations: {
-      directory: './migrations',
-      tableName: 'knex_migrations'
+      directory: &apos;./migrations&apos;,
+      tableName: &apos;knex_migrations&apos;
     },
     pool: {
       min: 2,

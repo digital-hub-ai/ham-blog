@@ -57,11 +57,11 @@ const simpleTextSearch = (
   const advancedFilters: any = {};
   
   // Extract quoted phrases
-  const phrases = query.match(/"([^"]+)"/g);
+  const phrases = query.match(/&quot;([^&quot;]+)&quot;/g);
   const phraseTerms: string[] = [];
   if (phrases) {
     phrases.forEach(phrase => {
-      const cleanPhrase = phrase.replace(/"/g, '').trim();
+      const cleanPhrase = phrase.replace(/&quot;/g, '').trim();
       if (cleanPhrase) {
         phraseTerms.push(cleanPhrase);
         processedQuery = processedQuery.replace(phrase, '');
@@ -192,7 +192,7 @@ export interface SearchOptions {
     maxPrice?: number;
     // New filters
     subcategory?: string | string[];
-    pricingType?: 'Free' | 'Freemium' | 'Paid' | 'Contact' | 'Open Source';
+    pricingType?: &apos;Free&apos; | &apos;Freemium&apos; | &apos;Paid&apos; | &apos;Contact&apos; | &apos;Open Source&apos;;
     minReviews?: number;
     title?: string | string[];
     date?: string;
@@ -212,12 +212,12 @@ export interface SearchOptions {
     hasMobileApp?: boolean;
     hasChromeExtension?: boolean;
     integrationCount?: number;
-    updateFrequency?: 'daily' | 'weekly' | 'monthly' | 'yearly';
-    toolAge?: 'new' | 'established' | 'legacy';
-    vendorSize?: 'startup' | 'midsize' | 'enterprise';
+    updateFrequency?: &apos;daily&apos; | &apos;weekly&apos; | &apos;monthly&apos; | &apos;yearly&apos;;
+    toolAge?: &apos;new&apos; | &apos;established&apos; | &apos;legacy&apos;;
+    vendorSize?: &apos;startup&apos; | &apos;midsize&apos; | &apos;enterprise&apos;;
   };
-  sortBy?: 'relevance' | 'date' | 'rating' | 'title' | 'reviews' | 'popularity' | 'trending' | 'lastUpdated' | 'launchDate';
-  sortOrder?: 'asc' | 'desc';
+  sortBy?: &apos;relevance&apos; | &apos;date&apos; | &apos;rating&apos; | &apos;title&apos; | &apos;reviews&apos; | &apos;popularity&apos; | &apos;trending&apos; | &apos;lastUpdated&apos; | &apos;launchDate&apos;;
+  sortOrder?: &apos;asc&apos; | &apos;desc&apos;;
   // Personalization options
   userId?: string;
   boostFavorites?: boolean;
@@ -282,14 +282,14 @@ const embeddingResultCache = new Cache<number[]>();
 const loadModel = async (): Promise<use.UniversalSentenceEncoder> => {
   if (!model) {
     try {
-      console.time('Model loading');
+      console.time(&apos;Model loading&apos;);
       model = await use.load({
-        modelUrl: 'https://storage.googleapis.com/tfjs-models/savedmodel/universal-sentence-encoder-lite/model.json'
+        modelUrl: &apos;https://storage.googleapis.com/tfjs-models/savedmodel/universal-sentence-encoder-lite/model.json&apos;
       });
-      console.timeEnd('Model loading');
+      console.timeEnd(&apos;Model loading&apos;);
     } catch (error) {
-      console.error('Failed to load model:', error);
-      throw new Error('Failed to load the Universal Sentence Encoder model');
+      console.error(&apos;Failed to load model:&apos;, error);
+      throw new Error(&apos;Failed to load the Universal Sentence Encoder model&apos;);
     }
   }
   return model;
@@ -340,7 +340,7 @@ const getEmbeddings = async (texts: string[]): Promise<number[][]> => {
     
     return results;
   } catch (error) {
-    console.error('Error getting embeddings:', error);
+    console.error(&apos;Error getting embeddings:&apos;, error);
     throw error;
   }
 };
@@ -446,7 +446,7 @@ function applyFilters(documents: Document[], filters: SearchOptions['filters'] =
     if (filters.date && doc.publishedAt) {
       const filterDate = new Date(filters.date);
       const docDate = new Date(doc.publishedAt);
-      // For now, we'll just check if the document was published after the filter date
+      // For now, we&apos;ll just check if the document was published after the filter date
       if (docDate < filterDate) return false;
     }
     
@@ -492,7 +492,7 @@ function applyFilters(documents: Document[], filters: SearchOptions['filters'] =
         const pricingObj = doc.pricing as { free?: boolean };
         if (filters.hasFreePlan !== pricingObj.free) return false;
       } else if (filters.hasFreePlan) {
-        // If pricing is a string, check if it contains "free"
+        // If pricing is a string, check if it contains &quot;free&quot;
         if (typeof doc.pricing === 'string' && !doc.pricing.toLowerCase().includes('free')) return false;
       }
     }
@@ -539,7 +539,7 @@ function applyFilters(documents: Document[], filters: SearchOptions['filters'] =
     // Filter by integration count
     if (filters.integrationCount !== undefined && doc.features) {
       const integrationCount = doc.features.filter((f: string) => 
-        f.toLowerCase().includes('integration') || f.toLowerCase().includes('connect')
+        f.toLowerCase().includes(&apos;integration&apos;) || f.toLowerCase().includes(&apos;connect&apos;)
       ).length;
       if (integrationCount < filters.integrationCount) return false;
     }
@@ -554,10 +554,10 @@ function applyFilters(documents: Document[], filters: SearchOptions['filters'] =
         case 'new':
           if (yearsSinceLaunch >= 1) return false;
           break;
-        case 'established':
+        case &apos;established&apos;:
           if (yearsSinceLaunch < 1 || yearsSinceLaunch >= 3) return false;
           break;
-        case 'legacy':
+        case &apos;legacy&apos;:
           if (yearsSinceLaunch < 3) return false;
           break;
       }
@@ -681,8 +681,8 @@ function generateSnippet(content: string, query: string, maxLength: number = 200
   const queryTerms = queryLower.split(/\s+/);
   queryTerms.forEach(term => {
     if (term.length > 1) {
-      const regex = new RegExp(`(${term})`, 'gi');
-      snippet = snippet.replace(regex, '**$1**');
+      const regex = new RegExp(`(${term})`, &apos;gi&apos;);
+      snippet = snippet.replace(regex, &apos;**$1**&apos;);
     }
   });
   
@@ -756,7 +756,7 @@ export const semanticSearch = async (
   // Check cache first
   const cachedResults = searchResultCache.get(cacheKey);
   if (cachedResults) {
-    console.log('Returning cached results for:', query);
+    console.log(&apos;Returning cached results for:&apos;, query);
     searchAnalytics.cacheHits++;
     const responseTime = Date.now() - startTime;
     searchAnalytics.averageResponseTime = (searchAnalytics.averageResponseTime * (searchAnalytics.totalSearches - 1) + responseTime) / searchAnalytics.totalSearches;
@@ -765,7 +765,7 @@ export const semanticSearch = async (
   if (!query || !documents?.length) return [];
   
   // For very short queries or when semantic search fails, try fuzzy search
-  let useFuzzySearch = processedQuery.processedQuery.length < 4 || processedQuery.processedQuery.includes('~');
+  let useFuzzySearch = processedQuery.processedQuery.length < 4 || processedQuery.processedQuery.includes(&apos;~&apos;);
   
   // For very short queries, use simple text search for better performance
   if (processedQuery.processedQuery.length < 3) {
@@ -793,7 +793,7 @@ export const semanticSearch = async (
   const advancedFilters: any = {};
   
   // Extract quoted phrases
-  const phrases = finalQuery.match(/"([^"]+)"/g);
+  const phrases = finalQuery.match(/&quot;([^&quot;]+)&quot;/g);
   if (phrases) {
     phrases.forEach(phrase => {
       finalQuery = finalQuery.replace(phrase, '');
@@ -834,9 +834,9 @@ export const semanticSearch = async (
       if (parts && parts[2]) {
         const operator = parts[1] || '>';
         const rating = parseFloat(parts[2]);
-        if (operator === '>' || operator === '') {
+        if (operator === '>&apos; || operator === &apos;&apos;) {
           advancedFilters.minRating = rating;
-        } else if (operator === '<') {
+        } else if (operator === &apos;<') {
           // We don't have max rating filter, but could add if needed
         }
         finalQuery = finalQuery.replace(match, '');
@@ -884,10 +884,10 @@ export const semanticSearch = async (
     // Optimize content by using title + description for better relevance
     const docTexts = filteredDocs.map(doc => `${doc.title} ${doc.summary || doc.content.substring(0, 500)}`);
     const docEmbeddings = await getEmbeddings(docTexts);
-    console.timeEnd('Get embeddings');
+    console.timeEnd(&apos;Get embeddings&apos;);
     
     // Calculate similarities
-    console.time('Calculate similarities');
+    console.time(&apos;Calculate similarities&apos;);
     const results: SearchResult[] = [];
     
     // Process in chunks to avoid blocking the main thread
@@ -980,13 +980,13 @@ export const semanticSearch = async (
     // Log search performance
     const responseTime = Date.now() - startTime;
     searchAnalytics.averageResponseTime = (searchAnalytics.averageResponseTime * (searchAnalytics.totalSearches - 1) + responseTime) / searchAnalytics.totalSearches;
-    console.log(`Search completed for "${query}" in ${filteredDocs.length} documents, found ${enhancedResults.length} results in ${responseTime}ms`);
+    console.log(`Search completed for &quot;${query}&quot; in ${filteredDocs.length} documents, found ${enhancedResults.length} results in ${responseTime}ms`);
     
     return enhancedResults;
   } catch (error) {
-    console.error('Error in semantic search:', error);
+    console.error(&apos;Error in semantic search:&apos;, error);
     // Fallback to simple text search if semantic search fails
-    console.log('Falling back to text search');
+    console.log(&apos;Falling back to text search&apos;);
     return simpleTextSearch(query, documents, options);
   }
 };
@@ -1054,31 +1054,31 @@ export const loadDocuments = async (): Promise<Document[]> => {
   // Static documents for non-blog content
   const staticDocuments: Document[] = [
     {
-      id: 'home',
-      type: 'update' as const,
-      title: 'Home',
-      content: 'Welcome to our AI tools directory. Discover the best AI tools and resources.',
-      url: '/',
-      publishedAt: new Date('2023-01-01'),
-      tags: ['welcome', 'home']
+      id: &apos;home&apos;,
+      type: &apos;update&apos; as const,
+      title: &apos;Home&apos;,
+      content: &apos;Welcome to our AI tools directory. Discover the best AI tools and resources.&apos;,
+      url: &apos;/&apos;,
+      publishedAt: new Date(&apos;2023-01-01&apos;),
+      tags: [&apos;welcome&apos;, &apos;home&apos;]
     },
     {
-      id: 'about',
-      type: 'update' as const,
-      title: 'About Us',
-      content: 'Learn more about our mission to organize and make AI tools accessible to everyone.',
-      url: '/about',
-      publishedAt: new Date('2023-01-01'),
-      tags: ['about', 'mission']
+      id: &apos;about&apos;,
+      type: &apos;update&apos; as const,
+      title: &apos;About Us&apos;,
+      content: &apos;Learn more about our mission to organize and make AI tools accessible to everyone.&apos;,
+      url: &apos;/about&apos;,
+      publishedAt: new Date(&apos;2023-01-01&apos;),
+      tags: [&apos;about&apos;, &apos;mission&apos;]
     },
     {
-      id: 'contact',
-      type: 'update' as const,
-      title: 'Contact',
-      content: 'Get in touch with our team for questions or suggestions about AI tools.',
-      url: '/contact',
-      publishedAt: new Date('2023-01-01'),
-      tags: ['contact', 'support']
+      id: &apos;contact&apos;,
+      type: &apos;update&apos; as const,
+      title: &apos;Contact&apos;,
+      content: &apos;Get in touch with our team for questions or suggestions about AI tools.&apos;,
+      url: &apos;/contact&apos;,
+      publishedAt: new Date(&apos;2023-01-01&apos;),
+      tags: [&apos;contact&apos;, &apos;support&apos;]
     }
   ];
   
@@ -1093,7 +1093,7 @@ export const loadDocuments = async (): Promise<Document[]> => {
 };
 
 // Export clustering functions
-export { clusterSearchResults, getClusterStats } from './searchClustering';
+export { clusterSearchResults, getClusterStats } from &apos;./searchClustering&apos;;
 
 // Export types and functions for external use
 // Types and functions are already exported directly above

@@ -8,18 +8,18 @@ const toolObjects = content.split(/\n\s*\{\s*\n/).slice(1); // Skip the first pa
 
 let retailSubcategories = new Set();
 
-console.log('Finding subcategories in "AI for Retail" category...');
+console.log('Finding subcategories in &quot;AI for Retail&quot; category...');
 
 toolObjects.forEach((toolStr, index) => {
-  if (toolStr.includes('"category": "AI for Retail"')) {
-    const subcategoryMatch = toolStr.match(/"subcategory":\s*"([^"]+)"/);
+  if (toolStr.includes('&quot;category&quot;: &quot;AI for Retail&quot;')) {
+    const subcategoryMatch = toolStr.match(/&quot;subcategory&quot;:\s*&quot;([^&quot;]+)&quot;/);
     if (subcategoryMatch) {
       retailSubcategories.add(subcategoryMatch[1]);
     }
   }
 });
 
-console.log('\nSubcategories in "AI for Retail" category:');
+console.log('\nSubcategories in &quot;AI for Retail&quot; category:');
 let count = 1;
 Array.from(retailSubcategories).forEach(subcategory => {
   console.log(`${count}. ${subcategory}`);

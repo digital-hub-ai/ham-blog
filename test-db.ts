@@ -11,13 +11,13 @@ async function testConnection() {
     
     // Create a test table
     await db.schema.createTableIfNotExists('test_table', (table) => {
-      table.increments('id');
-      table.string('name');
+      table.increments(&apos;id&apos;);
+      table.string(&apos;name&apos;);
     });
     
-    console.log('✅ Test table created successfully!');
+    console.log(&apos;✅ Test table created successfully!&apos;);
   } catch (error) {
-    console.error('❌ Database error:', error);
+    console.error(&apos;❌ Database error:&apos;, error);
   } finally {
     await db.destroy();
   }

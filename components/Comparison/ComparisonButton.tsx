@@ -1,14 +1,14 @@
-'use client';
+&apos;use client&apos;;
 
-import { useState, useEffect } from 'react';
-import { Tool } from '@/types/tool';
-import { useComparison } from '@/contexts/ComparisonContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBalanceScale, faCheck, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from &apos;react&apos;;
+import { Tool } from &apos;@/types/tool&apos;;
+import { useComparison } from &apos;@/contexts/ComparisonContext&apos;;
+import { FontAwesomeIcon } from &apos;@fortawesome/react-fontawesome&apos;;
+import { faBalanceScale, faCheck, faPlus } from &apos;@fortawesome/free-solid-svg-icons&apos;;
 
 interface ComparisonButtonProps {
   tool: Tool;
-  size?: 'sm' | 'md' | 'lg';
+  size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos;;
   showLabel?: boolean;
   className?: string;
 }
@@ -60,13 +60,13 @@ const ComparisonButton: React.FC<ComparisonButtonProps> = ({
         disabled
       >
         <FontAwesomeIcon icon={faBalanceScale} className={iconClasses[size]} />
-        {showLabel && <span className="ml-2">Compare</span>}
+        {showLabel && <span className="ml-2&quot;>Compare</span>}
       </button>
     );
   }
 
   const isDisabled = !isInCompare && !canAddMore;
-  const buttonText = isInCompare ? 'Added' : canAddMore ? 'Compare' : 'Max 3';
+  const buttonText = isInCompare ? &apos;Added&apos; : canAddMore ? &apos;Compare&apos; : &apos;Max 3&apos;;
 
   return (
     <button
@@ -74,22 +74,22 @@ const ComparisonButton: React.FC<ComparisonButtonProps> = ({
       disabled={isDisabled}
       className={`inline-flex items-center ${sizeClasses[size]} ${
         isInCompare 
-          ? 'text-green-500 hover:text-green-600' 
+          ? &apos;text-green-500 hover:text-green-600&apos; 
           : isDisabled
-            ? 'text-gray-400 cursor-not-allowed'
-            : 'text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
+            ? &apos;text-gray-400 cursor-not-allowed&apos;
+            : &apos;text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300&apos;
       } transition-colors ${className}`}
-      aria-label={isInCompare ? 'Remove from comparison' : 'Add to comparison'}
-      title={isInCompare ? 'Remove from comparison' : 'Add to comparison'}
+      aria-label={isInCompare ? &apos;Remove from comparison&apos; : &apos;Add to comparison&apos;}
+      title={isInCompare ? &apos;Remove from comparison&apos; : &apos;Add to comparison}
     >
       {isInCompare ? (
-        <FontAwesomeIcon icon={faCheck} className="mr-1" />
+        <FontAwesomeIcon icon={faCheck} className="mr-1&quot; />
       ) : (
         <FontAwesomeIcon icon={faBalanceScale} className={iconClasses[size]} />
       )}
       {showLabel && (
-        <span className="ml-2">
-          <FontAwesomeIcon icon={faPlus} className="mr-1" />
+        <span className="ml-2&quot;>
+          <FontAwesomeIcon icon={faPlus} className="mr-1&quot; />
           {buttonText}
         </span>
       )}

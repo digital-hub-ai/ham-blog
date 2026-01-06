@@ -1,4 +1,4 @@
-import mongoose, { Document, Model, Schema, Types } from 'mongoose';
+import mongoose, { Document, Model, Schema, Types } from &apos;mongoose&apos;;
 
 interface ITool extends Document {
   name: string;
@@ -7,7 +7,7 @@ interface ITool extends Document {
   shortDescription?: string;
   website: string;
   logo?: string;
-  pricing: 'Free' | 'Freemium' | 'Paid' | 'Open Source' | 'Contact';
+  pricing: &apos;Free&apos; | &apos;Freemium&apos; | &apos;Paid&apos; | &apos;Open Source&apos; | &apos;Contact&apos;;
   categories: string[];
   tags?: string[];
   features?: string[];
@@ -70,7 +70,7 @@ const ToolSchema = new Schema<ITool, IToolModel>({
   logo: String,
   pricing: {
     type: String,
-    enum: ['Free', 'Freemium', 'Paid', 'Open Source', 'Contact'],
+    enum: [&apos;Free&apos;, &apos;Freemium&apos;, &apos;Paid&apos;, &apos;Open Source&apos;, &apos;Contact&apos;],
     required: true
   },
   categories: [{
@@ -116,7 +116,7 @@ const ToolSchema = new Schema<ITool, IToolModel>({
   },
   submittedBy: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+    ref: &apos;User&apos;
   }
 }, {
   timestamps: true,
@@ -126,10 +126,10 @@ const ToolSchema = new Schema<ITool, IToolModel>({
 
 // Text index for search
 ToolSchema.index({
-  name: 'text',
-  description: 'text',
-  tags: 'text',
-  categories: 'text'
+  name: &apos;text&apos;,
+  description: &apos;text&apos;,
+  tags: &apos;text&apos;,
+  categories: &apos;text&apos;
 }, {
   weights: {
     name: 10,
@@ -137,26 +137,26 @@ ToolSchema.index({
     categories: 3,
     description: 1
   },
-  name: 'search_index'
+  name: &apos;search_index&apos;
 });
 
 // Pre-save hook to generate slug (temporarily disabled due to TypeScript issues)
-// ToolSchema.pre('save', function(next) {
+// ToolSchema.pre(&apos;save&apos;, function(next) {
 //   // @ts-ignore - Workaround for TypeScript/Mongoose typing conflict
 //   const _next = next as Function;
 //   const tool = this as ITool;
-//   if (tool.isModified('name')) {
+//   if (tool.isModified(&apos;name&apos;)) {
 //     tool.slug = tool.name
 //       .toLowerCase()
-//       .replace(/[^\w\s-]/g, '')
-//       .replace(/\s+/g, '-')
-//       .replace(/--+/g, '-');
+//       .replace(/[^\w\s-]/g, &apos;&apos;)
+//       .replace(/\s+/g, &apos;-&apos;)
+//       .replace(/--+/g, &apos;-&apos;);
 //   }
 //   _next();
 // });
 
 // Virtual for tool URL
-ToolSchema.virtual('url').get(function(this: ITool) {
+ToolSchema.virtual(&apos;url&apos;).get(function(this: ITool) {
   return `/tools/${this.slug}`;
 });
 
@@ -172,7 +172,7 @@ ToolSchema.statics.search = async function(
     sort?: string;
   } = {}
 ): Promise<{ tools: ITool[]; total: number; page: number; totalPages: number }> {
-  const { page = 1, limit = 10, category, pricing, sort = '-createdAt' } = options;
+  const { page = 1, limit = 10, category, pricing, sort = &apos;-createdAt&apos; } = options;
   
   const skip = (page - 1) * limit;
   
@@ -210,6 +210,6 @@ ToolSchema.statics.search = async function(
 // Update model in mongoose
 const Tool: IToolModel = 
   (mongoose.models.Tool as IToolModel) || 
-  mongoose.model<ITool, IToolModel>('Tool', ToolSchema);
+  mongoose.model<ITool, IToolModel>(&apos;Tool&apos;, ToolSchema);
 
 export default Tool;

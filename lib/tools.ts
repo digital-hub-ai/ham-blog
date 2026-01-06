@@ -1,5 +1,5 @@
-import { Tool } from '@/types/tool';
-import { tools as allTools } from '@/data/tools';
+import { Tool } from &apos;@/types/tool&apos;;
+import { tools as allTools } from &apos;@/data/tools&apos;;
 
 interface ToolWithMatches extends Tool {
   _tagMatches?: number;

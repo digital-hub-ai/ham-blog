@@ -4,23 +4,23 @@
 
 // Quantum search algorithms
 export type QuantumAlgorithm = 
-  | 'grover'             // Grover's search algorithm
-  | 'qaoa'               // Quantum Approximate Optimization Algorithm
-  | 'vqe'                // Variational Quantum Eigensolver
-  | 'quantum-annealing'  // Quantum annealing
-  | 'shor'               // Shor's algorithm (for specific use cases)
-  | 'custom';            // Custom quantum algorithms
+  | &apos;grover&apos;             // Grover&apos;s search algorithm
+  | &apos;qaoa&apos;               // Quantum Approximate Optimization Algorithm
+  | &apos;vqe&apos;                // Variational Quantum Eigensolver
+  | &apos;quantum-annealing&apos;  // Quantum annealing
+  | &apos;shor&apos;               // Shor&apos;s algorithm (for specific use cases)
+  | &apos;custom&apos;;            // Custom quantum algorithms
 
 // Quantum computing platforms
 export type QuantumPlatform = 
-  | 'ibm-quantum'        // IBM Quantum
-  | 'google-quantum'     // Google Quantum AI
-  | 'rigetti'            // Rigetti Quantum Cloud
-  | 'd-wave'             // D-Wave Systems
-  | 'ionq'               // IonQ
-  | 'amazon-braket'      // Amazon Braket
-  | 'microsoft-quantum'  // Microsoft Azure Quantum
-  | 'custom';            // Custom quantum platforms
+  | &apos;ibm-quantum&apos;        // IBM Quantum
+  | &apos;google-quantum&apos;     // Google Quantum AI
+  | &apos;rigetti&apos;            // Rigetti Quantum Cloud
+  | &apos;d-wave&apos;             // D-Wave Systems
+  | &apos;ionq&apos;               // IonQ
+  | &apos;amazon-braket&apos;      // Amazon Braket
+  | &apos;microsoft-quantum&apos;  // Microsoft Azure Quantum
+  | &apos;custom&apos;;            // Custom quantum platforms
 
 // Quantum search configuration
 export interface QuantumSearchConfig {
@@ -73,7 +73,7 @@ export interface QuantumOptimizationResult {
 // Quantum machine learning model
 export interface QuantumMLModel {
   id: string;
-  type: 'classifier' | 'regressor' | 'clustering' | 'optimization';
+  type: &apos;classifier&apos; | &apos;regressor&apos; | &apos;clustering&apos; | &apos;optimization&apos;;
   features: string[];
   parameters: Record<string, any>;
   trainingDataSize: number;
@@ -159,7 +159,7 @@ export class QuantumSearchService {
     
     // Validate request
     if (!request.query || !request.dataset || request.dataset.length === 0) {
-      throw new Error('Invalid search request: query and dataset are required');
+      throw new Error(&apos;Invalid search request: query and dataset are required&apos;);
     }
     
     // Perform classical search for comparison
@@ -240,7 +240,7 @@ export class QuantumSearchService {
       ).length;
       
       const bScore = keywords.filter(k => 
-        (b.title + ' ' + b.content).toLowerCase().includes(k)
+        (b.title + &apos; &apos; + b.content).toLowerCase().includes(k)
       ).length;
       
       return bScore - aScore;
@@ -407,7 +407,7 @@ export class QuantumSearchService {
     
     // Apply quantum-inspired perturbations
     Object.keys(newParameters).forEach(key => {
-      if (typeof newParameters[key] === 'number') {
+      if (typeof newParameters[key] === &apos;number&apos;) {
         // Add quantum tunneling effect simulation
         const tunnelingFactor = Math.exp(-iteration / 10);
         const quantumPerturbation = (Math.random() - 0.5) * tunnelingFactor * 2;
@@ -456,7 +456,7 @@ export class QuantumSearchService {
     const trainingStartTime = Date.now();
     
     // In a real implementation, this would involve quantum circuits
-    // For simulation, we'll just update the model metadata
+    // For simulation, we&apos;ll just update the model metadata
     const updatedModel: QuantumMLModel = {
       ...model,
       trainingDataSize: trainingData.length,
@@ -487,11 +487,11 @@ export class QuantumSearchService {
   } {
     return {
       supportedAlgorithms: [
-        'grover', 'qaoa', 'vqe', 'quantum-annealing', 'shor'
+        &apos;grover&apos;, &apos;qaoa&apos;, &apos;vqe&apos;, &apos;quantum-annealing&apos;, &apos;shor&apos;
       ],
       supportedPlatforms: [
-        'ibm-quantum', 'google-quantum', 'rigetti', 'd-wave', 'ionq', 
-        'amazon-braket', 'microsoft-quantum'
+        &apos;ibm-quantum&apos;, &apos;google-quantum&apos;, &apos;rigetti&apos;, &apos;d-wave&apos;, &apos;ionq&apos;, 
+        &apos;amazon-braket&apos;, &apos;microsoft-quantum&apos;
       ],
       maxQubits: this.simulationMode ? 16 : 128,
       defaultConfig: this.defaultConfig
@@ -523,7 +523,7 @@ export class QuantumSearchService {
     simulationMode: boolean;
   } {
     // In a real implementation, this would track actual usage
-    // For simulation, we'll generate plausible statistics
+    // For simulation, we&apos;ll generate plausible statistics
     return {
       totalSearches: Math.floor(Math.random() * 10000),
       averageQuantumAdvantage: 2.5 + Math.random() * 1.5, // 2.5-4.0x

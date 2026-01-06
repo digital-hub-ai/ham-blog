@@ -5,11 +5,11 @@ const categoriesData = fs.readFileSync('./data/categories.ts', 'utf8');
 
 // Extract categories with 0 tools
 const zeroToolCategories = [];
-const categoryMatches = categoriesData.match(/name: "([^"]+)",\s+icon: "[^"]+",\s+toolCount: (\d+),/g);
+const categoryMatches = categoriesData.match(/name: &quot;([^&quot;]+)&quot;,\s+icon: &quot;[^&quot;]+&quot;,\s+toolCount: (\d+),/g);
 
 if (categoryMatches) {
   categoryMatches.forEach(match => {
-    const nameMatch = match.match(/name: "([^"]+)"/);
+    const nameMatch = match.match(/name: &quot;([^&quot;]+)&quot;/);
     const countMatch = match.match(/toolCount: (\d+)/);
     
     if (nameMatch && countMatch) {
@@ -32,7 +32,7 @@ console.log('\nAll categories:');
 const allCategories = [];
 if (categoryMatches) {
   categoryMatches.forEach(match => {
-    const nameMatch = match.match(/name: "([^"]+)"/);
+    const nameMatch = match.match(/name: &quot;([^&quot;]+)&quot;/);
     const countMatch = match.match(/toolCount: (\d+)/);
     
     if (nameMatch && countMatch) {

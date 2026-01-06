@@ -19,31 +19,31 @@ export default function CookieConsentBanner() {
   };
 
   const declineCookies = () => {
-    localStorage.setItem('cookieConsent', 'declined');
+    localStorage.setItem(&apos;cookieConsent&apos;, &apos;declined&apos;);
     setIsVisible(false);
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 shadow-lg z-50">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div className="mb-4 md:mb-0 md:mr-6">
-          <p className="text-sm">
+    <div className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 shadow-lg z-50&quot;>
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between&quot;>
+        <div className="mb-4 md:mb-0 md:mr-6&quot;>
+          <p className="text-sm&quot;>
             We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies. 
-            Learn more in our <Link href="/privacy-policy" className="text-blue-400 hover:underline">Privacy Policy</Link>.
+            Learn more in our <Link href="/privacy-policy&quot; className="text-blue-400 hover:underline&quot;>Privacy Policy</Link>.
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-2">
+        <div className="flex flex-col sm:flex-row gap-2&quot;>
           <button
             onClick={declineCookies}
-            className="px-4 py-2 text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 rounded-md transition-colors"
+            className="px-4 py-2 text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 rounded-md transition-colors&quot;
           >
             Decline
           </button>
           <button
             onClick={acceptCookies}
-            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
+            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors&quot;
           >
             Accept All
           </button>

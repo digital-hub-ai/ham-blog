@@ -1,4 +1,4 @@
-declare module 'data/categories' {
+declare module &apos;data/categories&apos; {
   interface Subcategory {
     name: string;
     favicon: string;

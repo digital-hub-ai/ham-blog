@@ -34,33 +34,33 @@ export const Breadcrumbs: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: breadcrumbs.map((item, index) => ({
-      '@type': 'ListItem',
+      &apos;@type&apos;: &apos;ListItem&apos;,
       position: index + 1,
       name: item.label,
-      item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-vault.example.com'}${item.href}`
+      item: `${process.env.NEXT_PUBLIC_SITE_URL || &apos;https://ai-vault.example.com&apos;}${item.href}`
     }))
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-6">
+    <nav aria-label="Breadcrumb&quot; className="text-sm text-gray-600 mb-6&quot;>
       <script
-        type="application/ld+json"
+        type="application/ld+json&quot;
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
-      <ol className="flex flex-wrap items-center gap-2">
+      <ol className="flex flex-wrap items-center gap-2&quot;>
         {breadcrumbs.map((item, index) => (
-          <li key={item.href} className="flex items-center">
+          <li key={item.href} className="flex items-center&quot;>
             {index > 0 && (
-              <span className="mx-2 text-gray-400">/</span>
+              <span className="mx-2 text-gray-400&quot;>/</span>
             )}
             {item.active ? (
-              <span className="text-gray-900 font-medium" aria-current="page">
+              <span className="text-gray-900 font-medium&quot; aria-current="page&quot;>
                 {item.label}
               </span>
             ) : (
               <Link 
                 href={item.href}
-                className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                className="text-blue-600 hover:text-blue-800 hover:underline transition-colors&quot;
               >
                 {item.label}
               </Link>

@@ -49,14 +49,14 @@ function extractFrontmatter(content: string): Record<string, any> {
     try {
       const yaml = yamlMatch[1];
       yaml.split('\n').forEach(line => {
-        const [key, ...value] = line.split(':');
+        const [key, ...value] = line.split(&apos;:&apos;);
         if (key && value) {
-          frontmatter[key.trim()] = value.join(':').trim()
-            .replace(/^['"](.*)['"]$/, '$1');
+          frontmatter[key.trim()] = value.join(&apos;:&apos;).trim()
+            .replace(/^[&apos;&quot;](.*)[&apos;&quot;]$/, &apos;$1&apos;);
         }
       });
     } catch (e) {
-      console.warn('Failed to parse YAML frontmatter', e);
+      console.warn(&apos;Failed to parse YAML frontmatter&apos;, e);
     }
   }
   
@@ -66,13 +66,13 @@ function extractFrontmatter(content: string): Record<string, any> {
 // Function to extract text from markdown
 function markdownToText(markdown: string): string {
   return markdown
-    .replace(/^---[\s\S]*?---/, '')
-    .replace(/```[\s\S]*?```/g, '')
-    .replace(/`[^`]*`/g, '')
-    .replace(/<[^>]*>?/gm, '')
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/[*_]{1,3}([^*_]+)[*_]{1,3}/g, '$1')
-    .replace(/\s+/g, ' ')
+    .replace(/^---[\s\S]*?---/, &apos;&apos;)
+    .replace(/```[\s\S]*?```/g, &apos;&apos;)
+    .replace(/`[^`]*`/g, &apos;&apos;)
+    .replace(/<[^>]*>?/gm, &apos;&apos;)
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, &apos;$1&apos;)
+    .replace(/[*_]{1,3}([^*_]+)[*_]{1,3}/g, &apos;$1&apos;)
+    .replace(/\s+/g, &apos; &apos;)
     .trim();
 }
 
@@ -83,9 +83,9 @@ async function loadBlogDocuments(): Promise<Document[]> {
     const files = await fs.readdir(blogDir);
     
     const blogFiles = files.filter(file => 
-      (file.endsWith('.tsx') || file.endsWith('.md')) && 
-      file !== 'index.tsx' && 
-      !file.startsWith('_')
+      (file.endsWith(&apos;.tsx&apos;) || file.endsWith(&apos;.md&apos;)) && 
+      file !== &apos;index.tsx&apos; && 
+      !file.startsWith(&apos;_&apos;)
     );
 
     const documents: Document[] = [];
@@ -93,7 +93,7 @@ async function loadBlogDocuments(): Promise<Document[]> {
     for (const file of blogFiles) {
       try {
         const filePath = path.join(blogDir, file);
-        const content = await fs.readFile(filePath, 'utf-8');
+        const content = await fs.readFile(filePath, &apos;utf-8&apos;);
         
         const frontmatter = extractFrontmatter(content);
         
@@ -343,11 +343,11 @@ export default async function handler(
 
     return res.status(200).json(response);
   } catch (error: any) {
-    console.error('Search error:', error);
+    console.error(&apos;Search error:&apos;, error);
     return res.status(500).json({
       success: false,
-      message: 'An error occurred while processing your search',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+      message: &apos;An error occurred while processing your search&apos;,
+      error: process.env.NODE_ENV === &apos;development&apos; ? error.message : undefined
     });
   }
 }

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from &apos;next/server&apos;;
 
 // Store rate limit data in memory (in production, use Redis or similar)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -63,7 +63,7 @@ export const rateLimitByIp = (req: NextRequest) => {
     message: 'Too many requests from this IP, please try again later',
     identifier: (req: NextRequest) => {
       // Get the IP address from the x-forwarded-for header
-      const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+      const ip = req.headers.get(&apos;x-forwarded-for&apos;)?.split(&apos;,&apos;)[0]?.trim() || &apos;unknown&apos;;
       return `ip:${ip}`;
     },
   });

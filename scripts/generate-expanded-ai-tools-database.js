@@ -14,33 +14,33 @@ const aiCategories = {
 
 // Feature options for generating tools
 const featuresOptions = [
-  "AI-powered", "cloud-based", "real-time processing", "API access", 
-  "mobile app", "chrome extension", "multi-language support", "collaboration tools",
-  "analytics dashboard", "customizable", "integrations", "automation",
-  "security features", "scalable", "user-friendly", "enterprise-grade",
-  "natural language processing", "machine learning", "deep learning", "neural networks",
-  "predictive analytics", "data visualization", "workflow automation", "document parsing",
-  "voice recognition", "image recognition", "pattern recognition", "anomaly detection",
-  "recommendation engine", "personalization", "content generation", "summarization"
+  &quot;AI-powered&quot;, &quot;cloud-based&quot;, &quot;real-time processing&quot;, &quot;API access&quot;, 
+  &quot;mobile app&quot;, &quot;chrome extension&quot;, &quot;multi-language support&quot;, &quot;collaboration tools&quot;,
+  &quot;analytics dashboard&quot;, &quot;customizable&quot;, &quot;integrations&quot;, &quot;automation&quot;,
+  &quot;security features&quot;, &quot;scalable&quot;, &quot;user-friendly&quot;, &quot;enterprise-grade&quot;,
+  &quot;natural language processing&quot;, &quot;machine learning&quot;, &quot;deep learning&quot;, &quot;neural networks&quot;,
+  &quot;predictive analytics&quot;, &quot;data visualization&quot;, &quot;workflow automation&quot;, &quot;document parsing&quot;,
+  &quot;voice recognition&quot;, &quot;image recognition&quot;, &quot;pattern recognition&quot;, &quot;anomaly detection&quot;,
+  &quot;recommendation engine&quot;, &quot;personalization&quot;, &quot;content generation&quot;, &quot;summarization&quot;
 ];
 
 // Pricing plan options
-const pricingPlans = ["Basic", "Pro", "Enterprise", "Team", "Starter", "Premium", "Business", "Professional"];
+const pricingPlans = [&quot;Basic&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;, &quot;Team&quot;, &quot;Starter&quot;, &quot;Premium&quot;, &quot;Business&quot;, &quot;Professional&quot;];
 
 // Generate additional tools to reach 1000+ AI tools
 const generateAdditionalTools = () => {
   const additionalTools = [];
   const prefixes = [
-    "AI", "Smart", "NextGen", "Pro", "Ultra", "Advanced", "Enterprise", "Premium",
-    "Intelli", "Neuro", "Cogni", "Deep", "Quantum", "Nexus", "Synergy", "Omni",
-    "Hyper", "Meta", "Synth", "Cerebro", "Neura", "Cortex", "Mind", "Brain",
-    "Logic", "Sense", "Vision", "Insight", "Clarity", "Focus", "Precision", "Edge"
+    &quot;AI&quot;, &quot;Smart&quot;, &quot;NextGen&quot;, &quot;Pro&quot;, &quot;Ultra&quot;, &quot;Advanced&quot;, &quot;Enterprise&quot;, &quot;Premium&quot;,
+    &quot;Intelli&quot;, &quot;Neuro&quot;, &quot;Cogni&quot;, &quot;Deep&quot;, &quot;Quantum&quot;, &quot;Nexus&quot;, &quot;Synergy&quot;, &quot;Omni&quot;,
+    &quot;Hyper&quot;, &quot;Meta&quot;, &quot;Synth&quot;, &quot;Cerebro&quot;, &quot;Neura&quot;, &quot;Cortex&quot;, &quot;Mind&quot;, &quot;Brain&quot;,
+    &quot;Logic&quot;, &quot;Sense&quot;, &quot;Vision&quot;, &quot;Insight&quot;, &quot;Clarity&quot;, &quot;Focus&quot;, &quot;Precision&quot;, &quot;Edge&quot;
   ];
   const suffixes = [
-    "Assistant", "Platform", "Studio", "Lab", "Engine", "Suite", "Hub", "Center",
-    "Master", "Genius", "Bot", "Mind", "Brain", "Logic", "Sense", "Vision",
-    "Analyzer", "Creator", "Optimizer", "Manager", "Navigator", "Explorer", "Builder",
-    "Architect", "Designer", "Developer", "Innovator", "Transformer", "Evolver"
+    &quot;Assistant&quot;, &quot;Platform&quot;, &quot;Studio&quot;, &quot;Lab&quot;, &quot;Engine&quot;, &quot;Suite&quot;, &quot;Hub&quot;, &quot;Center&quot;,
+    &quot;Master&quot;, &quot;Genius&quot;, &quot;Bot&quot;, &quot;Mind&quot;, &quot;Brain&quot;, &quot;Logic&quot;, &quot;Sense&quot;, &quot;Vision&quot;,
+    &quot;Analyzer&quot;, &quot;Creator&quot;, &quot;Optimizer&quot;, &quot;Manager&quot;, &quot;Navigator&quot;, &quot;Explorer&quot;, &quot;Builder&quot;,
+    &quot;Architect&quot;, &quot;Designer&quot;, &quot;Developer&quot;, &quot;Innovator&quot;, &quot;Transformer&quot;, &quot;Evolver&quot;
   ];
   const categories = Object.keys(aiCategories);
   
@@ -77,7 +77,7 @@ const generateAdditionalTools = () => {
     const tool = {
       name: `${prefix} ${suffix} ${i + 1}`,
       category: [category],
-      description: `Advanced ${category.replace('_', ' ')} solution with cutting-edge AI capabilities for professionals and businesses. Features include ${features.slice(0, 3).join(', ')}, and more.`,
+      description: `Advanced ${category.replace(&apos;_&apos;, &apos; &apos;)} solution with cutting-edge AI capabilities for professionals and businesses. Features include ${features.slice(0, 3).join(&apos;, &apos;)}, and more.`,
       pricing: { 
         free: hasFree, 
         paid: hasPaid, 
@@ -85,8 +85,8 @@ const generateAdditionalTools = () => {
       },
       features: features,
       website: `https://${prefix.toLowerCase()}${suffix.toLowerCase()}${i + 1}.ai`,
-      launch_date: new Date(Date.now() - Math.floor(Math.random() * 365 * 24 * 60 * 60 * 1000)).toISOString().split('T')[0],
-      last_updated: new Date().toISOString().split('T')[0]
+      launch_date: new Date(Date.now() - Math.floor(Math.random() * 365 * 24 * 60 * 60 * 1000)).toISOString().split(&apos;T&apos;)[0],
+      last_updated: new Date().toISOString().split(&apos;T&apos;)[0]
     };
     
     additionalTools.push(tool);
@@ -99,6 +99,6 @@ const generateAdditionalTools = () => {
 const allTools = generateAdditionalTools();
 
 // Write to a JSON file
-const outputPath = './data/ai-tools-database-1000.json';
+const outputPath = &apos;./data/ai-tools-database-1000.json&apos;;
 fs.writeFileSync(outputPath, JSON.stringify(allTools, null, 2));
 console.log(`Successfully generated ${allTools.length} AI tools and saved to: ${outputPath}`);

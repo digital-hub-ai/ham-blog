@@ -1,7 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import dbConnect from '../../../lib/dbConnect';
-import Tool from '../../../models/Tool';
-import { getCurrentUser } from '../../../lib/auth';
+import { NextApiRequest, NextApiResponse } from &apos;next&apos;;
+import dbConnect from &apos;../../../lib/dbConnect&apos;;
+import Tool from &apos;../../../models/Tool&apos;;
+import { getCurrentUser } from &apos;../../../lib/auth&apos;;
 
 type QueryParams = {
   q?: string | string[];
@@ -34,21 +34,21 @@ export default async function handler(
   await dbConnect();
   
   switch (method) {
-    case 'GET':
+    case &apos;GET&apos;:
       try {
         const { 
-          q = '', 
-          page = '1', 
-          limit = '10',
+          q = &apos;&apos;, 
+          page = &apos;1&apos;, 
+          limit = &apos;10&apos;,
           category,
           pricing,
-          sort = '-createdAt'
+          sort = &apos;-createdAt&apos;
         } = req.query as QueryParams;
         
         // Ensure we have string values
-        const searchQuery = Array.isArray(q) ? q[0] : q || '';
-        const pageNum = Math.max(1, parseInt(Array.isArray(page) ? page[0] : page || '1', 10));
-        const limitNum = Math.min(50, Math.max(1, parseInt(Array.isArray(limit) ? limit[0] : limit || '10', 10)));
+        const searchQuery = Array.isArray(q) ? q[0] : q || &apos;&apos;;
+        const pageNum = Math.max(1, parseInt(Array.isArray(page) ? page[0] : page || &apos;1&apos;, 10));
+        const limitNum = Math.min(50, Math.max(1, parseInt(Array.isArray(limit) ? limit[0] : limit || &apos;10&apos;, 10)));
         const categoryFilter = Array.isArray(category) ? category[0] : category;
         const pricingFilter = Array.isArray(pricing) ? pricing[0] : pricing;
         const sortField = Array.isArray(sort) ? sort[0] : sort;
@@ -72,22 +72,22 @@ export default async function handler(
           }
         });
       } catch (error) {
-        console.error('Error fetching tools:', error);
+        console.error(&apos;Error fetching tools:&apos;, error);
         res.status(500).json({ 
           success: false, 
-          error: 'Server error while fetching tools',
-          details: process.env.NODE_ENV === 'development' ? (error as Error).message : undefined
+          error: &apos;Server error while fetching tools&apos;,
+          details: process.env.NODE_ENV === &apos;development&apos; ? (error as Error).message : undefined
         });
       }
       break;
       
-    case 'POST':
+    case &apos;POST&apos;:
       try {
         const user = await getCurrentUser(req);
               
         // In production, you might want to add authentication
         // if (!user) {
-        //   return res.status(401).json({ success: false, error: 'Not authorized' });
+        //   return res.status(401).json({ success: false, error: &apos;Not authorized&apos; });
         // }
               
         const tool = await Tool.create({
@@ -97,18 +97,18 @@ export default async function handler(
               
         res.status(201).json({ success: true, data: tool });
       } catch (error) {
-        console.error('Error creating tool:', error);
-        const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+        console.error(&apos;Error creating tool:&apos;, error);
+        const errorMessage = error instanceof Error ? error.message : &apos;An unknown error occurred&apos;;
         res.status(400).json({ 
           success: false, 
-          error: 'Error creating tool',
-          details: process.env.NODE_ENV === 'development' ? errorMessage : undefined
+          error: &apos;Error creating tool&apos;,
+          details: process.env.NODE_ENV === &apos;development&apos; ? errorMessage : undefined
         });
       }
       break;
       
     default:
-      res.setHeader('Allow', ['GET', 'POST']);
+      res.setHeader(&apos;Allow&apos;, [&apos;GET&apos;, &apos;POST&apos;]);
       res.status(405).json({ 
         success: false, 
         error: `Method ${method} not allowed` 

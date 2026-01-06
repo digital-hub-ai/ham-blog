@@ -1,15 +1,15 @@
 // Debug script to understand URL parameter processing
-const fs = require('fs');
+const fs = require(&apos;fs&apos;);
 
 // Read a sample of tools to understand the data structure
-const toolsData = fs.readFileSync('./data/tools.ts', 'utf8');
-const lines = toolsData.split('\n');
+const toolsData = fs.readFileSync(&apos;./data/tools.ts&apos;, &apos;utf8&apos;);
+const lines = toolsData.split(&apos;\n&apos;);
 
 // Extract some sample tools to understand the structure
-console.log('=== SAMPLE TOOLS FROM DATA FILE ===');
+console.log(&apos;=== SAMPLE TOOLS FROM DATA FILE ===');
 let sampleCount = 0;
 for (let i = 0; i < lines.length && sampleCount < 10; i++) {
-  if (lines[i].includes('"category":') && lines[i].includes('"subcategory":')) {
+  if (lines[i].includes(&apos;&quot;category&quot;:&apos;) && lines[i].includes(&apos;&quot;subcategory&quot;:&apos;)) {
     // Get the full tool object
     let toolLines = [];
     let j = i;
@@ -23,27 +23,27 @@ for (let i = 0; i < lines.length && sampleCount < 10; i++) {
     
     console.log(`Sample Tool ${sampleCount + 1}:`);
     toolLines.forEach(line => console.log(`  ${line}`));
-    console.log('');
+    console.log(&apos;&apos;);
     sampleCount++;
     i = j; // Skip to end of this tool
   }
 }
 
-// Let's also check what categories and subcategories exist
-console.log('=== EXISTING CATEGORIES AND SUBCATEGORIES ===');
+// Let&apos;s also check what categories and subcategories exist
+console.log(&apos;=== EXISTING CATEGORIES AND SUBCATEGORIES ===');
 const categories = new Set();
 const subcategories = new Set();
 
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
-  if (line.includes('"category":')) {
-    const match = line.match(/"category":\s*"([^"]+)"/);
+  if (line.includes('&quot;category&quot;:')) {
+    const match = line.match(/&quot;category&quot;:\s*&quot;([^&quot;]+)&quot;/);
     if (match) {
       categories.add(match[1]);
     }
   }
-  if (line.includes('"subcategory":')) {
-    const match = line.match(/"subcategory":\s*"([^"]+)"/);
+  if (line.includes('&quot;subcategory&quot;:')) {
+    const match = line.match(/&quot;subcategory&quot;:\s*&quot;([^&quot;]+)&quot;/);
     if (match) {
       subcategories.add(match[1]);
     }
@@ -72,33 +72,33 @@ const formatName = (name) => {
   return name
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&/g, '&');
+    .join(&apos; &apos;)
+    .replace(/&amp;/g, &apos;&&apos;)
+    .replace(/&/g, &apos;&&apos;);
 };
 
 const formattedCategory = formatName(testCategory);
 const formattedSubcategory = formatName(testSubcategory);
 
-console.log(`Formatted category: "${formattedCategory}"`);
-console.log(`Formatted subcategory: "${formattedSubcategory}"`);
+console.log(`Formatted category: &quot;${formattedCategory}&quot;`);
+console.log(`Formatted subcategory: &quot;${formattedSubcategory}&quot;`);
 
 // Check if we can find matching tools
-console.log('\n=== MATCHING TOOLS SEARCH ===');
+console.log(&apos;\n=== MATCHING TOOLS SEARCH ===');
 let matchCount = 0;
 for (let i = 0; i < lines.length; i++) {
-  if (lines[i].includes('"category":') && lines[i].includes(`"${formattedCategory}"`)) {
+  if (lines[i].includes(&apos;&quot;category&quot;:&apos;) && lines[i].includes(`&quot;${formattedCategory}&quot;`)) {
     // Found a potential match, check the subcategory
     for (let j = i; j < Math.min(i + 20, lines.length); j++) {
-      if (lines[j].includes('"subcategory":') && lines[j].includes(`"${formattedSubcategory}"`)) {
+      if (lines[j].includes(&apos;&quot;subcategory&quot;:&apos;) && lines[j].includes(`&quot;${formattedSubcategory}&quot;`)) {
         console.log(`Found matching tool at line ${i}:`);
         // Print the tool
         let k = i;
-        while (k < lines.length && !lines[k].includes('},')) {
+        while (k < lines.length && !lines[k].includes(&apos;},&apos;)) {
           console.log(`  ${lines[k].trim()}`);
           k++;
         }
-        if (lines[k].includes('},')) {
+        if (lines[k].includes(&apos;},&apos;)) {
           console.log(`  ${lines[k].trim()}`);
         }
         matchCount++;

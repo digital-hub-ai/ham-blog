@@ -90,13 +90,13 @@ function evaluateCondition(document: Document, condition: FilterCondition): bool
     case 'greaterThan':
       return fieldValue > value;
       
-    case 'lessThan':
+    case &apos;lessThan&apos;:
       return fieldValue < value;
       
     case 'greaterThanOrEquals':
       return fieldValue >= value;
       
-    case 'lessThanOrEquals':
+    case &apos;lessThanOrEquals&apos;:
       return fieldValue <= value;
       
     case 'in':
@@ -177,12 +177,12 @@ export function applyAdvancedFilters(documents: Document[], filter: AdvancedSear
       const bValue = (b as any)[sortBy];
       
       if (aValue === undefined && bValue === undefined) return 0;
-      if (aValue === undefined) return sortOrder === 'asc' ? -1 : 1;
-      if (bValue === undefined) return sortOrder === 'asc' ? 1 : -1;
+      if (aValue === undefined) return sortOrder === &apos;asc&apos; ? -1 : 1;
+      if (bValue === undefined) return sortOrder === &apos;asc&apos; ? 1 : -1;
       
-      if (typeof aValue === 'string' && typeof bValue === 'string') {
+      if (typeof aValue === &apos;string&apos; && typeof bValue === &apos;string&apos;) {
         const comparison = aValue.localeCompare(bValue);
-        return sortOrder === 'asc' ? comparison : -comparison;
+        return sortOrder === &apos;asc&apos; ? comparison : -comparison;
       }
       
       if (aValue < bValue) return sortOrder === 'asc' ? -1 : 1;
@@ -341,7 +341,7 @@ export function createSimpleFilter(params: {
 
 /**
  * Parse a filter string into an AdvancedSearchFilter
- * Supports syntax like: "category:AI AND rating:>4 OR price:<100"
+ * Supports syntax like: &quot;category:AI AND rating:>4 OR price:<100&quot;
  */
 export function parseFilterString(filterString: string): AdvancedSearchFilter | null {
   if (!filterString || filterString.trim().length === 0) {
@@ -363,13 +363,13 @@ export function parseFilterString(filterString: string): AdvancedSearchFilter | 
       const [, field, value] = match;
       
       // Handle comparison operators
-      if (value.startsWith('>')) {
+      if (value.startsWith('>&apos;)) {
         conditions.push({
           field: field.trim(),
-          operator: 'greaterThan',
+          operator: &apos;greaterThan&apos;,
           value: parseValue(value.substring(1))
         });
-      } else if (value.startsWith('<')) {
+      } else if (value.startsWith(&apos;<')) {
         conditions.push({
           field: field.trim(),
           operator: 'lessThan',
@@ -378,19 +378,19 @@ export function parseFilterString(filterString: string): AdvancedSearchFilter | 
       } else if (value.startsWith('>=')) {
         conditions.push({
           field: field.trim(),
-          operator: 'greaterThanOrEquals',
+          operator: &apos;greaterThanOrEquals&apos;,
           value: parseValue(value.substring(2))
         });
-      } else if (value.startsWith('<=')) {
+      } else if (value.startsWith(&apos;<=')) {
         conditions.push({
           field: field.trim(),
-          operator: 'lessThanOrEquals',
+          operator: &apos;lessThanOrEquals&apos;,
           value: parseValue(value.substring(2))
         });
       } else {
         conditions.push({
           field: field.trim(),
-          operator: 'contains',
+          operator: &apos;contains&apos;,
           value: parseValue(value)
         });
       }
@@ -399,7 +399,7 @@ export function parseFilterString(filterString: string): AdvancedSearchFilter | 
   
   return {
     filters: {
-      operator: 'and',
+      operator: &apos;and&apos;,
       conditions
     }
   };
@@ -411,8 +411,8 @@ export function parseFilterString(filterString: string): AdvancedSearchFilter | 
     }
     
     // Try to parse as boolean
-    if (value.toLowerCase() === 'true') return true;
-    if (value.toLowerCase() === 'false') return false;
+    if (value.toLowerCase() === &apos;true&apos;) return true;
+    if (value.toLowerCase() === &apos;false&apos;) return false;
     
     // Return as string
     return value;

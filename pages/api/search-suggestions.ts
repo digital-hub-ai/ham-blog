@@ -1,25 +1,25 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getSearchSuggestions, trackSearchQuery } from '../../services/searchSuggestions';
-import { loadDocuments } from '../../services/searchService';
+import { NextApiRequest, NextApiResponse } from &apos;next&apos;;
+import { getSearchSuggestions, trackSearchQuery } from &apos;../../services/searchSuggestions&apos;;
+import { loadDocuments } from &apos;../../services/searchService&apos;;
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;);
+  res.setHeader(&apos;Access-Control-Allow-Methods&apos;, &apos;GET, POST, OPTIONS&apos;);
+  res.setHeader(&apos;Access-Control-Allow-Headers&apos;, &apos;Content-Type, Authorization&apos;);
 
   // Handle CORS preflight
-  if (req.method === 'OPTIONS') {
+  if (req.method === &apos;OPTIONS&apos;) {
     return res.status(200).end();
   }
 
   try {
     switch (req.method) {
-      case 'GET':
-        const { q: query, type = 'all' } = req.query;
+      case &apos;GET&apos;:
+        const { q: query, type = &apos;all&apos; } = req.query;
         
         // Load documents for context
         const documents = await loadDocuments();
@@ -36,7 +36,7 @@ export default async function handler(
           suggestions
         });
         
-      case 'POST':
+      case &apos;POST&apos;:
         // Track a search query
         const { searchQuery } = req.body;
         
@@ -46,21 +46,21 @@ export default async function handler(
         
         return res.status(200).json({ 
           success: true,
-          message: 'Search query tracked successfully'
+          message: &apos;Search query tracked successfully&apos;
         });
         
       default:
         return res.status(405).json({ 
           success: false,
-          message: 'Method not allowed' 
+          message: &apos;Method not allowed&apos; 
         });
     }
   } catch (error) {
-    console.error('Search suggestions error:', error);
+    console.error(&apos;Search suggestions error:&apos;, error);
     return res.status(500).json({ 
       success: false,
-      message: 'Error processing search suggestions',
-      error: error instanceof Error ? error.message : 'Unknown error'
+      message: &apos;Error processing search suggestions&apos;,
+      error: error instanceof Error ? error.message : &apos;Unknown error&apos;
     });
   }
 }

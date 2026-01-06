@@ -4,30 +4,30 @@
 
 // Entity types
 export type EntityType = 
-  | 'person'          // People
-  | 'organization'    // Companies, institutions
-  | 'location'        // Places, countries, cities
-  | 'product'         // Products, services
-  | 'event'           // Events, conferences
-  | 'date'            // Dates, time periods
-  | 'quantity'        // Numbers, measurements
-  | 'email'           // Email addresses
-  | 'url'             // Web URLs
-  | 'phone'           // Phone numbers
-  | 'currency'        // Monetary amounts
-  | 'percent'         // Percentages
-  | 'technology'      // Technologies, programming languages
-  | 'concept'         // Abstract concepts
-  | 'topic'           // Topics, subjects
-  | 'keyword'         // Keywords, terms
-  | 'citation'        // References, citations
-  | 'image'           // Images
-  | 'video'           // Videos
-  | 'audio'           // Audio files
-  | 'document'        // Documents, files
-  | 'code'            // Code snippets
-  | 'social_media'    // Social media handles, hashtags
-  | 'custom';         // Custom entity types
+  | &apos;person&apos;          // People
+  | &apos;organization&apos;    // Companies, institutions
+  | &apos;location&apos;        // Places, countries, cities
+  | &apos;product&apos;         // Products, services
+  | &apos;event&apos;           // Events, conferences
+  | &apos;date&apos;            // Dates, time periods
+  | &apos;quantity&apos;        // Numbers, measurements
+  | &apos;email&apos;           // Email addresses
+  | &apos;url&apos;             // Web URLs
+  | &apos;phone&apos;           // Phone numbers
+  | &apos;currency&apos;        // Monetary amounts
+  | &apos;percent&apos;         // Percentages
+  | &apos;technology&apos;      // Technologies, programming languages
+  | &apos;concept&apos;         // Abstract concepts
+  | &apos;topic&apos;           // Topics, subjects
+  | &apos;keyword&apos;         // Keywords, terms
+  | &apos;citation&apos;        // References, citations
+  | &apos;image&apos;           // Images
+  | &apos;video&apos;           // Videos
+  | &apos;audio&apos;           // Audio files
+  | &apos;document&apos;        // Documents, files
+  | &apos;code&apos;            // Code snippets
+  | &apos;social_media&apos;    // Social media handles, hashtags
+  | &apos;custom&apos;;         // Custom entity types
 
 // Entity interface
 export interface Entity {
@@ -92,9 +92,9 @@ export interface EntityExtractionConfig {
 // Default configuration
 const defaultConfig: EntityExtractionConfig = {
   enabledEntityTypes: [
-    'person', 'organization', 'location', 'product', 'event', 
-    'date', 'quantity', 'email', 'url', 'phone', 'currency', 
-    'percent', 'technology', 'concept', 'topic', 'keyword'
+    &apos;person&apos;, &apos;organization&apos;, &apos;location&apos;, &apos;product&apos;, &apos;event&apos;, 
+    &apos;date&apos;, &apos;quantity&apos;, &apos;email&apos;, &apos;url&apos;, &apos;phone&apos;, &apos;currency&apos;, 
+    &apos;percent&apos;, &apos;technology&apos;, &apos;concept&apos;, &apos;topic&apos;, &apos;keyword&apos;
   ],
   enableEntityLinking: true,
   enableDisambiguation: true,
@@ -187,7 +187,7 @@ export class EntityExtractionService {
   /**
    * Extract entities from text
    */
-  async extractEntities(text: string, language: string = 'en'): Promise<EntityExtractionResult> {
+  async extractEntities(text: string, language: string = &apos;en&apos;): Promise<EntityExtractionResult> {
     const startTime = Date.now();
     
     // Preprocess text
@@ -448,7 +448,7 @@ export class EntityExtractionService {
       while ((match = pattern.exec(text)) !== null) {
         entities.push({
           id: `custom_${name}_${match.index}`,
-          type: 'custom',
+          type: &apos;custom&apos;,
           text: match[0],
           normalizedText: match[0],
           startIndex: match.index,
@@ -563,24 +563,24 @@ export class EntityExtractionService {
         // If entities are close to each other in text
         if (Math.abs(entity1.startIndex - entity2.startIndex) < 100) {
           // Determine relationship type based on entity types and context
-          let relationshipType = 'associated_with';
+          let relationshipType = &apos;associated_with&apos;;
           let confidence = 0.6;
           
           // Person-Organization relationship
           if (
-            (entity1.type === 'person' && entity2.type === 'organization') ||
-            (entity1.type === 'organization' && entity2.type === 'person')
+            (entity1.type === &apos;person&apos; && entity2.type === &apos;organization&apos;) ||
+            (entity1.type === &apos;organization&apos; && entity2.type === &apos;person&apos;)
           ) {
-            relationshipType = 'works_for';
+            relationshipType = &apos;works_for&apos;;
             confidence = 0.8;
           }
           
           // Technology-Concept relationship
           if (
-            (entity1.type === 'technology' && entity2.type === 'concept') ||
-            (entity1.type === 'concept' && entity2.type === 'technology')
+            (entity1.type === &apos;technology&apos; && entity2.type === &apos;concept&apos;) ||
+            (entity1.type === &apos;concept&apos; && entity2.type === &apos;technology&apos;)
           ) {
-            relationshipType = 'related_to';
+            relationshipType = &apos;related_to&apos;;
             confidence = 0.7;
           }
           

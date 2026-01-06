@@ -1,35 +1,35 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from &apos;next&apos;;
 import { 
   getSearchAnalytics, 
   getPerformanceMetrics, 
   logSearchQuery
-} from '../../services/searchAnalytics';
+} from &apos;../../services/searchAnalytics&apos;;
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;);
+  res.setHeader(&apos;Access-Control-Allow-Methods&apos;, &apos;GET, POST, OPTIONS&apos;);
+  res.setHeader(&apos;Access-Control-Allow-Headers&apos;, &apos;Content-Type, Authorization&apos;);
 
   // Handle CORS preflight
-  if (req.method === 'OPTIONS') {
+  if (req.method === &apos;OPTIONS&apos;) {
     return res.status(200).end();
   }
 
   try {
     switch (req.method) {
-      case 'GET':
+      case &apos;GET&apos;:
         const { 
-          action = 'overview',
+          action = &apos;overview&apos;,
           query,
           userId
         } = req.query;
         
         switch (action) {
-          case 'overview':
+          case &apos;overview&apos;:
             // Get overall search analytics
             const analytics = getSearchAnalytics();
             return res.status(200).json({ 
@@ -37,16 +37,16 @@ export default async function handler(
               analytics
             });
             
-          case 'query':
+          case &apos;query&apos;:
             // Get performance data for a specific query
-            if (!query || typeof query !== 'string') {
+            if (!query || typeof query !== &apos;string&apos;) {
               return res.status(400).json({ 
                 success: false,
-                message: 'Query parameter is required'
+                message: &apos;Query parameter is required&apos;
               });
             }
             
-            // We'll use logSearchQuery to track this query for performance analysis
+            // We&apos;ll use logSearchQuery to track this query for performance analysis
             // In a real implementation, you would have a more sophisticated performance tracking system
             const performance = getPerformanceMetrics();
             return res.status(200).json({ 
@@ -55,8 +55,8 @@ export default async function handler(
               performance
             });
             
-          case 'user':
-            // For now, we'll return a placeholder since getUserSearchBehavior doesn't exist
+          case &apos;user&apos;:
+            // For now, we&apos;ll return a placeholder since getUserSearchBehavior doesn&apos;t exist
             return res.status(200).json({ 
               success: true,
               userId,
@@ -64,57 +64,57 @@ export default async function handler(
                 totalSearches: 0,
                 favoriteCategories: [],
                 preferredFilters: {},
-                searchFrequency: 'low'
+                searchFrequency: &apos;low&apos;
               }
             });
             
           default:
             return res.status(400).json({ 
               success: false,
-              message: 'Invalid action parameter'
+              message: &apos;Invalid action parameter&apos;
             });
         }
         
-      case 'POST':
+      case &apos;POST&apos;:
         // Track a search event
         const { event } = req.body;
         
         if (!event) {
           return res.status(400).json({ 
             success: false,
-            message: 'Event object is required in request body'
+            message: &apos;Event object is required in request body&apos;
           });
         }
         
         // Log the search query
         logSearchQuery({
           id: event.id || Date.now().toString(),
-          query: event.query || '',
+          query: event.query || &apos;&apos;,
           timestamp: new Date(event.timestamp || Date.now()),
           resultsCount: event.resultsCount || 0,
           responseTime: event.responseTime || 0,
           filtersApplied: event.filtersApplied || {},
-          sortBy: event.sortBy || '',
+          sortBy: event.sortBy || &apos;&apos;,
           userId: event.userId
         });
         
         return res.status(200).json({ 
           success: true,
-          message: 'Search event tracked successfully'
+          message: &apos;Search event tracked successfully&apos;
         });
         
       default:
         return res.status(405).json({ 
           success: false,
-          message: 'Method not allowed' 
+          message: &apos;Method not allowed&apos; 
         });
     }
   } catch (error) {
-    console.error('Search analytics error:', error);
+    console.error(&apos;Search analytics error:&apos;, error);
     return res.status(500).json({ 
       success: false,
-      message: 'Error processing search analytics',
-      error: error instanceof Error ? error.message : 'Unknown error'
+      message: &apos;Error processing search analytics&apos;,
+      error: error instanceof Error ? error.message : &apos;Unknown error&apos;
     });
   }
 }

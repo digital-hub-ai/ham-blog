@@ -1,14 +1,14 @@
 // components/Sanctuary/DigitalGardener.tsx
-'use client';
+&apos;use client&apos;;
 
-import React, { useState, useEffect } from 'react';
-import { useFavorites } from '../../hooks/useFavorites';
-import { tools } from '../../data/tools';
-import { Tool } from '../../types/tool';
+import React, { useState, useEffect } from &apos;react&apos;;
+import { useFavorites } from &apos;../../hooks/useFavorites&apos;;
+import { tools } from &apos;../../data/tools&apos;;
+import { Tool } from &apos;../../types/tool&apos;;
 
 interface GardenerMessage {
   id: string;
-  type: 'suggestion' | 'insight' | 'alert' | 'celebration';
+  type: &apos;suggestion&apos; | &apos;insight&apos; | &apos;alert&apos; | &apos;celebration&apos;;
   title: string;
   content: string;
   actions?: Array<{
@@ -63,7 +63,7 @@ export default function DigitalGardener() {
     const recommendations = [];
     if (!categories.has('AI Tools')) recommendations.push('Add AI tools to boost productivity');
     if (!categories.has('Design')) recommendations.push('Consider design tools for better visuals');
-    if (paidTools.length > 5) recommendations.push('Review expensive tools for alternatives');
+    if (paidTools.length > 5) recommendations.push(&apos;Review expensive tools for alternatives&apos;);
     if (favoriteTools.length < 10) recommendations.push('Explore more tools to complete your stack');
     
     // Generate health trends (simulated)
@@ -129,8 +129,8 @@ export default function DigitalGardener() {
         content: `You could save $${analysis.costOptimization}/month by switching to alternative tools. Would you like me to show you options?`,
         actions: [{
           label: 'Show Alternatives',
-          action: () => console.log('Show alternatives'),
-          variant: 'primary'
+          action: () => console.log(&apos;Show alternatives&apos;),
+          variant: &apos;primary&apos;
         }],
         timestamp: new Date()
       });
@@ -172,19 +172,19 @@ export default function DigitalGardener() {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-40">
+    <div className="fixed bottom-8 right-8 z-40&quot;>
       {/* Gardener Avatar */}
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="relative w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white"
+        className="relative w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white&quot;
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <svg className="w-6 h-6&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+          <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&quot; />
         </svg>
         
         {/* Notification indicator */}
         {messages.length > 0 && (
-          <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-xs flex items-center justify-center animate-pulse">
+          <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-xs flex items-center justify-center animate-pulse&quot;>
             {messages.length}
           </div>
         )}
@@ -192,32 +192,32 @@ export default function DigitalGardener() {
 
       {/* Messages Panel */}
       {isVisible && (
-        <div className="absolute bottom-16 right-0 w-96 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200 max-h-96 overflow-hidden">
+        <div className="absolute bottom-16 right-0 w-96 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200 max-h-96 overflow-hidden&quot;>
           
           {/* Header */}
-          <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4">
-            <div className="flex items-center justify-between">
+          <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4&quot;>
+            <div className="flex items-center justify-between&quot;>
               <div>
-                <h3 className="font-semibold">Digital Gardener</h3>
-                <p className="text-sm opacity-90">Your AI assistant</p>
+                <h3 className="font-semibold&quot;>Digital Gardener</h3>
+                <p className="text-sm opacity-90&quot;>Your AI assistant</p>
               </div>
               {isAnalyzing && (
-                <div className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full" />
+                <div className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full&quot; />
               )}
             </div>
           </div>
 
           {/* Messages */}
-          <div className="p-4 space-y-3 max-h-64 overflow-y-auto">
+          <div className="p-4 space-y-3 max-h-64 overflow-y-auto&quot;>
             {messages.length === 0 ? (
-              <div className="text-center py-8 text-gray-500">
-                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="text-center py-8 text-gray-500&quot;>
+                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3&quot;>
+                  <svg className="w-6 h-6&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+                    <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot; />
                   </svg>
                 </div>
-                <p className="text-sm">Your garden is thriving!</p>
-                <p className="text-xs">I&rsquo;ll notify you of any insights.</p>
+                <p className="text-sm&quot;>Your garden is thriving!</p>
+                <p className="text-xs&quot;>I&rsquo;ll notify you of any insights.</p>
               </div>
             ) : (
               messages.map((message) => (
@@ -225,28 +225,28 @@ export default function DigitalGardener() {
                   key={message.id}
                   className={`
                     p-3 rounded-lg border
-                    ${message.type === 'celebration' ? 'bg-yellow-50 border-yellow-200' : ''}
-                    ${message.type === 'alert' ? 'bg-red-50 border-red-200' : ''}
-                    ${message.type === 'suggestion' ? 'bg-blue-50 border-blue-200' : ''}
-                    ${message.type === 'insight' ? 'bg-purple-50 border-purple-200' : ''}
+                    ${message.type === &apos;celebration&apos; ? &apos;bg-yellow-50 border-yellow-200&apos; : &apos;&apos;}
+                    ${message.type === &apos;alert&apos; ? &apos;bg-red-50 border-red-200&apos; : &apos;&apos;}
+                    ${message.type === &apos;suggestion&apos; ? &apos;bg-blue-50 border-blue-200&apos; : &apos;&apos;}
+                    ${message.type === &apos;insight&apos; ? &apos;bg-purple-50 border-purple-200&apos; : &apos;}
                   `}
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h4 className="font-medium text-sm mb-1">{message.title}</h4>
-                      <p className="text-xs text-gray-600 mb-2">{message.content}</p>
+                  <div className="flex items-start justify-between&quot;>
+                    <div className="flex-1&quot;>
+                      <h4 className="font-medium text-sm mb-1&quot;>{message.title}</h4>
+                      <p className="text-xs text-gray-600 mb-2&quot;>{message.content}</p>
                       
                       {message.actions && (
-                        <div className="flex gap-2">
+                        <div className="flex gap-2&quot;>
                           {message.actions.map((action, idx) => (
                             <button
                               key={idx}
                               onClick={action.action}
                               className={`
                                 px-3 py-1 rounded text-xs font-medium transition-colors
-                                ${action.variant === 'primary' 
-                                  ? 'bg-blue-500 text-white hover:bg-blue-600' 
-                                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                ${action.variant === &apos;primary&apos; 
+                                  ? &apos;bg-blue-500 text-white hover:bg-blue-600&apos; 
+                                  : &apos;bg-gray-200 text-gray-700 hover:bg-gray-300
                                 }
                               `}
                             >
@@ -259,10 +259,10 @@ export default function DigitalGardener() {
                     
                     <button
                       onClick={() => dismissMessage(message.id)}
-                      className="ml-2 text-gray-400 hover:text-gray-600"
+                      className="ml-2 text-gray-400 hover:text-gray-600&quot;
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      <svg className="w-4 h-4&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+                        <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M6 18L18 6M6 6l12 12&quot; />
                       </svg>
                     </button>
                   </div>
@@ -273,19 +273,19 @@ export default function DigitalGardener() {
 
           {/* Analysis Summary */}
           {analysis && (
-            <div className="border-t border-gray-200 p-4 bg-gray-50">
-              <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="border-t border-gray-200 p-4 bg-gray-50&quot;>
+              <div className="grid grid-cols-3 gap-4 text-center&quot;>
                 <div>
-                  <div className="text-lg font-bold text-gray-900">{analysis.stackCompleteness}%</div>
-                  <div className="text-xs text-gray-500">Stack Complete</div>
+                  <div className="text-lg font-bold text-gray-900&quot;>{analysis.stackCompleteness}%</div>
+                  <div className="text-xs text-gray-500&quot;>Stack Complete</div>
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-green-600">${analysis.costOptimization}</div>
-                  <div className="text-xs text-gray-500">Potential Savings</div>
+                  <div className="text-lg font-bold text-green-600&quot;>${analysis.costOptimization}</div>
+                  <div className="text-xs text-gray-500&quot;>Potential Savings</div>
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-blue-600">{analysis.recommendations.length}</div>
-                  <div className="text-xs text-gray-500">Recommendations</div>
+                  <div className="text-lg font-bold text-blue-600&quot;>{analysis.recommendations.length}</div>
+                  <div className="text-xs text-gray-500&quot;>Recommendations</div>
                 </div>
               </div>
             </div>

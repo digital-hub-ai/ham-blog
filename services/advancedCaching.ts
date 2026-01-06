@@ -12,7 +12,7 @@ export interface CacheEntry<T = any> {
   lastAccessed: number;
   size: number; // Approximate size in bytes
   tags: string[]; // Tags for grouping and invalidation
-  priority: 'low' | 'normal' | 'high'; // Eviction priority
+  priority: &apos;low&apos; | &apos;normal&apos; | &apos;high&apos;; // Eviction priority
   dependencies?: string[]; // Keys this entry depends on
 }
 
@@ -38,7 +38,7 @@ export interface CacheStats {
 export interface CacheConfig {
   maxSize: number; // Maximum size in bytes
   defaultTTL: number; // Default time-to-live in milliseconds
-  evictionStrategy: 'lru' | 'lfu' | 'fifo' | 'ttl'; // Eviction strategy
+  evictionStrategy: &apos;lru&apos; | &apos;lfu&apos; | &apos;fifo&apos; | &apos;ttl&apos;; // Eviction strategy
   compression: boolean; // Enable compression
   persistence: boolean; // Enable persistence to disk
   partitioning: boolean; // Enable partitioning
@@ -48,7 +48,7 @@ export interface CacheConfig {
 const defaultConfig: CacheConfig = {
   maxSize: 100 * 1024 * 1024, // 100MB
   defaultTTL: 5 * 60 * 1000, // 5 minutes
-  evictionStrategy: 'lru',
+  evictionStrategy: &apos;lru&apos;,
   compression: true,
   persistence: false,
   partitioning: true
@@ -131,7 +131,7 @@ export class AdvancedCache<T = any> {
   get(key: string): T | null {
     const entry = this.cache.get(key);
     
-    // Check if entry exists and hasn't expired
+    // Check if entry exists and hasn&apos;t expired
     if (!entry) {
       this.stats.missCount++;
       this.updateHitRate();
@@ -455,10 +455,10 @@ export const compression = {
   compress<T>(data: T): string {
     try {
       const jsonString = JSON.stringify(data);
-      // Simple compression - in practice, you'd use a library like lz-string
+      // Simple compression - in practice, you&apos;d use a library like lz-string
       return btoa(encodeURIComponent(jsonString));
     } catch (error) {
-      console.error('Compression error:', error);
+      console.error(&apos;Compression error:&apos;, error);
       return JSON.stringify(data);
     }
   },
@@ -496,7 +496,7 @@ export const cacheWarming = {
           priority: 'high'
         });
       } catch (error) {
-        console.error(`Failed to warm cache for query "${query}":`, error);
+        console.error(`Failed to warm cache for query &quot;${query}&quot;:`, error);
       }
     }
   },
@@ -514,11 +514,11 @@ export const cacheWarming = {
         const results = await getSearchResults(query);
         cache.set(`search:${query}`, results, {
           ttl: 5 * 60 * 1000, // 5 minutes
-          tags: ['search', 'trending'],
-          priority: 'normal'
+          tags: [&apos;search&apos;, &apos;trending&apos;],
+          priority: &apos;normal&apos;
         });
       } catch (error) {
-        console.error(`Failed to warm cache for trending query "${query}":`, error);
+        console.error(`Failed to warm cache for trending query &quot;${query}&quot;:`, error);
       }
     }
   }

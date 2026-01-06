@@ -10,13 +10,13 @@ import AdSense from '../components/AdSense';
 
 // Dynamically import the CookieConsentBanner to avoid SSR issues
 const CookieConsentBanner = dynamic(
-  () => import('../components/CookieConsentBanner'),
+  () => import(&apos;../components/CookieConsentBanner&apos;),
   { ssr: false }
 );
 
 function MyApp({ Component, pageProps }: AppProps) {
   // Only include AdSense in production
-  const isProduction = process.env.NODE_ENV === 'production';
+  const isProduction = process.env.NODE_ENV === &apos;production&apos;;
   
   return (
     <>

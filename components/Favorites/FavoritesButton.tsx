@@ -1,14 +1,14 @@
-'use client';
+&apos;use client&apos;;
 
-import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart as faHeartSolid, faHeart as faHeartRegular } from '@fortawesome/free-solid-svg-icons';
-import { Tool } from '@/types/tool';
-import useFavorites from '@/hooks/useFavorites';
+import { useEffect, useState } from &apos;react&apos;;
+import { FontAwesomeIcon } from &apos;@fortawesome/react-fontawesome&apos;;
+import { faHeart as faHeartSolid, faHeart as faHeartRegular } from &apos;@fortawesome/free-solid-svg-icons&apos;;
+import { Tool } from &apos;@/types/tool&apos;;
+import useFavorites from &apos;@/hooks/useFavorites&apos;;
 
 interface FavoritesButtonProps {
   tool: Tool;
-  size?: 'sm' | 'md' | 'lg';
+  size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos;;
   showLabel?: boolean;
   className?: string;
 }
@@ -48,7 +48,7 @@ const FavoritesButton: React.FC<FavoritesButtonProps> = ({
         disabled
       >
         <FontAwesomeIcon icon={faHeartRegular} className={iconClasses[size]} fixedWidth />
-        {showLabel && <span className="ml-2">Save</span>}
+        {showLabel && <span className="ml-2&quot;>Save</span>}
       </button>
     );
   }
@@ -67,20 +67,20 @@ const FavoritesButton: React.FC<FavoritesButtonProps> = ({
       onClick={handleClick}
       className={`inline-flex items-center ${sizeClasses[size]} ${
         isFavorited 
-          ? 'text-red-500 hover:text-red-600' 
-          : 'text-gray-500 hover:text-red-500'
+          ? &apos;text-red-500 hover:text-red-600&apos; 
+          : &apos;text-gray-500 hover:text-red-500&apos;
       } transition-colors ${className}`}
-      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
-      title={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+      aria-label={isFavorited ? &apos;Remove from favorites&apos; : &apos;Add to favorites&apos;}
+      title={isFavorited ? &apos;Remove from favorites&apos; : &apos;Add to favorites&apos;}
     >
       {isFavorited ? (
-        <FontAwesomeIcon icon={faHeartSolid} className={iconClasses[size]} style={{ color: 'red' }} fixedWidth />
+        <FontAwesomeIcon icon={faHeartSolid} className={iconClasses[size]} style={{ color: &apos;red }} fixedWidth />
       ) : (
         <FontAwesomeIcon icon={faHeartRegular} className={iconClasses[size]} fixedWidth />
       )}
       {showLabel && (
-        <span className="ml-2">
-          {isFavorited ? 'Saved' : 'Save'}
+        <span className="ml-2&quot;>
+          {isFavorited ? &apos;Saved&apos; : &apos;Save&apos;}
         </span>
       )}
     </button>

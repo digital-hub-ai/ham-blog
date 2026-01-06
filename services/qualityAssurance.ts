@@ -23,13 +23,13 @@ export interface QualityAssessment {
   issues: QualityIssue[];
   recommendations: string[];
   lastChecked: number;
-  checkFrequency: 'hourly' | 'daily' | 'weekly' | 'monthly';
+  checkFrequency: &apos;hourly&apos; | &apos;daily&apos; | &apos;weekly&apos; | &apos;monthly&apos;;
 }
 
 // Quality issue
 export interface QualityIssue {
-  type: 'broken_link' | 'outdated_content' | 'low_quality' | 'duplicate' | 'spam' | 'bias' | 'inaccuracy' | 'accessibility';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type: &apos;broken_link&apos; | &apos;outdated_content&apos; | &apos;low_quality&apos; | &apos;duplicate&apos; | &apos;spam&apos; | &apos;bias&apos; | &apos;inaccuracy&apos; | &apos;accessibility&apos;;
+  severity: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos; | &apos;critical&apos;;
   description: string;
   detectedAt: number;
   resolved: boolean;
@@ -70,7 +70,7 @@ export interface QAConfig {
   enableDuplicateDetection: boolean;
   enableSpamDetection: boolean;
   enableBiasDetection: boolean;
-  checkFrequency: 'hourly' | 'daily' | 'weekly' | 'monthly';
+  checkFrequency: &apos;hourly&apos; | &apos;daily&apos; | &apos;weekly&apos; | &apos;monthly&apos;;
   qualityThreshold: number; // 0-1, minimum acceptable quality
   autoRemoveThreshold: number; // 0-1, quality level for auto-removal
 }
@@ -83,7 +83,7 @@ const defaultConfig: QAConfig = {
   enableDuplicateDetection: true,
   enableSpamDetection: true,
   enableBiasDetection: true,
-  checkFrequency: 'daily',
+  checkFrequency: &apos;daily&apos;,
   qualityThreshold: 0.7,
   autoRemoveThreshold: 0.3
 };
@@ -119,8 +119,8 @@ export async function assessResultQuality(
       const linkStatus = await checkLink(result.url);
       if (!linkStatus.valid) {
         issues.push({
-          type: 'broken_link',
-          severity: linkStatus.statusCode === 404 ? 'critical' : 'high',
+          type: &apos;broken_link&apos;,
+          severity: linkStatus.statusCode === 404 ? &apos;critical&apos; : &apos;high&apos;,
           description: `Link returns status ${linkStatus.statusCode}`,
           detectedAt: Date.now(),
           resolved: false
@@ -129,9 +129,9 @@ export async function assessResultQuality(
       }
     } catch (error) {
       issues.push({
-        type: 'broken_link',
-        severity: 'high',
-        description: `Failed to check link: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        type: &apos;broken_link&apos;,
+        severity: &apos;high&apos;,
+        description: `Failed to check link: ${error instanceof Error ? error.message : &apos;Unknown error&apos;}`,
         detectedAt: Date.now(),
         resolved: false
       });
@@ -258,8 +258,8 @@ export async function assessResultQuality(
       metrics.usefulness = Math.max(0, metrics.usefulness - 0.5);
     } else if (spamScore > 0.4) {
       issues.push({
-        type: 'spam',
-        severity: 'high',
+        type: &apos;spam&apos;,
+        severity: &apos;high&apos;,
         description: `Content has moderate spam probability (${Math.round(spamScore * 100)}%)`,
         detectedAt: Date.now(),
         resolved: false
@@ -281,15 +281,15 @@ export async function assessResultQuality(
   
   // Add recommendations based on issues
   if (metrics.readability < 0.5) {
-    recommendations.push('Improve content readability with shorter sentences and simpler vocabulary');
+    recommendations.push(&apos;Improve content readability with shorter sentences and simpler vocabulary&apos;);
   }
   
   if (metrics.freshness < 0.5) {
-    recommendations.push('Update content to ensure information is current');
+    recommendations.push(&apos;Update content to ensure information is current&apos;);
   }
   
   if (metrics.authority < 0.5) {
-    recommendations.push('Consider sources with higher domain authority');
+    recommendations.push(&apos;Consider sources with higher domain authority&apos;);
   }
   
   const assessment: QualityAssessment = {
@@ -332,7 +332,7 @@ function analyzeContentQuality(content: string): ContentQualityAnalysis {
   const readabilityScore = Math.min(100, Math.max(0, 100 - (content.length / 100)));
   const gradeLevel = readabilityScore > 80 ? 'Elementary' : 
                     readabilityScore > 60 ? 'Middle School' : 
-                    readabilityScore > 40 ? 'High School' : 'College';
+                    readabilityScore > 40 ? &apos;High School&apos; : &apos;College&apos;;
   
   const readabilityIssues: string[] = [];
   if (readabilityScore < 50) {
@@ -349,11 +349,11 @@ function analyzeContentQuality(content: string): ContentQualityAnalysis {
   const accuracyScore = factChecks.length > 0 ? verifiedClaims / factChecks.length : 0.5;
   
   // Completeness analysis
-  const requiredElements = ['title', 'introduction', 'body', 'conclusion', 'sources'];
+  const requiredElements = [&apos;title&apos;, &apos;introduction&apos;, &apos;body&apos;, &apos;conclusion&apos;, &apos;sources&apos;];
   const missingElements: string[] = [];
   
-  if (content.length < 100) missingElements.push('insufficient content');
-  if (!content.includes('\n\n')) missingElements.push('lacks paragraph structure');
+  if (content.length < 100) missingElements.push(&apos;insufficient content&apos;);
+  if (!content.includes(&apos;\n\n&apos;)) missingElements.push(&apos;lacks paragraph structure&apos;);
   
   const completenessScore = Math.max(0, 1 - (missingElements.length / requiredElements.length));
   
@@ -362,13 +362,13 @@ function analyzeContentQuality(content: string): ContentQualityAnalysis {
   const seoSuggestions: string[] = [];
   
   if (content.length < 300) {
-    seoIssues.push('Content is too short for SEO');
-    seoSuggestions.push('Expand content to at least 300 words');
+    seoIssues.push(&apos;Content is too short for SEO&apos;);
+    seoSuggestions.push(&apos;Expand content to at least 300 words&apos;);
   }
   
   if ((content.match(/\b\w+\b/g) || []).length < 50) {
-    seoIssues.push('Insufficient keyword density');
-    seoSuggestions.push('Include more relevant keywords naturally');
+    seoIssues.push(&apos;Insufficient keyword density&apos;);
+    seoSuggestions.push(&apos;Include more relevant keywords naturally&apos;);
   }
   
   const seoScore = Math.max(0, 100 - (seoIssues.length * 20));
@@ -400,7 +400,7 @@ function analyzeContentQuality(content: string): ContentQualityAnalysis {
  */
 async function checkDomainAuthority(domain: string): Promise<number> {
   // In a real implementation, you would use a service like Moz or Ahrefs
-  // For now, we'll simulate with a random score
+  // For now, we&apos;ll simulate with a random score
   return Math.floor(Math.random() * 100);
 }
 

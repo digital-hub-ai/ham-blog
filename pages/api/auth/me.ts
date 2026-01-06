@@ -1,19 +1,19 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { verify } from 'jsonwebtoken';
-import { prisma } from '@/lib/prisma';
+import { NextApiRequest, NextApiResponse } from &apos;next&apos;;
+import { verify } from &apos;jsonwebtoken&apos;;
+import { prisma } from &apos;@/lib/prisma&apos;;
 
 const JWT_SECRET = process.env.JWT_SECRET!;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== &apos;GET&apos;) {
+    return res.status(405).json({ error: &apos;Method not allowed&apos; });
   }
 
   // Get token from cookie
   const token = req.cookies.token;
 
   if (!token) {
-    return res.status(401).json({ error: 'Not authenticated' });
+    return res.status(401).json({ error: &apos;Not authenticated&apos; });
   }
 
   try {
@@ -35,20 +35,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!user) {
       // Clear invalid token
       res.setHeader(
-        'Set-Cookie',
-        'token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly'
+        &apos;Set-Cookie&apos;,
+        &apos;token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly&apos;
       );
-      return res.status(401).json({ error: 'User not found' });
+      return res.status(401).json({ error: &apos;User not found&apos; });
     }
 
     return res.status(200).json({ user });
   } catch (error) {
-    console.error('Auth check error:', error);
+    console.error(&apos;Auth check error:&apos;, error);
     // Clear invalid token
     res.setHeader(
-      'Set-Cookie',
-      'token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly'
+      &apos;Set-Cookie&apos;,
+      &apos;token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly&apos;
     );
-    return res.status(401).json({ error: 'Invalid token' });
+    return res.status(401).json({ error: &apos;Invalid token&apos; });
   }
 }

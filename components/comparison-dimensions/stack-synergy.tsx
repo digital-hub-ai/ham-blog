@@ -78,25 +78,25 @@ export default function StackSynergy({ tools, userPreferences, onReady }: StackS
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6&quot;>
       {/* Header */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-2">Stack Synergy</h2>
-        <p className="text-gray-400">Compatibility scoring and integration analysis</p>
+      <div className="mb-6&quot;>
+        <h2 className="text-2xl font-bold mb-2&quot;>Stack Synergy</h2>
+        <p className="text-gray-400&quot;>Compatibility scoring and integration analysis</p>
       </div>
 
       {/* Tool Selection */}
-      <div className="mb-6">
-        <h3 className="font-semibold mb-3">Build Your Stack</h3>
-        <div className="flex flex-wrap gap-2">
+      <div className="mb-6&quot;>
+        <h3 className="font-semibold mb-3&quot;>Build Your Stack</h3>
+        <div className="flex flex-wrap gap-2&quot;>
           {tools.map((toolName) => (
             <button
               key={toolName}
               onClick={() => toggleToolInStack(toolName)}
               className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
                 selectedStack.includes(toolName)
-                  ? 'bg-blue-500 border-blue-500 text-white'
-                  : 'bg-white/10 border-white/20 hover:bg-white/20'
+                  ? &apos;bg-blue-500 border-blue-500 text-white&apos;
+                  : &apos;bg-white/10 border-white/20 hover:bg-white/20
               }`}
             >
               {toolName}
@@ -107,27 +107,27 @@ export default function StackSynergy({ tools, userPreferences, onReady }: StackS
 
       {/* Stack Synergy Score */}
       {selectedStack.length >= 2 && (
-        <div className="mb-6 p-4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg border border-blue-400/30">
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">
+        <div className="mb-6 p-4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg border border-blue-400/30&quot;>
+          <div className="text-center&quot;>
+            <div className="text-4xl font-bold mb-2&quot;>
               {calculateStackSynergy(selectedStack)}%
             </div>
-            <div className="text-gray-300">Stack Compatibility Score</div>
+            <div className="text-gray-300&quot;>Stack Compatibility Score</div>
           </div>
         </div>
       )}
 
       {/* Compatibility Matrix */}
       {tools.length >= 2 && (
-        <div className="mb-6">
-          <h3 className="font-semibold mb-3">Compatibility Matrix</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
+        <div className="mb-6&quot;>
+          <h3 className="font-semibold mb-3&quot;>Compatibility Matrix</h3>
+          <div className="overflow-x-auto&quot;>
+            <table className="w-full border-collapse&quot;>
               <thead>
-                <tr className="bg-white/10">
-                  <th className="px-4 py-2 border border-white/10"></th>
+                <tr className="bg-white/10&quot;>
+                  <th className="px-4 py-2 border border-white/10&quot;></th>
                   {tools.map((tool) => (
-                    <th key={tool} className="px-4 py-2 text-center border border-white/10">
+                    <th key={tool} className="px-4 py-2 text-center border border-white/10&quot;>
                       {tool}
                     </th>
                   ))}
@@ -136,20 +136,20 @@ export default function StackSynergy({ tools, userPreferences, onReady }: StackS
               <tbody>
                 {tools.map((tool1) => (
                   <tr key={tool1}>
-                    <td className="px-4 py-2 font-medium border border-white/10">{tool1}</td>
+                    <td className="px-4 py-2 font-medium border border-white/10&quot;>{tool1}</td>
                     {tools.map((tool2) => {
                       if (tool1 === tool2) {
                         return (
-                          <td key={tool2} className="px-4 py-2 text-center border border-white/10">
+                          <td key={tool2} className="px-4 py-2 text-center border border-white/10&quot;>
                             -
                           </td>
                         );
                       }
                       
                       const score = getCompatibilityScore(tool1, tool2);
-                      const color = score >= 85 ? 'bg-green-500/20 text-green-400' : 
-                                   score >= 70 ? 'bg-yellow-500/20 text-yellow-400' : 
-                                   'bg-red-500/20 text-red-400';
+                      const color = score >= 85 ? &apos;bg-green-500/20 text-green-400 : 
+                                   score >= 70 ? &apos;bg-yellow-500/20 text-yellow-400&apos; : 
+                                   &apos;bg-red-500/20 text-red-400&apos;;
 
                       return (
                         <td key={tool2} className={`px-4 py-2 text-center border border-white/10 ${color}`}>
@@ -168,29 +168,29 @@ export default function StackSynergy({ tools, userPreferences, onReady }: StackS
       {/* Integration Details */}
       {selectedStack.length >= 2 && (
         <div>
-          <h3 className="font-semibold mb-3">Integration Options</h3>
-          <div className="space-y-4">
+          <h3 className="font-semibold mb-3&quot;>Integration Options</h3>
+          <div className="space-y-4&quot;>
             {selectedStack.map((tool1, i) => 
               selectedStack.slice(i + 1).map((tool2) => {
                 const integrations = getIntegrationTypes(tool1, tool2);
                 const score = getCompatibilityScore(tool1, tool2);
 
                 return (
-                  <div key={`${tool1}-${tool2}`} className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="font-semibold">{tool1} ↔ {tool2}</h4>
+                  <div key={`${tool1}-${tool2}`} className="bg-white/10 rounded-lg p-4 border border-white/20&quot;>
+                    <div className="flex items-center justify-between mb-3&quot;>
+                      <h4 className="font-semibold&quot;>{tool1} ↔ {tool2}</h4>
                       <div className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        score >= 85 ? 'bg-green-500/20 text-green-400' : 
-                        score >= 70 ? 'bg-yellow-500/20 text-yellow-400' : 
-                        'bg-red-500/20 text-red-400'
+                        score >= 85 ? &apos;bg-green-500/20 text-green-400&apos; : 
+                        score >= 70 ? &apos;bg-yellow-500/20 text-yellow-400&apos; : 
+                        &apos;bg-red-500/20 text-red-400
                       }`}>
                         {score}% Compatible
                       </div>
                     </div>
                     
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2&quot;>
                       {integrations.map((integration) => (
-                        <span key={integration.type} className="px-2 py-1 bg-blue-500/30 rounded text-sm">
+                        <span key={integration.type} className="px-2 py-1 bg-blue-500/30 rounded text-sm&quot;>
                           {integration.type}
                         </span>
                       ))}
@@ -204,9 +204,9 @@ export default function StackSynergy({ tools, userPreferences, onReady }: StackS
       )}
 
       {/* Recommendations */}
-      <div className="mt-8 p-4 bg-purple-500/20 rounded-lg border border-purple-400/30">
-        <h3 className="font-semibold mb-2">💡 Recommendations</h3>
-        <ul className="space-y-1 text-sm text-gray-300">
+      <div className="mt-8 p-4 bg-purple-500/20 rounded-lg border border-purple-400/30&quot;>
+        <h3 className="font-semibold mb-2&quot;>💡 Recommendations</h3>
+        <ul className="space-y-1 text-sm text-gray-300&quot;>
           <li>• Tools with 85%+ compatibility work seamlessly together</li>
           <li>• Consider API availability for custom integrations</li>
           <li>• Check native integrations for reduced setup time</li>

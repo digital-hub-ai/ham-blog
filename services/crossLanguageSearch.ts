@@ -4,8 +4,8 @@
 
 // Supported languages
 export type SupportedLanguage = 
-  | 'en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'ru' | 'zh' | 'ja' | 'ko'
-  | 'ar' | 'hi' | 'bn' | 'pa' | 'jv' | 'ms' | 'tr' | 'vi' | 'th' | 'id';
+  | &apos;en&apos; | &apos;es&apos; | &apos;fr&apos; | &apos;de&apos; | &apos;it&apos; | &apos;pt&apos; | &apos;ru&apos; | &apos;zh&apos; | &apos;ja&apos; | &apos;ko&apos;
+  | &apos;ar&apos; | &apos;hi&apos; | &apos;bn&apos; | &apos;pa&apos; | &apos;jv&apos; | &apos;ms&apos; | &apos;tr&apos; | &apos;vi&apos; | &apos;th&apos; | &apos;id&apos;;
 
 // Translation result
 export interface TranslationResult {
@@ -44,8 +44,8 @@ export interface TranslationConfig {
 const defaultConfig: TranslationConfig = {
   enableAutoDetection: true,
   enableTranslation: true,
-  defaultTargetLanguage: 'en',
-  fallbackLanguages: ['en', 'es', 'fr'],
+  defaultTargetLanguage: &apos;en&apos;,
+  fallbackLanguages: [&apos;en&apos;, &apos;es&apos;, &apos;fr&apos;],
   preserveEntities: true,
   preserveFormatting: true,
   enableCaching: true,
@@ -78,8 +78,8 @@ export class CrossLanguageTranslationService {
     this.config = { ...defaultConfig, ...config };
     this.translationCache = new Map();
     this.supportedLanguages = new Set([
-      'en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'zh', 'ja', 'ko',
-      'ar', 'hi', 'bn', 'pa', 'jv', 'ms', 'tr', 'vi', 'th', 'id'
+      &apos;en&apos;, &apos;es&apos;, &apos;fr&apos;, &apos;de&apos;, &apos;it&apos;, &apos;pt&apos;, &apos;ru&apos;, &apos;zh&apos;, &apos;ja&apos;, &apos;ko&apos;,
+      &apos;ar&apos;, &apos;hi&apos;, &apos;bn&apos;, &apos;pa&apos;, &apos;jv&apos;, &apos;ms&apos;, &apos;tr&apos;, &apos;vi&apos;, &apos;th&apos;, &apos;id&apos;
     ]);
   }
 
@@ -88,15 +88,15 @@ export class CrossLanguageTranslationService {
    */
   async detectLanguage(text: string): Promise<SupportedLanguage | null> {
     // In a real implementation, this would call a language detection API
-    // For now, we'll simulate with a simple heuristic
+    // For now, we&apos;ll simulate with a simple heuristic
     const lowerText = text.toLowerCase();
     
     // Simple keyword-based detection (in reality, would use ML models)
-    if (lowerText.includes('the') && lowerText.includes('and')) return 'en';
-    if (lowerText.includes('el') && lowerText.includes('y')) return 'es';
-    if (lowerText.includes('le') && lowerText.includes('et')) return 'fr';
-    if (lowerText.includes('der') && lowerText.includes('und')) return 'de';
-    if (lowerText.includes('il') && lowerText.includes('e')) return 'it';
+    if (lowerText.includes(&apos;the&apos;) && lowerText.includes(&apos;and&apos;)) return &apos;en&apos;;
+    if (lowerText.includes(&apos;el&apos;) && lowerText.includes(&apos;y&apos;)) return &apos;es&apos;;
+    if (lowerText.includes(&apos;le&apos;) && lowerText.includes(&apos;et&apos;)) return &apos;fr&apos;;
+    if (lowerText.includes(&apos;der&apos;) && lowerText.includes(&apos;und&apos;)) return &apos;de&apos;;
+    if (lowerText.includes(&apos;il&apos;) && lowerText.includes(&apos;e&apos;)) return &apos;it&apos;;
     
     // Default to null if uncertain
     return null;
@@ -111,7 +111,7 @@ export class CrossLanguageTranslationService {
     sourceLanguage?: SupportedLanguage
   ): Promise<TranslationResult> {
     // Check cache first
-    const cacheKey = `${text}_${sourceLanguage || 'auto'}_${targetLanguage}`;
+    const cacheKey = `${text}_${sourceLanguage || &apos;auto&apos;}_${targetLanguage}`;
     const cached = this.translationCache.get(cacheKey);
     
     if (cached && Date.now() - cached.timestamp < this.config.cacheExpiryHours * 3600000) {
@@ -121,17 +121,17 @@ export class CrossLanguageTranslationService {
     // Auto-detect source language if not provided
     let detectedSource = sourceLanguage;
     if (!detectedSource && this.config.enableAutoDetection) {
-      detectedSource = await this.detectLanguage(text) || 'en';
+      detectedSource = await this.detectLanguage(text) || &apos;en&apos;;
     }
     
     // In a real implementation, this would call a translation API
-    // For simulation, we'll transform the text in language-specific ways
-    const translatedText = this.simulateTranslation(text, detectedSource || 'en', targetLanguage);
+    // For simulation, we&apos;ll transform the text in language-specific ways
+    const translatedText = this.simulateTranslation(text, detectedSource || &apos;en&apos;, targetLanguage);
     
     const result: TranslationResult = {
       originalText: text,
       translatedText,
-      sourceLanguage: detectedSource || 'en',
+      sourceLanguage: detectedSource || &apos;en&apos;,
       targetLanguage,
       confidence: Math.random() * 0.3 + 0.7, // Random confidence between 0.7-1.0
       detectedLanguage: detectedSource
@@ -163,7 +163,7 @@ export class CrossLanguageTranslationService {
     sourceLang: SupportedLanguage, 
     targetLang: SupportedLanguage
   ): string {
-    // This is a simplified simulation - in reality, you'd use a translation API
+    // This is a simplified simulation - in reality, you&apos;d use a translation API
     if (sourceLang === targetLang) {
       return text;
     }
@@ -275,27 +275,27 @@ export class CrossLanguageTranslationService {
     
     // Language-specific query transformations
     switch (language) {
-      case 'en':
+      case &apos;en&apos;:
         alternatives.push(
-          query.replace(/\b(how to|how do i)\b/g, 'guide for'),
-          query.replace(/\b(best|top)\b/g, 'recommended'),
+          query.replace(/\b(how to|how do i)\b/g, &apos;guide for&apos;),
+          query.replace(/\b(best|top)\b/g, &apos;recommended&apos;),
           `what is ${query}`,
           `${query} tutorial`
         );
         break;
-      case 'es':
+      case &apos;es&apos;:
         alternatives.push(
-          query.replace(/\b(cómo|como)\b/g, 'guía para'),
-          query.replace(/\b(mejor|top)\b/g, 'recomendado'),
+          query.replace(/\b(cómo|como)\b/g, &apos;guía para&apos;),
+          query.replace(/\b(mejor|top)\b/g, &apos;recomendado&apos;),
           `qué es ${query}`,
           `${query} tutorial`
         );
         break;
-      case 'fr':
+      case &apos;fr&apos;:
         alternatives.push(
-          query.replace(/\b(comment)\b/g, 'guide pour'),
-          query.replace(/\b(meilleur|top)\b/g, 'recommandé'),
-          `qu'est-ce que ${query}`,
+          query.replace(/\b(comment)\b/g, &apos;guide pour&apos;),
+          query.replace(/\b(meilleur|top)\b/g, &apos;recommandé&apos;),
+          `qu&apos;est-ce que ${query}`,
           `${query} tutoriel`
         );
         break;
@@ -322,7 +322,7 @@ export class CrossLanguageTranslationService {
     targetLang: SupportedLanguage
   ): TranslationQuality {
     // In a real implementation, this would use linguistic analysis
-    // For simulation, we'll generate random but plausible scores
+    // For simulation, we&apos;ll generate random but plausible scores
     
     return {
       accuracy: Math.random() * 0.4 + 0.6, // 0.6-1.0
@@ -355,7 +355,7 @@ export class CrossLanguageTranslationService {
     maxSize: number;
     hitRate: number;
   } {
-    // In a real implementation, you'd track actual hits/misses
+    // In a real implementation, you&apos;d track actual hits/misses
     return {
       size: this.translationCache.size,
       maxSize: 10000, // Example max size

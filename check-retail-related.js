@@ -27,7 +27,7 @@ lines.forEach((line, index) => {
   
   // Extract category if we're in a tool block
   if (inToolBlock) {
-    const categoryMatch = line.match(/"category":\s*"([^"]+)"/);
+    const categoryMatch = line.match(/&quot;category&quot;:\s*&quot;([^&quot;]+)&quot;/);
     if (categoryMatch) {
       currentTool.category = categoryMatch[1];
     }
@@ -36,7 +36,7 @@ lines.forEach((line, index) => {
 
 console.log('Retail-related categories:');
 Array.from(retailCategories).forEach(category => {
-  console.log('-', category);
+  console.log(&apos;-&apos;, category);
 });
 
 console.log(`\nTotal retail-related categories: ${retailCategories.size}`);

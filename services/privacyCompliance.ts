@@ -4,34 +4,34 @@
 
 // Privacy levels
 export type PrivacyLevel = 
-  | 'public'          // Publicly accessible
-  | 'internal'        // Internal to organization
-  | 'confidential'    // Confidential information
-  | 'restricted'      // Access restricted
-  | 'classified'      // Classified information
-  | 'custom';         // Custom privacy level
+  | &apos;public&apos;          // Publicly accessible
+  | &apos;internal&apos;        // Internal to organization
+  | &apos;confidential&apos;    // Confidential information
+  | &apos;restricted&apos;      // Access restricted
+  | &apos;classified&apos;      // Classified information
+  | &apos;custom&apos;;         // Custom privacy level
 
 // Compliance frameworks
 export type ComplianceFramework = 
-  | 'gdpr'            // General Data Protection Regulation
-  | 'ccpa'            // California Consumer Privacy Act
-  | 'hipaa'           // Health Insurance Portability and Accountability Act
-  | 'sox'             // Sarbanes-Oxley Act
-  | 'pci'             // Payment Card Industry Data Security Standard
-  | 'ferpa'           // Family Educational Rights and Privacy Act
-  | 'glba'            // Gramm-Leach-Bliley Act
-  | 'custom';         // Custom compliance framework
+  | &apos;gdpr&apos;            // General Data Protection Regulation
+  | &apos;ccpa&apos;            // California Consumer Privacy Act
+  | &apos;hipaa&apos;           // Health Insurance Portability and Accountability Act
+  | &apos;sox&apos;             // Sarbanes-Oxley Act
+  | &apos;pci&apos;             // Payment Card Industry Data Security Standard
+  | &apos;ferpa&apos;           // Family Educational Rights and Privacy Act
+  | &apos;glba&apos;            // Gramm-Leach-Bliley Act
+  | &apos;custom&apos;;         // Custom compliance framework
 
 // Data classification
 export type DataClassification = 
-  | 'pii'             // Personally Identifiable Information
-  | 'phi'             // Protected Health Information
-  | 'financial'       // Financial data
-  | 'intellectual_property' // Intellectual property
-  | 'trade_secrets'   // Trade secrets
-  | 'government'      // Government data
-  | 'legal'           // Legal information
-  | 'custom';         // Custom classification
+  | &apos;pii&apos;             // Personally Identifiable Information
+  | &apos;phi&apos;             // Protected Health Information
+  | &apos;financial&apos;       // Financial data
+  | &apos;intellectual_property&apos; // Intellectual property
+  | &apos;trade_secrets&apos;   // Trade secrets
+  | &apos;government&apos;      // Government data
+  | &apos;legal&apos;           // Legal information
+  | &apos;custom&apos;;         // Custom classification
 
 // Privacy policy
 export interface PrivacyPolicy {
@@ -57,14 +57,14 @@ export interface PrivacyRule {
 
 // Privacy condition
 export interface PrivacyCondition {
-  type: 'contains' | 'matches' | 'classification' | 'source' | 'user_role' | 'custom';
+  type: &apos;contains&apos; | &apos;matches&apos; | &apos;classification&apos; | &apos;source&apos; | &apos;user_role&apos; | &apos;custom&apos;;
   value: string | string[] | DataClassification | RegExp;
-  field?: string; // Field to check (e.g., 'content', 'title', 'metadata')
+  field?: string; // Field to check (e.g., &apos;content&apos;, &apos;title&apos;, &apos;metadata&apos;)
 }
 
 // Privacy action
 export interface PrivacyAction {
-  type: 'redact' | 'mask' | 'block' | 'encrypt' | 'anonymize' | 'notify' | 'log' | 'custom';
+  type: &apos;redact&apos; | &apos;mask&apos; | &apos;block&apos; | &apos;encrypt&apos; | &apos;anonymize&apos; | &apos;notify&apos; | &apos;log&apos; | &apos;custom&apos;;
   parameters?: Record<string, any>;
 }
 
@@ -75,7 +75,7 @@ export interface ComplianceRequirement {
   requirement: string;
   description: string;
   verificationMethod: string;
-  status: 'compliant' | 'nonCompliant' | 'pending' | 'notApplicable';
+  status: &apos;compliant&apos; | &apos;nonCompliant&apos; | &apos;pending&apos; | &apos;notApplicable&apos;;
   lastChecked: number;
   nextCheck: number;
 }
@@ -86,7 +86,7 @@ export interface RetentionPolicy {
   name: string;
   description: string;
   retentionPeriod: number; // in days
-  retentionType: 'permanent' | 'temporary' | 'until_event';
+  retentionType: &apos;permanent&apos; | &apos;temporary&apos; | &apos;until_event&apos;;
   triggerEvent?: string;
   autoDelete: boolean;
   notifyBeforeDelete: boolean;
@@ -204,17 +204,17 @@ export class PrivacyComplianceService {
     
     // Default retention policy
     const defaultRetentionPolicy: RetentionPolicy = {
-      id: 'default',
-      name: 'Default Retention Policy',
-      description: 'Standard retention policy for search queries and results',
+      id: &apos;default&apos;,
+      name: &apos;Default Retention Policy&apos;,
+      description: &apos;Standard retention policy for search queries and results&apos;,
       retentionPeriod: 365, // 1 year
-      retentionType: 'temporary',
+      retentionType: &apos;temporary&apos;,
       autoDelete: true,
       notifyBeforeDelete: true,
       notificationPeriod: 30 // 30 days before deletion
     };
     
-    this.retentionPolicies.set('default', defaultRetentionPolicy);
+    this.retentionPolicies.set(&apos;default&apos;, defaultRetentionPolicy);
   }
 
   /**
@@ -222,7 +222,7 @@ export class PrivacyComplianceService {
    */
   addPrivacyPolicy(policy: PrivacyPolicy): void {
     this.privacyPolicies.set(policy.id, policy);
-    this.logAudit('policy_added', 'system', `Privacy policy ${policy.id} added/updated`);
+    this.logAudit(&apos;policy_added&apos;, &apos;system&apos;, `Privacy policy ${policy.id} added/updated`);
   }
 
   /**
@@ -231,7 +231,7 @@ export class PrivacyComplianceService {
   removePrivacyPolicy(policyId: string): boolean {
     const result = this.privacyPolicies.delete(policyId);
     if (result) {
-      this.logAudit('policy_removed', 'system', `Privacy policy ${policyId} removed`);
+      this.logAudit(&apos;policy_removed&apos;, &apos;system&apos;, `Privacy policy ${policyId} removed`);
     }
     return result;
   }
@@ -290,7 +290,7 @@ export class PrivacyComplianceService {
         const result = this.applyAction(
           rule.action,
           processedContent,
-          rule.condition.field || 'content'
+          rule.condition.field || &apos;content&apos;
         );
         
         if (result.modified) {
@@ -546,7 +546,7 @@ export class PrivacyComplianceService {
    */
   addRetentionPolicy(policy: RetentionPolicy): void {
     this.retentionPolicies.set(policy.id, policy);
-    this.logAudit('retention_added', 'system', `Retention policy ${policy.id} added/updated`);
+    this.logAudit(&apos;retention_added&apos;, &apos;system&apos;, `Retention policy ${policy.id} added/updated`);
   }
 
   /**
@@ -589,7 +589,7 @@ export class PrivacyComplianceService {
         const daysUntilExpiry = defaultPolicy.retentionPeriod - ageInDays;
         results.push({
           id: item.id,
-          action: 'notify',
+          action: &apos;notify&apos;,
           policy: defaultPolicy,
           daysUntilAction: Math.ceil(daysUntilExpiry)
         });
@@ -598,7 +598,7 @@ export class PrivacyComplianceService {
         const daysUntilExpiry = defaultPolicy.retentionPeriod - ageInDays;
         results.push({
           id: item.id,
-          action: 'retain',
+          action: &apos;retain&apos;,
           policy: defaultPolicy,
           daysUntilAction: Math.ceil(daysUntilExpiry)
         });

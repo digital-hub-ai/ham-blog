@@ -8,8 +8,8 @@ const convertedTools = aiToolsData.map((tool, index) => {
   return {
     id: `tool-${index + 1}`,
     name: tool.name,
-    category: tool.category[0] || 'General',
-    subcategory: 'AI Tool',
+    category: tool.category[0] || &apos;General&apos;,
+    subcategory: &apos;AI Tool&apos;,
     rating: Math.floor(Math.random() * 50) / 10, // Random rating between 0 and 5
     description: tool.description,
     pricing: tool.pricing,
@@ -24,5 +24,5 @@ const convertedTools = aiToolsData.map((tool, index) => {
 });
 
 // Save the converted tools
-fs.writeFileSync('./data/converted-ai-tools.json', JSON.stringify(convertedTools, null, 2));
+fs.writeFileSync(&apos;./data/converted-ai-tools.json&apos;, JSON.stringify(convertedTools, null, 2));
 console.log(`Successfully converted ${convertedTools.length} AI tools for search service`);

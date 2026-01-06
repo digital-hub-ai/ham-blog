@@ -1,49 +1,49 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from &apos;next&apos;;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const baseUrl = 'https://aether-nexus.vercel.app';
+    const baseUrl = &apos;https://aether-nexus.vercel.app&apos;;
     const currentDate = new Date().toISOString();
     
     // Generate XML sitemap index
-    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n';
+    let xml = &apos;<?xml version="1.0&quot; encoding="UTF-8&quot;?>\n&apos;;
+    xml += &apos;<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9&quot;>\n\n&apos;;
 
     // Main sitemap
-    xml += '  <sitemap>\n';
+    xml += &apos;  <sitemap>\n&apos;;
     xml += `    <loc>${baseUrl}/api/sitemap.xml</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
-    xml += '  </sitemap>\n\n';
+    xml += &apos;  </sitemap>\n\n&apos;;
 
     // Image sitemap
-    xml += '  <sitemap>\n';
+    xml += &apos;  <sitemap>\n&apos;;
     xml += `    <loc>${baseUrl}/api/sitemap-images.xml</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
-    xml += '  </sitemap>\n\n';
+    xml += &apos;  </sitemap>\n\n&apos;;
 
     // News sitemap
-    xml += '  <sitemap>\n';
+    xml += &apos;  <sitemap>\n&apos;;
     xml += `    <loc>${baseUrl}/api/sitemap-news.xml</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
-    xml += '  </sitemap>\n\n';
+    xml += &apos;  </sitemap>\n\n&apos;;
 
     // Video sitemap (placeholder for future implementation)
-    xml += '  <sitemap>\n';
+    xml += &apos;  <sitemap>\n&apos;;
     xml += `    <loc>${baseUrl}/api/sitemap-videos.xml</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
-    xml += '  </sitemap>\n\n';
+    xml += &apos;  </sitemap>\n\n&apos;;
 
-    xml += '</sitemapindex>';
+    xml += &apos;</sitemapindex>&apos;;
 
     // Set response headers
-    res.setHeader('Content-Type', 'application/xml');
-    res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+    res.setHeader(&apos;Content-Type&apos;, &apos;application/xml&apos;);
+    res.setHeader(&apos;Cache-Control&apos;, &apos;public, s-maxage=3600, stale-while-revalidate=86400&apos;);
     
     // Send XML response
     res.status(200).send(xml);
 
   } catch (error) {
-    console.error('Sitemap index generation error:', error);
-    res.status(500).json({ error: 'Failed to generate sitemap index' });
+    console.error(&apos;Sitemap index generation error:&apos;, error);
+    res.status(500).json({ error: &apos;Failed to generate sitemap index&apos; });
   }
 }

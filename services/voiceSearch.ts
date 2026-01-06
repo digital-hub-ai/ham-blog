@@ -5,17 +5,17 @@
 // Voice search command patterns
 const voiceCommands = {
   search: [
-    'search for', 'find', 'look for', 'show me', 'i want to find',
-    'can you find', 'please search for', 'search'
+    &apos;search for&apos;, &apos;find&apos;, &apos;look for&apos;, &apos;show me&apos;, &apos;i want to find&apos;,
+    &apos;can you find&apos;, &apos;please search for&apos;, &apos;search&apos;
   ],
   filter: {
-    category: ['in category', 'under category', 'from category', 'category'],
-    rating: ['rated', 'with rating', 'rating above', 'rating over'],
-    price: ['under', 'below', 'less than', 'cheaper than', 'costs less than'],
-    type: ['type', 'kind of', 'sort of']
+    category: [&apos;in category&apos;, &apos;under category&apos;, &apos;from category&apos;, &apos;category&apos;],
+    rating: [&apos;rated&apos;, &apos;with rating&apos;, &apos;rating above&apos;, &apos;rating over&apos;],
+    price: [&apos;under&apos;, &apos;below&apos;, &apos;less than&apos;, &apos;cheaper than&apos;, &apos;costs less than&apos;],
+    type: [&apos;type&apos;, &apos;kind of&apos;, &apos;sort of&apos;]
   },
   sort: [
-    'sort by', 'order by', 'rank by', 'arrange by'
+    &apos;sort by&apos;, &apos;order by&apos;, &apos;rank by&apos;, &apos;arrange by&apos;
   ]
 };
 
@@ -24,7 +24,7 @@ export function processVoiceQuery(query: string): {
   searchTerms: string[];
   filters: Record<string, any>;
   sortBy?: string;
-  sortOrder?: 'asc' | 'desc';
+  sortOrder?: &apos;asc&apos; | &apos;desc&apos;;
 } {
   const result = {
     searchTerms: [] as string[],
@@ -48,28 +48,28 @@ export function processVoiceQuery(query: string): {
   }
 
   // Extract filters
-  // Rating filters (e.g., "rated 4 stars" or "rating above 3")
+  // Rating filters (e.g., &quot;rated 4 stars&quot; or &quot;rating above 3&quot;)
   const ratingMatch = processedQuery.match(/(?:rated|ratin(?:g|gs?)\s+(?:above|over|more than))\s+(\d+(?:\.\d+)?)/i);
   if (ratingMatch) {
     result.filters.minRating = parseFloat(ratingMatch[1]);
     processedQuery = processedQuery.replace(ratingMatch[0], '').trim();
   }
 
-  // Price filters (e.g., "under $50" or "less than 20 dollars")
+  // Price filters (e.g., &quot;under $50&quot; or &quot;less than 20 dollars&quot;)
   const priceMatch = processedQuery.match(/(?:under|below|less than|cheaper than|costs less than)\s+\$?(\d+(?:\.\d+)?)/i);
   if (priceMatch) {
     result.filters.maxPrice = parseFloat(priceMatch[1]);
     processedQuery = processedQuery.replace(priceMatch[0], '').trim();
   }
 
-  // Category filters (e.g., "in image generation category")
+  // Category filters (e.g., &quot;in image generation category&quot;)
   const categoryMatch = processedQuery.match(/(?:in|under|from)?\s*category\s+(.+?)(?:\s+(?:category|section))?$/i);
   if (categoryMatch) {
     result.filters.category = categoryMatch[1].trim();
     processedQuery = processedQuery.replace(categoryMatch[0], '').trim();
   }
 
-  // Sort commands (e.g., "sort by rating" or "order by price")
+  // Sort commands (e.g., &quot;sort by rating&quot; or &quot;order by price&quot;)
   const sortMatch = processedQuery.match(/(?:sort|order|rank)\s+by\s+(rating|price|date|title|relevance)(?:\s+(ascending|descending|asc|desc))?/i);
   if (sortMatch) {
     result.sortBy = sortMatch[1].toLowerCase();
@@ -84,7 +84,7 @@ export function processVoiceQuery(query: string): {
   if (processedQuery) {
     result.searchTerms = processedQuery
       .split(/\s+/)
-      .filter(term => term.length > 0 && !['and', 'or', 'the', 'a', 'an'].includes(term));
+      .filter(term => term.length > 0 && ![&apos;and&apos;, &apos;or&apos;, &apos;the&apos;, &apos;a&apos;, &apos;an&apos;].includes(term));
   }
 
   return result;
@@ -125,16 +125,16 @@ export function voiceQueryToSearchParams(query: string): Record<string, string> 
 // Generate voice search suggestions
 export function generateVoiceSearchSuggestions(previousQueries: string[] = []): string[] {
   const baseSuggestions = [
-    "Search for image generation tools",
-    "Find AI writing assistants",
-    "Show me video editing AI",
-    "Look for free SEO tools",
-    "Search for chatbots rated 4 stars or higher",
-    "Find AI tools under $20",
-    "Show me productivity tools in the writing category",
-    "Search for tools sorted by rating",
-    "Find the best AI tools for content creation",
-    "Look for machine learning platforms"
+    &quot;Search for image generation tools&quot;,
+    &quot;Find AI writing assistants&quot;,
+    &quot;Show me video editing AI&quot;,
+    &quot;Look for free SEO tools&quot;,
+    &quot;Search for chatbots rated 4 stars or higher&quot;,
+    &quot;Find AI tools under $20&quot;,
+    &quot;Show me productivity tools in the writing category&quot;,
+    &quot;Search for tools sorted by rating&quot;,
+    &quot;Find the best AI tools for content creation&quot;,
+    &quot;Look for machine learning platforms&quot;
   ];
 
   // Add personalized suggestions based on previous queries
@@ -142,8 +142,8 @@ export function generateVoiceSearchSuggestions(previousQueries: string[] = []): 
   if (previousQueries.length > 0) {
     const lastQuery = previousQueries[previousQueries.length - 1];
     if (lastQuery) {
-      personalizedSuggestions.push(`Search for more like "${lastQuery}"`);
-      personalizedSuggestions.push(`Find alternatives to "${lastQuery}"`);
+      personalizedSuggestions.push(`Search for more like &quot;${lastQuery}&quot;`);
+      personalizedSuggestions.push(`Find alternatives to &quot;${lastQuery}&quot;`);
     }
   }
 
@@ -154,21 +154,21 @@ export function generateVoiceSearchSuggestions(previousQueries: string[] = []): 
 // Voice command templates
 export const voiceCommandTemplates = {
   basicSearch: [
-    "Search for {query}",
-    "Find {query}",
-    "Look for {query}",
-    "Show me {query}"
+    &quot;Search for {query}&quot;,
+    &quot;Find {query}&quot;,
+    &quot;Look for {query}&quot;,
+    &quot;Show me {query}&quot;
   ],
   filteredSearch: [
-    "Find {query} rated {rating} stars or higher",
-    "Search for {query} under ${price}",
-    "Show me {query} in the {category} category",
-    "Find {query} sorted by {sortField}"
+    &quot;Find {query} rated {rating} stars or higher&quot;,
+    &quot;Search for {query} under ${price}&quot;,
+    &quot;Show me {query} in the {category} category&quot;,
+    &quot;Find {query} sorted by {sortField}&quot;
   ],
   complexSearch: [
-    "Search for {query} rated above {rating} and under ${price}",
-    "Find {query} in {category} sorted by rating",
-    "Show me {query} with high ratings in the {category} category"
+    &quot;Search for {query} rated above {rating} and under ${price}&quot;,
+    &quot;Find {query} in {category} sorted by rating&quot;,
+    &quot;Show me {query} with high ratings in the {category} category&quot;
   ]
 };
 

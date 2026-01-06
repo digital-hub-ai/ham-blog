@@ -64,7 +64,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (successful === 0) {
       return res.status(500).json({ 
         error: 'Failed to notify any search engines',
-        details: results.map(r => r.status === 'rejected' ? r.reason : null).filter(Boolean)
+        details: results.map(r => r.status === &apos;rejected&apos; ? r.reason : null).filter(Boolean)
       });
     }
 
@@ -77,21 +77,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
   } catch (error) {
-    console.error('IndexNow error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error(&apos;IndexNow error:&apos;, error);
+    res.status(500).json({ error: &apos;Internal server error&apos; });
   }
 }
 
 // Helper function to notify search engines when content is published/updated
 export async function notifyIndexNow(url: string, apiKey?: string) {
-  const defaultApiKey = process.env.INDEXNOW_API_KEY || 'your-indexnow-api-key';
+  const defaultApiKey = process.env.INDEXNOW_API_KEY || &apos;your-indexnow-api-key&apos;;
   const key = apiKey || defaultApiKey;
 
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://ai-vault.com'}/api/indexnow`, {
-      method: 'POST',
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || &apos;https://ai-vault.com&apos;}/api/indexnow`, {
+      method: &apos;POST&apos;,
       headers: {
-        'Content-Type': 'application/json',
+        &apos;Content-Type&apos;: &apos;application/json&apos;,
       },
       body: JSON.stringify({
         url,
@@ -105,7 +105,7 @@ export async function notifyIndexNow(url: string, apiKey?: string) {
 
     return await response.json();
   } catch (error) {
-    console.error('IndexNow notification error:', error);
+    console.error(&apos;IndexNow notification error:&apos;, error);
     throw error;
   }
 }

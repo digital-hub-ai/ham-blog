@@ -7,73 +7,73 @@ const AiEnergyFuture2025 = () => {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50&quot;>
       <Head>
         <title>AI in Energy: Powering the Future with Smart Grids and Renewable Integration - AI Vault</title>
-        <meta name="description" content="Discover how AI is transforming the energy sector in 2025. Explore smart grid optimization, renewable energy forecasting, and the future of sustainable power systems powered by artificial intelligence." />
-        <meta name="keywords" content="AI in energy, smart grid 2025, renewable energy AI, energy forecasting, smart energy management, sustainable energy" />
-        <meta name="author" content="AI Vault Energy Team" />
-        <link rel="canonical" href="https://aivault.com/blog/ai-energy-future-2025" />
+        <meta name="description&quot; content="Discover how AI is transforming the energy sector in 2025. Explore smart grid optimization, renewable energy forecasting, and the future of sustainable power systems powered by artificial intelligence.&quot; />
+        <meta name="keywords&quot; content="AI in energy, smart grid 2025, renewable energy AI, energy forecasting, smart energy management, sustainable energy&quot; />
+        <meta name="author&quot; content="AI Vault Energy Team&quot; />
+        <link rel="canonical&quot; href="https://aivault.com/blog/ai-energy-future-2025&quot; />
         
         {/* Open Graph */}
-        <meta property="og:title" content="AI in Energy: Powering the Future with Smart Grids and Renewable Integration" />
-        <meta property="og:description" content="Discover how AI is revolutionizing the energy sector with smart grids, renewable integration, and next-generation power management systems in 2025." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://aivault.com/blog/ai-energy-future-2025" />
-        <meta property="og:image" content="https://aivault.com/images/blog/ai-energy-future-2025.jpg" />
-        <meta property="og:site_name" content="AI Vault" />
-        <meta property="article:published_time" content="2025-04-24" />
-        <meta property="article:modified_time" content="2025-04-24" />
-        <meta property="article:author" content="AI Vault Energy Team" />
-        <meta property="article:tag" content="Energy" />
-        <meta property="article:section" content="Technology" />
+        <meta property="og:title&quot; content="AI in Energy: Powering the Future with Smart Grids and Renewable Integration&quot; />
+        <meta property="og:description&quot; content="Discover how AI is revolutionizing the energy sector with smart grids, renewable integration, and next-generation power management systems in 2025.&quot; />
+        <meta property="og:type&quot; content="article&quot; />
+        <meta property="og:url&quot; content="https://aivault.com/blog/ai-energy-future-2025&quot; />
+        <meta property="og:image&quot; content="https://aivault.com/images/blog/ai-energy-future-2025.jpg&quot; />
+        <meta property="og:site_name&quot; content="AI Vault&quot; />
+        <meta property="article:published_time&quot; content="2025-04-24&quot; />
+        <meta property="article:modified_time&quot; content="2025-04-24&quot; />
+        <meta property="article:author&quot; content="AI Vault Energy Team&quot; />
+        <meta property="article:tag&quot; content="Energy&quot; />
+        <meta property="article:section&quot; content="Technology&quot; />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI in Energy 2025" />
-        <meta name="twitter:description" content="How AI is powering the future of smart grids and renewable energy integration." />
-        <meta name="twitter:image" content="https://aivault.com/images/blog/ai-energy-future-2025.jpg" />
-        <meta name="twitter:site" content="@aivault" />
+        <meta name="twitter:card&quot; content="summary_large_image&quot; />
+        <meta name="twitter:title&quot; content="AI in Energy 2025&quot; />
+        <meta name="twitter:description&quot; content="How AI is powering the future of smart grids and renewable energy integration.&quot; />
+        <meta name="twitter:image&quot; content="https://aivault.com/images/blog/ai-energy-future-2025.jpg&quot; />
+        <meta name="twitter:site&quot; content="@aivault&quot; />
         
         {/* Structured Data - Article */}
-        <script type="application/ld+json">
+        <script type="application/ld+json&quot;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "AI in Energy: Powering the Future with Smart Grids and Renewable Integration",
-            "description": "Discover how AI is revolutionizing the energy sector with smart grids, renewable integration, and next-generation power management systems in 2025.",
-            "author": {
-              "@type": "Organization",
-              "name": "AI Vault Energy Team"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;Article&quot;,
+            &quot;headline&quot;: &quot;AI in Energy: Powering the Future with Smart Grids and Renewable Integration&quot;,
+            &quot;description&quot;: &quot;Discover how AI is revolutionizing the energy sector with smart grids, renewable integration, and next-generation power management systems in 2025.&quot;,
+            &quot;author&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;AI Vault Energy Team&quot;
             },
-            "datePublished": "2025-04-24",
-            "image": "https://aivault.com/images/blog/ai-energy-future-2025.jpg"
+            &quot;datePublished&quot;: &quot;2025-04-24&quot;,
+            &quot;image&quot;: &quot;https://aivault.com/images/blog/ai-energy-future-2025.jpg&quot;
           })}
         </script>
       </Head>
 
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-gray-900">AI in Energy 2025</h1>
-            <Link href="/blog" className="text-blue-600 hover:text-blue-800">
+      <header className="bg-white shadow-sm&quot;>
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;>
+          <div className="flex justify-between items-center&quot;>
+            <h1 className="text-3xl font-bold text-gray-900&quot;>AI in Energy 2025</h1>
+            <Link href="/blog&quot; className="text-blue-600 hover:text-blue-800&quot;>
               ← Back to Blog
             </Link>
           </div>
-          <p className="mt-2 text-lg text-gray-600">Smart Grids and the Renewable Energy Revolution</p>
-          <div className="mt-4 flex items-center text-sm text-gray-500">
+          <p className="mt-2 text-lg text-gray-600&quot;>Smart Grids and the Renewable Energy Revolution</p>
+          <div className="mt-4 flex items-center text-sm text-gray-500&quot;>
             <span>By AI Vault Energy Team</span>
-            <span className="mx-2">•</span>
-            <time dateTime="2025-04-24">April 24, 2025</time>
-            <span className="mx-2">•</span>
+            <span className="mx-2&quot;>•</span>
+            <time dateTime="2025-04-24&quot;>April 24, 2025</time>
+            <span className="mx-2&quot;>•</span>
             <span>48 min read</span>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
-          <div className="prose max-w-none">
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8&quot;>
+        <div className="px-4 py-6 sm:px-0&quot;>
+          <div className="prose max-w-none&quot;>
             <h2>Introduction</h2>
             <p>
               The global energy landscape is undergoing a profound transformation, driven by the urgent need to combat climate change and the rapid advancement of artificial intelligence. In 2025, AI has become the cornerstone of modern energy systems, enabling the integration of renewable resources, optimizing grid operations, and empowering consumers to take control of their energy usage. This article explores how AI is reshaping the energy sector and powering a more sustainable future.
@@ -81,7 +81,7 @@ const AiEnergyFuture2025 = () => {
             
             <h2>The Evolution of AI in Energy</h2>
             <p>
-              AI's role in the energy sector has evolved from basic demand forecasting to sophisticated, autonomous energy management systems. Today's AI solutions leverage machine learning, computer vision, and advanced analytics to process vast amounts of data from smart meters, weather stations, and IoT devices. These systems can predict energy generation and consumption patterns with unprecedented accuracy, optimize energy flows across complex grids, and automatically respond to changing conditions in real-time.
+              AI&apos;s role in the energy sector has evolved from basic demand forecasting to sophisticated, autonomous energy management systems. Today&apos;s AI solutions leverage machine learning, computer vision, and advanced analytics to process vast amounts of data from smart meters, weather stations, and IoT devices. These systems can predict energy generation and consumption patterns with unprecedented accuracy, optimize energy flows across complex grids, and automatically respond to changing conditions in real-time.
             </p>
 
             <h2>Key Applications of AI in Energy</h2>
@@ -123,26 +123,26 @@ const AiEnergyFuture2025 = () => {
 
             <h2>Conclusion</h2>
             <p>
-              AI is not just transforming the energy sector; it's enabling a fundamental shift toward a more sustainable, efficient, and resilient energy future. As we progress through 2025, the integration of AI into energy systems is accelerating the transition to renewable energy, reducing carbon emissions, and empowering consumers. While challenges remain, the potential benefits—from combating climate change to creating more equitable access to clean energy—are immense. The energy revolution powered by AI is well underway, and it's lighting the way to a cleaner, smarter future for all.
+              AI is not just transforming the energy sector; it&apos;s enabling a fundamental shift toward a more sustainable, efficient, and resilient energy future. As we progress through 2025, the integration of AI into energy systems is accelerating the transition to renewable energy, reducing carbon emissions, and empowering consumers. While challenges remain, the potential benefits—from combating climate change to creating more equitable access to clean energy—are immense. The energy revolution powered by AI is well underway, and it&apos;s lighting the way to a cleaner, smarter future for all.
             </p>
           </div>
         </div>
       </main>
 
-      <footer className="bg-white border-t border-gray-200 mt-12">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-base text-gray-500">
+      <footer className="bg-white border-t border-gray-200 mt-12&quot;>
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8&quot;>
+          <div className="text-center&quot;>
+            <p className="text-base text-gray-500&quot;>
               &copy; 2025 AI Vault. All rights reserved.
             </p>
-            <div className="mt-4">
-              <Link href="/privacy" className="text-gray-600 hover:text-gray-900 mx-4">
+            <div className="mt-4&quot;>
+              <Link href="/privacy&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-600 hover:text-gray-900 mx-4">
+              <Link href="/terms&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Terms of Service
               </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-gray-900 mx-4">
+              <Link href="/contact&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Contact Us
               </Link>
             </div>

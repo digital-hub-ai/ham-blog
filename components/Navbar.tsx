@@ -1,9 +1,9 @@
-"use client";
+&quot;use client&quot;;
 
-import Link from 'next/link';
-import React, { useEffect, useState, useRef } from 'react';
-import { useRouter } from 'next/router';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from &apos;next/link&apos;;
+import React, { useEffect, useState, useRef } from &apos;react&apos;;
+import { useRouter } from &apos;next/router&apos;;
+import { FontAwesomeIcon } from &apos;@fortawesome/react-fontawesome&apos;;
 import { 
   faBars, 
   faMoon, 
@@ -11,8 +11,8 @@ import {
   faSpinner,
   faSun, 
   faTimes 
-} from '@fortawesome/free-solid-svg-icons';
-import { useAuth } from '../contexts/MockAuthContext';
+} from &apos;@fortawesome/free-solid-svg-icons&apos;;
+import { useAuth } from &apos;../contexts/MockAuthContext&apos;;
 
 // Define the SearchSuggestion interface
 interface SearchSuggestion {
@@ -30,10 +30,10 @@ interface SearchSuggestion {
 export default function Navbar() {
   const router = useRouter();
   const { isAuthenticated, logout } = useAuth();
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(&apos;&apos;);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>(&apos;light&apos;);
   const [isSearching, setIsSearching] = useState(false);
   const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -94,7 +94,7 @@ export default function Navbar() {
         setShowSuggestions(false);
       }
     } catch (error) {
-      console.error('Error fetching search suggestions:', error);
+      console.error(&apos;Error fetching search suggestions:&apos;, error);
       setSearchSuggestions([]);
       setShowSuggestions(false);
     }
@@ -193,43 +193,43 @@ export default function Navbar() {
 
   return (
     <div className={`sticky top-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-white/90 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 shadow-sm' : 'bg-white dark:bg-gray-900'}`}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+        <div className="flex items-center justify-between h-16&quot;>
           {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-extrabold tracking-tight">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Ham Blog</span>
+          <div className="flex items-center&quot;>
+            <Link href="/&quot; className="text-xl font-extrabold tracking-tight&quot;>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent&quot;>Ham Blog</span>
             </Link>
           </div>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Home</Link>
-            <Link href="/compare" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Compare</Link>
-            <Link href="/blog" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Blog</Link>
-            <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">About</Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Contact</Link>
+          <div className="hidden md:flex items-center space-x-6&quot;>
+            <Link href="/&quot; className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400&quot;>Home</Link>
+            <Link href="/compare&quot; className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400&quot;>Compare</Link>
+            <Link href="/blog&quot; className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400&quot;>Blog</Link>
+            <Link href="/about&quot; className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400&quot;>About</Link>
+            <Link href="/contact&quot; className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400&quot;>Contact</Link>
           </div>
 
           {/* Right actions */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3&quot;>
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
-              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-              title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800&quot;
+              aria-label={`Switch to ${theme === &apos;light&apos; ? &apos;dark&apos; : &apos;light&apos;} mode`}
+              title={`Switch to ${theme === &apos;light&apos; ? &apos;dark&apos; : &apos;light&apos;} mode`}
             >
               <FontAwesomeIcon 
-                icon={theme === 'dark' ? faSun : faMoon} 
-                className="w-5 h-5" 
+                icon={theme === &apos;dark ? faSun : faMoon} 
+                className="w-5 h-5&quot; 
                 fixedWidth 
               />
             </button>
 
             {!isAuthenticated && (
-              <div className="hidden md:flex items-center space-x-2">
-                <Link href="/login" className="px-3 py-1.5 text-sm text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Login</Link>
-                <Link href="/signup" className="px-3 py-1.5 text-sm rounded-md bg-blue-600 text-white hover:bg-blue-700">Sign Up</Link>
+              <div className="hidden md:flex items-center space-x-2&quot;>
+                <Link href="/login&quot; className="px-3 py-1.5 text-sm text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400&quot;>Login</Link>
+                <Link href="/signup&quot; className="px-3 py-1.5 text-sm rounded-md bg-blue-600 text-white hover:bg-blue-700&quot;>Sign Up</Link>
               </div>
             )}
           </div>
@@ -237,17 +237,17 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile navigation - Always visible */}
-      <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-        <div className="px-4 py-2 flex overflow-x-auto space-x-4 hide-scrollbar">
-          <Link href="/" className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap">Home</Link>
-          <Link href="/compare" className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap">Compare</Link>
-          <Link href="/blog" className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap">Blog</Link>
-          <Link href="/about" className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap">About</Link>
-          <Link href="/contact" className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap">Contact</Link>
+      <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800&quot;>
+        <div className="px-4 py-2 flex overflow-x-auto space-x-4 hide-scrollbar&quot;>
+          <Link href="/&quot; className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap&quot;>Home</Link>
+          <Link href="/compare&quot; className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap&quot;>Compare</Link>
+          <Link href="/blog&quot; className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap&quot;>Blog</Link>
+          <Link href="/about&quot; className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap&quot;>About</Link>
+          <Link href="/contact&quot; className="flex-shrink-0 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap&quot;>Contact</Link>
           {!isAuthenticated && (
             <>
-              <Link href="/login" className="flex-shrink-0 py-2 text-sm text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap">Login</Link>
-              <Link href="/signup" className="flex-shrink-0 py-2 text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 whitespace-nowrap">Sign Up</Link>
+              <Link href="/login&quot; className="flex-shrink-0 py-2 text-sm text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 whitespace-nowrap&quot;>Login</Link>
+              <Link href="/signup&quot; className="flex-shrink-0 py-2 text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 whitespace-nowrap&quot;>Sign Up</Link>
             </>
           )}
         </div>

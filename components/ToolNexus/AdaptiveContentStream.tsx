@@ -237,22 +237,22 @@ const IntelligentSectionNavigator: React.FC<{
   const getCompletionColor = (completion: number) => {
     if (completion >= 80) return 'bg-green-500';
     if (completion >= 50) return 'bg-yellow-500';
-    if (completion >= 20) return 'bg-blue-500';
-    return 'bg-gray-500';
+    if (completion >= 20) return &apos;bg-blue-500&apos;;
+    return &apos;bg-gray-500&apos;;
   };
 
   return (
-    <div className="w-80 bg-white/5 backdrop-blur-sm border-r border-white/10 p-6">
-      <h3 className="text-lg font-semibold text-white mb-6">Intelligent Navigator</h3>
+    <div className="w-80 bg-white/5 backdrop-blur-sm border-r border-white/10 p-6&quot;>
+      <h3 className="text-lg font-semibold text-white mb-6&quot;>Intelligent Navigator</h3>
       
-      <div className="space-y-2">
+      <div className="space-y-2&quot;>
         {sections.map((section) => {
           const completion = completionStatus[section.id] || 0;
           const isActive = activeSection === section.id;
           const isExpanded = expandedSections.includes(section.id);
           
           return (
-            <div key={section.id} className="border border-white/10 rounded-lg overflow-hidden">
+            <div key={section.id} className="border border-white/10 rounded-lg overflow-hidden&quot;>
               <button
                 onClick={() => {
                   onSectionChange(section.id);
@@ -262,23 +262,23 @@ const IntelligentSectionNavigator: React.FC<{
                 }}
                 className={`w-full px-4 py-3 text-left transition-all duration-200 ${
                   isActive 
-                    ? 'bg-white/20 text-white' 
-                    : 'text-white/70 hover:bg-white/10 hover:text-white'
+                    ? &apos;bg-white/20 text-white&apos; 
+                    : &apos;text-white/70 hover:bg-white/10 hover:text-white
                 }`}
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">{section.icon}</span>
-                  <div className="flex-1">
-                    <div className="font-medium">{getSectionLabel(section)}</div>
-                    <div className="text-xs text-white/50">
+                <div className="flex items-center gap-3&quot;>
+                  <span className="text-xl&quot;>{section.icon}</span>
+                  <div className="flex-1&quot;>
+                    <div className="font-medium&quot;>{getSectionLabel(section)}</div>
+                    <div className="text-xs text-white/50&quot;>
                       {section.estimated_time} min • Priority: {section.priority}/10
                     </div>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2&quot;>
                     {completion > 0 && (
                       <div className={`w-2 h-2 rounded-full ${getCompletionColor(completion)}`} />
                     )}
-                    <div className="text-xs text-white/50">
+                    <div className="text-xs text-white/50&quot;>
                       {completion}%
                     </div>
                   </div>
@@ -286,10 +286,10 @@ const IntelligentSectionNavigator: React.FC<{
               </button>
               
               {isExpanded && (
-                <div className="px-4 py-3 bg-black/20 border-t border-white/10">
-                  <p className="text-sm text-white/60 mb-2">{section.description}</p>
+                <div className="px-4 py-3 bg-black/20 border-t border-white/10&quot;>
+                  <p className="text-sm text-white/60 mb-2&quot;>{section.description}</p>
                   {completion > 0 && (
-                    <div className="w-full bg-white/10 rounded-full h-2">
+                    <div className="w-full bg-white/10 rounded-full h-2&quot;>
                       <div 
                         className={`h-2 rounded-full transition-all duration-300 ${getCompletionColor(completion)}`}
                         style={{ width: `${completion}%` }}
@@ -304,11 +304,11 @@ const IntelligentSectionNavigator: React.FC<{
       </div>
       
       {/* Persona Indicator */}
-      <div className="mt-8 p-4 bg-white/5 rounded-lg border border-white/10">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="text-sm font-medium text-white/70">Your Profile:</span>
+      <div className="mt-8 p-4 bg-white/5 rounded-lg border border-white/10&quot;>
+        <div className="flex items-center gap-2 mb-2&quot;>
+          <span className="text-sm font-medium text-white/70&quot;>Your Profile:</span>
         </div>
-        <div className="text-xs text-white/50 space-y-1">
+        <div className="text-xs text-white/50 space-y-1&quot;>
           <div>• {userPersona.primary_persona}</div>
           <div>• {userPersona.company_size} company</div>
           <div>• Expertise: {userPersona.expertise_level}</div>
@@ -329,28 +329,28 @@ const LivingDocumentation: React.FC<{
 
   const renderActiveSection = () => {
     switch (activeSection) {
-      case 'feature_explorer':
+      case &apos;feature_explorer&apos;:
         return <FeatureExplorer tool={tool} userPersona={userPersona} onComplete={(completion) => {
           setSectionProgress(prev => ({ ...prev, [activeSection]: completion }));
           onSectionComplete(activeSection, completion);
         }} />;
-      case 'pricing_intelligence':
+      case &apos;pricing_intelligence&apos;:
         return <PricingIntelligence engine={tool.intelligence_modules.pricing_engine} userPersona={userPersona} />;
-      case 'implementation_simulator':
+      case &apos;implementation_simulator&apos;:
         return <ImplementationSimulator simulator={tool.intelligence_modules.implementation_simulator} userPersona={userPersona} />;
-      case 'community_consciousness':
+      case &apos;community_consciousness&apos;:
         return <CommunityConsciousness consciousness={tool.intelligence_modules.community_consciousness} userPersona={userPersona} />;
-      case 'adoption_radar':
+      case &apos;adoption_radar&apos;:
         return <AdoptionRadar radar={tool.intelligence_modules.adoption_radar} />;
-      case 'review_intelligence':
+      case &apos;review_intelligence&apos;:
         return <ReviewIntelligence reviews={tool.intelligence_modules.review_intelligence} userPersona={userPersona} />;
-      case 'comparison_portal':
+      case &apos;comparison_portal&apos;:
         return <ComparisonPortal tool={tool} userPersona={userPersona} />;
-      case 'api_playground':
+      case &apos;api_playground&apos;:
         return <APIPlayground tool={tool} userPersona={userPersona} />;
-      case 'template_gallery':
+      case &apos;template_gallery&apos;:
         return <TemplateGallery tool={tool} userPersona={userPersona} />;
-      case 'roadmap_explorer':
+      case &apos;roadmap_explorer&apos;:
         return <RoadmapExplorer tool={tool} />;
       default:
         return <FeatureExplorer tool={tool} userPersona={userPersona} onComplete={(completion) => {
@@ -361,7 +361,7 @@ const LivingDocumentation: React.FC<{
   };
 
   return (
-    <div className="flex-1 p-8 overflow-y-auto">
+    <div className="flex-1 p-8 overflow-y-auto&quot;>
       {renderActiveSection()}
     </div>
   );
@@ -377,10 +377,10 @@ const FeatureExplorer: React.FC<{
   const [progress, setProgress] = useState(0);
 
   const features = [
-    { name: 'AI-Powered Analysis', description: 'Advanced machine learning algorithms', demo: 'ai_demo' },
-    { name: 'Real-time Collaboration', description: 'Work together with your team instantly', demo: 'collab_demo' },
-    { name: 'Advanced Analytics', description: 'Deep insights and reporting', demo: 'analytics_demo' },
-    { name: 'Custom Workflows', description: 'Tailor the tool to your needs', demo: 'workflow_demo' }
+    { name: &apos;AI-Powered Analysis&apos;, description: &apos;Advanced machine learning algorithms&apos;, demo: &apos;ai_demo&apos; },
+    { name: &apos;Real-time Collaboration&apos;, description: &apos;Work together with your team instantly&apos;, demo: &apos;collab_demo&apos; },
+    { name: &apos;Advanced Analytics&apos;, description: &apos;Deep insights and reporting&apos;, demo: &apos;analytics_demo&apos; },
+    { name: &apos;Custom Workflows&apos;, description: &apos;Tailor the tool to your needs&apos;, demo: &apos;workflow_demo }
   ];
 
   useEffect(() => {
@@ -390,42 +390,42 @@ const FeatureExplorer: React.FC<{
   }, [activeFeature, features.length, onComplete]);
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Interactive Feature Explorer</h2>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Interactive Feature Explorer</h2>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="space-y-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
+        <div className="space-y-4&quot;>
           {features.map((feature, index) => (
             <button
               key={index}
               onClick={() => setActiveFeature(index)}
               className={`w-full p-4 rounded-lg border transition-all duration-200 text-left ${
                 activeFeature === index
-                  ? 'bg-white/20 border-white/30 text-white'
-                  : 'bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white'
+                  ? &apos;bg-white/20 border-white/30 text-white&apos;
+                  : &apos;bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white
               }`}
             >
-              <h3 className="font-semibold mb-1">{feature.name}</h3>
-              <p className="text-sm text-white/60">{feature.description}</p>
+              <h3 className="font-semibold mb-1&quot;>{feature.name}</h3>
+              <p className="text-sm text-white/60&quot;>{feature.description}</p>
             </button>
           ))}
         </div>
         
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-          <div className="aspect-video bg-black/30 rounded-lg flex items-center justify-center mb-4">
-            <div className="text-center text-white/50">
-              <div className="text-4xl mb-2">🎬</div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+          <div className="aspect-video bg-black/30 rounded-lg flex items-center justify-center mb-4&quot;>
+            <div className="text-center text-white/50&quot;>
+              <div className="text-4xl mb-2&quot;>🎬</div>
               <div>Interactive Demo: {features[activeFeature].name}</div>
             </div>
           </div>
           
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-white/70">Progress</span>
-            <span className="text-sm text-white">{Math.round(progress)}%</span>
+          <div className="flex items-center justify-between mb-4&quot;>
+            <span className="text-sm text-white/70&quot;>Progress</span>
+            <span className="text-sm text-white&quot;>{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-white/10 rounded-full h-2">
+          <div className="w-full bg-white/10 rounded-full h-2&quot;>
             <div 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300&quot;
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -440,10 +440,10 @@ const PricingIntelligence: React.FC<{
   userPersona: UserPersona;
 }> = ({ engine, userPersona }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Pricing Intelligence Engine</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Pricing analysis coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Pricing Intelligence Engine</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Pricing analysis coming soon...</div>
       </div>
     </div>
   );
@@ -454,10 +454,10 @@ const ImplementationSimulator: React.FC<{
   userPersona: UserPersona;
 }> = ({ simulator, userPersona }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Implementation Simulator</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Implementation simulator coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Implementation Simulator</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Implementation simulator coming soon...</div>
       </div>
     </div>
   );
@@ -468,10 +468,10 @@ const CommunityConsciousness: React.FC<{
   userPersona: UserPersona;
 }> = ({ consciousness, userPersona }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Community Consciousness</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Community insights coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Community Consciousness</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Community insights coming soon...</div>
       </div>
     </div>
   );
@@ -479,10 +479,10 @@ const CommunityConsciousness: React.FC<{
 
 const AdoptionRadar: React.FC<{ radar: any }> = ({ radar }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Adoption Radar</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Market analysis coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Adoption Radar</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Market analysis coming soon...</div>
       </div>
     </div>
   );
@@ -493,10 +493,10 @@ const ReviewIntelligence: React.FC<{
   userPersona: UserPersona;
 }> = ({ reviews, userPersona }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Review Intelligence</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Review analysis coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Review Intelligence</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Review analysis coming soon...</div>
       </div>
     </div>
   );
@@ -507,10 +507,10 @@ const ComparisonPortal: React.FC<{
   userPersona: UserPersona;
 }> = ({ tool, userPersona }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Comparison Portal</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Comparison tools coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Comparison Portal</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Comparison tools coming soon...</div>
       </div>
     </div>
   );
@@ -521,10 +521,10 @@ const APIPlayground: React.FC<{
   userPersona: UserPersona;
 }> = ({ tool, userPersona }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">API Playground</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">API playground coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>API Playground</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>API playground coming soon...</div>
       </div>
     </div>
   );
@@ -535,10 +535,10 @@ const TemplateGallery: React.FC<{
   userPersona: UserPersona;
 }> = ({ tool, userPersona }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Template Gallery</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Template gallery coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Template Gallery</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Template gallery coming soon...</div>
       </div>
     </div>
   );
@@ -546,10 +546,10 @@ const TemplateGallery: React.FC<{
 
 const RoadmapExplorer: React.FC<{ tool: ToolNexus }> = ({ tool }) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-6">Roadmap Explorer</h2>
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-        <div className="text-white/70">Roadmap coming soon...</div>
+    <div className="max-w-4xl mx-auto&quot;>
+      <h2 className="text-2xl font-bold text-white mb-6&quot;>Roadmap Explorer</h2>
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+        <div className="text-white/70&quot;>Roadmap coming soon...</div>
       </div>
     </div>
   );
@@ -560,7 +560,7 @@ export const AdaptiveContentStream: React.FC<AdaptiveContentStreamProps> = ({
   userPersona,
   onSectionComplete
 }) => {
-  const [activeSection, setActiveSection] = useState('feature_explorer');
+  const [activeSection, setActiveSection] = useState(&apos;feature_explorer&apos;);
   const [completionStatus, setCompletionStatus] = useState<Record<string, number>>({});
 
   // Calculate content priorities based on persona
@@ -588,7 +588,7 @@ export const AdaptiveContentStream: React.FC<AdaptiveContentStreamProps> = ({
   };
 
   return (
-    <div className="flex flex-1 overflow-hidden bg-black/20">
+    <div className="flex flex-1 overflow-hidden bg-black/20&quot;>
       {/* Intelligent Section Navigator */}
       <IntelligentSectionNavigator
         sections={sections}

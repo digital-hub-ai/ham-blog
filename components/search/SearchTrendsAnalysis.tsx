@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from &apos;react&apos;;
 import { 
   faChartLine, 
   faFire, 
@@ -6,8 +6,8 @@ import {
   faArrowDown, 
   faMinus,
   faSearch
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from &apos;@fortawesome/free-solid-svg-icons&apos;;
+import { FontAwesomeIcon } from &apos;@fortawesome/react-fontawesome&apos;;
 
 interface SearchTrend {
   term: string;
@@ -71,8 +71,8 @@ export default function SearchTrendsAnalysis() {
         await new Promise(resolve => setTimeout(resolve, 800));
         setTrends(mockData);
       } catch (err) {
-        setError('Failed to fetch search trends data');
-        console.error('Trends fetch error:', err);
+        setError(&apos;Failed to fetch search trends data&apos;);
+        console.error(&apos;Trends fetch error:&apos;, err);
       } finally {
         setLoading(false);
       }
@@ -83,20 +83,20 @@ export default function SearchTrendsAnalysis() {
 
   if (loading) {
     return (
-      <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-        <div className="animate-pulse">
-          <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded w-1/3 mb-4"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div className="h-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
-            <div className="h-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
-            <div className="h-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
+      <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow&quot;>
+        <div className="animate-pulse&quot;>
+          <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded w-1/3 mb-4&quot;></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6&quot;>
+            <div className="h-20 bg-gray-200 dark:bg-gray-700 rounded&quot;></div>
+            <div className="h-20 bg-gray-200 dark:bg-gray-700 rounded&quot;></div>
+            <div className="h-20 bg-gray-200 dark:bg-gray-700 rounded&quot;></div>
           </div>
-          <div className="space-y-4">
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/4"></div>
-            <div className="space-y-2">
-              <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded"></div>
-              <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded"></div>
-              <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded"></div>
+          <div className="space-y-4&quot;>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/4&quot;></div>
+            <div className="space-y-2&quot;>
+              <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded&quot;></div>
+              <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded&quot;></div>
+              <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded&quot;></div>
             </div>
           </div>
         </div>
@@ -106,8 +106,8 @@ export default function SearchTrendsAnalysis() {
 
   if (error) {
     return (
-      <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-        <div className="text-red-500 dark:text-red-400">
+      <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow&quot;>
+        <div className="text-red-500 dark:text-red-400&quot;>
           Error: {error}
         </div>
       </div>
@@ -116,8 +116,8 @@ export default function SearchTrendsAnalysis() {
 
   if (!trends) {
     return (
-      <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-        <div className="text-gray-500 dark:text-gray-400">
+      <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow&quot;>
+        <div className="text-gray-500 dark:text-gray-400&quot;>
           No trends data available
         </div>
       </div>
@@ -125,74 +125,74 @@ export default function SearchTrendsAnalysis() {
   }
 
   const getChangeIcon = (change: number) => {
-    if (change > 10) return <FontAwesomeIcon icon={faArrowUp} className="text-green-500" />;
-    if (change < -10) return <FontAwesomeIcon icon={faArrowDown} className="text-red-500" />;
-    return <FontAwesomeIcon icon={faMinus} className="text-gray-500" />;
+    if (change > 10) return <FontAwesomeIcon icon={faArrowUp} className="text-green-500&quot; />;
+    if (change < -10) return <FontAwesomeIcon icon={faArrowDown} className="text-red-500&quot; />;
+    return <FontAwesomeIcon icon={faMinus} className="text-gray-500&quot; />;
   };
 
   const getChangeColor = (change: number) => {
-    if (change > 10) return 'text-green-600 dark:text-green-400';
-    if (change < -10) return 'text-red-600 dark:text-red-400';
-    return 'text-gray-600 dark:text-gray-400';
+    if (change > 10) return &apos;text-green-600 dark:text-green-400&apos;;
+    if (change < -10) return &apos;text-red-600 dark:text-red-400&apos;;
+    return &apos;text-gray-600 dark:text-gray-400&apos;;
   };
 
   return (
-    <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Search Trends Analysis</h2>
-        <div className="flex space-x-2">
+    <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow&quot;>
+      <div className="flex justify-between items-center mb-6&quot;>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white&quot;>Search Trends Analysis</h2>
+        <div className="flex space-x-2&quot;>
           <button
-            onClick={() => setTimeRange('24h')}
-            className={`px-3 py-1 text-sm rounded ${timeRange === '24h' ? 'bg-blue-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+            onClick={() => setTimeRange(&apos;24h&apos;)}
+            className={`px-3 py-1 text-sm rounded ${timeRange === &apos;24h&apos; ? &apos;bg-blue-500 text-white&apos; : &apos;bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300&apos;}`}
           >
             24h
           </button>
           <button
-            onClick={() => setTimeRange('7d')}
-            className={`px-3 py-1 text-sm rounded ${timeRange === '7d' ? 'bg-blue-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+            onClick={() => setTimeRange(&apos;7d&apos;)}
+            className={`px-3 py-1 text-sm rounded ${timeRange === &apos;7d&apos; ? &apos;bg-blue-500 text-white&apos; : &apos;bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300&apos;}`}
           >
             7d
           </button>
           <button
-            onClick={() => setTimeRange('30d')}
-            className={`px-3 py-1 text-sm rounded ${timeRange === '30d' ? 'bg-blue-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+            onClick={() => setTimeRange(&apos;30d&apos;)}
+            className={`px-3 py-1 text-sm rounded ${timeRange === &apos;30d&apos; ? &apos;bg-blue-500 text-white&apos; : &apos;bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300}`}
           >
             30d
           </button>
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-          <div className="flex items-center">
-            <FontAwesomeIcon icon={faSearch} className="text-blue-500 dark:text-blue-400 text-xl mr-3" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg&quot;>
+          <div className="flex items-center&quot;>
+            <FontAwesomeIcon icon={faSearch} className="text-blue-500 dark:text-blue-400 text-xl mr-3&quot; />
             <div>
-              <div className="text-sm font-medium text-blue-800 dark:text-blue-200">Total Searches</div>
-              <div className="text-2xl font-bold text-blue-900 dark:text-blue-100 mt-1">
+              <div className="text-sm font-medium text-blue-800 dark:text-blue-200&quot;>Total Searches</div>
+              <div className="text-2xl font-bold text-blue-900 dark:text-blue-100 mt-1&quot;>
                 {trends.totalSearches.toLocaleString()}
               </div>
             </div>
           </div>
         </div>
         
-        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-          <div className="flex items-center">
-            <FontAwesomeIcon icon={faFire} className="text-green-500 dark:text-green-400 text-xl mr-3" />
+        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg&quot;>
+          <div className="flex items-center&quot;>
+            <FontAwesomeIcon icon={faFire} className="text-green-500 dark:text-green-400 text-xl mr-3&quot; />
             <div>
-              <div className="text-sm font-medium text-green-800 dark:text-green-200">Trending Terms</div>
-              <div className="text-2xl font-bold text-green-900 dark:text-green-100 mt-1">
+              <div className="text-sm font-medium text-green-800 dark:text-green-200&quot;>Trending Terms</div>
+              <div className="text-2xl font-bold text-green-900 dark:text-green-100 mt-1&quot;>
                 {trends.trendingTerms.length}
               </div>
             </div>
           </div>
         </div>
         
-        <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
-          <div className="flex items-center">
-            <FontAwesomeIcon icon={faChartLine} className="text-purple-500 dark:text-purple-400 text-xl mr-3" />
+        <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg&quot;>
+          <div className="flex items-center&quot;>
+            <FontAwesomeIcon icon={faChartLine} className="text-purple-500 dark:text-purple-400 text-xl mr-3&quot; />
             <div>
-              <div className="text-sm font-medium text-purple-800 dark:text-purple-200">Categories</div>
-              <div className="text-2xl font-bold text-purple-900 dark:text-purple-100 mt-1">
+              <div className="text-sm font-medium text-purple-800 dark:text-purple-200&quot;>Categories</div>
+              <div className="text-2xl font-bold text-purple-900 dark:text-purple-100 mt-1&quot;>
                 {trends.categories.length}
               </div>
             </div>
@@ -200,22 +200,22 @@ export default function SearchTrendsAnalysis() {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
         {/* Trending Terms */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-            <FontAwesomeIcon icon={faFire} className="text-orange-500 mr-2" />
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center&quot;>
+            <FontAwesomeIcon icon={faFire} className="text-orange-500 mr-2&quot; />
             Trending Search Terms
           </h3>
-          <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg overflow-hidden">
+          <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg overflow-hidden&quot;>
             {trends.trendingTerms.map((term, index) => (
-              <div key={index} className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-600 last:border-0">
+              <div key={index} className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-600 last:border-0&quot;>
                 <div>
-                  <div className="font-medium text-gray-900 dark:text-white">{term.term}</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                  <div className="font-medium text-gray-900 dark:text-white&quot;>{term.term}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400&quot;>
                     {term.count.toLocaleString()} searches
                     {term.category && (
-                      <span className="ml-2 px-2 py-0.5 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full">
+                      <span className="ml-2 px-2 py-0.5 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full&quot;>
                         {term.category}
                       </span>
                     )}
@@ -223,7 +223,7 @@ export default function SearchTrendsAnalysis() {
                 </div>
                 <div className={`flex items-center ${getChangeColor(term.change)}`}>
                   {getChangeIcon(term.change)}
-                  <span className="ml-1 font-medium">{Math.abs(term.change).toFixed(1)}%</span>
+                  <span className="ml-1 font-medium&quot;>{Math.abs(term.change).toFixed(1)}%</span>
                 </div>
               </div>
             ))}
@@ -232,19 +232,19 @@ export default function SearchTrendsAnalysis() {
         
         {/* Declining Terms */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-            <FontAwesomeIcon icon={faArrowDown} className="text-red-500 mr-2" />
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center&quot;>
+            <FontAwesomeIcon icon={faArrowDown} className="text-red-500 mr-2&quot; />
             Declining Search Terms
           </h3>
-          <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg overflow-hidden">
+          <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg overflow-hidden&quot;>
             {trends.decliningTerms.map((term, index) => (
-              <div key={index} className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-600 last:border-0">
+              <div key={index} className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-600 last:border-0&quot;>
                 <div>
-                  <div className="font-medium text-gray-900 dark:text-white">{term.term}</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                  <div className="font-medium text-gray-900 dark:text-white&quot;>{term.term}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400&quot;>
                     {term.count.toLocaleString()} searches
                     {term.category && (
-                      <span className="ml-2 px-2 py-0.5 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full">
+                      <span className="ml-2 px-2 py-0.5 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full&quot;>
                         {term.category}
                       </span>
                     )}
@@ -252,7 +252,7 @@ export default function SearchTrendsAnalysis() {
                 </div>
                 <div className={`flex items-center ${getChangeColor(term.change)}`}>
                   {getChangeIcon(term.change)}
-                  <span className="ml-1 font-medium">{Math.abs(term.change).toFixed(1)}%</span>
+                  <span className="ml-1 font-medium&quot;>{Math.abs(term.change).toFixed(1)}%</span>
                 </div>
               </div>
             ))}
@@ -261,16 +261,16 @@ export default function SearchTrendsAnalysis() {
       </div>
       
       {/* Category Distribution */}
-      <div className="mt-8">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Search Distribution by Category</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="mt-8&quot;>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4&quot;>Search Distribution by Category</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4&quot;>
           {trends.categories.map((category, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg">
-              <div className="text-sm font-medium text-gray-900 dark:text-white">{category.name}</div>
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mt-1">
+            <div key={index} className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg&quot;>
+              <div className="text-sm font-medium text-gray-900 dark:text-white&quot;>{category.name}</div>
+              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mt-1&quot;>
                 {category.count.toLocaleString()}
               </div>
-              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1&quot;>
                 {((category.count / trends.totalSearches) * 100).toFixed(1)}% of total
               </div>
             </div>

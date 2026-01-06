@@ -60,30 +60,30 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme(&apos;colors.gray.700&apos;),
             a: {
-              color: theme('colors.primary.600'),
-              '&:hover': {
-                color: theme('colors.primary.700'),
+              color: theme(&apos;colors.primary.600&apos;),
+              &apos;&:hover&apos;: {
+                color: theme(&apos;colors.primary.700&apos;),
               },
             },
-            'h1, h2, h3, h4, h5, h6': {
-              color: theme('colors.gray.900'),
-              fontWeight: '700',
+            &apos;h1, h2, h3, h4, h5, h6&apos;: {
+              color: theme(&apos;colors.gray.900&apos;),
+              fontWeight: &apos;700&apos;,
             },
             code: {
-              backgroundColor: theme('colors.gray.100'),
-              color: theme('colors.pink.600'),
-              padding: '0.2em 0.4em',
-              borderRadius: '0.25rem',
-              fontSize: '0.875em',
+              backgroundColor: theme(&apos;colors.gray.100&apos;),
+              color: theme(&apos;colors.pink.600&apos;),
+              padding: &apos;0.2em 0.4em&apos;,
+              borderRadius: &apos;0.25rem&apos;,
+              fontSize: &apos;0.875em&apos;,
             },
-            'code::before, code::after': {
-              content: 'none',
+            &apos;code::before, code::after&apos;: {
+              content: &apos;none&apos;,
             },
-            'pre code': {
-              backgroundColor: 'transparent',
-              color: 'inherit',
+            &apos;pre code&apos;: {
+              backgroundColor: &apos;transparent&apos;,
+              color: &apos;inherit&apos;,
               padding: 0,
               borderRadius: 0,
             },
@@ -91,19 +91,19 @@ module.exports = {
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            color: theme(&apos;colors.gray.300&apos;),
             a: {
-              color: theme('colors.primary.400'),
-              '&:hover': {
-                color: theme('colors.primary.300'),
+              color: theme(&apos;colors.primary.400&apos;),
+              &apos;&:hover&apos;: {
+                color: theme(&apos;colors.primary.300&apos;),
               },
             },
-            'h1, h2, h3, h4, h5, h6': {
-              color: theme('colors.white'),
+            &apos;h1, h2, h3, h4, h5, h6&apos;: {
+              color: theme(&apos;colors.white&apos;),
             },
             code: {
-              backgroundColor: theme('colors.gray.800'),
-              color: theme('colors.pink.400'),
+              backgroundColor: theme(&apos;colors.gray.800&apos;),
+              color: theme(&apos;colors.pink.400&apos;),
             },
           },
         },
@@ -111,6 +111,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    require(&apos;@tailwindcss/typography&apos;),
   ],
 }

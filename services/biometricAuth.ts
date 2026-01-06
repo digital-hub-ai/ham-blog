@@ -4,31 +4,31 @@
 
 // Biometric authentication types
 export type BiometricType = 
-  | 'fingerprint'        // Fingerprint recognition
-  | 'face'               // Face recognition
-  | 'iris'               // Iris recognition
-  | 'retina'             // Retina recognition
-  | 'voice'              // Voice recognition
-  | 'palm'               // Palm print recognition
-  | 'vein'               // Vein pattern recognition
-  | 'dna'                // DNA-based authentication
-  | 'behavioral'         // Behavioral biometrics
-  | 'multi-modal';       // Multi-modal biometric fusion
+  | &apos;fingerprint&apos;        // Fingerprint recognition
+  | &apos;face&apos;               // Face recognition
+  | &apos;iris&apos;               // Iris recognition
+  | &apos;retina&apos;             // Retina recognition
+  | &apos;voice&apos;              // Voice recognition
+  | &apos;palm&apos;               // Palm print recognition
+  | &apos;vein&apos;               // Vein pattern recognition
+  | &apos;dna&apos;                // DNA-based authentication
+  | &apos;behavioral&apos;         // Behavioral biometrics
+  | &apos;multi-modal&apos;;       // Multi-modal biometric fusion
 
 // Biometric security levels
 export type SecurityLevel = 
-  | 'low'                // Low security (1 factor)
-  | 'medium'             // Medium security (2 factors)
-  | 'high'               // High security (3+ factors)
-  | 'very-high';         // Very high security (multi-modal)
+  | &apos;low&apos;                // Low security (1 factor)
+  | &apos;medium&apos;             // Medium security (2 factors)
+  | &apos;high&apos;               // High security (3+ factors)
+  | &apos;very-high&apos;;         // Very high security (multi-modal)
 
 // Biometric authentication status
 export type AuthStatus = 
-  | 'pending'            // Authentication pending
-  | 'authenticated'      // Successfully authenticated
-  | 'failed'             // Authentication failed
-  | 'timeout'            // Authentication timeout
-  | 'error';             // Authentication error
+  | &apos;pending&apos;            // Authentication pending
+  | &apos;authenticated&apos;      // Successfully authenticated
+  | &apos;failed&apos;             // Authentication failed
+  | &apos;timeout&apos;            // Authentication timeout
+  | &apos;error&apos;;             // Authentication error
 
 // Biometric template
 export interface BiometricTemplate {
@@ -112,7 +112,7 @@ export interface BiometricPolicy {
 export interface BiometricAuditLog {
   id: string;
   userId: string;
-  action: 'enroll' | 'authenticate' | 'verify' | 'delete';
+  action: &apos;enroll&apos; | &apos;authenticate&apos; | &apos;verify&apos; | &apos;delete&apos;;
   type: BiometricType;
   status: AuthStatus;
   confidence: number;
@@ -201,7 +201,7 @@ export class BiometricAuthService {
   async enrollBiometric(request: BiometricEnrollmentRequest): Promise<BiometricEnrollmentResult> {
     // Validate input data
     if (!request.userId || !request.type || !request.data) {
-      throw new Error('Invalid enrollment request: userId, type, and data are required');
+      throw new Error(&apos;Invalid enrollment request: userId, type, and data are required&apos;);
     }
     
     // Process biometric data (in real implementation, this would use biometric algorithms)
@@ -210,7 +210,7 @@ export class BiometricAuthService {
     // Check quality threshold
     if (processingResult.quality < request.qualityThreshold) {
       return {
-        templateId: '',
+        templateId: &apos;&apos;,
         userId: request.userId,
         type: request.type,
         success: false,
@@ -238,9 +238,9 @@ export class BiometricAuthService {
     // Log enrollment
     this.logAudit({
       userId: request.userId,
-      action: 'enroll',
+      action: &apos;enroll&apos;,
       type: request.type,
-      status: 'authenticated',
+      status: &apos;authenticated&apos;,
       confidence: processingResult.confidence,
       timestamp: Date.now()
     });
@@ -265,7 +265,7 @@ export class BiometricAuthService {
     confidence: number;
   } {
     // In a real implementation, this would use specialized biometric algorithms
-    // For simulation, we'll generate plausible results
+    // For simulation, we&apos;ll generate plausible results
     
     // Generate template (simplified)
     const template = this.simulationMode ? 
@@ -360,7 +360,7 @@ export class BiometricAuthService {
     return {
       requestId: request.id,
       userId: request.userId,
-      status: isAuthenticated ? 'authenticated' : 'failed',
+      status: isAuthenticated ? &apos;authenticated&apos; : &apos;failed&apos;,
       confidence,
       liveness,
       factors,
@@ -400,9 +400,9 @@ export class BiometricAuthService {
     // Log verification
     this.logAudit({
       userId,
-      action: 'verify',
+      action: &apos;verify&apos;,
       type,
-      status: verified ? 'authenticated' : 'failed',
+      status: verified ? &apos;authenticated&apos; : &apos;failed&apos;,
       confidence,
       timestamp: Date.now()
     });
@@ -468,9 +468,9 @@ export class BiometricAuthService {
       // Log deletion
       this.logAudit({
         userId: template.userId,
-        action: 'delete',
+        action: &apos;delete&apos;,
         type: template.type,
-        status: 'authenticated',
+        status: &apos;authenticated&apos;,
         confidence: 100,
         timestamp: Date.now()
       });
@@ -655,7 +655,7 @@ export class BiometricAuthService {
     // Failure analysis
     const failedAttempts = logs.filter(log => log.status === 'failed').length;
     const timeoutAttempts = logs.filter(log => log.status === 'timeout').length;
-    const errorAttempts = logs.filter(log => log.status === 'error').length;
+    const errorAttempts = logs.filter(log => log.status === &apos;error&apos;).length;
     
     const commonFailureTypes: Record<AuthStatus, number> = {
       'pending': 0,
@@ -690,7 +690,7 @@ export class BiometricAuthService {
     }
     
     if (errorAttempts / totalAuthentications > 0.02) {
-      recommendations.push('Error rate elevated - investigate system stability issues');
+      recommendations.push(&apos;Error rate elevated - investigate system stability issues&apos;);
     }
     
     return {

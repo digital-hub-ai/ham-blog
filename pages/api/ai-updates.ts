@@ -51,11 +51,11 @@ export default async function handler(
       updates: filteredUpdates
     });
   } catch (error) {
-    console.error('AI Updates API error:', error);
+    console.error(&apos;AI Updates API error:&apos;, error);
     return res.status(500).json({ 
       success: false,
-      message: 'Error fetching AI updates',
-      error: error instanceof Error ? error.message : 'Unknown error'
+      message: &apos;Error fetching AI updates&apos;,
+      error: error instanceof Error ? error.message : &apos;Unknown error&apos;
     });
   }
 }

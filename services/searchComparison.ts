@@ -2,18 +2,18 @@
  * Search result comparison service
  */
 
-import { SearchResult } from './searchService';
+import { SearchResult } from &apos;./searchService&apos;;
 
 // Comparison criteria
 export type ComparisonCriteria = 
-  | 'rating'
-  | 'price'
-  | 'features'
-  | 'reviews'
-  | 'popularity'
-  | 'performance'
-  | 'usability'
-  | 'support';
+  | &apos;rating&apos;
+  | &apos;price&apos;
+  | &apos;features&apos;
+  | &apos;reviews&apos;
+  | &apos;popularity&apos;
+  | &apos;performance&apos;
+  | &apos;usability&apos;
+  | &apos;support&apos;;
 
 // Comparison result
 export interface ComparisonResult {
@@ -28,10 +28,10 @@ export interface ComparisonResult {
 // Compare search results based on multiple criteria
 export function compareSearchResults(
   items: SearchResult[],
-  criteria: ComparisonCriteria[] = ['rating', 'price', 'features']
+  criteria: ComparisonCriteria[] = [&apos;rating&apos;, &apos;price&apos;, &apos;features&apos;]
 ): ComparisonResult {
   if (items.length < 2) {
-    throw new Error('At least 2 items are required for comparison');
+    throw new Error(&apos;At least 2 items are required for comparison&apos;);
   }
 
   // Initialize scores
@@ -72,34 +72,34 @@ export function compareSearchResults(
 // Calculate score for a specific criterion
 function calculateCriterionScore(item: SearchResult, criterion: ComparisonCriteria): number {
   switch (criterion) {
-    case 'rating':
+    case &apos;rating&apos;:
       return Math.min(1, (item.rating || 0) / 5);
       
-    case 'price':
-      // Lower price is better (assuming we're comparing value)
+    case &apos;price&apos;:
+      // Lower price is better (assuming we&apos;re comparing value)
       // Normalize based on typical price ranges
       if (item.pricing) {
         // Fix: Check if pricing is a string before calling match
-        if (typeof item.pricing === 'string') {
+        if (typeof item.pricing === &apos;string&apos;) {
           const priceMatch = item.pricing.match(/\$([\d.]+)/);
           if (priceMatch) {
             const price = parseFloat(priceMatch[1]);
             // Assume $100 is high, $0 is low
             return Math.max(0, 1 - (price / 100));
           }
-        } else if (typeof item.pricing === 'object' && item.pricing !== null) {
+        } else if (typeof item.pricing === &apos;object&apos; && item.pricing !== null) {
           // Handle object pricing (e.g., { free: true, paid: false })
           if (item.pricing.free && !item.pricing.paid) {
             return 1; // Free is best value
           } else if (item.pricing.paid) {
-            // For paid plans, we don't have a specific price, so return neutral
+            // For paid plans, we don&apos;t have a specific price, so return neutral
             return 0.5;
           }
         }
       }
       return 0.5; // Neutral score if no price info
       
-    case 'features':
+    case &apos;features&apos;:
       // More features is better
       if (item.features && Array.isArray(item.features)) {
         // Assume 20 features is a lot, 0 is few
@@ -107,7 +107,7 @@ function calculateCriterionScore(item: SearchResult, criterion: ComparisonCriter
       }
       return 0.3; // Low score if no features info
       
-    case 'reviews':
+    case &apos;reviews&apos;:
       // More reviews indicates popularity
       if (item.reviews) {
         // Assume 1000 reviews is a lot, 0 is few
@@ -115,21 +115,21 @@ function calculateCriterionScore(item: SearchResult, criterion: ComparisonCriter
       }
       return 0.2; // Low score if no reviews info
       
-    case 'popularity':
+    case &apos;popularity&apos;:
       // Use a combination of reviews and rating as proxy for popularity
       const ratingScore = Math.min(1, (item.rating || 0) / 5);
       const reviewsScore = item.reviews ? Math.min(1, item.reviews / 1000) : 0;
       return (ratingScore + reviewsScore) / 2;
       
-    case 'performance':
+    case &apos;performance&apos;:
       // Use rating as proxy for performance
       return Math.min(1, (item.rating || 0) / 5);
       
-    case 'usability':
+    case &apos;usability&apos;:
       // Use rating as proxy for usability
       return Math.min(1, (item.rating || 0) / 5);
       
-    case 'support':
+    case &apos;support&apos;:
       // Assume tools with websites and documentation have better support
       let supportScore = 0;
       if (item.url) supportScore += 0.3;
@@ -157,7 +157,7 @@ function generateRecommendations(
   ));
   
   if (bestItem) {
-    recommendations.push(`"${bestItem.title}" is the overall best choice based on your criteria.`);
+    recommendations.push(`&quot;${bestItem.title}&quot; is the overall best choice based on your criteria.`);
   }
   
   // Find items that excel in specific criteria
@@ -167,7 +167,7 @@ function generateRecommendations(
     );
     
     if (bestInCriterion && scores[bestInCriterion.id][criterion] > 0.7) {
-      recommendations.push(`"${bestInCriterion.title}" excels in ${criterion} (${Math.round(scores[bestInCriterion.id][criterion] * 100)}%).`);
+      recommendations.push(`&quot;${bestInCriterion.title}&quot; excels in ${criterion} (${Math.round(scores[bestInCriterion.id][criterion] * 100)}%).`);
     }
   });
   
@@ -177,7 +177,7 @@ function generateRecommendations(
     .sort((a, b) => overallScores[b.id] - overallScores[a.id]);
     
   if (valueItems.length > 0) {
-    recommendations.push(`"${valueItems[0].title}" offers the best value (high rating, affordable price).`);
+    recommendations.push(`&quot;${valueItems[0].title}&quot; offers the best value (high rating, affordable price).`);
   }
   
   // Find items for specific needs
@@ -189,7 +189,7 @@ function generateRecommendations(
   
   // If no recommendations were generated, provide a default one
   if (recommendations.length === 0 && bestItem) {
-    recommendations.push(`Based on the analysis, "${bestItem.title}" is recommended as the top choice.`);
+    recommendations.push(`Based on the analysis, &quot;${bestItem.title}&quot; is recommended as the top choice.`);
   }
   
   return recommendations;
@@ -220,7 +220,7 @@ export function generateComparisonReport(comparison: ComparisonResult): string {
   report += `\n## Winner\n`;
   const winnerItem = comparison.items.find(item => item.id === comparison.winner);
   if (winnerItem) {
-    report += `"${winnerItem.title}" is the winner with an overall score of ${Math.round(comparison.overallScores[winnerItem.id] * 100)}%.\n`;
+    report += `&quot;${winnerItem.title}&quot; is the winner with an overall score of ${Math.round(comparison.overallScores[winnerItem.id] * 100)}%.\n`;
   }
   
   report += `\n## Recommendations\n`;

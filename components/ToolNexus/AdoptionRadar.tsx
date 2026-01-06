@@ -1,6 +1,6 @@
 // components/ToolNexus/AdoptionRadar.tsx
-import { useState, useEffect, useRef } from 'react';
-import { AdoptionRadar as AdoptionRadarType, MarketPosition, GrowthTrajectory } from '../../types/tool-nexus';
+import { useState, useEffect, useRef } from &apos;react&apos;;
+import { AdoptionRadar as AdoptionRadarType, MarketPosition, GrowthTrajectory } from &apos;../../types/tool-nexus&apos;;
 
 interface AdoptionRadarProps {
   radar: AdoptionRadarType;
@@ -8,8 +8,8 @@ interface AdoptionRadarProps {
 
 const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [selectedQuadrant, setSelectedQuadrant] = useState<string>('all');
-  const [timeframe, setTimeframe] = useState<'current' | '6months' | '1year'>('current');
+  const [selectedQuadrant, setSelectedQuadrant] = useState<string>(&apos;all&apos;);
+  const [timeframe, setTimeframe] = useState<'current' | '6months' | '1year'>(&apos;current&apos;);
   const [hoveredSegment, setHoveredSegment] = useState<string | null>(null);
 
   // Draw radar chart
@@ -29,7 +29,7 @@ const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Draw background grid
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.strokeStyle = &apos;rgba(255, 255, 255, 0.1)&apos;;
       ctx.lineWidth = 1;
 
       // Draw concentric circles
@@ -145,69 +145,69 @@ const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
   }, [radar, hoveredSegment]);
 
   const MarketPositionTable: React.FC = () => (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-      <h4 className="font-medium text-white mb-4">Market Position Analysis</h4>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+      <h4 className="font-medium text-white mb-4&quot;>Market Position Analysis</h4>
       
-      <div className="overflow-x-auto">
-        <table className="w-full">
+      <div className="overflow-x-auto&quot;>
+        <table className="w-full&quot;>
           <thead>
-            <tr className="border-b border-white/10">
-              <th className="text-left text-white/70 pb-2">Tool</th>
-              <th className="text-center text-white/70 pb-2">Market Share</th>
-              <th className="text-center text-white/70 pb-2">Growth Rate</th>
-              <th className="text-center text-white/70 pb-2">Quadrant</th>
-              <th className="text-center text-white/70 pb-2">Confidence</th>
+            <tr className="border-b border-white/10&quot;>
+              <th className="text-left text-white/70 pb-2&quot;>Tool</th>
+              <th className="text-center text-white/70 pb-2&quot;>Market Share</th>
+              <th className="text-center text-white/70 pb-2&quot;>Growth Rate</th>
+              <th className="text-center text-white/70 pb-2&quot;>Quadrant</th>
+              <th className="text-center text-white/70 pb-2&quot;>Confidence</th>
             </tr>
           </thead>
           <tbody>
             {radar.market_position
-              .filter(pos => selectedQuadrant === 'all' || pos.quadrant === selectedQuadrant)
+              .filter(pos => selectedQuadrant === &apos;all || pos.quadrant === selectedQuadrant)
               .sort((a, b) => b.market_share - a.market_share)
               .map((position, index) => (
                 <tr 
                   key={index}
-                  className="border-b border-white/5 hover:bg-white/5 cursor-pointer"
+                  className="border-b border-white/5 hover:bg-white/5 cursor-pointer&quot;
                   onMouseEnter={() => setHoveredSegment(position.tool_name)}
                   onMouseLeave={() => setHoveredSegment(null)}
                 >
-                  <td className="py-3">
-                    <div className="flex items-center gap-2">
+                  <td className="py-3&quot;>
+                    <div className="flex items-center gap-2&quot;>
                       {position.is_current_tool && (
-                        <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-500/30">
+                        <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-500/30&quot;>
                           Current
                         </span>
                       )}
-                      <span className={position.is_current_tool ? 'text-white font-medium' : 'text-white/80'}>
+                      <span className={position.is_current_tool ? &apos;text-white font-medium&apos; : &apos;text-white/80}>
                         {position.tool_name}
                       </span>
                     </div>
                   </td>
-                  <td className="text-center py-3">
-                    <span className="text-white/80">{position.market_share}%</span>
+                  <td className="text-center py-3&quot;>
+                    <span className="text-white/80&quot;>{position.market_share}%</span>
                   </td>
-                  <td className="text-center py-3">
+                  <td className="text-center py-3&quot;>
                     <span className={`font-medium ${
-                      position.growth_rate > 20 ? 'text-green-400' :
-                      position.growth_rate > 10 ? 'text-blue-400' :
-                      position.growth_rate > 0 ? 'text-yellow-400' : 'text-red-400'
+                      position.growth_rate > 20 ? &apos;text-green-400&apos; :
+                      position.growth_rate > 10 ? &apos;text-blue-400&apos; :
+                      position.growth_rate > 0 ? &apos;text-yellow-400&apos; : &apos;text-red-400
                     }`}>
-                      {position.growth_rate > 0 ? '+' : ''}{position.growth_rate}%
+                      {position.growth_rate > 0 ? &apos;+&apos; : &apos;&apos;}{position.growth_rate}%
                     </span>
                   </td>
-                  <td className="text-center py-3">
-                    <span className="text-white/60 capitalize">
-                      {position.quadrant.replace('_', ' ')}
+                  <td className="text-center py-3&quot;>
+                    <span className="text-white/60 capitalize&quot;>
+                      {position.quadrant.replace(&apos;_&apos;, &apos; &apos;)}
                     </span>
                   </td>
-                  <td className="text-center py-3">
-                    <div className="flex items-center justify-center gap-1">
-                      <div className="w-16 bg-white/10 rounded-full h-2">
+                  <td className="text-center py-3&quot;>
+                    <div className="flex items-center justify-center gap-1&quot;>
+                      <div className="w-16 bg-white/10 rounded-full h-2&quot;>
                         <div 
-                          className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
+                          className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full&quot;
                           style={{ width: `${position.confidence_level * 100}%` }}
                         />
                       </div>
-                      <span className="text-xs text-white/60">
+                      <span className="text-xs text-white/60&quot;>
                         {Math.round(position.confidence_level * 100)}%
                       </span>
                     </div>
@@ -221,58 +221,58 @@ const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
   );
 
   const GrowthTrajectoryChart: React.FC = () => (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-      <h4 className="font-medium text-white mb-4">Growth Trajectory</h4>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+      <h4 className="font-medium text-white mb-4&quot;>Growth Trajectory</h4>
       
-      <div className="space-y-4">
+      <div className="space-y-4&quot;>
         {radar.growth_trajectory.map((trajectory, index) => (
-          <div key={index} className="border-b border-white/10 pb-4 last:border-0">
-            <div className="flex items-center justify-between mb-2">
-              <h5 className="font-medium text-white">{trajectory.tool_name}</h5>
+          <div key={index} className="border-b border-white/10 pb-4 last:border-0&quot;>
+            <div className="flex items-center justify-between mb-2&quot;>
+              <h5 className="font-medium text-white&quot;>{trajectory.tool_name}</h5>
               <span className={`px-2 py-1 rounded-full text-xs ${
-                trajectory.trajectory_type === 'accelerating' 
-                  ? 'bg-green-500/20 text-green-300 border border-green-500/30'
-                  : trajectory.trajectory_type === 'steady'
-                  ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
-                  : trajectory.trajectory_type === 'declining'
-                  ? 'bg-red-500/20 text-red-300 border border-red-500/30'
-                  : 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30'
+                trajectory.trajectory_type === &apos;accelerating&apos; 
+                  ? &apos;bg-green-500/20 text-green-300 border border-green-500/30&apos;
+                  : trajectory.trajectory_type === &apos;steady&apos;
+                  ? &apos;bg-blue-500/20 text-blue-300 border border-blue-500/30&apos;
+                  : trajectory.trajectory_type === &apos;declining&apos;
+                  ? &apos;bg-red-500/20 text-red-300 border border-red-500/30&apos;
+                  : &apos;bg-yellow-500/20 text-yellow-300 border border-yellow-500/30
               }`}>
                 {trajectory.trajectory_type}
               </span>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm&quot;>
               <div>
-                <div className="text-white/60 mb-1">Current Growth</div>
-                <div className="font-medium text-white">{trajectory.current_growth}%/yr</div>
+                <div className="text-white/60 mb-1&quot;>Current Growth</div>
+                <div className="font-medium text-white&quot;>{trajectory.current_growth}%/yr</div>
               </div>
               <div>
-                <div className="text-white/60 mb-1">Projected (1yr)</div>
-                <div className="font-medium text-white">{trajectory.projected_growth}%/yr</div>
+                <div className="text-white/60 mb-1&quot;>Projected (1yr)</div>
+                <div className="font-medium text-white&quot;>{trajectory.projected_growth}%/yr</div>
               </div>
               <div>
-                <div className="text-white/60 mb-1">Market Share</div>
-                <div className="font-medium text-white">{trajectory.market_share_projection}%</div>
+                <div className="text-white/60 mb-1&quot;>Market Share</div>
+                <div className="font-medium text-white&quot;>{trajectory.market_share_projection}%</div>
               </div>
             </div>
             
             {/* Mini trend line */}
-            <div className="mt-3 h-12 bg-black/30 rounded relative overflow-hidden">
-              <svg className="w-full h-full" viewBox="0 0 200 50">
+            <div className="mt-3 h-12 bg-black/30 rounded relative overflow-hidden&quot;>
+              <svg className="w-full h-full&quot; viewBox="0 0 200 50&quot;>
                 <polyline
-                  fill="none"
-                  stroke="url(#gradient)"
-                  strokeWidth="2"
+                  fill="none&quot;
+                  stroke="url(#gradient)&quot;
+                  strokeWidth="2&quot;
                   points={trajectory.historical_data.map((dataPoint, i) => {
                     const value = typeof dataPoint === 'number' ? dataPoint : dataPoint.value;
                     return `${i * 20},${50 - (value * 40)}`;
                   }).join(' ')}
                 />
                 <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#A855F7" stopOpacity="0.8" />
+                  <linearGradient id="gradient&quot; x1="0%&quot; y1="0%&quot; x2="100%&quot; y2="0%&quot;>
+                    <stop offset="0%&quot; stopColor="#3B82F6&quot; stopOpacity="0.8&quot; />
+                    <stop offset="100%&quot; stopColor="#A855F7&quot; stopOpacity="0.8&quot; />
                   </linearGradient>
                 </defs>
               </svg>
@@ -284,16 +284,16 @@ const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
   );
 
   const CompetitiveInsights: React.FC = () => (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-      <h4 className="font-medium text-white mb-4">Competitive Insights</h4>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+      <h4 className="font-medium text-white mb-4&quot;>Competitive Insights</h4>
       
-      <div className="space-y-4">
+      <div className="space-y-4&quot;>
         {radar.competitive_insights.map((insight, index) => (
-          <div key={index} className="flex gap-4">
-            <div className="flex-shrink-0 w-2 h-2 bg-purple-500 rounded-full mt-2" />
-            <div className="flex-1">
-              <div className="text-white/80 mb-1">{insight.insight}</div>
-              <div className="text-sm text-white/60 capitalize">
+          <div key={index} className="flex gap-4&quot;>
+            <div className="flex-shrink-0 w-2 h-2 bg-purple-500 rounded-full mt-2&quot; />
+            <div className="flex-1&quot;>
+              <div className="text-white/80 mb-1&quot;>{insight.insight}</div>
+              <div className="text-sm text-white/60 capitalize&quot;>
                 {insight.data_source} • {Math.round(insight.confidence * 100)}% confidence
               </div>
             </div>
@@ -301,44 +301,44 @@ const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
         ))}
       </div>
       
-      <div className="mt-6 p-4 bg-purple-500/10 rounded-lg border border-purple-500/20 space-y-3">
+      <div className="mt-6 p-4 bg-purple-500/10 rounded-lg border border-purple-500/20 space-y-3&quot;>
         <div>
-          <div className="text-sm font-medium text-purple-200">Market Position</div>
-          <div className="text-sm text-purple-300">
+          <div className="text-sm font-medium text-purple-200&quot;>Market Position</div>
+          <div className="text-sm text-purple-300&quot;>
             {radar.summary.market_position.current} ({radar.summary.market_position.trend})
           </div>
           {radar.summary.market_position.competitors.length > 0 && (
-            <div className="text-xs text-purple-400 mt-1">
-              Main competitors: {radar.summary.market_position.competitors.join(', ')}
+            <div className="text-xs text-purple-400 mt-1&quot;>
+              Main competitors: {radar.summary.market_position.competitors.join(&apos;, &apos;)}
             </div>
           )}
         </div>
 
         <div>
-          <div className="text-sm font-medium text-purple-200">Growth Outlook</div>
-          <div className="text-sm text-purple-300">
+          <div className="text-sm font-medium text-purple-200&quot;>Growth Outlook</div>
+          <div className="text-sm text-purple-300&quot;>
             {radar.summary.growth_outlook.rating} ({radar.summary.growth_outlook.projected_growth}% projected)
           </div>
           {radar.summary.growth_outlook.factors.length > 0 && (
-            <div className="text-xs text-purple-400 mt-1">
-              Key factors: {radar.summary.growth_outlook.factors.join(', ')}
+            <div className="text-xs text-purple-400 mt-1&quot;>
+              Key factors: {radar.summary.growth_outlook.factors.join(&apos;, &apos;)}
             </div>
           )}
         </div>
 
         <div>
-          <div className="text-sm font-medium text-purple-200">Competitive Threat</div>
-          <div className="text-sm text-purple-300">
+          <div className="text-sm font-medium text-purple-200&quot;>Competitive Threat</div>
+          <div className="text-sm text-purple-300&quot;>
             {radar.summary.competitive_threat.level}
           </div>
           {radar.summary.competitive_threat.main_competitors.length > 0 && (
-            <div className="text-xs text-purple-400 mt-1">
-              Main competitors: {radar.summary.competitive_threat.main_competitors.join(', ')}
+            <div className="text-xs text-purple-400 mt-1&quot;>
+              Main competitors: {radar.summary.competitive_threat.main_competitors.join(&apos;, &apos;)}
             </div>
           )}
           {radar.summary.competitive_threat.key_risks.length > 0 && (
-            <div className="text-xs text-purple-400 mt-1">
-              Key risks: {radar.summary.competitive_threat.key_risks.join(', ')}
+            <div className="text-xs text-purple-400 mt-1&quot;>
+              Key risks: {radar.summary.competitive_threat.key_risks.join(&apos;, &apos;)}
             </div>
           )}
         </div>
@@ -347,43 +347,43 @@ const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
   );
 
   return (
-    <div className="max-w-6xl mx-auto">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-white mb-2">Adoption Radar</h2>
-        <p className="text-white/70">
+    <div className="max-w-6xl mx-auto&quot;>
+      <div className="mb-8&quot;>
+        <h2 className="text-3xl font-bold text-white mb-2&quot;>Adoption Radar</h2>
+        <p className="text-white/70&quot;>
           Market position visualization and growth trajectory analysis
         </p>
       </div>
 
       {/* Controls */}
-      <div className="mb-6 flex flex-wrap gap-4">
-        <div className="flex gap-2">
+      <div className="mb-6 flex flex-wrap gap-4&quot;>
+        <div className="flex gap-2&quot;>
           <button
-            onClick={() => setSelectedQuadrant('all')}
+            onClick={() => setSelectedQuadrant(&apos;all&apos;)}
             className={`px-4 py-2 rounded-lg transition-all ${
-              selectedQuadrant === 'all'
-                ? 'bg-white/20 text-white'
-                : 'bg-white/5 text-white/60 hover:bg-white/10'
+              selectedQuadrant === &apos;all&apos;
+                ? &apos;bg-white/20 text-white&apos;
+                : &apos;bg-white/5 text-white/60 hover:bg-white/10&apos;
             }`}
           >
             All Quadrants
           </button>
-          {['market_leaders', 'innovators', 'niche_players', 'emerging_tools'].map((quadrant) => (
+          {[&apos;market_leaders&apos;, &apos;innovators&apos;, &apos;niche_players&apos;, &apos;emerging_tools&apos;].map((quadrant) => (
             <button
               key={quadrant}
               onClick={() => setSelectedQuadrant(quadrant)}
               className={`px-4 py-2 rounded-lg transition-all capitalize ${
                 selectedQuadrant === quadrant
-                  ? 'bg-white/20 text-white'
-                  : 'bg-white/5 text-white/60 hover:bg-white/10'
+                  ? &apos;bg-white/20 text-white&apos;
+                  : &apos;bg-white/5 text-white/60 hover:bg-white/10
               }`}
             >
-              {quadrant.replace('_', ' ')}
+              {quadrant.replace(&apos;_&apos;, &apos; &apos;)}
             </button>
           ))}
         </div>
         
-        <div className="flex gap-2">
+        <div className="flex gap-2&quot;>
           {['current', '6months', '1year'].map((tf) => (
             <button
               key={tf}
@@ -394,24 +394,24 @@ const AdoptionRadar: React.FC<AdoptionRadarProps> = ({ radar }) => {
                   : 'bg-white/5 text-white/60 hover:bg-white/10'
               }`}
             >
-              {tf.replace('months', ' months')}
+              {tf.replace(&apos;months&apos;, &apos; months&apos;)}
             </button>
           ))}
         </div>
       </div>
 
       {/* Radar Visualization */}
-      <div className="mb-8 bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+      <div className="mb-8 bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10&quot;>
         <canvas
           ref={canvasRef}
           width={600}
           height={600}
-          className="w-full max-w-2xl mx-auto"
+          className="w-full max-w-2xl mx-auto&quot;
         />
       </div>
 
       {/* Market Analysis */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8&quot;>
         <MarketPositionTable />
         <GrowthTrajectoryChart />
       </div>

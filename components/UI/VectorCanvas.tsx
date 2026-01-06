@@ -55,7 +55,7 @@ export const VectorCanvas: React.FC<VectorCanvasProps> = ({
   config = {},
   className = ''
 }) => {
-  const { backgroundColor = '#000000' } = config;
+  const { backgroundColor = &apos;#000000&apos; } = config;
 
   return (
     <div className={`w-full h-full ${className}`} style={{ backgroundColor }}>
@@ -69,7 +69,7 @@ export const VectorCanvas: React.FC<VectorCanvasProps> = ({
             <mesh>
               <torusKnotGeometry args={[1, 0.3, 128, 16]} />
               <meshStandardMaterial
-                color="#0ff"
+                color="#0ff&quot;
                 roughness={0.1}
                 metalness={0.8}
                 wireframe

@@ -1,12 +1,12 @@
-'use client';
+&apos;use client&apos;;
 
-'use client';
+&apos;use client&apos;;
 
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faUser, faCheck, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { useState } from &apos;react&apos;;
+import { FontAwesomeIcon } from &apos;@fortawesome/react-fontawesome&apos;;
+import { faEnvelope, faUser, faCheck, faCircleExclamation } from &apos;@fortawesome/free-solid-svg-icons&apos;;
 
-type Status = 'idle' | 'loading' | 'success' | 'error';
+type Status = &apos;idle&apos; | &apos;loading&apos; | &apos;success&apos; | &apos;error&apos;;
 
 interface NewsletterProps {
   title?: string;
@@ -19,21 +19,21 @@ const Newsletter: React.FC<NewsletterProps> = ({
   description = 'Subscribe to our newsletter for the latest AI tools and updates.',
   className = '',
 }) => {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
+  const [email, setEmail] = useState(&apos;&apos;);
+  const [name, setName] = useState(&apos;&apos;);
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('loading');
-    setError('');
+    setStatus(&apos;loading&apos;);
+    setError(&apos;&apos;);
 
     try {
-      const response = await fetch('/api/newsletter', {
-        method: 'POST',
+      const response = await fetch(&apos;/api/newsletter&apos;, {
+        method: &apos;POST&apos;,
         headers: {
-          'Content-Type': 'application/json',
+          &apos;Content-Type&apos;: &apos;application/json&apos;,
         },
         body: JSON.stringify({ email, name }),
       });
@@ -41,27 +41,27 @@ const Newsletter: React.FC<NewsletterProps> = ({
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
+        throw new Error(data.error || &apos;Something went wrong&apos;);
       }
 
-      setStatus('success');
-      setEmail('');
-      setName('');
+      setStatus(&apos;success&apos;);
+      setEmail(&apos;&apos;);
+      setName(&apos;&apos;);
     } catch (err) {
-      setStatus('error');
-      setError(err instanceof Error ? err.message : 'Failed to subscribe');
-      console.error('Subscription error:', err);
+      setStatus(&apos;error&apos;);
+      setError(err instanceof Error ? err.message : &apos;Failed to subscribe&apos;);
+      console.error(&apos;Subscription error:&apos;, err);
     }
   };
 
-  if (status === 'success') {
+  if (status === &apos;success&apos;) {
     return (
       <div className={`bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-6 md:p-8 shadow-lg ${className}`}>
-        <div className="flex items-center justify-center space-x-3 text-white">
-          <FontAwesomeIcon icon={faCheck} className="w-6 h-6" />
-          <h3 className="text-xl font-bold">Thank you for subscribing!</h3>
+        <div className="flex items-center justify-center space-x-3 text-white&quot;>
+          <FontAwesomeIcon icon={faCheck} className="w-6 h-6&quot; />
+          <h3 className="text-xl font-bold&quot;>Thank you for subscribing!</h3>
         </div>
-        <p className="mt-2 text-blue-100 text-center">
+        <p className="mt-2 text-blue-100 text-center&quot;>
           We&rsquo;ve sent a confirmation email to your inbox.
         </p>
       </div>
@@ -70,56 +70,56 @@ const Newsletter: React.FC<NewsletterProps> = ({
 
   return (
     <div className={`bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-6 md:p-8 shadow-lg ${className}`}>
-      <div className="max-w-md mx-auto">
-        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-blue-100 mb-6">{description}</p>
+      <div className="max-w-md mx-auto&quot;>
+        <h3 className="text-2xl font-bold text-white mb-2&quot;>{title}</h3>
+        <p className="text-blue-100 mb-6&quot;>{description}</p>
         
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <FontAwesomeIcon icon={faUser} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+        <form onSubmit={handleSubmit} className="space-y-4&quot;>
+          <div className="relative&quot;>
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none&quot;>
+              <FontAwesomeIcon icon={faUser} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4&quot; />
             </div>
             <input
-              type="text"
+              type="text&quot;
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Your name (optional)"
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
-              disabled={status === 'loading'}
+              placeholder="Your name (optional)&quot;
+              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent&quot;
+              disabled={status === &apos;loading}
             />
           </div>
           
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <FontAwesomeIcon icon={faEnvelope} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+          <div className="relative&quot;>
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none&quot;>
+              <FontAwesomeIcon icon={faEnvelope} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4&quot; />
             </div>
             <input
-              type="email"
+              type="email&quot;
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email address"
+              placeholder="Your email address&quot;
               required
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
-              disabled={status === 'loading'}
+              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent&quot;
+              disabled={status === &apos;loading}
             />
           </div>
           
           <button
-            type="submit"
+            type="submit&quot;
             disabled={status === 'loading'}
-            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors&quot;
           >
-            {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+            {status === &apos;loading&apos; ? &apos;Subscribing...&apos; : &apos;Subscribe&apos;}
           </button>
           
-          <p className="text-xs text-blue-100 text-center">
+          <p className="text-xs text-blue-100 text-center&quot;>
             We respect your privacy. Unsubscribe at any time.
           </p>
           
-          {status === 'error' && (
-            <div className="flex items-center justify-center space-x-2 text-red-200 text-sm">
-              <FontAwesomeIcon icon={faCircleExclamation} className="w-5 h-5 text-red-500" />
-              <span>{error || 'Failed to subscribe. Please try again.'}</span>
+          {status === &apos;error&apos; && (
+            <div className="flex items-center justify-center space-x-2 text-red-200 text-sm&quot;>
+              <FontAwesomeIcon icon={faCircleExclamation} className="w-5 h-5 text-red-500&quot; />
+              <span>{error || &apos;Failed to subscribe. Please try again.&apos;}</span>
             </div>
           )}
         </form>

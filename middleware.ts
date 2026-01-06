@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-import { corsMiddleware } from '@/lib/cors';
+import { NextResponse } from &apos;next/server&apos;;
+import type { NextRequest } from &apos;next/server&apos;;
+import { corsMiddleware } from &apos;@/lib/cors&apos;;
 
 // Rate limiting configuration
 const RATE_LIMIT = 100; // Default requests per window
@@ -135,19 +135,19 @@ export async function middleware(request: NextRequest) {
       
       return new NextResponse(
         JSON.stringify({ 
-          error: 'Too many requests',
+          error: &apos;Too many requests&apos;,
           message: isStrictPath 
-            ? 'Too many login attempts. Please try again later.'
-            : 'Rate limit exceeded. Please try again later.'
+            ? &apos;Too many login attempts. Please try again later.&apos;
+            : &apos;Rate limit exceeded. Please try again later.&apos;
         }), 
         { 
           status: 429,
           headers: { 
-            'Content-Type': 'application/json',
-            'Retry-After': isStrictPath ? '3600' : '900',
-            'X-RateLimit-Limit': limit.toString(),
-            'X-RateLimit-Remaining': '0',
-            'X-RateLimit-Reset': resetTime.toString()
+            &apos;Content-Type&apos;: &apos;application/json&apos;,
+            &apos;Retry-After&apos;: isStrictPath ? &apos;3600&apos; : &apos;900&apos;,
+            &apos;X-RateLimit-Limit&apos;: limit.toString(),
+            &apos;X-RateLimit-Remaining&apos;: &apos;0&apos;,
+            &apos;X-RateLimit-Reset&apos;: resetTime.toString()
           }
         }
       );
@@ -157,11 +157,11 @@ export async function middleware(request: NextRequest) {
   }
 
   // Apply CSRF protection to non-GET API routes
-  if (pathname.startsWith('/api/') && request.method !== 'GET') {
+  if (pathname.startsWith(&apos;/api/&apos;) && request.method !== &apos;GET&apos;) {
     if (!validateCsrfToken(request)) {
       return new NextResponse(
-        JSON.stringify({ error: 'Invalid CSRF token' }),
-        { status: 403, headers: { 'Content-Type': 'application/json' } }
+        JSON.stringify({ error: &apos;Invalid CSRF token&apos; }),
+        { status: 403, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; } }
       );
     }
   }
@@ -170,15 +170,15 @@ export async function middleware(request: NextRequest) {
   const response = NextResponse.next();
   
   // Security headers
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set(&apos;X-Content-Type-Options&apos;, &apos;nosniff&apos;);
+  response.headers.set(&apos;X-Frame-Options&apos;, &apos;DENY&apos;);
+  response.headers.set(&apos;X-XSS-Protection&apos;, &apos;1; mode=block&apos;);
+  response.headers.set(&apos;Referrer-Policy&apos;, &apos;strict-origin-when-cross-origin&apos;);
   
   // CSP Header - adjust based on your needs
   response.headers.set(
-    'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self';"
+    &apos;Content-Security-Policy&apos;,
+    &quot;default-src &apos;self&apos;; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; img-src &apos;self&apos; data:; font-src &apos;self&apos;; connect-src &apos;self&apos;;&quot;
   );
 
   return response;
@@ -193,6 +193,6 @@ export const config = {
      * - favicon.ico (favicon file)
      * - public folder
      */
-    '/((?!_next/static|_next/image|favicon.ico|public/).*)',
+    &apos;/((?!_next/static|_next/image|favicon.ico|public/).*)&apos;,
   ],
 };

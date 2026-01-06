@@ -1,6 +1,6 @@
-import { User as PrismaUser } from '@prisma/client'
+import { User as PrismaUser } from &apos;@prisma/client&apos;
 
-declare module 'next-auth' {
+declare module &apos;next-auth&apos; {
   interface Session {
     user: {
       id: string
@@ -13,7 +13,7 @@ declare module 'next-auth' {
   interface User extends PrismaUser {}
 }
 
-declare module 'next-auth/jwt' {
+declare module &apos;next-auth/jwt&apos; {
   interface JWT {
     id: string
     email: string

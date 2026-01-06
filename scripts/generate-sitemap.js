@@ -76,16 +76,16 @@ async function generateSitemap() {
     const pagePaths = otherPages
       .map(page => {
         const path = page
-          .replace(PAGES_DIR, '')
-          .replace(/\.(js|jsx|ts|tsx|mdx)$/, '')
-          .replace(/\[/g, ':')
-          .replace(/]/g, '')
-          .replace(/index$/, '');
+          .replace(PAGES_DIR, &apos;&apos;)
+          .replace(/\.(js|jsx|ts|tsx|mdx)$/, &apos;&apos;)
+          .replace(/\[/g, &apos;:&apos;)
+          .replace(/]/g, &apos;&apos;)
+          .replace(/index$/, &apos;&apos;);
         
         return path ? {
           url: path,
-          changefreq: 'weekly',
-          priority: path.split('/').length <= 2 ? 0.7 : 0.6,
+          changefreq: &apos;weekly&apos;,
+          priority: path.split(&apos;/&apos;).length <= 2 ? 0.7 : 0.6,
           lastmod: new Date().toISOString()
         } : null;
       })
@@ -104,9 +104,9 @@ async function generateSitemap() {
     // Load categories data to extract all category URLs
     const categoriesData = fs.readFileSync('./data/categories.ts', 'utf8');
     const categories = [];
-    const categoryMatches = categoriesData.match(/name:\s*"([^"]+)"/g) || [];
+    const categoryMatches = categoriesData.match(/name:\s*&quot;([^&quot;]+)&quot;/g) || [];
     categoryMatches.forEach(match => {
-      const categoryName = match.match(/name:\s*"([^"]+)"/)[1];
+      const categoryName = match.match(/name:\s*&quot;([^&quot;]+)&quot;/)[1];
       // Skip if it's a subcategory (we'll handle those separately)
       if (!categoryName.includes('favicon') && !categoryName.includes('website')) {
         const slug = categoryName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
@@ -117,9 +117,9 @@ async function generateSitemap() {
     // Load AI tools data to extract all tool URLs
     const toolsData = fs.readFileSync('./data/tools.ts', 'utf8');
     const tools = [];
-    const toolMatches = toolsData.match(/name:\s*"([^"]+)"/g) || [];
+    const toolMatches = toolsData.match(/name:\s*&quot;([^&quot;]+)&quot;/g) || [];
     toolMatches.forEach(match => {
-      const toolName = match.match(/name:\s*"([^"]+)"/)[1];
+      const toolName = match.match(/name:\s*&quot;([^&quot;]+)&quot;/)[1];
       const slug = toolName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
       tools.push(slug);
     });
@@ -127,9 +127,9 @@ async function generateSitemap() {
     // Load AI updates data to extract all update URLs
     const aiUpdatesData = fs.readFileSync('./data/ai-updates.ts', 'utf8');
     const aiUpdates = [];
-    const updateMatches = aiUpdatesData.match(/"id":\s*"([^"]+)"/g) || [];
+    const updateMatches = aiUpdatesData.match(/&quot;id&quot;:\s*&quot;([^&quot;]+)&quot;/g) || [];
     updateMatches.forEach(match => {
-      const updateId = match.match(/"id":\s*"([^"]+)"/)[1];
+      const updateId = match.match(/&quot;id&quot;:\s*&quot;([^&quot;]+)&quot;/)[1];
       aiUpdates.push(updateId);
     });
 
@@ -185,7 +185,7 @@ async function generateSitemap() {
     const result = await streamToPromise(Readable.from(uniqueRoutes).pipe(stream));
     
     // Write sitemap to file
-    fs.writeFileSync('public/sitemap.xml', result.toString());
+    fs.writeFileSync(&apos;public/sitemap.xml&apos;, result.toString());
     console.log(`Sitemap generated successfully with ${uniqueRoutes.length} URLs!`);
     
     // Generate robots.txt
@@ -196,11 +196,11 @@ Allow: /
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
     
-    fs.writeFileSync('public/robots.txt', robotsTxt);
-    console.log('robots.txt generated successfully!');
+    fs.writeFileSync(&apos;public/robots.txt&apos;, robotsTxt);
+    console.log(&apos;robots.txt generated successfully!&apos;);
     
   } catch (error) {
-    console.error('Error generating sitemap:', error);
+    console.error(&apos;Error generating sitemap:&apos;, error);
   }
 }
 

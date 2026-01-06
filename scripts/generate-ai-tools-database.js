@@ -14,25 +14,25 @@ const aiCategories = {
 
 // Feature options for generating tools
 const featuresOptions = [
-  "AI-powered", "cloud-based", "real-time processing", "API access", 
-  "mobile app", "chrome extension", "multi-language support", "collaboration tools",
-  "analytics dashboard", "customizable", "integrations", "automation",
-  "security features", "scalable", "user-friendly", "enterprise-grade"
+  &quot;AI-powered&quot;, &quot;cloud-based&quot;, &quot;real-time processing&quot;, &quot;API access&quot;, 
+  &quot;mobile app&quot;, &quot;chrome extension&quot;, &quot;multi-language support&quot;, &quot;collaboration tools&quot;,
+  &quot;analytics dashboard&quot;, &quot;customizable&quot;, &quot;integrations&quot;, &quot;automation&quot;,
+  &quot;security features&quot;, &quot;scalable&quot;, &quot;user-friendly&quot;, &quot;enterprise-grade&quot;
 ];
 
 // Pricing plan options
-const pricingPlans = ["Basic", "Pro", "Enterprise", "Team", "Starter", "Premium"];
+const pricingPlans = [&quot;Basic&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;, &quot;Team&quot;, &quot;Starter&quot;, &quot;Premium&quot;];
 
 // Generate additional tools to reach 500+ AI tools
 const generateAdditionalTools = () => {
   const additionalTools = [];
   const prefixes = [
-    "AI", "Smart", "NextGen", "Pro", "Ultra", "Advanced", "Enterprise", "Premium",
-    "Intelli", "Neuro", "Cogni", "Deep", "Quantum", "Nexus", "Synergy", "Omni"
+    &quot;AI&quot;, &quot;Smart&quot;, &quot;NextGen&quot;, &quot;Pro&quot;, &quot;Ultra&quot;, &quot;Advanced&quot;, &quot;Enterprise&quot;, &quot;Premium&quot;,
+    &quot;Intelli&quot;, &quot;Neuro&quot;, &quot;Cogni&quot;, &quot;Deep&quot;, &quot;Quantum&quot;, &quot;Nexus&quot;, &quot;Synergy&quot;, &quot;Omni&quot;
   ];
   const suffixes = [
-    "Assistant", "Platform", "Studio", "Lab", "Engine", "Suite", "Hub", "Center",
-    "Master", "Genius", "Bot", "Mind", "Brain", "Logic", "Sense", "Vision"
+    &quot;Assistant&quot;, &quot;Platform&quot;, &quot;Studio&quot;, &quot;Lab&quot;, &quot;Engine&quot;, &quot;Suite&quot;, &quot;Hub&quot;, &quot;Center&quot;,
+    &quot;Master&quot;, &quot;Genius&quot;, &quot;Bot&quot;, &quot;Mind&quot;, &quot;Brain&quot;, &quot;Logic&quot;, &quot;Sense&quot;, &quot;Vision&quot;
   ];
   const categories = Object.keys(aiCategories);
   
@@ -69,7 +69,7 @@ const generateAdditionalTools = () => {
     const tool = {
       name: `${prefix} ${suffix} ${i + 1}`,
       category: [category],
-      description: `Advanced ${category.replace('_', ' ')} tool with cutting-edge AI capabilities for professionals and businesses`,
+      description: `Advanced ${category.replace(&apos;_&apos;, &apos; &apos;)} tool with cutting-edge AI capabilities for professionals and businesses`,
       pricing: { 
         free: hasFree, 
         paid: hasPaid, 
@@ -77,8 +77,8 @@ const generateAdditionalTools = () => {
       },
       features: features,
       website: `https://${prefix.toLowerCase()}${suffix.toLowerCase()}${i + 1}.com`,
-      launch_date: new Date(Date.now() - Math.floor(Math.random() * 365 * 24 * 60 * 60 * 1000)).toISOString().split('T')[0],
-      last_updated: new Date().toISOString().split('T')[0]
+      launch_date: new Date(Date.now() - Math.floor(Math.random() * 365 * 24 * 60 * 60 * 1000)).toISOString().split(&apos;T&apos;)[0],
+      last_updated: new Date().toISOString().split(&apos;T&apos;)[0]
     };
     
     additionalTools.push(tool);
@@ -91,6 +91,6 @@ const generateAdditionalTools = () => {
 const allTools = generateAdditionalTools();
 
 // Write to a JSON file
-const outputPath = './data/ai-tools-database-500.json';
+const outputPath = &apos;./data/ai-tools-database-500.json&apos;;
 fs.writeFileSync(outputPath, JSON.stringify(allTools, null, 2));
 console.log(`Successfully generated ${allTools.length} AI tools and saved to: ${outputPath}`);

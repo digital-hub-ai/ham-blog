@@ -27,11 +27,11 @@ export default function ComparisonWorkspace({
   const renderDimension = () => {
     if (tools.length < 2) {
       return (
-        <div className="flex items-center justify-center h-full">
-          <div className="text-center">
-            <div className="text-6xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-2">Quantum Comparator Ready</h3>
-            <p className="text-gray-400">Select at least 2 tools to begin analysis</p>
+        <div className="flex items-center justify-center h-full&quot;>
+          <div className="text-center&quot;>
+            <div className="text-6xl mb-4&quot;>⚡</div>
+            <h3 className="text-2xl font-bold mb-2&quot;>Quantum Comparator Ready</h3>
+            <p className="text-gray-400&quot;>Select at least 2 tools to begin analysis</p>
           </div>
         </div>
       );
@@ -44,17 +44,17 @@ export default function ComparisonWorkspace({
     };
 
     switch (dimension) {
-      case 'specs_matrix':
+      case &apos;specs_matrix&apos;:
         return <SpecsMatrix {...componentProps} />;
-      case 'performance_radar':
+      case &apos;performance_radar&apos;:
         return <PerformanceRadar {...componentProps} />;
-      case 'cost_timeline':
+      case &apos;cost_timeline&apos;:
         return <CostTimeline {...componentProps} />;
-      case 'stack_synergy':
+      case &apos;stack_synergy&apos;:
         return <StackSynergy {...componentProps} />;
-      case 'sentiment_sphere':
+      case &apos;sentiment_sphere&apos;:
         return <SentimentSphere {...componentProps} />;
-      case 'ai_analyst':
+      case &apos;ai_analyst&apos;:
         return <AIAnalyst {...componentProps} />;
       default:
         return <SpecsMatrix {...componentProps} />;
@@ -62,7 +62,7 @@ export default function ComparisonWorkspace({
   };
 
   return (
-    <div className="h-full overflow-auto">
+    <div className="h-full overflow-auto&quot;>
       {renderDimension()}
     </div>
   );

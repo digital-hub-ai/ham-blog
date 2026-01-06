@@ -7,31 +7,31 @@ export type Vector = number[];
 
 // Similarity metrics
 export type SimilarityMetric = 
-  | 'cosine'      // Cosine similarity
-  | 'euclidean'   // Euclidean distance
-  | 'manhattan'   // Manhattan distance
-  | 'jaccard'     // Jaccard similarity
-  | 'pearson'     // Pearson correlation
-  | 'dot-product' // Dot product
-  | 'levenshtein' // Levenshtein distance
-  | 'bm25';       // BM25 similarity
+  | &apos;cosine&apos;      // Cosine similarity
+  | &apos;euclidean&apos;   // Euclidean distance
+  | &apos;manhattan&apos;   // Manhattan distance
+  | &apos;jaccard&apos;     // Jaccard similarity
+  | &apos;pearson&apos;     // Pearson correlation
+  | &apos;dot-product&apos; // Dot product
+  | &apos;levenshtein&apos; // Levenshtein distance
+  | &apos;bm25&apos;;       // BM25 similarity
 
 // Embedding model types
 export type EmbeddingModel = 
-  | 'bert-base'          // BERT base model
-  | 'bert-large'         // BERT large model
-  | 'sentence-transformers' // Sentence transformers
-  | 'universal-sentence-encoder' // Universal Sentence Encoder
-  | 'glove'              // GloVe embeddings
-  | 'word2vec'           // Word2Vec embeddings
-  | 'fasttext'           // FastText embeddings
-  | 'custom';            // Custom embedding model
+  | &apos;bert-base&apos;          // BERT base model
+  | &apos;bert-large&apos;         // BERT large model
+  | &apos;sentence-transformers&apos; // Sentence transformers
+  | &apos;universal-sentence-encoder&apos; // Universal Sentence Encoder
+  | &apos;glove&apos;              // GloVe embeddings
+  | &apos;word2vec&apos;           // Word2Vec embeddings
+  | &apos;fasttext&apos;           // FastText embeddings
+  | &apos;custom&apos;;            // Custom embedding model
 
 // Embedding configuration
 export interface EmbeddingConfig {
   model: EmbeddingModel;
   dimensions: number;
-  poolingStrategy: 'mean' | 'max' | 'cls';
+  poolingStrategy: &apos;mean&apos; | &apos;max&apos; | &apos;cls&apos;;
   normalize: boolean;
   enableCaching: boolean;
   cacheExpiryHours: number;
@@ -42,9 +42,9 @@ export interface EmbeddingConfig {
 
 // Default configuration
 const defaultConfig: EmbeddingConfig = {
-  model: 'sentence-transformers',
+  model: &apos;sentence-transformers&apos;,
   dimensions: 768,
-  poolingStrategy: 'mean',
+  poolingStrategy: &apos;mean&apos;,
   normalize: true,
   enableCaching: true,
   cacheExpiryHours: 24,
@@ -151,8 +151,8 @@ export class SemanticSimilarityService {
   private preprocessText(text: string): string {
     return text
       .toLowerCase()
-      .replace(/[^\w\s]/g, ' ') // Remove punctuation
-      .replace(/\s+/g, ' ')     // Normalize whitespace
+      .replace(/[^\w\s]/g, &apos; &apos;) // Remove punctuation
+      .replace(/\s+/g, &apos; &apos;)     // Normalize whitespace
       .trim();
   }
 
@@ -160,8 +160,8 @@ export class SemanticSimilarityService {
    * Simulate embedding generation (in a real implementation, this would use an ML model)
    */
   private simulateEmbeddingGeneration(text: string): Vector {
-    // This is a simplified simulation - in reality, you'd use a pre-trained model
-    const words = text.split(' ');
+    // This is a simplified simulation - in reality, you&apos;d use a pre-trained model
+    const words = text.split(&apos; &apos;);
     const vector: Vector = [];
     
     // Generate a deterministic vector based on text content
@@ -329,7 +329,7 @@ export class SemanticSimilarityService {
     queryText: string,
     candidateTexts: string[],
     topK: number = 10,
-    metric: SimilarityMetric = 'cosine'
+    metric: SimilarityMetric = &apos;cosine&apos;
   ): Promise<SemanticSearchResult[]> {
     // Generate embedding for query
     const queryEmbedding = await this.generateEmbedding(queryText);
@@ -353,7 +353,7 @@ export class SemanticSimilarityService {
     const results: SemanticSearchResult[] = similarities.slice(0, topK).map((sim, index) => ({
       id: sim.targetId,
       text: candidateTexts.find((_, idx) => 
-        this.generateId(candidateTexts[idx]) === sim.targetId) || '',
+        this.generateId(candidateTexts[idx]) === sim.targetId) || &apos;&apos;,
       similarity: sim.similarity,
       rank: index + 1,
       metadata: {
@@ -404,7 +404,7 @@ export class SemanticSimilarityService {
     // Convert to semantic search results
     const results: SemanticSearchResult[] = similarities.slice(0, topK).map((sim, index) => ({
       id: sim.documentId,
-      text: documents.find(doc => doc.id === sim.documentId)?.text || '',
+      text: documents.find(doc => doc.id === sim.documentId)?.text || &apos;&apos;,
       similarity: sim.similarity,
       rank: index + 1,
       metadata: sim.metadata
@@ -435,7 +435,7 @@ export class SemanticSimilarityService {
     maxSize: number;
     hitRate: number;
   } {
-    // In a real implementation, you'd track actual hits/misses
+    // In a real implementation, you&apos;d track actual hits/misses
     return {
       size: this.embeddingCache.size,
       maxSize: 50000, // Example max size
@@ -457,8 +457,8 @@ export class SemanticSimilarityService {
       dimensions: this.config.dimensions,
       maxSequenceLength: this.config.maxSequenceLength,
       supportedMetrics: [
-        'cosine', 'euclidean', 'manhattan', 'jaccard', 
-        'pearson', 'dot-product'
+        &apos;cosine&apos;, &apos;euclidean&apos;, &apos;manhattan&apos;, &apos;jaccard&apos;, 
+        &apos;pearson&apos;, &apos;dot-product&apos;
       ]
     };
   }

@@ -1,14 +1,14 @@
 // components/ToolNexus/ImmersiveHeader.tsx
-import { useState, useEffect, useRef, useMemo } from 'react';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { useState, useEffect, useRef, useMemo } from &apos;react&apos;;
+import * as THREE from &apos;three&apos;;
+import { OrbitControls } from &apos;three/examples/jsm/controls/OrbitControls&apos;;
 import { 
   ImmersiveHeaderProps, 
   DynamicToolCanvasProps, 
   HeroIntelligencePanelProps,
   LiveMetrics,
   PrimaryAction
-} from '../../types/tool-nexus';
+} from &apos;../../types/tool-nexus&apos;;
 
 const DynamicToolCanvas: React.FC<DynamicToolCanvasProps> = ({
   visualSeed,
@@ -44,7 +44,7 @@ const DynamicToolCanvas: React.FC<DynamicToolCanvasProps> = ({
     const renderer = new THREE.WebGLRenderer({ 
       alpha: true, 
       antialias: true,
-      powerPreference: "high-performance"
+      powerPreference: &quot;high-performance&quot;
     });
     renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -440,8 +440,8 @@ const DynamicToolCanvas: React.FC<DynamicToolCanvasProps> = ({
   return (
     <div 
       ref={mountRef} 
-      className="absolute inset-0 w-full h-full"
-      style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3))' }}
+      className="absolute inset-0 w-full h-full&quot;
+      style={{ background: &apos;linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3)) }}
     />
   );
 };
@@ -455,56 +455,56 @@ const HeroIntelligencePanel: React.FC<HeroIntelligencePanelProps> = ({
   const [selectedAction, setSelectedAction] = useState<string | null>(null);
 
   return (
-    <div className="relative z-20 max-w-4xl mx-auto px-4 py-8">
-      <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
+    <div className="relative z-20 max-w-4xl mx-auto px-4 py-8&quot;>
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl overflow-hidden&quot;>
         {/* Tool Crystal */}
-        <div className="p-8 text-center">
-          <div className="mb-6">
-            <div className="w-24 h-24 mx-auto mb-4 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full animate-pulse"></div>
-              <div className="absolute inset-2 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <span className="text-4xl font-bold text-white">AI</span>
+        <div className="p-8 text-center&quot;>
+          <div className="mb-6&quot;>
+            <div className="w-24 h-24 mx-auto mb-4 relative&quot;>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full animate-pulse&quot;></div>
+              <div className="absolute inset-2 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center&quot;>
+                <span className="text-4xl font-bold text-white&quot;>AI</span>
               </div>
             </div>
           </div>
 
           {/* Vital Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">4.8★</div>
-              <div className="text-sm text-white/70">2.4k reviews</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6&quot;>
+            <div className="text-center&quot;>
+              <div className="text-2xl font-bold text-white mb-1&quot;>4.8★</div>
+              <div className="text-sm text-white/70&quot;>2.4k reviews</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">500K+</div>
-              <div className="text-sm text-white/70">active users</div>
+            <div className="text-center&quot;>
+              <div className="text-2xl font-bold text-white mb-1&quot;>500K+</div>
+              <div className="text-sm text-white/70&quot;>active users</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">2020</div>
-              <div className="text-sm text-white/70">founded</div>
+            <div className="text-center&quot;>
+              <div className="text-2xl font-bold text-white mb-1&quot;>2020</div>
+              <div className="text-sm text-white/70&quot;>founded</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">
+            <div className="text-center&quot;>
+              <div className="text-2xl font-bold text-white mb-1&quot;>
                 {stats.current_visitors}
               </div>
-              <div className="text-sm text-white/70">visiting now</div>
+              <div className="text-sm text-white/70&quot;>visiting now</div>
             </div>
           </div>
 
           {/* Status Indicators */}
-          <div className="flex flex-wrap justify-center gap-2 mb-6">
-            <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm border border-green-500/30">
+          <div className="flex flex-wrap justify-center gap-2 mb-6&quot;>
+            <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm border border-green-500/30&quot;>
               ● All Systems Operational
             </span>
-            <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30">
+            <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30&quot;>
               🔥 Trending
             </span>
-            <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
+            <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30&quot;>
               v3.2 Released
             </span>
           </div>
 
           {/* Action Matrix */}
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3&quot;>
             {actions.map((action) => (
               <button
                 key={action.id}
@@ -514,20 +514,20 @@ const HeroIntelligencePanel: React.FC<HeroIntelligencePanelProps> = ({
                 }}
                 disabled={action.loading}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  action.type === 'primary'
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 shadow-lg'
-                    : action.type === 'secondary'
-                    ? 'bg-white/20 text-white hover:bg-white/30 border border-white/30'
-                    : 'bg-transparent text-white/70 hover:text-white hover:bg-white/10'
-                } ${action.loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  action.type === &apos;primary&apos;
+                    ? &apos;bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 shadow-lg&apos;
+                    : action.type === &apos;secondary&apos;
+                    ? &apos;bg-white/20 text-white hover:bg-white/30 border border-white/30&apos;
+                    : &apos;bg-transparent text-white/70 hover:text-white hover:bg-white/10&apos;
+                } ${action.loading ? &apos;opacity-50 cursor-not-allowed&apos; : &apos;}`}
               >
                 {action.loading ? (
-                  <span className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                  <span className="flex items-center gap-2&quot;>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin&quot;></div>
                     Loading...
                   </span>
                 ) : (
-                  <span className="flex items-center gap-2">
+                  <span className="flex items-center gap-2&quot;>
                     {action.icon && <span>{action.icon}</span>}
                     {action.label}
                   </span>
@@ -537,28 +537,28 @@ const HeroIntelligencePanel: React.FC<HeroIntelligencePanelProps> = ({
           </div>
 
           {/* Expandable Details */}
-          <div className="mt-6">
+          <div className="mt-6&quot;>
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-white/70 hover:text-white text-sm transition-colors"
+              className="text-white/70 hover:text-white text-sm transition-colors&quot;
             >
-              {isExpanded ? 'Hide Details ▲' : 'Show More Details ▼'}
+              {isExpanded ? &apos;Hide Details ▲&apos; : &apos;Show More Details ▼&apos;}
             </button>
             
             {isExpanded && (
-              <div className="mt-4 pt-4 border-t border-white/20 text-left">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="mt-4 pt-4 border-t border-white/20 text-left&quot;>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm&quot;>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Performance Metrics</h4>
-                    <div className="space-y-1 text-white/70">
+                    <h4 className="font-semibold text-white mb-2&quot;>Performance Metrics</h4>
+                    <div className="space-y-1 text-white/70&quot;>
                       <div>Response Time: {stats.server_response_time}ms</div>
                       <div>Uptime: {stats.uptime_percentage}%</div>
                       <div>API Calls/min: {stats.api_calls_per_minute}</div>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Recent Activity</h4>
-                    <div className="space-y-1 text-white/70">
+                    <h4 className="font-semibold text-white mb-2&quot;>Recent Activity</h4>
+                    <div className="space-y-1 text-white/70&quot;>
                       <div>Trial Starters Today: {stats.trial_starters_today}</div>
                       <div>Active Users: {stats.active_users}</div>
                       <div>Last Updated: Just now</div>
@@ -583,10 +583,10 @@ const QuickInsightBar: React.FC<{
   const insights = [
     `${metrics.current_visitors} people visiting now`,
     `${metrics.trial_starters_today} started trial today`,
-    "Startup XYZ just switched to this tool",
-    "Version 3.2 released with new features",
-    "Trending on Twitter - 2.3k mentions",
-    "Github stars +127 this week"
+    &quot;Startup XYZ just switched to this tool&quot;,
+    &quot;Version 3.2 released with new features&quot;,
+    &quot;Trending on Twitter - 2.3k mentions&quot;,
+    &quot;Github stars +127 this week&quot;
   ];
 
   useEffect(() => {
@@ -597,21 +597,21 @@ const QuickInsightBar: React.FC<{
   }, [insights.length]);
 
   return (
-    <div className="relative z-20 max-w-6xl mx-auto px-4">
-      <div className="bg-black/30 backdrop-blur-sm rounded-lg border border-white/10 px-6 py-3">
-        <div className="flex items-center gap-4">
-          <span className="text-green-400 text-sm">● LIVE</span>
-          <div className="flex-1 overflow-hidden">
-            <div className="animate-fade-in">
-              <span className="text-white/80 text-sm">{insights[currentInsight]}</span>
+    <div className="relative z-20 max-w-6xl mx-auto px-4&quot;>
+      <div className="bg-black/30 backdrop-blur-sm rounded-lg border border-white/10 px-6 py-3&quot;>
+        <div className="flex items-center gap-4&quot;>
+          <span className="text-green-400 text-sm&quot;>● LIVE</span>
+          <div className="flex-1 overflow-hidden&quot;>
+            <div className="animate-fade-in&quot;>
+              <span className="text-white/80 text-sm&quot;>{insights[currentInsight]}</span>
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2&quot;>
             {insights.map((_, index) => (
               <div
                 key={index}
                 className={`w-1 h-1 rounded-full transition-all ${
-                  index === currentInsight ? 'bg-white' : 'bg-white/30'
+                  index === currentInsight ? &apos;bg-white&apos; : &apos;bg-white/30&apos;
                 }`}
               />
             ))}
@@ -638,32 +638,32 @@ export const ImmersiveHeader: React.FC<ImmersiveHeaderProps> = ({
 
   const primaryActions: PrimaryAction[] = [
     {
-      id: 'visit_website',
-      label: 'Visit Website',
-      type: 'primary',
-      action: () => onAction('visit_website'),
-      icon: '🌐'
+      id: &apos;visit_website&apos;,
+      label: &apos;Visit Website&apos;,
+      type: &apos;primary&apos;,
+      action: () => onAction(&apos;visit_website&apos;),
+      icon: &apos;🌐&apos;
     },
     {
-      id: 'start_trial',
-      label: 'Start Free Trial',
-      type: 'secondary',
-      action: () => onAction('start_trial'),
-      icon: '🚀'
+      id: &apos;start_trial&apos;,
+      label: &apos;Start Free Trial&apos;,
+      type: &apos;secondary&apos;,
+      action: () => onAction(&apos;start_trial&apos;),
+      icon: &apos;🚀&apos;
     },
     {
-      id: 'add_to_sanctuary',
-      label: 'Add to Sanctuary',
-      type: 'secondary',
-      action: () => onAction('add_to_sanctuary'),
-      icon: '✨'
+      id: &apos;add_to_sanctuary&apos;,
+      label: &apos;Add to Sanctuary&apos;,
+      type: &apos;secondary&apos;,
+      action: () => onAction(&apos;add_to_sanctuary&apos;),
+      icon: &apos;✨&apos;
     },
     {
-      id: 'compare',
-      label: 'Compare',
-      type: 'tertiary',
-      action: () => onAction('compare'),
-      icon: '⚖️'
+      id: &apos;compare&apos;,
+      label: &apos;Compare&apos;,
+      type: &apos;tertiary&apos;,
+      action: () => onAction(&apos;compare&apos;),
+      icon: &apos;⚖️
     }
   ];
 
@@ -681,7 +681,7 @@ export const ImmersiveHeader: React.FC<ImmersiveHeaderProps> = ({
   }, []);
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden&quot;>
       {/* Dynamic Tool Canvas Background */}
       <DynamicToolCanvas
         visualSeed={immersiveData.visual_seed}
@@ -692,7 +692,7 @@ export const ImmersiveHeader: React.FC<ImmersiveHeaderProps> = ({
 
       {/* Tool Aura Overlay */}
       <div 
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none&quot;
         style={{
           background: `radial-gradient(circle at center, ${immersiveData.tool_aura.primary_color}20 0%, transparent 70%)`,
         }}
@@ -706,7 +706,7 @@ export const ImmersiveHeader: React.FC<ImmersiveHeaderProps> = ({
       />
 
       {/* Quick Insight Bar */}
-      <div className="absolute bottom-8 left-0 right-0">
+      <div className="absolute bottom-8 left-0 right-0&quot;>
         <QuickInsightBar
           metrics={stats}
           activity={tool.real_time_data.recent_activity}

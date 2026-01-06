@@ -1,5 +1,5 @@
-import { SearchResult, SearchOptions, Document } from './searchService';
-import { processNaturalLanguageQuery } from './naturalLanguageProcessor';
+import { SearchResult, SearchOptions, Document } from &apos;./searchService&apos;;
+import { processNaturalLanguageQuery } from &apos;./naturalLanguageProcessor&apos;;
 
 // Field weights for search relevance
 const FIELD_WEIGHTS = {
@@ -15,12 +15,12 @@ const FIELD_WEIGHTS = {
 
 // Common AI term expansions for better matching
 const AI_TERM_EXPANSIONS: Record<string, string[]> = {
-  'ai': ['artificial intelligence', 'machine learning', 'ml'],
-  'ml': ['machine learning', 'ai', 'artificial intelligence'],
-  'llm': ['large language model', 'gpt', 'generative ai'],
-  'nlp': ['natural language processing', 'text analysis'],
-  'cv': ['computer vision', 'image recognition', 'object detection'],
-  'gpt': ['chatgpt', 'openai', 'llm', 'large language model']
+  &apos;ai&apos;: [&apos;artificial intelligence&apos;, &apos;machine learning&apos;, &apos;ml&apos;],
+  &apos;ml&apos;: [&apos;machine learning&apos;, &apos;ai&apos;, &apos;artificial intelligence&apos;],
+  &apos;llm&apos;: [&apos;large language model&apos;, &apos;gpt&apos;, &apos;generative ai&apos;],
+  &apos;nlp&apos;: [&apos;natural language processing&apos;, &apos;text analysis&apos;],
+  &apos;cv&apos;: [&apos;computer vision&apos;, &apos;image recognition&apos;, &apos;object detection&apos;],
+  &apos;gpt&apos;: [&apos;chatgpt&apos;, &apos;openai&apos;, &apos;llm&apos;, &apos;large language model&apos;]
 };
 
 /**
@@ -306,8 +306,8 @@ function generateRelevantSnippet(
   // Highlight query terms
   queryTerms.forEach(term => {
     if (term.length < 3) return;
-    const regex = new RegExp(`(${term})`, 'gi');
-    snippet = snippet.replace(regex, '<mark>$1</mark>');
+    const regex = new RegExp(`(${term})`, &apos;gi&apos;);
+    snippet = snippet.replace(regex, &apos;<mark>$1</mark>');
   });
   
   // Add ellipsis if needed
@@ -377,7 +377,7 @@ function applyEnhancedFilters(
     
     // Date filters
     if (filters.date && doc.publishedAt) {
-      const docDate = new Date(doc.publishedAt).toISOString().split('T')[0];
+      const docDate = new Date(doc.publishedAt).toISOString().split(&apos;T&apos;)[0];
       if (docDate !== filters.date) return false;
     }
     

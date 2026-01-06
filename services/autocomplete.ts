@@ -2,8 +2,8 @@
  * Autocomplete service for search suggestions
  */
 
-import { Document } from './searchService';
-import { fuzzySearch } from './fuzzySearch';
+import { Document } from &apos;./searchService&apos;;
+import { fuzzySearch } from &apos;./fuzzySearch&apos;;
 
 // Simple trie data structure for fast prefix matching
 class TrieNode {
@@ -78,7 +78,7 @@ let isInitialized = false;
 export async function initializeAutocomplete(documents: Document[]) {
   if (isInitialized) return;
   
-  console.log('Initializing autocomplete with', documents.length, 'documents');
+  console.log(&apos;Initializing autocomplete with&apos;, documents.length, &apos;documents&apos;);
   
   // Extract common terms from documents
   const termFrequency = new Map<string, number>();
@@ -133,10 +133,10 @@ export async function initializeAutocomplete(documents: Document[]) {
   
   // Add some common search prefixes
   const commonPrefixes = [
-    'ai', 'artificial', 'intelligence', 'machine', 'learning', 'deep', 'neural',
-    'natural', 'language', 'processing', 'computer', 'vision', 'robotics',
-    'data', 'analytics', 'automation', 'chatbot', 'image', 'video', 'audio',
-    'text', 'generation', 'translation', 'recognition', 'detection', 'prediction'
+    &apos;ai&apos;, &apos;artificial&apos;, &apos;intelligence&apos;, &apos;machine&apos;, &apos;learning&apos;, &apos;deep&apos;, &apos;neural&apos;,
+    &apos;natural&apos;, &apos;language&apos;, &apos;processing&apos;, &apos;computer&apos;, &apos;vision&apos;, &apos;robotics&apos;,
+    &apos;data&apos;, &apos;analytics&apos;, &apos;automation&apos;, &apos;chatbot&apos;, &apos;image&apos;, &apos;video&apos;, &apos;audio&apos;,
+    &apos;text&apos;, &apos;generation&apos;, &apos;translation&apos;, &apos;recognition&apos;, &apos;detection&apos;, &apos;prediction&apos;
   ];
   
   for (const prefix of commonPrefixes) {
@@ -144,7 +144,7 @@ export async function initializeAutocomplete(documents: Document[]) {
   }
   
   isInitialized = true;
-  console.log('Autocomplete initialization complete');
+  console.log(&apos;Autocomplete initialization complete&apos;);
 }
 
 // Get autocomplete suggestions
@@ -197,18 +197,18 @@ export function getAutocompleteSuggestions(
 // Get trending search terms
 export function getTrendingSearchTerms(limit: number = 10): string[] {
   // This would typically come from analytics data
-  // For now, we'll return some common terms
+  // For now, we&apos;ll return some common terms
   return [
-    'ai tools',
-    'chatgpt alternatives',
-    'image generation',
-    'video editing',
-    'content creation',
-    'machine learning',
-    'natural language processing',
-    'data analysis',
-    'automation tools',
-    'productivity apps'
+    &apos;ai tools&apos;,
+    &apos;chatgpt alternatives&apos;,
+    &apos;image generation&apos;,
+    &apos;video editing&apos;,
+    &apos;content creation&apos;,
+    &apos;machine learning&apos;,
+    &apos;natural language processing&apos;,
+    &apos;data analysis&apos;,
+    &apos;automation tools&apos;,
+    &apos;productivity apps&apos;
   ].slice(0, limit);
 }
 

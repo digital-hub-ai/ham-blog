@@ -1,14 +1,14 @@
-import { useState } from "react";
-import Head from "next/head";
-import { ComparisonProvider } from "../lib/comparison-context";
-import QuantumComparator from "../components/quantum-comparator";
+import { useState } from &quot;react&quot;;
+import Head from &quot;next/head&quot;;
+import { ComparisonProvider } from &quot;../lib/comparison-context&quot;;
+import QuantumComparator from &quot;../components/quantum-comparator&quot;;
 
 export default function ComparePage() {
   return (
     <>
       <Head>
         <title>Quantum Comparator - AI Vault</title>
-        <meta name="description" content="AI-powered tool comparison with decision intelligence" />
+        <meta name="description&quot; content="AI-powered tool comparison with decision intelligence&quot; />
       </Head>
       
       <ComparisonProvider>

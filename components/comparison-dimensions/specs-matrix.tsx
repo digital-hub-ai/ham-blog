@@ -11,8 +11,8 @@ interface SpecsMatrixProps {
 }
 
 export default function SpecsMatrix({ tools, userPreferences, onReady }: SpecsMatrixProps) {
-  const [sortBy, setSortBy] = useState<'relevance' | 'name' | 'category'>('relevance');
-  const [filterCategory, setFilterCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'relevance' | 'name' | 'category'>(&apos;relevance&apos;);
+  const [filterCategory, setFilterCategory] = useState<string>(&apos;all&apos;);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['core']));
 
   const selectedTools = tools.map(toolName => 
@@ -90,61 +90,61 @@ export default function SpecsMatrix({ tools, userPreferences, onReady }: SpecsMa
 
   const renderFeatureCell = (tool: any, feature: string) => {
     const value = getFeatureValue(tool, feature);
-    const hasFeature = typeof value === 'boolean' ? value : value !== null;
+    const hasFeature = typeof value === &apos;boolean&apos; ? value : value !== null;
 
     return (
-      <td className="px-4 py-3 text-center border border-white/10">
+      <td className="px-4 py-3 text-center border border-white/10&quot;>
         {hasFeature ? (
-          <div className="flex items-center justify-center">
-            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-            {typeof value === 'string' && (
-              <span className="ml-2 text-sm text-gray-300">{value}</span>
+          <div className="flex items-center justify-center&quot;>
+            <div className="w-2 h-2 bg-green-400 rounded-full&quot;></div>
+            {typeof value === &apos;string&apos; && (
+              <span className="ml-2 text-sm text-gray-300&quot;>{value}</span>
             )}
           </div>
         ) : (
-          <div className="w-2 h-2 bg-gray-600 rounded-full mx-auto"></div>
+          <div className="w-2 h-2 bg-gray-600 rounded-full mx-auto&quot;></div>
         )}
       </td>
     );
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6&quot;>
       {/* Header */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-2">Specs Matrix</h2>
-        <p className="text-gray-400">Comprehensive feature comparison with smart categorization</p>
+      <div className="mb-6&quot;>
+        <h2 className="text-2xl font-bold mb-2&quot;>Specs Matrix</h2>
+        <p className="text-gray-400&quot;>Comprehensive feature comparison with smart categorization</p>
       </div>
 
       {/* Controls */}
-      <div className="flex gap-4 mb-6">
-        <div className="flex gap-2">
+      <div className="flex gap-4 mb-6&quot;>
+        <div className="flex gap-2&quot;>
           <button
-            onClick={() => setSortBy('relevance')}
+            onClick={() => setSortBy(&apos;relevance&apos;)}
             className={`px-3 py-1 rounded text-sm ${
-              sortBy === 'relevance' 
-                ? 'bg-blue-500 text-white' 
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              sortBy === &apos;relevance&apos; 
+                ? &apos;bg-blue-500 text-white&apos; 
+                : &apos;bg-white/10 text-gray-300 hover:bg-white/20&apos;
             }`}
           >
             Relevance
           </button>
           <button
-            onClick={() => setSortBy('name')}
+            onClick={() => setSortBy(&apos;name&apos;)}
             className={`px-3 py-1 rounded text-sm ${
-              sortBy === 'name' 
-                ? 'bg-blue-500 text-white' 
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              sortBy === &apos;name&apos; 
+                ? &apos;bg-blue-500 text-white&apos; 
+                : &apos;bg-white/10 text-gray-300 hover:bg-white/20&apos;
             }`}
           >
             Name
           </button>
           <button
-            onClick={() => setSortBy('category')}
+            onClick={() => setSortBy(&apos;category&apos;)}
             className={`px-3 py-1 rounded text-sm ${
-              sortBy === 'category' 
-                ? 'bg-blue-500 text-white' 
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              sortBy === &apos;category&apos; 
+                ? &apos;bg-blue-500 text-white&apos; 
+                : &apos;bg-white/10 text-gray-300 hover:bg-white/20
             }`}
           >
             Category
@@ -153,15 +153,15 @@ export default function SpecsMatrix({ tools, userPreferences, onReady }: SpecsMa
       </div>
 
       {/* Comparison Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
+      <div className="overflow-x-auto&quot;>
+        <table className="w-full border-collapse&quot;>
           <thead>
-            <tr className="bg-white/10">
-              <th className="px-4 py-3 text-left border border-white/10">Feature</th>
+            <tr className="bg-white/10&quot;>
+              <th className="px-4 py-3 text-left border border-white/10&quot;>Feature</th>
               {tools.map((toolName) => (
-                <th key={toolName} className="px-4 py-3 text-center border border-white/10">
-                  <div className="font-semibold">{toolName}</div>
-                  <div className="text-xs text-gray-400">{allTools.find(t => t && t.name === toolName)?.category || 'Unknown'}</div>
+                <th key={toolName} className="px-4 py-3 text-center border border-white/10&quot;>
+                  <div className="font-semibold&quot;>{toolName}</div>
+                  <div className="text-xs text-gray-400&quot;>{allTools.find(t => t && t.name === toolName)?.category || &apos;Unknown&apos;}</div>
                 </th>
               ))}
             </tr>
@@ -169,30 +169,30 @@ export default function SpecsMatrix({ tools, userPreferences, onReady }: SpecsMa
           <tbody>
             {Object.entries(featureCategories).map(([categoryId, category]) => (
               <tr key={categoryId}>
-                <td colSpan={tools.length + 1} className="px-0 py-0">
-                  <div className="bg-white/5">
+                <td colSpan={tools.length + 1} className="px-0 py-0&quot;>
+                  <div className="bg-white/5&quot;>
                     <button
                       onClick={() => toggleSection(categoryId)}
-                      className="w-full px-4 py-3 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                      className="w-full px-4 py-3 flex items-center gap-3 hover:bg-white/10 transition-colors&quot;
                     >
-                      <span className="text-lg">{category.icon}</span>
-                      <span className="font-semibold">{category.name}</span>
-                      <span className="ml-auto text-sm text-gray-400">
-                        {expandedSections.has(categoryId) ? '▼' : '▶'}
+                      <span className="text-lg&quot;>{category.icon}</span>
+                      <span className="font-semibold&quot;>{category.name}</span>
+                      <span className="ml-auto text-sm text-gray-400&quot;>
+                        {expandedSections.has(categoryId) ? &apos;▼&apos; : &apos;▶&apos;}
                       </span>
                     </button>
                     
                     {expandedSections.has(categoryId) && (
-                      <div className="border-t border-white/10">
+                      <div className="border-t border-white/10&quot;>
                         {category.features.map((feature) => (
-                          <tr key={feature} className="hover:bg-white/5">
-                            <td className="px-4 py-3 border border-white/10">
-                              <div className="flex items-center gap-2">
-                                <span className="text-sm text-gray-300 capitalize">
-                                  {feature.replace(/_/g, ' ')}
+                          <tr key={feature} className="hover:bg-white/5&quot;>
+                            <td className="px-4 py-3 border border-white/10&quot;>
+                              <div className="flex items-center gap-2&quot;>
+                                <span className="text-sm text-gray-300 capitalize&quot;>
+                                  {feature.replace(/_/g, &apos; &apos;)}
                                 </span>
-                                {sortBy === 'relevance' && (
-                                  <span className="text-xs text-blue-400">
+                                {sortBy === &apos;relevance&apos; && (
+                                  <span className="text-xs text-blue-400&quot;>
                                     {Math.round(calculateRelevance(feature))}%
                                   </span>
                                 )}
@@ -212,17 +212,17 @@ export default function SpecsMatrix({ tools, userPreferences, onReady }: SpecsMa
       </div>
 
       {/* Legend */}
-      <div className="mt-6 flex items-center gap-6 text-sm text-gray-400">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+      <div className="mt-6 flex items-center gap-6 text-sm text-gray-400&quot;>
+        <div className="flex items-center gap-2&quot;>
+          <div className="w-2 h-2 bg-green-400 rounded-full&quot;></div>
           <span>Available</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+        <div className="flex items-center gap-2&quot;>
+          <div className="w-2 h-2 bg-gray-600 rounded-full&quot;></div>
           <span>Not Available</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-blue-400">%</span>
+        <div className="flex items-center gap-2&quot;>
+          <span className="text-blue-400&quot;>%</span>
           <span>Relevance Score</span>
         </div>
       </div>

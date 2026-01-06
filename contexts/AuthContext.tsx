@@ -17,7 +17,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error(&apos;useAuth must be used within an AuthProvider&apos;);
   }
   return context;
 };
@@ -113,11 +113,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async () => {
     try {
-      await fetch('/api/auth/logout', { method: 'POST' });
+      await fetch(&apos;/api/auth/logout&apos;, { method: &apos;POST&apos; });
       setUser(null);
-      router.push('/login');
+      router.push(&apos;/login&apos;);
     } catch (error) {
-      console.error('Logout error:', error);
+      console.error(&apos;Logout error:&apos;, error);
     }
   };
 

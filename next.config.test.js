@@ -1,10 +1,10 @@
-/** @type {import('next').NextConfig} */
+/** @type {import(&apos;next&apos;).NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'standalone',
+  output: &apos;standalone&apos;,
   experimental: {
-    outputFileTracingRoot: path.join(__dirname, '../../'),
+    outputFileTracingRoot: path.join(__dirname, &apos;../../&apos;),
   },
   typescript: {
     // !! WARN !!

@@ -12,10 +12,10 @@ db.serialize(() => {
   // Query the data
   db.each('SELECT id, name FROM test', (err, row) => {
     if (err) {
-      console.error('Error:', err);
+      console.error(&apos;Error:&apos;, err);
     } else {
-      console.log('✅ Database test successful!');
-      console.log('Row:', row);
+      console.log(&apos;✅ Database test successful!&apos;);
+      console.log(&apos;Row:&apos;, row);
     }
   });
 });

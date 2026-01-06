@@ -1,69 +1,69 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from &apos;react&apos;;
+import Head from &apos;next/head&apos;;
+import Link from &apos;next/link&apos;;
 
 export default function RelationshipsIndex() {
   // Relationships articles
   const relationshipsArticles = [
     {
-      id: 'effective-communication',
-      title: 'Effective Communication in Relationships',
-      excerpt: 'Master the art of meaningful dialogue to build stronger connections with your loved ones.',
-      date: 'Dec 19, 2025'
+      id: &apos;effective-communication&apos;,
+      title: &apos;Effective Communication in Relationships&apos;,
+      excerpt: &apos;Master the art of meaningful dialogue to build stronger connections with your loved ones.&apos;,
+      date: &apos;Dec 19, 2025&apos;
     },
     {
-      id: 'building-trust',
-      title: 'Building Trust and Intimacy',
-      excerpt: 'Learn proven strategies to develop deeper trust and emotional closeness in your relationships.',
-      date: 'Dec 18, 2025'
+      id: &apos;building-trust&apos;,
+      title: &apos;Building Trust and Intimacy&apos;,
+      excerpt: &apos;Learn proven strategies to develop deeper trust and emotional closeness in your relationships.&apos;,
+      date: &apos;Dec 18, 2025&apos;
     },
     {
-      id: 'conflict-resolution',
-      title: 'Conflict Resolution Skills',
-      excerpt: 'Transform disagreements into opportunities for growth and deeper understanding.',
-      date: 'Dec 17, 2025'
+      id: &apos;conflict-resolution&apos;,
+      title: &apos;Conflict Resolution Skills&apos;,
+      excerpt: &apos;Transform disagreements into opportunities for growth and deeper understanding.&apos;,
+      date: &apos;Dec 17, 2025&apos;
     },
     {
-      id: 'emotional-intelligence',
-      title: 'Emotional Intelligence in Relationships',
-      excerpt: 'Develop emotional intelligence to enhance relationship satisfaction and intimacy.',
-      date: 'Dec 17, 2025'
+      id: &apos;emotional-intelligence&apos;,
+      title: &apos;Emotional Intelligence in Relationships&apos;,
+      excerpt: &apos;Develop emotional intelligence to enhance relationship satisfaction and intimacy.&apos;,
+      date: &apos;Dec 17, 2025&apos;
     },
     {
-      id: 'long-distance',
-      title: 'Maintaining Long-Distance Relationships',
-      excerpt: 'Proven strategies for keeping love alive across miles and time zones.',
-      date: 'Dec 16, 2025'
+      id: &apos;long-distance&apos;,
+      title: &apos;Maintaining Long-Distance Relationships&apos;,
+      excerpt: &apos;Proven strategies for keeping love alive across miles and time zones.&apos;,
+      date: &apos;Dec 16, 2025&apos;
     },
     {
-      id: 'friendship-dynamics',
-      title: 'Friendship Dynamics and Maintenance',
-      excerpt: 'Nurture lifelong bonds through understanding and intentional connection.',
-      date: 'Dec 15, 2025'
+      id: &apos;friendship-dynamics&apos;,
+      title: &apos;Friendship Dynamics and Maintenance&apos;,
+      excerpt: &apos;Nurture lifelong bonds through understanding and intentional connection.&apos;,
+      date: &apos;Dec 15, 2025&apos;
     },
     {
-      id: 'family-challenges',
-      title: 'Family Relationship Challenges',
-      excerpt: 'Navigate complex family dynamics with communication and healthy boundaries.',
-      date: 'Dec 14, 2025'
+      id: &apos;family-challenges&apos;,
+      title: &apos;Family Relationship Challenges&apos;,
+      excerpt: &apos;Navigate complex family dynamics with communication and healthy boundaries.&apos;,
+      date: &apos;Dec 14, 2025&apos;
     },
     {
-      id: 'workplace-boundaries',
-      title: 'Workplace Relationship Boundaries',
-      excerpt: 'Maintain professional connections while protecting your career and wellbeing.',
-      date: 'Dec 13, 2025'
+      id: &apos;workplace-boundaries&apos;,
+      title: &apos;Workplace Relationship Boundaries&apos;,
+      excerpt: &apos;Maintain professional connections while protecting your career and wellbeing.&apos;,
+      date: &apos;Dec 13, 2025&apos;
     },
     {
-      id: 'self-love',
-      title: 'Self-Love and Healthy Relationships',
-      excerpt: 'Discover how self-compassion forms the foundation for all healthy connections.',
-      date: 'Dec 12, 2025'
+      id: &apos;self-love&apos;,
+      title: &apos;Self-Love and Healthy Relationships&apos;,
+      excerpt: &apos;Discover how self-compassion forms the foundation for all healthy connections.&apos;,
+      date: &apos;Dec 12, 2025&apos;
     },
     {
-      id: 'navigating-transitions',
-      title: 'Navigating Relationship Transitions',
-      excerpt: 'Adapt to life changes and build stronger bonds through transformation.',
-      date: 'Dec 11, 2025'
+      id: &apos;navigating-transitions&apos;,
+      title: &apos;Navigating Relationship Transitions&apos;,
+      excerpt: &apos;Adapt to life changes and build stronger bonds through transformation.&apos;,
+      date: &apos;Dec 11, 2025&apos;
     }
   ];
 
@@ -71,46 +71,46 @@ export default function RelationshipsIndex() {
     <>
       <Head>
         <title>Relationships | Lifestyle Dimension</title>
-        <meta name="description" content="Build stronger connections through communication, empathy, and emotional intelligence." />
+        <meta name="description&quot; content="Build stronger connections through communication, empathy, and emotional intelligence.&quot; />
       </Head>
 
-      <div className="min-h-screen bg-white text-black">
-        <div className="container mx-auto px-4 py-12 max-w-6xl">
-          <Link href="/blog/lifestyle" className="inline-flex items-center text-violet-600 hover:text-violet-800 mb-8">
-            <span className="mr-2">←</span>
+      <div className="min-h-screen bg-white text-black&quot;>
+        <div className="container mx-auto px-4 py-12 max-w-6xl&quot;>
+          <Link href="/blog/lifestyle&quot; className="inline-flex items-center text-violet-600 hover:text-violet-800 mb-8&quot;>
+            <span className="mr-2&quot;>←</span>
             Back to Lifestyle
           </Link>
 
-          <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <div className="mb-12&quot;>
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4&quot;>
               Relationships
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl">
+            <p className="text-xl text-gray-700 max-w-3xl&quot;>
               Build stronger connections through communication, empathy, and emotional intelligence.
             </p>
           </div>
 
           {relationshipsArticles.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {relationshipsArticles.map((article) => (
                 <article 
                   key={article.id}
-                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300&quot;
                 >
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-black hover:text-violet-700 transition-colors">
+                  <div className="p-6&quot;>
+                    <h3 className="text-xl font-bold mb-3 text-black hover:text-violet-700 transition-colors&quot;>
                       <Link href={`/blog/lifestyle/relationships/${article.id}`}>
                         {article.title}
                       </Link>
                     </h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 mb-4&quot;>
                       {article.excerpt}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-500 text-sm">{article.date}</span>
+                    <div className="flex items-center justify-between&quot;>
+                      <span className="text-gray-500 text-sm&quot;>{article.date}</span>
                       <Link 
                         href={`/blog/lifestyle/relationships/${article.id}`}
-                        className="text-violet-600 hover:text-violet-800 text-sm"
+                        className="text-violet-600 hover:text-violet-800 text-sm&quot;
                       >
                         Read Guide →
                       </Link>
@@ -120,19 +120,19 @@ export default function RelationshipsIndex() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <div className="text-5xl mb-4">❤️</div>
-              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
-              <p className="text-gray-600 max-w-md mx-auto">
-                We're working on bringing you the latest insights in building meaningful relationships.
+            <div className="text-center py-12&quot;>
+              <div className="text-5xl mb-4&quot;>❤️</div>
+              <h3 className="text-2xl font-bold mb-2&quot;>Coming Soon</h3>
+              <p className="text-gray-600 max-w-md mx-auto&quot;>
+                We&apos;re working on bringing you the latest insights in building meaningful relationships.
               </p>
             </div>
           )}
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center&quot;>
             <Link 
-              href="/blog/lifestyle"
-              className="inline-flex items-center px-6 py-3 bg-violet-600 text-white rounded-lg font-semibold hover:bg-violet-700 transition-all duration-300"
+              href="/blog/lifestyle&quot;
+              className="inline-flex items-center px-6 py-3 bg-violet-600 text-white rounded-lg font-semibold hover:bg-violet-700 transition-all duration-300&quot;
             >
               ← Back to Lifestyle Dimension
             </Link>

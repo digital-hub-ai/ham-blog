@@ -73,55 +73,55 @@ async function testAuthFlow() {
   
   // Get the auth token from cookies for subsequent requests
   const cookies = loginResponse.headers['set-cookie'];
-  const authCookie = cookies?.find(cookie => cookie.startsWith('auth-token='));
+  const authCookie = cookies?.find(cookie => cookie.startsWith(&apos;auth-token='));
   
   if (!authCookie) {
-    console.error('❌ No auth token cookie found in login response');
+    console.error(&apos;❌ No auth token cookie found in login response&apos;);
     return;
   }
   
-  console.log('   Auth cookie found');
+  console.log(&apos;   Auth cookie found&apos;);
   
   // 3. Test getting current user
-  console.log('\n3. Testing get current user...');
-  const meResponse = await makeRequest('get', '/me', null, {
+  console.log(&apos;\n3. Testing get current user...&apos;);
+  const meResponse = await makeRequest(&apos;get&apos;, &apos;/me&apos;, null, {
     Cookie: authCookie,
   });
   
   if (meResponse.error) {
-    console.error('❌ Get current user failed:', meResponse.error);
+    console.error(&apos;❌ Get current user failed:&apos;, meResponse.error);
     return;
   }
   
-  console.log('✅ Get current user successful:', meResponse.data);
+  console.log(&apos;✅ Get current user successful:&apos;, meResponse.data);
   
   // 4. Test logout
-  console.log('\n4. Testing logout...');
-  const logoutResponse = await makeRequest('post', '/logout', null, {
+  console.log(&apos;\n4. Testing logout...&apos;);
+  const logoutResponse = await makeRequest(&apos;post&apos;, &apos;/logout&apos;, null, {
     Cookie: authCookie,
   });
   
   if (logoutResponse.error) {
-    console.error('❌ Logout failed:', logoutResponse.error);
+    console.error(&apos;❌ Logout failed:&apos;, logoutResponse.error);
     return;
   }
   
-  console.log('✅ Logout successful');
-  console.log('   Status:', logoutResponse.status);
+  console.log(&apos;✅ Logout successful&apos;);
+  console.log(&apos;   Status:&apos;, logoutResponse.status);
   
   // 5. Verify session is invalid after logout
-  console.log('\n5. Verifying session is invalid after logout...');
-  const meAfterLogout = await makeRequest('get', '/me', null, {
+  console.log(&apos;\n5. Verifying session is invalid after logout...&apos;);
+  const meAfterLogout = await makeRequest(&apos;get&apos;, &apos;/me&apos;, null, {
     Cookie: authCookie,
   });
   
   if (meAfterLogout.status === 401) {
-    console.log('✅ Session is invalid after logout (as expected)');
+    console.log(&apos;✅ Session is invalid after logout (as expected)&apos;);
   } else {
-    console.error('❌ Session is still valid after logout');
+    console.error(&apos;❌ Session is still valid after logout&apos;);
   }
   
-  console.log('\n🎉 Authentication flow test completed successfully!');
+  console.log(&apos;\n🎉 Authentication flow test completed successfully!&apos;);
 }
 
 // Run the test

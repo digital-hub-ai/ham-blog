@@ -1,35 +1,35 @@
-import { sign, verify } from 'jsonwebtoken';
-import { SignJWT, jwtVerify } from 'jose';
-import { User, UserWithoutPassword } from '@/types/user';
-import { NextApiRequest } from 'next';
+import { sign, verify } from &apos;jsonwebtoken&apos;;
+import { SignJWT, jwtVerify } from &apos;jose&apos;;
+import { User, UserWithoutPassword } from &apos;@/types/user&apos;;
+import { NextApiRequest } from &apos;next&apos;;
 
-const COOKIE_NAME = 'auth-token';
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
-const JWT_EXPIRES_IN = '30d';
+const COOKIE_NAME = &apos;auth-token&apos;;
+const JWT_SECRET = process.env.JWT_SECRET || &apos;your-secret-key&apos;;
+const JWT_EXPIRES_IN = &apos;30d&apos;;
 
 // Type for cookie options
 interface CookieOptions {
   httpOnly: boolean;
   secure: boolean;
-  sameSite: 'strict' | 'lax' | 'none';
+  sameSite: &apos;strict&apos; | &apos;lax&apos; | &apos;none&apos;;
   maxAge: number;
   path: string;
 }
 
 export async function hashPassword(password: string): Promise<string> {
-  const bcrypt = await import('bcryptjs');
+  const bcrypt = await import(&apos;bcryptjs&apos;);
   return bcrypt.hash(password, 10);
 }
 
 export async function verifyPassword(password: string, hashedPassword: string): Promise<boolean> {
-  const bcrypt = await import('bcryptjs');
+  const bcrypt = await import(&apos;bcryptjs&apos;);
   return bcrypt.compare(password, hashedPassword);
 }
 
 export async function createToken(user: UserWithoutPassword): Promise<string> {
   const secret = new TextEncoder().encode(JWT_SECRET);
   const token = await new SignJWT({ ...user })
-    .setProtectedHeader({ alg: 'HS256' })
+    .setProtectedHeader({ alg: &apos;HS256&apos; })
     .setIssuedAt()
     .setExpirationTime(JWT_EXPIRES_IN)
     .sign(secret);
@@ -39,12 +39,12 @@ export async function createToken(user: UserWithoutPassword): Promise<string> {
 
 export async function setAuthCookie(token: string): Promise<void> {
   // This function is not used in API routes
-  throw new Error('setAuthCookie should not be called in API routes');
+  throw new Error(&apos;setAuthCookie should not be called in API routes&apos;);
 }
 
 export async function removeAuthCookie(): Promise<void> {
   // This function is not used in API routes
-  throw new Error('removeAuthCookie should not be called in API routes');
+  throw new Error(&apos;removeAuthCookie should not be called in API routes&apos;);
 }
 
 export async function getCurrentUser(req: NextApiRequest): Promise<UserWithoutPassword | null> {
@@ -58,7 +58,7 @@ export async function getCurrentUser(req: NextApiRequest): Promise<UserWithoutPa
     
     return payload as UserWithoutPassword;
   } catch (error) {
-    console.error('Error verifying token:', error);
+    console.error(&apos;Error verifying token:&apos;, error);
     return null;
   }
 }
@@ -69,7 +69,7 @@ export async function verifyToken(token: string): Promise<UserWithoutPassword | 
     const { payload } = await jwtVerify(token, secret);
     return payload as UserWithoutPassword;
   } catch (error) {
-    console.error('Error verifying token:', error);
+    console.error(&apos;Error verifying token:&apos;, error);
     return null;
   }
 }

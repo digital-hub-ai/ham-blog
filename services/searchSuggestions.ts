@@ -2,17 +2,17 @@
  * Search suggestions service for providing intelligent search recommendations
  */
 
-import { Document } from './searchService';
+import { Document } from &apos;./searchService&apos;;
 
 // Suggestion types
 export type SuggestionType = 
-  | 'query' 
-  | 'category' 
-  | 'subcategory' 
-  | 'tag' 
-  | 'popular' 
-  | 'trending' 
-  | 'recent';
+  | &apos;query&apos; 
+  | &apos;category&apos; 
+  | &apos;subcategory&apos; 
+  | &apos;tag&apos; 
+  | &apos;popular&apos; 
+  | &apos;trending&apos; 
+  | &apos;recent&apos;;
 
 // Search suggestion interface
 export interface SearchSuggestion {
@@ -123,7 +123,7 @@ function getTrendingSuggestions(limit: number = 10): SearchSuggestion[] {
   recentTrending.forEach(([query, entry], index) => {
     suggestions.push({
       id: `trending-${index}`,
-      type: 'trending',
+      type: &apos;trending&apos;,
       text: query,
       popularity: entry.count,
       recency: entry.timestamp,
@@ -153,7 +153,7 @@ function getRecentSuggestions(limit: number = 10): SearchSuggestion[] {
   recentUnique.forEach((search, index) => {
     suggestions.push({
       id: `recent-${index}`,
-      type: 'recent',
+      type: &apos;recent&apos;,
       text: search.query,
       recency: search.timestamp,
       confidence: 0.8 // High confidence for recent searches
@@ -197,7 +197,7 @@ function extractCategories(documents: Document[]): SearchSuggestion[] {
     Array.from(data.subcategories).forEach((subcategory, subIndex) => {
       suggestions.push({
         id: `subcategory-${index}-${subIndex}`,
-        type: 'subcategory',
+        type: &apos;subcategory&apos;,
         text: subcategory,
         category: category,
         confidence: 0.7
@@ -266,7 +266,7 @@ function generateQuerySuggestions(
     .forEach(([query, count], index) => {
       suggestions.push({
         id: `query-${index}`,
-        type: 'query',
+        type: &apos;query&apos;,
         text: query,
         query: query,
         popularity: count,
@@ -274,7 +274,7 @@ function generateQuerySuggestions(
       });
     });
   
-  // If we don't have enough suggestions, add category/subcategory matches
+  // If we don&apos;t have enough suggestions, add category/subcategory matches
   if (suggestions.length < limit) {
     const categorySuggestions = extractCategories(documents)
       .filter(suggestion => 
@@ -286,7 +286,7 @@ function generateQuerySuggestions(
     suggestions.push(...categorySuggestions);
   }
   
-  // If we still don't have enough suggestions, add tag matches
+  // If we still don&apos;t have enough suggestions, add tag matches
   if (suggestions.length < limit) {
     const tagSuggestions = extractTags(documents)
       .filter(suggestion => 

@@ -78,9 +78,9 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
   const renderRadarChart = () => {
     if (tools.length === 0 || selectedMetrics.length === 0) {
       return (
-        <div className="flex items-center justify-center h-96">
-          <div className="text-center text-gray-400">
-            <div className="text-4xl mb-2">📊</div>
+        <div className="flex items-center justify-center h-96&quot;>
+          <div className="text-center text-gray-400&quot;>
+            <div className="text-4xl mb-2&quot;>📊</div>
             <p>Select tools and metrics to visualize</p>
           </div>
         </div>
@@ -93,8 +93,8 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
     const radius = 150;
 
     return (
-      <div className="flex justify-center">
-        <svg width="400" height="400" className="border border-white/20 rounded-lg bg-white/5">
+      <div className="flex justify-center&quot;>
+        <svg width="400&quot; height="400&quot; className="border border-white/20 rounded-lg bg-white/5&quot;>
           {/* Grid circles */}
           {[20, 40, 60, 80, 100].map((level) => (
             <circle
@@ -102,9 +102,9 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
               cx={centerX}
               cy={centerY}
               r={(radius * level) / 100}
-              fill="none"
-              stroke="rgba(255,255,255,0.1)"
-              strokeWidth="1"
+              fill="none&quot;
+              stroke="rgba(255,255,255,0.1)&quot;
+              strokeWidth="1&quot;
             />
           ))}
 
@@ -121,8 +121,8 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
                 y1={centerY}
                 x2={x}
                 y2={y}
-                stroke="rgba(255,255,255,0.2)"
-                strokeWidth="1"
+                stroke="rgba(255,255,255,0.2)&quot;
+                strokeWidth="1&quot;
               />
             );
           })}
@@ -139,16 +139,16 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
               const x = centerX + r * Math.cos(angle - Math.PI / 2);
               const y = centerY + r * Math.sin(angle - Math.PI / 2);
               return `${x},${y}`;
-            }).join(' ');
+            }).join(&apos; &apos;);
 
             return (
               <polygon
                 key={toolName}
                 points={points}
                 fill={color}
-                fillOpacity="0.3"
+                fillOpacity="0.3&quot;
                 stroke={color}
-                strokeWidth="2"
+                strokeWidth="2&quot;
               />
             );
           })}
@@ -165,9 +165,9 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
                 key={metricId}
                 x={x}
                 y={y}
-                textAnchor="middle"
-                fill="white"
-                fontSize="12"
+                textAnchor="middle&quot;
+                fill="white&quot;
+                fontSize="12&quot;
               >
                 {metric?.icon} {metric?.name}
               </text>
@@ -179,27 +179,27 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6&quot;>
       {/* Header */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-2">Performance Radar</h2>
-        <p className="text-gray-400">Multi-dimensional performance visualization</p>
+      <div className="mb-6&quot;>
+        <h2 className="text-2xl font-bold mb-2&quot;>Performance Radar</h2>
+        <p className="text-gray-400&quot;>Multi-dimensional performance visualization</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
         {/* Metrics Selection */}
-        <div className="space-y-4">
-          <h3 className="font-semibold">Select Metrics</h3>
-          <div className="space-y-2">
+        <div className="space-y-4&quot;>
+          <h3 className="font-semibold&quot;>Select Metrics</h3>
+          <div className="space-y-2&quot;>
             {metrics.map((metric) => (
-              <label key={metric.id} className="flex items-center gap-3 cursor-pointer">
+              <label key={metric.id} className="flex items-center gap-3 cursor-pointer&quot;>
                 <input
-                  type="checkbox"
+                  type="checkbox&quot;
                   checked={selectedMetrics.includes(metric.id)}
                   onChange={() => toggleMetric(metric.id)}
-                  className="w-4 h-4 rounded"
+                  className="w-4 h-4 rounded&quot;
                 />
-                <span className="text-lg">{metric.icon}</span>
+                <span className="text-lg&quot;>{metric.icon}</span>
                 <span>{metric.name}</span>
               </label>
             ))}
@@ -207,23 +207,23 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
         </div>
 
         {/* Radar Chart */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2&quot;>
           {renderRadarChart()}
         </div>
       </div>
 
       {/* Performance Scores Table */}
-      <div className="mt-8">
-        <h3 className="font-semibold mb-4">Detailed Scores</h3>
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
+      <div className="mt-8&quot;>
+        <h3 className="font-semibold mb-4&quot;>Detailed Scores</h3>
+        <div className="overflow-x-auto&quot;>
+          <table className="w-full border-collapse&quot;>
             <thead>
-              <tr className="bg-white/10">
-                <th className="px-4 py-2 text-left border border-white/10">Tool</th>
+              <tr className="bg-white/10&quot;>
+                <th className="px-4 py-2 text-left border border-white/10&quot;>Tool</th>
                 {selectedMetrics.map((metricId) => {
                   const metric = metrics.find(m => m.id === metricId);
                   return (
-                    <th key={metricId} className="px-4 py-2 text-center border border-white/10">
+                    <th key={metricId} className="px-4 py-2 text-center border border-white/10&quot;>
                       {metric?.icon}
                     </th>
                   );
@@ -232,11 +232,11 @@ export default function PerformanceRadar({ tools, userPreferences, onReady }: Pe
             </thead>
             <tbody>
               {tools.map((toolName) => (
-                <tr key={toolName} className="hover:bg-white/5">
-                  <td className="px-4 py-2 border border-white/10 font-medium">{toolName}</td>
+                <tr key={toolName} className="hover:bg-white/5&quot;>
+                  <td className="px-4 py-2 border border-white/10 font-medium&quot;>{toolName}</td>
                   {selectedMetrics.map((metricId) => {
                     const score = getPerformanceData(toolName, metricId);
-                    const color = score >= 85 ? 'text-green-400' : score >= 70 ? 'text-yellow-400' : 'text-red-400';
+                    const color = score >= 85 ? 'text-green-400' : score >= 70 ? &apos;text-yellow-400&apos; : &apos;text-red-400&apos;;
                     return (
                       <td key={metricId} className={`px-4 py-2 text-center border border-white/10 ${color}`}>
                         {score}%

@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import Head from &apos;next/head&apos;;
+import { useRouter } from &apos;next/router&apos;;
+import { NextSeo } from &apos;next-seo&apos;;
 
 type SEOProps = {
   title: string;
@@ -28,21 +28,21 @@ export const SEO: React.FC<SEOProps> = ({
   schema,
 }) => {
   const router = useRouter();
-  const siteUrl = 'https://yourwebsite.com'; // Replace with your actual domain
+  const siteUrl = &apos;https://yourwebsite.com&apos;; // Replace with your actual domain
   const pageUrl = `${siteUrl}${router.asPath}`;
   const defaultImage = `${siteUrl}${image}`;
-  const siteName = 'AI Tools Hub'; // Replace with your site name
+  const siteName = &apos;AI Tools Hub&apos;; // Replace with your site name
 
   // Default schema for organization
   const defaultSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    &apos;@context&apos;: &apos;https://schema.org&apos;,
+    &apos;@type&apos;: &apos;WebSite&apos;,
     name: siteName,
     url: siteUrl,
     potentialAction: {
-      '@type': 'SearchAction',
+      &apos;@type&apos;: &apos;SearchAction&apos;,
       target: `${siteUrl}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
+      &apos;query-input&apos;: &apos;required name=search_term_string&apos;,
     },
   };
 
@@ -95,18 +95,18 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Structured Data */}
       <Head>
         <script
-          type="application/ld+json"
+          type="application/ld+json&quot;
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schema || defaultSchema),
           }}
         />
         {publishDate && (
-          <meta property="article:published_time" content={publishDate} />
+          <meta property="article:published_time&quot; content={publishDate} />
         )}
         {modifiedDate && (
-          <meta property="article:modified_time" content={modifiedDate} />
+          <meta property="article:modified_time&quot; content={modifiedDate} />
         )}
-        <link rel="canonical" href={canonical || pageUrl} />
+        <link rel="canonical&quot; href={canonical || pageUrl} />
       </Head>
     </>
   );

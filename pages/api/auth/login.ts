@@ -14,9 +14,9 @@ type NextApiResponse = {
   end: () => void;
 };
 
-import { compare } from 'bcryptjs';
-import { sign } from 'jsonwebtoken';
-import { prisma } from '@/lib/prisma';
+import { compare } from &apos;bcryptjs&apos;;
+import { sign } from &apos;jsonwebtoken&apos;;
+import { prisma } from &apos;@/lib/prisma&apos;;
 
 type LoginRequest = {
   email: string;
@@ -24,12 +24,12 @@ type LoginRequest = {
 };
 
 const JWT_SECRET = process.env.JWT_SECRET!;
-const isProduction = process.env.NODE_ENV === 'production';
-const DOMAIN = isProduction ? '.yourdomain.com' : 'localhost';
+const isProduction = process.env.NODE_ENV === &apos;production&apos;;
+const DOMAIN = isProduction ? &apos;.yourdomain.com&apos; : &apos;localhost&apos;;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== &apos;POST&apos;) {
+    return res.status(405).json({ error: &apos;Method not allowed&apos; });
   }
 
   const { email, password } = req.body;
@@ -37,30 +37,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
-      return res.status(401).json({ error: 'Invalid email or password' });
+      return res.status(401).json({ error: &apos;Invalid email or password&apos; });
     }
 
     const isPasswordValid = await compare(password, user.password);
     if (!isPasswordValid) {
-      return res.status(401).json({ error: 'Invalid email or password' });
+      return res.status(401).json({ error: &apos;Invalid email or password&apos; });
     }
 
     const token = sign(
       { userId: user.id, email: user.email },
       JWT_SECRET,
-      { expiresIn: '7d' }
+      { expiresIn: &apos;7d&apos; }
     );
 
     // Set cookie with Vercel-compatible settings
     res.setHeader(
-      'Set-Cookie',
-      `token=${token}; HttpOnly; Path=/; Max-Age=${process.env.SESSION_EXPIRY || 86400}; ${process.env.NODE_ENV === 'production' ? 'Secure; ' : ''}SameSite=Lax${process.env.NODE_ENV === 'production' ? '; Domain=yourdomain.com' : ''}`
+      &apos;Set-Cookie&apos;,
+      `token=${token}; HttpOnly; Path=/; Max-Age=${process.env.SESSION_EXPIRY || 86400}; ${process.env.NODE_ENV === &apos;production&apos; ? &apos;Secure; &apos; : &apos;&apos;}SameSite=Lax${process.env.NODE_ENV === &apos;production&apos; ? &apos;; Domain=yourdomain.com&apos; : &apos;&apos;}`
     );
 
     const { password: _, ...userWithoutPassword } = user;
     return res.status(200).json({ user: userWithoutPassword });
   } catch (error) {
-    console.error('Login error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error(&apos;Login error:&apos;, error);
+    return res.status(500).json({ error: &apos;Internal server error&apos; });
   }
 }

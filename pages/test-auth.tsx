@@ -12,29 +12,29 @@ export default function TestAuth() {
   }, [login]);
 
   const containerStyle = {
-    maxWidth: '800px',
-    margin: '50px auto',
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-    lineHeight: '1.6'
+    maxWidth: &apos;800px&apos;,
+    margin: &apos;50px auto&apos;,
+    padding: &apos;20px&apos;,
+    fontFamily: &apos;Arial, sans-serif&apos;,
+    lineHeight: &apos;1.6&apos;
   };
 
   const infoBoxStyle = {
-    marginTop: '30px',
-    padding: '20px',
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    backgroundColor: '#f9f9f9'
+    marginTop: &apos;30px&apos;,
+    padding: &apos;20px&apos;,
+    border: &apos;1px solid #ddd&apos;,
+    borderRadius: &apos;8px&apos;,
+    backgroundColor: &apos;#f9f9f9&apos;
   };
 
   const buttonStyle = {
-    padding: '10px 15px',
-    backgroundColor: '#0070f3',
-    color: 'white',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    marginRight: '10px'
+    padding: &apos;10px 15px&apos;,
+    backgroundColor: &apos;#0070f3&apos;,
+    color: &apos;white&apos;,
+    border: &apos;none&apos;,
+    borderRadius: &apos;4px&apos;,
+    cursor: &apos;pointer&apos;,
+    marginRight: &apos;10px&apos;
   };
 
   return (
@@ -46,9 +46,9 @@ export default function TestAuth() {
         {isAuthenticated ? (
           <div>
             <p><strong>Status:</strong> <span style={{color: 'green'}}>Authenticated</span></p>
-            <p><strong>Name:</strong> {user?.name || 'N/A'}</p>
-            <p><strong>Email:</strong> {user?.email || 'N/A'}</p>
-            <p><strong>User ID:</strong> {user?.id || 'N/A'}</p>
+            <p><strong>Name:</strong> {user?.name || &apos;N/A&apos;}</p>
+            <p><strong>Email:</strong> {user?.email || &apos;N/A&apos;}</p>
+            <p><strong>User ID:</strong> {user?.id || &apos;N/A&apos;}</p>
           </div>
         ) : (
           <p>Not authenticated</p>

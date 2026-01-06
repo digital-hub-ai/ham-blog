@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { type ClassValue, clsx } from &apos;clsx&apos;;
+import { twMerge } from &apos;tailwind-merge&apos;;
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -7,13 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 
 // Add other utility functions here as needed
 export function formatDate(date: Date | string): string {
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  return new Date(date).toLocaleDateString(&apos;en-US&apos;, {
+    year: &apos;numeric&apos;,
+    month: &apos;long&apos;,
+    day: &apos;numeric&apos;,
   });
 }
 
 export function absoluteUrl(path: string) {
-  return `${process.env.NEXT_PUBLIC_APP_URL || ''}${path}`;
+  return `${process.env.NEXT_PUBLIC_APP_URL || &apos;&apos;}${path}`;
 }

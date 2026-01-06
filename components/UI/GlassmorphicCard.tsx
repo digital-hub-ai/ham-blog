@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from &apos;framer-motion&apos;;
 
 interface GlassmorphicCardProps {
   children: React.ReactNode;
@@ -19,8 +19,8 @@ export const GlassmorphicCard: React.FC<GlassmorphicCardProps> = ({
       transition={{ duration: 0.5 }}
       whileHover={hoverEffect ? { y: -5, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' } : {}}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl" />
-      <div className="relative z-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl&quot; />
+      <div className="relative z-10&quot;>
         {children}
       </div>
     </motion.div>

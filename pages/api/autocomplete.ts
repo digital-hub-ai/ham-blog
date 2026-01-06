@@ -1,45 +1,45 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getAutocompleteSuggestions, getTrendingSearchTerms } from '../../services/autocomplete';
+import { NextApiRequest, NextApiResponse } from &apos;next&apos;;
+import { getAutocompleteSuggestions, getTrendingSearchTerms } from &apos;../../services/autocomplete&apos;;
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;);
+  res.setHeader(&apos;Access-Control-Allow-Methods&apos;, &apos;GET, OPTIONS&apos;);
+  res.setHeader(&apos;Access-Control-Allow-Headers&apos;, &apos;Content-Type&apos;);
 
   // Handle CORS preflight
-  if (req.method === 'OPTIONS') {
+  if (req.method === &apos;OPTIONS&apos;) {
     return res.status(200).end();
   }
 
-  if (req.method !== 'GET') {
+  if (req.method !== &apos;GET&apos;) {
     return res.status(405).json({ 
       success: false,
-      message: 'Method not allowed' 
+      message: &apos;Method not allowed&apos; 
     });
   }
 
-  const { q: query, type = 'suggestions' } = req.query;
+  const { q: query, type = &apos;suggestions&apos; } = req.query;
 
   try {
-    if (type === 'trending') {
+    if (type === &apos;trending&apos;) {
       const trendingTerms = getTrendingSearchTerms(10);
       return res.status(200).json({ 
         success: true,
-        type: 'trending',
+        type: &apos;trending&apos;,
         terms: trendingTerms
       });
     }
 
-    if (!query || typeof query !== 'string') {
+    if (!query || typeof query !== &apos;string&apos;) {
       // Return trending terms if no query
       const trendingTerms = getTrendingSearchTerms(10);
       return res.status(200).json({ 
         success: true,
-        type: 'trending',
+        type: &apos;trending&apos;,
         terms: trendingTerms
       });
     }
@@ -48,16 +48,16 @@ export default async function handler(
     
     return res.status(200).json({ 
       success: true,
-      type: 'suggestions',
+      type: &apos;suggestions&apos;,
       query,
       suggestions
     });
   } catch (error) {
-    console.error('Autocomplete error:', error);
+    console.error(&apos;Autocomplete error:&apos;, error);
     return res.status(500).json({ 
       success: false,
-      message: 'Error generating autocomplete suggestions',
-      error: error instanceof Error ? error.message : 'Unknown error'
+      message: &apos;Error generating autocomplete suggestions&apos;,
+      error: error instanceof Error ? error.message : &apos;Unknown error&apos;
     });
   }
 }

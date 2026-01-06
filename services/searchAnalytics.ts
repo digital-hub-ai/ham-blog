@@ -158,7 +158,7 @@ export function getSearchTrends(hours: number = 24): {
   searchLogs
     .filter(log => log.timestamp >= startTime)
     .forEach(log => {
-      const hourKey = new Date(log.timestamp).toISOString().substring(0, 13) + ':00:00';
+      const hourKey = new Date(log.timestamp).toISOString().substring(0, 13) + &apos;:00:00&apos;;
       hourlyCounts[hourKey] = (hourlyCounts[hourKey] || 0) + 1;
     });
   

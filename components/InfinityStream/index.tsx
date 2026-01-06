@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import styles from '../../styles/InfinityStream.module.css';
-import { FiClock, FiTrendingUp, FiZap, FiStar, FiEye, FiHeart, FiShare2, FiMessageSquare, FiBookmark } from 'react-icons/fi';
+import React, { useState, useEffect, useRef, useCallback } from &apos;react&apos;;
+import styles from &apos;../../styles/InfinityStream.module.css&apos;;
+import { FiClock, FiTrendingUp, FiZap, FiStar, FiEye, FiHeart, FiShare2, FiMessageSquare, FiBookmark } from &apos;react-icons/fi&apos;;
 
 interface ContentItem {
   id: string;
@@ -17,46 +17,46 @@ interface ContentItem {
 const sampleContent = {
   personalized: [
     {
-      id: 'p1',
-      title: 'AI-Powered Content Creation Tools',
-      description: 'Discover how AI is revolutionizing content creation with these cutting-edge tools.',
-      tags: ['AI', 'Content Creation', 'Productivity'],
-      time: '5 min read',
-      type: 'guide',
+      id: &apos;p1&apos;,
+      title: &apos;AI-Powered Content Creation Tools&apos;,
+      description: &apos;Discover how AI is revolutionizing content creation with these cutting-edge tools.&apos;,
+      tags: [&apos;AI&apos;, &apos;Content Creation&apos;, &apos;Productivity&apos;],
+      time: &apos;5 min read&apos;,
+      type: &apos;guide&apos;,
       likes: 42,
       comments: 8,
     },
     {
-      id: 'p2',
-      title: 'The Future of Web Development',
-      description: 'Explore the latest trends and technologies shaping the future of web development.',
-      tags: ['Web Dev', 'Trends', 'Future'],
-      time: '7 min read',
-      type: 'article',
+      id: &apos;p2&apos;,
+      title: &apos;The Future of Web Development&apos;,
+      description: &apos;Explore the latest trends and technologies shaping the future of web development.&apos;,
+      tags: [&apos;Web Dev&apos;, &apos;Trends&apos;, &apos;Future&apos;],
+      time: &apos;7 min read&apos;,
+      type: &apos;article&apos;,
       likes: 36,
       comments: 5,
     },
   ],
   trending: [
     {
-      id: 't1',
-      title: 'New JavaScript Framework Released',
-      description: 'A new JavaScript framework is taking the developer community by storm. Here\'s what you need to know.',
-      tags: ['JavaScript', 'Framework', 'News'],
-      time: '3 min read',
-      type: 'news',
+      id: &apos;t1&apos;,
+      title: &apos;New JavaScript Framework Released&apos;,
+      description: &apos;A new JavaScript framework is taking the developer community by storm. Here\&apos;s what you need to know.&apos;,
+      tags: [&apos;JavaScript&apos;, &apos;Framework&apos;, &apos;News&apos;],
+      time: &apos;3 min read&apos;,
+      type: &apos;news&apos;,
       likes: 128,
       comments: 24,
     },
   ],
   serendipity: [
     {
-      id: 's1',
-      title: 'The Art of Mindful Coding',
-      description: 'How practicing mindfulness can make you a better developer and improve your code quality.',
-      tags: ['Mindfulness', 'Productivity', 'Wellness'],
-      time: '6 min read',
-      type: 'article',
+      id: &apos;s1&apos;,
+      title: &apos;The Art of Mindful Coding&apos;,
+      description: &apos;How practicing mindfulness can make you a better developer and improve your code quality.&apos;,
+      tags: [&apos;Mindfulness&apos;, &apos;Productivity&apos;, &apos;Wellness&apos;],
+      time: &apos;6 min read&apos;,
+      type: &apos;article&apos;,
       likes: 89,
       comments: 12,
     },
@@ -69,12 +69,12 @@ const fetchMoreContent = async (streamType: string, page: number): Promise<Conte
   return new Promise((resolve) => {
     setTimeout(() => {
       const newContent = [];
-      const types = ['article', 'guide', 'news', 'tutorial'];
+      const types = [&apos;article&apos;, &apos;guide&apos;, &apos;news&apos;, &apos;tutorial&apos;];
       const tags = [
-        ['AI', 'Machine Learning', 'Neural Networks'],
-        ['Web Dev', 'Frontend', 'Backend'],
-        ['Mobile', 'iOS', 'Android'],
-        ['Cloud', 'DevOps', 'Infrastructure'],
+        [&apos;AI&apos;, &apos;Machine Learning&apos;, &apos;Neural Networks&apos;],
+        [&apos;Web Dev&apos;, &apos;Frontend&apos;, &apos;Backend&apos;],
+        [&apos;Mobile&apos;, &apos;iOS&apos;, &apos;Android&apos;],
+        [&apos;Cloud&apos;, &apos;DevOps&apos;, &apos;Infrastructure&apos;],
       ];
       
       for (let i = 0; i < 3; i++) {
@@ -259,26 +259,26 @@ const StreamSection: React.FC<StreamSectionProps> = ({
 
 const InfinityStream: React.FC = () => {
   return (
-    <section className={styles.infinityStream} id="infinity-stream">
+    <section className={styles.infinityStream} id="infinity-stream&quot;>
       <div className={styles.streamContainer}>
         <StreamSection 
-          title="For You" 
+          title="For You&quot; 
           icon={<FiStar />} 
-          type="personalized" 
+          type="personalized&quot; 
           initialContent={sampleContent.personalized} 
         />
         
         <StreamSection 
-          title="Trending Now" 
+          title="Trending Now&quot; 
           icon={<FiTrendingUp />} 
-          type="trending" 
+          type="trending&quot; 
           initialContent={sampleContent.trending} 
         />
         
         <StreamSection 
-          title="Discover" 
+          title="Discover&quot; 
           icon={<FiZap />} 
-          type="serendipity" 
+          type="serendipity&quot; 
           initialContent={sampleContent.serendipity} 
         />
       </div>

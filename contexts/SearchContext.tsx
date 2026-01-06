@@ -21,7 +21,7 @@ interface SearchContextType {
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
 export function SearchProvider({ children }: { children: ReactNode }) {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(&apos;&apos;);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -69,7 +69,7 @@ export function SearchProvider({ children }: { children: ReactNode }) {
   };
 
   const clearSearch = () => {
-    setQuery('');
+    setQuery(&apos;&apos;);
     setResults([]);
     setError(null);
   };
@@ -84,7 +84,7 @@ export function SearchProvider({ children }: { children: ReactNode }) {
 export function useSearch() {
   const context = useContext(SearchContext);
   if (context === undefined) {
-    throw new Error('useSearch must be used within a SearchProvider');
+    throw new Error(&apos;useSearch must be used within a SearchProvider&apos;);
   }
   return context;
 }

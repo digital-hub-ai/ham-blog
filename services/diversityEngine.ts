@@ -554,7 +554,7 @@ export function getDiversityRecommendations(
   
   // Check for temporal bias
   if (metrics.bias.temporalBias > 0.5) {
-    recommendations.push('Results are clustered around specific time periods - consider broader temporal range');
+    recommendations.push(&apos;Results are clustered around specific time periods - consider broader temporal range&apos;);
   }
   
   // If fairness score is low

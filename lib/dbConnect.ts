@@ -1,4 +1,4 @@
-import mongoose, { ConnectOptions } from 'mongoose';
+import mongoose, { ConnectOptions } from &apos;mongoose&apos;;
 
 type MongooseCached = {
   conn: typeof mongoose | null;
@@ -11,11 +11,11 @@ declare global {
   var mongoose: MongooseCached;
 }
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/aivault';
+const MONGODB_URI = process.env.MONGODB_URI || &apos;mongodb://localhost:27017/aivault&apos;;
 
 if (!MONGODB_URI) {
   throw new Error(
-    'Please define the MONGODB_URI environment variable inside .env.local'
+    &apos;Please define the MONGODB_URI environment variable inside .env.local&apos;
   );
 }
 
@@ -42,7 +42,7 @@ async function dbConnect(): Promise<typeof mongoose> {
   }
 
   if (!cached.conn) {
-    throw new Error('Failed to establish database connection');
+    throw new Error(&apos;Failed to establish database connection&apos;);
   }
 
   return cached.conn;

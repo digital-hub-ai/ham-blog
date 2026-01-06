@@ -30,12 +30,12 @@ export interface UserProfile {
   demographics?: {
     industry?: string;
     role?: string;
-    experienceLevel?: 'beginner' | 'intermediate' | 'advanced' | 'expert';
-    companySize?: 'small' | 'medium' | 'large' | 'enterprise';
+    experienceLevel?: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos; | &apos;expert&apos;;
+    companySize?: &apos;small&apos; | &apos;medium&apos; | &apos;large&apos; | &apos;enterprise&apos;;
   };
   context?: {
-    deviceType?: 'desktop' | 'mobile' | 'tablet';
-    timeOfDay?: 'morning' | 'afternoon' | 'evening' | 'night';
+    deviceType?: &apos;desktop&apos; | &apos;mobile&apos; | &apos;tablet&apos;;
+    timeOfDay?: &apos;morning&apos; | &apos;afternoon&apos; | &apos;evening&apos; | &apos;night&apos;;
     location?: string;
     currentTask?: string;
   };
@@ -488,14 +488,14 @@ export function updateProfileFromImplicitFeedback(
       }
       break;
       
-    case 'skip':
+    case &apos;skip&apos;:
       // Add to skipped if skipped multiple times
       if (!profile.behavior.skippedResults.includes(resultId)) {
         profile.behavior.skippedResults.push(resultId);
       }
       break;
       
-    case 'dwell':
+    case &apos;dwell&apos;:
       // Increase time spent on result
       const lastSearch = profile.behavior.searchHistory[
         profile.behavior.searchHistory.length - 1
@@ -515,7 +515,7 @@ export function updateProfileFromImplicitFeedback(
 export function getUserInsights(userId: string): {
   preferredCategories: string[];
   preferredTags: string[];
-  engagementLevel: 'low' | 'medium' | 'high';
+  engagementLevel: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos;;
   favoriteContentTypes: string[];
   recentActivity: number; // Number of interactions in last 7 days
 } {
@@ -524,7 +524,7 @@ export function getUserInsights(userId: string): {
     return {
       preferredCategories: [],
       preferredTags: [],
-      engagementLevel: 'low',
+      engagementLevel: &apos;low&apos;,
       favoriteContentTypes: [],
       recentActivity: 0
     };
@@ -554,7 +554,7 @@ export function getUserInsights(userId: string): {
   if (recentInteractions > 20) {
     engagementLevel = 'high';
   } else if (recentInteractions > 5) {
-    engagementLevel = 'medium';
+    engagementLevel = &apos;medium&apos;;
   }
   
   return {

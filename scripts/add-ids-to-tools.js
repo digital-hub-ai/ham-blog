@@ -33,11 +33,11 @@ const updatedTools = tools.map(tool => ({
 
 // Generate the new content
 const newContent = `// This file is auto-generated. Do not edit manually.
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from &apos;uuid&apos;;
 
 export const tools = ${JSON.stringify(updatedTools, null, 2)};`;
 
 // Write the updated content back to the file
-fs.writeFileSync(toolsPath, newContent, 'utf8');
+fs.writeFileSync(toolsPath, newContent, &apos;utf8&apos;);
 
-console.log('Successfully added IDs to all tools!');
+console.log(&apos;Successfully added IDs to all tools!&apos;);

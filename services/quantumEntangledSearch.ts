@@ -4,32 +4,32 @@
 
 // Quantum entanglement states
 export type EntanglementState = 
-  | 'singlet'            // Singlet state (perfectly anti-correlated)
-  | 'triplet'            // Triplet state (partially correlated)
-  | 'bell-state'         // Bell state entanglement
-  | 'ghz'                // Greenberger-Horne-Zeilinger state
-  | 'w-state'            // W state entanglement
-  | 'cluster'            // Cluster state
-  | 'custom';            // Custom entanglement states
+  | &apos;singlet&apos;            // Singlet state (perfectly anti-correlated)
+  | &apos;triplet&apos;            // Triplet state (partially correlated)
+  | &apos;bell-state&apos;         // Bell state entanglement
+  | &apos;ghz&apos;                // Greenberger-Horne-Zeilinger state
+  | &apos;w-state&apos;            // W state entanglement
+  | &apos;cluster&apos;            // Cluster state
+  | &apos;custom&apos;;            // Custom entanglement states
 
 // Quantum correlation types
 export type CorrelationType = 
-  | 'spatial'            // Spatial correlation
-  | 'temporal'           // Temporal correlation
-  | 'semantic'           // Semantic correlation
-  | 'contextual'         // Contextual correlation
-  | 'user-behavior'      // User behavior correlation
-  | 'quantum-tunneling'  // Quantum tunneling correlation
-  | 'entanglement';      // Direct entanglement
+  | &apos;spatial&apos;            // Spatial correlation
+  | &apos;temporal&apos;           // Temporal correlation
+  | &apos;semantic&apos;           // Semantic correlation
+  | &apos;contextual&apos;         // Contextual correlation
+  | &apos;user-behavior&apos;      // User behavior correlation
+  | &apos;quantum-tunneling&apos;  // Quantum tunneling correlation
+  | &apos;entanglement&apos;;      // Direct entanglement
 
 // Quantum search paradigms
 export type QuantumParadigm = 
-  | 'superposition'      // Superposition-based search
-  | 'entanglement'       // Entanglement-based search
-  | 'tunneling'          // Quantum tunneling search
-  | 'annealing'          // Quantum annealing
-  | 'teleportation'      // Quantum teleportation
-  | 'custom';            // Custom quantum paradigms
+  | &apos;superposition&apos;      // Superposition-based search
+  | &apos;entanglement&apos;       // Entanglement-based search
+  | &apos;tunneling&apos;          // Quantum tunneling search
+  | &apos;annealing&apos;          // Quantum annealing
+  | &apos;teleportation&apos;      // Quantum teleportation
+  | &apos;custom&apos;;            // Custom quantum paradigms
 
 // Quantum entanglement configuration
 export interface QuantumEntanglementConfig {
@@ -39,7 +39,7 @@ export interface QuantumEntanglementConfig {
   qubits: number;
   entanglementDepth: number;
   decoherenceTime: number; // in microseconds
-  measurementBasis: 'computational' | 'hadamard' | 'custom';
+  measurementBasis: &apos;computational&apos; | &apos;hadamard&apos; | &apos;custom&apos;;
   errorCorrection: boolean;
   teleportation: boolean;
 }
@@ -133,7 +133,7 @@ export interface QuantumTeleportationChannel {
   capacity: number; // Number of qubits per second
   fidelity: number; // 0-1 teleportation fidelity
   latency: number; // in milliseconds
-  status: 'active' | 'inactive' | 'maintenance';
+  status: &apos;active&apos; | &apos;inactive&apos; | &apos;maintenance&apos;;
   lastUsed: number;
 }
 
@@ -222,7 +222,7 @@ export class QuantumEntangledSearchService {
     
     // Validate request
     if (!request.query || !request.dataset || request.dataset.length === 0) {
-      throw new Error('Invalid quantum search request: query and dataset are required');
+      throw new Error(&apos;Invalid quantum search request: query and dataset are required&apos;);
     }
     
     // Perform classical search for comparison
@@ -328,7 +328,7 @@ export class QuantumEntangledSearchService {
       ).length;
       
       const bScore = keywords.filter(k => 
-        (b.title + ' ' + b.content).toLowerCase().includes(k)
+        (b.title + &apos; &apos; + b.content).toLowerCase().includes(k)
       ).length;
       
       return bScore - aScore;
@@ -401,13 +401,13 @@ export class QuantumEntangledSearchService {
    */
   private calculateEntanglementQuality(state: EntanglementState): number {
     const qualityMap: Record<EntanglementState, number> = {
-      'singlet': 0.99,
-      'triplet': 0.95,
-      'bell-state': 0.98,
-      'ghz': 0.97,
-      'w-state': 0.96,
-      'cluster': 0.94,
-      'custom': 0.90
+      &apos;singlet&apos;: 0.99,
+      &apos;triplet&apos;: 0.95,
+      &apos;bell-state&apos;: 0.98,
+      &apos;ghz&apos;: 0.97,
+      &apos;w-state&apos;: 0.96,
+      &apos;cluster&apos;: 0.94,
+      &apos;custom&apos;: 0.90
     };
     
     return qualityMap[state] || 0.95;
@@ -658,7 +658,7 @@ export class QuantumEntangledSearchService {
    */
   updateChannelStatus(
     channelId: string,
-    status: 'active' | 'inactive' | 'maintenance'
+    status: &apos;active&apos; | &apos;inactive&apos; | &apos;maintenance&apos;
   ): boolean {
     const channel = this.teleportationChannels.get(channelId);
     if (!channel) {
@@ -704,14 +704,14 @@ export class QuantumEntangledSearchService {
   } {
     return {
       supportedStates: [
-        'singlet', 'triplet', 'bell-state', 'ghz', 'w-state', 'cluster'
+        &apos;singlet&apos;, &apos;triplet&apos;, &apos;bell-state&apos;, &apos;ghz&apos;, &apos;w-state&apos;, &apos;cluster&apos;
       ],
       paradigms: [
-        'superposition', 'entanglement', 'tunneling', 'annealing', 'teleportation'
+        &apos;superposition&apos;, &apos;entanglement&apos;, &apos;tunneling&apos;, &apos;annealing&apos;, &apos;teleportation&apos;
       ],
       correlationTypes: [
-        'spatial', 'temporal', 'semantic', 'contextual', 'user-behavior', 
-        'quantum-tunneling', 'entanglement'
+        &apos;spatial&apos;, &apos;temporal&apos;, &apos;semantic&apos;, &apos;contextual&apos;, &apos;user-behavior&apos;, 
+        &apos;quantum-tunneling&apos;, &apos;entanglement&apos;
       ],
       maxQubits: this.simulationMode ? 256 : 4096,
       defaultConfig: this.defaultConfig
@@ -745,7 +745,7 @@ export class QuantumEntangledSearchService {
     simulationMode: boolean;
   } {
     // In a real implementation, this would track actual usage
-    // For simulation, we'll generate plausible statistics
+    // For simulation, we&apos;ll generate plausible statistics
     return {
       totalSearches: Math.floor(Math.random() * 25000),
       averageEntanglementAdvantage: 15.0 + Math.random() * 10.0, // 15-25x
@@ -778,7 +778,7 @@ export class QuantumEntangledSearchService {
     const recommendations: string[] = [];
     
     if (searchResult.entanglementAdvantage < 10) {
-      recommendations.push('Entanglement advantage below expected threshold - review quantum configuration');
+      recommendations.push(&apos;Entanglement advantage below expected threshold - review quantum configuration&apos;);
     }
     
     if (searchResult.correlationStrength < 0.7) {
@@ -786,11 +786,11 @@ export class QuantumEntangledSearchService {
     }
     
     if (searchResult.quantumMetrics.errorRate > 0.05) {
-      recommendations.push('High quantum error rate - implement additional error correction');
+      recommendations.push(&apos;High quantum error rate - implement additional error correction&apos;);
     }
     
     if (searchResult.quantumMetrics.coherenceTime < 50) {
-      recommendations.push('Short coherence time - optimize quantum environment');
+      recommendations.push(&apos;Short coherence time - optimize quantum environment&apos;);
     }
     
     return {

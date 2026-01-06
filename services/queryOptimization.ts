@@ -4,16 +4,16 @@
 
 // Query optimization strategies
 export type OptimizationStrategy = 
-  | 'synonym-expansion'     // Expand with synonyms
-  | 'stemming'              // Apply stemming
-  | 'stopword-removal'      // Remove stopwords
-  | 'phrase-boosting'       // Boost exact phrases
-  | 'fuzzy-matching'        // Add fuzzy matching
-  | 'field-weighting'       // Adjust field weights
-  | 'query-rewriting'       // Rewrite query structure
-  | 'spelling-correction'   // Correct spelling
-  | 'contextual-expansion'  // Expand based on context
-  | 'personalization';      // Personalize based on user history
+  | &apos;synonym-expansion&apos;     // Expand with synonyms
+  | &apos;stemming&apos;              // Apply stemming
+  | &apos;stopword-removal&apos;      // Remove stopwords
+  | &apos;phrase-boosting&apos;       // Boost exact phrases
+  | &apos;fuzzy-matching&apos;        // Add fuzzy matching
+  | &apos;field-weighting&apos;       // Adjust field weights
+  | &apos;query-rewriting&apos;       // Rewrite query structure
+  | &apos;spelling-correction&apos;   // Correct spelling
+  | &apos;contextual-expansion&apos;  // Expand based on context
+  | &apos;personalization&apos;;      // Personalize based on user history
 
 // Optimization suggestion
 export interface OptimizationSuggestion {
@@ -22,7 +22,7 @@ export interface OptimizationSuggestion {
   strategy: OptimizationStrategy;
   confidence: number; // 0-1
   explanation: string;
-  expectedImprovement: 'low' | 'medium' | 'high';
+  expectedImprovement: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos;;
 }
 
 // Query analysis
@@ -33,7 +33,7 @@ export interface QueryAnalysis {
   operators: string[];
   fieldSpecifiers: Array<{ field: string; value: string }>;
   modifiers: string[];
-  complexity: 'simple' | 'moderate' | 'complex';
+  complexity: &apos;simple&apos; | &apos;moderate&apos; | &apos;complex&apos;;
   potentialIssues: string[];
 }
 
@@ -81,10 +81,10 @@ const defaultConfig: OptimizationConfig = {
  * Common stopwords in English
  */
 const stopwords = new Set([
-  'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from',
-  'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the',
-  'to', 'was', 'will', 'with', 'i', 'you', 'we', 'they', 'she',
-  'him', 'her', 'them', 'us', 'my', 'your', 'our', 'their'
+  &apos;a&apos;, &apos;an&apos;, &apos;and&apos;, &apos;are&apos;, &apos;as&apos;, &apos;at&apos;, &apos;be&apos;, &apos;by&apos;, &apos;for&apos;, &apos;from&apos;,
+  &apos;has&apos;, &apos;he&apos;, &apos;in&apos;, &apos;is&apos;, &apos;it&apos;, &apos;its&apos;, &apos;of&apos;, &apos;on&apos;, &apos;that&apos;, &apos;the&apos;,
+  &apos;to&apos;, &apos;was&apos;, &apos;will&apos;, &apos;with&apos;, &apos;i&apos;, &apos;you&apos;, &apos;we&apos;, &apos;they&apos;, &apos;she&apos;,
+  &apos;him&apos;, &apos;her&apos;, &apos;them&apos;, &apos;us&apos;, &apos;my&apos;, &apos;your&apos;, &apos;our&apos;, &apos;their&apos;
 ]);
 
 /**
@@ -187,20 +187,20 @@ function editDistance(str1: string, str2: string): number {
 export function analyzeQuery(query: string): QueryAnalysis {
   if (!query) {
     return {
-      originalQuery: '',
+      originalQuery: &apos;&apos;,
       tokens: [],
       phrases: [],
       operators: [],
       fieldSpecifiers: [],
       modifiers: [],
-      complexity: 'simple',
+      complexity: &apos;simple&apos;,
       potentialIssues: []
     };
   }
   
   const normalizedQuery = query.trim();
   const tokens = normalizedQuery.split(/\s+/);
-  const phrases = normalizedQuery.match(/"[^"]*"/g) || [];
+  const phrases = normalizedQuery.match(/&quot;[^&quot;]*&quot;/g) || [];
   const operators = normalizedQuery.match(/\b(AND|OR|NOT)\b/gi) || [];
   const modifiers = normalizedQuery.match(/[~^*+-]/g) || [];
   
@@ -210,7 +210,7 @@ export function analyzeQuery(query: string): QueryAnalysis {
   if (fieldMatches) {
     fieldMatches.forEach(match => {
       const [field, value] = match.split(':');
-      fieldSpecifiers.push({ field, value: value.replace(/"/g, '') });
+      fieldSpecifiers.push({ field, value: value.replace(/&quot;/g, '') });
     });
   }
   
@@ -227,7 +227,7 @@ export function analyzeQuery(query: string): QueryAnalysis {
   const potentialIssues: string[] = [];
   
   if (tokens.some(token => stopwords.has(token.toLowerCase()))) {
-    potentialIssues.push('Query contains common stopwords that may reduce relevance');
+    potentialIssues.push(&apos;Query contains common stopwords that may reduce relevance&apos;);
   }
   
   if (tokens.length === 1 && tokens[0].length < 3) {
@@ -235,7 +235,7 @@ export function analyzeQuery(query: string): QueryAnalysis {
   }
   
   if (phrases.length === 0 && tokens.length > 8) {
-    potentialIssues.push('Long query without phrases may benefit from phrase grouping');
+    potentialIssues.push(&apos;Long query without phrases may benefit from phrase grouping&apos;);
   }
   
   return {
@@ -399,7 +399,7 @@ function removeStopwords(query: string): string {
  */
 function addPhraseBoosting(query: string): string {
   // Simple approach: treat the whole query as a phrase with boosting
-  return `"${query}"^2 ${query}`;
+  return `&quot;${query}&quot;^2 ${query}`;
 }
 
 /**
@@ -504,7 +504,7 @@ export function getOptimizationReport(
     if (improvements > potentialIssues) {
       estimatedImpact = 'positive';
     } else if (potentialIssues > improvements) {
-      estimatedImpact = 'negative';
+      estimatedImpact = &apos;negative&apos;;
     }
   }
   

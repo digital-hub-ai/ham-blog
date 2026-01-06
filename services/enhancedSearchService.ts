@@ -1,4 +1,4 @@
-import { SearchResult, SearchOptions } from './searchService';
+import { SearchResult, SearchOptions } from &apos;./searchService&apos;;
 
 // Cache for search results
 const searchCache = new Map<string, { data: any; timestamp: number }>();
@@ -74,22 +74,22 @@ export const enhancedSearch = async (
       // Feature filters
       if (filters.features) {
         if (Array.isArray(filters.features)) {
-          filters.features.forEach(feature => params.append('features', feature));
+          filters.features.forEach(feature => params.append(&apos;features&apos;, feature));
         } else {
-          params.append('features', filters.features);
+          params.append(&apos;features&apos;, filters.features);
         }
       }
     }
     
     // Add sorting
-    if (options.sortBy) params.append('sortBy', options.sortBy);
-    if (options.sortOrder) params.append('sortOrder', options.sortOrder);
+    if (options.sortBy) params.append(&apos;sortBy&apos;, options.sortBy);
+    if (options.sortOrder) params.append(&apos;sortOrder&apos;, options.sortOrder);
     
     // Add personalization options
-    if (options.userId) params.append('userId', options.userId);
-    if (options.boostFavorites) params.append('boostFavorites', 'true');
-    if (options.boostHistory) params.append('boostHistory', 'true');
-    if (options.excludeDisliked) params.append('excludeDisliked', 'true');
+    if (options.userId) params.append(&apos;userId&apos;, options.userId);
+    if (options.boostFavorites) params.append(&apos;boostFavorites&apos;, &apos;true&apos;);
+    if (options.boostHistory) params.append(&apos;boostHistory&apos;, &apos;true&apos;);
+    if (options.excludeDisliked) params.append(&apos;excludeDisliked&apos;, &apos;true&apos;);
     
     // Make the API request
     const response = await fetch(`/api/v2/search?${params.toString()}`);
@@ -101,7 +101,7 @@ export const enhancedSearch = async (
     const data = await response.json();
     
     if (!data.success) {
-      throw new Error(data.message || 'Search failed');
+      throw new Error(data.message || &apos;Search failed&apos;);
     }
     
     // Cache the result
@@ -120,7 +120,7 @@ export const enhancedSearch = async (
       metadata: data.metadata
     };
   } catch (error) {
-    console.error('Search error:', error);
+    console.error(&apos;Search error:&apos;, error);
     throw error;
   }
 };
@@ -159,10 +159,10 @@ export const getSearchAnalytics = async () => {
  */
 export const trackSearchClick = async (resultId: string, query: string, position: number) => {
   try {
-    await fetch('/api/v2/search/track', {
-      method: 'POST',
+    await fetch(&apos;/api/v2/search/track&apos;, {
+      method: &apos;POST&apos;,
       headers: {
-        'Content-Type': 'application/json',
+        &apos;Content-Type&apos;: &apos;application/json&apos;,
       },
       body: JSON.stringify({
         resultId,
@@ -172,7 +172,7 @@ export const trackSearchClick = async (resultId: string, query: string, position
       }),
     });
   } catch (error) {
-    console.error('Error tracking search click:', error);
+    console.error(&apos;Error tracking search click:&apos;, error);
   }
 };
 

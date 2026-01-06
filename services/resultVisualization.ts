@@ -4,32 +4,32 @@
 
 // Visualization types
 export type VisualizationType = 
-  | 'list'           // Standard list view
-  | 'grid'           // Grid view with thumbnails
-  | 'table'          // Tabular data view
-  | 'chart'          // Chart visualization
-  | 'map'            // Map-based visualization
-  | 'timeline'       // Timeline view
-  | 'graph'          // Network graph view
-  | 'summary'        // Summary view
-  | 'comparison'     // Side-by-side comparison
-  | 'cluster'        // Clustered view
-  | 'facet'          // Faceted navigation
-  | 'trend';         // Trend analysis
+  | &apos;list&apos;           // Standard list view
+  | &apos;grid&apos;           // Grid view with thumbnails
+  | &apos;table&apos;          // Tabular data view
+  | &apos;chart&apos;          // Chart visualization
+  | &apos;map&apos;            // Map-based visualization
+  | &apos;timeline&apos;       // Timeline view
+  | &apos;graph&apos;          // Network graph view
+  | &apos;summary&apos;        // Summary view
+  | &apos;comparison&apos;     // Side-by-side comparison
+  | &apos;cluster&apos;        // Clustered view
+  | &apos;facet&apos;          // Faceted navigation
+  | &apos;trend&apos;;         // Trend analysis
 
 // Chart types
 export type ChartType = 
-  | 'bar'            // Bar chart
-  | 'line'           // Line chart
-  | 'pie'            // Pie chart
-  | 'scatter'        // Scatter plot
-  | 'histogram'      // Histogram
-  | 'heatmap'        // Heatmap
-  | 'bubble'         // Bubble chart
-  | 'radar'          // Radar chart
-  | 'funnel'         // Funnel chart
-  | 'tree'           // Tree map
-  | 'sankey';        // Sankey diagram
+  | &apos;bar&apos;            // Bar chart
+  | &apos;line&apos;           // Line chart
+  | &apos;pie&apos;            // Pie chart
+  | &apos;scatter&apos;        // Scatter plot
+  | &apos;histogram&apos;      // Histogram
+  | &apos;heatmap&apos;        // Heatmap
+  | &apos;bubble&apos;         // Bubble chart
+  | &apos;radar&apos;          // Radar chart
+  | &apos;funnel&apos;         // Funnel chart
+  | &apos;tree&apos;           // Tree map
+  | &apos;sankey&apos;;        // Sankey diagram
 
 // Visualization configuration
 export interface VisualizationConfig {
@@ -39,7 +39,7 @@ export interface VisualizationConfig {
   metrics?: string[];           // Fields to use as metrics
   groupBy?: string;             // Field to group by
   sortBy?: string;              // Field to sort by
-  sortOrder?: 'asc' | 'desc';   // Sort order
+  sortOrder?: &apos;asc&apos; | &apos;desc&apos;;   // Sort order
   limit?: number;               // Limit number of results
   colorScheme?: string;         // Color scheme for charts
   showLabels?: boolean;         // Show labels on charts
@@ -80,22 +80,22 @@ export function generateVisualizationData(
     return {
       type: config.type,
       chartType: config.chartType,
-      title: 'No Data',
-      description: 'No results to visualize',
+      title: &apos;No Data&apos;,
+      description: &apos;No results to visualize&apos;,
       data: []
     };
   }
   
   switch (config.type) {
-    case 'chart':
+    case &apos;chart&apos;:
       return generateChartData(results, config);
-    case 'table':
+    case &apos;table&apos;:
       return generateTableData(results, config);
-    case 'summary':
+    case &apos;summary&apos;:
       return generateSummaryData(results, config);
-    case 'timeline':
+    case &apos;timeline&apos;:
       return generateTimelineData(results, config);
-    case 'cluster':
+    case &apos;cluster&apos;:
       return generateClusterData(results, config);
     default:
       return generateListData(results, config);
@@ -109,9 +109,9 @@ function generateChartData(
   results: any[],
   config: VisualizationConfig
 ): VisualizationData {
-  const chartType = config.chartType || 'bar';
-  const dimensions = config.dimensions || ['category'];
-  const metrics = config.metrics || ['count'];
+  const chartType = config.chartType || &apos;bar&apos;;
+  const dimensions = config.dimensions || [&apos;category&apos;];
+  const metrics = config.metrics || [&apos;count&apos;];
   
   // Group results by dimensions
   const grouped: Record<string, any[]> = {};
@@ -155,18 +155,18 @@ function generateChartData(
   // Generate colors
   const backgroundColors = generateColors(labels.length);
   const borderColors = backgroundColors.map(color => 
-    color.replace('0.6', '1')
+    color.replace(&apos;0.6&apos;, &apos;1&apos;)
   );
   
   return {
-    type: 'chart',
+    type: &apos;chart&apos;,
     chartType,
     title: `${chartType.charAt(0).toUpperCase() + chartType.slice(1)} Chart`,
-    description: `Visualization of ${results.length} results grouped by ${dimensions.join(', ')}`,
+    description: `Visualization of ${results.length} results grouped by ${dimensions.join(&apos;, &apos;)}`,
     data: results,
     labels,
     datasets: [{
-      label: metrics[0] === 'count' ? 'Count' : `${metrics[0]} of ${metrics[1] || ''}`,
+      label: metrics[0] === &apos;count&apos; ? &apos;Count&apos; : `${metrics[0]} of ${metrics[1] || &apos;&apos;}`,
       data,
       backgroundColor: backgroundColors,
       borderColor: borderColors
@@ -174,7 +174,7 @@ function generateChartData(
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      scales: chartType === 'pie' || chartType === 'radar' ? undefined : {
+      scales: chartType === &apos;pie&apos; || chartType === &apos;radar&apos; ? undefined : {
         y: {
           beginAtZero: true
         }
@@ -192,9 +192,9 @@ function generateTableData(
 ): VisualizationData {
   if (results.length === 0) {
     return {
-      type: 'table',
-      title: 'Search Results',
-      description: 'No results found',
+      type: &apos;table&apos;,
+      title: &apos;Search Results&apos;,
+      description: &apos;No results found&apos;,
       data: []
     };
   }
@@ -343,17 +343,17 @@ function generateTimelineData(
   const data = labels.map(label => grouped[label].length);
   
   return {
-    type: 'timeline',
-    title: 'Results Timeline',
+    type: &apos;timeline&apos;,
+    title: &apos;Results Timeline&apos;,
     description: `Showing ${datedResults.length} results over time`,
     data: datedResults,
     labels,
     datasets: [{
-      label: 'Results per Month',
+      label: &apos;Results per Month&apos;,
       data,
-      backgroundColor: ['rgba(54, 162, 235, 0.6)'],
-      borderColor: ['rgba(54, 162, 235, 1)']
-      // borderWidth: 1 // Removed as it's not part of the dataset interface
+      backgroundColor: [&apos;rgba(54, 162, 235, 0.6)&apos;],
+      borderColor: [&apos;rgba(54, 162, 235, 1)&apos;]
+      // borderWidth: 1 // Removed as it&apos;s not part of the dataset interface
     }],
     options: {
       responsive: true,
@@ -386,13 +386,13 @@ function generateClusterData(
   const data = labels.map(label => grouped[label].length);
   
   return {
-    type: 'cluster',
-    title: 'Results by Category',
+    type: &apos;cluster&apos;,
+    title: &apos;Results by Category&apos;,
     description: `Clustering ${results.length} results into ${labels.length} categories`,
     data: results,
     labels,
     datasets: [{
-      label: 'Results per Category',
+      label: &apos;Results per Category&apos;,
       data,
       backgroundColor: generateColors(labels.length)
     }]
@@ -407,8 +407,8 @@ function generateListData(
   config: VisualizationConfig
 ): VisualizationData {
   return {
-    type: 'list',
-    title: 'Search Results',
+    type: &apos;list&apos;,
+    title: &apos;Search Results&apos;,
     description: `Displaying ${results.length} results`,
     data: results.slice(0, config.limit || 50)
   };
@@ -419,16 +419,16 @@ function generateListData(
  */
 function generateColors(count: number): string[] {
   const colors = [
-    'rgba(54, 162, 235, 0.6)',    // Blue
-    'rgba(255, 99, 132, 0.6)',    // Red
-    'rgba(255, 205, 86, 0.6)',    // Yellow
-    'rgba(75, 192, 192, 0.6)',    // Green
-    'rgba(153, 102, 255, 0.6)',   // Purple
-    'rgba(255, 159, 64, 0.6)',    // Orange
-    'rgba(199, 199, 199, 0.6)',   // Grey
-    'rgba(83, 109, 254, 0.6)',    // Indigo
-    'rgba(255, 105, 180, 0.6)',   // Pink
-    'rgba(0, 128, 128, 0.6)'      // Teal
+    &apos;rgba(54, 162, 235, 0.6)&apos;,    // Blue
+    &apos;rgba(255, 99, 132, 0.6)&apos;,    // Red
+    &apos;rgba(255, 205, 86, 0.6)&apos;,    // Yellow
+    &apos;rgba(75, 192, 192, 0.6)&apos;,    // Green
+    &apos;rgba(153, 102, 255, 0.6)&apos;,   // Purple
+    &apos;rgba(255, 159, 64, 0.6)&apos;,    // Orange
+    &apos;rgba(199, 199, 199, 0.6)&apos;,   // Grey
+    &apos;rgba(83, 109, 254, 0.6)&apos;,    // Indigo
+    &apos;rgba(255, 105, 180, 0.6)&apos;,   // Pink
+    &apos;rgba(0, 128, 128, 0.6)&apos;      // Teal
   ];
   
   const result: string[] = [];
@@ -471,10 +471,10 @@ export function getRecommendedVisualization(results: any[]): VisualizationType {
   
   // Check for categorical data
   const categoricalFields = Object.keys(results[0]).filter(key => 
-    typeof results[0][key] === 'string' && results[0][key].length < 50
+    typeof results[0][key] === &apos;string&apos; && results[0][key].length < 50
   );
-  if (categoricalFields.length >= 2) return 'cluster';
+  if (categoricalFields.length >= 2) return &apos;cluster&apos;;
   
   // Default to list view
-  return 'list';
+  return &apos;list&apos;;
 }

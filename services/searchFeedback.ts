@@ -4,20 +4,20 @@
 
 // Feedback types
 export type FeedbackType = 
-  | 'result-click'      // Clicked on a result
-  | 'result-skip'       // Skipped a result
-  | 'query-reformulation' // Changed the query
-  | 'result-rating'     // Rated a result
-  | 'search-abandonment' // Left without clicking
-  | 'query-satisfaction' // Overall satisfaction with query
-  | 'result-helpfulness' // Helpfulness of result
-  | 'result-relevance'  // Relevance of result
-  | 'result-quality'    // Quality of result
-  | 'facets-usefulness' // Usefulness of filters
-  | 'suggestions-helpfulness' // Helpfulness of suggestions
-  | 'ui-usability'      // UI usability feedback
-  | 'performance'       // Performance feedback
-  | 'other';            // Other feedback
+  | &apos;result-click&apos;      // Clicked on a result
+  | &apos;result-skip&apos;       // Skipped a result
+  | &apos;query-reformulation&apos; // Changed the query
+  | &apos;result-rating&apos;     // Rated a result
+  | &apos;search-abandonment&apos; // Left without clicking
+  | &apos;query-satisfaction&apos; // Overall satisfaction with query
+  | &apos;result-helpfulness&apos; // Helpfulness of result
+  | &apos;result-relevance&apos;  // Relevance of result
+  | &apos;result-quality&apos;    // Quality of result
+  | &apos;facets-usefulness&apos; // Usefulness of filters
+  | &apos;suggestions-helpfulness&apos; // Helpfulness of suggestions
+  | &apos;ui-usability&apos;      // UI usability feedback
+  | &apos;performance&apos;       // Performance feedback
+  | &apos;other&apos;;            // Other feedback
 
 // Feedback rating scale
 export type Rating = 1 | 2 | 3 | 4 | 5;
@@ -55,8 +55,8 @@ export interface FeedbackMetrics {
 
 // Learning model update
 export interface ModelUpdate {
-  type: 'reweight' | 'rerank' | 'filter' | 'boost' | 'penalize';
-  target: string; // What to update (e.g., "similarity_weight", "category_boost")
+  type: &apos;reweight&apos; | &apos;rerank&apos; | &apos;filter&apos; | &apos;boost&apos; | &apos;penalize&apos;;
+  target: string; // What to update (e.g., &quot;similarity_weight&quot;, &quot;category_boost&quot;)
   value: number; // New value or adjustment
   confidence: number; // Confidence in the update (0-1)
   reason: string; // Reason for the update
@@ -248,8 +248,8 @@ export function generateModelUpdates(metrics: FeedbackMetrics): ModelUpdate[] {
   // If CTR is low, boost relevance weighting
   if (metrics.clickThroughRate < 20) {
     updates.push({
-      type: 'reweight',
-      target: 'similarity_weight',
+      type: &apos;reweight&apos;,
+      target: &apos;similarity_weight&apos;,
       value: 0.1, // Increase similarity weight
       confidence: 0.8,
       reason: `Low click-through rate (${metrics.clickThroughRate.toFixed(1)}%) suggests relevance needs improvement`

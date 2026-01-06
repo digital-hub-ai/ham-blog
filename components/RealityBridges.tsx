@@ -23,36 +23,36 @@ export default function RealityBridges({ currentReality }: RealityBridgeProps) {
   const otherRealities = allRealities.filter(reality => reality.id !== currentReality);
 
   return (
-    <div className="fixed top-4 left-0 right-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center">
+    <div className="fixed top-4 left-0 right-0 z-50&quot;>
+      <div className="container mx-auto px-4&quot;>
+        <div className="flex justify-between items-center&quot;>
           {/* Current Reality Display */}
-          <div className="flex items-center bg-gray-900/80 backdrop-blur-lg rounded-full px-4 py-2 border border-gray-700/50">
-            <div className={`w-3 h-3 rounded-full bg-${allRealities.find(r => r.id === currentReality)?.color || 'cyan'}-500 mr-2`}></div>
-            <span className="text-white font-medium">
-              {allRealities.find(r => r.id === currentReality)?.name || 'Unknown Reality'}
+          <div className="flex items-center bg-gray-900/80 backdrop-blur-lg rounded-full px-4 py-2 border border-gray-700/50&quot;>
+            <div className={`w-3 h-3 rounded-full bg-${allRealities.find(r => r.id === currentReality)?.color || &apos;cyan}-500 mr-2`}></div>
+            <span className="text-white font-medium&quot;>
+              {allRealities.find(r => r.id === currentReality)?.name || &apos;Unknown Reality&apos;}
             </span>
           </div>
 
           {/* Quick Switch to Other Realities */}
-          <div className="flex space-x-2">
+          <div className="flex space-x-2&quot;>
             {otherRealities.slice(0, 3).map((reality) => (
               <Link 
                 key={reality.id}
                 href={`/blog/${reality.id}`}
                 className={`px-3 py-1 bg-${reality.color}-900/30 text-${reality.color}-300 rounded-full text-sm border border-${reality.color}-700/50 hover:bg-${reality.color}-800/50 transition-all duration-300`}
               >
-                {reality.name.split(' ')[0]}
+                {reality.name.split(&apos; &apos;)[0]}
               </Link>
             ))}
           </div>
 
           {/* Return to Library Button */}
           <Link 
-            href="/blog"
-            className="flex items-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full px-4 py-2 text-white hover:from-purple-700 hover:to-indigo-700 transition-all duration-300"
+            href="/blog&quot;
+            className="flex items-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full px-4 py-2 text-white hover:from-purple-700 hover:to-indigo-700 transition-all duration-300&quot;
           >
-            <span className="mr-2">🌌</span>
+            <span className="mr-2&quot;>🌌</span>
             Library
           </Link>
         </div>

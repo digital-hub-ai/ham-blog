@@ -4,19 +4,19 @@
 
 // Conversation types
 export type ConversationType = 
-  | 'question_answering'    // Direct question answering
-  | 'exploratory'           // Exploratory search conversation
-  | 'comparison'            // Comparison-based conversation
-  | 'tutorial'              // Tutorial/guided search
-  | 'troubleshooting'       // Problem-solving conversation
-  | 'recommendation'        // Recommendation-based conversation
-  | 'research'              // In-depth research conversation
-  | 'creative'              // Creative ideation conversation;
+  | &apos;question_answering&apos;    // Direct question answering
+  | &apos;exploratory&apos;           // Exploratory search conversation
+  | &apos;comparison&apos;            // Comparison-based conversation
+  | &apos;tutorial&apos;              // Tutorial/guided search
+  | &apos;troubleshooting&apos;       // Problem-solving conversation
+  | &apos;recommendation&apos;        // Recommendation-based conversation
+  | &apos;research&apos;              // In-depth research conversation
+  | &apos;creative&apos;              // Creative ideation conversation;
 
 // Conversation message
 export interface ConversationMessage {
   id: string;
-  role: 'user' | 'assistant' | 'system';
+  role: &apos;user&apos; | &apos;assistant&apos; | &apos;system&apos;;
   content: string;
   timestamp: number;
   context?: {
@@ -79,8 +79,8 @@ export interface ConversationConfig {
   enableMultiTurn: boolean;
   enableClarification: boolean;
   enableSuggestions: boolean;
-  responseStyle: 'concise' | 'detailed' | 'technical' | 'casual';
-  language: 'en' | 'es' | 'fr' | 'de' | 'zh';
+  responseStyle: &apos;concise&apos; | &apos;detailed&apos; | &apos;technical&apos; | &apos;casual&apos;;
+  language: &apos;en&apos; | &apos;es&apos; | &apos;fr&apos; | &apos;de&apos; | &apos;zh&apos;;
   enablePersonalization: boolean;
 }
 
@@ -90,8 +90,8 @@ const defaultConfig: ConversationConfig = {
   enableMultiTurn: true,
   enableClarification: true,
   enableSuggestions: true,
-  responseStyle: 'detailed',
-  language: 'en',
+  responseStyle: &apos;detailed&apos;,
+  language: &apos;en&apos;,
   enablePersonalization: true
 };
 
@@ -111,9 +111,9 @@ export function initConversation(
     type,
     messages: [],
     context: {
-      topic: initialContext?.topic || '',
-      userGoal: initialContext?.userGoal || '',
-      currentQuery: initialContext?.currentQuery || '',
+      topic: initialContext?.topic || &apos;&apos;,
+      userGoal: initialContext?.userGoal || &apos;&apos;,
+      currentQuery: initialContext?.currentQuery || &apos;&apos;,
       searchHistory: initialContext?.searchHistory || [],
       selectedResults: initialContext?.selectedResults || [],
       preferences: initialContext?.preferences || {}
@@ -363,7 +363,7 @@ function generateConversationalResponse(
   const sources = relevantResults.map(result => ({
     id: result.id,
     title: result.title,
-    excerpt: result._snippet || result.summary || result.content.substring(0, 150) + '...',
+    excerpt: result._snippet || result.summary || result.content.substring(0, 150) + &apos;...&apos;,
     url: result.url,
     relevance: result.similarity || 0.5
   }));
@@ -386,22 +386,22 @@ function generateQuestionAnsweringResponse(
   config: ConversationConfig
 ): string {
   if (results.length === 0) {
-    return "I couldn't find specific information to answer your question directly. Could you provide more context or rephrase your question?";
+    return &quot;I couldn&apos;t find specific information to answer your question directly. Could you provide more context or rephrase your question?&quot;;
   }
   
   const topResult = results[0];
   const answer = topResult._snippet || topResult.summary || topResult.content.substring(0, 300);
   
-  if (config.responseStyle === 'concise') {
-    return `Based on my search, here's a concise answer: ${answer.substring(0, 150)}...`;
-  } else if (config.responseStyle === 'technical') {
-    return `Here's a technical explanation based on the available information:\n\n${answer}\n\nSource: ${topResult.title}`;
+  if (config.responseStyle === &apos;concise&apos;) {
+    return `Based on my search, here&apos;s a concise answer: ${answer.substring(0, 150)}...`;
+  } else if (config.responseStyle === &apos;technical&apos;) {
+    return `Here&apos;s a technical explanation based on the available information:\n\n${answer}\n\nSource: ${topResult.title}`;
   } else {
     return `I found this information that answers your question:
 
 ${answer}
 
-This comes from "${topResult.title}" which might provide additional details.`;
+This comes from &quot;${topResult.title}&quot; which might provide additional details.`;
   }
 }
 
@@ -414,7 +414,7 @@ function generateComparisonResponse(
   config: ConversationConfig
 ): string {
   if (results.length < 2) {
-    return "I need more information to make a proper comparison. Could you specify what you'd like to compare?";
+    return &quot;I need more information to make a proper comparison. Could you specify what you'd like to compare?&quot;;
   }
   
   const topResults = results.slice(0, 3);
@@ -422,14 +422,14 @@ function generateComparisonResponse(
   if (config.responseStyle === 'concise') {
     return `Here's a quick comparison of the top options based on your query.`;
   } else {
-    let response = "Here's a comparison of the most relevant options:\n\n";
+    let response = &quot;Here's a comparison of the most relevant options:\n\n&quot;;
     
     topResults.forEach((result, index) => {
       response += `${index + 1}. **${result.title}**\n`;
       response += `   ${result._snippet || result.summary || result.content.substring(0, 100)}...\n\n`;
     });
     
-    response += "Each option has different strengths. Would you like me to elaborate on any specific aspect?";
+    response += &quot;Each option has different strengths. Would you like me to elaborate on any specific aspect?&quot;;
     return response;
   }
 }
@@ -443,7 +443,7 @@ function generateTroubleshootingResponse(
   config: ConversationConfig
 ): string {
   if (results.length === 0) {
-    return "I couldn't find specific troubleshooting information for your issue. Could you describe the problem in more detail?";
+    return &quot;I couldn't find specific troubleshooting information for your issue. Could you describe the problem in more detail?&quot;;
   }
   
   const topResult = results[0];
@@ -451,7 +451,7 @@ function generateTroubleshootingResponse(
   if (config.responseStyle === 'concise') {
     return `Here's a potential solution: ${topResult._snippet?.substring(0, 100) || 'Check the suggested resource for detailed steps.'}`;
   } else {
-    return `Based on similar issues, here's a potential solution:\n\n${topResult._snippet || topResult.summary || topResult.content.substring(0, 300)}...\n\nYou can find more detailed steps in "${topResult.title}".`;
+    return `Based on similar issues, here's a potential solution:\n\n${topResult._snippet || topResult.summary || topResult.content.substring(0, 300)}...\n\nYou can find more detailed steps in &quot;${topResult.title}&quot;.`;
   }
 }
 
@@ -464,7 +464,7 @@ function generateRecommendationResponse(
   config: ConversationConfig
 ): string {
   if (results.length === 0) {
-    return "I couldn't find specific recommendations for your query. Could you provide more details about what you're looking for?";
+    return &quot;I couldn't find specific recommendations for your query. Could you provide more details about what you're looking for?&quot;;
   }
   
   const topResults = results.slice(0, 3);
@@ -472,7 +472,7 @@ function generateRecommendationResponse(
   if (config.responseStyle === 'concise') {
     return `Top recommendations: ${topResults.map(r => r.title).join(', ')}`;
   } else {
-    let response = "Based on your query, here are the top recommendations:\n\n";
+    let response = &quot;Based on your query, here are the top recommendations:\n\n&quot;;
     
     topResults.forEach((result, index) => {
       response += `${index + 1}. **${result.title}**\n`;
@@ -480,7 +480,7 @@ function generateRecommendationResponse(
       response += `   ${result._snippet || result.summary || result.content.substring(0, 100)}...\n\n`;
     });
     
-    response += "These options are highly rated and relevant to your query. Would you like more details about any of them?";
+    response += &quot;These options are highly rated and relevant to your query. Would you like more details about any of them?&quot;;
     return response;
   }
 }
@@ -494,7 +494,7 @@ function generateExploratoryResponse(
   config: ConversationConfig
 ): string {
   if (results.length === 0) {
-    return "I couldn't find information on that topic. Could you try rephrasing or be more specific?";
+    return &quot;I couldn't find information on that topic. Could you try rephrasing or be more specific?&quot;;
   }
   
   const topResult = results[0];
@@ -502,7 +502,7 @@ function generateExploratoryResponse(
   if (config.responseStyle === 'concise') {
     return `Here's an overview: ${topResult._snippet?.substring(0, 150) || topResult.title}`;
   } else {
-    return `Here's what I found about "${query}":\n\n${topResult._snippet || topResult.summary || topResult.content.substring(0, 300)}...\n\nThis information is from "${topResult.title}". Would you like me to explore any particular aspect in more detail?`;
+    return `Here's what I found about &quot;${query}&quot;:\n\n${topResult._snippet || topResult.summary || topResult.content.substring(0, 300)}...\n\nThis information is from &quot;${topResult.title}&quot;. Would you like me to explore any particular aspect in more detail?`;
   }
 }
 
@@ -531,7 +531,7 @@ export function generateClarificationQuestions(
   const keyTerms = extractKeyTerms(query);
   
   if (keyTerms.length === 0) {
-    questions.push("Could you provide more details about what you're looking for?");
+    questions.push(&quot;Could you provide more details about what you're looking for?&quot;);
     return questions;
   }
   

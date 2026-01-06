@@ -22,7 +22,7 @@ const LuminaCore = () => {
     const createParticles = () => {
       if (!particlesRef.current) return;
       
-      particlesRef.current.innerHTML = '';
+      particlesRef.current.innerHTML = &apos;&apos;;
       const particleCount = window.innerWidth < 768 ? 30 : 50;
       
       for (let i = 0; i < particleCount; i++) {
@@ -63,7 +63,7 @@ const LuminaCore = () => {
     }
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener(&apos;mousemove&apos;, handleMouseMove);
       resizeObserver.disconnect();
     };
   }, []);

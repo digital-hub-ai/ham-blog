@@ -10,58 +10,58 @@ const AiEthics2024 = () => {
     <>
       <Head>
         <title>AI Ethics in 2024: Navigating the Moral Landscape - AI Vault</title>
-        <meta name="description" content="As AI becomes more integrated into our daily lives, understanding the ethical implications and establishing guidelines for responsible AI use is crucial." />
-        <meta name="keywords" content="AI ethics, artificial intelligence ethics, responsible AI, AI governance" />
+        <meta name="description&quot; content="As AI becomes more integrated into our daily lives, understanding the ethical implications and establishing guidelines for responsible AI use is crucial.&quot; />
+        <meta name="keywords&quot; content="AI ethics, artificial intelligence ethics, responsible AI, AI governance&quot; />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900&quot;>
+        <div className="container mx-auto px-4 py-12 max-w-4xl&quot;>
           {/* Back Button */}
-          <Link href="/blog">
-            <div className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors cursor-pointer">
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          <Link href="/blog&quot;>
+            <div className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors cursor-pointer&quot;>
+              <svg className="w-5 h-5 mr-2&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+                <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18&quot; />
               </svg>
               Back to Blog
             </div>
           </Link>
 
           {/* Article Header */}
-          <article className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-            <div className="mb-6">
-              <span className="px-4 py-2 bg-purple-600/30 rounded-full text-sm text-purple-300">AI Ethics</span>
+          <article className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20&quot;>
+            <div className="mb-6&quot;>
+              <span className="px-4 py-2 bg-purple-600/30 rounded-full text-sm text-purple-300&quot;>AI Ethics</span>
             </div>
             
-            <h1 className="text-4xl font-bold text-white mb-6">
+            <h1 className="text-4xl font-bold text-white mb-6&quot;>
               AI Ethics in 2024: Navigating the Moral Landscape
             </h1>
             
-            <div className="flex items-center text-gray-300 mb-8">
-              <div className="flex items-center mr-6">
-                <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-white font-semibold">EC</span>
+            <div className="flex items-center text-gray-300 mb-8&quot;>
+              <div className="flex items-center mr-6&quot;>
+                <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center mr-3&quot;>
+                  <span className="text-white font-semibold&quot;>EC</span>
                 </div>
                 <span>Ethics Committee</span>
               </div>
-              <span className="mr-6">•</span>
+              <span className="mr-6&quot;>•</span>
               <span>November 11, 2024</span>
-              <span className="mr-6">•</span>
+              <span className="mr-6&quot;>•</span>
               <span>10 min read</span>
             </div>
 
             {/* Article Content */}
-            <div className="prose prose-lg prose-invert max-w-none">
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <div className="prose prose-lg prose-invert max-w-none&quot;>
+              <p className="text-gray-300 text-lg leading-relaxed mb-6&quot;>
                 As AI becomes more integrated into our daily lives, understanding the ethical implications and establishing guidelines for responsible AI use is crucial.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">The Growing Importance of AI Ethics</h2>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <h2 className="text-2xl font-bold text-white mt-8 mb-4&quot;>The Growing Importance of AI Ethics</h2>
+              <p className="text-gray-300 leading-relaxed mb-6&quot;>
                 With AI systems making decisions that affect millions of people, from loan applications to medical diagnoses, the need for ethical guidelines has never been more pressing. Organizations must balance innovation with responsibility.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">Key Ethical Challenges</h2>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 mb-6">
+              <h2 className="text-2xl font-bold text-white mt-8 mb-4&quot;>Key Ethical Challenges</h2>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 mb-6&quot;>
                 <li>Bias in AI algorithms and training data</li>
                 <li>Privacy concerns with data collection and usage</li>
                 <li>Transparency in AI decision-making processes</li>
@@ -69,38 +69,38 @@ const AiEthics2024 = () => {
                 <li>Job displacement and economic impact</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">Regulatory Frameworks</h2>
-              <p className="text-gray-300 leading-relaxed mb-6">
-                Governments worldwide are developing AI regulations. The EU's AI Act, China's AI governance principles, and the US's AI Bill of Rights represent different approaches to ensuring responsible AI development and deployment.
+              <h2 className="text-2xl font-bold text-white mt-8 mb-4&quot;>Regulatory Frameworks</h2>
+              <p className="text-gray-300 leading-relaxed mb-6&quot;>
+                Governments worldwide are developing AI regulations. The EU&apos;s AI Act, China&apos;s AI governance principles, and the US&apos;s AI Bill of Rights represent different approaches to ensuring responsible AI development and deployment.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">Corporate Responsibility</h2>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <h2 className="text-2xl font-bold text-white mt-8 mb-4&quot;>Corporate Responsibility</h2>
+              <p className="text-gray-300 leading-relaxed mb-6&quot;>
                 Companies must establish internal AI ethics boards, conduct regular bias audits, and implement transparent AI governance frameworks. This includes diverse development teams and ongoing ethical training.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">The Role of Individuals</h2>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <h2 className="text-2xl font-bold text-white mt-8 mb-4&quot;>The Role of Individuals</h2>
+              <p className="text-gray-300 leading-relaxed mb-6&quot;>
                 As users and citizens, we have a responsibility to understand AI systems we interact with, question their decisions, and advocate for ethical AI practices in our communities and workplaces.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">Future Considerations</h2>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <h2 className="text-2xl font-bold text-white mt-8 mb-4&quot;>Future Considerations</h2>
+              <p className="text-gray-300 leading-relaxed mb-6&quot;>
                 Looking ahead, we must address emerging challenges like AGI safety, AI consciousness, and the long-term societal impacts of increasingly autonomous systems. International cooperation will be essential.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">Conclusion</h2>
-              <p className="text-gray-300 leading-relaxed mb-6">
-                AI ethics is not just a technical challenge but a societal one. By working together across disciplines and borders, we can harness AI's benefits while minimizing its risks and ensuring it serves humanity's best interests.
+              <h2 className="text-2xl font-bold text-white mt-8 mb-4&quot;>Conclusion</h2>
+              <p className="text-gray-300 leading-relaxed mb-6&quot;>
+                AI ethics is not just a technical challenge but a societal one. By working together across disciplines and borders, we can harness AI&apos;s benefits while minimizing its risks and ensuring it serves humanity&apos;s best interests.
               </p>
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-8 pt-8 border-t border-white/20">
-              <span className="px-3 py-1 bg-purple-600/30 rounded-full text-sm text-purple-300">AI Ethics</span>
-              <span className="px-3 py-1 bg-blue-600/30 rounded-full text-sm text-blue-300">Responsible AI</span>
-              <span className="px-3 py-1 bg-green-600/30 rounded-full text-sm text-green-300">Governance</span>
-              <span className="px-3 py-1 bg-yellow-600/30 rounded-full text-sm text-yellow-300">Policy</span>
+            <div className="flex flex-wrap gap-2 mt-8 pt-8 border-t border-white/20&quot;>
+              <span className="px-3 py-1 bg-purple-600/30 rounded-full text-sm text-purple-300&quot;>AI Ethics</span>
+              <span className="px-3 py-1 bg-blue-600/30 rounded-full text-sm text-blue-300&quot;>Responsible AI</span>
+              <span className="px-3 py-1 bg-green-600/30 rounded-full text-sm text-green-300&quot;>Governance</span>
+              <span className="px-3 py-1 bg-yellow-600/30 rounded-full text-sm text-yellow-300&quot;>Policy</span>
             </div>
           </article>
         </div>

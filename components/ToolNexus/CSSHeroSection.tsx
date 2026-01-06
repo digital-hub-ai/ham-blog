@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from &apos;react&apos;;
 
 interface CSSHeroSectionProps {
   children: ReactNode;
@@ -11,8 +11,8 @@ export const CSSHeroSection: React.FC<CSSHeroSectionProps> = ({
 }) => {
   return (
     <section className={`relative py-20 md:py-32 overflow-hidden ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent opacity-50" />
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent opacity-50&quot; />
+      <div className="relative z-10 container mx-auto px-4&quot;>
         {children}
       </div>
     </section>

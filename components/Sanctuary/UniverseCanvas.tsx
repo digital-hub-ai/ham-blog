@@ -1,11 +1,11 @@
 // components/Sanctuary/UniverseCanvas.tsx
-'use client';
+&apos;use client&apos;;
 
-import { useEffect, useRef, useState, useCallback } from 'react';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { useFavorites } from '../../hooks/useFavorites';
-import { tools } from '../../data/tools';
+import { useEffect, useRef, useState, useCallback } from &apos;react&apos;;
+import * as THREE from &apos;three&apos;;
+import { OrbitControls } from &apos;three/examples/jsm/controls/OrbitControls&apos;;
+import { useFavorites } from &apos;../../hooks/useFavorites&apos;;
+import { tools } from &apos;../../data/tools&apos;;
 
 interface ToolOrbData {
   id: string;
@@ -39,7 +39,7 @@ export default function UniverseCanvas() {
   const { favorites } = useFavorites();
   const [toolOrbs, setToolOrbs] = useState<ToolOrbData[]>([]);
   const [gravityWells, setGravityWells] = useState<GravityWellData[]>([]);
-  const [universeSeed, setUniverseSeed] = useState<string>('');
+  const [universeSeed, setUniverseSeed] = useState<string>(&apos;&apos;);
   const [collectionMood, setCollectionMood] = useState<'productive' | 'creative' | 'research'>('productive');
 
   // Generate unique universe seed based on user's collection
@@ -72,7 +72,7 @@ export default function UniverseCanvas() {
     const renderer = new THREE.WebGLRenderer({ 
       antialias: true, 
       alpha: true,
-      powerPreference: "high-performance"
+      powerPreference: &quot;high-performance&quot;
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -409,6 +409,6 @@ export default function UniverseCanvas() {
   }, [animate]);
 
   return (
-    <div ref={mountRef} className="w-full h-full absolute inset-0" />
+    <div ref={mountRef} className="w-full h-full absolute inset-0&quot; />
   );
 }

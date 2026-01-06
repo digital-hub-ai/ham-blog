@@ -59,7 +59,7 @@ export const ComparisonProvider: React.FC<{ children: ReactNode }> = ({ children
 export const useComparison = (): ComparisonContextType => {
   const context = useContext(ComparisonContext);
   if (!context) {
-    throw new Error('useComparison must be used within a ComparisonProvider');
+    throw new Error(&apos;useComparison must be used within a ComparisonProvider&apos;);
   }
   return context;
 };

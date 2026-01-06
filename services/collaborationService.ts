@@ -18,7 +18,7 @@ export interface CollaborationSession {
 export interface Participant {
   id: string;
   name: string;
-  role: 'owner' | 'editor' | 'viewer';
+  role: &apos;owner&apos; | &apos;editor&apos; | &apos;viewer&apos;;
   joinedAt: number;
   lastActive: number;
   color: string; // For UI identification
@@ -33,7 +33,7 @@ export interface CollaborationSettings {
   allowEditing: boolean;
   allowCommenting: boolean;
   allowSharing: boolean;
-  visibility: 'private' | 'invite-only' | 'public';
+  visibility: &apos;private&apos; | &apos;invite-only&apos; | &apos;public&apos;;
   enableRealTimeSync: boolean;
   enableNotifications: boolean;
   maxParticipants: number;
@@ -78,7 +78,7 @@ export interface SharedAnnotation {
     startIndex: number;
     endIndex: number;
   };
-  type: 'highlight' | 'comment' | 'question' | 'suggestion';
+  type: &apos;highlight&apos; | &apos;comment&apos; | &apos;question&apos; | &apos;suggestion&apos;;
   replies: SharedReply[];
 }
 
@@ -92,22 +92,22 @@ export interface SharedReply {
 
 // Collaboration event types
 export type CollaborationEvent = 
-  | 'session-created'
-  | 'participant-joined'
-  | 'participant-left'
-  | 'query-changed'
-  | 'filters-changed'
-  | 'results-updated'
-  | 'result-selected'
-  | 'note-added'
-  | 'note-updated'
-  | 'note-deleted'
-  | 'annotation-added'
-  | 'annotation-updated'
-  | 'annotation-deleted'
-  | 'cursor-moved'
-  | 'settings-changed'
-  | 'session-ended';
+  | &apos;session-created&apos;
+  | &apos;participant-joined&apos;
+  | &apos;participant-left&apos;
+  | &apos;query-changed&apos;
+  | &apos;filters-changed&apos;
+  | &apos;results-updated&apos;
+  | &apos;result-selected&apos;
+  | &apos;note-added&apos;
+  | &apos;note-updated&apos;
+  | &apos;note-deleted&apos;
+  | &apos;annotation-added&apos;
+  | &apos;annotation-updated&apos;
+  | &apos;annotation-deleted&apos;
+  | &apos;cursor-moved&apos;
+  | &apos;settings-changed&apos;
+  | &apos;session-ended&apos;;
 
 // Collaboration event
 export interface CollaborationEventPayload {
@@ -332,7 +332,7 @@ export class RealTimeCollaborationService {
     
     // Emit event
     this.emitEvent({
-      type: 'session-ended',
+      type: &apos;session-ended&apos;,
       sessionId,
       userId: session.owner,
       timestamp: Date.now(),
@@ -361,7 +361,7 @@ export class RealTimeCollaborationService {
     
     // Emit event
     this.emitEvent({
-      type: 'query-changed',
+      type: &apos;query-changed&apos;,
       sessionId,
       userId,
       timestamp: Date.now(),
@@ -390,7 +390,7 @@ export class RealTimeCollaborationService {
     
     // Emit event
     this.emitEvent({
-      type: 'filters-changed',
+      type: &apos;filters-changed&apos;,
       sessionId,
       userId,
       timestamp: Date.now(),
@@ -419,7 +419,7 @@ export class RealTimeCollaborationService {
     
     // Emit event
     this.emitEvent({
-      type: 'results-updated',
+      type: &apos;results-updated&apos;,
       sessionId,
       userId,
       timestamp: Date.now(),
@@ -448,7 +448,7 @@ export class RealTimeCollaborationService {
     
     // Emit event
     this.emitEvent({
-      type: 'result-selected',
+      type: &apos;result-selected&apos;,
       sessionId,
       userId,
       timestamp: Date.now(),
@@ -471,7 +471,7 @@ export class RealTimeCollaborationService {
     
     // Check permissions
     const participant = session.participants.find(p => p.id === userId);
-    if (!participant || (participant.role === 'viewer' && !session.settings.allowCommenting)) {
+    if (!participant || (participant.role === &apos;viewer&apos; && !session.settings.allowCommenting)) {
       return null;
     }
     
@@ -493,7 +493,7 @@ export class RealTimeCollaborationService {
     
     // Emit event
     this.emitEvent({
-      type: 'note-added',
+      type: &apos;note-added&apos;,
       sessionId,
       userId,
       timestamp: Date.now(),

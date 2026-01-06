@@ -229,13 +229,13 @@ function extractEntities(query: string): QueryIntent['entities'] {
     entities.brand = brandMatches;
   }
   
-  // Extract price mentions (e.g., "$10", "10 dollars")
+  // Extract price mentions (e.g., &quot;$10&quot;, &quot;10 dollars&quot;)
   const priceMatches = query.match(/\$?\d+(?:\.\d+)?\s*(?:dollars?|usd|eur|gbp)?/gi);
   if (priceMatches) {
     entities.price = priceMatches;
   }
   
-  // Extract rating mentions (e.g., "5 stars", "4.5 rating")
+  // Extract rating mentions (e.g., &quot;5 stars&quot;, &quot;4.5 rating&quot;)
   const ratingMatches = query.match(/\b\d+(?:\.\d+)?\s*(?:stars?|rating|out of 5)/gi);
   if (ratingMatches) {
     entities.rating = ratingMatches;
@@ -422,16 +422,16 @@ export function generateQuerySuggestions(query: string, intent: QueryIntent): st
 /**
  * Classify query complexity
  */
-export function classifyQueryComplexity(query: string): 'simple' | 'moderate' | 'complex' {
+export function classifyQueryComplexity(query: string): &apos;simple&apos; | &apos;moderate&apos; | &apos;complex&apos; {
   const wordCount = query.trim().split(/\s+/).length;
   const specialChars = (query.match(/[^\w\s]/g) || []).length;
   const booleanOperators = (query.match(/\b(and|or|not)\b/gi) || []).length;
   
   if (wordCount <= 3 && specialChars === 0 && booleanOperators === 0) {
-    return 'simple';
+    return &apos;simple&apos;;
   } else if (wordCount <= 8 && specialChars <= 2 && booleanOperators <= 1) {
-    return 'moderate';
+    return &apos;moderate&apos;;
   } else {
-    return 'complex';
+    return &apos;complex&apos;;
   }
 }

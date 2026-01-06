@@ -1,5 +1,5 @@
-import { KnowledgeNode } from './adaptive-stream';
-import StructuredDataFabric from './structured-data-fabric';
+import { KnowledgeNode } from &apos;./adaptive-stream&apos;;
+import StructuredDataFabric from &apos;./structured-data-fabric&apos;;
 
 export interface SEOScore {
   overall: number;
@@ -12,12 +12,12 @@ export interface SEOScore {
 }
 
 export interface SEORecommendation {
-  type: 'critical' | 'warning' | 'suggestion';
-  category: 'content' | 'technical' | 'meta' | 'structure';
+  type: &apos;critical&apos; | &apos;warning&apos; | &apos;suggestion&apos;;
+  category: &apos;content&apos; | &apos;technical&apos; | &apos;meta&apos; | &apos;structure&apos;;
   title: string;
   description: string;
   action: string;
-  impact: 'high' | 'medium' | 'low';
+  impact: &apos;high&apos; | &apos;medium&apos; | &apos;low&apos;;
   estimatedTime: string;
 }
 
@@ -90,50 +90,50 @@ export class SEOAutomationEngine {
     // Content recommendations
     if (currentScore.readability < 70) {
       recommendations.push({
-        type: 'warning',
-        category: 'content',
-        title: 'Improve Readability',
-        description: 'Content readability score is below optimal range',
-        action: 'Break down long sentences, use simpler language, add more transition words',
-        impact: 'medium',
-        estimatedTime: '15 minutes'
+        type: &apos;warning&apos;,
+        category: &apos;content&apos;,
+        title: &apos;Improve Readability&apos;,
+        description: &apos;Content readability score is below optimal range&apos;,
+        action: &apos;Break down long sentences, use simpler language, add more transition words&apos;,
+        impact: &apos;medium&apos;,
+        estimatedTime: &apos;15 minutes&apos;
       });
     }
 
     if (currentScore.keywordDensity < 1.5) {
       recommendations.push({
-        type: 'critical',
-        category: 'content',
-        title: 'Increase Keyword Density',
-        description: 'Target keywords are not sufficiently represented in content',
-        action: `Naturally incorporate: ${targetKeywords.join(', ')}`,
-        impact: 'high',
-        estimatedTime: '30 minutes'
+        type: &apos;critical&apos;,
+        category: &apos;content&apos;,
+        title: &apos;Increase Keyword Density&apos;,
+        description: &apos;Target keywords are not sufficiently represented in content&apos;,
+        action: `Naturally incorporate: ${targetKeywords.join(&apos;, &apos;)}`,
+        impact: &apos;high&apos;,
+        estimatedTime: &apos;30 minutes&apos;
       });
     }
 
     if (currentScore.answerIntent < 60) {
       recommendations.push({
-        type: 'suggestion',
-        category: 'content',
-        title: 'Add Answer-Intent Content',
-        description: 'Content lacks clear answers to user questions',
-        action: 'Add FAQ section and direct answers to common questions',
-        impact: 'medium',
-        estimatedTime: '20 minutes'
+        type: &apos;suggestion&apos;,
+        category: &apos;content&apos;,
+        title: &apos;Add Answer-Intent Content&apos;,
+        description: &apos;Content lacks clear answers to user questions&apos;,
+        action: &apos;Add FAQ section and direct answers to common questions&apos;,
+        impact: &apos;medium&apos;,
+        estimatedTime: &apos;20 minutes&apos;
       });
     }
 
     // Technical recommendations
     if (currentScore.technical < 80) {
       recommendations.push({
-        type: 'warning',
-        category: 'technical',
-        title: 'Technical SEO Issues',
-        description: 'Content has technical SEO optimization opportunities',
-        action: 'Add structured data, optimize headings, improve internal linking',
-        impact: 'high',
-        estimatedTime: '45 minutes'
+        type: &apos;warning&apos;,
+        category: &apos;technical&apos;,
+        title: &apos;Technical SEO Issues&apos;,
+        description: &apos;Content has technical SEO optimization opportunities&apos;,
+        action: &apos;Add structured data, optimize headings, improve internal linking&apos;,
+        impact: &apos;high&apos;,
+        estimatedTime: &apos;45 minutes&apos;
       });
     }
 
@@ -157,12 +157,12 @@ export class SEOAutomationEngine {
       description: optimizedDescription,
       ogTitle: optimizedTitle,
       ogDescription: optimizedDescription,
-      ogImage: `${new URL(url).origin}/api/og/${url.split('/').pop()}`,
+      ogImage: `${new URL(url).origin}/api/og/${url.split(&apos;/&apos;).pop()}`,
       twitterTitle: optimizedTitle,
       twitterDescription: optimizedDescription,
-      twitterImage: `${new URL(url).origin}/api/og/${url.split('/').pop()}`,
+      twitterImage: `${new URL(url).origin}/api/og/${url.split(&apos;/&apos;).pop()}`,
       canonical: url,
-      robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+      robots: &apos;index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1&apos;,
       keywords: targetKeywords
     };
   }
@@ -250,20 +250,20 @@ export class SEOAutomationEngine {
     // In production, integrate with Google Search Console API
     return {
       rankings: [
-        { keyword: 'ai tools', position: 12, url, change: +3 },
-        { keyword: 'artificial intelligence software', position: 8, url, change: -1 },
-        { keyword: 'machine learning platforms', position: 15, url, change: +5 }
+        { keyword: &apos;ai tools&apos;, position: 12, url, change: +3 },
+        { keyword: &apos;artificial intelligence software&apos;, position: 8, url, change: -1 },
+        { keyword: &apos;machine learning platforms&apos;, position: 15, url, change: +5 }
       ],
       featuredSnippets: [
-        { query: 'best ai tools for developers', position: 0, url },
-        { query: 'ai productivity software comparison', position: 1, url }
+        { query: &apos;best ai tools for developers&apos;, position: 0, url },
+        { query: &apos;ai productivity software comparison&apos;, position: 1, url }
       ],
       coreWebVitals: {
         lcp: 1.8,
         fid: 45,
         cls: 0.08
       },
-      indexStatus: 'Indexed',
+      indexStatus: &apos;Indexed&apos;,
       crawlErrors: []
     };
   }
@@ -273,7 +273,7 @@ export class SEOAutomationEngine {
    */
   async analyzeContentFreshness(node: KnowledgeNode): Promise<{
     needsUpdate: boolean;
-    updatePriority: 'low' | 'medium' | 'high';
+    updatePriority: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos;;
     suggestedUpdates: string[];
     competitorContent: Array<{
       title: string;
@@ -330,7 +330,7 @@ export class SEOAutomationEngine {
   private calculateKeywordDensity(content: string, keywords: string[]): number {
     const words = content.toLowerCase().split(/\s+/);
     const keywordCount = keywords.reduce((count, keyword) => {
-      const regex = new RegExp(keyword.toLowerCase(), 'gi');
+      const regex = new RegExp(keyword.toLowerCase(), &apos;gi&apos;);
       const matches = content.toLowerCase().match(regex);
       return count + (matches ? matches.length : 0);
     }, 0);
@@ -368,9 +368,9 @@ export class SEOAutomationEngine {
     let score = 0;
     
     // Heading structure
-    if (content.includes('<h1>') || content.match(/^#\s/)) score += 20;
-    if (content.includes('<h2>') || content.match(/^##\s/)) score += 15;
-    if (content.includes('<h3>') || content.match(/^###\s/)) score += 10;
+    if (content.includes(&apos;<h1>&apos;) || content.match(/^#\s/)) score += 20;
+    if (content.includes(&apos;<h2>&apos;) || content.match(/^##\s/)) score += 15;
+    if (content.includes(&apos;<h3>') || content.match(/^###\s/)) score += 10;
     
     // Content length
     if (content.length > 300) score += 15;
@@ -378,7 +378,7 @@ export class SEOAutomationEngine {
     
     // Title optimization
     if (title.length >= 30 && title.length <= 60) score += 15;
-    if (title.toLowerCase().includes('ai') || title.toLowerCase().includes('tools')) score += 15;
+    if (title.toLowerCase().includes(&apos;ai&apos;) || title.toLowerCase().includes(&apos;tools&apos;)) score += 15;
     
     return Math.min(100, score);
   }
@@ -397,7 +397,7 @@ export class SEOAutomationEngine {
     let description = sentences.slice(0, 2).join('. ').trim();
     
     if (description.length > 160) {
-      description = description.substring(0, 157) + '...';
+      description = description.substring(0, 157) + &apos;...&apos;;
     }
     
     return description;
@@ -427,14 +427,14 @@ export class SEOAutomationEngine {
     // In production, use AI to generate Q&A pairs
     return [
       {
-        question: "What are the main benefits?",
-        answer: "The main benefits include increased productivity, cost savings, and improved efficiency.",
-        context: "introduction"
+        question: &quot;What are the main benefits?&quot;,
+        answer: &quot;The main benefits include increased productivity, cost savings, and improved efficiency.&quot;,
+        context: &quot;introduction&quot;
       },
       {
-        question: "How does it work?",
-        answer: "It works by automating repetitive tasks and providing intelligent suggestions.",
-        context: "technical explanation"
+        question: &quot;How does it work?&quot;,
+        answer: &quot;It works by automating repetitive tasks and providing intelligent suggestions.&quot;,
+        context: &quot;technical explanation&quot;
       }
     ];
   }
@@ -507,7 +507,7 @@ export class SEOAutomationEngine {
       keywords.some(keyword => sentence.toLowerCase().includes(keyword.toLowerCase()))
     );
     
-    return targetSentence || sentences[0] || '';
+    return targetSentence || sentences[0] || &apos;&apos;;
   }
 
   private async generatePeopleAlsoAsk(content: string, keywords: string[]): Promise<string> {
@@ -516,11 +516,11 @@ export class SEOAutomationEngine {
 
   private generateComprehensiveAnswer(content: string): string {
     const sentences = content.split(/[.!?]+/).filter(s => s.trim().length > 0);
-    return sentences.slice(0, 5).join('. ').trim();
+    return sentences.slice(0, 5).join(&apos;. &apos;).trim();
   }
 
   private generateVisualAnswer(content: string): string {
-    return 'This can be visualized through interactive charts showing performance metrics and comparison data.';
+    return &apos;This can be visualized through interactive charts showing performance metrics and comparison data.&apos;;
   }
 
   private getDaysSince(dateString: string): number {
@@ -534,16 +534,16 @@ export class SEOAutomationEngine {
     // In production, scrape competitor content
     return [
       {
-        title: 'Complete Guide to AI Tools 2024',
-        url: 'https://competitor.com/ai-tools-guide',
-        publishedAt: '2024-10-15',
-        keyPoints: ['Latest AI trends', 'Tool comparisons', 'Implementation tips']
+        title: &apos;Complete Guide to AI Tools 2024&apos;,
+        url: &apos;https://competitor.com/ai-tools-guide&apos;,
+        publishedAt: &apos;2024-10-15&apos;,
+        keyPoints: [&apos;Latest AI trends&apos;, &apos;Tool comparisons&apos;, &apos;Implementation tips&apos;]
       },
       {
-        title: 'AI Software Comparison',
-        url: 'https://another-competitor.com/ai-comparison',
-        publishedAt: '2024-11-01',
-        keyPoints: ['Pricing analysis', 'Feature breakdown', 'User reviews']
+        title: &apos;AI Software Comparison&apos;,
+        url: &apos;https://another-competitor.com/ai-comparison&apos;,
+        publishedAt: &apos;2024-11-01&apos;,
+        keyPoints: [&apos;Pricing analysis&apos;, &apos;Feature breakdown&apos;, &apos;User reviews&apos;]
       }
     ];
   }

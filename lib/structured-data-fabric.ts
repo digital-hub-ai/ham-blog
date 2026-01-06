@@ -1,8 +1,8 @@
-import { KnowledgeNode } from './adaptive-stream';
+import { KnowledgeNode } from &apos;./adaptive-stream&apos;;
 
 export interface StructuredDataConfig {
-  '@context': string;
-  '@type': string;
+  &apos;@context&apos;: string;
+  &apos;@type&apos;: string;
   headline?: string;
   abstract?: string;
   answerType?: string;
@@ -11,7 +11,7 @@ export interface StructuredDataConfig {
   educationalLevel?: string;
   learningResourceType?: string;
   author?: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
     credential?: string;
     url?: string;
@@ -26,20 +26,20 @@ export interface StructuredDataConfig {
   datePublished?: string;
   dateModified?: string;
   mainEntityOfPage?: {
-    '@type': string;
-    '@id': string;
+    &apos;@type&apos;: string;
+    &apos;@id&apos;: string;
   };
   image?: string[];
   publisher?: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
     logo?: {
-      '@type': string;
+      &apos;@type&apos;: string;
       url: string;
     };
   };
   aggregateRating?: {
-    '@type': string;
+    &apos;@type&apos;: string;
     ratingValue: string;
     reviewCount: string;
     bestRating: string;
@@ -171,15 +171,15 @@ export class StructuredDataFabric {
       '@type': 'Table',
       name: title,
       about: tools.map(tool => ({
-        '@type': 'SoftwareApplication',
+        &apos;@type&apos;: &apos;SoftwareApplication&apos;,
         name: tool.name,
         description: tool.description,
         applicationCategory: tool.category,
         operatingSystem: tool.platform,
         offers: tool.pricing ? {
-          '@type': 'Offer',
+          &apos;@type&apos;: &apos;Offer&apos;,
           price: tool.pricing,
-          priceCurrency: 'USD'
+          priceCurrency: &apos;USD&apos;
         } : undefined
       }))
     };
@@ -282,9 +282,9 @@ export class StructuredDataFabric {
         url: tool.url
       },
       additionalProperty: tool.features.map(feature => ({
-        '@type': 'PropertyValue',
+        &apos;@type&apos;: &apos;PropertyValue&apos;,
         name: feature,
-        value: 'Available'
+        value: &apos;Available&apos;
       }))
     };
   }
@@ -301,13 +301,13 @@ export class StructuredDataFabric {
     expertise: string[];
   }) {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
+      &apos;@context&apos;: &apos;https://schema.org&apos;,
+      &apos;@type&apos;: &apos;Person&apos;,
       name: author.name,
       jobTitle: author.jobTitle,
       description: author.description,
       image: author.image,
-      url: `${this.baseUrl}/authors/${author.name.toLowerCase().replace(/\s+/g, '-')}`,
+      url: `${this.baseUrl}/authors/${author.name.toLowerCase().replace(/\s+/g, &apos;-&apos;)}`,
       sameAs: author.socialLinks,
       knowsAbout: author.expertise
     };
@@ -324,18 +324,18 @@ export class StructuredDataFabric {
     reviewedBy: string;
   }) {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
+      &apos;@context&apos;: &apos;https://schema.org&apos;,
+      &apos;@type&apos;: &apos;WebPage&apos;,
       name: page.title,
       description: page.description,
       url: page.url,
       lastReviewed: page.lastReviewed,
       reviewedBy: {
-        '@type': 'Organization',
+        &apos;@type&apos;: &apos;Organization&apos;,
         name: page.reviewedBy
       },
       mainEntity: {
-        '@type': 'Article',
+        &apos;@type&apos;: &apos;Article&apos;,
         headline: page.title
       }
     };
@@ -360,10 +360,10 @@ export class StructuredDataFabric {
       name: question.text,
       answerCount: question.answerCount.toString(),
       suggestedAnswer: question.suggestedAnswer.map(answer => ({
-        '@type': 'Answer',
+        &apos;@type&apos;: &apos;Answer&apos;,
         text: answer.text,
         author: {
-          '@type': 'Person',
+          &apos;@type&apos;: &apos;Person&apos;,
           name: answer.author
         },
         dateCreated: answer.dateCreated,
@@ -421,29 +421,29 @@ export class StructuredDataFabric {
     const topics = [];
     
     if (node.linkedTools && node.linkedTools.length > 0) {
-      topics.push('AI tool selection and evaluation');
+      topics.push(&apos;AI tool selection and evaluation&apos;);
     }
     
-    if (node.category === 'development') {
-      topics.push('Development workflow optimization');
+    if (node.category === &apos;development&apos;) {
+      topics.push(&apos;Development workflow optimization&apos;);
     }
     
-    if (node.category === 'business') {
-      topics.push('Business process automation');
+    if (node.category === &apos;business&apos;) {
+      topics.push(&apos;Business process automation&apos;);
     }
     
     topics.push(`${node.category} best practices`);
     
-    return topics.join(', ');
+    return topics.join(&apos;, &apos;);
   }
 
   private mapDifficulty(difficulty: string): string {
     const educationMap: Record<string, string> = {
-      'beginner': 'Beginner',
-      'intermediate': 'Intermediate',
-      'advanced': 'Advanced'
+      &apos;beginner&apos;: &apos;Beginner&apos;,
+      &apos;intermediate&apos;: &apos;Intermediate&apos;,
+      &apos;advanced&apos;: &apos;Advanced&apos;
     };
-    return educationMap[difficulty] || 'Intermediate';
+    return educationMap[difficulty] || &apos;Intermediate&apos;;
   }
 
   private getAuthorData(authorName: string) {
@@ -498,8 +498,8 @@ export class StructuredDataFabric {
 
     // Breadcrumb schema
     const breadcrumbs = [
-      { name: 'Home', url: this.baseUrl },
-      { name: 'Blog', url: `${this.baseUrl}/blog` },
+      { name: &apos;Home&apos;, url: this.baseUrl },
+      { name: &apos;Blog&apos;, url: `${this.baseUrl}/blog` },
       { name: node.category, url: `${this.baseUrl}/blog/category/${node.category}` },
       { name: node.title, url: `${this.baseUrl}/blog/${node.slug}` }
     ];
@@ -517,18 +517,18 @@ export class StructuredDataFabric {
       const errors: string[] = [];
 
       // Check required fields
-      if (!parsed['@context']) errors.push('Missing @context');
-      if (!parsed['@type']) errors.push('Missing @type');
+      if (!parsed[&apos;@context&apos;]) errors.push(&apos;Missing @context&apos;);
+      if (!parsed[&apos;@type&apos;]) errors.push(&apos;Missing @type&apos;);
 
       // Type-specific validation
-      switch (parsed['@type']) {
-        case 'TechArticle':
-          if (!parsed.headline) errors.push('TechArticle missing headline');
-          if (!parsed.author) errors.push('TechArticle missing author');
+      switch (parsed[&apos;@type&apos;]) {
+        case &apos;TechArticle&apos;:
+          if (!parsed.headline) errors.push(&apos;TechArticle missing headline&apos;);
+          if (!parsed.author) errors.push(&apos;TechArticle missing author&apos;);
           break;
-        case 'FAQPage':
+        case &apos;FAQPage&apos;:
           if (!parsed.mainEntity || !Array.isArray(parsed.mainEntity)) {
-            errors.push('FAQPage missing valid mainEntity');
+            errors.push(&apos;FAQPage missing valid mainEntity&apos;);
           }
           break;
       }
@@ -540,7 +540,7 @@ export class StructuredDataFabric {
     } catch (error) {
       return {
         isValid: false,
-        errors: ['Invalid JSON format']
+        errors: [&apos;Invalid JSON format&apos;]
       };
     }
   }

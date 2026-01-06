@@ -1,4 +1,4 @@
-import { SearchResult } from './searchService';
+import { SearchResult } from &apos;./searchService&apos;;
 
 /**
  * Cluster search results based on similarity and category
@@ -100,11 +100,11 @@ export function getClusterStats(clusters: SearchCluster[]) {
  */
 export function groupByRating(results: SearchResult[]): Record<string, SearchResult[]> {
   const groups: Record<string, SearchResult[]> = {
-    '4.5+': [],
-    '4.0-4.4': [],
-    '3.5-3.9': [],
-    '3.0-3.4': [],
-    '<3.0': []
+    &apos;4.5+&apos;: [],
+    &apos;4.0-4.4&apos;: [],
+    &apos;3.5-3.9&apos;: [],
+    &apos;3.0-3.4&apos;: [],
+    &apos;<3.0': []
   };
   
   results.forEach(result => {
@@ -116,9 +116,9 @@ export function groupByRating(results: SearchResult[]): Record<string, SearchRes
     } else if (rating >= 3.5) {
       groups['3.5-3.9'].push(result);
     } else if (rating >= 3.0) {
-      groups['3.0-3.4'].push(result);
+      groups[&apos;3.0-3.4&apos;].push(result);
     } else {
-      groups['<3.0'].push(result);
+      groups[&apos;<3.0&apos;].push(result);
     }
   });
   
@@ -154,24 +154,24 @@ export function groupByPrice(results: SearchResult[]): Record<string, SearchResu
         // Extract price from string
         const priceMatch = pricing.match(/\$([\d.]+)/g);
         if (priceMatch) {
-          const prices = priceMatch.map(p => parseFloat(p.replace('$', '')));
+          const prices = priceMatch.map(p => parseFloat(p.replace(&apos;$&apos;, &apos;&apos;)));
           const maxPrice = Math.max(...prices);
           
           if (maxPrice <= 10) {
-            groups['$0-$10'].push(result);
+            groups[&apos;$0-$10&apos;].push(result);
           } else if (maxPrice <= 50) {
-            groups['$10-$50'].push(result);
+            groups[&apos;$10-$50&apos;].push(result);
           } else if (maxPrice <= 100) {
-            groups['$50-$100'].push(result);
+            groups[&apos;$50-$100&apos;].push(result);
           } else {
-            groups['$100+'].push(result);
+            groups[&apos;$100+&apos;].push(result);
           }
         } else {
-          groups['Contact'].push(result);
+          groups[&apos;Contact&apos;].push(result);
         }
       }
     } else {
-      groups['Contact'].push(result);
+      groups[&apos;Contact&apos;].push(result);
     }
   });
   

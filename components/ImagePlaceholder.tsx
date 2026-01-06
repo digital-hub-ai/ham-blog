@@ -1,4 +1,4 @@
-import React from 'react';
+import React from &apos;react&apos;;
 
 interface ImagePlaceholderProps {
   src?: string;
@@ -33,9 +33,9 @@ const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
       className={`rounded-lg shadow-md flex items-center justify-center bg-gradient-to-br from-amber-100 to-amber-200 border-2 border-dashed border-amber-300 ${className}`}
       style={{ width, height }}
     >
-      <div className="text-center text-amber-800">
-        <div className="text-4xl mb-2">🖼️</div>
-        <div className="font-medium">{alt}</div>
+      <div className="text-center text-amber-800&quot;>
+        <div className="text-4xl mb-2&quot;>🖼️</div>
+        <div className="font-medium&quot;>{alt}</div>
       </div>
     </div>
   );

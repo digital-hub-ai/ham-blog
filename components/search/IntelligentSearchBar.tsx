@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useState, useEffect, useRef, useCallback } from &apos;react&apos;;
+import Link from &apos;next/link&apos;;
+import { useRouter } from &apos;next/router&apos;;
 import { 
   faSearch, 
   faFilter, 
@@ -10,8 +10,8 @@ import {
   faTag,
   faChevronDown,
   faMicrophone
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from &apos;@fortawesome/free-solid-svg-icons&apos;;
+import { FontAwesomeIcon } from &apos;@fortawesome/react-fontawesome&apos;;
 
 // Define types
 interface SearchFilters {
@@ -56,47 +56,47 @@ interface Suggestion {
 }
 
 const aiCategories: Category[] = [
-  { value: 'text_generation', label: 'Text Generation' },
-  { value: 'image_generation', label: 'Image Generation' },
-  { value: 'video_ai', label: 'Video AI' },
-  { value: 'audio_ai', label: 'Audio AI' },
-  { value: 'code_ai', label: 'Code AI' },
-  { value: 'productivity', label: 'Productivity' },
-  { value: 'research', label: 'Research' },
-  { value: 'business', label: 'Business' }
+  { value: &apos;text_generation&apos;, label: &apos;Text Generation&apos; },
+  { value: &apos;image_generation&apos;, label: &apos;Image Generation&apos; },
+  { value: &apos;video_ai&apos;, label: &apos;Video AI&apos; },
+  { value: &apos;audio_ai&apos;, label: &apos;Audio AI&apos; },
+  { value: &apos;code_ai&apos;, label: &apos;Code AI&apos; },
+  { value: &apos;productivity&apos;, label: &apos;Productivity&apos; },
+  { value: &apos;research&apos;, label: &apos;Research&apos; },
+  { value: &apos;business&apos;, label: &apos;Business&apos; }
 ];
 
 const featureTags: FeatureTag[] = [
-  { value: 'api_access', label: 'API Access' },
-  { value: 'chrome_extension', label: 'Chrome Extension' },
-  { value: 'mobile_app', label: 'Mobile App' },
-  { value: 'open_source', label: 'Open Source' },
-  { value: 'team_collaboration', label: 'Team Collaboration' },
-  { value: 'integrations', label: 'Integrations' }
+  { value: &apos;api_access&apos;, label: &apos;API Access&apos; },
+  { value: &apos;chrome_extension&apos;, label: &apos;Chrome Extension&apos; },
+  { value: &apos;mobile_app&apos;, label: &apos;Mobile App&apos; },
+  { value: &apos;open_source&apos;, label: &apos;Open Source&apos; },
+  { value: &apos;team_collaboration&apos;, label: &apos;Team Collaboration&apos; },
+  { value: &apos;integrations&apos;, label: &apos;Integrations&apos; }
 ];
 
 export default function IntelligentSearchBar() {
   const router = useRouter();
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(&apos;&apos;);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [filters, setFilters] = useState<SearchFilters>({
-    category: '',
-    price: '',
+    category: &apos;&apos;,
+    price: &apos;&apos;,
     features: [],
     free: false,
     paid: false,
-    launchDateFrom: '',
-    launchDateTo: '',
-    lastUpdatedFrom: '',
-    lastUpdatedTo: '',
-    sortBy: 'relevance',
-    sortOrder: 'desc',
+    launchDateFrom: &apos;&apos;,
+    launchDateTo: &apos;&apos;,
+    lastUpdatedFrom: &apos;&apos;,
+    lastUpdatedTo: &apos;&apos;,
+    sortBy: &apos;relevance&apos;,
+    sortOrder: &apos;desc&apos;,
     hasAPI: false,
     hasMobileApp: false,
     hasChromeExtension: false,
     integrationCount: 0,
-    toolAge: '',
+    toolAge: &apos;&apos;,
     // Personalization options
     boostFavorites: false,
     boostHistory: false,
@@ -267,28 +267,28 @@ export default function IntelligentSearchBar() {
     });
   };
 
-  const hasActiveFilters = filters.category || filters.price || filters.features.length > 0 || filters.free || filters.paid || filters.launchDateFrom || filters.launchDateTo || filters.lastUpdatedFrom || filters.lastUpdatedTo || filters.hasAPI || filters.hasMobileApp || filters.hasChromeExtension || filters.integrationCount > 0 || filters.toolAge || (filters.sortBy !== 'relevance') || (filters.sortOrder !== 'desc') || filters.boostFavorites || filters.boostHistory || filters.excludeDisliked || filters.clusterResults || filters.advancedClustering;
+  const hasActiveFilters = filters.category || filters.price || filters.features.length > 0 || filters.free || filters.paid || filters.launchDateFrom || filters.launchDateTo || filters.lastUpdatedFrom || filters.lastUpdatedTo || filters.hasAPI || filters.hasMobileApp || filters.hasChromeExtension || filters.integrationCount > 0 || filters.toolAge || (filters.sortBy !== &apos;relevance&apos;) || (filters.sortOrder !== &apos;desc&apos;) || filters.boostFavorites || filters.boostHistory || filters.excludeDisliked || filters.clusterResults || filters.advancedClustering;
 
   return (
-    <div className="ai-search-container w-full max-w-4xl mx-auto" ref={searchRef}>
-      <form onSubmit={handleSearch} className="relative">
+    <div className="ai-search-container w-full max-w-4xl mx-auto&quot; ref={searchRef}>
+      <form onSubmit={handleSearch} className="relative&quot;>
         {/* Main Search Bar - Mobile Optimized */}
-        <div className="relative flex flex-col sm:flex-row items-center bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-          <div className="flex-1 relative w-full">
+        <div className="relative flex flex-col sm:flex-row items-center bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden&quot;>
+          <div className="flex-1 relative w-full&quot;>
             <input
               ref={inputRef}
-              type="text"
+              type="text&quot;
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onFocus={() => query && setShowSuggestions(true)}
-              placeholder="🔍 Find AI tools for... (e.g., 'video editing', 'code generation', 'content writing')"
-              className="w-full px-4 sm:px-5 py-3 sm:py-4 pr-20 text-gray-900 dark:text-white bg-transparent focus:outline-none text-base sm:text-lg"
+              placeholder="🔍 Find AI tools for... (e.g., 'video editing', 'code generation', 'content writing')&quot;
+              className="w-full px-4 sm:px-5 py-3 sm:py-4 pr-20 text-gray-900 dark:text-white bg-transparent focus:outline-none text-base sm:text-lg&quot;
             />
             
             {/* Voice Search Button */}
             {isSpeechSupported && (
               <button
-                type="button"
+                type="button&quot;
                 onClick={() => {
                   if (isListening) {
                     recognitionRef.current.stop();
@@ -299,24 +299,24 @@ export default function IntelligentSearchBar() {
                   }
                 }}
                 className={`absolute right-12 top-1/2 transform -translate-y-1/2 p-2 rounded-full ${isListening ? 'bg-red-500 text-white' : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'}`}
-                aria-label="Voice search"
+                aria-label="Voice search&quot;
               >
-                <FontAwesomeIcon icon={faMicrophone} className="h-4 w-4 sm:h-5 sm:w-5" />
+                <FontAwesomeIcon icon={faMicrophone} className="h-4 w-4 sm:h-5 sm:w-5&quot; />
               </button>
             )}
             
             {/* Loading indicator */}
             {false && (
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500"></div>
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2&quot;>
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500&quot;></div>
               </div>
             )}
           </div>
           
           {/* Filter Button - Mobile Responsive */}
-          <div className="flex w-full sm:w-auto">
+          <div className="flex w-full sm:w-auto&quot;>
             <button
-              type="button"
+              type="button&quot;
               onClick={() => setShowFilters(!showFilters)}
               className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 sm:py-2 flex items-center border-t sm:border-t-0 sm:border-l border-gray-200 dark:border-gray-700 ${
                 hasActiveFilters 
@@ -324,17 +324,17 @@ export default function IntelligentSearchBar() {
                   : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
-              <FontAwesomeIcon icon={faFilter} className="mr-2" />
-              <span className="sm:hidden">Filters</span>
-              <span className="hidden sm:inline">Filters</span>
+              <FontAwesomeIcon icon={faFilter} className="mr-2&quot; />
+              <span className="sm:hidden&quot;>Filters</span>
+              <span className="hidden sm:inline&quot;>Filters</span>
               {hasActiveFilters && (
-                <span className="ml-2 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-blue-500 rounded-full">
+                <span className="ml-2 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-blue-500 rounded-full&quot;>
                   {[
                     filters.category,
                     filters.price,
                     ...filters.features,
-                    filters.free ? 'free' : '',
-                    filters.paid ? 'paid' : ''
+                    filters.free ? &apos;free&apos; : &apos;&apos;,
+                    filters.paid ? &apos;paid&apos; : &apos;&apos;
                   ].filter(Boolean).length}
                 </span>
               )}
@@ -342,33 +342,33 @@ export default function IntelligentSearchBar() {
             
             {/* Search Button - Mobile Responsive */}
             <button
-              type="submit"
-              className="flex-1 sm:flex-none px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium flex items-center transition-all duration-200"
+              type="submit&quot;
+              className="flex-1 sm:flex-none px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium flex items-center transition-all duration-200&quot;
             >
-              <FontAwesomeIcon icon={faSearch} className="mr-0 sm:mr-2" />
-              <span className="sm:inline hidden">Search</span>
-              <span className="sm:hidden inline">Go</span>
+              <FontAwesomeIcon icon={faSearch} className="mr-0 sm:mr-2&quot; />
+              <span className="sm:inline hidden&quot;>Search</span>
+              <span className="sm:hidden inline&quot;>Go</span>
             </button>
           </div>
         </div>
 
         {/* Suggestions Dropdown - Mobile Optimized */}
         {showSuggestions && suggestions.length > 0 && (
-          <div className="absolute z-20 w-full mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-            <div className="py-2">
-              <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+          <div className="absolute z-20 w-full mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden&quot;>
+            <div className="py-2&quot;>
+              <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider&quot;>
                 Search Suggestions
               </div>
               {suggestions.map((suggestion, index) => (
                 <button
                   key={index}
-                  type="button"
+                  type="button&quot;
                   onClick={() => handleSuggestionClick(suggestion.term)}
-                  className="w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150 flex items-center"
+                  className="w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150 flex items-center&quot;
                 >
-                  <FontAwesomeIcon icon={faSearch} className="text-gray-400 dark:text-gray-500 mr-3" />
-                  <span className="flex-1 text-sm sm:text-base">{suggestion.term}</span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                  <FontAwesomeIcon icon={faSearch} className="text-gray-400 dark:text-gray-500 mr-3&quot; />
+                  <span className="flex-1 text-sm sm:text-base&quot;>{suggestion.term}</span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400&quot;>
                     {suggestion.frequency}
                   </span>
                 </button>
@@ -379,32 +379,32 @@ export default function IntelligentSearchBar() {
 
         {/* Filters Panel - Mobile Optimized */}
         {showFilters && (
-          <div className="absolute z-10 w-full mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-            <div className="p-4 sm:p-5">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Search Filters</h3>
+          <div className="absolute z-10 w-full mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden&quot;>
+            <div className="p-4 sm:p-5&quot;>
+              <div className="flex justify-between items-center mb-4&quot;>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white&quot;>Search Filters</h3>
                 <button
-                  type="button"
+                  type="button&quot;
                   onClick={clearFilters}
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300&quot;
                 >
                   Clear all
                 </button>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6&quot;>
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Category
                   </label>
-                  <div className="relative">
+                  <div className="relative&quot;>
                     <select
                       value={filters.category}
                       onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white&quot;
                     >
-                      <option value="">All Categories</option>
+                      <option value="&quot;>All Categories</option>
                       {aiCategories.map((category) => (
                         <option key={category.value} value={category.value}>
                           {category.label}
@@ -416,55 +416,55 @@ export default function IntelligentSearchBar() {
                 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Max Price ($)
                   </label>
                   <input
-                    type="number"
+                    type="number&quot;
                     value={filters.price}
                     onChange={(e) => setFilters(prev => ({ ...prev, price: e.target.value }))}
-                    placeholder="Enter max price"
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    placeholder="Enter max price&quot;
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm&quot;
                   />
                 </div>
                 
                 {/* Pricing Type Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Pricing Type
                   </label>
-                  <div className="flex space-x-4">
-                    <label className="inline-flex items-center">
+                  <div className="flex space-x-4&quot;>
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.free}
                         onChange={(e) => setFilters(prev => ({ ...prev, free: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Free</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Free</span>
                     </label>
-                    <label className="inline-flex items-center">
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.paid}
                         onChange={(e) => setFilters(prev => ({ ...prev, paid: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Paid</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Paid</span>
                     </label>
                   </div>
                 </div>
                 
                 {/* Feature Tags Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Features
                   </label>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2&quot;>
                     {featureTags.map((feature) => (
                       <button
                         key={feature.value}
-                        type="button"
+                        type="button&quot;
                         onClick={() => toggleFeature(feature.value)}
                         className={`inline-flex items-center px-3 py-1 rounded-full text-sm ${
                           filters.features.includes(feature.value)
@@ -480,219 +480,219 @@ export default function IntelligentSearchBar() {
                 
                 {/* Boolean Feature Filters */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Special Features
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                    <label className="inline-flex items-center">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2&quot;>
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.hasAPI}
                         onChange={(e) => setFilters(prev => ({ ...prev, hasAPI: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Has API</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Has API</span>
                     </label>
-                    <label className="inline-flex items-center">
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.hasMobileApp}
                         onChange={(e) => setFilters(prev => ({ ...prev, hasMobileApp: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Mobile App</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Mobile App</span>
                     </label>
-                    <label className="inline-flex items-center">
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.hasChromeExtension}
                         onChange={(e) => setFilters(prev => ({ ...prev, hasChromeExtension: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Chrome Extension</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Chrome Extension</span>
                     </label>
                   </div>
                 </div>
                 
                 {/* Integration Count Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Minimum Integrations
                   </label>
                   <input
-                    type="number"
+                    type="number&quot;
                     value={filters.integrationCount}
                     onChange={(e) => setFilters(prev => ({ ...prev, integrationCount: parseInt(e.target.value) || 0 }))}
-                    min="0"
-                    max="20"
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    min="0&quot;
+                    max="20&quot;
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm&quot;
                   />
                 </div>
                 
                 {/* Tool Age Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Tool Age
                   </label>
                   <select
                     value={filters.toolAge}
                     onChange={(e) => setFilters(prev => ({ ...prev, toolAge: e.target.value }))}
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white"
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white&quot;
                   >
-                    <option value="">Any Age</option>
-                    <option value="new">New (Less than 1 year)</option>
-                    <option value="established">Established (1-3 years)</option>
-                    <option value="legacy">Legacy (More than 3 years)</option>
+                    <option value="&quot;>Any Age</option>
+                    <option value="new&quot;>New (Less than 1 year)</option>
+                    <option value="established&quot;>Established (1-3 years)</option>
+                    <option value="legacy&quot;>Legacy (More than 3 years)</option>
                   </select>
                 </div>
                 
                 {/* Date Range Filters */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                       Launch Date From
                     </label>
                     <input
-                      type="date"
+                      type="date&quot;
                       value={filters.launchDateFrom}
                       onChange={(e) => setFilters(prev => ({ ...prev, launchDateFrom: e.target.value }))}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm&quot;
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                       Launch Date To
                     </label>
                     <input
-                      type="date"
+                      type="date&quot;
                       value={filters.launchDateTo}
                       onChange={(e) => setFilters(prev => ({ ...prev, launchDateTo: e.target.value }))}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm&quot;
                     />
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                       Last Updated From
                     </label>
                     <input
-                      type="date"
+                      type="date&quot;
                       value={filters.lastUpdatedFrom}
                       onChange={(e) => setFilters(prev => ({ ...prev, lastUpdatedFrom: e.target.value }))}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm&quot;
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                       Last Updated To
                     </label>
                     <input
-                      type="date"
+                      type="date&quot;
                       value={filters.lastUpdatedTo}
                       onChange={(e) => setFilters(prev => ({ ...prev, lastUpdatedTo: e.target.value }))}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm&quot;
                     />
                   </div>
                 </div>
                 
                 {/* Sort Options */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                       Sort By
                     </label>
                     <select
                       value={filters.sortBy}
                       onChange={(e) => setFilters(prev => ({ ...prev, sortBy: e.target.value }))}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white&quot;
                     >
-                      <option value="relevance">Relevance</option>
-                      <option value="date">Date</option>
-                      <option value="rating">Rating</option>
-                      <option value="title">Title</option>
-                      <option value="reviews">Reviews</option>
-                      <option value="popularity">Popularity</option>
-                      <option value="trending">Trending</option>
-                      <option value="lastUpdated">Last Updated</option>
-                      <option value="launchDate">Launch Date</option>
+                      <option value="relevance&quot;>Relevance</option>
+                      <option value="date&quot;>Date</option>
+                      <option value="rating&quot;>Rating</option>
+                      <option value="title&quot;>Title</option>
+                      <option value="reviews&quot;>Reviews</option>
+                      <option value="popularity&quot;>Popularity</option>
+                      <option value="trending&quot;>Trending</option>
+                      <option value="lastUpdated&quot;>Last Updated</option>
+                      <option value="launchDate&quot;>Launch Date</option>
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                       Sort Order
                     </label>
                     <select
                       value={filters.sortOrder}
                       onChange={(e) => setFilters(prev => ({ ...prev, sortOrder: e.target.value }))}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm text-gray-900 dark:text-white&quot;
                     >
-                      <option value="desc">Descending</option>
-                      <option value="asc">Ascending</option>
+                      <option value="desc&quot;>Descending</option>
+                      <option value="asc&quot;>Ascending</option>
                     </select>
                   </div>
                 </div>
                 
                 {/* Personalization Options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Personalization
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                    <label className="inline-flex items-center">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2&quot;>
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.boostFavorites}
                         onChange={(e) => setFilters(prev => ({ ...prev, boostFavorites: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Boost Favorites</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Boost Favorites</span>
                     </label>
-                    <label className="inline-flex items-center">
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.boostHistory}
                         onChange={(e) => setFilters(prev => ({ ...prev, boostHistory: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Boost History</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Boost History</span>
                     </label>
-                    <label className="inline-flex items-center">
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.excludeDisliked}
                         onChange={(e) => setFilters(prev => ({ ...prev, excludeDisliked: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Exclude Disliked</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Exclude Disliked</span>
                     </label>
                   </div>
                 </div>
                 
                 {/* Clustering Options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2&quot;>
                     Result Clustering
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <label className="inline-flex items-center">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2&quot;>
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.clusterResults}
                         onChange={(e) => setFilters(prev => ({ ...prev, clusterResults: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Enable Clustering</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Enable Clustering</span>
                     </label>
-                    <label className="inline-flex items-center">
+                    <label className="inline-flex items-center&quot;>
                       <input
-                        type="checkbox"
+                        type="checkbox&quot;
                         checked={filters.advancedClustering}
                         onChange={(e) => setFilters(prev => ({ ...prev, advancedClustering: e.target.checked }))}
-                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50&quot;
                       />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">Advanced Clustering</span>
+                      <span className="ml-2 text-gray-700 dark:text-gray-300&quot;>Advanced Clustering</span>
                     </label>
                   </div>
                 </div>
@@ -700,69 +700,69 @@ export default function IntelligentSearchBar() {
               
               {/* Active Filters */}
               {hasActiveFilters && (
-                <div className="mt-4 sm:mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex flex-wrap gap-2">
+                <div className="mt-4 sm:mt-6 pt-4 border-t border-gray-200 dark:border-gray-700&quot;>
+                  <div className="flex flex-wrap gap-2&quot;>
                     {filters.category && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200&quot;>
                         Category: {aiCategories.find(c => c.value === filters.category)?.label}
                         <button
-                          type="button"
+                          type="button&quot;
                           onClick={() => setFilters(prev => ({ ...prev, category: '' }))}
-                          className="ml-2 inline-flex items-center"
+                          className="ml-2 inline-flex items-center&quot;
                         >
-                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3" />
+                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3&quot; />
                         </button>
                       </span>
                     )}
                     
                     {filters.price && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200&quot;>
                         Max Price: ${filters.price}
                         <button
-                          type="button"
+                          type="button&quot;
                           onClick={() => setFilters(prev => ({ ...prev, price: '' }))}
-                          className="ml-2 inline-flex items-center"
+                          className="ml-2 inline-flex items-center&quot;
                         >
-                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3" />
+                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3&quot; />
                         </button>
                       </span>
                     )}
                     
                     {filters.free && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200&quot;>
                         Free
                         <button
-                          type="button"
+                          type="button&quot;
                           onClick={() => setFilters(prev => ({ ...prev, free: false }))}
-                          className="ml-2 inline-flex items-center"
+                          className="ml-2 inline-flex items-center&quot;
                         >
-                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3" />
+                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3&quot; />
                         </button>
                       </span>
                     )}
                     
                     {filters.paid && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200&quot;>
                         Paid
                         <button
-                          type="button"
+                          type="button&quot;
                           onClick={() => setFilters(prev => ({ ...prev, paid: false }))}
-                          className="ml-2 inline-flex items-center"
+                          className="ml-2 inline-flex items-center&quot;
                         >
-                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3" />
+                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3&quot; />
                         </button>
                       </span>
                     )}
                     
                     {filters.features.map((feature) => (
-                      <span key={feature} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200">
+                      <span key={feature} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200&quot;>
                         {featureTags.find(f => f.value === feature)?.label}
                         <button
-                          type="button"
+                          type="button&quot;
                           onClick={() => toggleFeature(feature)}
-                          className="ml-2 inline-flex items-center"
+                          className="ml-2 inline-flex items-center&quot;
                         >
-                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3" />
+                          <FontAwesomeIcon icon={faTimes} className="h-3 w-3&quot; />
                         </button>
                       </span>
                     ))}

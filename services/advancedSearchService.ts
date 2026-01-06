@@ -1,19 +1,19 @@
-import { Document, SearchResult, SearchOptions } from './searchService';
-import { semanticSearch } from './searchService';
-import { processNaturalLanguageQuery } from './naturalLanguageProcessor';
-import { clusterSearchResults, SearchCluster } from './searchClustering';
-import { rerankSearchResults, SearchResultWithFeatures, RerankingConfig } from './resultReranking';
-import { generateSearchSummary } from './searchSummarization';
-import { getSearchSuggestions } from './searchSuggestions';
-import { analyzeSentiment, SentimentAnalysisResult } from './sentimentAnalysis';
-import { entityExtractionService } from './entityExtraction';
-import { getDiversityScore } from './diversityEngine';
-import { personalizeResults } from './personalizationEngine';
-import { explainResult, ResultExplanation } from './explanationService';
-import { quantumSearchService } from './quantumSearch';
-import { neuromorphicSearchService } from './neuromorphicSearch';
-import { consciousnessAwareSearchService } from './consciousnessAwareSearch';
-import { multiverseSearchService } from './multiverseSearch';
+import { Document, SearchResult, SearchOptions } from &apos;./searchService&apos;;
+import { semanticSearch } from &apos;./searchService&apos;;
+import { processNaturalLanguageQuery } from &apos;./naturalLanguageProcessor&apos;;
+import { clusterSearchResults, SearchCluster } from &apos;./searchClustering&apos;;
+import { rerankSearchResults, SearchResultWithFeatures, RerankingConfig } from &apos;./resultReranking&apos;;
+import { generateSearchSummary } from &apos;./searchSummarization&apos;;
+import { getSearchSuggestions } from &apos;./searchSuggestions&apos;;
+import { analyzeSentiment, SentimentAnalysisResult } from &apos;./sentimentAnalysis&apos;;
+import { entityExtractionService } from &apos;./entityExtraction&apos;;
+import { getDiversityScore } from &apos;./diversityEngine&apos;;
+import { personalizeResults } from &apos;./personalizationEngine&apos;;
+import { explainResult, ResultExplanation } from &apos;./explanationService&apos;;
+import { quantumSearchService } from &apos;./quantumSearch&apos;;
+import { neuromorphicSearchService } from &apos;./neuromorphicSearch&apos;;
+import { consciousnessAwareSearchService } from &apos;./consciousnessAwareSearch&apos;;
+import { multiverseSearchService } from &apos;./multiverseSearch&apos;;
 
 // Advanced search configuration
 export interface AdvancedSearchConfig {
@@ -224,8 +224,8 @@ export class AdvancedSearchService {
       
       return response;
     } catch (error) {
-      console.error('Advanced search error:', error);
-      throw new Error(`Search failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      console.error(&apos;Advanced search error:&apos;, error);
+      throw new Error(`Search failed: ${error instanceof Error ? error.message : &apos;Unknown error&apos;}`);
     }
   }
   
@@ -244,9 +244,9 @@ export class AdvancedSearchService {
       if (doc.tags) doc.tags.forEach(tag => tags.add(tag));
       // Fix: Handle pricing as string or object
       if (doc.pricing) {
-        if (typeof doc.pricing === 'string') {
+        if (typeof doc.pricing === &apos;string&apos;) {
           pricing.add(doc.pricing);
-        } else if (typeof doc.pricing === 'object' && doc.pricing !== null) {
+        } else if (typeof doc.pricing === &apos;object&apos; && doc.pricing !== null) {
           // For objects, create a string representation
           pricing.add(JSON.stringify(doc.pricing));
         } else {

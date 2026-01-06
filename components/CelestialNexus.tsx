@@ -48,7 +48,7 @@ const CelestialNexus = () => {
     
     return {
       transform: `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg) scale(${isHovered ? 1.1 : 1})`,
-      transition: 'transform 0.1s ease-out'
+      transition: &apos;transform 0.1s ease-out&apos;
     };
   };
 
@@ -70,47 +70,47 @@ const CelestialNexus = () => {
           ×
         </button>
         
-        <div className="p-6">
-          <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <div className="p-6&quot;>
+          <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
             Celestial Nexus
           </h2>
           
-          <div className="space-y-6">
-            <div className="bg-white/5 p-4 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2">AI Concierge</h3>
-              <p className="text-sm text-gray-300 mb-3">How may I assist your discovery?</p>
-              <div className="flex gap-2">
-                <button className="px-3 py-2 bg-blue-600/50 hover:bg-blue-600/70 rounded-lg text-sm transition-colors">
+          <div className="space-y-6&quot;>
+            <div className="bg-white/5 p-4 rounded-xl&quot;>
+              <h3 className="text-lg font-semibold mb-2&quot;>AI Concierge</h3>
+              <p className="text-sm text-gray-300 mb-3&quot;>How may I assist your discovery?</p>
+              <div className="flex gap-2&quot;>
+                <button className="px-3 py-2 bg-blue-600/50 hover:bg-blue-600/70 rounded-lg text-sm transition-colors&quot;>
                   Find Tools
                 </button>
-                <button className="px-3 py-2 bg-purple-600/50 hover:bg-purple-600/70 rounded-lg text-sm transition-colors">
+                <button className="px-3 py-2 bg-purple-600/50 hover:bg-purple-600/70 rounded-lg text-sm transition-colors&quot;>
                   Compare
                 </button>
               </div>
             </div>
             
-            <div className="bg-white/5 p-4 rounded-xl">
-              <h3 className="text-lg font-semibold mb-3">Market Insights</h3>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-cyan-400">GPT-5 Adoption</span>
-                  <span className="text-green-400">+300%</span>
+            <div className="bg-white/5 p-4 rounded-xl&quot;>
+              <h3 className="text-lg font-semibold mb-3&quot;>Market Insights</h3>
+              <div className="space-y-3&quot;>
+                <div className="flex items-center justify-between text-sm&quot;>
+                  <span className="text-cyan-400&quot;>GPT-5 Adoption</span>
+                  <span className="text-green-400&quot;>+300%</span>
                 </div>
-                <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" style={{ width: '75%' }}></div>
+                <div className="h-2 bg-gray-700 rounded-full overflow-hidden&quot;>
+                  <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full&quot; style={{ width: &apos;75% }}></div>
                 </div>
-                <div className="text-xs text-gray-400">Based on 1.2M+ data points</div>
+                <div className="text-xs text-gray-400&quot;>Based on 1.2M+ data points</div>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-4 rounded-xl border border-white/10">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-xl">
+            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-4 rounded-xl border border-white/10&quot;>
+              <div className="flex items-center gap-3&quot;>
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-xl&quot;>
                   ✨
                 </div>
                 <div>
-                  <h3 className="font-semibold">Exclusive Feature</h3>
-                  <p className="text-sm text-gray-300">Try our new AI Tool Finder</p>
+                  <h3 className="font-semibold&quot;>Exclusive Feature</h3>
+                  <p className="text-sm text-gray-300&quot;>Try our new AI Tool Finder</p>
                 </div>
               </div>
             </div>

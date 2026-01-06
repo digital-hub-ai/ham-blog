@@ -69,19 +69,19 @@ export default async function handler(
     // Refresh cache if needed
     const now = Date.now();
     if (now - lastCacheUpdate > CACHE_TTL || cachedDocuments.length === 0) {
-      console.log('Refreshing document cache...');
+      console.log(&apos;Refreshing document cache...&apos;);
       try {
         cachedDocuments = await loadDocuments();
         lastCacheUpdate = now;
         console.log(`Cache refreshed with ${cachedDocuments.length} documents`);
       } catch (cacheError) {
-        console.error('Error refreshing cache:', cacheError);
+        console.error(&apos;Error refreshing cache:&apos;, cacheError);
         // If cache refresh fails, use existing cache if available
         if (cachedDocuments.length === 0) {
           // If no cache and refresh failed, return error
           return res.status(500).json({ 
             success: false,
-            message: 'Failed to load search data',
+            message: &apos;Failed to load search data&apos;,
             results: []
           });
         }
@@ -92,18 +92,18 @@ export default async function handler(
     // Build search configuration from query parameters
     const searchConfig: AdvancedSearchConfig = {
       userId: userId as string,
-      enableQuantumSearch: enableQuantumSearch === 'true',
-      enableNeuromorphicSearch: enableNeuromorphicSearch === 'true',
-      enableConsciousnessAwareSearch: enableConsciousnessAwareSearch === 'true',
-      enableMultiverseSearch: enableMultiverseSearch === 'true',
-      enablePersonalization: enablePersonalization === 'true',
-      enableDiversity: enableDiversity === 'true',
-      enableSentimentAnalysis: enableSentimentAnalysis === 'true',
-      enableEntityExtraction: enableEntityExtraction === 'true',
-      enableClustering: enableClustering === 'true',
-      enableSummarization: enableSummarization === 'true',
-      enableExplanation: enableExplanation === 'true',
-      enableReranking: enableReranking === 'true'
+      enableQuantumSearch: enableQuantumSearch === &apos;true&apos;,
+      enableNeuromorphicSearch: enableNeuromorphicSearch === &apos;true&apos;,
+      enableConsciousnessAwareSearch: enableConsciousnessAwareSearch === &apos;true&apos;,
+      enableMultiverseSearch: enableMultiverseSearch === &apos;true&apos;,
+      enablePersonalization: enablePersonalization === &apos;true&apos;,
+      enableDiversity: enableDiversity === &apos;true&apos;,
+      enableSentimentAnalysis: enableSentimentAnalysis === &apos;true&apos;,
+      enableEntityExtraction: enableEntityExtraction === &apos;true&apos;,
+      enableClustering: enableClustering === &apos;true&apos;,
+      enableSummarization: enableSummarization === &apos;true&apos;,
+      enableExplanation: enableExplanation === &apos;true&apos;,
+      enableReranking: enableReranking === &apos;true&apos;
     };
     
     // Build search options from query parameters
@@ -138,11 +138,11 @@ export default async function handler(
     });
     
   } catch (error) {
-    console.error('Advanced search error:', error);
+    console.error(&apos;Advanced search error:&apos;, error);
     return res.status(500).json({ 
       success: false,
-      message: 'Error performing search',
-      error: error instanceof Error ? error.message : 'Unknown error'
+      message: &apos;Error performing search&apos;,
+      error: error instanceof Error ? error.message : &apos;Unknown error&apos;
     });
   }
 }

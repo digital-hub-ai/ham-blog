@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const ClientOnlyContent = () => {
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState(&quot;&quot;);
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed] = useState(150);
@@ -10,10 +10,10 @@ const ClientOnlyContent = () => {
   const [activePlanet, setActivePlanet] = useState(null);
 
   const texts = [
-    "Orbit Through Infinite Blogging Galaxies",
-    "Navigate 100,000+ Cosmic Articles", 
-    "Command the Ultimate Storytelling Engine",
-    "Shape the Future of Digital Narratives"
+    &quot;Orbit Through Infinite Blogging Galaxies&quot;,
+    &quot;Navigate 100,000+ Cosmic Articles&quot;, 
+    &quot;Command the Ultimate Storytelling Engine&quot;,
+    &quot;Shape the Future of Digital Narratives&quot;
   ];
 
   // Update time every second
@@ -30,8 +30,8 @@ const ClientOnlyContent = () => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener(&quot;mousemove&quot;, handleMouseMove);
+    return () => window.removeEventListener(&quot;mousemove&quot;, handleMouseMove);
   }, []);
 
   // Typewriter effect
@@ -62,10 +62,10 @@ const ClientOnlyContent = () => {
   }, [currentText, isDeleting, loopNum, texts, typingSpeed]);
 
   return (
-    <div className="text-center mb-12">
-      <h1 className="text-5xl font-bold mb-4">Orbital Blog Cosmos</h1>
-      <p className="text-xl text-gray-300 mb-2">{currentText}</p>
-      <p className="text-sm text-gray-500">
+    <div className="text-center mb-12&quot;>
+      <h1 className="text-5xl font-bold mb-4&quot;>Orbital Blog Cosmos</h1>
+      <p className="text-xl text-gray-300 mb-2&quot;>{currentText}</p>
+      <p className="text-sm text-gray-500&quot;>
         Galactic Time: {time.toLocaleTimeString()}
       </p>
     </div>

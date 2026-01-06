@@ -10,7 +10,7 @@ export interface FreeTier {
 export interface PricingTier {
   name: string;
   price: number;
-  billing_cycle: 'monthly' | 'annual';
+  billing_cycle: &apos;monthly&apos; | &apos;annual&apos;;
   features: string[];
   most_popular?: boolean;
   cta_text?: string;
@@ -61,7 +61,7 @@ export interface ToolNexus {
 export interface ImmersiveData {
   visual_seed: string;
   color_palette: string[];
-  background_animation: 'neural_network' | 'color_spectrum' | 'code_streams' | 'shape_morphing';
+  background_animation: &apos;neural_network&apos; | &apos;color_spectrum&apos; | &apos;code_streams&apos; | &apos;shape_morphing&apos;;
   interactive_elements: string[];
   tool_aura: {
     primary_color: string;
@@ -73,9 +73,9 @@ export interface ImmersiveData {
 
 export interface ContextualParticle {
   id: string;
-  type: 'api_icon' | 'collaboration_symbol' | 'feature_badge' | 'metric_indicator';
+  type: &apos;api_icon&apos; | &apos;collaboration_symbol&apos; | &apos;feature_badge&apos; | &apos;metric_indicator&apos;;
   position: { x: number; y: number; z: number };
-  animation: 'float' | 'pulse' | 'orbit' | 'stream';
+  animation: &apos;float&apos; | &apos;pulse&apos; | &apos;orbit&apos; | &apos;stream&apos;;
   metadata: Record<string, any>;
 }
 
@@ -100,7 +100,7 @@ export interface PricingScenario {
   name: string;
   description: string;
   team_size: number;
-  usage_level: 'light' | 'moderate' | 'heavy';
+  usage_level: &apos;light&apos; | &apos;moderate&apos; | &apos;heavy&apos;;
   monthly_cost: number;
   annual_cost: number;
   setup_fees: number;
@@ -108,14 +108,14 @@ export interface PricingScenario {
 }
 
 export interface HiddenCost {
-  type: 'setup' | 'training' | 'migration' | 'integration' | 'maintenance';
+  type: &apos;setup&apos; | &apos;training&apos; | &apos;migration&apos; | &apos;integration&apos; | &apos;maintenance&apos;;
   estimated_cost: number;
   description: string;
-  frequency: 'one_time' | 'monthly' | 'annual';
+  frequency: &apos;one_time&apos; | &apos;monthly&apos; | &apos;annual&apos;;
 }
 
 export interface ROICalculator {
-  metric: 'time_savings' | 'productivity' | 'cost_reduction' | 'revenue_increase';
+  metric: &apos;time_savings&apos; | &apos;productivity&apos; | &apos;cost_reduction&apos; | &apos;revenue_increase&apos;;
   calculation_method: string;
   estimated_value: number;
   time_to_roi: number; // in months
@@ -142,7 +142,7 @@ export interface ToolFeature {
   name: string;
   description: string;
   icon?: string;
-  status?: 'new' | 'beta' | 'popular';
+  status?: &apos;new&apos; | &apos;beta&apos; | &apos;popular&apos;;
   documentation_url?: string;
 }
 
@@ -166,7 +166,7 @@ export interface UserPersona {
   name: string;
   role: string;
   company: string;
-  experience_level: 'beginner' | 'intermediate' | 'expert';
+  experience_level: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;expert&apos;;
   team_size: number;
   industry: string;
   tools: string[];
@@ -176,9 +176,9 @@ export interface UserPersona {
   behavior_patterns?: UserBehavior[];
   engagement_metrics?: EngagementMetrics;
   feedback?: UserFeedback[];
-  learning_style?: 'visual' | 'textual' | 'interactive' | 'experimental';
+  learning_style?: &apos;visual&apos; | &apos;textual&apos; | &apos;interactive&apos; | &apos;experimental&apos;;
   preferred_features?: string[];
-  usage_frequency?: 'daily' | 'weekly' | 'monthly' | 'rarely';
+  usage_frequency?: &apos;daily&apos; | &apos;weekly&apos; | &apos;monthly&apos; | &apos;rarely&apos;;
   avatar_color?: string;
   last_active?: string;
   created_at?: string;
@@ -195,14 +195,14 @@ export interface MarketPosition {
   tool_name: string;
   market_share: number; // percentage
   growth_rate: number; // percentage per year
-  quadrant: 'market_leaders' | 'innovators' | 'niche_players' | 'emerging_tools';
+  quadrant: &apos;market_leaders&apos; | &apos;innovators&apos; | &apos;niche_players&apos; | &apos;emerging_tools&apos;;
   confidence_level: number; // 0-1
   is_current_tool: boolean;
 }
 
 export interface GrowthTrajectory {
   tool_name: string;
-  trajectory_type: 'accelerating' | 'steady' | 'declining' | 'explosive';
+  trajectory_type: &apos;accelerating&apos; | &apos;steady&apos; | &apos;declining&apos; | &apos;explosive&apos;;
   current_growth: number; // percentage
   projected_growth: number; // percentage
   market_share_projection: number; // percentage in 1 year
@@ -243,16 +243,16 @@ export interface AdoptionRadar {
     };
     market_position: {
       current: string;
-      trend: 'improving' | 'stable' | 'declining';
+      trend: &apos;improving&apos; | &apos;stable&apos; | &apos;declining&apos;;
       competitors: string[];
     };
     growth_outlook: {
-      rating: 'strong' | 'moderate' | 'weak';
+      rating: &apos;strong&apos; | &apos;moderate&apos; | &apos;weak&apos;;
       factors: string[];
       projected_growth: number; // percentage
     };
     competitive_threat: {
-      level: 'high' | 'medium' | 'low';
+      level: &apos;high&apos; | &apos;medium&apos; | &apos;low&apos;;
       main_competitors: string[];
       key_risks: string[];
     };
@@ -285,7 +285,7 @@ export interface CompetitorAdoption {
 }
 
 export interface CommunityConsciousness {
-  sentiment_trend: 'declining' | 'stable' | 'improving' | 'excellent';
+  sentiment_trend: &apos;declining&apos; | &apos;stable&apos; | &apos;improving&apos; | &apos;excellent&apos;;
   key_themes: Record<string, number>; // theme -> sentiment score
   expert_opinions: ExpertOpinion[];
   user_stories: UserStory[];
@@ -314,8 +314,8 @@ export interface UserStory {
 }
 
 export interface SocialMention {
-  platform: 'twitter' | 'linkedin' | 'reddit' | 'hackernews';
-  sentiment: 'positive' | 'neutral' | 'negative';
+  platform: &apos;twitter&apos; | &apos;linkedin&apos; | &apos;reddit&apos; | &apos;hackernews&apos;;
+  sentiment: &apos;positive&apos; | &apos;neutral&apos; | &apos;negative&apos;;
   engagement: number;
   content: string;
   date: string;
@@ -331,15 +331,15 @@ export interface SupportForumAnalysis {
 export interface CommonIssue {
   issue: string;
   frequency: number;
-  resolution_status: 'resolved' | 'ongoing' | 'acknowledged';
-  user_impact: 'low' | 'medium' | 'high';
+  resolution_status: &apos;resolved&apos; | &apos;ongoing&apos; | &apos;acknowledged&apos;;
+  user_impact: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos;;
 }
 
 export interface Review {
   id: string;
   author: string;
   rating: number;
-  sentiment: 'positive' | 'negative' | 'neutral';
+  sentiment: &apos;positive&apos; | &apos;negative&apos; | &apos;neutral&apos;;
   content: string;
   date: string;
   helpful_votes: number;
@@ -355,7 +355,7 @@ export interface ReviewTopic {
 }
 
 export interface SentimentAnalysis {
-  overall_sentiment: 'positive' | 'negative' | 'neutral';
+  overall_sentiment: &apos;positive&apos; | &apos;negative&apos; | &apos;neutral&apos;;
   sentiment_score: number; // 0-10
   positive_keywords: string[];
   negative_keywords: string[];
@@ -378,7 +378,7 @@ export interface Topic {
   name: string;
   mention_count: number;
   sentiment_score: number; // 0-10
-  trend: 'increasing' | 'decreasing' | 'stable';
+  trend: &apos;increasing&apos; | &apos;decreasing&apos; | &apos;stable&apos;;
   related_topics: string[];
 }
 
@@ -396,7 +396,7 @@ export interface ReviewSummary {
   total_reviews: number;
   rating_distribution: number[]; // 5-star distribution
   sentiment_score: number;
-  review_trend: 'increasing' | 'decreasing' | 'stable';
+  review_trend: &apos;increasing&apos; | &apos;decreasing&apos; | &apos;stable&apos;;
   key_insights: ReviewInsight[];
   top_positive_themes: string[];
   top_negative_themes: string[];
@@ -406,7 +406,7 @@ export interface ReviewInsight {
   insight: string;
   confidence: number; // 0-1
   supporting_data_points: number;
-  category: 'performance' | 'features' | 'support' | 'pricing' | 'ui' | 'other';
+  category: &apos;performance&apos; | &apos;features&apos; | &apos;support&apos; | &apos;pricing&apos; | &apos;ui&apos; | &apos;other&apos;;
 }
 
 export interface ReviewIntelligence {
@@ -424,7 +424,7 @@ export interface ReviewIntelligence {
 export interface ReviewCluster {
   cluster_id: string;
   theme: string;
-  sentiment: 'positive' | 'neutral' | 'negative';
+  sentiment: &apos;positive&apos; | &apos;neutral&apos; | &apos;negative&apos;;
   review_count: number;
   key_points: string[];
   representative_quotes: string[];
@@ -433,8 +433,8 @@ export interface ReviewCluster {
 export interface AuthenticityScore {
   review_id: string;
   authenticity_score: number; // 0-1
-  expertise_level: 'beginner' | 'intermediate' | 'expert' | 'vendor';
-  verification_status: 'verified' | 'unverified' | 'suspicious';
+  expertise_level: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;expert&apos; | &apos;vendor&apos;;
+  verification_status: &apos;verified&apos; | &apos;unverified&apos; | &apos;suspicious&apos;;
 }
 
 export interface ContextualInsight {
@@ -458,7 +458,7 @@ export interface VideoReview {
 export interface KeyTimestamp {
   time: number; // in seconds
   topic: string;
-  sentiment: 'positive' | 'neutral' | 'negative';
+  sentiment: &apos;positive&apos; | &apos;neutral&apos; | &apos;negative&apos;;
   importance: number; // 0-1
 }
 
@@ -493,7 +493,7 @@ export interface ImplementationSimulatorStep {
   id: string;
   title: string;
   description: string;
-  type: 'input' | 'select' | 'checkbox' | 'info';
+  type: &apos;input&apos; | &apos;select&apos; | &apos;checkbox&apos; | &apos;info&apos;;
   options?: ImplementationSimulatorOption[];
   required: boolean;
   estimated_time?: number; // in minutes
@@ -537,9 +537,9 @@ export interface APIResponse {
 }
 
 export interface AuthenticationMethod {
-  type: 'api_key' | 'oauth' | 'bearer' | 'basic';
+  type: &apos;api_key&apos; | &apos;oauth&apos; | &apos;bearer&apos; | &apos;basic&apos;;
   description: string;
-  setup_complexity: 'simple' | 'moderate' | 'complex';
+  setup_complexity: &apos;simple&apos; | &apos;moderate&apos; | &apos;complex&apos;;
 }
 
 export interface RateLimit {
@@ -608,7 +608,7 @@ export interface Template {
   preview_url?: string;
   download_url: string;
   tags: string[];
-  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+  difficulty?: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos;;
 }
 
 export interface RoadmapExplorer {
@@ -623,7 +623,7 @@ export interface Feature {
   title: string;
   description: string;
   quarter: string;
-  status: 'planned' | 'in_progress' | 'released';
+  status: &apos;planned&apos; | &apos;in_progress&apos; | &apos;released&apos;;
   priority: number;
   votes: number;
   category: string;
@@ -650,7 +650,7 @@ export interface FeatureType {
   title: string;
   description: string;
   quarter: string;
-  status: 'planned' | 'in_progress' | 'released';
+  status: &apos;planned&apos; | &apos;in_progress&apos; | &apos;released&apos;;
   priority: number;
   votes: number;
   category: string;
@@ -660,7 +660,7 @@ export interface ImplementationSimulatorStepType {
   id: string;
   title: string;
   description: string;
-  type: 'input' | 'select' | 'checkbox' | 'info';
+  type: &apos;input&apos; | &apos;select&apos; | &apos;checkbox&apos; | &apos;info&apos;;
   options?: ImplementationSimulatorOptionType[];
   required: boolean;
 }
@@ -713,7 +713,7 @@ export interface WorkflowIntegration {
   workflow_type: string;
   integration_points: string[];
   setup_time: number; // in hours
-  learning_curve: 'minimal' | 'moderate' | 'steep';
+  learning_curve: &apos;minimal&apos; | &apos;moderate&apos; | &apos;steep&apos;;
   automation_potential: number; // 0-1
 }
 
@@ -722,13 +722,13 @@ export interface OnboardingStep {
   title: string;
   description: string;
   estimated_time: number; // in minutes
-  difficulty: 'easy' | 'moderate' | 'complex';
+  difficulty: &apos;easy&apos; | &apos;moderate&apos; | &apos;complex&apos;;
   prerequisites: string[];
   resources: OnboardingResource[];
 }
 
 export interface OnboardingResource {
-  type: 'video' | 'documentation' | 'tutorial' | 'template';
+  type: &apos;video&apos; | &apos;documentation&apos; | &apos;tutorial&apos; | &apos;template&apos;;
   title: string;
   url: string;
   duration?: number; // for videos in minutes
@@ -776,8 +776,8 @@ export interface LiveDataPoint {
 
 export interface Alert {
   id: string;
-  type: 'info' | 'warning' | 'error' | 'success';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type: &apos;info&apos; | &apos;warning&apos; | &apos;error&apos; | &apos;success&apos;;
+  severity: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos; | &apos;critical&apos;;
   title: string;
   message: string;
   timestamp: Date;
@@ -787,7 +787,7 @@ export interface Alert {
 
 export interface WebSocketConnection {
   connection_id: string;
-  status: 'connected' | 'disconnected' | 'connecting' | 'error';
+  status: &apos;connected&apos; | &apos;disconnected&apos; | &apos;connecting&apos; | &apos;error&apos;;
   last_activity: Date;
   message_count: number;
   error_count: number;
@@ -829,29 +829,29 @@ export interface LiveMetrics {
 
 export interface RecentActivity {
   activity_id: string;
-  type: 'trial_started' | 'subscription_upgraded' | 'feature_used' | 'company_switched' | 'version_released';
+  type: &apos;trial_started&apos; | &apos;subscription_upgraded&apos; | &apos;feature_used&apos; | &apos;company_switched&apos; | &apos;version_released&apos;;
   description: string;
   timestamp: string;
-  visibility: 'public' | 'semi_public' | 'private';
+  visibility: &apos;public&apos; | &apos;semi_public&apos; | &apos;private&apos;;
   metadata: Record<string, any>;
 }
 
 export interface SystemStatus {
-  overall_status: 'operational' | 'degraded_performance' | 'partial_outage' | 'major_outage';
+  overall_status: &apos;operational&apos; | &apos;degraded_performance&apos; | &apos;partial_outage&apos; | &apos;major_outage&apos;;
   services: ServiceStatus[];
   last_updated: string;
 }
 
 export interface ServiceStatus {
   service_name: string;
-  status: 'operational' | 'degraded_performance' | 'partial_outage' | 'major_outage';
+  status: &apos;operational&apos; | &apos;degraded_performance&apos; | &apos;partial_outage&apos; | &apos;major_outage&apos;;
   response_time?: number; // in ms
   error_rate?: number; // 0-1
 }
 
 export interface TrendingIndicator {
   indicator_id: string;
-  type: 'social_trend' | 'github_activity' | 'user_growth' | 'feature_adoption';
+  type: &apos;social_trend&apos; | &apos;github_activity&apos; | &apos;user_growth&apos; | &apos;feature_adoption&apos;;
   title: string;
   value: string;
   change: number; // percentage change
@@ -864,18 +864,18 @@ export interface PersonalizationData {
   content_priorities: ContentPriority[];
   section_completion: Record<string, number>; // section_id -> completion_percentage
   behavior_patterns: BehaviorPattern[];
-  expertise_level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  expertise_level: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos; | &apos;expert&apos;;
 }
 
 export interface UserPersona {
   user_id: string;
-  primary_persona: 'developer' | 'designer' | 'executive' | 'team_lead' | 'freelancer' | 'student';
+  primary_persona: &apos;developer&apos; | &apos;designer&apos; | &apos;executive&apos; | &apos;team_lead&apos; | &apos;freelancer&apos; | &apos;student&apos;;
   secondary_persona?: string;
-  company_size: 'solo' | 'small' | 'medium' | 'large' | 'enterprise';
+  company_size: &apos;solo&apos; | &apos;small&apos; | &apos;medium&apos; | &apos;large&apos; | &apos;enterprise&apos;;
   industry: string;
   technical_expertise: number; // 0-10
   budget_sensitivity: number; // 0-10
-  expertise_level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  expertise_level: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos; | &apos;expert&apos;;
   persona_strengths?: string[];
 }
 
@@ -886,7 +886,7 @@ export interface ContentPriority {
 }
 
 export interface BehaviorPattern {
-  pattern_type: 'content_consumption' | 'feature_interest' | 'comparison_behavior' | 'price_sensitivity';
+  pattern_type: &apos;content_consumption&apos; | &apos;feature_interest&apos; | &apos;comparison_behavior&apos; | &apos;price_sensitivity&apos;;
   pattern_data: Record<string, any>;
   confidence: number; // 0-1
 }
@@ -907,7 +907,7 @@ export interface ImmersiveHeaderProps {
 
 export interface DynamicToolCanvasProps {
   visualSeed: string;
-  animation: ImmersiveData['background_animation'];
+  animation: ImmersiveData[&apos;background_animation&apos;];
   colorPalette: string[];
   interactiveElements: string[];
 }
@@ -968,7 +968,7 @@ export interface ReviewIntelligenceProps {
 }
 
 export interface ReviewFilter {
-  sentiment?: 'positive' | 'neutral' | 'negative';
+  sentiment?: &apos;positive&apos; | &apos;neutral&apos; | &apos;negative&apos;;
   user_segment?: string;
   date_range?: [string, string];
   expertise_level?: string[];
@@ -982,7 +982,7 @@ export interface InteractiveExperienceZoneProps {
 
 // User-related interfaces
 export interface UserPreferences {
-  theme?: 'light' | 'dark' | 'system';
+  theme?: &apos;light&apos; | &apos;dark&apos; | &apos;system&apos;;
   notifications?: {
     email?: boolean;
     push?: boolean;
@@ -992,7 +992,7 @@ export interface UserPreferences {
   timezone?: string;
   accessibility?: {
     high_contrast?: boolean;
-    text_size?: 'small' | 'medium' | 'large';
+    text_size?: &apos;small&apos; | &apos;medium&apos; | &apos;large&apos;;
     reduce_animations?: boolean;
   };
 }
@@ -1010,17 +1010,17 @@ export interface UserBehavior {
 
 export interface UserFeedback {
   id: string;
-  type: 'bug' | 'feature' | 'general';
+  type: &apos;bug&apos; | &apos;feature&apos; | &apos;general&apos;;
   content: string;
-  status: 'new' | 'in_review' | 'planned' | 'in_progress' | 'completed' | 'declined';
+  status: &apos;new&apos; | &apos;in_review&apos; | &apos;planned&apos; | &apos;in_progress&apos; | &apos;completed&apos; | &apos;declined&apos;;
   created_at: string;
   updated_at: string;
   metadata?: Record<string, any>;
 }
 
 // Utility Types
-export type ToolCategory = 'AI Tools' | 'Design' | 'Development' | 'Marketing' | 'Productivity';
-export type PricingTierName = 'Free' | 'Freemium' | 'Paid' | 'Enterprise';
+export type ToolCategory = &apos;AI Tools&apos; | &apos;Design&apos; | &apos;Development&apos; | &apos;Marketing&apos; | &apos;Productivity&apos;;
+export type PricingTierName = &apos;Free&apos; | &apos;Freemium&apos; | &apos;Paid&apos; | &apos;Enterprise&apos;;
 export type SentimentScore = -1 | 0 | 1;
 export type ConfidenceLevel = number; // 0-1
 export type Percentage = number; // 0-100

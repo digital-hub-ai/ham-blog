@@ -134,131 +134,131 @@ const styles: SmartSearchStyles = {
 // Simple icon components
 const FiSearch = ({ size = 20, className = '', ...props }: { size?: number, className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg&quot;
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 24 24&quot;
+    fill="none&quot;
+    stroke="currentColor&quot;
+    strokeWidth="2&quot;
+    strokeLinecap="round&quot;
+    strokeLinejoin="round&quot;
     className={className}
     {...props}
   >
-    <circle cx="11" cy="11" r="8" />
-    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    <circle cx="11&quot; cy="11&quot; r="8&quot; />
+    <line x1="21&quot; y1="21&quot; x2="16.65&quot; y2="16.65&quot; />
   </svg>
 );
 
 const FiX = ({ size = 20, className = '', ...props }: { size?: number, className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg&quot;
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 24 24&quot;
+    fill="none&quot;
+    stroke="currentColor&quot;
+    strokeWidth="2&quot;
+    strokeLinecap="round&quot;
+    strokeLinejoin="round&quot;
     className={className}
     {...props}
   >
-    <line x1="18" y1="6" x2="6" y2="18" />
-    <line x1="6" y1="6" x2="18" y2="18" />
+    <line x1="18&quot; y1="6&quot; x2="6&quot; y2="18&quot; />
+    <line x1="6&quot; y1="6&quot; x2="18&quot; y2="18&quot; />
   </svg>
 );
 
 const FiFilter = ({ size = 20, className = '', ...props }: { size?: number, className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg&quot;
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 24 24&quot;
+    fill="none&quot;
+    stroke="currentColor&quot;
+    strokeWidth="2&quot;
+    strokeLinecap="round&quot;
+    strokeLinejoin="round&quot;
     className={className}
     {...props}
   >
-    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3&quot; />
   </svg>
 );
 
 const FiClock = ({ size = 20, className = '', ...props }: { size?: number, className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg&quot;
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 24 24&quot;
+    fill="none&quot;
+    stroke="currentColor&quot;
+    strokeWidth="2&quot;
+    strokeLinecap="round&quot;
+    strokeLinejoin="round&quot;
     className={className}
     {...props}
   >
-    <circle cx="12" cy="12" r="10" />
-    <polyline points="12 6 12 12 16 14" />
+    <circle cx="12&quot; cy="12&quot; r="10&quot; />
+    <polyline points="12 6 12 12 16 14&quot; />
   </svg>
 );
 
 const FiStar = ({ size = 20, className = '', ...props }: { size?: number, className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg&quot;
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 24 24&quot;
+    fill="none&quot;
+    stroke="currentColor&quot;
+    strokeWidth="2&quot;
+    strokeLinecap="round&quot;
+    strokeLinejoin="round&quot;
     className={className}
     {...props}
   >
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2&quot; />
   </svg>
 );
 
 const FiTrendingUp = ({ size = 20, className = '', ...props }: { size?: number, className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg&quot;
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 24 24&quot;
+    fill="none&quot;
+    stroke="currentColor&quot;
+    strokeWidth="2&quot;
+    strokeLinecap="round&quot;
+    strokeLinejoin="round&quot;
     className={className}
     {...props}
   >
-    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-    <polyline points="17 6 23 6 23 12" />
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18&quot; />
+    <polyline points="17 6 23 6 23 12&quot; />
   </svg>
 );
 
 const FiBrain = ({ size = 20, className = '', ...props }: { size?: number, className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg&quot;
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 24 24&quot;
+    fill="none&quot;
+    stroke="currentColor&quot;
+    strokeWidth="2&quot;
+    strokeLinecap="round&quot;
+    strokeLinejoin="round&quot;
     className={className}
     {...props}
   >
-    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4.5 4.5 0 1 0 12 18.5 4.5 4.5 0 1 0 19.97 17.44 4 4 0 0 0 20.526 12 4 4 0 0 0 18.023 6.245 3 3 0 1 0 12 5z" />
+    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4.5 4.5 0 1 0 12 18.5 4.5 4.5 0 1 0 19.97 17.44 4 4 0 0 0 20.526 12 4 4 0 0 0 18.023 6.245 3 3 0 1 0 12 5z&quot; />
   </svg>
 );
 
@@ -317,7 +317,7 @@ const semanticSearch = (query: string, tools: Tool[]): Tool[] => {
   
   // Extract keywords and phrases
   const keywords = normalizedQuery.split(/\s+/).filter(word => word.length > 2);
-  const phrases = normalizedQuery.match(/"[^"]*"|'[^']*'/g)?.map(phrase => phrase.replace(/["']/g, '')) || [];
+  const phrases = normalizedQuery.match(/&quot;[^&quot;]*&quot;|'[^']*'/g)?.map(phrase => phrase.replace(/[&quot;']/g, '')) || [];
   
   // Calculate relevance scores for each tool
   const scoredTools = tools.map(tool => {
@@ -410,7 +410,7 @@ const enhancedAISearch = (query: string, tools: Tool[], allTags: string[]): Sugg
   tools.forEach(tool => {
     if (tool.name.toLowerCase().includes(normalizedQuery)) {
       suggestions.push({
-        type: 'tool',
+        type: &apos;tool&apos;,
         text: tool.name,
         description: tool.description,
         category: tool.category,
@@ -426,7 +426,7 @@ const enhancedAISearch = (query: string, tools: Tool[], allTags: string[]): Sugg
     if (category && category.toLowerCase().includes(normalizedQuery)) {
       const toolCount = tools.filter(tool => tool.category === category).length;
       suggestions.push({
-        type: 'category',
+        type: &apos;category&apos;,
         text: category,
         count: toolCount,
         icon: <FiFilter size={16} />,
@@ -439,7 +439,7 @@ const enhancedAISearch = (query: string, tools: Tool[], allTags: string[]): Sugg
   allTags.forEach(tag => {
     if (tag.toLowerCase().includes(normalizedQuery)) {
       suggestions.push({
-        type: 'tag',
+        type: &apos;tag&apos;,
         text: `#${tag}`,
         icon: <FiFilter size={16} />,
         confidence: 0.85
@@ -450,9 +450,9 @@ const enhancedAISearch = (query: string, tools: Tool[], allTags: string[]): Sugg
   // 4. Description matches
   tools.forEach(tool => {
     if (tool.description.toLowerCase().includes(normalizedQuery) && 
-        !suggestions.some(s => s.type === 'tool' && s.text === tool.name)) {
+        !suggestions.some(s => s.type === &apos;tool&apos; && s.text === tool.name)) {
       suggestions.push({
-        type: 'tool',
+        type: &apos;tool&apos;,
         text: tool.name,
         description: tool.description,
         category: tool.category,
@@ -466,9 +466,9 @@ const enhancedAISearch = (query: string, tools: Tool[], allTags: string[]): Sugg
   tools.forEach(tool => {
     if (tool.features && tool.features.some(feature => 
         feature.toLowerCase().includes(normalizedQuery)) &&
-        !suggestions.some(s => s.type === 'tool' && s.text === tool.name)) {
+        !suggestions.some(s => s.type === &apos;tool&apos; && s.text === tool.name)) {
       suggestions.push({
-        type: 'tool',
+        type: &apos;tool&apos;,
         text: tool.name,
         description: tool.description,
         category: tool.category,
@@ -482,9 +482,9 @@ const enhancedAISearch = (query: string, tools: Tool[], allTags: string[]): Sugg
   tools.forEach(tool => {
     if (tool.useCases && tool.useCases.some(useCase => 
         useCase.toLowerCase().includes(normalizedQuery)) &&
-        !suggestions.some(s => s.type === 'tool' && s.text === tool.name)) {
+        !suggestions.some(s => s.type === &apos;tool&apos; && s.text === tool.name)) {
       suggestions.push({
-        type: 'tool',
+        type: &apos;tool&apos;,
         text: tool.name,
         description: tool.description,
         category: tool.category,
@@ -509,9 +509,9 @@ const enhancedAISearch = (query: string, tools: Tool[], allTags: string[]): Sugg
       
       // Add to suggestions if score is high enough and not already added
       if (matchScore >= 2 && 
-          !suggestions.some(s => s.type === 'tool' && s.text === tool.name)) {
+          !suggestions.some(s => s.type === &apos;tool&apos; && s.text === tool.name)) {
         suggestions.push({
-          type: 'tool',
+          type: &apos;tool&apos;,
           text: tool.name,
           description: tool.description,
           category: tool.category,
@@ -601,7 +601,7 @@ const understandQueryIntent = (query: string): Suggestion[] => {
   enhancedIntentMap.forEach(intent => {
     if (intent.pattern.some(keyword => lowerQuery.includes(keyword))) {
       results.push({
-        type: 'intent',
+        type: &apos;intent&apos;,
         text: `Find tools for ${intent.category}`,
         category: intent.category,
         icon: <FiBrain size={16} />,
@@ -614,8 +614,8 @@ const understandQueryIntent = (query: string): Suggestion[] => {
   const pricingKeywords = ['free', 'paid', 'premium', 'subscription', 'trial'];
   if (pricingKeywords.some(keyword => lowerQuery.includes(keyword))) {
     results.push({
-      type: 'pricing',
-      text: 'Filter by pricing model',
+      type: &apos;pricing&apos;,
+      text: &apos;Filter by pricing model&apos;,
       icon: <FiFilter size={16} />,
       confidence: 0.8
     });
@@ -627,7 +627,7 @@ const understandQueryIntent = (query: string): Suggestion[] => {
     const rating = parseInt(ratingMatch[1], 10);
     if (rating >= 1 && rating <= 5) {
       results.push({
-        type: 'rating',
+        type: &apos;rating&apos;,
         text: `Find tools with ${rating}+ stars`,
         rating: rating,
         icon: <FiStar size={16} />,
@@ -797,7 +797,7 @@ const advancedAIRanking = (query: string, tools: Tool[]): Suggestion[] => {
     .sort((a, b) => b.score - a.score)
     .slice(0, 15)
     .map(item => ({
-      type: 'tool' as const,
+      type: &apos;tool&apos; as const,
       text: item.tool.name,
       description: item.tool.description,
       category: item.tool.category,
@@ -831,7 +831,7 @@ const contextualQueryAnalysis = (query: string, tools: Tool[], allTags: string[]
     
     if (patternMatch) {
       results.push({
-        type: 'intent',
+        type: &apos;intent&apos;,
         text: `Find tools for ${intent.category}`,
         category: intent.category,
         icon: <FiBrain size={16} />,
@@ -851,7 +851,7 @@ const contextualQueryAnalysis = (query: string, tools: Tool[], allTags: string[]
   pricingPatterns.forEach(pattern => {
     if (pattern.keywords.some(keyword => lowerQuery.includes(keyword))) {
       results.push({
-        type: 'pricing',
+        type: &apos;pricing&apos;,
         text: `Show ${pattern.type} tools`,
         icon: <FiFilter size={16} />,
         confidence: 0.9
@@ -872,7 +872,7 @@ const contextualQueryAnalysis = (query: string, tools: Tool[], allTags: string[]
       const rating = parseInt(match[1], 10);
       if (rating >= 1 && rating <= 5) {
         results.push({
-          type: 'rating',
+          type: &apos;rating&apos;,
           text: `Find tools with ${rating}+ ${ratingPattern.label}`,
           rating: rating,
           icon: <FiStar size={16} />,
@@ -887,7 +887,7 @@ const contextualQueryAnalysis = (query: string, tools: Tool[], allTags: string[]
     if (category && lowerQuery.includes(category.toLowerCase())) {
       const toolCount = tools.filter(tool => tool.category === category).length;
       results.push({
-        type: 'category',
+        type: &apos;category&apos;,
         text: category,
         count: toolCount,
         icon: <FiFilter size={16} />,
@@ -900,7 +900,7 @@ const contextualQueryAnalysis = (query: string, tools: Tool[], allTags: string[]
   allTags.forEach(tag => {
     if (lowerQuery.includes(tag.toLowerCase())) {
       results.push({
-        type: 'tag',
+        type: &apos;tag&apos;,
         text: `#${tag}`,
         icon: <FiFilter size={16} />,
         confidence: 0.85
@@ -922,7 +922,7 @@ const predictiveSearchSuggestions = (query: string, recentSearches: string[]): S
   recentSearches.forEach(search => {
     if (search.toLowerCase().startsWith(lowerQuery) && search.toLowerCase() !== lowerQuery) {
       suggestions.push({
-        type: 'recent',
+        type: &apos;recent&apos;,
         text: search,
         icon: <FiClock size={16} />,
         confidence: 0.8
@@ -936,7 +936,7 @@ const predictiveSearchSuggestions = (query: string, recentSearches: string[]): S
       if (search.toLowerCase().includes(lowerQuery) && 
           !suggestions.some(s => s.text === search)) {
         suggestions.push({
-          type: 'recent',
+          type: &apos;recent&apos;,
           text: search,
           icon: <FiClock size={16} />,
           confidence: 0.7
@@ -996,7 +996,7 @@ const generateSearchInsights = (query: string, tools: Tool[], allTags: string[])
   
   if (matchingCategories.length > 0) {
     insights.push({
-      type: 'insight',
+      type: &apos;insight&apos;,
       text: `Found in ${matchingCategories.length} categories`,
       icon: <FiFilter size={16} />,
       confidence: 0.7,
@@ -1011,7 +1011,7 @@ const generateSearchInsights = (query: string, tools: Tool[], allTags: string[])
   
   if (matchingTags.length > 0) {
     insights.push({
-      type: 'insight',
+      type: &apos;insight&apos;,
       text: `Related to ${matchingTags.length} tags`,
       icon: <FiFilter size={16} />,
       confidence: 0.65,
@@ -1026,7 +1026,7 @@ const generateSearchInsights = (query: string, tools: Tool[], allTags: string[])
   
   if (highRatedTools > 0 && lowerQuery.length > 2) {
     insights.push({
-      type: 'insight',
+      type: &apos;insight&apos;,
       text: `${highRatedTools} highly-rated tools available`,
       icon: <FiStar size={16} />,
       confidence: 0.6,
@@ -1059,10 +1059,10 @@ const getQueryEnhancementSuggestions = (query: string, tools: Tool[]): Suggestio
   if (!lowerQuery) return suggestions;
   
   // Suggest adding rating filter for generic queries
-  if (lowerQuery.length > 3 && !lowerQuery.includes('star') && !lowerQuery.includes('★')) {
+  if (lowerQuery.length > 3 && !lowerQuery.includes(&apos;star&apos;) && !lowerQuery.includes(&apos;★&apos;)) {
     suggestions.push({
-      type: 'enhancement',
-      text: 'Add "4+ stars" for highly-rated tools',
+      type: &apos;enhancement&apos;,
+      text: &apos;Add &quot;4+ stars&quot; for highly-rated tools&apos;,
       icon: <FiStar size={16} />,
       confidence: 0.75
     });
@@ -1072,8 +1072,8 @@ const getQueryEnhancementSuggestions = (query: string, tools: Tool[]): Suggestio
   const pricingKeywords = ['free', 'paid', 'premium', 'trial'];
   if (lowerQuery.length > 3 && !pricingKeywords.some(keyword => lowerQuery.includes(keyword))) {
     suggestions.push({
-      type: 'enhancement',
-      text: 'Add "free" to filter free tools',
+      type: &apos;enhancement&apos;,
+      text: &apos;Add &quot;free&quot; to filter free tools&apos;,
       icon: <FiFilter size={16} />,
       confidence: 0.7
     });
@@ -1087,7 +1087,7 @@ const getQueryEnhancementSuggestions = (query: string, tools: Tool[]): Suggestio
   
   if (matchingCategories.length > 0) {
     suggestions.push({
-      type: 'enhancement',
+      type: &apos;enhancement&apos;,
       text: `Explore related: ${matchingCategories[0]}`,
       icon: <FiFilter size={16} />,
       confidence: 0.65
@@ -1133,14 +1133,14 @@ const completeSearchEngine = (query: string, tools: Tool[], allTags: string[], r
 const trackSearchEvent = (query: string, suggestionType: SuggestionType, confidence: number) => {
   // In a real application, this would send data to an analytics service
   // For now, we'll just log to console
-  console.log(`Search Event: "${query}" -> ${suggestionType} (confidence: ${confidence})`);
+  console.log(`Search Event: &quot;${query}&quot; -> ${suggestionType} (confidence: ${confidence})`);
 };
 
 // User feedback tracking for search improvements
 const trackUserFeedback = (query: string, suggestion: Suggestion, wasSelected: boolean) => {
   // In a real application, this would send data to a feedback service
   // For now, we'll just log to console
-  console.log(`User Feedback: "${query}" -> ${suggestion.type} (${suggestion.text}) - Selected: ${wasSelected}`);
+  console.log(`User Feedback: &quot;${query}&quot; -> ${suggestion.type} (${suggestion.text}) - Selected: ${wasSelected}`);
   
   // Store in localStorage for future improvements
   const feedbackKey = `searchFeedback_${Date.now()}`;
@@ -1212,7 +1212,7 @@ const adaptiveSearch = (query: string, tools: Tool[], allTags: string[], recentS
   const results = enhancedSearchWithPerformance(query, tools, allTags, recentSearches);
   
   // In a real application, this would adapt based on user behavior patterns
-  // For now, we'll just return the results as-is
+  // For now, we&apos;ll just return the results as-is
   return results;
 };
 
@@ -1315,7 +1315,7 @@ const neuralSearch = (query: string, tools: Tool[], feedbackData?: Record<string
     .sort((a, b) => b.score - a.score)
     .slice(0, 20)
     .map(item => ({
-      type: 'tool' as const,
+      type: &apos;tool&apos; as const,
       text: item.tool.name,
       description: item.tool.description,
       category: item.tool.category,
@@ -1458,7 +1458,7 @@ const quantumSearch = (query: string, tools: Tool[], allTags: string[]): Suggest
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
     .map(item => ({
-      type: 'tool' as const,
+      type: &apos;tool&apos; as const,
       text: item.tool.name,
       description: item.tool.description,
       category: item.tool.category,
@@ -1484,7 +1484,7 @@ const predictiveAnalytics = (query: string, tools: Tool[], recentSearches: strin
     
     similarSearches.slice(0, 2).forEach(search => {
       predictions.push({
-        type: 'trending',
+        type: &apos;trending&apos;,
         text: `People also searched: ${search}`,
         icon: <FiTrendingUp size={16} />,
         confidence: 0.8
@@ -1510,7 +1510,7 @@ const predictiveAnalytics = (query: string, tools: Tool[], recentSearches: strin
   
   popularTools.forEach(tool => {
     predictions.push({
-      type: 'tool',
+      type: &apos;tool&apos;,
       text: `${tool.name} (Trending)`,
       description: tool.description,
       category: tool.category,
@@ -1595,21 +1595,21 @@ const hyperIntelligentSearch = (query: string, tools: Tool[], allTags: string[],
   allResults.sort((a, b) => {
     // Priority order: Insights > Enhancements > Intent > Others
     const priority: Record<string, number> = {
-      'insight': 4,
-      'enhancement': 3,
-      'intent': 2,
-      'trending': 1,
-      'tool': 1,
-      'category': 1,
-      'tag': 1,
-      'recent': 1,
-      'pricing': 1,
-      'rating': 1,
-      'comparison': 2,
-      'question': 2,
-      'workflow': 1,
-      'integration': 1,
-      'alternative': 1
+      &apos;insight&apos;: 4,
+      &apos;enhancement&apos;: 3,
+      &apos;intent&apos;: 2,
+      &apos;trending&apos;: 1,
+      &apos;tool&apos;: 1,
+      &apos;category&apos;: 1,
+      &apos;tag&apos;: 1,
+      &apos;recent&apos;: 1,
+      &apos;pricing&apos;: 1,
+      &apos;rating&apos;: 1,
+      &apos;comparison&apos;: 2,
+      &apos;question&apos;: 2,
+      &apos;workflow&apos;: 1,
+      &apos;integration&apos;: 1,
+      &apos;alternative&apos;: 1
     };
     
     const aPriority = priority[a.type] || 0;
@@ -1777,7 +1777,7 @@ const analyzeQueryIntent = (query: string) => {
 const processQuery = (query: string) => {
   const intentAnalysis = analyzeQueryIntent(query);
   // Remove the undefined fetchResults call and related sorting
-  // This function seems to be incomplete or unused, so we'll simplify it
+  // This function seems to be incomplete or unused, so we&apos;ll simplify it
   return {
     intent: intentAnalysis.intent,
     specificity: intentAnalysis.specificity,
@@ -1829,7 +1829,7 @@ const exploratorySearch = (query: string, tools: Tool[], allTags: string[]): Sug
   relatedCategories.slice(0, 3).forEach(category => {
     const toolCount = tools.filter(tool => tool.category === category).length;
     results.push({
-      type: 'category',
+      type: &apos;category&apos;,
       text: `Explore ${category}`,
       count: toolCount,
       icon: <FiFilter size={16} />,
@@ -1844,7 +1844,7 @@ const exploratorySearch = (query: string, tools: Tool[], allTags: string[]): Sug
   
   relatedTags.slice(0, 3).forEach(tag => {
     results.push({
-      type: 'tag',
+      type: &apos;tag&apos;,
       text: `#${tag}`,
       icon: <FiFilter size={16} />,
       confidence: 0.75
@@ -1873,7 +1873,7 @@ const preciseSearch = (query: string, tools: Tool[]): Suggestion[] => {
   
   if (exactMatches.length > 0) {
     return exactMatches.slice(0, 5).map(tool => ({
-      type: 'tool',
+      type: &apos;tool&apos;,
       text: tool.name,
       description: tool.description,
       category: tool.category,
@@ -1888,12 +1888,12 @@ const preciseSearch = (query: string, tools: Tool[]): Suggestion[] => {
     .slice(0, 10);
 };
 
-// Comparative search for "vs" type queries
+// Comparative search for &quot;vs&quot; type queries
 const comparativeSearch = (query: string, tools: Tool[]): Suggestion[] => {
   const lowerQuery = query.toLowerCase();
   const results: Suggestion[] = [];
   
-  // Split query on "vs" or "or"
+  // Split query on &quot;vs&quot; or &quot;or&quot;
   const parts = lowerQuery.split(/\s+(?:vs|or)\s+/);
   
   if (parts.length > 1) {
@@ -1904,7 +1904,7 @@ const comparativeSearch = (query: string, tools: Tool[]): Suggestion[] => {
     
     // Add comparison suggestion
     results.push({
-      type: 'comparison',
+      type: &apos;comparison&apos;,
       text: `Compare ${parts[0]} vs ${parts[1]}`,
       icon: <FiFilter size={16} />,
       confidence: 0.9
@@ -1917,7 +1917,7 @@ const comparativeSearch = (query: string, tools: Tool[]): Suggestion[] => {
   return results;
 };
 
-// Question-answering search for "how to" and "what is" queries
+// Question-answering search for &quot;how to&quot; and &quot;what is&quot; queries
 const questionSearch = (query: string, tools: Tool[]): Suggestion[] => {
   const lowerQuery = query.toLowerCase();
   const results: Suggestion[] = [];
@@ -1941,14 +1941,14 @@ const questionSearch = (query: string, tools: Tool[]): Suggestion[] => {
       relatedTools.forEach(tool => {
         results.push({
           ...tool,
-          type: 'question',
+          type: &apos;question&apos;,
           description: `${type.charAt(0).toUpperCase() + type.slice(1)}: ${tool.description}`
         });
       });
       
       // Add a general question suggestion
       results.push({
-        type: 'question',
+        type: &apos;question&apos;,
         text: `How to use ${subject} effectively`,
         icon: <FiBrain size={16} />,
         confidence: 0.85
@@ -1968,11 +1968,11 @@ const workflowSearch = (query: string, tools: Tool[]): Suggestion[] => {
   
   // Common workflow patterns
   const workflows = [
-    { pattern: /design.*logo/, workflow: 'Logo Design', tools: ['graphic design', 'logo'] },
-    { pattern: /edit.*video/, workflow: 'Video Editing', tools: ['video editing', 'video'] },
-    { pattern: /write.*blog/, workflow: 'Blog Writing', tools: ['writing', 'content'] },
-    { pattern: /analyze.*data/, workflow: 'Data Analysis', tools: ['data analysis', 'analytics'] },
-    { pattern: /create.*website/, workflow: 'Website Creation', tools: ['web development', 'website builder'] }
+    { pattern: /design.*logo/, workflow: &apos;Logo Design&apos;, tools: [&apos;graphic design&apos;, &apos;logo&apos;] },
+    { pattern: /edit.*video/, workflow: &apos;Video Editing&apos;, tools: [&apos;video editing&apos;, &apos;video&apos;] },
+    { pattern: /write.*blog/, workflow: &apos;Blog Writing&apos;, tools: [&apos;writing&apos;, &apos;content&apos;] },
+    { pattern: /analyze.*data/, workflow: &apos;Data Analysis&apos;, tools: [&apos;data analysis&apos;, &apos;analytics&apos;] },
+    { pattern: /create.*website/, workflow: &apos;Website Creation&apos;, tools: [&apos;web development&apos;, &apos;website builder&apos;] }
   ];
   
   // Find matching workflows
@@ -1980,7 +1980,7 @@ const workflowSearch = (query: string, tools: Tool[]): Suggestion[] => {
     if (pattern.test(lowerQuery)) {
       // Add workflow suggestion
       results.push({
-        type: 'workflow',
+        type: &apos;workflow&apos;,
         text: `Workflow: ${workflow}`,
         icon: <FiFilter size={16} />,
         confidence: 0.9
@@ -2026,7 +2026,7 @@ const integrationSearch = (query: string, tools: Tool[]): Suggestion[] => {
           
         platformTools.forEach(tool => {
           results.push({
-            type: 'integration',
+            type: &apos;integration&apos;,
             text: `${tool.name} integrates with ${platform.charAt(0).toUpperCase() + platform.slice(1)}`,
             description: tool.description,
             category: tool.category,
@@ -2039,8 +2039,8 @@ const integrationSearch = (query: string, tools: Tool[]): Suggestion[] => {
     
     // Add general integration suggestion
     results.push({
-      type: 'integration',
-      text: 'Show tools with integrations',
+      type: &apos;integration&apos;,
+      text: &apos;Show tools with integrations&apos;,
       icon: <FiFilter size={16} />,
       confidence: 0.8
     });
@@ -2079,7 +2079,7 @@ const alternativeSearch = (query: string, tools: Tool[]): Suggestion[] => {
           
         alternatives.forEach(tool => {
           results.push({
-            type: 'alternative',
+            type: &apos;alternative&apos;,
             text: `${tool.name} (Alternative to ${originalTool.name})`,
             description: tool.description,
             category: tool.category,
@@ -2107,7 +2107,7 @@ const trendingSearch = (query: string, tools: Tool[], recentSearches: string[]):
   
   trendingTools.forEach(tool => {
     results.push({
-      type: 'tool',
+      type: &apos;tool&apos;,
       text: `${tool.name} (Trending)`,
       description: tool.description,
       category: tool.category,
@@ -2121,7 +2121,7 @@ const trendingSearch = (query: string, tools: Tool[], recentSearches: string[]):
   trendingSearches.forEach(search => {
     if (calculateSemanticSimilarity(lowerQuery, search.toLowerCase()) > 0.3) {
       results.push({
-        type: 'trending',
+        type: &apos;trending&apos;,
         text: search,
         icon: <FiTrendingUp size={16} />,
         confidence: 0.8
@@ -2212,22 +2212,22 @@ const ultimateSearchEngine = (query: string, tools: Tool[], allTags: string[], r
   ultimateResults.sort((a, b) => {
     // Priority system: Insights > Predictions > Enhancements > Results
     const priority: Record<string, number> = {
-      'insight': 4,
-      'prediction': 3,
-      'enhancement': 2,
-      'tool': 1,
-      'category': 1,
-      'tag': 1,
-      'intent': 1,
-      'trending': 1,
-      'comparison': 2,
-      'question': 2,
-      'workflow': 1,
-      'integration': 1,
-      'alternative': 1,
-      'recent': 1,
-      'pricing': 1,
-      'rating': 1
+      &apos;insight&apos;: 4,
+      &apos;prediction&apos;: 3,
+      &apos;enhancement&apos;: 2,
+      &apos;tool&apos;: 1,
+      &apos;category&apos;: 1,
+      &apos;tag&apos;: 1,
+      &apos;intent&apos;: 1,
+      &apos;trending&apos;: 1,
+      &apos;comparison&apos;: 2,
+      &apos;question&apos;: 2,
+      &apos;workflow&apos;: 1,
+      &apos;integration&apos;: 1,
+      &apos;alternative&apos;: 1,
+      &apos;recent&apos;: 1,
+      &apos;pricing&apos;: 1,
+      &apos;rating&apos;: 1
     };
     
     const aPriority = priority[a.type] || 0;
@@ -2247,7 +2247,7 @@ const ultimateSearchEngine = (query: string, tools: Tool[], allTags: string[], r
   
   ultimateResults.forEach(result => {
     const currentCount = typeCounts.get(result.type) || 0;
-    const maxPerType = result.type === 'tool' ? 8 : result.type === 'insight' ? 3 : 2;
+    const maxPerType = result.type === &apos;tool&apos; ? 8 : result.type === &apos;insight&apos; ? 3 : 2;
     
     if (currentCount < maxPerType && diverseResults.length < 30) {
       typeCounts.set(result.type, currentCount + 1);
@@ -2288,9 +2288,9 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
     
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && key.startsWith('searchFeedback_')) {
+      if (key && key.startsWith(&apos;searchFeedback_&apos;)) {
         try {
-          const timestamp = parseInt(key.replace('searchFeedback_', ''));
+          const timestamp = parseInt(key.replace(&apos;searchFeedback_&apos;, &apos;&apos;));
           if (timestamp < thirtyDaysAgo) {
             keysToRemove.push(key);
           } else {
@@ -2318,9 +2318,9 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
       
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('searchFeedback_')) {
+        if (key && key.startsWith(&apos;searchFeedback_&apos;)) {
           try {
-            const timestamp = parseInt(key.replace('searchFeedback_', ''));
+            const timestamp = parseInt(key.replace(&apos;searchFeedback_&apos;, &apos;&apos;));
             if (timestamp < thirtyDaysAgo) {
               keysToRemove.push(key);
             }
@@ -2418,11 +2418,11 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
     if (!debouncedSearch) {
       // Show trending searches when input is empty
       const trendingSearches: Suggestion[] = [
-        { type: 'trending', text: 'Best AI image generators', icon: <FiTrendingUp size={16} />, count: 1245 },
-        { type: 'trending', text: 'Free SEO tools', icon: <FiTrendingUp size={16} />, count: 987 },
-        { type: 'trending', text: 'AI writing assistants', icon: <FiTrendingUp size={16} />, count: 876 },
-        { type: 'trending', text: 'Video editing AI', icon: <FiTrendingUp size={16} />, count: 754 },
-        { type: 'trending', text: 'AI for developers', icon: <FiTrendingUp size={16} />, count: 654 }
+        { type: &apos;trending&apos;, text: &apos;Best AI image generators&apos;, icon: <FiTrendingUp size={16} />, count: 1245 },
+        { type: &apos;trending&apos;, text: &apos;Free SEO tools&apos;, icon: <FiTrendingUp size={16} />, count: 987 },
+        { type: &apos;trending&apos;, text: &apos;AI writing assistants&apos;, icon: <FiTrendingUp size={16} />, count: 876 },
+        { type: &apos;trending&apos;, text: &apos;Video editing AI&apos;, icon: <FiTrendingUp size={16} />, count: 754 },
+        { type: &apos;trending&apos;, text: &apos;AI for developers&apos;, icon: <FiTrendingUp size={16} />, count: 654 }
       ];
       setSuggestions(trendingSearches);
       return;
@@ -2465,28 +2465,28 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
     const feedbackData: any[] = [];
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && key.startsWith('searchFeedback_')) {
+      if (key && key.startsWith(&apos;searchFeedback_&apos;)) {
         try {
-          const feedback = JSON.parse(localStorage.getItem(key) || '{}');
+          const feedback = JSON.parse(localStorage.getItem(key) || &apos;{}&apos;);
           feedbackData.push({
             id: key,
             ...feedback
           });
         } catch (e) {
-          console.error('Failed to parse feedback for export', e);
+          console.error(&apos;Failed to parse feedback for export&apos;, e);
         }
       }
     }
     
     // Create a downloadable JSON file
     const dataStr = JSON.stringify(feedbackData, null, 2);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+    const dataUri = &apos;data:application/json;charset=utf-8,&apos;+ encodeURIComponent(dataStr);
     
-    const exportFileDefaultName = `search-feedback-${new Date().toISOString().split('T')[0]}.json`;
+    const exportFileDefaultName = `search-feedback-${new Date().toISOString().split(&apos;T&apos;)[0]}.json`;
     
-    const linkElement = document.createElement('a');
-    linkElement.setAttribute('href', dataUri);
-    linkElement.setAttribute('download', exportFileDefaultName);
+    const linkElement = document.createElement(&apos;a&apos;);
+    linkElement.setAttribute(&apos;href&apos;, dataUri);
+    linkElement.setAttribute(&apos;download&apos;, exportFileDefaultName);
     linkElement.click();
   }, []);
   
@@ -2510,7 +2510,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
         
         // Import new feedback
         feedbackData.forEach((feedback: any) => {
-          if (feedback.id && feedback.id.startsWith('searchFeedback_')) {
+          if (feedback.id && feedback.id.startsWith(&apos;searchFeedback_&apos;)) {
             localStorage.setItem(feedback.id, JSON.stringify(feedback));
           }
         });
@@ -2679,7 +2679,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
         </div>
         <input
           ref={inputRef}
-          type="text"
+          type="text&quot;
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -2690,25 +2690,25 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
             fontSize: '1.1rem',
             padding: '0.75rem 0'
           }}
-          placeholder="Search millions of AI tools, articles, and resources..."
-          aria-label="Search AI tools"
+          placeholder="Search millions of AI tools, articles, and resources...&quot;
+          aria-label="Search AI tools&quot;
         />
         {search && (
           <button
-            type="button"
+            type="button&quot;
             onClick={clearSearch}
             style={{
               ...styles.clearButton,
               padding: '0.75rem',
               marginRight: '0.5rem'
             }}
-            aria-label="Clear search"
+            aria-label="Clear search&quot;
           >
             <FiX size={24} />
           </button>
         )}
         <button
-          type="button"
+          type="button&quot;
           onClick={() => setShowFilters(!showFilters)}
           style={{
             ...styles.filterButton,
@@ -2718,12 +2718,12 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
             padding: '0.75rem',
             margin: '0 0.5rem'
           }}
-          aria-label="Toggle filters"
+          aria-label="Toggle filters&quot;
         >
           <FiFilter size={24} />
         </button>
         <button
-          type="button"
+          type="button&quot;
           onClick={() => handleSearch(search)}
           style={{
             ...styles.searchButton,
@@ -2731,7 +2731,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
             fontSize: '1.1rem',
             borderRadius: '50px'
           }}
-          aria-label="Search"
+          aria-label="Search&quot;
         >
           Search
         </button>
@@ -2749,8 +2749,8 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
               key={`${suggestion.type}-${index}`}
               style={{
                 ...styles.suggestionItem,
-                padding: '1rem 1.5rem',
-                gap: '1rem',
+                padding: &apos;1rem 1.5rem&apos;,
+                gap: &apos;1rem&apos;,
                 borderBottom: index < suggestions.length - 1 ? '1px solid rgba(255, 255, 255, 0.1)' : 'none'
               }}
               onClick={() => {
@@ -2823,15 +2823,15 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
               <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <span style={{ fontSize: '1.1rem' }}>{suggestion.text}</span>
-                  {(suggestion.type === 'intent' || suggestion.type === 'insight' || suggestion.type === 'question' || suggestion.type === 'workflow') && (
+                  {(suggestion.type === &apos;intent&apos; || suggestion.type === &apos;insight&apos; || suggestion.type === &apos;question&apos; || suggestion.type === &apos;workflow&apos;) && (
                     <span style={{
                       ...styles.aiPoweredBadge,
                       fontSize: '0.75rem',
                       padding: '0.25rem 0.75rem'
                     }}>
-                      {suggestion.type === 'intent' ? 'AI-Powered' : 
-                       suggestion.type === 'question' ? 'Question' : 
-                       suggestion.type === 'workflow' ? 'Workflow' : 'Insight'}
+                      {suggestion.type === &apos;intent&apos; ? &apos;AI-Powered&apos; : 
+                       suggestion.type === &apos;question&apos; ? &apos;Question&apos; : 
+                       suggestion.type === &apos;workflow&apos; ? &apos;Workflow&apos; : &apos;Insight&apos;}
                     </span>
                   )}
                 </div>
@@ -2885,7 +2885,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
             <h3 style={{ marginTop: 0, marginBottom: 0, fontSize: '1.25rem' }}>Filters</h3>
             <button
-              type="button"
+              type="button&quot;
               onClick={() => setShowFilters(false)}
               style={{
                 background: 'none',
@@ -2898,7 +2898,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
-              aria-label="Close filters"
+              aria-label="Close filters&quot;
             >
               <FiX size={20} />
             </button>
@@ -2910,7 +2910,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
               {['Free', 'Freemium', 'Paid', 'Contact for Pricing', 'Free Trial', 'Deals'].map(option => (
                 <label key={option} style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', cursor: 'pointer' }}>
                   <input
-                    type="checkbox"
+                    type="checkbox&quot;
                     checked={filters.pricing.includes(option)}
                     onChange={() => toggleFilter('pricing', option)}
                     style={{ 
@@ -2932,14 +2932,14 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
               {[1, 2, 3, 4, 5].map(rating => (
                 <button
                   key={rating}
-                  type="button"
+                  type="button&quot;
                   onClick={() => setFilters(prev => ({
                     ...prev,
                     minRating: prev.minRating === rating ? 0 : rating
                   }))}
                   style={{
-                    background: 'none',
-                    border: 'none',
+                    background: &apos;none&apos;,
+                    border: &apos;none&apos;,
                     color: rating <= filters.minRating ? '#f59e0b' : 'rgba(255, 255, 255, 0.6)',
                     cursor: 'pointer',
                     fontSize: '1.5rem',
@@ -2951,7 +2951,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
                 </button>
               ))}
               <span style={{ marginLeft: '0.75rem', fontSize: '1rem' }}>
-                {filters.minRating > 0 ? `${filters.minRating}+` : 'Any'}
+                {filters.minRating > 0 ? `${filters.minRating}+` : &apos;Any&apos;}
               </span>
             </div>
           </div>
@@ -2980,7 +2980,7 @@ const SmartSearch: React.FC<SmartSearchProps> = ({
                   }}
                 >
                   <input
-                    type="checkbox"
+                    type="checkbox&quot;
                     checked={filters.tags.includes(tag)}
                     onChange={() => toggleFilter('tag', tag)}
                     style={{ 

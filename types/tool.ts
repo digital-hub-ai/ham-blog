@@ -6,7 +6,7 @@ export interface Tool {
   logo?: string;
   category: string;
   subcategory: string;
-  pricing: 'Free' | 'Freemium' | 'Paid' | 'Contact' | 'Open Source' | string;
+  pricing: &apos;Free&apos; | &apos;Freemium&apos; | &apos;Paid&apos; | &apos;Contact&apos; | &apos;Open Source&apos; | string;
   pricingPeriod?: string;
   pricingDescription?: string;
   tags: string[];
@@ -36,7 +36,7 @@ export interface Tool {
   youtubeUrl?: string;
   blogUrl?: string;
   documentationUrl?: string;
-  status?: 'Active' | 'Beta' | 'Alpha' | 'In Development' | 'Discontinued';
+  status?: &apos;Active&apos; | &apos;Beta&apos; | &apos;Alpha&apos; | &apos;In Development&apos; | &apos;Discontinued&apos;;
   founded?: string;
   teamSize?: number;
   funding?: {

@@ -1,10 +1,10 @@
-const fs = require('fs');
+const fs = require(&apos;fs&apos;);
 
 try {
-  const data = JSON.parse(fs.readFileSync('data/ai-tools-database-500.json', 'utf8'));
-  console.log('Total AI tools in database:', data.length);
-  console.log('First tool:', JSON.stringify(data[0], null, 2));
-  console.log('Last tool:', JSON.stringify(data[data.length - 1], null, 2));
+  const data = JSON.parse(fs.readFileSync(&apos;data/ai-tools-database-500.json&apos;, &apos;utf8&apos;));
+  console.log(&apos;Total AI tools in database:&apos;, data.length);
+  console.log(&apos;First tool:&apos;, JSON.stringify(data[0], null, 2));
+  console.log(&apos;Last tool:&apos;, JSON.stringify(data[data.length - 1], null, 2));
 } catch (error) {
-  console.error('Error reading or parsing JSON file:', error.message);
+  console.error(&apos;Error reading or parsing JSON file:&apos;, error.message);
 }

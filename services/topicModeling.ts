@@ -26,7 +26,7 @@ export interface Cluster {
 
 // Clustering configuration
 export interface ClusteringConfig {
-  algorithm: 'kmeans' | 'hierarchical' | 'dbscan' | 'lda';
+  algorithm: &apos;kmeans&apos; | &apos;hierarchical&apos; | &apos;dbscan&apos; | &apos;lda&apos;;
   maxClusters: number;
   minClusterSize: number;
   similarityThreshold: number; // 0-1
@@ -36,7 +36,7 @@ export interface ClusteringConfig {
 
 // Default configuration
 const defaultConfig: ClusteringConfig = {
-  algorithm: 'kmeans',
+  algorithm: &apos;kmeans&apos;,
   maxClusters: 10,
   minClusterSize: 3,
   similarityThreshold: 0.6,
@@ -356,7 +356,7 @@ function generateTopicModels(
   topicCount: number
 ): TopicModel[] {
   // This is a simplified topic modeling approach
-  // In practice, you'd use LDA or other advanced techniques
+  // In practice, you&apos;d use LDA or other advanced techniques
   
   // Extract all keywords
   const allKeywords = new Set<string>();
@@ -437,7 +437,7 @@ export function clusterResults(
   clusterGroups.forEach((docs, clusterId) => {
     if (docs.length >= config.minClusterSize) {
       // Extract keywords for the cluster
-      const allContent = docs.map(doc => doc.content).join(' ');
+      const allContent = docs.map(doc => doc.content).join(&apos; &apos;);
       const keywords = extractKeywords(allContent, 10);
       
       // Calculate cohesion (average similarity within cluster)
@@ -582,7 +582,7 @@ export function reorganizeClusters(
   feedback: Array<{ resultId: string; clusterId: string; relevance: number }>
 ): Cluster[] {
   // This would implement cluster reorganization based on feedback
-  // For now, we'll return the original clusters
+  // For now, we&apos;ll return the original clusters
   return clusters;
 }
 

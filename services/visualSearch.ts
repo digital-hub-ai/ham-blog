@@ -4,13 +4,13 @@
 
 // Visual search feature types
 export type VisualSearchFeature = 
-  | 'color'
-  | 'shape'
-  | 'texture'
-  | 'pattern'
-  | 'object'
-  | 'style'
-  | 'layout';
+  | &apos;color&apos;
+  | &apos;shape&apos;
+  | &apos;texture&apos;
+  | &apos;pattern&apos;
+  | &apos;object&apos;
+  | &apos;style&apos;
+  | &apos;layout&apos;;
 
 // Visual search request
 export interface VisualSearchRequest {
@@ -99,10 +99,10 @@ export function extractDominantColors(
   maxColors: number = 5
 ): string[] {
   // In a real implementation, this would use computer vision libraries
-  // For demo, we'll return mock colors
+  // For demo, we&apos;ll return mock colors
   const mockColors = [
-    '#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FF33A1',
-    '#33FFF3', '#F3FF33', '#A833FF', '#FF8C33', '#33FF8C'
+    &apos;#FF5733&apos;, &apos;#33FF57&apos;, &apos;#3357FF&apos;, &apos;#F333FF&apos;, &apos;#FF33A1&apos;,
+    &apos;#33FFF3&apos;, &apos;#F3FF33&apos;, &apos;#A833FF&apos;, &apos;#FF8C33&apos;, &apos;#33FF8C&apos;
   ];
   
   // Return random selection of colors
@@ -132,47 +132,47 @@ export function generateVisualFiltersFromImage(
     colors,
     dominantColor: colors[0] || '#000000',
     brightness: Math.random() > 0.5 ? 'bright' : Math.random() > 0.5 ? 'medium' : 'dark',
-    contrast: Math.random() > 0.6 ? 'high' : Math.random() > 0.5 ? 'medium' : 'low'
+    contrast: Math.random() > 0.6 ? 'high' : Math.random() > 0.5 ? &apos;medium&apos; : &apos;low&apos;
   };
 }
 
 // Visual search categories
 export const visualSearchCategories = [
-  'Logo Design',
-  'Website Layout',
-  'UI Components',
-  'Icons',
-  'Photography',
-  'Illustrations',
-  'Infographics',
-  'Charts and Graphs',
-  'Product Images',
-  'Architecture',
-  'Fashion',
-  'Art and Paintings'
+  &apos;Logo Design&apos;,
+  &apos;Website Layout&apos;,
+  &apos;UI Components&apos;,
+  &apos;Icons&apos;,
+  &apos;Photography&apos;,
+  &apos;Illustrations&apos;,
+  &apos;Infographics&apos;,
+  &apos;Charts and Graphs&apos;,
+  &apos;Product Images&apos;,
+  &apos;Architecture&apos;,
+  &apos;Fashion&apos;,
+  &apos;Art and Paintings&apos;
 ];
 
 // Visual search styles
 export const visualSearchStyles = [
-  'Minimalist',
-  'Modern',
-  'Vintage',
-  'Futuristic',
-  'Retro',
-  'Professional',
-  'Playful',
-  'Elegant',
-  'Bold',
-  'Subtle',
-  'Geometric',
-  'Organic'
+  &apos;Minimalist&apos;,
+  &apos;Modern&apos;,
+  &apos;Vintage&apos;,
+  &apos;Futuristic&apos;,
+  &apos;Retro&apos;,
+  &apos;Professional&apos;,
+  &apos;Playful&apos;,
+  &apos;Elegant&apos;,
+  &apos;Bold&apos;,
+  &apos;Subtle&apos;,
+  &apos;Geometric&apos;,
+  &apos;Organic&apos;
 ];
 
 // Visual search color palette
 export const visualSearchColors = [
-  'Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Pink', 'Brown',
-  'Black', 'White', 'Gray', 'Turquoise', 'Lavender', 'Coral', 'Mint',
-  'Gold', 'Silver', 'Navy', 'Maroon', 'Olive'
+  &apos;Red&apos;, &apos;Blue&apos;, &apos;Green&apos;, &apos;Yellow&apos;, &apos;Purple&apos;, &apos;Orange&apos;, &apos;Pink&apos;, &apos;Brown&apos;,
+  &apos;Black&apos;, &apos;White&apos;, &apos;Gray&apos;, &apos;Turquoise&apos;, &apos;Lavender&apos;, &apos;Coral&apos;, &apos;Mint&apos;,
+  &apos;Gold&apos;, &apos;Silver&apos;, &apos;Navy&apos;, &apos;Maroon&apos;, &apos;Olive&apos;
 ];
 
 export default {

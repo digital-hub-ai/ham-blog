@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from &apos;react&apos;;
 
 export function useFavorites() {
   const [favorites, setFavorites] = useState<string[]>([]);

@@ -1,4 +1,4 @@
-import { aiUpdates } from './data/ai-updates';
+import { aiUpdates } from &apos;./data/ai-updates&apos;;
 
-console.log('Number of updates:', aiUpdates.length);
-console.log('First update:', aiUpdates[0]);
+console.log(&apos;Number of updates:&apos;, aiUpdates.length);
+console.log(&apos;First update:&apos;, aiUpdates[0]);

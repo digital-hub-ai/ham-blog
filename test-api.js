@@ -21,7 +21,7 @@ const req = http.request(options, (res) => {
 });
 
 req.on('error', (error) => {
-  console.error('Error:', error.message);
+  console.error(&apos;Error:&apos;, error.message);
 });
 
 req.end();

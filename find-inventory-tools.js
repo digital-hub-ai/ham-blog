@@ -11,28 +11,28 @@ let inventoryTools = [];
 console.log('Searching for inventory management tools...');
 
 toolObjects.forEach((toolStr, index) => {
-  // Check if this tool is in the "AI for Retail" category and has inventory-related subcategory
-  if ((toolStr.includes('"category": "AI for Retail"') && 
+  // Check if this tool is in the &quot;AI for Retail&quot; category and has inventory-related subcategory
+  if ((toolStr.includes('&quot;category&quot;: &quot;AI for Retail&quot;') && 
        (toolStr.includes('Inventory') || toolStr.includes('inventory') || toolStr.includes('Stock') || toolStr.includes('stock'))) ||
       (toolStr.includes('Inventory') && toolStr.includes('Management'))) {
     // Extract the category
-    const categoryMatch = toolStr.match(/"category":\s*"([^"]+)"/);
+    const categoryMatch = toolStr.match(/&quot;category&quot;:\s*&quot;([^&quot;]+)&quot;/);
     const category = categoryMatch ? categoryMatch[1] : 'Unknown';
     
     // Extract the name
-    const nameMatch = toolStr.match(/"name":\s*"([^"]+)"/);
+    const nameMatch = toolStr.match(/&quot;name&quot;:\s*&quot;([^&quot;]+)&quot;/);
     const name = nameMatch ? nameMatch[1] : 'Unknown';
     
     // Extract the subcategory
-    const subcategoryMatch = toolStr.match(/"subcategory":\s*"([^"]+)"/);
+    const subcategoryMatch = toolStr.match(/&quot;subcategory&quot;:\s*&quot;([^&quot;]+)&quot;/);
     const subcategory = subcategoryMatch ? subcategoryMatch[1] : 'Unknown';
     
     // Extract the description
-    const descriptionMatch = toolStr.match(/"description":\s*"([^"]+)"/);
+    const descriptionMatch = toolStr.match(/&quot;description&quot;:\s*&quot;([^&quot;]+)&quot;/);
     const description = descriptionMatch ? descriptionMatch[1] : 'No description';
     
     // Extract the rating
-    const ratingMatch = toolStr.match(/"rating":\s*([0-9.]+)/);
+    const ratingMatch = toolStr.match(/&quot;rating&quot;:\s*([0-9.]+)/);
     const rating = ratingMatch ? parseFloat(ratingMatch[1]) : 0;
     
     inventoryTools.push({
@@ -60,20 +60,20 @@ if (inventoryTools.length > 0) {
 } else {
   console.log('\nNo specific inventory management tools found.');
   
-  // Let's check what subcategories exist in the "AI for Retail" category
+  // Let's check what subcategories exist in the &quot;AI for Retail&quot; category
   let retailSubcategories = new Set();
   
   toolObjects.forEach((toolStr, index) => {
-    if (toolStr.includes('"category": "AI for Retail"')) {
-      const subcategoryMatch = toolStr.match(/"subcategory":\s*"([^"]+)"/);
+    if (toolStr.includes('&quot;category&quot;: &quot;AI for Retail&quot;')) {
+      const subcategoryMatch = toolStr.match(/&quot;subcategory&quot;:\s*&quot;([^&quot;]+)&quot;/);
       if (subcategoryMatch) {
         retailSubcategories.add(subcategoryMatch[1]);
       }
     }
   });
   
-  console.log('\nSubcategories in "AI for Retail" category:');
+  console.log('\nSubcategories in &quot;AI for Retail&quot; category:');
   Array.from(retailSubcategories).forEach(subcategory => {
-    console.log('-', subcategory);
+    console.log(&apos;-&apos;, subcategory);
   });
 }

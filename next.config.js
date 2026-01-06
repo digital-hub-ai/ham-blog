@@ -34,7 +34,7 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+    value: &quot;default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';&quot;
   }
 ];
 
@@ -113,7 +113,7 @@ const nextConfig = {
     config.plugins.push(
       new webpack.EnvironmentPlugin({
         NODE_ENV: process.env.NODE_ENV,
-        NEXT_PUBLIC_GA_TRACKING_ID: process.env.NEXT_PUBLIC_GA_TRACKING_ID || '',
+        NEXT_PUBLIC_GA_TRACKING_ID: process.env.NEXT_PUBLIC_GA_TRACKING_ID || &apos;&apos;,
       })
     );
 
@@ -128,7 +128,7 @@ const nextConfig = {
     if (!dev) {
       config.optimization.minimize = true;
       config.optimization.splitChunks = {
-        chunks: 'all',
+        chunks: &apos;all&apos;,
         maxInitialRequests: 25,
         minSize: 20000,
         maxSize: 244000,
@@ -139,7 +139,7 @@ const nextConfig = {
               const packageName = module.context.match(
                 /[\\/]node_modules[\\/](.*?)([\\/]|$)/
               )[1];
-              return `npm.${packageName.replace('@', '')}`;
+              return `npm.${packageName.replace(&apos;@&apos;, &apos;&apos;)}`;
             },
           },
         },
@@ -154,30 +154,30 @@ const nextConfig = {
     return [
       // Security headers for all routes
       {
-        source: '/(.*)',
+        source: &apos;/(.*)&apos;,
         headers: securityHeaders,
       },
       // API CORS headers
       {
-        source: '/api/:path*',
+        source: &apos;/api/:path*&apos;,
         headers: [
-          { key: 'Access-Control-Allow-Credentials', value: 'true' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-          { key: 'Access-Control-Allow-Methods', value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT' },
-          { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version' },
+          { key: &apos;Access-Control-Allow-Credentials&apos;, value: &apos;true&apos; },
+          { key: &apos;Access-Control-Allow-Origin&apos;, value: &apos;*&apos; },
+          { key: &apos;Access-Control-Allow-Methods&apos;, value: &apos;GET,OPTIONS,PATCH,DELETE,POST,PUT&apos; },
+          { key: &apos;Access-Control-Allow-Headers&apos;, value: &apos;X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version&apos; },
         ],
       },
       // Cache static assets
       {
-        source: '/_next/static/:path*',
+        source: &apos;/_next/static/:path*&apos;,
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: &apos;Cache-Control&apos;, value: &apos;public, max-age=31536000, immutable&apos; },
         ],
       },
       {
-        source: '/static/:path*',
+        source: &apos;/static/:path*&apos;,
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: &apos;Cache-Control&apos;, value: &apos;public, max-age=31536000, immutable&apos; },
         ],
       },
     ];
@@ -185,20 +185,20 @@ const nextConfig = {
 
   // Environment variables
   env: {
-    SITE_URL: process.env.SITE_URL || 'https://aitoolsdirectory.com',
+    SITE_URL: process.env.SITE_URL || &apos;https://aitoolsdirectory.com&apos;,
   },
 
   // Redirects and rewrites
   async redirects() {
     return [
       {
-        source: '/privacy',
-        destination: '/privacy-policy',
+        source: &apos;/privacy&apos;,
+        destination: &apos;/privacy-policy&apos;,
         permanent: true,
       },
       {
-        source: '/tos',
-        destination: '/terms-of-service',
+        source: &apos;/tos&apos;,
+        destination: &apos;/terms-of-service&apos;,
         permanent: true,
       },
     ];
@@ -206,15 +206,15 @@ const nextConfig = {
 
   // Internationalization (i18n) configuration
   i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
+    locales: [&apos;en&apos;],
+    defaultLocale: &apos;en&apos;,
   },
 };
 
 // Bundle analyzer for production builds
-if (process.env.ANALYZE === 'true') {
-  const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: process.env.ANALYZE === 'true',
+if (process.env.ANALYZE === &apos;true&apos;) {
+  const withBundleAnalyzer = require(&apos;@next/bundle-analyzer&apos;)({
+    enabled: process.env.ANALYZE === &apos;true&apos;,
   });
   module.exports = withBundleAnalyzer(nextConfig);
 } else {

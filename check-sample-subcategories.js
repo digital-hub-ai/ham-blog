@@ -34,12 +34,12 @@ lines.forEach((line, index) => {
   
   // Extract properties if we're in a tool block
   if (inToolBlock) {
-    const categoryMatch = line.match(/"category":\s*"([^"]+)"/);
+    const categoryMatch = line.match(/&quot;category&quot;:\s*&quot;([^&quot;]+)&quot;/);
     if (categoryMatch) {
       currentTool.category = categoryMatch[1];
     }
     
-    const subcategoryMatch = line.match(/"subcategory":\s*"([^"]+)"/);
+    const subcategoryMatch = line.match(/&quot;subcategory&quot;:\s*&quot;([^&quot;]+)&quot;/);
     if (subcategoryMatch) {
       currentTool.subcategory = subcategoryMatch[1];
     }

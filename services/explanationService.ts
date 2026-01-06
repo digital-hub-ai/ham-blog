@@ -4,24 +4,24 @@
 
 // Explanation types
 export type ExplanationType = 
-  | 'relevance'        // Why this result is relevant
-  | 'ranking'          // Why this result is ranked this way
-  | 'diversity'        // Why this result was included for diversity
-  | 'personalization'  // Why this result was boosted due to personalization
-  | 'freshness'        // Why this result was boosted due to recency
-  | 'popularity'       // Why this result was boosted due to popularity
-  | 'query-match'      // How this result matches the query
-  | 'semantic-match'   // How this result semantically matches the query
-  | 'filter-match'     // How this result matches applied filters
-  | 'boosted'          // Why this result was boosted
-  | 'penalized'        // Why this result was penalized
-  | 'similar'          // Why this result is similar to others
-  | 'unique'           // Why this result is unique/valuable
-  | 'contextual'       // Why this result is contextually relevant
-  | 'comprehensive';   // Why this result provides comprehensive coverage
+  | &apos;relevance&apos;        // Why this result is relevant
+  | &apos;ranking&apos;          // Why this result is ranked this way
+  | &apos;diversity&apos;        // Why this result was included for diversity
+  | &apos;personalization&apos;  // Why this result was boosted due to personalization
+  | &apos;freshness&apos;        // Why this result was boosted due to recency
+  | &apos;popularity&apos;       // Why this result was boosted due to popularity
+  | &apos;query-match&apos;      // How this result matches the query
+  | &apos;semantic-match&apos;   // How this result semantically matches the query
+  | &apos;filter-match&apos;     // How this result matches applied filters
+  | &apos;boosted&apos;          // Why this result was boosted
+  | &apos;penalized&apos;        // Why this result was penalized
+  | &apos;similar&apos;          // Why this result is similar to others
+  | &apos;unique&apos;           // Why this result is unique/valuable
+  | &apos;contextual&apos;       // Why this result is contextually relevant
+  | &apos;comprehensive&apos;;   // Why this result provides comprehensive coverage
 
 // Explanation detail level
-export type ExplanationDetail = 'brief' | 'detailed' | 'technical';
+export type ExplanationDetail = &apos;brief&apos; | &apos;detailed&apos; | &apos;technical&apos;;
 
 // Result explanation
 export interface ResultExplanation {
@@ -88,16 +88,16 @@ export interface ExplanationConfig {
   includeTechnicalDetails: boolean;
   includeAlternatives: boolean;
   maxExplanationLength: number;
-  language: 'en' | 'es' | 'fr' | 'de' | 'zh';
+  language: &apos;en&apos; | &apos;es&apos; | &apos;fr&apos; | &apos;de&apos; | &apos;zh&apos;;
 }
 
 // Default configuration
 const defaultConfig: ExplanationConfig = {
-  detailLevel: 'detailed',
+  detailLevel: &apos;detailed&apos;,
   includeTechnicalDetails: true,
   includeAlternatives: true,
   maxExplanationLength: 500,
-  language: 'en'
+  language: &apos;en&apos;
 };
 
 /**
@@ -206,10 +206,10 @@ export function explainResult(
   if (rating && rating > 0) {
     const ratingScore = rating / 5; // Normalize to 0-1
     factors.push({
-      name: 'Rating',
+      name: &apos;Rating&apos;,
       value: rating.toFixed(1),
       weight: 0.1,
-      impact: 'positive'
+      impact: &apos;positive&apos;
     });
     relevanceScore += ratingScore * 0.1;
     maxPossibleScore += 0.1;
@@ -325,10 +325,10 @@ export function explainQuery(
       ? Object.entries(searchContext.filters).map(([key, value]) => `${key}: ${value}`)
       : [],
     rankingFactors: [
-      'relevance',
-      'recency',
-      'popularity',
-      'user preferences'
+      &apos;relevance&apos;,
+      &apos;recency&apos;,
+      &apos;popularity&apos;,
+      &apos;user preferences&apos;
     ],
     resultCount: searchContext.resultsCount || 0,
     processingTime: searchContext.processingTime || 0
@@ -347,13 +347,13 @@ export function generateTransparencyReport(
   } = {}
 ): TransparencyReport {
   return {
-    algorithmVersion: searchMetadata.algorithmVersion || '1.0.0',
-    dataSources: searchMetadata.dataSources || ['internal_database', 'web_crawl', 'user_generated'],
+    algorithmVersion: searchMetadata.algorithmVersion || &apos;1.0.0&apos;,
+    dataSources: searchMetadata.dataSources || [&apos;internal_database&apos;, &apos;web_crawl&apos;, &apos;user_generated&apos;],
     biasMitigation: [
-      'category_balancing',
-      'source_diversification',
-      'temporal_spread',
-      'perspective_inclusion'
+      &apos;category_balancing&apos;,
+      &apos;source_diversification&apos;,
+      &apos;temporal_spread&apos;,
+      &apos;perspective_inclusion&apos;
     ],
     fairnessMetrics: {
       overallScore: 0.85,
@@ -363,31 +363,31 @@ export function generateTransparencyReport(
     },
     explainability: {
       featureImportance: {
-        'semantic_relevance': 0.35,
-        'user_preferences': 0.25,
-        'recency': 0.15,
-        'popularity': 0.15,
-        'diversity': 0.10
+        &apos;semantic_relevance&apos;: 0.35,
+        &apos;user_preferences&apos;: 0.25,
+        &apos;recency&apos;: 0.15,
+        &apos;popularity&apos;: 0.15,
+        &apos;diversity&apos;: 0.10
       },
-      decisionProcess: 'Results are ranked using a combination of semantic understanding, user preferences, and diversity factors to ensure relevant and balanced results.',
+      decisionProcess: &apos;Results are ranked using a combination of semantic understanding, user preferences, and diversity factors to ensure relevant and balanced results.&apos;,
       auditTrail: [
         {
-          step: 'query_processing',
+          step: &apos;query_processing&apos;,
           timestamp: Date.now() - 100,
-          parameters: { query: 'example', filters: {} }
+          parameters: { query: &apos;example&apos;, filters: {} }
         },
         {
-          step: 'semantic_analysis',
+          step: &apos;semantic_analysis&apos;,
           timestamp: Date.now() - 75,
-          parameters: { model: 'universal_sentence_encoder' }
+          parameters: { model: &apos;universal_sentence_encoder&apos; }
         },
         {
-          step: 'ranking',
+          step: &apos;ranking&apos;,
           timestamp: Date.now() - 50,
-          parameters: { factors: ['relevance', 'recency', 'popularity'] }
+          parameters: { factors: [&apos;relevance&apos;, &apos;recency&apos;, &apos;popularity&apos;] }
         },
         {
-          step: 'diversity_filtering',
+          step: &apos;diversity_filtering&apos;,
           timestamp: Date.now() - 25,
           parameters: { threshold: 0.8 }
         }
@@ -526,7 +526,7 @@ export function generateUserFriendlyExplanation(
   
   // Truncate if too long
   if (explanation.length > 500) {
-    explanation = explanation.substring(0, 497) + '...';
+    explanation = explanation.substring(0, 497) + &apos;...&apos;;
   }
   
   return explanation;

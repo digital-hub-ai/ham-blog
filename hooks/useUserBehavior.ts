@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useEffect } from &apos;react&apos;;
+import { useRouter } from &apos;next/router&apos;;
 
 type SearchEvent = {
   query: string;
@@ -47,8 +47,8 @@ export function useUserBehavior() {
   };
 
   const getUserSearchHistory = () => {
-    if (typeof window === 'undefined') return [];
-    return JSON.parse(sessionStorage.getItem('searchHistory') || '[]') as SearchEvent[];
+    if (typeof window === &apos;undefined&apos;) return [];
+    return JSON.parse(sessionStorage.getItem(&apos;searchHistory&apos;) || &apos;[]&apos;) as SearchEvent[];
   };
 
   return {

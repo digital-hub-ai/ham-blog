@@ -10,7 +10,7 @@ function extractiveSummarize(text: string, sentencesNeeded: number = 3): string 
     .map(s => s.trim())
     .filter(s => s.length > 0);
   
-  // If we don't have enough sentences, return what we have
+  // If we don&apos;t have enough sentences, return what we have
   if (sentences.length <= sentencesNeeded) {
     return sentences.join('. ') + '.';
   }
@@ -35,7 +35,7 @@ function extractiveSummarize(text: string, sentencesNeeded: number = 3): string 
     .slice(0, sentencesNeeded)
     .sort((a, b) => a.index - b.index); // Maintain original order
   
-  return topSentences.map(s => s.sentence).join('. ') + '.';
+  return topSentences.map(s => s.sentence).join(&apos;. &apos;) + &apos;.&apos;;
 }
 
 /**
@@ -45,21 +45,21 @@ export async function generateSearchSummary(query: string, results: any[]): Prom
   // Combine content from top results
   const combinedContent = results
     .slice(0, 5) // Use top 5 results
-    .map(result => result.content || result.summary || '')
-    .join(' ');
+    .map(result => result.content || result.summary || &apos;&apos;)
+    .join(&apos; &apos;);
   
   // Generate summary
   const summary = extractiveSummarize(combinedContent, 2);
   
   // Add context about the query
-  return `Based on your search for "${query}": ${summary}`;
+  return `Based on your search for &quot;${query}&quot;: ${summary}`;
 }
 
 /**
  * Generate a summary for a single document
  */
 export async function summarizeDocument(document: any): Promise<string> {
-  const content = document.content || document.summary || '';
+  const content = document.content || document.summary || &apos;&apos;;
   return extractiveSummarize(content, 1);
 }
 

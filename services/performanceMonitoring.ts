@@ -70,8 +70,8 @@ export interface PerformanceReport {
 export interface PerformanceAlert {
   id: string;
   timestamp: number;
-  type: 'slow_response' | 'high_error_rate' | 'resource_exhaustion' | 'cache_miss' | 'system_degradation';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type: &apos;slow_response&apos; | &apos;high_error_rate&apos; | &apos;resource_exhaustion&apos; | &apos;cache_miss&apos; | &apos;system_degradation&apos;;
+  severity: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos; | &apos;critical&apos;;
   message: string;
   metrics: Partial<PerformanceMetrics>;
   recommendation: string;
@@ -294,7 +294,7 @@ function checkPerformanceAlerts(metrics: PerformanceMetrics): PerformanceAlert[]
       timestamp: metrics.timestamp,
       type: 'slow_response',
       severity: metrics.responseTime > 10000 ? 'high' : 'medium',
-      message: `Slow response time: ${metrics.responseTime}ms for query "${metrics.query}"`,
+      message: `Slow response time: ${metrics.responseTime}ms for query &quot;${metrics.query}&quot;`,
       metrics: { responseTime: metrics.responseTime, query: metrics.query },
       recommendation: 'Consider optimizing the search algorithm or adding more caching'
     });
@@ -339,7 +339,7 @@ function checkPerformanceAlerts(metrics: PerformanceMetrics): PerformanceAlert[]
         timestamp: metrics.timestamp,
         type: 'cache_miss',
         severity: 'medium',
-        message: `Low cache hit rate for query "${metrics.query}": ${Math.round(cacheHitRate * 100)}%`,
+        message: `Low cache hit rate for query &quot;${metrics.query}&quot;: ${Math.round(cacheHitRate * 100)}%`,
         metrics: { query: metrics.query, cacheHit: metrics.cacheHit },
         recommendation: 'Consider warming up the cache for frequently accessed queries'
       });

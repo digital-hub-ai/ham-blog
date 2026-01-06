@@ -1,4 +1,4 @@
-import { SearchResult } from './searchService';
+import { SearchResult } from &apos;./searchService&apos;;
 
 export interface SearchCluster {
   id: string;

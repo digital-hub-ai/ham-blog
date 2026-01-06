@@ -3,7 +3,7 @@
  */
 
 // Sentiment categories
-export type Sentiment = 'very-positive' | 'positive' | 'neutral' | 'negative' | 'very-negative';
+export type Sentiment = &apos;very-positive&apos; | &apos;positive&apos; | &apos;neutral&apos; | &apos;negative&apos; | &apos;very-negative&apos;;
 
 // Sentiment analysis result
 export interface SentimentAnalysisResult {
@@ -28,26 +28,26 @@ export interface SentimentScores {
 const sentimentLexicon = {
   // Positive words with weights
   positive: new Map<string, number>([
-    ['excellent', 4], ['outstanding', 4], ['amazing', 4], ['wonderful', 4], ['fantastic', 4],
-    ['great', 3], ['good', 3], ['awesome', 3], ['brilliant', 3], ['superb', 3],
-    ['nice', 2], ['fine', 2], ['decent', 2], ['satisfactory', 2], ['acceptable', 2],
-    ['ok', 1], ['okay', 1], ['alright', 1], ['beneficial', 3], ['helpful', 2],
-    ['useful', 2], ['effective', 3], ['efficient', 3], ['reliable', 3], ['valuable', 3],
-    ['innovative', 3], ['creative', 2], ['intelligent', 3], ['smart', 2], ['powerful', 3],
-    ['fast', 2], ['quick', 2], ['easy', 2], ['simple', 2], ['convenient', 2],
-    ['affordable', 2], ['cheap', 1], ['inexpensive', 1], ['reasonable', 2], ['fair', 1]
+    [&apos;excellent&apos;, 4], [&apos;outstanding&apos;, 4], [&apos;amazing&apos;, 4], [&apos;wonderful&apos;, 4], [&apos;fantastic&apos;, 4],
+    [&apos;great&apos;, 3], [&apos;good&apos;, 3], [&apos;awesome&apos;, 3], [&apos;brilliant&apos;, 3], [&apos;superb&apos;, 3],
+    [&apos;nice&apos;, 2], [&apos;fine&apos;, 2], [&apos;decent&apos;, 2], [&apos;satisfactory&apos;, 2], [&apos;acceptable&apos;, 2],
+    [&apos;ok&apos;, 1], [&apos;okay&apos;, 1], [&apos;alright&apos;, 1], [&apos;beneficial&apos;, 3], [&apos;helpful&apos;, 2],
+    [&apos;useful&apos;, 2], [&apos;effective&apos;, 3], [&apos;efficient&apos;, 3], [&apos;reliable&apos;, 3], [&apos;valuable&apos;, 3],
+    [&apos;innovative&apos;, 3], [&apos;creative&apos;, 2], [&apos;intelligent&apos;, 3], [&apos;smart&apos;, 2], [&apos;powerful&apos;, 3],
+    [&apos;fast&apos;, 2], [&apos;quick&apos;, 2], [&apos;easy&apos;, 2], [&apos;simple&apos;, 2], [&apos;convenient&apos;, 2],
+    [&apos;affordable&apos;, 2], [&apos;cheap&apos;, 1], [&apos;inexpensive&apos;, 1], [&apos;reasonable&apos;, 2], [&apos;fair&apos;, 1]
   ]),
   
   // Negative words with weights
   negative: new Map<string, number>([
-    ['terrible', 4], ['awful', 4], ['horrible', 4], ['dreadful', 4], ['atrocious', 4],
-    ['bad', 3], ['poor', 3], ['mediocre', 3], ['inferior', 3], ['unsatisfactory', 3],
-    ['disappointing', 3], ['frustrating', 3], ['annoying', 3], ['irritating', 3], ['problematic', 3],
-    ['difficult', 2], ['complicated', 2], ['hard', 2], ['slow', 2], ['ineffective', 3],
-    ['useless', 3], ['worthless', 4], ['pointless', 3], ['waste', 3], ['expensive', 2],
-    ['costly', 2], ['overpriced', 3], ['unreliable', 3], ['inefficient', 3], ['broken', 3],
-    ['buggy', 2], ['flawed', 2], ['defective', 3], ['dangerous', 3], ['risky', 2],
-    ['confusing', 2], ['complex', 2], ['cumbersome', 2], ['tedious', 2], ['boring', 2]
+    [&apos;terrible&apos;, 4], [&apos;awful&apos;, 4], [&apos;horrible&apos;, 4], [&apos;dreadful&apos;, 4], [&apos;atrocious&apos;, 4],
+    [&apos;bad&apos;, 3], [&apos;poor&apos;, 3], [&apos;mediocre&apos;, 3], [&apos;inferior&apos;, 3], [&apos;unsatisfactory&apos;, 3],
+    [&apos;disappointing&apos;, 3], [&apos;frustrating&apos;, 3], [&apos;annoying&apos;, 3], [&apos;irritating&apos;, 3], [&apos;problematic&apos;, 3],
+    [&apos;difficult&apos;, 2], [&apos;complicated&apos;, 2], [&apos;hard&apos;, 2], [&apos;slow&apos;, 2], [&apos;ineffective&apos;, 3],
+    [&apos;useless&apos;, 3], [&apos;worthless&apos;, 4], [&apos;pointless&apos;, 3], [&apos;waste&apos;, 3], [&apos;expensive&apos;, 2],
+    [&apos;costly&apos;, 2], [&apos;overpriced&apos;, 3], [&apos;unreliable&apos;, 3], [&apos;inefficient&apos;, 3], [&apos;broken&apos;, 3],
+    [&apos;buggy&apos;, 2], [&apos;flawed&apos;, 2], [&apos;defective&apos;, 3], [&apos;dangerous&apos;, 3], [&apos;risky&apos;, 2],
+    [&apos;confusing&apos;, 2], [&apos;complex&apos;, 2], [&apos;cumbersome&apos;, 2], [&apos;tedious&apos;, 2], [&apos;boring&apos;, 2]
   ])
 };
 
@@ -55,15 +55,15 @@ const sentimentLexicon = {
  * Intensity modifiers that affect sentiment weight
  */
 const intensityModifiers = new Map<string, number>([
-  ['very', 1.5], ['extremely', 2.0], ['incredibly', 2.0], ['absolutely', 1.8], ['totally', 1.5],
-  ['completely', 1.8], ['quite', 1.3], ['rather', 1.2], ['fairly', 1.1], ['somewhat', 0.8],
-  ['slightly', 0.6], ['barely', 0.4], ['hardly', 0.3], ['not', -1.0], ['no', -1.0]
+  [&apos;very&apos;, 1.5], [&apos;extremely&apos;, 2.0], [&apos;incredibly&apos;, 2.0], [&apos;absolutely&apos;, 1.8], [&apos;totally&apos;, 1.5],
+  [&apos;completely&apos;, 1.8], [&apos;quite&apos;, 1.3], [&apos;rather&apos;, 1.2], [&apos;fairly&apos;, 1.1], [&apos;somewhat&apos;, 0.8],
+  [&apos;slightly&apos;, 0.6], [&apos;barely&apos;, 0.4], [&apos;hardly&apos;, 0.3], [&apos;not&apos;, -1.0], [&apos;no&apos;, -1.0]
 ]);
 
 /**
  * Negation words that invert sentiment
  */
-const negationWords = new Set(['not', 'no', 'never', 'neither', 'nowhere', 'nobody', 'nothing', 'none']);
+const negationWords = new Set([&apos;not&apos;, &apos;no&apos;, &apos;never&apos;, &apos;neither&apos;, &apos;nowhere&apos;, &apos;nobody&apos;, &apos;nothing&apos;, &apos;none&apos;]);
 
 /**
  * Analyze sentiment of text
@@ -71,7 +71,7 @@ const negationWords = new Set(['not', 'no', 'never', 'neither', 'nowhere', 'nobo
 export function analyzeSentiment(text: string): SentimentAnalysisResult {
   if (!text) {
     return {
-      sentiment: 'neutral',
+      sentiment: &apos;neutral&apos;,
       confidence: 0,
       positiveWords: [],
       negativeWords: [],

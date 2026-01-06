@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from &apos;react&apos;;
 
 interface VectorCanvasProps {
   children?: React.ReactNode;
@@ -26,7 +26,7 @@ export const VectorCanvas: React.FC<VectorCanvasProps> = ({ children, className 
     <div 
       ref={canvasRef}
       className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}
-      aria-hidden="true"
+      aria-hidden="true&quot;
     >
       {children}
     </div>

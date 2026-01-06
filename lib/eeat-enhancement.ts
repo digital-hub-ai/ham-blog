@@ -1,13 +1,13 @@
-import { KnowledgeNode } from './adaptive-stream';
+import { KnowledgeNode } from &apos;./adaptive-stream&apos;;
 
 interface AuthorProfile {
-  '@type': string;
+  &apos;@type&apos;: string;
   name: string;
   url: string;
   sameAs: string[];
   jobTitle: string;
   worksFor: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
     url: string;
   };
@@ -22,7 +22,7 @@ interface AuthorProfile {
 }
 
 interface Citation {
-  '@type': string;
+  &apos;@type&apos;: string;
   name: string;
   url: string;
   description: string;
@@ -33,11 +33,11 @@ interface Citation {
 }
 
 interface FactCheck {
-  '@type': string;
+  &apos;@type&apos;: string;
   name: string;
   url: string;
   reviewRating: {
-    '@type': string;
+    &apos;@type&apos;: string;
     ratingValue: number;
     bestRating: number;
     worstRating: number;
@@ -45,13 +45,13 @@ interface FactCheck {
   reviewBody: string;
   dateReviewed: string;
   author: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
   };
 }
 
 interface MedicalClaim {
-  '@type': string;
+  &apos;@type&apos;: string;
   name: string;
   description: string;
   supportingEvidence: string[];
@@ -62,13 +62,13 @@ interface MedicalClaim {
 }
 
 interface ExpertReview {
-  '@type': string;
+  &apos;@type&apos;: string;
   itemReviewed: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
   };
   reviewRating: {
-    '@type': string;
+    &apos;@type&apos;: string;
     ratingValue: number;
     bestRating: number;
     worstRating: number;
@@ -76,13 +76,13 @@ interface ExpertReview {
   };
   reviewBody: string;
   author: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
     jobTitle: string;
   };
   datePublished: string;
   publisher: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
   };
 }
@@ -90,7 +90,7 @@ interface ExpertReview {
 export class EEATEnhancer {
   private baseUrl: string;
 
-  constructor(baseUrl: string = 'https://ai-vault.com') {
+  constructor(baseUrl: string = &apos;https://ai-vault.com&apos;) {
     this.baseUrl = baseUrl;
   }
 
@@ -501,26 +501,26 @@ export class EEATEnhancer {
   private generateMedicalClaimSchemas(node: KnowledgeNode): MedicalClaim[] {
     // Only generate medical claims for relevant content
     if (!node.tags.some(tag => 
-      tag.toLowerCase().includes('health') || 
-      tag.toLowerCase().includes('medical') ||
-      tag.toLowerCase().includes('healthcare')
+      tag.toLowerCase().includes(&apos;health&apos;) || 
+      tag.toLowerCase().includes(&apos;medical&apos;) ||
+      tag.toLowerCase().includes(&apos;healthcare&apos;)
     )) {
       return [];
     }
 
     return [
       {
-        '@type': 'MedicalClaim',
-        name: 'AI in Healthcare Diagnosis',
-        description: 'AI tools can assist in medical diagnosis with high accuracy',
+        &apos;@type&apos;: &apos;MedicalClaim&apos;,
+        name: &apos;AI in Healthcare Diagnosis&apos;,
+        description: &apos;AI tools can assist in medical diagnosis with high accuracy&apos;,
         supportingEvidence: [
-          'https://pubmed.ncbi.nlm.nih.gov/34567890/',
-          'https://www.nature.com/articles/s41591-023-01234'
+          &apos;https://pubmed.ncbi.nlm.nih.gov/34567890/&apos;,
+          &apos;https://www.nature.com/articles/s41591-023-01234&apos;
         ],
         conflictingEvidence: [],
-        medicalSpecialty: 'Medical Informatics',
-        relevantSpecialty: 'Radiology',
-        status: 'Research Supported'
+        medicalSpecialty: &apos;Medical Informatics&apos;,
+        relevantSpecialty: &apos;Radiology&apos;,
+        status: &apos;Research Supported&apos;
       }
     ];
   }
@@ -539,17 +539,17 @@ export class EEATEnhancer {
   } {
     return {
       authorCredentials: [
-        'AI Research Expert',
-        '10+ Years Experience',
-        'Peer-Reviewed Publications',
-        'Industry Certifications'
+        &apos;AI Research Expert&apos;,
+        &apos;10+ Years Experience&apos;,
+        &apos;Peer-Reviewed Publications&apos;,
+        &apos;Industry Certifications&apos;
       ],
       editorialProcess: [
-        'Expert Review',
-        'Fact-Checking',
-        'Source Verification',
-        'Editorial Oversight',
-        'Regular Updates'
+        &apos;Expert Review&apos;,
+        &apos;Fact-Checking&apos;,
+        &apos;Source Verification&apos;,
+        &apos;Editorial Oversight&apos;,
+        &apos;Regular Updates&apos;
       ],
       lastUpdated: node.updatedAt || node.publishedAt,
       accuracyScore: node.rating ? (node.rating / 5) * 100 : 90,
@@ -564,79 +564,79 @@ export class EEATEnhancer {
    */
   generateAboutPageSchema(): any {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'AboutPage',
-      name: 'About AI Vault',
-      description: 'Learn about AI Vault, our mission, team, and commitment to providing accurate, comprehensive AI tools reviews and insights.',
+      &apos;@context&apos;: &apos;https://schema.org&apos;,
+      &apos;@type&apos;: &apos;AboutPage&apos;,
+      name: &apos;About AI Vault&apos;,
+      description: &apos;Learn about AI Vault, our mission, team, and commitment to providing accurate, comprehensive AI tools reviews and insights.&apos;,
       url: `${this.baseUrl}/about`,
       mainEntity: {
-        '@type': 'Organization',
-        name: 'AI Vault',
+        &apos;@type&apos;: &apos;Organization&apos;,
+        name: &apos;AI Vault&apos;,
         url: this.baseUrl,
-        description: 'Leading platform for AI tools reviews, comparisons, and insights',
-        foundingDate: '2023',
+        description: &apos;Leading platform for AI tools reviews, comparisons, and insights&apos;,
+        foundingDate: &apos;2023&apos;,
         founders: [
           {
-            '@type': 'Person',
-            name: 'Alex Thompson',
-            jobTitle: 'CEO & Co-Founder',
-            description: 'AI researcher with 15+ years of experience in machine learning and natural language processing.'
+            &apos;@type&apos;: &apos;Person&apos;,
+            name: &apos;Alex Thompson&apos;,
+            jobTitle: &apos;CEO & Co-Founder&apos;,
+            description: &apos;AI researcher with 15+ years of experience in machine learning and natural language processing.&apos;
           },
           {
-            '@type': 'Person',
-            name: 'Dr. Maria Rodriguez',
-            jobTitle: 'Chief Technology Officer & Co-Founder',
-            description: 'PhD in Computer Science, specializing in AI ethics and responsible AI development.'
+            &apos;@type&apos;: &apos;Person&apos;,
+            name: &apos;Dr. Maria Rodriguez&apos;,
+            jobTitle: &apos;Chief Technology Officer & Co-Founder&apos;,
+            description: &apos;PhD in Computer Science, specializing in AI ethics and responsible AI development.&apos;
           }
         ],
         employees: [
           {
-            '@type': 'Person',
-            name: 'Dr. Sarah Chen',
-            jobTitle: 'AI Research Director',
-            description: 'Leading AI research initiatives and content strategy.'
+            &apos;@type&apos;: &apos;Person&apos;,
+            name: &apos;Dr. Sarah Chen&apos;,
+            jobTitle: &apos;AI Research Director&apos;,
+            description: &apos;Leading AI research initiatives and content strategy.&apos;
           },
           {
-            '@type': 'Person',
-            name: 'Prof. James Wilson',
-            jobTitle: 'Senior Technical Advisor',
-            description: 'Professor of Computer Science with expertise in software engineering and AI.'
+            &apos;@type&apos;: &apos;Person&apos;,
+            name: &apos;Prof. James Wilson&apos;,
+            jobTitle: &apos;Senior Technical Advisor&apos;,
+            description: &apos;Professor of Computer Science with expertise in software engineering and AI.&apos;
           }
         ],
-        mission: 'To democratize AI knowledge and help businesses and individuals make informed decisions about AI tools and technologies.',
+        mission: &apos;To democratize AI knowledge and help businesses and individuals make informed decisions about AI tools and technologies.&apos;,
         values: [
-          'Accuracy and Reliability',
-          'Transparency and Honesty',
-          'Expertise and Authority',
-          'User-Centric Approach',
-          'Continuous Learning'
+          &apos;Accuracy and Reliability&apos;,
+          &apos;Transparency and Honesty&apos;,
+          &apos;Expertise and Authority&apos;,
+          &apos;User-Centric Approach&apos;,
+          &apos;Continuous Learning&apos;
         ],
         awards: [
-          '2023 Best AI Tools Platform',
-          'Top AI Review Website',
-          'Excellence in AI Journalism'
+          &apos;2023 Best AI Tools Platform&apos;,
+          &apos;Top AI Review Website&apos;,
+          &apos;Excellence in AI Journalism&apos;
         ],
         hasCredential: [
           {
-            '@type': 'EducationalOccupationalCredential',
-            name: 'Certified AI Research Organization',
-            credentialCategory: 'Professional Certification'
+            &apos;@type&apos;: &apos;EducationalOccupationalCredential&apos;,
+            name: &apos;Certified AI Research Organization&apos;,
+            credentialCategory: &apos;Professional Certification&apos;
           }
         ]
       },
       breadcrumb: {
-        '@type': 'BreadcrumbList',
+        &apos;@type&apos;: &apos;BreadcrumbList&apos;,
         itemListElement: [
           {
-            '@type': 'ListItem',
+            &apos;@type&apos;: &apos;ListItem&apos;,
             position: 1,
-            name: 'Home',
+            name: &apos;Home&apos;,
             item: this.baseUrl
           },
           {
-            '@type': 'ListItem',
+            &apos;@type&apos;: &apos;ListItem&apos;,
             position: 2,
-            name: 'About',
+            name: &apos;About&apos;,
             item: `${this.baseUrl}/about`
           }
         ]
@@ -649,42 +649,42 @@ export class EEATEnhancer {
    */
   generateContactPageSchema(): any {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'ContactPage',
-      name: 'Contact AI Vault',
-      description: 'Get in touch with AI Vault for inquiries, partnerships, or support.',
+      &apos;@context&apos;: &apos;https://schema.org&apos;,
+      &apos;@type&apos;: &apos;ContactPage&apos;,
+      name: &apos;Contact AI Vault&apos;,
+      description: &apos;Get in touch with AI Vault for inquiries, partnerships, or support.&apos;,
       url: `${this.baseUrl}/contact`,
       mainEntity: {
-        '@type': 'Organization',
-        name: 'AI Vault',
+        &apos;@type&apos;: &apos;Organization&apos;,
+        name: &apos;AI Vault&apos;,
         url: this.baseUrl,
         contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+1-555-AI-VAULT',
-          contactType: 'Customer Service',
-          availableLanguage: ['English'],
+          &apos;@type&apos;: &apos;ContactPoint&apos;,
+          telephone: &apos;+1-555-AI-VAULT&apos;,
+          contactType: &apos;Customer Service&apos;,
+          availableLanguage: [&apos;English&apos;],
           hoursAvailable: [
-            'Mo-Fr 09:00-17:00',
-            'Sa 10:00-14:00'
+            &apos;Mo-Fr 09:00-17:00&apos;,
+            &apos;Sa 10:00-14:00&apos;
           ],
           serviceArea: {
-            '@type': 'Country',
-            name: 'United States'
+            &apos;@type&apos;: &apos;Country&apos;,
+            name: &apos;United States&apos;
           }
         },
         address: {
-          '@type': 'PostalAddress',
-          streetAddress: '123 AI Street',
-          addressLocality: 'San Francisco',
-          addressRegion: 'CA',
-          postalCode: '94105',
-          addressCountry: 'US'
+          &apos;@type&apos;: &apos;PostalAddress&apos;,
+          streetAddress: &apos;123 AI Street&apos;,
+          addressLocality: &apos;San Francisco&apos;,
+          addressRegion: &apos;CA&apos;,
+          postalCode: &apos;94105&apos;,
+          addressCountry: &apos;US&apos;
         },
-        email: 'contact@aivault.com',
+        email: &apos;contact@aivault.com&apos;,
         sameAs: [
-          'https://twitter.com/aivault',
-          'https://linkedin.com/company/aivault',
-          'https://facebook.com/aivault'
+          &apos;https://twitter.com/aivault&apos;,
+          &apos;https://linkedin.com/company/aivault&apos;,
+          &apos;https://facebook.com/aivault&apos;
         ]
       }
     };

@@ -17,445 +17,445 @@ const aiCategories = {
 // Initial tools data structure (50+ core AI tools)
 const initialTools = [
   {
-    name: "ChatGPT",
-    slug: "chatgpt",
-    description: "Advanced AI conversation and task completion",
-    categories: ["text_generation", "productivity"],
-    pricing: { free: true, paid: true, plans: ["Plus", "Team"] },
-    features: ["conversational", "code", "research", "creative"],
-    website_url: "https://chat.openai.com"
+    name: &quot;ChatGPT&quot;,
+    slug: &quot;chatgpt&quot;,
+    description: &quot;Advanced AI conversation and task completion&quot;,
+    categories: [&quot;text_generation&quot;, &quot;productivity&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Plus&quot;, &quot;Team&quot;] },
+    features: [&quot;conversational&quot;, &quot;code&quot;, &quot;research&quot;, &quot;creative&quot;],
+    website_url: &quot;https://chat.openai.com&quot;
   },
   {
-    name: "Claude",
-    slug: "claude",
-    description: "AI assistant focused on being helpful, harmless, and honest",
-    categories: ["text_generation", "productivity"],
-    pricing: { free: true, paid: true, plans: ["Claude Pro", "Claude for Teams", "Claude for Enterprises"] },
-    features: ["conversational", "document analysis", "long context", "safe responses"],
-    website_url: "https://claude.ai"
+    name: &quot;Claude&quot;,
+    slug: &quot;claude&quot;,
+    description: &quot;AI assistant focused on being helpful, harmless, and honest&quot;,
+    categories: [&quot;text_generation&quot;, &quot;productivity&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Claude Pro&quot;, &quot;Claude for Teams&quot;, &quot;Claude for Enterprises&quot;] },
+    features: [&quot;conversational&quot;, &quot;document analysis&quot;, &quot;long context&quot;, &quot;safe responses&quot;],
+    website_url: &quot;https://claude.ai&quot;
   },
   {
-    name: "Jasper",
-    slug: "jasper",
-    description: "AI content generator for marketing teams and copywriters",
-    categories: ["text_generation", "marketing"],
-    pricing: { free: false, paid: true, plans: ["Starter", "Pro", "Team", "Business"] },
-    features: ["content templates", "brand voice", "collaboration", "plagiarism checker"],
-    website_url: "https://jasper.ai"
+    name: &quot;Jasper&quot;,
+    slug: &quot;jasper&quot;,
+    description: &quot;AI content generator for marketing teams and copywriters&quot;,
+    categories: [&quot;text_generation&quot;, &quot;marketing&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Starter&quot;, &quot;Pro&quot;, &quot;Team&quot;, &quot;Business&quot;] },
+    features: [&quot;content templates&quot;, &quot;brand voice&quot;, &quot;collaboration&quot;, &quot;plagiarism checker&quot;],
+    website_url: &quot;https://jasper.ai&quot;
   },
   {
-    name: "Midjourney",
-    slug: "midjourney",
-    description: "AI art generator that creates images from text prompts",
-    categories: ["image_generation", "art"],
-    pricing: { free: false, paid: true, plans: ["Basic Plan", "Standard Plan", "Pro Plan"] },
-    features: ["text-to-image", "style variations", "upscale", "custom ratios"],
-    website_url: "https://midjourney.com"
+    name: &quot;Midjourney&quot;,
+    slug: &quot;midjourney&quot;,
+    description: &quot;AI art generator that creates images from text prompts&quot;,
+    categories: [&quot;image_generation&quot;, &quot;art&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Basic Plan&quot;, &quot;Standard Plan&quot;, &quot;Pro Plan&quot;] },
+    features: [&quot;text-to-image&quot;, &quot;style variations&quot;, &quot;upscale&quot;, &quot;custom ratios&quot;],
+    website_url: &quot;https://midjourney.com&quot;
   },
   {
-    name: "DALL-E 3",
-    slug: "dall-e-3",
-    description: "AI image generator integrated with ChatGPT for creating detailed images from text",
-    categories: ["image_generation", "design"],
-    pricing: { free: false, paid: true, plans: ["ChatGPT Plus", "ChatGPT Enterprise"] },
-    features: ["text-to-image", "image editing", "high resolution", "consistent styles"],
-    website_url: "https://openai.com/dall-e-3"
+    name: &quot;DALL-E 3&quot;,
+    slug: &quot;dall-e-3&quot;,
+    description: &quot;AI image generator integrated with ChatGPT for creating detailed images from text&quot;,
+    categories: [&quot;image_generation&quot;, &quot;design&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;ChatGPT Plus&quot;, &quot;ChatGPT Enterprise&quot;] },
+    features: [&quot;text-to-image&quot;, &quot;image editing&quot;, &quot;high resolution&quot;, &quot;consistent styles&quot;],
+    website_url: &quot;https://openai.com/dall-e-3&quot;
   },
   {
-    name: "Runway",
-    slug: "runway",
-    description: "AI-powered video editing and creation platform",
-    categories: ["video_ai", "editing"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro", "Teams", "Enterprise"] },
-    features: ["green screen AI", "text to video", "object removal", "motion brushes"],
-    website_url: "https://runwayml.com"
+    name: &quot;Runway&quot;,
+    slug: &quot;runway&quot;,
+    description: &quot;AI-powered video editing and creation platform&quot;,
+    categories: [&quot;video_ai&quot;, &quot;editing&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;, &quot;Teams&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;green screen AI&quot;, &quot;text to video&quot;, &quot;object removal&quot;, &quot;motion brushes&quot;],
+    website_url: &quot;https://runwayml.com&quot;
   },
   {
-    name: "ElevenLabs",
-    slug: "elevenlabs",
-    description: "AI voice generator and text-to-speech platform",
-    categories: ["audio_ai", "voice"],
-    pricing: { free: true, paid: true, plans: ["Free", "Creator", "Pro", "Enterprise"] },
-    features: ["voice cloning", "multilingual", "voice design", "audio editing"],
-    website_url: "https://elevenlabs.io"
+    name: &quot;ElevenLabs&quot;,
+    slug: &quot;elevenlabs&quot;,
+    description: &quot;AI voice generator and text-to-speech platform&quot;,
+    categories: [&quot;audio_ai&quot;, &quot;voice&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Creator&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;voice cloning&quot;, &quot;multilingual&quot;, &quot;voice design&quot;, &quot;audio editing&quot;],
+    website_url: &quot;https://elevenlabs.io&quot;
   },
   {
-    name: "GitHub Copilot",
-    slug: "github-copilot",
-    description: "AI pair programmer that helps you write code faster",
-    categories: ["code_ai", "development"],
-    pricing: { free: false, paid: true, plans: ["Individual", "Business", "Enterprise"] },
-    features: ["code suggestions", "autocomplete", "multi-language", "chat interface"],
-    website_url: "https://github.com/features/copilot"
+    name: &quot;GitHub Copilot&quot;,
+    slug: &quot;github-copilot&quot;,
+    description: &quot;AI pair programmer that helps you write code faster&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Individual&quot;, &quot;Business&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;code suggestions&quot;, &quot;autocomplete&quot;, &quot;multi-language&quot;, &quot;chat interface&quot;],
+    website_url: &quot;https://github.com/features/copilot&quot;
   },
   {
-    name: "Notion AI",
-    slug: "notion-ai",
-    description: "AI assistant integrated into Notion for writing, planning, and organizing",
-    categories: ["productivity", "organization"],
-    pricing: { free: false, paid: true, plans: ["Plus", "Enterprise"] },
-    features: ["writing assistant", "task management", "summarization", "template creation"],
-    website_url: "https://notion.so/ai"
+    name: &quot;Notion AI&quot;,
+    slug: &quot;notion-ai&quot;,
+    description: &quot;AI assistant integrated into Notion for writing, planning, and organizing&quot;,
+    categories: [&quot;productivity&quot;, &quot;organization&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Plus&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;writing assistant&quot;, &quot;task management&quot;, &quot;summarization&quot;, &quot;template creation&quot;],
+    website_url: &quot;https://notion.so/ai&quot;
   },
   {
-    name: "Consensus",
-    slug: "consensus",
-    description: "AI research assistant that finds and summarizes scientific papers",
-    categories: ["research", "science"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro"] },
-    features: ["scientific search", "paper summarization", "citation extraction", "claim verification"],
-    website_url: "https://consensus.app"
+    name: &quot;Consensus&quot;,
+    slug: &quot;consensus&quot;,
+    description: &quot;AI research assistant that finds and summarizes scientific papers&quot;,
+    categories: [&quot;research&quot;, &quot;science&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;] },
+    features: [&quot;scientific search&quot;, &quot;paper summarization&quot;, &quot;citation extraction&quot;, &quot;claim verification&quot;],
+    website_url: &quot;https://consensus.app&quot;
   },
   {
-    name: "Synthesia",
-    slug: "synthesia",
-    description: "AI video generation platform for creating videos with AI avatars",
-    categories: ["video_ai", "marketing"],
-    pricing: { free: false, paid: true, plans: ["Starter", "Creator", "Enterprise"] },
-    features: ["AI avatars", "text-to-video", "multilingual", "custom avatars"],
-    website_url: "https://synthesia.io"
+    name: &quot;Synthesia&quot;,
+    slug: &quot;synthesia&quot;,
+    description: &quot;AI video generation platform for creating videos with AI avatars&quot;,
+    categories: [&quot;video_ai&quot;, &quot;marketing&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Starter&quot;, &quot;Creator&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;AI avatars&quot;, &quot;text-to-video&quot;, &quot;multilingual&quot;, &quot;custom avatars&quot;],
+    website_url: &quot;https://synthesia.io&quot;
   },
   {
-    name: "Copy.ai",
-    slug: "copy-ai",
-    description: "AI writing assistant for marketing copy and content creation",
-    categories: ["text_generation", "marketing"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro", "Team", "Enterprise"] },
-    features: ["content templates", "brand voice", "long-form assistant", "SEO optimization"],
-    website_url: "https://copy.ai"
+    name: &quot;Copy.ai&quot;,
+    slug: &quot;copy-ai&quot;,
+    description: &quot;AI writing assistant for marketing copy and content creation&quot;,
+    categories: [&quot;text_generation&quot;, &quot;marketing&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;, &quot;Team&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;content templates&quot;, &quot;brand voice&quot;, &quot;long-form assistant&quot;, &quot;SEO optimization&quot;],
+    website_url: &quot;https://copy.ai&quot;
   },
   {
-    name: "Writer",
-    slug: "writer",
-    description: "AI writing platform for teams with brand consistency and compliance",
-    categories: ["text_generation", "business"],
-    pricing: { free: false, paid: true, plans: ["Business", "Enterprise"] },
-    features: ["brand controls", "compliance", "analytics", "collaboration"],
-    website_url: "https://writer.com"
+    name: &quot;Writer&quot;,
+    slug: &quot;writer&quot;,
+    description: &quot;AI writing platform for teams with brand consistency and compliance&quot;,
+    categories: [&quot;text_generation&quot;, &quot;business&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Business&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;brand controls&quot;, &quot;compliance&quot;, &quot;analytics&quot;, &quot;collaboration&quot;],
+    website_url: &quot;https://writer.com&quot;
   },
   {
-    name: "Stable Diffusion",
-    slug: "stable-diffusion",
-    description: "Open-source AI image generation model",
-    categories: ["image_generation", "open_source"],
+    name: &quot;Stable Diffusion&quot;,
+    slug: &quot;stable-diffusion&quot;,
+    description: &quot;Open-source AI image generation model&quot;,
+    categories: [&quot;image_generation&quot;, &quot;open_source&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["open source", "customization", "high resolution", "community models"],
-    website_url: "https://stability.ai"
+    features: [&quot;open source&quot;, &quot;customization&quot;, &quot;high resolution&quot;, &quot;community models&quot;],
+    website_url: &quot;https://stability.ai&quot;
   },
   {
-    name: "Leonardo AI",
-    slug: "leonardo-ai",
-    description: "AI art generator with community features and model training",
-    categories: ["image_generation", "art"],
-    pricing: { free: true, paid: true, plans: ["Free", "Standard", "Pro", "Ultimate"] },
-    features: ["AI canvas", "model training", "community", "high resolution"],
-    website_url: "https://leonardo.ai"
+    name: &quot;Leonardo AI&quot;,
+    slug: &quot;leonardo-ai&quot;,
+    description: &quot;AI art generator with community features and model training&quot;,
+    categories: [&quot;image_generation&quot;, &quot;art&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Standard&quot;, &quot;Pro&quot;, &quot;Ultimate&quot;] },
+    features: [&quot;AI canvas&quot;, &quot;model training&quot;, &quot;community&quot;, &quot;high resolution&quot;],
+    website_url: &quot;https://leonardo.ai&quot;
   },
   {
-    name: "Pika Labs",
-    slug: "pika-labs",
-    description: "AI video generation platform for creating animated content",
-    categories: ["video_ai", "animation"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro"] },
-    features: ["text-to-video", "animation", "style transfer", "motion control"],
-    website_url: "https://pika.art"
+    name: &quot;Pika Labs&quot;,
+    slug: &quot;pika-labs&quot;,
+    description: &quot;AI video generation platform for creating animated content&quot;,
+    categories: [&quot;video_ai&quot;, &quot;animation&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;] },
+    features: [&quot;text-to-video&quot;, &quot;animation&quot;, &quot;style transfer&quot;, &quot;motion control&quot;],
+    website_url: &quot;https://pika.art&quot;
   },
   {
-    name: "HeyGen",
-    slug: "heygen",
-    description: "AI video platform for creating videos with AI avatars",
-    categories: ["video_ai", "marketing"],
-    pricing: { free: true, paid: true, plans: ["Free", "Starter", "Pro", "Enterprise"] },
-    features: ["AI avatars", "text-to-video", "multilingual", "video templates"],
-    website_url: "https://heygen.com"
+    name: &quot;HeyGen&quot;,
+    slug: &quot;heygen&quot;,
+    description: &quot;AI video platform for creating videos with AI avatars&quot;,
+    categories: [&quot;video_ai&quot;, &quot;marketing&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Starter&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;AI avatars&quot;, &quot;text-to-video&quot;, &quot;multilingual&quot;, &quot;video templates&quot;],
+    website_url: &quot;https://heygen.com&quot;
   },
   {
-    name: "Murf AI",
-    slug: "murf-ai",
-    description: "AI voice generator and text-to-speech platform",
-    categories: ["audio_ai", "voice"],
-    pricing: { free: true, paid: true, plans: ["Free", "Basic", "Pro", "Enterprise"] },
-    features: ["voice cloning", "multilingual", "audio editing", "studio quality"],
-    website_url: "https://murf.ai"
+    name: &quot;Murf AI&quot;,
+    slug: &quot;murf-ai&quot;,
+    description: &quot;AI voice generator and text-to-speech platform&quot;,
+    categories: [&quot;audio_ai&quot;, &quot;voice&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Basic&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;voice cloning&quot;, &quot;multilingual&quot;, &quot;audio editing&quot;, &quot;studio quality&quot;],
+    website_url: &quot;https://murf.ai&quot;
   },
   {
-    name: "Adobe Podcast",
-    slug: "adobe-podcast",
-    description: "AI-powered audio recording and editing tool for podcasters",
-    categories: ["audio_ai", "podcasting"],
-    pricing: { free: true, paid: true, plans: ["Free", "Premium"] },
-    features: ["noise reduction", "auto editing", "voice enhancement", "transcription"],
-    website_url: "https://podcast.adobe.com"
+    name: &quot;Adobe Podcast&quot;,
+    slug: &quot;adobe-podcast&quot;,
+    description: &quot;AI-powered audio recording and editing tool for podcasters&quot;,
+    categories: [&quot;audio_ai&quot;, &quot;podcasting&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Premium&quot;] },
+    features: [&quot;noise reduction&quot;, &quot;auto editing&quot;, &quot;voice enhancement&quot;, &quot;transcription&quot;],
+    website_url: &quot;https://podcast.adobe.com&quot;
   },
   {
-    name: "Replit Ghostwriter",
-    slug: "replit-ghostwriter",
-    description: "AI pair programmer integrated into the Replit coding platform",
-    categories: ["code_ai", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Core", "Teams", "Enterprise"] },
-    features: ["code suggestions", "autocomplete", "debugging", "explanation"],
-    website_url: "https://replit.com/site/ghostwriter"
+    name: &quot;Replit Ghostwriter&quot;,
+    slug: &quot;replit-ghostwriter&quot;,
+    description: &quot;AI pair programmer integrated into the Replit coding platform&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Core&quot;, &quot;Teams&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;code suggestions&quot;, &quot;autocomplete&quot;, &quot;debugging&quot;, &quot;explanation&quot;],
+    website_url: &quot;https://replit.com/site/ghostwriter&quot;
   },
   {
-    name: "Tabnine",
-    slug: "tabnine",
-    description: "AI code assistant that predicts and completes code in real-time",
-    categories: ["code_ai", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro", "Team", "Enterprise"] },
-    features: ["code completion", "autocomplete", "multi-language", "privacy focused"],
-    website_url: "https://tabnine.com"
+    name: &quot;Tabnine&quot;,
+    slug: &quot;tabnine&quot;,
+    description: &quot;AI code assistant that predicts and completes code in real-time&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;, &quot;Team&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;code completion&quot;, &quot;autocomplete&quot;, &quot;multi-language&quot;, &quot;privacy focused&quot;],
+    website_url: &quot;https://tabnine.com&quot;
   },
   {
-    name: "Codeium",
-    slug: "codeium",
-    description: "Free AI code acceleration toolkit for developers",
-    categories: ["code_ai", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro", "Enterprise"] },
-    features: ["code completion", "chat interface", "autocomplete", "multi-language"],
-    website_url: "https://codeium.com"
+    name: &quot;Codeium&quot;,
+    slug: &quot;codeium&quot;,
+    description: &quot;Free AI code acceleration toolkit for developers&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;code completion&quot;, &quot;chat interface&quot;, &quot;autocomplete&quot;, &quot;multi-language&quot;],
+    website_url: &quot;https://codeium.com&quot;
   },
   {
-    name: "Grammarly",
-    slug: "grammarly",
-    description: "AI-powered writing assistant that improves grammar and clarity",
-    categories: ["productivity", "writing"],
-    pricing: { free: true, paid: true, plans: ["Free", "Premium", "Business", "Enterprise"] },
-    features: ["grammar checking", "tone adjustment", "plagiarism checker", "vocabulary enhancement"],
-    website_url: "https://grammarly.com"
+    name: &quot;Grammarly&quot;,
+    slug: &quot;grammarly&quot;,
+    description: &quot;AI-powered writing assistant that improves grammar and clarity&quot;,
+    categories: [&quot;productivity&quot;, &quot;writing&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Premium&quot;, &quot;Business&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;grammar checking&quot;, &quot;tone adjustment&quot;, &quot;plagiarism checker&quot;, &quot;vocabulary enhancement&quot;],
+    website_url: &quot;https://grammarly.com&quot;
   },
   {
-    name: "QuillBot",
-    slug: "quillbot",
-    description: "AI-powered paraphrasing tool and writing assistant",
-    categories: ["productivity", "writing"],
-    pricing: { free: true, paid: true, plans: ["Free", "Premium", "Team", "Business"] },
-    features: ["paraphrasing", "grammar checker", "summarizer", "coherence checker"],
-    website_url: "https://quillbot.com"
+    name: &quot;QuillBot&quot;,
+    slug: &quot;quillbot&quot;,
+    description: &quot;AI-powered paraphrasing tool and writing assistant&quot;,
+    categories: [&quot;productivity&quot;, &quot;writing&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Premium&quot;, &quot;Team&quot;, &quot;Business&quot;] },
+    features: [&quot;paraphrasing&quot;, &quot;grammar checker&quot;, &quot;summarizer&quot;, &quot;coherence checker&quot;],
+    website_url: &quot;https://quillbot.com&quot;
   },
   {
-    name: "Otter.ai",
-    slug: "otter-ai",
-    description: "AI-powered meeting transcription and note-taking assistant",
-    categories: ["productivity", "transcription"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro", "Business", "Enterprise"] },
-    features: ["live transcription", "speaker identification", "searchable transcripts", "integration"],
-    website_url: "https://otter.ai"
+    name: &quot;Otter.ai&quot;,
+    slug: &quot;otter-ai&quot;,
+    description: &quot;AI-powered meeting transcription and note-taking assistant&quot;,
+    categories: [&quot;productivity&quot;, &quot;transcription&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;, &quot;Business&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;live transcription&quot;, &quot;speaker identification&quot;, &quot;searchable transcripts&quot;, &quot;integration&quot;],
+    website_url: &quot;https://otter.ai&quot;
   },
   {
-    name: "Elicit",
-    slug: "elicit",
-    description: "AI research assistant that helps find and synthesize academic papers",
-    categories: ["research", "productivity"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro"] },
-    features: ["literature review", "paper search", "claim extraction", "synthesis"],
-    website_url: "https://elicit.org"
+    name: &quot;Elicit&quot;,
+    slug: &quot;elicit&quot;,
+    description: &quot;AI research assistant that helps find and synthesize academic papers&quot;,
+    categories: [&quot;research&quot;, &quot;productivity&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;] },
+    features: [&quot;literature review&quot;, &quot;paper search&quot;, &quot;claim extraction&quot;, &quot;synthesis&quot;],
+    website_url: &quot;https://elicit.org&quot;
   },
   {
-    name: "Scite",
-    slug: "scite",
-    description: "AI-powered platform for discovering and evaluating scientific research",
-    categories: ["research", "science"],
-    pricing: { free: true, paid: true, plans: ["Free", "Premium", "Institution"] },
-    features: ["smart citations", "claim verification", "literature search", "research assistant"],
-    website_url: "https://scite.ai"
+    name: &quot;Scite&quot;,
+    slug: &quot;scite&quot;,
+    description: &quot;AI-powered platform for discovering and evaluating scientific research&quot;,
+    categories: [&quot;research&quot;, &quot;science&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Premium&quot;, &quot;Institution&quot;] },
+    features: [&quot;smart citations&quot;, &quot;claim verification&quot;, &quot;literature search&quot;, &quot;research assistant&quot;],
+    website_url: &quot;https://scite.ai&quot;
   },
   {
-    name: "ChatPDF",
-    slug: "chatpdf",
-    description: "AI assistant that can read and discuss PDF documents",
-    categories: ["research", "productivity"],
-    pricing: { free: true, paid: true, plans: ["Free", "Plus"] },
-    features: ["document chat", "summarization", "multilingual", "OCR"],
-    website_url: "https://chatpdf.com"
+    name: &quot;ChatPDF&quot;,
+    slug: &quot;chatpdf&quot;,
+    description: &quot;AI assistant that can read and discuss PDF documents&quot;,
+    categories: [&quot;research&quot;, &quot;productivity&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Plus&quot;] },
+    features: [&quot;document chat&quot;, &quot;summarization&quot;, &quot;multilingual&quot;, &quot;OCR&quot;],
+    website_url: &quot;https://chatpdf.com&quot;
   },
   {
-    name: "Jasper Business",
-    slug: "jasper-business",
-    description: "Enterprise version of Jasper AI for business teams",
-    categories: ["business", "marketing"],
-    pricing: { free: false, paid: true, plans: ["Business", "Enterprise"] },
-    features: ["team collaboration", "brand controls", "analytics", "custom workflows"],
-    website_url: "https://jasper.ai/business"
+    name: &quot;Jasper Business&quot;,
+    slug: &quot;jasper-business&quot;,
+    description: &quot;Enterprise version of Jasper AI for business teams&quot;,
+    categories: [&quot;business&quot;, &quot;marketing&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Business&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;team collaboration&quot;, &quot;brand controls&quot;, &quot;analytics&quot;, &quot;custom workflows&quot;],
+    website_url: &quot;https://jasper.ai/business&quot;
   },
   {
-    name: "Copy.ai Enterprise",
-    slug: "copy-ai-enterprise",
-    description: "Enterprise AI writing platform for large organizations",
-    categories: ["business", "marketing"],
-    pricing: { free: false, paid: true, plans: ["Enterprise"] },
-    features: ["SSO", "brand management", "analytics", "dedicated support"],
-    website_url: "https://copy.ai/enterprise"
+    name: &quot;Copy.ai Enterprise&quot;,
+    slug: &quot;copy-ai-enterprise&quot;,
+    description: &quot;Enterprise AI writing platform for large organizations&quot;,
+    categories: [&quot;business&quot;, &quot;marketing&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Enterprise&quot;] },
+    features: [&quot;SSO&quot;, &quot;brand management&quot;, &quot;analytics&quot;, &quot;dedicated support&quot;],
+    website_url: &quot;https://copy.ai/enterprise&quot;
   },
   {
-    name: "Writer for Teams",
-    slug: "writer-for-teams",
-    description: "Collaborative AI writing platform for teams",
-    categories: ["business", "productivity"],
-    pricing: { free: false, paid: true, plans: ["Business", "Enterprise"] },
-    features: ["team collaboration", "brand controls", "analytics", "compliance"],
-    website_url: "https://writer.com/teams"
+    name: &quot;Writer for Teams&quot;,
+    slug: &quot;writer-for-teams&quot;,
+    description: &quot;Collaborative AI writing platform for teams&quot;,
+    categories: [&quot;business&quot;, &quot;productivity&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Business&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;team collaboration&quot;, &quot;brand controls&quot;, &quot;analytics&quot;, &quot;compliance&quot;],
+    website_url: &quot;https://writer.com/teams&quot;
   },
   {
-    name: "Hugging Face",
-    slug: "hugging-face",
-    description: "Platform for building, training, and deploying machine learning models",
-    categories: ["code_ai", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro", "Enterprise"] },
-    features: ["model hub", "datasets", "training", "deployment"],
-    website_url: "https://huggingface.co"
+    name: &quot;Hugging Face&quot;,
+    slug: &quot;hugging-face&quot;,
+    description: &quot;Platform for building, training, and deploying machine learning models&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;model hub&quot;, &quot;datasets&quot;, &quot;training&quot;, &quot;deployment&quot;],
+    website_url: &quot;https://huggingface.co&quot;
   },
   {
-    name: "Cohere",
-    slug: "cohere",
-    description: "AI platform for building conversational AI and language understanding",
-    categories: ["text_generation", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Pro", "Enterprise"] },
-    features: ["language understanding", "conversational AI", "embedding", "classification"],
-    website_url: "https://cohere.ai"
+    name: &quot;Cohere&quot;,
+    slug: &quot;cohere&quot;,
+    description: &quot;AI platform for building conversational AI and language understanding&quot;,
+    categories: [&quot;text_generation&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;language understanding&quot;, &quot;conversational AI&quot;, &quot;embedding&quot;, &quot;classification&quot;],
+    website_url: &quot;https://cohere.ai&quot;
   },
   {
-    name: "Anthropic Claude",
-    slug: "anthropic-claude",
-    description: "AI assistant with strong safety and alignment features",
-    categories: ["text_generation", "productivity"],
-    pricing: { free: true, paid: true, plans: ["Claude Pro", "Claude for Teams"] },
-    features: ["conversational", "document analysis", "fact-based responses", "safe responses"],
-    website_url: "https://anthropic.com"
+    name: &quot;Anthropic Claude&quot;,
+    slug: &quot;anthropic-claude&quot;,
+    description: &quot;AI assistant with strong safety and alignment features&quot;,
+    categories: [&quot;text_generation&quot;, &quot;productivity&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Claude Pro&quot;, &quot;Claude for Teams&quot;] },
+    features: [&quot;conversational&quot;, &quot;document analysis&quot;, &quot;fact-based responses&quot;, &quot;safe responses&quot;],
+    website_url: &quot;https://anthropic.com&quot;
   },
   {
-    name: "Google AI",
-    slug: "google-ai",
-    description: "Suite of AI tools and APIs from Google",
-    categories: ["text_generation", "image_generation", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Standard", "Enterprise"] },
-    features: ["text generation", "image generation", "translation", "vision"],
-    website_url: "https://ai.google"
+    name: &quot;Google AI&quot;,
+    slug: &quot;google-ai&quot;,
+    description: &quot;Suite of AI tools and APIs from Google&quot;,
+    categories: [&quot;text_generation&quot;, &quot;image_generation&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Standard&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;text generation&quot;, &quot;image generation&quot;, &quot;translation&quot;, &quot;vision&quot;],
+    website_url: &quot;https://ai.google&quot;
   },
   {
-    name: "Microsoft Azure AI",
-    slug: "azure-ai",
-    description: "Cloud-based AI services and cognitive APIs from Microsoft",
-    categories: ["text_generation", "image_generation", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Standard", "Enterprise"] },
-    features: ["cognitive services", "machine learning", "bot service", "speech"],
-    website_url: "https://azure.microsoft.com/ai"
+    name: &quot;Microsoft Azure AI&quot;,
+    slug: &quot;azure-ai&quot;,
+    description: &quot;Cloud-based AI services and cognitive APIs from Microsoft&quot;,
+    categories: [&quot;text_generation&quot;, &quot;image_generation&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Standard&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;cognitive services&quot;, &quot;machine learning&quot;, &quot;bot service&quot;, &quot;speech&quot;],
+    website_url: &quot;https://azure.microsoft.com/ai&quot;
   },
   {
-    name: "Amazon AI",
-    slug: "amazon-ai",
-    description: "AI services and tools from Amazon Web Services",
-    categories: ["text_generation", "image_generation", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Standard", "Enterprise"] },
-    features: ["machine learning", "computer vision", "natural language", "forecasting"],
-    website_url: "https://aws.amazon.com/ai"
+    name: &quot;Amazon AI&quot;,
+    slug: &quot;amazon-ai&quot;,
+    description: &quot;AI services and tools from Amazon Web Services&quot;,
+    categories: [&quot;text_generation&quot;, &quot;image_generation&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Standard&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;machine learning&quot;, &quot;computer vision&quot;, &quot;natural language&quot;, &quot;forecasting&quot;],
+    website_url: &quot;https://aws.amazon.com/ai&quot;
   },
   {
-    name: "IBM Watson",
-    slug: "ibm-watson",
-    description: "AI platform for building and deploying AI solutions",
-    categories: ["text_generation", "image_generation", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Standard", "Enterprise"] },
-    features: ["natural language understanding", "speech to text", "visual recognition", "assistant"],
-    website_url: "https://watson.ibm.com"
+    name: &quot;IBM Watson&quot;,
+    slug: &quot;ibm-watson&quot;,
+    description: &quot;AI platform for building and deploying AI solutions&quot;,
+    categories: [&quot;text_generation&quot;, &quot;image_generation&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Standard&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;natural language understanding&quot;, &quot;speech to text&quot;, &quot;visual recognition&quot;, &quot;assistant&quot;],
+    website_url: &quot;https://watson.ibm.com&quot;
   },
   {
-    name: "Salesforce Einstein",
-    slug: "salesforce-einstein",
-    description: "AI-powered CRM and business analytics platform",
-    categories: ["business", "productivity"],
-    pricing: { free: false, paid: true, plans: ["Professional", "Enterprise", "Unlimited"] },
-    features: ["predictive analytics", "automated insights", "lead scoring", "forecasting"],
-    website_url: "https://einstein.ai"
+    name: &quot;Salesforce Einstein&quot;,
+    slug: &quot;salesforce-einstein&quot;,
+    description: &quot;AI-powered CRM and business analytics platform&quot;,
+    categories: [&quot;business&quot;, &quot;productivity&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Professional&quot;, &quot;Enterprise&quot;, &quot;Unlimited&quot;] },
+    features: [&quot;predictive analytics&quot;, &quot;automated insights&quot;, &quot;lead scoring&quot;, &quot;forecasting&quot;],
+    website_url: &quot;https://einstein.ai&quot;
   },
   {
-    name: "SAP AI",
-    slug: "sap-ai",
-    description: "AI and machine learning capabilities integrated into SAP applications",
-    categories: ["business", "productivity"],
-    pricing: { free: false, paid: true, plans: ["Standard", "Enterprise"] },
-    features: ["predictive analytics", "process automation", "intelligent insights", "chatbot"],
-    website_url: "https://sap.com/ai"
+    name: &quot;SAP AI&quot;,
+    slug: &quot;sap-ai&quot;,
+    description: &quot;AI and machine learning capabilities integrated into SAP applications&quot;,
+    categories: [&quot;business&quot;, &quot;productivity&quot;],
+    pricing: { free: false, paid: true, plans: [&quot;Standard&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;predictive analytics&quot;, &quot;process automation&quot;, &quot;intelligent insights&quot;, &quot;chatbot&quot;],
+    website_url: &quot;https://sap.com/ai&quot;
   },
   {
-    name: "Oracle AI",
-    slug: "oracle-ai",
-    description: "AI and machine learning services from Oracle",
-    categories: ["business", "development"],
-    pricing: { free: true, paid: true, plans: ["Free", "Standard", "Enterprise"] },
-    features: ["autonomous database", "analytics", "machine learning", "chatbot"],
-    website_url: "https://oracle.com/ai"
+    name: &quot;Oracle AI&quot;,
+    slug: &quot;oracle-ai&quot;,
+    description: &quot;AI and machine learning services from Oracle&quot;,
+    categories: [&quot;business&quot;, &quot;development&quot;],
+    pricing: { free: true, paid: true, plans: [&quot;Free&quot;, &quot;Standard&quot;, &quot;Enterprise&quot;] },
+    features: [&quot;autonomous database&quot;, &quot;analytics&quot;, &quot;machine learning&quot;, &quot;chatbot&quot;],
+    website_url: &quot;https://oracle.com/ai&quot;
   },
   {
-    name: "Transformers",
-    slug: "transformers",
-    description: "State-of-the-art machine learning library for natural language processing",
-    categories: ["code_ai", "development"],
+    name: &quot;Transformers&quot;,
+    slug: &quot;transformers&quot;,
+    description: &quot;State-of-the-art machine learning library for natural language processing&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["pre-trained models", "tokenization", "pipelines", "model hub"],
-    website_url: "https://huggingface.co/transformers"
+    features: [&quot;pre-trained models&quot;, &quot;tokenization&quot;, &quot;pipelines&quot;, &quot;model hub&quot;],
+    website_url: &quot;https://huggingface.co/transformers&quot;
   },
   {
-    name: "PyTorch",
-    slug: "pytorch",
-    description: "Open-source machine learning framework for deep learning",
-    categories: ["code_ai", "development"],
+    name: &quot;PyTorch&quot;,
+    slug: &quot;pytorch&quot;,
+    description: &quot;Open-source machine learning framework for deep learning&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["tensor computation", "deep neural networks", "GPU acceleration", "dynamic computation"],
-    website_url: "https://pytorch.org"
+    features: [&quot;tensor computation&quot;, &quot;deep neural networks&quot;, &quot;GPU acceleration&quot;, &quot;dynamic computation&quot;],
+    website_url: &quot;https://pytorch.org&quot;
   },
   {
-    name: "TensorFlow",
-    slug: "tensorflow",
-    description: "Open-source platform for machine learning and deep learning",
-    categories: ["code_ai", "development"],
+    name: &quot;TensorFlow&quot;,
+    slug: &quot;tensorflow&quot;,
+    description: &quot;Open-source platform for machine learning and deep learning&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["neural networks", "data preprocessing", "model deployment", "visualization"],
-    website_url: "https://tensorflow.org"
+    features: [&quot;neural networks&quot;, &quot;data preprocessing&quot;, &quot;model deployment&quot;, &quot;visualization&quot;],
+    website_url: &quot;https://tensorflow.org&quot;
   },
   {
-    name: "Keras",
-    slug: "keras",
-    description: "High-level neural networks API for building deep learning models",
-    categories: ["code_ai", "development"],
+    name: &quot;Keras&quot;,
+    slug: &quot;keras&quot;,
+    description: &quot;High-level neural networks API for building deep learning models&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["user-friendly", "modular", "extensible", "runs on TensorFlow"],
-    website_url: "https://keras.io"
+    features: [&quot;user-friendly&quot;, &quot;modular&quot;, &quot;extensible&quot;, &quot;runs on TensorFlow&quot;],
+    website_url: &quot;https://keras.io&quot;
   },
   {
-    name: "Scikit-learn",
-    slug: "scikit-learn",
-    description: "Simple and efficient tools for data mining and data analysis",
-    categories: ["code_ai", "development"],
+    name: &quot;Scikit-learn&quot;,
+    slug: &quot;scikit-learn&quot;,
+    description: &quot;Simple and efficient tools for data mining and data analysis&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["machine learning", "data analysis", "model selection", "preprocessing"],
-    website_url: "https://scikit-learn.org"
+    features: [&quot;machine learning&quot;, &quot;data analysis&quot;, &quot;model selection&quot;, &quot;preprocessing&quot;],
+    website_url: &quot;https://scikit-learn.org&quot;
   },
   {
-    name: "Pandas",
-    slug: "pandas",
-    description: "Powerful data manipulation and analysis library for Python",
-    categories: ["code_ai", "development"],
+    name: &quot;Pandas&quot;,
+    slug: &quot;pandas&quot;,
+    description: &quot;Powerful data manipulation and analysis library for Python&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["data structures", "data analysis", "data cleaning", "data transformation"],
-    website_url: "https://pandas.pydata.org"
+    features: [&quot;data structures&quot;, &quot;data analysis&quot;, &quot;data cleaning&quot;, &quot;data transformation&quot;],
+    website_url: &quot;https://pandas.pydata.org&quot;
   },
   {
-    name: "NumPy",
-    slug: "numpy",
-    description: "Fundamental package for scientific computing with Python",
-    categories: ["code_ai", "development"],
+    name: &quot;NumPy&quot;,
+    slug: &quot;numpy&quot;,
+    description: &quot;Fundamental package for scientific computing with Python&quot;,
+    categories: [&quot;code_ai&quot;, &quot;development&quot;],
     pricing: { free: true, paid: false, plans: [] },
-    features: ["multidimensional arrays", "mathematical functions", "linear algebra", "random sampling"],
-    website_url: "https://numpy.org"
+    features: [&quot;multidimensional arrays&quot;, &quot;mathematical functions&quot;, &quot;linear algebra&quot;, &quot;random sampling&quot;],
+    website_url: &quot;https://numpy.org&quot;
   }
 ];
 
 // Generate additional tools to reach 200+ AI tools
 const generateAdditionalTools = () => {
   const additionalTools = [];
-  const prefixes = ["AI", "Smart", "NextGen", "Pro", "Ultra", "Advanced", "Enterprise", "Premium"];
-  const suffixes = ["Assistant", "Platform", "Studio", "Lab", "Engine", "Suite", "Hub", "Center"];
-  const features = ["text generation", "image creation", "voice synthesis", "code completion", "data analysis", "research", "marketing", "productivity"];
+  const prefixes = [&quot;AI&quot;, &quot;Smart&quot;, &quot;NextGen&quot;, &quot;Pro&quot;, &quot;Ultra&quot;, &quot;Advanced&quot;, &quot;Enterprise&quot;, &quot;Premium&quot;];
+  const suffixes = [&quot;Assistant&quot;, &quot;Platform&quot;, &quot;Studio&quot;, &quot;Lab&quot;, &quot;Engine&quot;, &quot;Suite&quot;, &quot;Hub&quot;, &quot;Center&quot;];
+  const features = [&quot;text generation&quot;, &quot;image creation&quot;, &quot;voice synthesis&quot;, &quot;code completion&quot;, &quot;data analysis&quot;, &quot;research&quot;, &quot;marketing&quot;, &quot;productivity&quot;];
   
   for (let i = 0; i < 150; i++) {
     const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
@@ -470,15 +470,15 @@ const generateAdditionalTools = () => {
       pricing: { 
         free: Math.random() > 0.5, 
         paid: true, 
-        plans: ["Basic", "Pro", "Enterprise"] 
+        plans: [&quot;Basic&quot;, &quot;Pro&quot;, &quot;Enterprise&quot;] 
       },
       features: [
-        "AI-powered",
-        "cloud-based",
-        "real-time processing",
-        "API access",
-        "mobile app",
-        "chrome extension"
+        &quot;AI-powered&quot;,
+        &quot;cloud-based&quot;,
+        &quot;real-time processing&quot;,
+        &quot;API access&quot;,
+        &quot;mobile app&quot;,
+        &quot;chrome extension&quot;
       ],
       website_url: `https://${prefix.toLowerCase()}${suffix.toLowerCase()}${i + 1}.com`
     };
@@ -503,8 +503,8 @@ const aiToolsData = allTools.map((tool, index) => {
     pricing: JSON.stringify(tool.pricing),
     features: tool.features,
     categories: tool.categories,
-    launch_date: new Date(Date.now() - Math.floor(Math.random() * 365 * 24 * 60 * 60 * 1000)).toISOString().split('T')[0],
-    last_updated: new Date().toISOString().split('T')[0],
+    launch_date: new Date(Date.now() - Math.floor(Math.random() * 365 * 24 * 60 * 60 * 1000)).toISOString().split(&apos;T&apos;)[0],
+    last_updated: new Date().toISOString().split(&apos;T&apos;)[0],
     is_active: true
   };
 });
@@ -545,47 +545,47 @@ CREATE TABLE IF NOT EXISTS ai_updates (
 // Sample AI updates data
 const aiUpdates = [
   {
-    type: "product_launch",
-    title: "Claude 3.5 Sonnet Released",
-    summary: "Anthropic's latest model beats GPT-4 on several benchmarks",
-    date: "2024-01-20",
-    source: "Official Announcement",
-    tools_mentioned: ["Claude", "ChatGPT"]
+    type: &quot;product_launch&quot;,
+    title: &quot;Claude 3.5 Sonnet Released&quot;,
+    summary: &quot;Anthropic&apos;s latest model beats GPT-4 on several benchmarks&quot;,
+    date: &quot;2024-01-20&quot;,
+    source: &quot;Official Announcement&quot;,
+    tools_mentioned: [&quot;Claude&quot;, &quot;ChatGPT&quot;]
   },
   {
-    type: "update",
-    title: "Midjourney v6.5 Alpha Access",
-    summary: "Major improvements in photorealism and prompt understanding",
-    date: "2024-01-19", 
-    source: "Discord Announcement",
-    tools_mentioned: ["Midjourney"]
+    type: &quot;update&quot;,
+    title: &quot;Midjourney v6.5 Alpha Access&quot;,
+    summary: &quot;Major improvements in photorealism and prompt understanding&quot;,
+    date: &quot;2024-01-19&quot;, 
+    source: &quot;Discord Announcement&quot;,
+    tools_mentioned: [&quot;Midjourney&quot;]
   },
   {
-    type: "tutorial",
-    title: "Building AI Agents with LangGraph",
-    summary: "Step-by-step guide to creating autonomous AI workflows",
-    date: "2024-01-18",
-    author: "AI Engineering Team",
-    tools_mentioned: ["LangGraph", "OpenAI", "Anthropic"]
+    type: &quot;tutorial&quot;,
+    title: &quot;Building AI Agents with LangGraph&quot;,
+    summary: &quot;Step-by-step guide to creating autonomous AI workflows&quot;,
+    date: &quot;2024-01-18&quot;,
+    author: &quot;AI Engineering Team&quot;,
+    tools_mentioned: [&quot;LangGraph&quot;, &quot;OpenAI&quot;, &quot;Anthropic&quot;]
   }
 ];
 
-console.log("AI Tools Database Population Script");
+console.log(&quot;AI Tools Database Population Script&quot;);
 console.log(`Total tools to be added: ${aiToolsData.length}`);
-console.log("Sample tool:", aiToolsData[0]);
-console.log("\nSQL Schema for AI Tools:");
+console.log(&quot;Sample tool:&quot;, aiToolsData[0]);
+console.log(&quot;\nSQL Schema for AI Tools:&quot;);
 console.log(sqlSchema);
-console.log("\nSQL Schema for AI Updates:");
+console.log(&quot;\nSQL Schema for AI Updates:&quot;);
 console.log(aiUpdatesSchema);
-console.log("\nSample AI Updates:");
+console.log(&quot;\nSample AI Updates:&quot;);
 console.log(aiUpdates);
 
 // Write to a JSON file for import
-const outputPath = path.join(__dirname, '..', 'data', 'ai-tools-database.json');
+const outputPath = path.join(__dirname, &apos;..&apos;, &apos;data&apos;, &apos;ai-tools-database.json&apos;);
 fs.writeFileSync(outputPath, JSON.stringify(aiToolsData, null, 2));
 console.log(`\nAI tools data written to: ${outputPath}`);
 
 // Write SQL schema to a file
-const sqlPath = path.join(__dirname, '..', 'data', 'ai-tools-schema.sql');
+const sqlPath = path.join(__dirname, &apos;..&apos;, &apos;data&apos;, &apos;ai-tools-schema.sql&apos;);
 fs.writeFileSync(sqlPath, `${sqlSchema}\n${aiUpdatesSchema}`);
 console.log(`SQL schema written to: ${sqlPath}`);

@@ -4,30 +4,30 @@
 
 // Neuromorphic architectures
 export type NeuromorphicArchitecture = 
-  | 'spiking-neural-network'  // Spiking Neural Networks
-  | 'memristive'             // Memristive systems
-  | 'neuromorphic-chip'      // Dedicated neuromorphic chips
-  | 'bio-inspired'           // Bio-inspired computing
-  | 'custom';                // Custom neuromorphic architectures
+  | &apos;spiking-neural-network&apos;  // Spiking Neural Networks
+  | &apos;memristive&apos;             // Memristive systems
+  | &apos;neuromorphic-chip&apos;      // Dedicated neuromorphic chips
+  | &apos;bio-inspired&apos;           // Bio-inspired computing
+  | &apos;custom&apos;;                // Custom neuromorphic architectures
 
 // Neuromorphic processing modes
 export type ProcessingMode = 
-  | 'real-time'              // Real-time processing
-  | 'batch'                  // Batch processing
-  | 'event-driven'           // Event-driven processing
-  | 'asynchronous'           // Asynchronous processing
-  | 'hybrid';                // Hybrid processing modes
+  | &apos;real-time&apos;              // Real-time processing
+  | &apos;batch&apos;                  // Batch processing
+  | &apos;event-driven&apos;           // Event-driven processing
+  | &apos;asynchronous&apos;           // Asynchronous processing
+  | &apos;hybrid&apos;;                // Hybrid processing modes
 
 // Neuromorphic learning algorithms
 export type NeuromorphicLearning = 
-  | 'stdp'                   // Spike-timing-dependent plasticity
-  | 'rstdp'                  // Reward-modulated STDP
-  | 'bcm'                    // Bienenstock-Cooper-Munro rule
-  | 'oja'                    // Oja's rule
-  | 'hebbian'                // Hebbian learning
-  | 'reinforcement'          // Reinforcement learning
-  | 'unsupervised'           // Unsupervised learning
-  | 'custom';                // Custom learning algorithms
+  | &apos;stdp&apos;                   // Spike-timing-dependent plasticity
+  | &apos;rstdp&apos;                  // Reward-modulated STDP
+  | &apos;bcm&apos;                    // Bienenstock-Cooper-Munro rule
+  | &apos;oja&apos;                    // Oja&apos;s rule
+  | &apos;hebbian&apos;                // Hebbian learning
+  | &apos;reinforcement&apos;          // Reinforcement learning
+  | &apos;unsupervised&apos;           // Unsupervised learning
+  | &apos;custom&apos;;                // Custom learning algorithms
 
 // Neuromorphic search configuration
 export interface NeuromorphicConfig {
@@ -133,9 +133,9 @@ export class NeuromorphicSearchService {
     this.apiKey = apiKey;
     this.simulationMode = simulationMode;
     this.defaultConfig = {
-      architecture: 'spiking-neural-network',
-      processingMode: 'event-driven',
-      learningAlgorithm: 'stdp',
+      architecture: &apos;spiking-neural-network&apos;,
+      processingMode: &apos;event-driven&apos;,
+      learningAlgorithm: &apos;stdp&apos;,
       neurons: 1000,
       synapses: 5000,
       learningRate: 0.01,
@@ -303,7 +303,7 @@ export class NeuromorphicSearchService {
       ).length;
       
       const bScore = keywords.filter(k => 
-        (b.title + ' ' + b.content).toLowerCase().includes(k)
+        (b.title + &apos; &apos; + b.content).toLowerCase().includes(k)
       ).length;
       
       return bScore - aScore;
@@ -381,8 +381,8 @@ export class NeuromorphicSearchService {
    */
   private getInputSpikes(neuronId: string, time: number, request: NeuromorphicSearchRequest): number {
     // Simplified input spike generation based on query relevance
-    if (neuronId.startsWith('input_')) {
-      const inputIndex = parseInt(neuronId.split('_')[1]);
+    if (neuronId.startsWith(&apos;input_&apos;)) {
+      const inputIndex = parseInt(neuronId.split(&apos;_&apos;)[1]);
       if (inputIndex < request.dataset.length) {
         const item = request.dataset[inputIndex];
         const relevance = this.calculateRelevance(request.query, item);
@@ -423,7 +423,7 @@ export class NeuromorphicSearchService {
   private applyLearning(algorithm: NeuromorphicLearning, learningRate: number): void {
     this.synapses.forEach(synapse => {
       // Simplified STDP implementation
-      if (algorithm === 'stdp') {
+      if (algorithm === &apos;stdp&apos;) {
         const sourceNeuron = this.neurons.get(synapse.source);
         const targetNeuron = this.neurons.get(synapse.target);
         
@@ -580,13 +580,13 @@ export class NeuromorphicSearchService {
   } {
     return {
       supportedArchitectures: [
-        'spiking-neural-network', 'memristive', 'neuromorphic-chip', 'bio-inspired'
+        &apos;spiking-neural-network&apos;, &apos;memristive&apos;, &apos;neuromorphic-chip&apos;, &apos;bio-inspired&apos;
       ],
       supportedLearning: [
-        'stdp', 'rstdp', 'bcm', 'oja', 'hebbian', 'reinforcement', 'unsupervised'
+        &apos;stdp&apos;, &apos;rstdp&apos;, &apos;bcm&apos;, &apos;oja&apos;, &apos;hebbian&apos;, &apos;reinforcement&apos;, &apos;unsupervised&apos;
       ],
       processingModes: [
-        'real-time', 'batch', 'event-driven', 'asynchronous', 'hybrid'
+        &apos;real-time&apos;, &apos;batch&apos;, &apos;event-driven&apos;, &apos;asynchronous&apos;, &apos;hybrid&apos;
       ],
       maxNeurons: this.simulationMode ? 10000 : 1000000,
       defaultConfig: this.defaultConfig
@@ -619,7 +619,7 @@ export class NeuromorphicSearchService {
     simulationMode: boolean;
   } {
     // In a real implementation, this would track actual usage
-    // For simulation, we'll generate plausible statistics
+    // For simulation, we&apos;ll generate plausible statistics
     return {
       totalSearches: Math.floor(Math.random() * 5000),
       averageNeuromorphicAdvantage: 3.0 + Math.random() * 2.0, // 3.0-5.0x

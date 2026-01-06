@@ -7,73 +7,73 @@ const AiManufacturingRevolution2025 = () => {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50&quot;>
       <Head>
         <title>AI in Manufacturing: The Smart Factory Revolution - AI Vault</title>
-        <meta name="description" content="Discover how AI is transforming manufacturing in 2025. Explore predictive maintenance, quality control, smart factories, and the future of industrial automation with AI." />
-        <meta name="keywords" content="AI in manufacturing, smart factory 2025, Industry 4.0, predictive maintenance, industrial automation, digital twin, manufacturing AI" />
-        <meta name="author" content="AI Vault Industrial Team" />
-        <link rel="canonical" href="https://aivault.com/blog/ai-manufacturing-revolution-2025" />
+        <meta name="description&quot; content="Discover how AI is transforming manufacturing in 2025. Explore predictive maintenance, quality control, smart factories, and the future of industrial automation with AI.&quot; />
+        <meta name="keywords&quot; content="AI in manufacturing, smart factory 2025, Industry 4.0, predictive maintenance, industrial automation, digital twin, manufacturing AI&quot; />
+        <meta name="author&quot; content="AI Vault Industrial Team&quot; />
+        <link rel="canonical&quot; href="https://aivault.com/blog/ai-manufacturing-revolution-2025&quot; />
         
         {/* Open Graph */}
-        <meta property="og:title" content="AI in Manufacturing: The Smart Factory Revolution" />
-        <meta property="og:description" content="Discover how AI is transforming manufacturing with smart factories, predictive maintenance, and advanced automation in 2025." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://aivault.com/blog/ai-manufacturing-revolution-2025" />
-        <meta property="og:image" content="https://aivault.com/images/blog/ai-manufacturing-revolution-2025.jpg" />
-        <meta property="og:site_name" content="AI Vault" />
-        <meta property="article:published_time" content="2025-04-21" />
-        <meta property="article:modified_time" content="2025-04-21" />
-        <meta property="article:author" content="AI Vault Industrial Team" />
-        <meta property="article:tag" content="Manufacturing" />
-        <meta property="article:section" content="Technology" />
+        <meta property="og:title&quot; content="AI in Manufacturing: The Smart Factory Revolution&quot; />
+        <meta property="og:description&quot; content="Discover how AI is transforming manufacturing with smart factories, predictive maintenance, and advanced automation in 2025.&quot; />
+        <meta property="og:type&quot; content="article&quot; />
+        <meta property="og:url&quot; content="https://aivault.com/blog/ai-manufacturing-revolution-2025&quot; />
+        <meta property="og:image&quot; content="https://aivault.com/images/blog/ai-manufacturing-revolution-2025.jpg&quot; />
+        <meta property="og:site_name&quot; content="AI Vault&quot; />
+        <meta property="article:published_time&quot; content="2025-04-21&quot; />
+        <meta property="article:modified_time&quot; content="2025-04-21&quot; />
+        <meta property="article:author&quot; content="AI Vault Industrial Team&quot; />
+        <meta property="article:tag&quot; content="Manufacturing&quot; />
+        <meta property="article:section&quot; content="Technology&quot; />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI in Manufacturing 2025" />
-        <meta name="twitter:description" content="How AI is driving the smart factory revolution and transforming industrial manufacturing." />
-        <meta name="twitter:image" content="https://aivault.com/images/blog/ai-manufacturing-revolution-2025.jpg" />
-        <meta name="twitter:site" content="@aivault" />
+        <meta name="twitter:card&quot; content="summary_large_image&quot; />
+        <meta name="twitter:title&quot; content="AI in Manufacturing 2025&quot; />
+        <meta name="twitter:description&quot; content="How AI is driving the smart factory revolution and transforming industrial manufacturing.&quot; />
+        <meta name="twitter:image&quot; content="https://aivault.com/images/blog/ai-manufacturing-revolution-2025.jpg&quot; />
+        <meta name="twitter:site&quot; content="@aivault&quot; />
         
         {/* Structured Data - Article */}
-        <script type="application/ld+json">
+        <script type="application/ld+json&quot;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "AI in Manufacturing: The Smart Factory Revolution",
-            "description": "Discover how AI is transforming manufacturing with smart factories, predictive maintenance, and advanced automation in 2025.",
-            "author": {
-              "@type": "Organization",
-              "name": "AI Vault Industrial Team"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;Article&quot;,
+            &quot;headline&quot;: &quot;AI in Manufacturing: The Smart Factory Revolution&quot;,
+            &quot;description&quot;: &quot;Discover how AI is transforming manufacturing with smart factories, predictive maintenance, and advanced automation in 2025.&quot;,
+            &quot;author&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;AI Vault Industrial Team&quot;
             },
-            "datePublished": "2025-04-21",
-            "image": "https://aivault.com/images/blog/ai-manufacturing-revolution-2025.jpg"
+            &quot;datePublished&quot;: &quot;2025-04-21&quot;,
+            &quot;image&quot;: &quot;https://aivault.com/images/blog/ai-manufacturing-revolution-2025.jpg&quot;
           })}
         </script>
       </Head>
 
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-gray-900">AI in Manufacturing 2025</h1>
-            <Link href="/blog" className="text-blue-600 hover:text-blue-800">
+      <header className="bg-white shadow-sm&quot;>
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;>
+          <div className="flex justify-between items-center&quot;>
+            <h1 className="text-3xl font-bold text-gray-900&quot;>AI in Manufacturing 2025</h1>
+            <Link href="/blog&quot; className="text-blue-600 hover:text-blue-800&quot;>
               ← Back to Blog
             </Link>
           </div>
-          <p className="mt-2 text-lg text-gray-600">The Smart Factory Revolution and the Future of Industrial Production</p>
-          <div className="mt-4 flex items-center text-sm text-gray-500">
+          <p className="mt-2 text-lg text-gray-600&quot;>The Smart Factory Revolution and the Future of Industrial Production</p>
+          <div className="mt-4 flex items-center text-sm text-gray-500&quot;>
             <span>By AI Vault Industrial Team</span>
-            <span className="mx-2">•</span>
-            <time dateTime="2025-04-21">April 21, 2025</time>
-            <span className="mx-2">•</span>
+            <span className="mx-2&quot;>•</span>
+            <time dateTime="2025-04-21&quot;>April 21, 2025</time>
+            <span className="mx-2&quot;>•</span>
             <span>48 min read</span>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
-          <div className="prose max-w-none">
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8&quot;>
+        <div className="px-4 py-6 sm:px-0&quot;>
+          <div className="prose max-w-none&quot;>
             <h2>Introduction</h2>
             <p>
               The manufacturing sector is undergoing its most significant transformation since the Industrial Revolution, driven by the integration of artificial intelligence into every aspect of production. In 2025, AI-powered smart factories have become the standard, combining advanced robotics, IoT sensors, and machine learning to create self-optimizing production lines that are more efficient, flexible, and sustainable than ever before.
@@ -81,7 +81,7 @@ const AiManufacturingRevolution2025 = () => {
             
             <h2>The Current State of AI in Manufacturing</h2>
             <p>
-              AI in manufacturing has evolved from isolated pilot projects to comprehensive, enterprise-wide implementations. Today's smart factories leverage computer vision for quality control, predictive maintenance to prevent equipment failures, and autonomous robots that work alongside human operators. The integration of digital twin technology allows manufacturers to simulate and optimize processes in virtual environments before implementing them in the physical world.
+              AI in manufacturing has evolved from isolated pilot projects to comprehensive, enterprise-wide implementations. Today&apos;s smart factories leverage computer vision for quality control, predictive maintenance to prevent equipment failures, and autonomous robots that work alongside human operators. The integration of digital twin technology allows manufacturers to simulate and optimize processes in virtual environments before implementing them in the physical world.
             </p>
 
             <h2>Key Applications of AI in Manufacturing</h2>
@@ -123,26 +123,26 @@ const AiManufacturingRevolution2025 = () => {
 
             <h2>Conclusion</h2>
             <p>
-              AI is not just transforming manufacturing; it's redefining what's possible in industrial production. As we move through 2025, manufacturers that successfully harness the power of AI will gain significant competitive advantages, from increased efficiency and quality to greater flexibility and sustainability. The smart factory revolution is here, and it's creating a future where intelligent, connected, and autonomous manufacturing systems drive unprecedented levels of productivity and innovation.
+              AI is not just transforming manufacturing; it&apos;s redefining what&apos;s possible in industrial production. As we move through 2025, manufacturers that successfully harness the power of AI will gain significant competitive advantages, from increased efficiency and quality to greater flexibility and sustainability. The smart factory revolution is here, and it&apos;s creating a future where intelligent, connected, and autonomous manufacturing systems drive unprecedented levels of productivity and innovation.
             </p>
           </div>
         </div>
       </main>
 
-      <footer className="bg-white border-t border-gray-200 mt-12">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-base text-gray-500">
+      <footer className="bg-white border-t border-gray-200 mt-12&quot;>
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8&quot;>
+          <div className="text-center&quot;>
+            <p className="text-base text-gray-500&quot;>
               &copy; 2025 AI Vault. All rights reserved.
             </p>
-            <div className="mt-4">
-              <Link href="/privacy" className="text-gray-600 hover:text-gray-900 mx-4">
+            <div className="mt-4&quot;>
+              <Link href="/privacy&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-600 hover:text-gray-900 mx-4">
+              <Link href="/terms&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Terms of Service
               </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-gray-900 mx-4">
+              <Link href="/contact&quot; className="text-gray-600 hover:text-gray-900 mx-4&quot;>
                 Contact Us
               </Link>
             </div>

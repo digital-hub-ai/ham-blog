@@ -15,17 +15,17 @@ toolObjects.forEach((toolStr, index) => {
   // Check if this tool is in a retail-related category
   if (toolStr.includes('Retail') || toolStr.includes('E-commerce') || toolStr.includes('Inventory') || toolStr.includes('Commerce')) {
     // Extract the category
-    const categoryMatch = toolStr.match(/"category":\s*"([^"]+)"/);
+    const categoryMatch = toolStr.match(/&quot;category&quot;:\s*&quot;([^&quot;]+)&quot;/);
     if (categoryMatch) {
       const category = categoryMatch[1];
       retailCategories.add(category);
       
       // Extract the name
-      const nameMatch = toolStr.match(/"name":\s*"([^"]+)"/);
+      const nameMatch = toolStr.match(/&quot;name&quot;:\s*&quot;([^&quot;]+)&quot;/);
       const name = nameMatch ? nameMatch[1] : 'Unknown';
       
       // Extract the subcategory
-      const subcategoryMatch = toolStr.match(/"subcategory":\s*"([^"]+)"/);
+      const subcategoryMatch = toolStr.match(/&quot;subcategory&quot;:\s*&quot;([^&quot;]+)&quot;/);
       const subcategory = subcategoryMatch ? subcategoryMatch[1] : 'Unknown';
       
       retailTools.push({

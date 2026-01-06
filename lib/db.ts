@@ -1,4 +1,4 @@
-import { User } from '../types/user';
+import { User } from &apos;../types/user&apos;;
 
 // In a production app, replace this with a real database connection
 let users: User[] = [];
@@ -20,7 +20,7 @@ export const db = {
       ...userData,
       id: Date.now().toString(),
       isTwoFactorEnabled: userData.isTwoFactorEnabled || false,
-      twoFactorSecret: userData.twoFactorSecret || '',
+      twoFactorSecret: userData.twoFactorSecret || &apos;&apos;,
       backupCodes: userData.backupCodes || [],
       createdAt: new Date().toISOString()
     };

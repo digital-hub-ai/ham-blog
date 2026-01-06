@@ -1,4 +1,4 @@
-"use client";
+&quot;use client&quot;;
 
 import { createContext, useContext, ReactNode, useState, useEffect } from 'react';
 
@@ -41,7 +41,7 @@ export function MockAuthProvider({ children }: { children: ReactNode }) {
   };
 
   const logout = () => {
-    // Don't actually log out, just keep the demo user
+    // Don&apos;t actually log out, just keep the demo user
     return;
   };
 
@@ -62,7 +62,7 @@ export function MockAuthProvider({ children }: { children: ReactNode }) {
 export const useAuth = () => {
   const context = useContext(MockAuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error(&apos;useAuth must be used within an AuthProvider&apos;);
   }
   return context;
 };

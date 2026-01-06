@@ -1,90 +1,90 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from &apos;react&apos;;
+import Head from &apos;next/head&apos;;
+import Link from &apos;next/link&apos;;
 
 export default function HolographicUI() {
   return (
     <>
       <Head>
         <title>Holographic User Interfaces: Designing in 3D Space | Aesthetic Forge</title>
-        <meta name="description" content="The challenges and opportunities of creating interfaces for augmented and mixed reality environments in 2025." />
-        <meta name="keywords" content="3D design, holographic UI, AR interfaces, mixed reality, spatial design, immersive experiences" />
-        <meta name="author" content="Spatial Designer Zoe Depth" />
-        <meta property="og:title" content="Holographic User Interfaces: Designing in 3D Space" />
-        <meta property="og:description" content="The challenges and opportunities of creating interfaces for augmented and mixed reality environments." />
-        <meta property="og:type" content="article" />
-        <meta property="og:locale" content="en_US" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context": "https://schema.org","@type": "Article","headline": "Holographic User Interfaces: Designing in 3D Space","description": "The challenges and opportunities of creating interfaces for augmented and mixed reality environments.","author": {"@type": "Person","name": "Spatial Designer Zoe Depth"},"publisher": {"@type": "Organization","name": "Aesthetic Forge","logo": {"@type": "ImageObject","url": "https://ai-tools-directory.com/images/logo.png"}},"datePublished": "2025-12-17","dateModified": "2025-12-17"}`}} />
+        <meta name="description&quot; content="The challenges and opportunities of creating interfaces for augmented and mixed reality environments in 2025.&quot; />
+        <meta name="keywords&quot; content="3D design, holographic UI, AR interfaces, mixed reality, spatial design, immersive experiences&quot; />
+        <meta name="author&quot; content="Spatial Designer Zoe Depth&quot; />
+        <meta property="og:title&quot; content="Holographic User Interfaces: Designing in 3D Space&quot; />
+        <meta property="og:description&quot; content="The challenges and opportunities of creating interfaces for augmented and mixed reality environments.&quot; />
+        <meta property="og:type&quot; content="article&quot; />
+        <meta property="og:locale&quot; content="en_US&quot; />
+        <script type="application/ld+json&quot; dangerouslySetInnerHTML={{__html: `{&quot;@context&quot;: &quot;https://schema.org&quot;,&quot;@type&quot;: &quot;Article&quot;,&quot;headline&quot;: &quot;Holographic User Interfaces: Designing in 3D Space&quot;,&quot;description&quot;: &quot;The challenges and opportunities of creating interfaces for augmented and mixed reality environments.&quot;,&quot;author&quot;: {&quot;@type&quot;: &quot;Person&quot;,&quot;name&quot;: &quot;Spatial Designer Zoe Depth&quot;},&quot;publisher&quot;: {&quot;@type&quot;: &quot;Organization&quot;,&quot;name&quot;: &quot;Aesthetic Forge&quot;,&quot;logo&quot;: {&quot;@type&quot;: &quot;ImageObject&quot;,&quot;url&quot;: &quot;https://ai-tools-directory.com/images/logo.png&quot;}},&quot;datePublished&quot;: &quot;2025-12-17&quot;,&quot;dateModified&quot;: &quot;2025-12-17&quot;}`}} />
       </Head>
 
-      <div className="min-h-screen bg-white text-black">
-        <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link href="/blog/design" className="inline-flex items-center text-rose-600 hover:text-rose-800 mb-8">
-            <span className="mr-2">←</span>
+      <div className="min-h-screen bg-white text-black&quot;>
+        <div className="container mx-auto px-4 py-12 max-w-4xl&quot;>
+          <Link href="/blog/design&quot; className="inline-flex items-center text-rose-600 hover:text-rose-800 mb-8&quot;>
+            <span className="mr-2&quot;>←</span>
             Back to Aesthetic Forge
           </Link>
 
-          <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
-            <div className="flex items-center space-x-4 mb-6">
-              <span className="px-3 py-1 bg-rose-100 text-rose-800 text-sm rounded-full">
+          <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md&quot;>
+            <div className="flex items-center space-x-4 mb-6&quot;>
+              <span className="px-3 py-1 bg-rose-100 text-rose-800 text-sm rounded-full&quot;>
                 3D & Motion
               </span>
-              <span className="px-3 py-1 bg-rose-100 text-rose-800 text-sm rounded-full">
+              <span className="px-3 py-1 bg-rose-100 text-rose-800 text-sm rounded-full&quot;>
                 AR/VR
               </span>
-              <span className="px-3 py-1 bg-rose-100 text-rose-800 text-sm rounded-full">
+              <span className="px-3 py-1 bg-rose-100 text-rose-800 text-sm rounded-full&quot;>
                 Spatial Design
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4&quot;>
               Holographic User Interfaces: Designing in 3D Space
             </h1>
 
-            <div className="flex items-center justify-between mb-8">
-              <span className="text-gray-600">By Spatial Designer Zoe Depth</span>
-              <div className="text-right">
-                <span className="text-gray-600 block">Dec 17, 2025</span>
-                <span className="text-gray-600">15 min read</span>
+            <div className="flex items-center justify-between mb-8&quot;>
+              <span className="text-gray-600&quot;>By Spatial Designer Zoe Depth</span>
+              <div className="text-right&quot;>
+                <span className="text-gray-600 block&quot;>Dec 17, 2025</span>
+                <span className="text-gray-600&quot;>15 min read</span>
               </div>
             </div>
 
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-xl text-gray-700 mb-8&quot;>
               The challenges and opportunities of creating interfaces for augmented and mixed reality environments.
             </p>
 
-            <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 mb-8">
-              <h2 className="text-2xl font-bold mb-4 text-rose-800">Design Principles</h2>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-rose-600 mr-2">✓</span>
+            <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 mb-8&quot;>
+              <h2 className="text-2xl font-bold mb-4 text-rose-800&quot;>Design Principles</h2>
+              <ul className="space-y-2&quot;>
+                <li className="flex items-start&quot;>
+                  <span className="text-rose-600 mr-2&quot;>✓</span>
                   <span>Depth and spatial relationships create intuitive navigation systems</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-rose-600 mr-2">✓</span>
+                <li className="flex items-start&quot;>
+                  <span className="text-rose-600 mr-2&quot;>✓</span>
                   <span>Gaze, gesture, and voice combine for natural interaction methods</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-rose-600 mr-2">✓</span>
+                <li className="flex items-start&quot;>
+                  <span className="text-rose-600 mr-2&quot;>✓</span>
                   <span>Environmental context informs interface placement and behavior</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-rose-600 mr-2">✓</span>
+                <li className="flex items-start&quot;>
+                  <span className="text-rose-600 mr-2&quot;>✓</span>
                   <span>Performance optimization balances visual fidelity with responsiveness</span>
                 </li>
               </ul>
             </div>
 
-            <h2 className="text-3xl font-bold mb-6 text-black">The Spatial Design Paradigm</h2>
+            <h2 className="text-3xl font-bold mb-6 text-black&quot;>The Spatial Design Paradigm</h2>
             
-            <p className="mb-6">
+            <p className="mb-6&quot;>
               Holographic user interfaces represent a fundamental shift from traditional two-dimensional 
               screen-based design to fully three-dimensional spatial experiences. In 2025, designers 
               working in augmented and mixed reality environments must think beyond the flat rectangle 
               of conventional interfaces to create immersive experiences that feel native to three-dimensional space.
             </p>
             
-            <p className="mb-6">
+            <p className="mb-6&quot;>
               This paradigm shift requires new design vocabularies, interaction models, and usability 
               principles that account for depth, perspective, and physical context. Unlike traditional 
               UI design where elements exist on a flat plane, holographic interfaces must consider 
@@ -92,9 +92,9 @@ export default function HolographicUI() {
               navigate through volumetric space.
             </p>
 
-            <h2 className="text-3xl font-bold mb-6 text-black">Natural Interaction Methods</h2>
+            <h2 className="text-3xl font-bold mb-6 text-black&quot;>Natural Interaction Methods</h2>
             
-            <p className="mb-6">
+            <p className="mb-6&quot;>
               Holographic interfaces leverage a combination of gaze tracking, hand gestures, and voice 
               commands to create intuitive interaction models. Eye tracking technology determines where 
               users are looking, allowing interfaces to prioritize relevant information and enable 
@@ -102,8 +102,8 @@ export default function HolographicUI() {
               movements, enabling precise manipulation of three-dimensional objects.
             </p>
             
-            <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-rose-800">Designer&rsquo;s Insight</h3>
+            <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 my-8&quot;>
+              <h3 className="text-xl font-bold mb-4 text-rose-800&quot;>Designer&rsquo;s Insight</h3>
               <p>
                 Design for fatigue-free interactions by minimizing sustained gestures and providing 
                 multiple interaction methods for the same actions. Users should be able to switch 
@@ -111,9 +111,9 @@ export default function HolographicUI() {
               </p>
             </div>
 
-            <h2 className="text-3xl font-bold mb-6 text-black">Spatial Organization and Navigation</h2>
+            <h2 className="text-3xl font-bold mb-6 text-black&quot;>Spatial Organization and Navigation</h2>
             
-            <p className="mb-6">
+            <p className="mb-6&quot;>
               Organizing information in three-dimensional space presents unique challenges and opportunities. 
               Traditional hierarchical navigation structures translate poorly to volumetric environments, 
               where spatial relationships can communicate information more effectively than linear menus. 
@@ -121,30 +121,30 @@ export default function HolographicUI() {
               context to guide users naturally through complex information architectures.
             </p>
             
-            <p className="mb-6">
+            <p className="mb-6&quot;>
               Anchoring interfaces to real-world objects and surfaces creates more intuitive interactions 
               that feel integrated with users&rsquo; physical environments. Virtual elements that respond to 
               real-world lighting, shadows, and textures appear more convincing and are easier to 
               understand and manipulate.
             </p>
 
-            <h2 className="text-3xl font-bold mb-6 text-black">Performance and Optimization</h2>
+            <h2 className="text-3xl font-bold mb-6 text-black&quot;>Performance and Optimization</h2>
             
-            <p className="mb-6">
+            <p className="mb-6&quot;>
               Rendering complex three-dimensional interfaces in real-time while maintaining responsive 
               frame rates requires careful optimization. Techniques like level-of-detail scaling, 
               occlusion culling, and dynamic batching ensure that interfaces remain smooth and 
               responsive even on mobile AR devices with limited processing power.
             </p>
             
-            <p className="mb-6">
+            <p className="mb-6&quot;>
               Asset streaming and predictive loading anticipate user needs based on gaze direction 
               and movement patterns, preloading relevant content before it&rsquo;s needed. This proactive 
               approach minimizes latency and creates more seamless experiences that don&rsquo;t interrupt 
               users&rsquo; workflow or break immersion
             </p>
 
-            <h2 className="text-3xl font-bold mb-6 text-black">Accessibility in Spatial Environments</h2>
+            <h2 className="text-3xl font-bold mb-6 text-black&quot;>Accessibility in Spatial Environments</h2>
             
             <p>
               Inclusive design for holographic interfaces considers users with different physical 
@@ -156,11 +156,11 @@ export default function HolographicUI() {
             </p>
           </article>
 
-          <div className="mt-12 flex justify-between">
-            <Link href="/blog/design/3d-motion" className="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors">
+          <div className="mt-12 flex justify-between&quot;>
+            <Link href="/blog/design/3d-motion&quot; className="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors&quot;>
               ← Back to 3D & Motion Design
             </Link>
-            <Link href="/blog/design" className="px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-700 transition-all duration-300">
+            <Link href="/blog/design&quot; className="px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-700 transition-all duration-300&quot;>
               Explore Design Cosmos
             </Link>
           </div>

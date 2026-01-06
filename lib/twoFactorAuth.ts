@@ -1,5 +1,5 @@
-import speakeasy from 'speakeasy';
-import QRCode from 'qrcode';
+import speakeasy from &apos;speakeasy&apos;;
+import QRCode from &apos;qrcode&apos;;
 
 export interface TwoFactorAuthSecret {
   base32: string;
@@ -15,11 +15,11 @@ export async function generateTwoFactorAuthSecret(email: string, issuer: string)
   });
 
   // Generate QR code
-  const qrCode = await QRCode.toDataURL(secret.otpauth_url || '');
+  const qrCode = await QRCode.toDataURL(secret.otpauth_url || &apos;&apos;);
 
   return {
     base32: secret.base32,
-    otpauth_url: secret.otpauth_url || '',
+    otpauth_url: secret.otpauth_url || &apos;&apos;,
     qrCode
   };
 }
@@ -27,7 +27,7 @@ export async function generateTwoFactorAuthSecret(email: string, issuer: string)
 export function verifyTwoFactorAuthToken(secret: string, token: string): boolean {
   return speakeasy.totp.verify({
     secret,
-    encoding: 'base32',
+    encoding: &apos;base32&apos;,
     token,
     window: 1 // Allow tokens from the previous and next 30-second window
   });
@@ -40,7 +40,7 @@ export function generateBackupCodes(count = 10): string[] {
       Array.from(
         { length: 8 },
         () => Math.floor(Math.random() * 16).toString(16)
-      ).join('').toUpperCase()
+      ).join(&apos;&apos;).toUpperCase()
     );
   }
   return codes;

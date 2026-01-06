@@ -4,40 +4,40 @@
 
 // Edge device types
 export type EdgeDeviceType = 
-  | 'mobile'             // Mobile devices
-  | 'tablet'             // Tablets
-  | 'laptop'             // Laptops
-  | 'desktop'            // Desktop computers
-  | 'server'             // Edge servers
-  | 'gateway'            // Edge gateways
-  | 'iot-device'         // IoT devices
-  | 'custom';            // Custom edge devices
+  | &apos;mobile&apos;             // Mobile devices
+  | &apos;tablet&apos;             // Tablets
+  | &apos;laptop&apos;             // Laptops
+  | &apos;desktop&apos;            // Desktop computers
+  | &apos;server&apos;             // Edge servers
+  | &apos;gateway&apos;            // Edge gateways
+  | &apos;iot-device&apos;         // IoT devices
+  | &apos;custom&apos;;            // Custom edge devices
 
 // Edge computing architectures
 export type EdgeArchitecture = 
-  | 'fog'                // Fog computing
-  | 'multi-access'       // Multi-access edge computing (MEC)
-  | 'cloud-edge'         // Cloud-edge hybrid
-  | 'distributed'        // Distributed edge
-  | 'hierarchical';      // Hierarchical edge
+  | &apos;fog&apos;                // Fog computing
+  | &apos;multi-access&apos;       // Multi-access edge computing (MEC)
+  | &apos;cloud-edge&apos;         // Cloud-edge hybrid
+  | &apos;distributed&apos;        // Distributed edge
+  | &apos;hierarchical&apos;;      // Hierarchical edge
 
 // Edge processing modes
 export type ProcessingMode = 
-  | 'real-time'          // Real-time processing
-  | 'near-real-time'     // Near real-time processing
-  | 'batch'              // Batch processing
-  | 'streaming'          // Streaming processing
-  | 'hybrid';            // Hybrid processing
+  | &apos;real-time&apos;          // Real-time processing
+  | &apos;near-real-time&apos;     // Near real-time processing
+  | &apos;batch&apos;              // Batch processing
+  | &apos;streaming&apos;          // Streaming processing
+  | &apos;hybrid&apos;;            // Hybrid processing
 
 // Edge computing frameworks
 export type EdgeFramework = 
-  | 'kubernetes'         // Kubernetes at edge
-  | 'docker'             // Docker containers
-  | 'openstack'          // OpenStack
-  | 'aws-iot'            // AWS IoT Greengrass
-  | 'azure-iot'          // Azure IoT Edge
-  | 'google-edge'        // Google Cloud IoT Edge
-  | 'custom';            // Custom frameworks
+  | &apos;kubernetes&apos;         // Kubernetes at edge
+  | &apos;docker&apos;             // Docker containers
+  | &apos;openstack&apos;          // OpenStack
+  | &apos;aws-iot&apos;            // AWS IoT Greengrass
+  | &apos;azure-iot&apos;          // Azure IoT Edge
+  | &apos;google-edge&apos;        // Google Cloud IoT Edge
+  | &apos;custom&apos;;            // Custom frameworks
 
 // Edge node
 export interface EdgeNode {
@@ -58,7 +58,7 @@ export interface EdgeNode {
     gpu?: boolean;
     tpu?: boolean;
   };
-  status: 'online' | 'offline' | 'maintenance';
+  status: &apos;online&apos; | &apos;offline&apos; | &apos;maintenance&apos;;
   lastSeen: number;
   latency: number; // ms to central server
   load: number; // 0-100%
@@ -69,7 +69,7 @@ export interface EdgeSearchConfig {
   architecture: EdgeArchitecture;
   processingMode: ProcessingMode;
   framework: EdgeFramework;
-  nodeSelection: 'nearest' | 'least-loaded' | 'random' | 'custom';
+  nodeSelection: &apos;nearest&apos; | &apos;least-loaded&apos; | &apos;random&apos; | &apos;custom&apos;;
   replication: number; // Number of replicas
   caching: boolean;
   encryption: boolean;
@@ -122,11 +122,11 @@ export interface EdgeSearchResult {
 
 // Edge caching strategy
 export type CachingStrategy = 
-  | 'lru'                // Least Recently Used
-  | 'lfu'                // Least Frequently Used
-  | 'fifo'               // First In First Out
-  | 'ttl'                // Time To Live
-  | 'adaptive';          // Adaptive caching
+  | &apos;lru&apos;                // Least Recently Used
+  | &apos;lfu&apos;                // Least Frequently Used
+  | &apos;fifo&apos;               // First In First Out
+  | &apos;ttl&apos;                // Time To Live
+  | &apos;adaptive&apos;;          // Adaptive caching
 
 // Edge cache entry
 export interface EdgeCacheEntry {
@@ -229,7 +229,7 @@ export class EdgeSearchService {
     
     // Validate request
     if (!request.query || !request.dataset || request.dataset.length === 0) {
-      throw new Error('Invalid search request: query and dataset are required');
+      throw new Error(&apos;Invalid search request: query and dataset are required&apos;);
     }
     
     // Check cache first
@@ -649,13 +649,13 @@ export class EdgeSearchService {
   } {
     return {
       supportedArchitectures: [
-        'fog', 'multi-access', 'cloud-edge', 'distributed', 'hierarchical'
+        &apos;fog&apos;, &apos;multi-access&apos;, &apos;cloud-edge&apos;, &apos;distributed&apos;, &apos;hierarchical&apos;
       ],
       supportedFrameworks: [
-        'kubernetes', 'docker', 'openstack', 'aws-iot', 'azure-iot', 'google-edge'
+        &apos;kubernetes&apos;, &apos;docker&apos;, &apos;openstack&apos;, &apos;aws-iot&apos;, &apos;azure-iot&apos;, &apos;google-edge&apos;
       ],
       processingModes: [
-        'real-time', 'near-real-time', 'batch', 'streaming', 'hybrid'
+        &apos;real-time&apos;, &apos;near-real-time&apos;, &apos;batch&apos;, &apos;streaming&apos;, &apos;hybrid&apos;
       ],
       maxNodes: this.simulationMode ? 100 : 10000,
       defaultConfig: this.defaultConfig
@@ -744,7 +744,7 @@ export class EdgeSearchService {
     }
     
     if (searchResult.processingInfo.dataTransferred > 500) {
-      recommendations.push('High data transfer - consider data compression or local caching');
+      recommendations.push(&apos;High data transfer - consider data compression or local caching&apos;);
     }
     
     return {

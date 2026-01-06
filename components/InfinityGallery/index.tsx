@@ -66,7 +66,7 @@ const InfinityGallery = () => {
 
   const renderSegment = (segment: ContentItem) => {
     switch (segment.type) {
-      case 'showcase':
+      case &apos;showcase&apos;:
         return (
           <div className={styles.segment} id={segment.id} data-segment>
             <div className={styles.museumSegment}>
@@ -79,7 +79,7 @@ const InfinityGallery = () => {
             </div>
           </div>
         );
-      case 'comparison':
+      case &apos;comparison&apos;:
         return (
           <div className={styles.segment} id={segment.id} data-segment>
             <div className={styles.comparisonSegment}>
@@ -92,7 +92,7 @@ const InfinityGallery = () => {
             </div>
           </div>
         );
-      case 'insights':
+      case &apos;insights&apos;:
         return (
           <div className={styles.segment} id={segment.id} data-segment>
             <div className={styles.librarySegment}>
@@ -105,7 +105,7 @@ const InfinityGallery = () => {
             </div>
           </div>
         );
-      case 'discovery':
+      case &apos;discovery&apos;:
         return (
           <div className={styles.segment} id={segment.id} data-segment>
             <div className={styles.starfieldSegment}>

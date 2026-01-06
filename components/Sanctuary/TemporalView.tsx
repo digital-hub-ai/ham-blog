@@ -1,8 +1,8 @@
 // components/Sanctuary/TemporalView.tsx
-'use client';
+&apos;use client&apos;;
 
-import { useState, useEffect } from 'react';
-import { useFavorites } from '../../hooks/useFavorites';
+import { useState, useEffect } from &apos;react&apos;;
+import { useFavorites } from &apos;../../hooks/useFavorites&apos;;
 
 interface TimePoint {
   date: Date;
@@ -134,41 +134,41 @@ export default function TemporalView() {
   const currentSnapshot = getSnapshotForDate(selectedDate);
 
   return (
-    <div className="fixed bottom-8 left-8 z-40">
+    <div className="fixed bottom-8 left-8 z-40&quot;>
       {/* Timeline Toggle */}
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white"
+        className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white&quot;
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg className="w-6 h-6&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+          <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z&quot; />
         </svg>
       </button>
 
       {/* Timeline Panel */}
       {isVisible && (
-        <div className="absolute bottom-16 left-0 w-[600px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200">
+        <div className="absolute bottom-16 left-0 w-[600px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200&quot;>
           
           {/* Header */}
-          <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white p-4 rounded-t-2xl">
-            <div className="flex items-center justify-between">
+          <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white p-4 rounded-t-2xl&quot;>
+            <div className="flex items-center justify-between&quot;>
               <div>
-                <h3 className="font-semibold">Temporal Journey</h3>
-                <p className="text-sm opacity-90">Travel through your collection&rsquo;s evolution</p>
+                <h3 className="font-semibold&quot;>Temporal Journey</h3>
+                <p className="text-sm opacity-90&quot;>Travel through your collection&rsquo;s evolution</p>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2&quot;>
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
-                  className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                  className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors&quot;
                 >
                   {isPlaying ? (
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg className="w-4 h-4&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+                      <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z&quot; />
                     </svg>
                   ) : (
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg className="w-4 h-4&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+                      <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z&quot; />
+                      <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot; />
                     </svg>
                   )}
                 </button>
@@ -176,7 +176,7 @@ export default function TemporalView() {
                 <select
                   value={playbackSpeed}
                   onChange={(e) => setPlaybackSpeed(Number(e.target.value))}
-                  className="px-2 py-1 bg-white/20 rounded text-sm border border-white/30"
+                  className="px-2 py-1 bg-white/20 rounded text-sm border border-white/30&quot;
                 >
                   <option value={0.5}>0.5x</option>
                   <option value={1}>1x</option>
@@ -188,29 +188,29 @@ export default function TemporalView() {
           </div>
 
           {/* Timeline Visualization */}
-          <div className="p-6">
+          <div className="p-6&quot;>
             {/* Timeline Track */}
-            <div className="relative mb-6">
-              <div className="h-2 bg-gray-200 rounded-full">
+            <div className="relative mb-6&quot;>
+              <div className="h-2 bg-gray-200 rounded-full&quot;>
                 <div 
-                  className="h-2 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full relative"
+                  className="h-2 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full relative&quot;
                   style={{ width: `${getTimelinePosition(selectedDate)}%` }}
                 >
-                  <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-purple-600 rounded-full shadow-lg" />
+                  <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-purple-600 rounded-full shadow-lg&quot; />
                 </div>
               </div>
               
               {/* Timeline Markers */}
-              <div className="relative mt-4">
+              <div className="relative mt-4&quot;>
                 {timeline.filter((_, i) => i % 4 === 0).map((point, index) => (
                   <div
                     key={index}
-                    className="absolute flex flex-col items-center"
+                    className="absolute flex flex-col items-center&quot;
                     style={{ left: `${getTimelinePosition(point.date)}%` }}
                   >
-                    <div className="w-2 h-2 bg-gray-400 rounded-full mb-1" />
-                    <span className="text-xs text-gray-500 whitespace-nowrap">
-                      {point.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mb-1&quot; />
+                    <span className="text-xs text-gray-500 whitespace-nowrap&quot;>
+                      {point.date.toLocaleDateString(&apos;en-US&apos;, { month: &apos;short&apos;, day: &apos;numeric&apos; })}
                     </span>
                   </div>
                 ))}
@@ -218,44 +218,44 @@ export default function TemporalView() {
             </div>
 
             {/* Current Date Display */}
-            <div className="text-center mb-4">
-              <div className="text-2xl font-bold text-gray-900">
-                {selectedDate.toLocaleDateString('en-US', { 
-                  month: 'long', 
-                  day: 'numeric', 
-                  year: 'numeric' 
+            <div className="text-center mb-4&quot;>
+              <div className="text-2xl font-bold text-gray-900&quot;>
+                {selectedDate.toLocaleDateString(&apos;en-US&apos;, { 
+                  month: &apos;long&apos;, 
+                  day: &apos;numeric&apos;, 
+                  year: &apos;numeric&apos; 
                 })}
               </div>
-              <div className="text-sm text-gray-500">
-                {timeline.find(tp => tp.date.toDateString() === selectedDate.toDateString())?.mood || 'productive'} mood
+              <div className="text-sm text-gray-500&quot;>
+                {timeline.find(tp => tp.date.toDateString() === selectedDate.toDateString())?.mood || &apos;productive&apos;} mood
               </div>
             </div>
 
             {/* Snapshot Details */}
             {currentSnapshot && (
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-4 mb-4">
-                <h4 className="font-semibold text-gray-900 mb-3">Collection Snapshot</h4>
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-4 mb-4&quot;>
+                <h4 className="font-semibold text-gray-900 mb-3&quot;>Collection Snapshot</h4>
                 
-                <div className="grid grid-cols-3 gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">{currentSnapshot.tools.length}</div>
-                    <div className="text-xs text-gray-500">Tools</div>
+                <div className="grid grid-cols-3 gap-4 mb-4&quot;>
+                  <div className="text-center&quot;>
+                    <div className="text-2xl font-bold text-purple-600&quot;>{currentSnapshot.tools.length}</div>
+                    <div className="text-xs text-gray-500&quot;>Tools</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-indigo-600">{currentSnapshot.healthScore}%</div>
-                    <div className="text-xs text-gray-500">Health</div>
+                  <div className="text-center&quot;>
+                    <div className="text-2xl font-bold text-indigo-600&quot;>{currentSnapshot.healthScore}%</div>
+                    <div className="text-xs text-gray-500&quot;>Health</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">{currentSnapshot.insights.length}</div>
-                    <div className="text-xs text-gray-500">Insights</div>
+                  <div className="text-center&quot;>
+                    <div className="text-2xl font-bold text-green-600&quot;>{currentSnapshot.insights.length}</div>
+                    <div className="text-xs text-gray-500&quot;>Insights</div>
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <div className="text-sm font-medium text-gray-700">Key Insights:</div>
+                <div className="space-y-2&quot;>
+                  <div className="text-sm font-medium text-gray-700&quot;>Key Insights:</div>
                   {currentSnapshot.insights.map((insight, index) => (
-                    <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full" />
+                    <div key={index} className="flex items-center gap-2 text-sm text-gray-600&quot;>
+                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full&quot; />
                       {insight}
                     </div>
                   ))}
@@ -264,24 +264,24 @@ export default function TemporalView() {
             )}
 
             {/* Significant Events */}
-            <div className="space-y-2">
-              <h4 className="font-semibold text-gray-900">Notable Moments</h4>
+            <div className="space-y-2&quot;>
+              <h4 className="font-semibold text-gray-900&quot;>Notable Moments</h4>
               {timeline
                 .filter(tp => tp.significantEvents.length > 0)
                 .slice(0, 3)
                 .map((point, index) => (
-                  <div key={index} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
-                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                      {point.significantEvents[0].type === 'added' && <span className="text-xs">+</span>}
-                      {point.significantEvents[0].type === 'removed' && <span className="text-xs">-</span>}
-                      {point.significantEvents[0].type === 'milestone' && <span className="text-xs">🎯</span>}
+                  <div key={index} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg&quot;>
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center&quot;>
+                      {point.significantEvents[0].type === &apos;added&apos; && <span className="text-xs&quot;>+</span>}
+                      {point.significantEvents[0].type === &apos;removed&apos; && <span className="text-xs&quot;>-</span>}
+                      {point.significantEvents[0].type === &apos;milestone&apos; && <span className="text-xs&quot;>🎯</span>}
                     </div>
-                    <div className="flex-1">
-                      <div className="text-sm font-medium text-gray-900">
+                    <div className="flex-1&quot;>
+                      <div className="text-sm font-medium text-gray-900&quot;>
                         {point.significantEvents[0].description}
                       </div>
-                      <div className="text-xs text-gray-500">
-                        {point.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      <div className="text-xs text-gray-500&quot;>
+                        {point.date.toLocaleDateString(&apos;en-US&apos;, { month: &apos;short&apos;, day: &apos;numeric&apos; })}
                         {point.significantEvents[0].toolName && ` • ${point.significantEvents[0].toolName}`}
                       </div>
                     </div>
@@ -290,16 +290,16 @@ export default function TemporalView() {
             </div>
 
             {/* Phase Analysis */}
-            <div className="mt-4 p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-              <div className="text-sm font-medium text-gray-900 mb-1">Phase Analysis</div>
-              <div className="text-xs text-gray-600">
+            <div className="mt-4 p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg&quot;>
+              <div className="text-sm font-medium text-gray-900 mb-1&quot;>Phase Analysis</div>
+              <div className="text-xs text-gray-600&quot;>
                 {selectedDate.getFullYear() === new Date().getFullYear() - 1 && 
                  `Q${Math.ceil((selectedDate.getMonth() + 1) / 3)} ${selectedDate.getFullYear()} - ${
-                   ['Heavy focus on AI tools', 'Design exploration phase', 'Development stack building', 'Productivity optimization'][Math.floor(Math.random() * 4)]
+                   [&apos;Heavy focus on AI tools&apos;, &apos;Design exploration phase&apos;, &apos;Development stack building&apos;, &apos;Productivity optimization&apos;][Math.floor(Math.random() * 4)]
                  }`}
                 {selectedDate.getFullYear() === new Date().getFullYear() &&
                  `Q${Math.ceil((selectedDate.getMonth() + 1) / 3)} ${selectedDate.getFullYear()} - ${
-                   ['Collection diversification', 'Stack optimization', 'Tool consolidation', 'New category exploration'][Math.floor(Math.random() * 4)]
+                   [&apos;Collection diversification&apos;, &apos;Stack optimization&apos;, &apos;Tool consolidation&apos;, &apos;New category exploration&apos;][Math.floor(Math.random() * 4)]
                  }`}
               </div>
             </div>

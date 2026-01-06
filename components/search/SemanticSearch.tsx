@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
-import { semanticSearch, SearchResult, Document } from '../../services/searchService';
-import { useUserBehavior } from '../../hooks/useUserBehavior';
-import Link from 'next/link';
+import { useState, useEffect, useCallback } from &apos;react&apos;;
+import { semanticSearch, SearchResult, Document } from &apos;../../services/searchService&apos;;
+import { useUserBehavior } from &apos;../../hooks/useUserBehavior&apos;;
+import Link from &apos;next/link&apos;;
 
 interface SemanticSearchProps {
   documents: Array<{
@@ -17,10 +17,10 @@ interface SemanticSearchProps {
 
 export default function SemanticSearch({ 
   documents, 
-  placeholder = 'Search with natural language...',
-  className = ''
+  placeholder = &apos;Search with natural language...&apos;,
+  className = &apos;&apos;
 }: SemanticSearchProps) {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(&apos;&apos;);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showResults, setShowResults] = useState(false);
@@ -70,9 +70,9 @@ export default function SemanticSearch({
 
   return (
     <div className={`relative ${className}`}>
-      <div className="relative">
+      <div className="relative&quot;>
         <input
-          type="text"
+          type="text&quot;
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -81,22 +81,22 @@ export default function SemanticSearch({
           onFocus={() => setShowResults(true)}
           onBlur={() => setTimeout(() => setShowResults(false), 200)}
           placeholder={placeholder}
-          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
         />
         {isLoading && (
-          <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500"></div>
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2&quot;>
+            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500&quot;></div>
           </div>
         )}
       </div>
 
       {showResults && (
-        <div className="absolute z-10 mt-1 w-full bg-white rounded-md shadow-lg border border-gray-200 max-h-96 overflow-auto">
-          {query === '' ? (
-            <div className="p-4">
-              <h3 className="text-sm font-medium text-gray-700 mb-2">Recent Searches</h3>
+        <div className="absolute z-10 mt-1 w-full bg-white rounded-md shadow-lg border border-gray-200 max-h-96 overflow-auto&quot;>
+          {query === &apos;&apos; ? (
+            <div className="p-4&quot;>
+              <h3 className="text-sm font-medium text-gray-700 mb-2&quot;>Recent Searches</h3>
               {searchHistory.length > 0 ? (
-                <div className="space-y-1">
+                <div className="space-y-1&quot;>
                   {searchHistory.map((item, index) => (
                     <button
                       key={index}
@@ -104,34 +104,34 @@ export default function SemanticSearch({
                         setQuery(item.query);
                         setShowResults(true);
                       }}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded&quot;
                     >
                       {item.query}
                     </button>
                   ))}
                 </div>
               ) : (
-                <p className="text-sm text-gray-500">No recent searches</p>
+                <p className="text-sm text-gray-500&quot;>No recent searches</p>
               )}
             </div>
           ) : results.length > 0 ? (
-            <div className="py-1">
+            <div className="py-1&quot;>
               {results.map((result) => (
                 <Link
                   key={result.id}
                   href={result.url || `#${result.id}`}
                   onClick={() => handleResultClick(result)}
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors duration-150"
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors duration-150&quot;
                 >
-                  <h4 className="font-medium text-gray-900">{result.title}</h4>
-                  <p className="text-sm text-gray-600 line-clamp-2">
+                  <h4 className="font-medium text-gray-900&quot;>{result.title}</h4>
+                  <p className="text-sm text-gray-600 line-clamp-2&quot;>
                     {result.content}
                   </p>
-                  <div className="mt-1 flex justify-between items-center">
-                    <span className="text-xs text-blue-600">
-                      {result.url ? new URL(result.url).hostname : ''}
+                  <div className="mt-1 flex justify-between items-center&quot;>
+                    <span className="text-xs text-blue-600&quot;>
+                      {result.url ? new URL(result.url).hostname : &apos;&apos;}
                     </span>
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-gray-500&quot;>
                       {Math.round(result.similarity * 100)}% relevant
                     </span>
                   </div>
@@ -139,8 +139,8 @@ export default function SemanticSearch({
               ))}
             </div>
           ) : (
-            <div className="p-4 text-center text-gray-500">
-              {isLoading ? 'Searching...' : 'No results found'}
+            <div className="p-4 text-center text-gray-500&quot;>
+              {isLoading ? &apos;Searching...&apos; : &apos;No results found&apos;}
             </div>
           )}
         </div>

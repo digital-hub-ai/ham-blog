@@ -1,8 +1,8 @@
-'use client';
+&apos;use client&apos;;
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import { useState, useEffect } from &apos;react&apos;;
+import { useRouter } from &apos;next/navigation&apos;;
+import Image from &apos;next/image&apos;;
 
 interface TwoFactorSetupResponse {
   secret: string;
@@ -11,12 +11,12 @@ interface TwoFactorSetupResponse {
 }
 
 export default function TwoFactorSetupForm() {
-  const [step, setStep] = useState<'setup' | 'verify'>('setup');
-  const [secret, setSecret] = useState('');
-  const [qrCode, setQrCode] = useState('');
-  const [verificationCode, setVerificationCode] = useState('');
+  const [step, setStep] = useState<'setup' | 'verify'>(&apos;setup&apos;);
+  const [secret, setSecret] = useState(&apos;&apos;);
+  const [qrCode, setQrCode] = useState(&apos;&apos;);
+  const [verificationCode, setVerificationCode] = useState(&apos;&apos;);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(&apos;&apos;);
   const [backupCodes, setBackupCodes] = useState<string[]>([]);
   const router = useRouter();
 
@@ -79,38 +79,38 @@ export default function TwoFactorSetupForm() {
   };
 
   const handleComplete = () => {
-    router.push('/dashboard');
+    router.push(&apos;/dashboard&apos;);
   };
 
-  if (isLoading && step === 'setup') {
+  if (isLoading && step === &apos;setup&apos;) {
     return (
-      <div className="flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+      <div className="flex items-center justify-center p-8&quot;>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500&quot;></div>
       </div>
     );
   }
 
-  if (step === 'verify' && backupCodes.length > 0) {
+  if (step === &apos;verify && backupCodes.length > 0) {
     return (
-      <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-4">2FA Setup Complete</h2>
-        <p className="mb-4">Here are your backup codes. Please save them in a safe place:</p>
+      <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md&quot;>
+        <h2 className="text-2xl font-bold mb-4&quot;>2FA Setup Complete</h2>
+        <p className="mb-4&quot;>Here are your backup codes. Please save them in a safe place:</p>
         
-        <div className="bg-gray-100 p-4 rounded mb-6">
+        <div className="bg-gray-100 p-4 rounded mb-6&quot;>
           {backupCodes.map((code, index) => (
-            <div key={index} className="font-mono text-center py-1">
+            <div key={index} className="font-mono text-center py-1&quot;>
               {code}
             </div>
           ))}
         </div>
         
-        <p className="text-sm text-red-600 mb-4">
+        <p className="text-sm text-red-600 mb-4&quot;>
           Warning: These codes won&rsquo;t be shown again. Make sure to save them now!
         </p>
         
         <button
           onClick={handleComplete}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors&quot;
         >
           Continue to Dashboard
         </button>
@@ -119,59 +119,59 @@ export default function TwoFactorSetupForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6">Set Up Two-Factor Authentication</h2>
+    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md&quot;>
+      <h2 className="text-2xl font-bold mb-6&quot;>Set Up Two-Factor Authentication</h2>
       
-      <div className="mb-6">
-        <p className="mb-4">Scan the QR code with your authenticator app:</p>
+      <div className="mb-6&quot;>
+        <p className="mb-4&quot;>Scan the QR code with your authenticator app:</p>
         
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mb-6&quot;>
           {qrCode ? (
             <Image
               src={qrCode}
-              alt="QR Code"
+              alt="QR Code&quot;
               width={200}
               height={200}
-              className="mb-4"
+              className="mb-4&quot;
             />
           ) : (
-            <div className="w-48 h-48 bg-gray-200 flex items-center justify-center mb-4">
+            <div className="w-48 h-48 bg-gray-200 flex items-center justify-center mb-4&quot;>
               Loading QR code...
             </div>
           )}
           
-          <div className="text-sm text-gray-600 bg-gray-100 p-3 rounded">
+          <div className="text-sm text-gray-600 bg-gray-100 p-3 rounded&quot;>
             <p>Or enter this code manually:</p>
-            <p className="font-mono text-center mt-1">{secret}</p>
+            <p className="font-mono text-center mt-1&quot;>{secret}</p>
           </div>
         </div>
         
         <form onSubmit={handleVerify}>
-          <div className="mb-4">
-            <label htmlFor="code" className="block text-sm font-medium text-gray-700 mb-1">
+          <div className="mb-4&quot;>
+            <label htmlFor="code&quot; className="block text-sm font-medium text-gray-700 mb-1&quot;>
               Enter verification code
             </label>
             <input
-              type="text"
-              id="code"
+              type="text&quot;
+              id="code&quot;
               value={verificationCode}
               onChange={(e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="123456"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+              placeholder="123456&quot;
               maxLength={6}
-              pattern="\d{6}"
+              pattern="\d{6}&quot;
               required
             />
           </div>
           
           {error && (
-            <div className="mb-4 text-red-600 text-sm">
+            <div className="mb-4 text-red-600 text-sm&quot;>
               {error}
             </div>
           )}
           
           <button
-            type="submit"
+            type="submit&quot;
             disabled={isLoading || verificationCode.length !== 6}
             className={`w-full py-2 px-4 rounded-md text-white font-medium ${
               isLoading || verificationCode.length !== 6
@@ -179,7 +179,7 @@ export default function TwoFactorSetupForm() {
                 : 'bg-blue-600 hover:bg-blue-700'
             }`}
           >
-            {isLoading ? 'Verifying...' : 'Verify and Activate'}
+            {isLoading ? &apos;Verifying...&apos; : &apos;Verify and Activate&apos;}
           </button>
         </form>
       </div>

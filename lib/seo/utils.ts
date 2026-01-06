@@ -1,30 +1,30 @@
-import { Metadata } from 'next';
-import { tools } from '../../data/tools';
-import { categories } from '../../data/categories';
+import { Metadata } from &apos;next&apos;;
+import { tools } from &apos;../../data/tools&apos;;
+import { categories } from &apos;../../data/categories&apos;;
 
 // Base URL for the site
-export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://aitoolsdirectory.com';
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || &apos;https://aitoolsdirectory.com&apos;;
 
 // Default metadata for the site
 export const DEFAULT_METADATA: Metadata = {
   title: {
-    default: 'AI Tools Directory - Discover the Best AI Tools',
-    template: '%s | AI Tools Directory'
+    default: &apos;AI Tools Directory - Discover the Best AI Tools&apos;,
+    template: &apos;%s | AI Tools Directory&apos;
   },
-  description: 'Find and compare the best AI tools for your needs. Browse our comprehensive directory of artificial intelligence applications and services.',
-  keywords: ['AI tools', 'artificial intelligence', 'machine learning', 'AI software', 'AI applications', 'AI directory'],
-  authors: [{ name: 'AI Tools Directory Team' }],
-  creator: 'AI Tools Directory',
-  publisher: 'AI Tools Directory',
+  description: &apos;Find and compare the best AI tools for your needs. Browse our comprehensive directory of artificial intelligence applications and services.&apos;,
+  keywords: [&apos;AI tools&apos;, &apos;artificial intelligence&apos;, &apos;machine learning&apos;, &apos;AI software&apos;, &apos;AI applications&apos;, &apos;AI directory&apos;],
+  authors: [{ name: &apos;AI Tools Directory Team&apos; }],
+  creator: &apos;AI Tools Directory&apos;,
+  publisher: &apos;AI Tools Directory&apos;,
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      &apos;max-video-preview&apos;: -1,
+      &apos;max-image-preview&apos;: &apos;large&apos;,
+      &apos;max-snippet&apos;: -1,
     },
   },
   alternates: {
@@ -45,23 +45,23 @@ export function generateToolMetadata(toolName: string, toolData: any): Metadata 
       title,
       description,
       url: `${BASE_URL}/ai-tools/${encodeURIComponent(toolData.category)}/${encodeURIComponent(toolData.subcategory)}/${encodeURIComponent(toolName)}`,
-      siteName: 'AI Tools Directory',
+      siteName: &apos;AI Tools Directory&apos;,
       images: [
         {
-          url: toolData.favicon || '/og-image.jpg',
+          url: toolData.favicon || &apos;/og-image.jpg&apos;,
           width: 1200,
           height: 630,
           alt: `${toolName} - AI Tool`,
         },
       ],
-      locale: 'en_US',
-      type: 'website',
+      locale: &apos;en_US&apos;,
+      type: &apos;website&apos;,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: &apos;summary_large_image&apos;,
       title,
       description,
-      images: [toolData.favicon || '/twitter-image.jpg'],
+      images: [toolData.favicon || &apos;/twitter-image.jpg&apos;],
     },
   };
 }
@@ -74,28 +74,28 @@ export function generateCategoryMetadata(categoryName: string): Metadata {
   return {
     title,
     description,
-    keywords: [categoryName, 'AI tools', 'artificial intelligence'],
+    keywords: [categoryName, &apos;AI tools&apos;, &apos;artificial intelligence&apos;],
     openGraph: {
       title,
       description,
       url: `${BASE_URL}/ai-tools/${encodeURIComponent(categoryName)}`,
-      siteName: 'AI Tools Directory',
+      siteName: &apos;AI Tools Directory&apos;,
       images: [
         {
-          url: '/og-image.jpg',
+          url: &apos;/og-image.jpg&apos;,
           width: 1200,
           height: 630,
           alt: categoryName,
         },
       ],
-      locale: 'en_US',
-      type: 'website',
+      locale: &apos;en_US&apos;,
+      type: &apos;website&apos;,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: &apos;summary_large_image&apos;,
       title,
       description,
-      images: ['/twitter-image.jpg'],
+      images: [&apos;/twitter-image.jpg&apos;],
     },
   };
 }
@@ -108,28 +108,28 @@ export function generateSubcategoryMetadata(categoryName: string, subcategoryNam
   return {
     title,
     description,
-    keywords: [subcategoryName, categoryName, 'AI tools', 'artificial intelligence'],
+    keywords: [subcategoryName, categoryName, &apos;AI tools&apos;, &apos;artificial intelligence&apos;],
     openGraph: {
       title,
       description,
       url: `${BASE_URL}/ai-tools/${encodeURIComponent(categoryName)}/${encodeURIComponent(subcategoryName)}`,
-      siteName: 'AI Tools Directory',
+      siteName: &apos;AI Tools Directory&apos;,
       images: [
         {
-          url: '/og-image.jpg',
+          url: &apos;/og-image.jpg&apos;,
           width: 1200,
           height: 630,
           alt: `${subcategoryName} - ${categoryName}`,
         },
       ],
-      locale: 'en_US',
-      type: 'website',
+      locale: &apos;en_US&apos;,
+      type: &apos;website&apos;,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: &apos;summary_large_image&apos;,
       title,
       description,
-      images: ['/twitter-image.jpg'],
+      images: [&apos;/twitter-image.jpg&apos;],
     },
   };
 }
@@ -142,28 +142,28 @@ export function generateBlogMetadata(title: string, excerpt: string, slug: strin
   return {
     title: fullTitle,
     description,
-    keywords: [title, 'AI', 'artificial intelligence', 'machine learning', 'blog'],
+    keywords: [title, &apos;AI&apos;, &apos;artificial intelligence&apos;, &apos;machine learning&apos;, &apos;blog&apos;],
     openGraph: {
       title: fullTitle,
       description,
       url: `${BASE_URL}/blog/${slug}`,
-      siteName: 'AI Tools Directory Blog',
+      siteName: &apos;AI Tools Directory Blog&apos;,
       images: [
         {
-          url: imageUrl || '/blog/og-image.jpg',
+          url: imageUrl || &apos;/blog/og-image.jpg&apos;,
           width: 1200,
           height: 630,
           alt: title,
         },
       ],
-      locale: 'en_US',
-      type: 'article',
+      locale: &apos;en_US&apos;,
+      type: &apos;article&apos;,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: &apos;summary_large_image&apos;,
       title: fullTitle,
       description,
-      images: [imageUrl || '/blog/twitter-image.jpg'],
+      images: [imageUrl || &apos;/blog/twitter-image.jpg&apos;],
     },
   };
 }
@@ -171,23 +171,23 @@ export function generateBlogMetadata(title: string, excerpt: string, slug: strin
 // Generate JSON-LD structured data for tools
 export function generateToolJsonLd(toolData: any) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    'name': toolData.name,
-    'description': toolData.description,
-    'url': toolData.url,
-    'applicationCategory': 'BusinessApplication',
-    'operatingSystem': 'Web',
-    'offers': {
-      '@type': 'Offer',
-      'price': '0',
-      'priceCurrency': 'USD',
-      'category': toolData.pricing
+    &apos;@context&apos;: &apos;https://schema.org&apos;,
+    &apos;@type&apos;: &apos;SoftwareApplication&apos;,
+    &apos;name&apos;: toolData.name,
+    &apos;description&apos;: toolData.description,
+    &apos;url&apos;: toolData.url,
+    &apos;applicationCategory&apos;: &apos;BusinessApplication&apos;,
+    &apos;operatingSystem&apos;: &apos;Web&apos;,
+    &apos;offers&apos;: {
+      &apos;@type&apos;: &apos;Offer&apos;,
+      &apos;price&apos;: &apos;0&apos;,
+      &apos;priceCurrency&apos;: &apos;USD&apos;,
+      &apos;category&apos;: toolData.pricing
     },
-    'aggregateRating': {
-      '@type': 'AggregateRating',
-      'ratingValue': toolData.rating,
-      'ratingCount': Math.floor(Math.random() * 100) + 10
+    &apos;aggregateRating&apos;: {
+      &apos;@type&apos;: &apos;AggregateRating&apos;,
+      &apos;ratingValue&apos;: toolData.rating,
+      &apos;ratingCount&apos;: Math.floor(Math.random() * 100) + 10
     }
   };
 }
@@ -195,15 +195,15 @@ export function generateToolJsonLd(toolData: any) {
 // Generate JSON-LD structured data for organization
 export function generateOrganizationJsonLd() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    'name': 'AI Tools Directory',
-    'url': BASE_URL,
-    'logo': `${BASE_URL}/logo.png`,
-    'sameAs': [
-      'https://twitter.com/aitoolsdirectory',
-      'https://www.linkedin.com/company/aitoolsdirectory',
-      'https://www.facebook.com/aitoolsdirectory'
+    &apos;@context&apos;: &apos;https://schema.org&apos;,
+    &apos;@type&apos;: &apos;Organization&apos;,
+    &apos;name&apos;: &apos;AI Tools Directory&apos;,
+    &apos;url&apos;: BASE_URL,
+    &apos;logo&apos;: `${BASE_URL}/logo.png`,
+    &apos;sameAs&apos;: [
+      &apos;https://twitter.com/aitoolsdirectory&apos;,
+      &apos;https://www.linkedin.com/company/aitoolsdirectory&apos;,
+      &apos;https://www.facebook.com/aitoolsdirectory&apos;
     ]
   };
 }
@@ -211,14 +211,14 @@ export function generateOrganizationJsonLd() {
 // Generate JSON-LD structured data for website
 export function generateWebsiteJsonLd() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    'name': 'AI Tools Directory',
-    'url': BASE_URL,
-    'potentialAction': {
-      '@type': 'SearchAction',
-      'target': `${BASE_URL}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string'
+    &apos;@context&apos;: &apos;https://schema.org&apos;,
+    &apos;@type&apos;: &apos;WebSite&apos;,
+    &apos;name&apos;: &apos;AI Tools Directory&apos;,
+    &apos;url&apos;: BASE_URL,
+    &apos;potentialAction&apos;: {
+      &apos;@type&apos;: &apos;SearchAction&apos;,
+      &apos;target&apos;: `${BASE_URL}/search?q={search_term_string}`,
+      &apos;query-input&apos;: &apos;required name=search_term_string&apos;
     }
   };
 }
@@ -232,7 +232,7 @@ export function generateCanonicalUrl(path: string): string {
 export function generateHreflangUrls(path: string): Record<string, string> {
   const url = `${BASE_URL}${path}`;
   return {
-    'en-US': url,
-    'x-default': url
+    &apos;en-US&apos;: url,
+    &apos;x-default&apos;: url
   };
 }

@@ -13,16 +13,16 @@ interface InitialAvatarProps {
 }
 
 const COLORS = [
-  '#FF6B6B', // Red
-  '#4ECDC4', // Teal
-  '#45B7D1', // Blue
-  '#96CEB4', // Green
-  '#FFEEAD', // Yellow
-  '#D4A5A5', // Pink
-  '#9B59B6', // Purple
-  '#E67E22', // Orange
-  '#1ABC9C', // Turquoise
-  '#E74C3C', // Red-Orange
+  &apos;#FF6B6B&apos;, // Red
+  &apos;#4ECDC4&apos;, // Teal
+  &apos;#45B7D1&apos;, // Blue
+  &apos;#96CEB4&apos;, // Green
+  &apos;#FFEEAD&apos;, // Yellow
+  &apos;#D4A5A5&apos;, // Pink
+  &apos;#9B59B6&apos;, // Purple
+  &apos;#E67E22&apos;, // Orange
+  &apos;#1ABC9C&apos;, // Turquoise
+  &apos;#E74C3C&apos;, // Red-Orange
 ];
 
 const InitialAvatar: React.FC<InitialAvatarProps> = ({
@@ -65,18 +65,18 @@ const InitialAvatar: React.FC<InitialAvatarProps> = ({
     height: size,
     minWidth: size,
     minHeight: size,
-    borderRadius: square ? '0.5rem' : '50%',
+    borderRadius: square ? &apos;0.5rem&apos; : &apos;50%&apos;,
     backgroundColor: bgColor,
     color: textColor,
-    fontSize: typeof fontSize === 'number' ? `${fontSize}px` : fontSize,
+    fontSize: typeof fontSize === &apos;number&apos; ? `${fontSize}px` : fontSize,
     fontWeight,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    userSelect: 'none' as const,
-    overflow: 'hidden',
-    textTransform: 'uppercase' as const,
-    cursor: onClick ? 'pointer' : 'default',
+    display: &apos;flex&apos;,
+    alignItems: &apos;center&apos;,
+    justifyContent: &apos;center&apos;,
+    userSelect: &apos;none&apos; as const,
+    overflow: &apos;hidden&apos;,
+    textTransform: &apos;uppercase&apos; as const,
+    cursor: onClick ? &apos;pointer&apos; : &apos;default&apos;,
   };
 
   return (
@@ -104,7 +104,7 @@ function getContrastColor(hexColor: string): string {
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
   
   // Return black for light colors, white for dark colors
-  return luminance > 0.5 ? '#000000' : '#FFFFFF';
+  return luminance > 0.5 ? &apos;#000000&apos; : &apos;#FFFFFF&apos;;
 }
 
 export default InitialAvatar;

@@ -31,7 +31,7 @@ const prisma = {
       const userData = {
         ...data,
         isTwoFactorEnabled: false,
-        twoFactorSecret: '',
+        twoFactorSecret: &apos;&apos;,
         backupCodes: [],
       };
       

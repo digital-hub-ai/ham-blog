@@ -4,24 +4,24 @@
 
 // Query intent types
 export type QueryIntent = 
-  | 'informational'
-  | 'navigational'
-  | 'transactional'
-  | 'comparative'
-  | 'recommendation'
-  | 'tutorial'
-  | 'review'
-  | 'alternative';
+  | &apos;informational&apos;
+  | &apos;navigational&apos;
+  | &apos;transactional&apos;
+  | &apos;comparative&apos;
+  | &apos;recommendation&apos;
+  | &apos;tutorial&apos;
+  | &apos;review&apos;
+  | &apos;alternative&apos;;
 
 // Entity types that can be extracted from queries
 export type EntityType = 
-  | 'tool'
-  | 'category'
-  | 'feature'
-  | 'price'
-  | 'rating'
-  | 'date'
-  | 'brand';
+  | &apos;tool&apos;
+  | &apos;category&apos;
+  | &apos;feature&apos;
+  | &apos;price&apos;
+  | &apos;rating&apos;
+  | &apos;date&apos;
+  | &apos;brand&apos;;
 
 // Extracted entities from a query
 export interface ExtractedEntity {
@@ -196,7 +196,7 @@ function extractEntities(query: string): ExtractedEntity[] {
   brandKeywords.forEach(brand => {
     if (queryLower.includes(brand)) {
       entities.push({
-        type: 'brand',
+        type: &apos;brand&apos;,
         value: brand,
         confidence: 0.95
       });

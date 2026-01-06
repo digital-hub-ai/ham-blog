@@ -447,37 +447,37 @@ The businesses that embrace AI marketing today will be the market leaders of tom
       }
     ],
     semanticEmbedding: new Array(1536).fill(0.1).map((_, i) => Math.sin(i * 0.022)),
-    targetAudience: ['Marketing Professionals', 'Business Owners', 'Digital Marketers', 'CMOs', 'Marketing Agencies']
+    targetAudience: [&apos;Marketing Professionals&apos;, &apos;Business Owners&apos;, &apos;Digital Marketers&apos;, &apos;CMOs&apos;, &apos;Marketing Agencies&apos;]
   };
 
   return (
     <SEOArticleWrapper blogPost={blogPost}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;>
+        <div className="max-w-4xl mx-auto px-4 py-12&quot;>
           {/* Back Navigation */}
-          <Link href="/blog" className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          <Link href="/blog&quot; className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors&quot;>
+            <svg className="w-4 h-4 mr-2&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+              <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18&quot; />
             </svg>
             Back to Blog
           </Link>
 
           {/* Article Content */}
-          <div className="prose prose-invert prose-lg max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: blogPost.content.replace(/\n/g, '<br>') }} />
+          <div className="prose prose-invert prose-lg max-w-none&quot;>
+            <div dangerouslySetInnerHTML={{ __html: blogPost.content.replace(/\n/g, &apos;<br>) }} />
           </div>
 
           {/* Related Articles */}
-          <div className="mt-16 pt-8 border-t border-purple-800">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link href="/blog/ai-productivity-tools-2024" className="block p-6 bg-purple-900/30 rounded-lg hover:bg-purple-900/50 transition-colors">
-                <h3 className="text-lg font-semibold text-purple-300 mb-2">AI Productivity Tools</h3>
-                <p className="text-gray-400 text-sm">Transform your workflow with intelligent automation</p>
+          <div className="mt-16 pt-8 border-t border-purple-800&quot;>
+            <h2 className="text-2xl font-bold text-white mb-6&quot;>Related Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
+              <Link href="/blog/ai-productivity-tools-2024&quot; className="block p-6 bg-purple-900/30 rounded-lg hover:bg-purple-900/50 transition-colors&quot;>
+                <h3 className="text-lg font-semibold text-purple-300 mb-2&quot;>AI Productivity Tools</h3>
+                <p className="text-gray-400 text-sm&quot;>Transform your workflow with intelligent automation</p>
               </Link>
-              <Link href="/blog/ai-content-creation-strategies" className="block p-6 bg-purple-900/30 rounded-lg hover:bg-purple-900/50 transition-colors">
-                <h3 className="text-lg font-semibold text-purple-300 mb-2">AI Content Creation Strategies</h3>
-                <p className="text-gray-400 text-sm">Drive real results with AI-powered content</p>
+              <Link href="/blog/ai-content-creation-strategies&quot; className="block p-6 bg-purple-900/30 rounded-lg hover:bg-purple-900/50 transition-colors&quot;>
+                <h3 className="text-lg font-semibold text-purple-300 mb-2&quot;>AI Content Creation Strategies</h3>
+                <p className="text-gray-400 text-sm&quot;>Drive real results with AI-powered content</p>
               </Link>
             </div>
           </div>

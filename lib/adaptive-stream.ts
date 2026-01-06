@@ -2,12 +2,12 @@ interface UserProfile {
   id: string;
   browsingHistory: string[];
   interests: string[];
-  skillLevel: 'beginner' | 'intermediate' | 'advanced';
-  role: 'founder' | 'developer' | 'designer' | 'analyst' | 'other';
+  skillLevel: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos;;
+  role: &apos;founder&apos; | &apos;developer&apos; | &apos;designer&apos; | &apos;analyst&apos; | &apos;other&apos;;
   engagementMetrics: {
     avgReadTime: number;
     preferredCategories: string[];
-    preferredContentLength: 'short' | 'medium' | 'long';
+    preferredContentLength: &apos;short&apos; | &apos;medium&apos; | &apos;long&apos;;
     timeOfDayEngagement: number[];
   };
 }
@@ -22,7 +22,7 @@ interface KnowledgeNode {
   updatedAt?: string;
   category: string;
   tags: string[];
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  difficulty: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos;;
   readTime: number;
   engagementScore: number;
   trending: boolean;
@@ -306,14 +306,14 @@ class AdaptiveStreamAlgorithm {
    * Helper methods
    */
   private isAdjacentDifficulty(diff1: string, diff2: string): boolean {
-    const levels = ['beginner', 'intermediate', 'advanced'];
+    const levels = [&apos;beginner&apos;, &apos;intermediate&apos;, &apos;advanced&apos;];
     const idx1 = levels.indexOf(diff1);
     const idx2 = levels.indexOf(diff2);
     return Math.abs(idx1 - idx2) === 1;
   }
 
-  private categorizeReadTime(minutes: number): 'short' | 'medium' | 'long' {
-    if (minutes <= 5) return 'short';
+  private categorizeReadTime(minutes: number): &apos;short&apos; | &apos;medium&apos; | &apos;long&apos; {
+    if (minutes <= 5) return &apos;short&apos;;
     if (minutes <= 15) return 'medium';
     return 'long';
   }

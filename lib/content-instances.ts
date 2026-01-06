@@ -1,11 +1,11 @@
 interface ContentInstance {
   id: string;
-  type: 'founder' | 'developer' | 'designer' | 'analyst' | 'case-study';
+  type: &apos;founder&apos; | &apos;developer&apos; | &apos;designer&apos; | &apos;analyst&apos; | &apos;case-study&apos;;
   title: string;
   content: string;
   examples: string[];
   keyTakeaways: string[];
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  difficulty: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos;;
   estimatedReadTime: number;
   relatedTools: string[];
   actionItems: string[];
@@ -26,7 +26,7 @@ interface BaseContent {
   metadata: {
     category: string;
     tags: string[];
-    difficulty: 'beginner' | 'intermediate' | 'advanced';
+    difficulty: &apos;beginner&apos; | &apos;intermediate&apos; | &apos;advanced&apos;;
     estimatedReadTime: { base: number; founder: number; developer: number };
   };
 }
@@ -90,18 +90,18 @@ class ContentInstanceGenerator {
     `;
 
     // In production, this would call OpenAI API
-    const aiResponse = await this.mockAIResponse(prompt, 'founder');
+    const aiResponse = await this.mockAIResponse(prompt, &apos;founder&apos;);
 
     return {
       id: `${baseContent.id}_founder`,
-      type: 'founder',
-      title: `${baseContent.title} (Founder's Perspective)`,
+      type: &apos;founder&apos;,
+      title: `${baseContent.title} (Founder&apos;s Perspective)`,
       content: aiResponse.content,
       examples: baseContent.examples.business,
       keyTakeaways: aiResponse.keyTakeaways,
-      difficulty: this.adjustDifficulty(baseContent.metadata.difficulty, 'founder'),
+      difficulty: this.adjustDifficulty(baseContent.metadata.difficulty, &apos;founder&apos;),
       estimatedReadTime: baseContent.metadata.estimatedReadTime.founder,
-      relatedTools: this.filterToolsForPersona(baseContent, 'founder'),
+      relatedTools: this.filterToolsForPersona(baseContent, &apos;founder&apos;),
       actionItems: aiResponse.actionItems
     };
   }
@@ -129,18 +129,18 @@ class ContentInstanceGenerator {
       Include code snippets where relevant.
     `;
 
-    const aiResponse = await this.mockAIResponse(prompt, 'developer');
+    const aiResponse = await this.mockAIResponse(prompt, &apos;developer&apos;);
 
     return {
       id: `${baseContent.id}_developer`,
-      type: 'developer',
-      title: `${baseContent.title} (Developer's Guide)`,
+      type: &apos;developer&apos;,
+      title: `${baseContent.title} (Developer&apos;s Guide)`,
       content: aiResponse.content,
       examples: baseContent.examples.technical,
       keyTakeaways: aiResponse.keyTakeaways,
       difficulty: baseContent.metadata.difficulty,
       estimatedReadTime: baseContent.metadata.estimatedReadTime.developer,
-      relatedTools: this.filterToolsForPersona(baseContent, 'developer'),
+      relatedTools: this.filterToolsForPersona(baseContent, &apos;developer&apos;),
       actionItems: aiResponse.actionItems
     };
   }
@@ -167,18 +167,18 @@ class ContentInstanceGenerator {
       Include visual examples and design principles.
     `;
 
-    const aiResponse = await this.mockAIResponse(prompt, 'designer');
+    const aiResponse = await this.mockAIResponse(prompt, &apos;designer&apos;);
 
     return {
       id: `${baseContent.id}_designer`,
-      type: 'designer',
-      title: `${baseContent.title} (Designer's Perspective)`,
+      type: &apos;designer&apos;,
+      title: `${baseContent.title} (Designer&apos;s Perspective)`,
       content: aiResponse.content,
       examples: this.extractDesignExamples(baseContent),
       keyTakeaways: aiResponse.keyTakeaways,
-      difficulty: this.adjustDifficulty(baseContent.metadata.difficulty, 'designer'),
+      difficulty: this.adjustDifficulty(baseContent.metadata.difficulty, &apos;designer&apos;),
       estimatedReadTime: baseContent.metadata.estimatedReadTime.base,
-      relatedTools: this.filterToolsForPersona(baseContent, 'designer'),
+      relatedTools: this.filterToolsForPersona(baseContent, &apos;designer&apos;),
       actionItems: aiResponse.actionItems
     };
   }
@@ -205,18 +205,18 @@ class ContentInstanceGenerator {
       Include data examples and analytical frameworks.
     `;
 
-    const aiResponse = await this.mockAIResponse(prompt, 'analyst');
+    const aiResponse = await this.mockAIResponse(prompt, &apos;analyst&apos;);
 
     return {
       id: `${baseContent.id}_analyst`,
-      type: 'analyst',
-      title: `${baseContent.title} (Analyst's View)`,
+      type: &apos;analyst&apos;,
+      title: `${baseContent.title} (Analyst&apos;s View)`,
       content: aiResponse.content,
       examples: this.extractAnalyticsExamples(baseContent),
       keyTakeaways: aiResponse.keyTakeaways,
-      difficulty: this.adjustDifficulty(baseContent.metadata.difficulty, 'analyst'),
+      difficulty: this.adjustDifficulty(baseContent.metadata.difficulty, &apos;analyst&apos;),
       estimatedReadTime: baseContent.metadata.estimatedReadTime.base,
-      relatedTools: this.filterToolsForPersona(baseContent, 'analyst'),
+      relatedTools: this.filterToolsForPersona(baseContent, &apos;analyst&apos;),
       actionItems: aiResponse.actionItems
     };
   }
@@ -244,16 +244,16 @@ class ContentInstanceGenerator {
       Use real-world examples and measurable outcomes.
     `;
 
-    const aiResponse = await this.mockAIResponse(prompt, 'case-study');
+    const aiResponse = await this.mockAIResponse(prompt, &apos;case-study&apos;);
 
     return {
       id: `${baseContent.id}_case_study`,
-      type: 'case-study',
+      type: &apos;case-study&apos;,
       title: `Case Study: ${baseContent.title}`,
       content: aiResponse.content,
       examples: [...baseContent.examples.technical, ...baseContent.examples.business, ...baseContent.examples.caseStudy],
       keyTakeaways: aiResponse.keyTakeaways,
-      difficulty: 'intermediate', // Case studies are typically intermediate
+      difficulty: &apos;intermediate&apos;, // Case studies are typically intermediate
       estimatedReadTime: Math.max(...Object.values(baseContent.metadata.estimatedReadTime)),
       relatedTools: baseContent.metadata.tags,
       actionItems: aiResponse.actionItems
@@ -532,9 +532,9 @@ class ContentInstanceGenerator {
 
   private extractAnalyticsExamples(baseContent: BaseContent): string[] {
     return baseContent.examples.technical.filter(ex => 
-      ex.toLowerCase().includes('data') || 
-      ex.toLowerCase().includes('analytics') ||
-      ex.toLowerCase().includes('metrics')
+      ex.toLowerCase().includes(&apos;data&apos;) || 
+      ex.toLowerCase().includes(&apos;analytics&apos;) ||
+      ex.toLowerCase().includes(&apos;metrics&apos;)
     );
   }
 
@@ -546,15 +546,15 @@ class ContentInstanceGenerator {
     persona: string
   ): Promise<ContentInstance> {
     switch (persona) {
-      case 'founder':
+      case &apos;founder&apos;:
         return this.generateFounderInstance(baseContent);
-      case 'developer':
+      case &apos;developer&apos;:
         return this.generateDeveloperInstance(baseContent);
-      case 'designer':
+      case &apos;designer&apos;:
         return this.generateDesignerInstance(baseContent);
-      case 'analyst':
+      case &apos;analyst&apos;:
         return this.generateAnalystInstance(baseContent);
-      case 'case-study':
+      case &apos;case-study&apos;:
         return this.generateCaseStudyInstance(baseContent);
       default:
         return this.generateDeveloperInstance(baseContent);

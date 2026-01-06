@@ -391,12 +391,12 @@ const RealTimeDataManager: React.FC<RealTimeDataManagerProps> = ({
   // Get data streams relevant to user persona
   const getDataStreamsForPersona = (persona: string) => {
     const allStreams = [
-      { type: 'performance_metrics', name: 'Performance Metrics', priority: 10 },
-      { type: 'user_activity', name: 'User Activity', priority: 8 },
-      { type: 'system_health', name: 'System Health', priority: 9 },
-      { type: 'pricing_updates', name: 'Pricing Updates', priority: 6 },
-      { type: 'feature_usage', name: 'Feature Usage', priority: 7 },
-      { type: 'error_tracking', name: 'Error Tracking', priority: 8 }
+      { type: &apos;performance_metrics&apos;, name: &apos;Performance Metrics&apos;, priority: 10 },
+      { type: &apos;user_activity&apos;, name: &apos;User Activity&apos;, priority: 8 },
+      { type: &apos;system_health&apos;, name: &apos;System Health&apos;, priority: 9 },
+      { type: &apos;pricing_updates&apos;, name: &apos;Pricing Updates&apos;, priority: 6 },
+      { type: &apos;feature_usage&apos;, name: &apos;Feature Usage&apos;, priority: 7 },
+      { type: &apos;error_tracking&apos;, name: &apos;Error Tracking&apos;, priority: 8 }
     ];
 
     const personaPriorities: Record<string, Record<string, number>> = {
@@ -484,7 +484,7 @@ const RealTimeDataManager: React.FC<RealTimeDataManagerProps> = ({
 
     const interval = setInterval(() => {
       // Simulate random data updates
-      const streamTypes = ['performance_metrics', 'user_activity', 'system_health'];
+      const streamTypes = [&apos;performance_metrics&apos;, &apos;user_activity&apos;, &apos;system_health&apos;];
       const randomStream = streamTypes[Math.floor(Math.random() * streamTypes.length)];
       
       const mockData: Record<string, any> = {
@@ -520,66 +520,66 @@ const RealTimeDataManager: React.FC<RealTimeDataManagerProps> = ({
   }, [isConnected, handleStreamData]);
 
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-white mb-2">Real-Time Data Manager</h3>
-        <p className="text-white/60">
+    <div className="max-w-7xl mx-auto&quot;>
+      <div className="mb-8&quot;>
+        <h3 className="text-2xl font-semibold text-white mb-2&quot;>Real-Time Data Manager</h3>
+        <p className="text-white/60&quot;>
           Live data streams and intelligent monitoring for {tool.tool_id}
         </p>
       </div>
 
       {/* Connection Status */}
-      <div className="mb-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className={`w-3 h-3 rounded-full ${isConnected ? 'bg-green-500' : 'bg-red-500'}`} />
-            <span className="text-white">
-              {isConnected ? 'Connected' : 'Disconnected'}
+      <div className="mb-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20&quot;>
+        <div className="flex items-center justify-between&quot;>
+          <div className="flex items-center gap-3&quot;>
+            <div className={`w-3 h-3 rounded-full ${isConnected ? &apos;bg-green-500&apos; : &apos;bg-red-500}`} />
+            <span className="text-white&quot;>
+              {isConnected ? &apos;Connected&apos; : &apos;Disconnected&apos;}
             </span>
           </div>
-          <div className="text-sm text-white/60">
+          <div className="text-sm text-white/60&quot;>
             {connections.length} active streams • {alerts.filter(a => !a.acknowledged).length} unacknowledged alerts
           </div>
         </div>
       </div>
 
       {/* Active Streams */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-          <h5 className="font-medium text-white mb-4">Active Data Streams</h5>
-          <div className="space-y-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8&quot;>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+          <h5 className="font-medium text-white mb-4&quot;>Active Data Streams</h5>
+          <div className="space-y-3&quot;>
             {connections.map((conn, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+              <div key={index} className="flex items-center justify-between p-3 bg-white/5 rounded-lg&quot;>
                 <div>
-                  <div className="text-white">{conn.connection_id}</div>
-                  <div className="text-sm text-white/60">
+                  <div className="text-white&quot;>{conn.connection_id}</div>
+                  <div className="text-sm text-white/60&quot;>
                     Status: {conn.status} • Messages: {conn.message_count}
                   </div>
                 </div>
                 <div className={`w-2 h-2 rounded-full ${
-                  conn.status === 'connected' ? 'bg-green-500' : 'bg-yellow-500'
+                  conn.status === &apos;connected&apos; ? &apos;bg-green-500&apos; : &apos;bg-yellow-500
                 }`} />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-          <h5 className="font-medium text-white mb-4">Recent Alerts</h5>
-          <div className="space-y-3 max-h-64 overflow-y-auto">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+          <h5 className="font-medium text-white mb-4&quot;>Recent Alerts</h5>
+          <div className="space-y-3 max-h-64 overflow-y-auto&quot;>
             {alerts.slice(0, 5).map((alert, index) => (
               <div key={index} className={`p-3 rounded-lg border ${
-                alert.severity === 'critical' ? 'bg-red-500/10 border-red-500/30' :
-                alert.severity === 'high' ? 'bg-orange-500/10 border-orange-500/30' :
-                alert.severity === 'medium' ? 'bg-yellow-500/10 border-yellow-500/30' :
-                'bg-blue-500/10 border-blue-500/30'
+                alert.severity === &apos;critical&apos; ? &apos;bg-red-500/10 border-red-500/30&apos; :
+                alert.severity === &apos;high&apos; ? &apos;bg-orange-500/10 border-orange-500/30&apos; :
+                alert.severity === &apos;medium&apos; ? &apos;bg-yellow-500/10 border-yellow-500/30&apos; :
+                &apos;bg-blue-500/10 border-blue-500/30
               }`}>
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between&quot;>
                   <div>
-                    <div className="text-white font-medium">{alert.title}</div>
-                    <div className="text-sm text-white/60">{alert.message}</div>
+                    <div className="text-white font-medium&quot;>{alert.title}</div>
+                    <div className="text-sm text-white/60&quot;>{alert.message}</div>
                   </div>
-                  <div className="text-xs text-white/50">
+                  <div className="text-xs text-white/50&quot;>
                     {new Date(alert.timestamp).toLocaleTimeString()}
                   </div>
                 </div>
@@ -591,37 +591,37 @@ const RealTimeDataManager: React.FC<RealTimeDataManagerProps> = ({
 
       {/* Real-Time Metrics */}
       {realTimeData && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <h5 className="font-medium text-white mb-4">Performance</h5>
-            <div className="space-y-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+            <h5 className="font-medium text-white mb-4&quot;>Performance</h5>
+            <div className="space-y-2&quot;>
               {realTimeData.data_streams.performance_metrics.slice(-3).reverse().map((point, index) => (
-                <div key={index} className="flex justify-between text-sm">
-                  <span className="text-white/60">Response Time</span>
-                  <span className="text-white">{point.value.response_time.toFixed(0)}ms</span>
+                <div key={index} className="flex justify-between text-sm&quot;>
+                  <span className="text-white/60&quot;>Response Time</span>
+                  <span className="text-white&quot;>{point.value.response_time.toFixed(0)}ms</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <h5 className="font-medium text-white mb-4">User Activity</h5>
-            <div className="space-y-2">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+            <h5 className="font-medium text-white mb-4&quot;>User Activity</h5>
+            <div className="space-y-2&quot;>
               {realTimeData.data_streams.user_activity.slice(-3).reverse().map((point, index) => (
-                <div key={index} className="flex justify-between text-sm">
-                  <span className="text-white/60">Active Users</span>
-                  <span className="text-white">{point.value.active_users}</span>
+                <div key={index} className="flex justify-between text-sm&quot;>
+                  <span className="text-white/60&quot;>Active Users</span>
+                  <span className="text-white&quot;>{point.value.active_users}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <h5 className="font-medium text-white mb-4">System Health</h5>
-            <div className="space-y-2">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20&quot;>
+            <h5 className="font-medium text-white mb-4&quot;>System Health</h5>
+            <div className="space-y-2&quot;>
               {realTimeData.data_streams.system_health.slice(-3).reverse().map((point, index) => (
-                <div key={index} className="flex justify-between text-sm">
-                  <span className="text-white/60">Status</span>
+                <div key={index} className="flex justify-between text-sm&quot;>
+                  <span className="text-white/60&quot;>Status</span>
                   <span className={`capitalize ${
                     point.value.status === 'healthy' ? 'text-green-400' : 'text-yellow-400'
                   }`}>

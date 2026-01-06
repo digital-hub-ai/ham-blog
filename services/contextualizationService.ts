@@ -4,21 +4,21 @@
 
 // Context types
 export type ContextType = 
-  | 'historical'      // Historical context
-  | 'geographical'    // Geographical context
-  | 'cultural'        // Cultural context
-  | 'temporal'        // Temporal context
-  | 'technical'       // Technical context
-  | 'comparative'     // Comparative context
-  | 'related'         // Related topics
-  | 'prerequisites'   // Prerequisites or background
-  | 'applications'    // Applications or use cases
-  | 'implications'    // Implications or consequences
-  | 'controversies'   // Controversies or debates
-  | 'future'          // Future trends or predictions
-  | 'expert'          // Expert opinions
-  | 'user'            // User-specific context
-  | 'trending';       // Trending context
+  | &apos;historical&apos;      // Historical context
+  | &apos;geographical&apos;    // Geographical context
+  | &apos;cultural&apos;        // Cultural context
+  | &apos;temporal&apos;        // Temporal context
+  | &apos;technical&apos;       // Technical context
+  | &apos;comparative&apos;     // Comparative context
+  | &apos;related&apos;         // Related topics
+  | &apos;prerequisites&apos;   // Prerequisites or background
+  | &apos;applications&apos;    // Applications or use cases
+  | &apos;implications&apos;    // Implications or consequences
+  | &apos;controversies&apos;   // Controversies or debates
+  | &apos;future&apos;          // Future trends or predictions
+  | &apos;expert&apos;          // Expert opinions
+  | &apos;user&apos;            // User-specific context
+  | &apos;trending&apos;;       // Trending context
 
 // Context item
 export interface ContextItem {
@@ -30,7 +30,7 @@ export interface ContextItem {
   source?: string;
   timestamp?: number;
   confidence: number; // 0-1
-  relationship: 'supports' | 'contradicts' | 'neutral' | 'extends';
+  relationship: &apos;supports&apos; | &apos;contradicts&apos; | &apos;neutral&apos; | &apos;extends&apos;;
 }
 
 // Contextualized result
@@ -239,7 +239,7 @@ function extractHistoricalTerms(content: string): string[] {
 function generateHistoricalContent(term: string, resultTitle: string): string {
   // This would typically query a knowledge base
   // For now, we'll generate sample content
-  return `The term "${term}" has significant historical importance in relation to "${resultTitle}". Historical context helps understand the development and evolution of this topic over time.`;
+  return `The term &quot;${term}&quot; has significant historical importance in relation to &quot;${resultTitle}&quot;. Historical context helps understand the development and evolution of this topic over time.`;
 }
 
 /**
@@ -317,7 +317,7 @@ function extractGeographicalReferences(content: string): string[] {
  * Generate geographical content
  */
 function generateGeographicalContent(location: string, resultTitle: string): string {
-  return `The location "${location}" plays an important role in understanding "${resultTitle}". Regional variations and geographical factors can significantly impact this topic.`;
+  return `The location &quot;${location}&quot; plays an important role in understanding &quot;${resultTitle}&quot;. Regional variations and geographical factors can significantly impact this topic.`;
 }
 
 /**
@@ -391,7 +391,7 @@ function extractCulturalReferences(content: string): string[] {
  * Generate cultural content
  */
 function generateCulturalContent(term: string, resultTitle: string): string {
-  return `The cultural concept of "${term}" provides important context for understanding "${resultTitle}". Cultural factors influence perspectives and interpretations of this topic.`;
+  return `The cultural concept of &quot;${term}&quot; provides important context for understanding &quot;${resultTitle}&quot;. Cultural factors influence perspectives and interpretations of this topic.`;
 }
 
 /**
@@ -427,12 +427,12 @@ function generateTemporalContext(
   if (result.publishedAt) {
     const contextItem: ContextItem = {
       id: `temporal-${result.id}`,
-      type: 'temporal',
-      title: 'Temporal Context',
+      type: &apos;temporal&apos;,
+      title: &apos;Temporal Context&apos;,
       content: generateTemporalContent(result),
       relevance: 0.7,
       confidence: 0.9,
-      relationship: 'supports'
+      relationship: &apos;supports&apos;
     };
     
     contextItems.push(contextItem);
@@ -450,7 +450,7 @@ function generateTemporalContent(result: any): string {
   const ageInDays = (now.getTime() - pubDate.getTime()) / (24 * 60 * 60 * 1000);
   
   if (ageInDays < 1) {
-    return 'This content was published today and represents the most current information available.';
+    return &apos;This content was published today and represents the most current information available.&apos;;
   } else if (ageInDays < 7) {
     return `This content was published ${Math.round(ageInDays)} days ago and is relatively current.`;
   } else if (ageInDays < 30) {
@@ -590,7 +590,7 @@ function extractComparisons(content: string): string[] {
  * Generate comparative content
  */
 function generateComparativeContent(comparison: string, resultTitle: string): string {
-  return `This content can be compared to "${comparison}" to understand relative strengths, weaknesses, and differences in the context of "${resultTitle}".`;
+  return `This content can be compared to &quot;${comparison}&quot; to understand relative strengths, weaknesses, and differences in the context of &quot;${resultTitle}&quot;.`;
 }
 
 /**
@@ -664,7 +664,7 @@ function generateRelatedTopics(result: any, userContext: UserContext): string[] 
  * Generate related content
  */
 function generateRelatedContent(topic: string, resultTitle: string): string {
-  return `Explore "${topic}" to gain deeper insights related to "${resultTitle}". This can provide additional perspectives and complementary information.`;
+  return `Explore &quot;${topic}&quot; to gain deeper insights related to &quot;${resultTitle}&quot;. This can provide additional perspectives and complementary information.`;
 }
 
 /**
@@ -738,7 +738,7 @@ function generateRelatedQueries(result: any, contextItems: ContextItem[]): strin
           .filter(item => item.type === 'comparative')
           .slice(0, 2)
           .forEach(item => {
-            queries.push(`${result.title} vs ${item.title.replace('Comparison: ', '')}`);
+            queries.push(`${result.title} vs ${item.title.replace(&apos;Comparison: &apos;, &apos;&apos;)}`);
           });
         break;
       default:
@@ -758,7 +758,7 @@ function generateTimeline(result: any, contextItems: ContextItem[]): Array<{
   significance: number;
 }> | undefined {
   // Only generate timeline if there's historical context
-  const historicalItems = contextItems.filter(item => item.type === 'historical');
+  const historicalItems = contextItems.filter(item => item.type === &apos;historical&apos;);
   
   if (historicalItems.length === 0) {
     return undefined;
@@ -767,18 +767,18 @@ function generateTimeline(result: any, contextItems: ContextItem[]): Array<{
   // Generate sample timeline events
   return [
     {
-      date: '2020',
-      event: 'Key development in this field',
+      date: &apos;2020&apos;,
+      event: &apos;Key development in this field&apos;,
       significance: 0.8
     },
     {
-      date: '2022',
-      event: 'Major advancement related to this topic',
+      date: &apos;2022&apos;,
+      event: &apos;Major advancement related to this topic&apos;,
       significance: 0.9
     },
     {
-      date: '2023',
-      event: 'Recent developments',
+      date: &apos;2023&apos;,
+      event: &apos;Recent developments&apos;,
       significance: 0.7
     }
   ];
@@ -799,7 +799,7 @@ function generateGeographyInfo(result: any, contextItems: ContextItem[]): Array<
   }
   
   return geographicalItems.map(item => ({
-    location: item.title.replace('Geographical Context: ', ''),
+    location: item.title.replace(&apos;Geographical Context: &apos;, &apos;&apos;),
     relevance: item.relevance
   }));
 }
@@ -856,11 +856,11 @@ export function getPersonalizedContext(
   
   // Add trending context for current topics
   if (resultTopics.some(topic => 
-    topic.toLowerCase().includes('trend') || 
-    topic.toLowerCase().includes('new')
+    topic.toLowerCase().includes(&apos;trend&apos;) || 
+    topic.toLowerCase().includes(&apos;new&apos;)
   )) {
-    preferredContext.push('trending');
-    preferredContext.push('future');
+    preferredContext.push(&apos;trending&apos;);
+    preferredContext.push(&apos;future&apos;);
   }
   
   return Array.from(new Set(preferredContext));

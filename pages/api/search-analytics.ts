@@ -1,11 +1,11 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getSearchAnalytics } from '../../services/searchService';
+import { NextApiRequest, NextApiResponse } from &apos;next&apos;;
+import { getSearchAnalytics } from &apos;../../services/searchService&apos;;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  if (req.method !== &apos;GET&apos;) {
     return res.status(405).json({ 
       success: false,
-      message: 'Method not allowed' 
+      message: &apos;Method not allowed&apos; 
     });
   }
 
@@ -17,11 +17,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       data: analytics
     });
   } catch (error) {
-    console.error('Analytics API error:', error);
+    console.error(&apos;Analytics API error:&apos;, error);
     return res.status(500).json({ 
       success: false,
-      message: 'Error fetching analytics data',
-      error: error instanceof Error ? error.message : 'Unknown error'
+      message: &apos;Error fetching analytics data&apos;,
+      error: error instanceof Error ? error.message : &apos;Unknown error&apos;
     });
   }
 }

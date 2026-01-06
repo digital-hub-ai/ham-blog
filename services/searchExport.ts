@@ -66,17 +66,17 @@ export function exportSearchResults(
   
   // Export based on format
   switch (options.format) {
-    case 'csv':
+    case &apos;csv&apos;:
       return exportToCSV(sortedResults);
-    case 'json':
+    case &apos;json&apos;:
       return exportToJSON(sortedResults);
-    case 'xml':
+    case &apos;xml&apos;:
       return exportToXML(sortedResults);
-    case 'html':
+    case &apos;html&apos;:
       return exportToHTML(sortedResults, options.template);
-    case 'markdown':
+    case &apos;markdown&apos;:
       return exportToMarkdown(sortedResults);
-    case 'pdf':
+    case &apos;pdf&apos;:
       return exportToPDFPlaceholder(sortedResults);
     default:
       throw new Error(`Unsupported export format: ${options.format}`);
@@ -85,7 +85,7 @@ export function exportSearchResults(
 
 // Export to CSV
 function exportToCSV(results: any[]): string {
-  if (results.length === 0) return '';
+  if (results.length === 0) return &apos;&apos;;
   
   // Get all unique keys from all results
   const allKeys = new Set<string>();
@@ -99,18 +99,18 @@ function exportToCSV(results: any[]): string {
   results.forEach(result => {
     const values = headers.map(header => {
       const value = result[header];
-      if (value === null || value === undefined) return '';
-      if (typeof value === 'string') {
+      if (value === null || value === undefined) return &apos;&apos;;
+      if (typeof value === &apos;string&apos;) {
         // Escape quotes and wrap in quotes if contains comma or quote
-        const escaped = value.replace(/"/g, '""');
-        return escaped.includes(',') || escaped.includes('"') ? `"${escaped}"` : escaped;
+        const escaped = value.replace(/&quot;/g, &apos;&quot;&quot;&apos;);
+        return escaped.includes(&apos;,&apos;) || escaped.includes(&apos;&quot;&apos;) ? `&quot;${escaped}&quot;` : escaped;
       }
       return String(value);
     });
-    csvRows.push(values.join(','));
+    csvRows.push(values.join(&apos;,&apos;));
   });
   
-  return csvRows.join('\n');
+  return csvRows.join(&apos;\n&apos;);
 }
 
 // Export to JSON
@@ -120,20 +120,20 @@ function exportToJSON(results: any[]): string {
 
 // Export to XML
 function exportToXML(results: any[]): string {
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<searchResults>\n';
+  let xml = &apos;<?xml version="1.0&quot; encoding="UTF-8&quot;?>\n&apos;;
+  xml += &apos;<searchResults>\n';
   
   results.forEach((result, index) => {
-    xml += `  <result id="${index}">\n`;
+    xml += `  <result id="${index}&quot;>\n`;
     Object.entries(result).forEach(([key, value]) => {
       // Convert key to valid XML tag name
-      const tagName = key.replace(/[^a-zA-Z0-9_-]/g, '_');
+      const tagName = key.replace(/[^a-zA-Z0-9_-]/g, &apos;_&apos;);
       xml += `    <${tagName}>${escapeXML(String(value))}</${tagName}>\n`;
     });
     xml += `  </result>\n`;
   });
   
-  xml += '</searchResults>';
+  xml += &apos;</searchResults>&apos;;
   return xml;
 }
 
@@ -141,7 +141,7 @@ function exportToXML(results: any[]): string {
 function exportToHTML(results: any[], template?: string): string {
   if (template) {
     // Use custom template
-    return template.replace('{{results}}', JSON.stringify(results));
+    return template.replace(&apos;{{results}}&apos;, JSON.stringify(results));
   }
   
   // Default HTML template
@@ -177,7 +177,7 @@ function exportToHTML(results: any[], template?: string): string {
       html += `<tr>`;
       headers.forEach(header => {
         const value = result[header];
-        html += `<td>${escapeHTML(String(value || ''))}</td>`;
+        html += `<td>${escapeHTML(String(value || &apos;&apos;))}</td>`;
       });
       html += `</tr>`;
     });
@@ -208,9 +208,9 @@ function exportToMarkdown(results: any[]): string {
   results.forEach(result => {
     const row = headers.map(header => {
       const value = result[header];
-      return escapeMarkdown(String(value || ''));
+      return escapeMarkdown(String(value || &apos;&apos;));
     });
-    markdown += '| ' + row.join(' | ') + ' |\n';
+    markdown += &apos;| &apos; + row.join(&apos; | &apos;) + &apos; |\n&apos;;
   });
   
   return markdown;
@@ -231,37 +231,37 @@ function exportToPDFPlaceholder(results: any[]): string {
 // Helper functions for escaping content
 function escapeXML(str: string): string {
   return str
-    .replace(/&/g, '&amp;')
+    .replace(/&/g, &apos;&amp;&apos;)
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
+    .replace(/>/g, &apos;&gt;&apos;)
+    .replace(/&quot;/g, &apos;&quot;&apos;)
+    .replace(/&apos;/g, &apos;&apos;&apos;);
 }
 
 function escapeHTML(str: string): string {
   return str
-    .replace(/&/g, '&amp;')
+    .replace(/&/g, &apos;&amp;&apos;)
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(/>/g, &apos;&gt;&apos;)
+    .replace(/&quot;/g, &apos;&quot;&apos;);
 }
 
 function escapeMarkdown(str: string): string {
   return str
-    .replace(/\\/g, '\\\\')
-    .replace(/\*/g, '\\*')
-    .replace(/_/g, '\\_')
-    .replace(/\{/g, '\\{')
-    .replace(/\}/g, '\\}')
-    .replace(/\[/g, '\\[')
-    .replace(/\]/g, '\\]')
-    .replace(/\(/g, '\\(')
-    .replace(/\)/g, '\\)')
-    .replace(/#/g, '\\#')
-    .replace(/\+/g, '\\+')
-    .replace(/\-/g, '\\-')
-    .replace(/\./g, '\\.')
-    .replace(/\!/g, '\\!');
+    .replace(/\\/g, &apos;\\\\&apos;)
+    .replace(/\*/g, &apos;\\*&apos;)
+    .replace(/_/g, &apos;\\_&apos;)
+    .replace(/\{/g, &apos;\\{&apos;)
+    .replace(/\}/g, &apos;\\}&apos;)
+    .replace(/\[/g, &apos;\\[&apos;)
+    .replace(/\]/g, &apos;\\]&apos;)
+    .replace(/\(/g, &apos;\\(&apos;)
+    .replace(/\)/g, &apos;\\)&apos;)
+    .replace(/#/g, &apos;\\#&apos;)
+    .replace(/\+/g, &apos;\\+&apos;)
+    .replace(/\-/g, &apos;\\-&apos;)
+    .replace(/\./g, &apos;\\.&apos;)
+    .replace(/\!/g, &apos;\\!&apos;);
 }
 
 // Generate export filename
@@ -270,19 +270,19 @@ export function generateExportFilename(
   format: ExportFormat,
   timestamp: boolean = true
 ): string {
-  let filename = 'search-results';
+  let filename = &apos;search-results&apos;;
   
   if (query) {
     // Sanitize query for filename
     filename += `-${query
       .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '')}`;
+      .replace(/[^a-z0-9]+/g, &apos;-&apos;)
+      .replace(/^-+|-+$/g, &apos;&apos;)}`;
   }
   
   if (timestamp) {
     const now = new Date();
-    filename += `-${now.getFullYear()}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}`;
+    filename += `-${now.getFullYear()}${(now.getMonth() + 1).toString().padStart(2, &apos;0&apos;)}${now.getDate().toString().padStart(2, &apos;0&apos;)}`;
   }
   
   filename += `.${format}`;

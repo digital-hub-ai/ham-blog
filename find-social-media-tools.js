@@ -1,10 +1,10 @@
-const fs = require('fs');
+const fs = require(&apos;fs&apos;);
 
 // Read the tools file
-const toolsData = fs.readFileSync('./data/tools.ts', 'utf8');
-const lines = toolsData.split('\n');
+const toolsData = fs.readFileSync(&apos;./data/tools.ts&apos;, &apos;utf8&apos;);
+const lines = toolsData.split(&apos;\n&apos;);
 
-console.log('=== TOOLS IN SOCIAL MEDIA MANAGEMENT CATEGORY ===');
+console.log(&apos;=== TOOLS IN SOCIAL MEDIA MANAGEMENT CATEGORY ===');
 
 let inSocialMediaCategory = false;
 let currentTool = [];
@@ -14,7 +14,7 @@ for (let i = 0; i < lines.length; i++) {
   const line = lines[i].trim();
   
   // Check if we're entering a Social Media Management tool
-  if (line.includes('"category": "Social Media Management"')) {
+  if (line.includes('&quot;category&quot;: &quot;Social Media Management&quot;')) {
     inSocialMediaCategory = true;
     currentTool = [line];
     continue;
@@ -38,7 +38,7 @@ for (let i = 0; i < lines.length; i++) {
 console.log(`\nTotal tools found in Social Media Management category: ${toolCount}`);
 
 // Also check for tools with AI prefix
-console.log('\n=== TOOLS IN AI FOR SOCIAL MEDIA MANAGEMENT CATEGORY ===');
+console.log(&apos;\n=== TOOLS IN AI FOR SOCIAL MEDIA MANAGEMENT CATEGORY ===');
 
 let inAISocialMediaCategory = false;
 let currentAITool = [];
@@ -48,7 +48,7 @@ for (let i = 0; i < lines.length; i++) {
   const line = lines[i].trim();
   
   // Check if we're entering an AI Social Media Management tool
-  if (line.includes('"category": "AI for Social Media Management"')) {
+  if (line.includes('&quot;category&quot;: &quot;AI for Social Media Management&quot;')) {
     inAISocialMediaCategory = true;
     currentAITool = [line];
     continue;

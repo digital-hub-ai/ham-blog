@@ -1,14 +1,14 @@
 // lib/comparison-context.tsx
-import { createContext, useContext, useReducer, useCallback } from 'react';
-import { tools } from '../data/tools';
+import { createContext, useContext, useReducer, useCallback } from &apos;react&apos;;
+import { tools } from &apos;../data/tools&apos;;
 
 export type ComparisonDimension = 
-  | 'specs_matrix' 
-  | 'performance_radar' 
-  | 'cost_timeline' 
-  | 'stack_synergy' 
-  | 'sentiment_sphere' 
-  | 'ai_analyst';
+  | &apos;specs_matrix&apos; 
+  | &apos;performance_radar&apos; 
+  | &apos;cost_timeline&apos; 
+  | &apos;stack_synergy&apos; 
+  | &apos;sentiment_sphere&apos; 
+  | &apos;ai_analyst&apos;;
 
 export interface ComparisonSession {
   id: string;
@@ -30,10 +30,10 @@ export interface ComparisonSession {
 
 export interface Insight {
   id: string;
-  type: 'differentiator' | 'trend' | 'cost' | 'sentiment';
+  type: &apos;differentiator&apos; | &apos;trend&apos; | &apos;cost&apos; | &apos;sentiment&apos;;
   title: string;
   description: string;
-  severity: 'low' | 'medium' | 'high';
+  severity: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos;;
   tools: string[];
 }
 
@@ -45,10 +45,10 @@ interface ComparisonState {
 }
 
 type ComparisonAction = 
-  | { type: 'ADD_TOOL'; toolName: string }
-  | { type: 'REMOVE_TOOL'; toolName: string }
-  | { type: 'SET_DIMENSION'; dimension: ComparisonDimension }
-  | { type: 'UPDATE_PREFERENCES'; preferences: Partial<ComparisonSession['userPreferences']> }
+  | { type: &apos;ADD_TOOL&apos;; toolName: string }
+  | { type: &apos;REMOVE_TOOL&apos;; toolName: string }
+  | { type: &apos;SET_DIMENSION&apos;; dimension: ComparisonDimension }
+  | { type: &apos;UPDATE_PREFERENCES&apos;; preferences: Partial<ComparisonSession['userPreferences']> }
   | { type: 'ADD_INSIGHT'; insight: Insight }
   | { type: 'SET_LOADING'; loading: boolean }
   | { type: 'SET_ERROR'; error: string | null };
@@ -101,7 +101,7 @@ function comparisonReducer(state: ComparisonState, action: ComparisonAction): Co
         }
       };
 
-    case 'SET_DIMENSION':
+    case &apos;SET_DIMENSION&apos;:
       return {
         ...state,
         session: {
@@ -111,7 +111,7 @@ function comparisonReducer(state: ComparisonState, action: ComparisonAction): Co
         }
       };
 
-    case 'UPDATE_PREFERENCES':
+    case &apos;UPDATE_PREFERENCES&apos;:
       return {
         ...state,
         session: {
@@ -124,7 +124,7 @@ function comparisonReducer(state: ComparisonState, action: ComparisonAction): Co
         }
       };
 
-    case 'ADD_INSIGHT':
+    case &apos;ADD_INSIGHT&apos;:
       return {
         ...state,
         session: {
@@ -134,10 +134,10 @@ function comparisonReducer(state: ComparisonState, action: ComparisonAction): Co
         }
       };
 
-    case 'SET_LOADING':
+    case &apos;SET_LOADING&apos;:
       return { ...state, isLoading: action.loading };
 
-    case 'SET_ERROR':
+    case &apos;SET_ERROR&apos;:
       return { ...state, error: action.error };
 
     default:
@@ -170,7 +170,7 @@ export function ComparisonProvider({ children }: { children: React.ReactNode }) 
     }, []),
 
     setDimension: useCallback((dimension: ComparisonDimension) => {
-      dispatch({ type: 'SET_DIMENSION', dimension });
+      dispatch({ type: &apos;SET_DIMENSION&apos;, dimension });
     }, []),
 
     updatePreferences: useCallback((preferences: Partial<ComparisonSession['userPreferences']>) => {
@@ -181,13 +181,13 @@ export function ComparisonProvider({ children }: { children: React.ReactNode }) 
       // This will be implemented with AI services
       const mockInsight: Insight = {
         id: `insight_${Date.now()}`,
-        type: 'differentiator',
-        title: 'Price Advantage',
-        description: 'Tool A is 40% cheaper but lacks API access',
-        severity: 'medium',
+        type: &apos;differentiator&apos;,
+        title: &apos;Price Advantage&apos;,
+        description: &apos;Tool A is 40% cheaper but lacks API access&apos;,
+        severity: &apos;medium&apos;,
         tools: state.session.tools.slice(0, 2)
       };
-      dispatch({ type: 'ADD_INSIGHT', insight: mockInsight });
+      dispatch({ type: &apos;ADD_INSIGHT&apos;, insight: mockInsight });
     }, [state.session.tools])
   };
 
@@ -201,7 +201,7 @@ export function ComparisonProvider({ children }: { children: React.ReactNode }) 
 export function useComparison() {
   const context = useContext(ComparisonContext);
   if (!context) {
-    throw new Error('useComparison must be used within ComparisonProvider');
+    throw new Error(&apos;useComparison must be used within ComparisonProvider&apos;);
   }
   return context;
 }

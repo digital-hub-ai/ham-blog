@@ -4,13 +4,13 @@ const fs = require('fs');
 const toolsData = fs.readFileSync('./data/tools.ts', 'utf8');
 
 // Extract category information using regex
-const categoryMatches = toolsData.match(/"category": "([^"]+)"/g);
+const categoryMatches = toolsData.match(/&quot;category&quot;: &quot;([^&quot;]+)&quot;/g);
 
 // Count categories
 const categories = {};
 if (categoryMatches) {
   categoryMatches.forEach(match => {
-    const category = match.replace('"category": "', '').replace('"', '');
+    const category = match.replace('&quot;category&quot;: &quot;', '').replace('&quot;', '');
     categories[category] = (categories[category] || 0) + 1;
   });
 }

@@ -463,37 +463,37 @@ The businesses that embrace AI automation today will be the market leaders of to
       { name: 'Microsoft Power Automate', description: 'Integration with Microsoft ecosystem for workflow automation', category: 'Automation', platform: 'Web', pricing: '$15/month' }
     ],
     semanticEmbedding: new Array(1536).fill(0.1).map((_, i) => Math.cos(i * 0.02)),
-    targetAudience: ['Business Owners', 'Operations Managers', 'IT Leaders', 'Consultants', 'Process Engineers']
+    targetAudience: [&apos;Business Owners&apos;, &apos;Operations Managers&apos;, &apos;IT Leaders&apos;, &apos;Consultants&apos;, &apos;Process Engineers&apos;]
   };
 
   return (
     <SEOArticleWrapper blogPost={blogPost}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
-        <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900&quot;>
+        <div className="max-w-4xl mx-auto px-4 py-12&quot;>
           {/* Back Navigation */}
-          <Link href="/blog" className="inline-flex items-center text-orange-400 hover:text-orange-300 mb-8 transition-colors">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <Link href="/blog&quot; className="inline-flex items-center text-orange-400 hover:text-orange-300 mb-8 transition-colors&quot;>
+            <svg className="w-4 h-4 mr-2&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+              <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M15 19l-7-7 7-7&quot; />
             </svg>
             Back to Blog
           </Link>
 
           {/* Article Content */}
-          <article className="prose prose-invert prose-lg max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: blogPost.content.replace(/\n/g, '<br />') }} />
+          <article className="prose prose-invert prose-lg max-w-none&quot;>
+            <div dangerouslySetInnerHTML={{ __html: blogPost.content.replace(/\n/g, &apos;<br />) }} />
           </article>
 
           {/* Related Articles */}
-          <div className="mt-16 pt-8 border-t border-orange-800">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Articles</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/blog/ai-content-creation-strategies" className="block p-6 bg-orange-800/20 rounded-lg hover:bg-orange-800/30 transition-colors">
-                <h3 className="text-lg font-semibold text-orange-200 mb-2">AI Content Creation Strategies</h3>
-                <p className="text-orange-400 text-sm">Proven strategies for creating AI-powered content that drives real results.</p>
+          <div className="mt-16 pt-8 border-t border-orange-800&quot;>
+            <h2 className="text-2xl font-bold text-white mb-6&quot;>Related Articles</h2>
+            <div className="grid md:grid-cols-2 gap-6&quot;>
+              <Link href="/blog/ai-content-creation-strategies&quot; className="block p-6 bg-orange-800/20 rounded-lg hover:bg-orange-800/30 transition-colors&quot;>
+                <h3 className="text-lg font-semibold text-orange-200 mb-2&quot;>AI Content Creation Strategies</h3>
+                <p className="text-orange-400 text-sm&quot;>Proven strategies for creating AI-powered content that drives real results.</p>
               </Link>
-              <Link href="/blog/ai-tools-comparison-2024" className="block p-6 bg-orange-800/20 rounded-lg hover:bg-orange-800/30 transition-colors">
-                <h3 className="text-lg font-semibold text-orange-200 mb-2">AI Tools Comparison 2024</h3>
-                <p className="text-orange-400 text-sm">Comprehensive comparison of the best AI tools for your business.</p>
+              <Link href="/blog/ai-tools-comparison-2024&quot; className="block p-6 bg-orange-800/20 rounded-lg hover:bg-orange-800/30 transition-colors&quot;>
+                <h3 className="text-lg font-semibold text-orange-200 mb-2&quot;>AI Tools Comparison 2024</h3>
+                <p className="text-orange-400 text-sm&quot;>Comprehensive comparison of the best AI tools for your business.</p>
               </Link>
             </div>
           </div>

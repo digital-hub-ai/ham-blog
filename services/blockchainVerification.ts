@@ -4,35 +4,35 @@
 
 // Blockchain networks
 export type BlockchainNetwork = 
-  | 'ethereum'           // Ethereum mainnet
-  | 'polygon'            // Polygon (Matic)
-  | 'binance-smart-chain' // Binance Smart Chain
-  | 'avalanche'          // Avalanche
-  | 'solana'             // Solana
-  | 'cardano'            // Cardano
-  | 'tezos'              // Tezos
-  | 'custom';            // Custom blockchain
+  | &apos;ethereum&apos;           // Ethereum mainnet
+  | &apos;polygon&apos;            // Polygon (Matic)
+  | &apos;binance-smart-chain&apos; // Binance Smart Chain
+  | &apos;avalanche&apos;          // Avalanche
+  | &apos;solana&apos;             // Solana
+  | &apos;cardano&apos;            // Cardano
+  | &apos;tezos&apos;              // Tezos
+  | &apos;custom&apos;;            // Custom blockchain
 
 // Verification types
 export type VerificationType = 
-  | 'authenticity'       // Verify authenticity of content
-  | 'ownership'          // Verify ownership claims
-  | 'timestamp'          // Verify creation/modification time
-  | 'integrity'          // Verify data integrity
-  | 'provenance'         // Verify origin and history
-  | 'copyright'          // Verify copyright status
-  | 'license'            // Verify license compliance
-  | 'reputation'         // Verify reputation scores
-  | 'custom';            // Custom verification
+  | &apos;authenticity&apos;       // Verify authenticity of content
+  | &apos;ownership&apos;          // Verify ownership claims
+  | &apos;timestamp&apos;          // Verify creation/modification time
+  | &apos;integrity&apos;          // Verify data integrity
+  | &apos;provenance&apos;         // Verify origin and history
+  | &apos;copyright&apos;          // Verify copyright status
+  | &apos;license&apos;            // Verify license compliance
+  | &apos;reputation&apos;         // Verify reputation scores
+  | &apos;custom&apos;;            // Custom verification
 
 // Verification status
 export type VerificationStatus = 
-  | 'pending'            // Verification in progress
-  | 'verified'           // Successfully verified
-  | 'failed'             // Verification failed
-  | 'disputed'           // Verification disputed
-  | 'expired'            // Verification expired
-  | 'not-verifiable';    // Cannot be verified
+  | &apos;pending&apos;            // Verification in progress
+  | &apos;verified&apos;           // Successfully verified
+  | &apos;failed&apos;             // Verification failed
+  | &apos;disputed&apos;           // Verification disputed
+  | &apos;expired&apos;            // Verification expired
+  | &apos;not-verifiable&apos;;    // Cannot be verified
 
 // Blockchain verification request
 export interface BlockchainVerificationRequest {
@@ -85,7 +85,7 @@ export interface VerificationSmartContract {
 export interface ProvenanceRecord {
   id: string;
   contentId: string;
-  action: 'create' | 'modify' | 'transfer' | 'verify';
+  action: &apos;create&apos; | &apos;modify&apos; | &apos;transfer&apos; | &apos;verify&apos;;
   actor: string;
   timestamp: number;
   dataHash: string;
@@ -134,13 +134,13 @@ export class BlockchainVerificationService {
     // Mock smart contract ABIs for different networks
     const mockABI = [
       {
-        "constant": true,
-        "inputs": [{"name": "contentHash", "type": "string"}],
-        "name": "verifyContent",
-        "outputs": [{"name": "", "type": "bool"}],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
+        &quot;constant&quot;: true,
+        &quot;inputs&quot;: [{&quot;name&quot;: &quot;contentHash&quot;, &quot;type&quot;: &quot;string&quot;}],
+        &quot;name&quot;: &quot;verifyContent&quot;,
+        &quot;outputs&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;bool&quot;}],
+        &quot;payable&quot;: false,
+        &quot;stateMutability&quot;: &quot;view&quot;,
+        &quot;type&quot;: &quot;function&quot;
       }
     ];
     
@@ -174,7 +174,7 @@ export class BlockchainVerificationService {
     content: string,
     verificationType: VerificationType,
     metadata: Record<string, any> = {},
-    network: BlockchainNetwork = 'ethereum'
+    network: BlockchainNetwork = &apos;ethereum&apos;
   ): Promise<BlockchainVerificationRequest> {
     // Generate content hash
     const contentHash = this.generateHash(content);
@@ -186,7 +186,7 @@ export class BlockchainVerificationService {
       contentType: typeof content,
       verificationType,
       metadata,
-      requester: 'system', // In real implementation, this would be user ID
+      requester: &apos;system&apos;, // In real implementation, this would be user ID
       timestamp: Date.now(),
       network
     };
@@ -196,8 +196,8 @@ export class BlockchainVerificationService {
     // Add provenance record
     this.addProvenanceRecord({
       contentId,
-      action: 'verify',
-      actor: 'system',
+      action: &apos;verify&apos;,
+      actor: &apos;system&apos;,
       timestamp: Date.now(),
       dataHash: contentHash,
       metadata: {
@@ -231,30 +231,30 @@ export class BlockchainVerificationService {
     // For simulation, we'll generate plausible results
     const isVerified = Math.random() > 0.2; // 80% success rate
     const verificationHash = this.generateHash(
-      `${request.contentHash}_${verificationStartTime}_${isVerified ? 'verified' : 'failed'}`
+      `${request.contentHash}_${verificationStartTime}_${isVerified ? &apos;verified&apos; : &apos;failed&apos;}`
     );
     
     const evidence: VerificationEvidence[] = [
       {
         id: `evidence_${Date.now()}_1`,
-        type: 'blockchain_transaction',
+        type: &apos;blockchain_transaction&apos;,
         data: `Transaction confirmed on ${request.network}`,
         timestamp: Date.now(),
-        validator: 'blockchain_network'
+        validator: &apos;blockchain_network&apos;
       },
       {
         id: `evidence_${Date.now()}_2`,
-        type: 'cryptographic_proof',
+        type: &apos;cryptographic_proof&apos;,
         data: `Merkle proof generated for content hash`,
         timestamp: Date.now(),
-        validator: 'verification_service'
+        validator: &apos;verification_service&apos;
       }
     ];
     
     const result: BlockchainVerificationResult = {
       requestId: request.id,
       contentId: request.contentId,
-      status: isVerified ? 'verified' : 'failed',
+      status: isVerified ? &apos;verified&apos; : &apos;failed&apos;,
       verificationHash,
       blockchainTransaction: `0x${Math.random().toString(16).substr(2, 64)}`,
       timestamp: Date.now(),

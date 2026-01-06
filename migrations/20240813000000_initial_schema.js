@@ -8,17 +8,17 @@ exports.up = function(knex) {
       table.timestamps(true, true);
     })
     .createTable('tools', table => {
-      table.increments('id').primary();
-      table.string('name').notNullable();
-      table.text('description');
-      table.string('url');
-      table.string('category');
+      table.increments(&apos;id&apos;).primary();
+      table.string(&apos;name&apos;).notNullable();
+      table.text(&apos;description&apos;);
+      table.string(&apos;url&apos;);
+      table.string(&apos;category&apos;);
       table.timestamps(true, true);
     });
 };
 
 exports.down = function(knex) {
   return knex.schema
-    .dropTableIfExists('tools')
-    .dropTableIfExists('users');
+    .dropTableIfExists(&apos;tools&apos;)
+    .dropTableIfExists(&apos;users&apos;);
 };

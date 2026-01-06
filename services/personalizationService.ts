@@ -1,4 +1,4 @@
-import { Document } from './searchService';
+import { Document } from &apos;./searchService&apos;;
 
 // User profile interface
 export interface UserProfile {

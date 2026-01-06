@@ -380,37 +380,37 @@ The future of work is here, and it's powered by AI. Embrace these tools, experim
       }
     ],
     semanticEmbedding: new Array(1536).fill(0.1).map((_, i) => Math.cos(i * 0.018)),
-    targetAudience: ['Productivity Enthusiasts', 'Team Managers', 'Business Owners', 'Remote Workers', 'Tech Professionals']
+    targetAudience: [&apos;Productivity Enthusiasts&apos;, &apos;Team Managers&apos;, &apos;Business Owners&apos;, &apos;Remote Workers&apos;, &apos;Tech Professionals&apos;]
   };
 
   return (
     <SEOArticleWrapper blogPost={blogPost}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;>
+        <div className="max-w-4xl mx-auto px-4 py-12&quot;>
           {/* Back Navigation */}
-          <Link href="/blog" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8 transition-colors">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          <Link href="/blog&quot; className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8 transition-colors&quot;>
+            <svg className="w-4 h-4 mr-2&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+              <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18&quot; />
             </svg>
             Back to Blog
           </Link>
 
           {/* Article Content */}
-          <div className="prose prose-invert prose-lg max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: blogPost.content.replace(/\n/g, '<br>') }} />
+          <div className="prose prose-invert prose-lg max-w-none&quot;>
+            <div dangerouslySetInnerHTML={{ __html: blogPost.content.replace(/\n/g, &apos;<br>) }} />
           </div>
 
           {/* Related Articles */}
-          <div className="mt-16 pt-8 border-t border-emerald-800">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link href="/blog/ai-automation-business" className="block p-6 bg-emerald-900/30 rounded-lg hover:bg-emerald-900/50 transition-colors">
-                <h3 className="text-lg font-semibold text-emerald-300 mb-2">AI Automation for Business</h3>
-                <p className="text-gray-400 text-sm">Complete guide to scaling operations with AI</p>
+          <div className="mt-16 pt-8 border-t border-emerald-800&quot;>
+            <h2 className="text-2xl font-bold text-white mb-6&quot;>Related Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
+              <Link href="/blog/ai-automation-business&quot; className="block p-6 bg-emerald-900/30 rounded-lg hover:bg-emerald-900/50 transition-colors&quot;>
+                <h3 className="text-lg font-semibold text-emerald-300 mb-2&quot;>AI Automation for Business</h3>
+                <p className="text-gray-400 text-sm&quot;>Complete guide to scaling operations with AI</p>
               </Link>
-              <Link href="/blog/ai-content-creation-strategies" className="block p-6 bg-emerald-900/30 rounded-lg hover:bg-emerald-900/50 transition-colors">
-                <h3 className="text-lg font-semibold text-emerald-300 mb-2">AI Content Creation Strategies</h3>
-                <p className="text-gray-400 text-sm">Drive real results with AI-powered content</p>
+              <Link href="/blog/ai-content-creation-strategies&quot; className="block p-6 bg-emerald-900/30 rounded-lg hover:bg-emerald-900/50 transition-colors&quot;>
+                <h3 className="text-lg font-semibold text-emerald-300 mb-2&quot;>AI Content Creation Strategies</h3>
+                <p className="text-gray-400 text-sm&quot;>Drive real results with AI-powered content</p>
               </Link>
             </div>
           </div>

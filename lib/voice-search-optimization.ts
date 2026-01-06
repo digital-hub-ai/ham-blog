@@ -1,26 +1,26 @@
-import { KnowledgeNode } from './adaptive-stream';
+import { KnowledgeNode } from &apos;./adaptive-stream&apos;;
 
 interface VoiceSearchQuery {
   query: string;
-  intent: 'informational' | 'navigational' | 'transactional' | 'commercial';
+  intent: &apos;informational&apos; | &apos;navigational&apos; | &apos;transactional&apos; | &apos;commercial&apos;;
   entities: string[];
   context: string;
-  answerType: 'direct' | 'list' | 'comparison' | 'howto' | 'definition';
+  answerType: &apos;direct&apos; | &apos;list&apos; | &apos;comparison&apos; | &apos;howto&apos; | &apos;definition&apos;;
 }
 
 interface ConversationalSchema {
-  '@context': string;
-  '@type': string;
+  &apos;@context&apos;: string;
+  &apos;@type&apos;: string;
   name: string;
   text: string;
   dateCreated: string;
   author: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
   };
   abstract?: string;
   speaksTo?: {
-    '@type': string;
+    &apos;@type&apos;: string;
     name: string;
   };
   about?: Array<{
@@ -79,22 +79,22 @@ export class VoiceSearchOptimizer {
     const category = node.category.toLowerCase();
     const tags = node.tags.map(tag => tag.toLowerCase());
 
-    // "Hey Google, tell me about..." queries
+    // &quot;Hey Google, tell me about...&quot; queries
     queries.push(`Hey Google, tell me about ${title}`);
     queries.push(`Hey Siri, what is ${title}`);
     queries.push(`Alexa, explain ${title} to me`);
 
-    // "Can you help me understand..." queries
+    // &quot;Can you help me understand...&quot; queries
     queries.push(`Can you help me understand ${title}`);
     queries.push(`I need to know more about ${title}`);
     queries.push(`What can you tell me about ${category} tools`);
 
-    // "Show me..." queries
+    // &quot;Show me...&quot; queries
     queries.push(`Show me the best ${category} tools`);
     queries.push(`Can you show me ${tags.join(' and ')} tools`);
     queries.push(`Display information about ${title}`);
 
-    // "Find..." queries
+    // &quot;Find...&quot; queries
     queries.push(`Find AI tools for ${category}`);
     queries.push(`Find the best ${tags[0]} tools`);
     queries.push(`Find tools similar to ${title}`);
@@ -445,7 +445,7 @@ export class VoiceSearchOptimizer {
     for (const pattern of comparisonPatterns) {
       const matches = node.content.match(pattern);
       if (matches && matches.length > 0) {
-        return matches[0].trim() + '.';
+        return matches[0].trim() + &apos;.&apos;;
       }
     }
 
@@ -502,15 +502,15 @@ export class VoiceSearchOptimizer {
   } {
     return {
       title: `${node.title} - Complete Guide | AI Vault`,
-      description: `Discover everything about ${node.title.toLowerCase()}. Learn how it works, who should use it, and why it's perfect for ${this.mapAudience(node.targetAudience).toLowerCase()}.`,
+      description: `Discover everything about ${node.title.toLowerCase()}. Learn how it works, who should use it, and why it&apos;s perfect for ${this.mapAudience(node.targetAudience).toLowerCase()}.`,
       speakable: [
         {
-          '@type': 'SpeakableSpecification',
-          cssSelector: 'h1'
+          &apos;@type&apos;: &apos;SpeakableSpecification&apos;,
+          cssSelector: &apos;h1&apos;
         },
         {
-          '@type': 'SpeakableSpecification',
-          cssSelector: '.article-content p:first-of-type'
+          &apos;@type&apos;: &apos;SpeakableSpecification&apos;,
+          cssSelector: &apos;.article-content p:first-of-type&apos;
         }
       ]
     };

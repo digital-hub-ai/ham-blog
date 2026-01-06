@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from 'framer-motion';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Points, PointMaterial } from '@react-three/drei';
-// @ts-ignore - maath/random doesn't have proper types
-import * as random from 'maath/random/dist/maath-random.esm';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from &apos;react&apos;;
+import { useRouter } from &apos;next/router&apos;;
+import Head from &apos;next/head&apos;;
+import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from &apos;framer-motion&apos;;
+import { Canvas, useFrame } from &apos;@react-three/fiber&apos;;
+import { Points, PointMaterial } from &apos;@react-three/drei&apos;;
+// @ts-ignore - maath/random doesn&apos;t have proper types
+import * as random from &apos;maath/random/dist/maath-random.esm&apos;;
 
 // Neural Background Component
 function NeuralBackground({ theme }: { theme: string }) {
@@ -21,14 +21,14 @@ function NeuralBackground({ theme }: { theme: string }) {
 
   const colors = useMemo(() => {
     switch(theme) {
-      case 'ai':
-        return ['#00ffff', '#0080ff', '#ffffff'];
-      case 'cybersecurity':
-        return ['#00ff00', '#ffff00', '#ff00ff'];
-      case 'development':
-        return ['#ff6b6b', '#4ecdc4', '#45b7d1'];
+      case &apos;ai&apos;:
+        return [&apos;#00ffff&apos;, &apos;#0080ff&apos;, &apos;#ffffff&apos;];
+      case &apos;cybersecurity&apos;:
+        return [&apos;#00ff00&apos;, &apos;#ffff00&apos;, &apos;#ff00ff&apos;];
+      case &apos;development&apos;:
+        return [&apos;#ff6b6b&apos;, &apos;#4ecdc4&apos;, &apos;#45b7d1&apos;];
       default:
-        return ['#8b5cf6', '#3b82f6', '#06b6d4'];
+        return [&apos;#8b5cf6&apos;, &apos;#3b82f6&apos;, &apos;#06b6d4&apos;];
     }
   }, [theme]);
 
@@ -51,7 +51,7 @@ interface KnowledgeNode {
   title: string;
   excerpt: string;
   generativeSeed: string;
-  theme: 'ai' | 'cybersecurity' | 'development' | 'analytics';
+  theme: &apos;ai&apos; | &apos;cybersecurity&apos; | &apos;development&apos; | &apos;analytics&apos;;
   content: {
     founderInstance: string;
     developerInstance: string;
@@ -76,379 +76,379 @@ interface KnowledgeNode {
 // Knowledge Nodes Data
 const knowledgeNodes: KnowledgeNode[] = [
   {
-    id: 'ai-automation-business',
-    title: 'AI Automation for Business: Complete Guide to Scaling Operations',
-    excerpt: 'Business automation has evolved from simple rule-based systems to sophisticated AI-powered workflows that can learn, adapt, and make decisions.',
-    generativeSeed: 'ai-automation-business',
-    theme: 'ai',
+    id: &apos;ai-automation-business&apos;,
+    title: &apos;AI Automation for Business: Complete Guide to Scaling Operations&apos;,
+    excerpt: &apos;Business automation has evolved from simple rule-based systems to sophisticated AI-powered workflows that can learn, adapt, and make decisions.&apos;,
+    generativeSeed: &apos;ai-automation-business&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: Understanding how AI automation can transform business operations and reduce costs by up to 50%...',
-      developerInstance: 'For developers: Implementation strategies for AI-powered business automation systems...',
-      audioNarrationUrl: '/audio/ai-automation-business.mp3'
+      founderInstance: &apos;For founders: Understanding how AI automation can transform business operations and reduce costs by up to 50%...&apos;,
+      developerInstance: &apos;For developers: Implementation strategies for AI-powered business automation systems...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-automation-business.mp3&apos;
     },
     semanticEmbedding: [0.23, -0.45, 0.67, 0.12],
-    dynamicTags: ['AI', 'Business', 'Automation', 'Scaling'],
+    dynamicTags: [&apos;AI&apos;, &apos;Business&apos;, &apos;Automation&apos;, &apos;Scaling&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_001', name: 'Zapier' },
-      { type: 'category', id: 'cat_001', name: 'Business Automation' }
+      { type: &apos;tool&apos;, id: &apos;tool_001&apos;, name: &apos;Zapier&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_001&apos;, name: &apos;Business Automation&apos; }
     ],
     engagementPulse: 0.92,
     author: {
-      name: 'AI Vault Team',
-      avatar: '/avatars/ai-vault.jpg'
+      name: &apos;AI Vault Team&apos;,
+      avatar: &apos;/avatars/ai-vault.jpg&apos;
     },
-    readTime: '8 min read',
-    publishedAt: '2024-11-20'
+    readTime: &apos;8 min read&apos;,
+    publishedAt: &apos;2024-11-20&apos;
   },
   {
-    id: 'ai-design-tools-2024',
-    title: 'AI Design Tools 2024: Complete Guide for Creative Professionals',
-    excerpt: 'The world of design has been revolutionized by artificial intelligence. From graphic design to 3D modeling, AI tools are empowering creative professionals.',
-    generativeSeed: 'ai-design-tools-2024',
-    theme: 'ai',
+    id: &apos;ai-design-tools-2024&apos;,
+    title: &apos;AI Design Tools 2024: Complete Guide for Creative Professionals&apos;,
+    excerpt: &apos;The world of design has been revolutionized by artificial intelligence. From graphic design to 3D modeling, AI tools are empowering creative professionals.&apos;,
+    generativeSeed: &apos;ai-design-tools-2024&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: How AI design tools can reduce creative costs and accelerate product development...',
-      developerInstance: 'For developers: Technical implementation of AI-powered design workflows...',
-      audioNarrationUrl: '/audio/ai-design-tools-2024.mp3'
+      founderInstance: &apos;For founders: How AI design tools can reduce creative costs and accelerate product development...&apos;,
+      developerInstance: &apos;For developers: Technical implementation of AI-powered design workflows...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-design-tools-2024.mp3&apos;
     },
     semanticEmbedding: [0.34, -0.23, 0.78, 0.15],
-    dynamicTags: ['AI', 'Design', 'Creative', 'Tools'],
+    dynamicTags: [&apos;AI&apos;, &apos;Design&apos;, &apos;Creative&apos;, &apos;Tools&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_002', name: 'Midjourney' },
-      { type: 'category', id: 'cat_002', name: 'Design Tools' }
+      { type: &apos;tool&apos;, id: &apos;tool_002&apos;, name: &apos;Midjourney&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_002&apos;, name: &apos;Design Tools&apos; }
     ],
     engagementPulse: 0.89,
     author: {
-      name: 'Design Team',
-      avatar: '/avatars/design-team.jpg'
+      name: &apos;Design Team&apos;,
+      avatar: &apos;/avatars/design-team.jpg&apos;
     },
-    readTime: '6 min read',
-    publishedAt: '2024-11-19'
+    readTime: &apos;6 min read&apos;,
+    publishedAt: &apos;2024-11-19&apos;
   },
   {
-    id: 'ai-development-tools-2024',
-    title: 'AI Development Tools 2024: Essential Guide for Developers',
-    excerpt: 'AI development tools are revolutionizing how developers write, test, and deploy code. From intelligent code completion to automated debugging.',
-    generativeSeed: 'ai-development-tools-2024',
-    theme: 'development',
+    id: &apos;ai-development-tools-2024&apos;,
+    title: &apos;AI Development Tools 2024: Essential Guide for Developers&apos;,
+    excerpt: &apos;AI development tools are revolutionizing how developers write, test, and deploy code. From intelligent code completion to automated debugging.&apos;,
+    generativeSeed: &apos;ai-development-tools-2024&apos;,
+    theme: &apos;development&apos;,
     content: {
-      founderInstance: 'For founders: How AI development tools can accelerate product development and reduce engineering costs...',
-      developerInstance: 'For developers: Deep dive into AI-assisted coding workflows and best practices...',
-      audioNarrationUrl: '/audio/ai-development-tools-2024.mp3'
+      founderInstance: &apos;For founders: How AI development tools can accelerate product development and reduce engineering costs...&apos;,
+      developerInstance: &apos;For developers: Deep dive into AI-assisted coding workflows and best practices...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-development-tools-2024.mp3&apos;
     },
     semanticEmbedding: [0.45, -0.12, 0.89, 0.23],
-    dynamicTags: ['AI', 'Development', 'Code', 'Tools'],
+    dynamicTags: [&apos;AI&apos;, &apos;Development&apos;, &apos;Code&apos;, &apos;Tools&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_003', name: 'GitHub Copilot' },
-      { type: 'category', id: 'cat_003', name: 'Development Tools' }
+      { type: &apos;tool&apos;, id: &apos;tool_003&apos;, name: &apos;GitHub Copilot&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_003&apos;, name: &apos;Development Tools&apos; }
     ],
     engagementPulse: 0.94,
     author: {
-      name: 'Dev Team',
-      avatar: '/avatars/dev-team.jpg'
+      name: &apos;Dev Team&apos;,
+      avatar: &apos;/avatars/dev-team.jpg&apos;
     },
-    readTime: '7 min read',
-    publishedAt: '2024-11-18'
+    readTime: &apos;7 min read&apos;,
+    publishedAt: &apos;2024-11-18&apos;
   },
   {
-    id: 'ai-marketing-tools-2024',
-    title: 'AI Marketing Tools 2024: Complete Marketing Automation Guide',
-    excerpt: 'Marketing has been transformed by artificial intelligence. From content creation to campaign optimization, AI tools are helping marketers achieve better results.',
-    generativeSeed: 'ai-marketing-tools-2024',
-    theme: 'ai',
+    id: &apos;ai-marketing-tools-2024&apos;,
+    title: &apos;AI Marketing Tools 2024: Complete Marketing Automation Guide&apos;,
+    excerpt: &apos;Marketing has been transformed by artificial intelligence. From content creation to campaign optimization, AI tools are helping marketers achieve better results.&apos;,
+    generativeSeed: &apos;ai-marketing-tools-2024&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: How AI marketing tools can improve ROI and automate campaign management...',
-      developerInstance: 'For developers: Technical implementation of AI-powered marketing systems...',
-      audioNarrationUrl: '/audio/ai-marketing-tools-2024.mp3'
+      founderInstance: &apos;For founders: How AI marketing tools can improve ROI and automate campaign management...&apos;,
+      developerInstance: &apos;For developers: Technical implementation of AI-powered marketing systems...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-marketing-tools-2024.mp3&apos;
     },
     semanticEmbedding: [0.56, -0.34, 0.91, 0.28],
-    dynamicTags: ['AI', 'Marketing', 'Automation', 'Campaigns'],
+    dynamicTags: [&apos;AI&apos;, &apos;Marketing&apos;, &apos;Automation&apos;, &apos;Campaigns&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_004', name: 'Jasper AI' },
-      { type: 'category', id: 'cat_004', name: 'Marketing Tools' }
+      { type: &apos;tool&apos;, id: &apos;tool_004&apos;, name: &apos;Jasper AI&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_004&apos;, name: &apos;Marketing Tools&apos; }
     ],
     engagementPulse: 0.87,
     author: {
-      name: 'Marketing Team',
-      avatar: '/avatars/marketing-team.jpg'
+      name: &apos;Marketing Team&apos;,
+      avatar: &apos;/avatars/marketing-team.jpg&apos;
     },
-    readTime: '6 min read',
-    publishedAt: '2024-11-17'
+    readTime: &apos;6 min read&apos;,
+    publishedAt: &apos;2024-11-17&apos;
   },
   {
-    id: 'ai-productivity-tools-2024',
-    title: 'AI Productivity Tools 2024: Ultimate Guide to Getting More Done',
-    excerpt: 'AI productivity tools are transforming how we work, learn, and manage our daily tasks. From smart scheduling to automated workflows.',
-    generativeSeed: 'ai-productivity-tools-2024',
-    theme: 'ai',
+    id: &apos;ai-productivity-tools-2024&apos;,
+    title: &apos;AI Productivity Tools 2024: Ultimate Guide to Getting More Done&apos;,
+    excerpt: &apos;AI productivity tools are transforming how we work, learn, and manage our daily tasks. From smart scheduling to automated workflows.&apos;,
+    generativeSeed: &apos;ai-productivity-tools-2024&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: How AI productivity tools can improve team efficiency and reduce operational costs...',
-      developerInstance: 'For developers: Building AI-powered productivity applications and workflows...',
-      audioNarrationUrl: '/audio/ai-productivity-tools-2024.mp3'
+      founderInstance: &apos;For founders: How AI productivity tools can improve team efficiency and reduce operational costs...&apos;,
+      developerInstance: &apos;For developers: Building AI-powered productivity applications and workflows...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-productivity-tools-2024.mp3&apos;
     },
     semanticEmbedding: [0.67, -0.45, 0.82, 0.19],
-    dynamicTags: ['AI', 'Productivity', 'Workflow', 'Automation'],
+    dynamicTags: [&apos;AI&apos;, &apos;Productivity&apos;, &apos;Workflow&apos;, &apos;Automation&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_005', name: 'Notion AI' },
-      { type: 'category', id: 'cat_005', name: 'Productivity Tools' }
+      { type: &apos;tool&apos;, id: &apos;tool_005&apos;, name: &apos;Notion AI&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_005&apos;, name: &apos;Productivity Tools&apos; }
     ],
     engagementPulse: 0.85,
     author: {
-      name: 'Productivity Team',
-      avatar: '/avatars/productivity-team.jpg'
+      name: &apos;Productivity Team&apos;,
+      avatar: &apos;/avatars/productivity-team.jpg&apos;
     },
-    readTime: '5 min read',
-    publishedAt: '2024-11-16'
+    readTime: &apos;5 min read&apos;,
+    publishedAt: &apos;2024-11-16&apos;
   },
   {
-    id: 'ai-tools-comparison-2024',
-    title: 'AI Tools Comparison 2024: Best AI Software for Every Need',
-    excerpt: 'With hundreds of AI tools available, choosing the right ones for your needs can be overwhelming. This comprehensive comparison guide helps you make informed decisions.',
-    generativeSeed: 'ai-tools-comparison-2024',
-    theme: 'ai',
+    id: &apos;ai-tools-comparison-2024&apos;,
+    title: &apos;AI Tools Comparison 2024: Best AI Software for Every Need&apos;,
+    excerpt: &apos;With hundreds of AI tools available, choosing the right ones for your needs can be overwhelming. This comprehensive comparison guide helps you make informed decisions.&apos;,
+    generativeSeed: &apos;ai-tools-comparison-2024&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: How to choose the right AI tools for your business needs and budget...',
-      developerInstance: 'For developers: Technical comparison of AI tools and integration strategies...',
-      audioNarrationUrl: '/audio/ai-tools-comparison-2024.mp3'
+      founderInstance: &apos;For founders: How to choose the right AI tools for your business needs and budget...&apos;,
+      developerInstance: &apos;For developers: Technical comparison of AI tools and integration strategies...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-tools-comparison-2024.mp3&apos;
     },
     semanticEmbedding: [0.78, -0.56, 0.73, 0.31],
-    dynamicTags: ['AI', 'Comparison', 'Tools', 'Reviews'],
+    dynamicTags: [&apos;AI&apos;, &apos;Comparison&apos;, &apos;Tools&apos;, &apos;Reviews&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_006', name: 'ChatGPT' },
-      { type: 'category', id: 'cat_006', name: 'Tool Comparison' }
+      { type: &apos;tool&apos;, id: &apos;tool_006&apos;, name: &apos;ChatGPT&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_006&apos;, name: &apos;Tool Comparison&apos; }
     ],
     engagementPulse: 0.91,
     author: {
-      name: 'Review Team',
-      avatar: '/avatars/review-team.jpg'
+      name: &apos;Review Team&apos;,
+      avatar: &apos;/avatars/review-team.jpg&apos;
     },
-    readTime: '10 min read',
-    publishedAt: '2024-11-15'
+    readTime: &apos;10 min read&apos;,
+    publishedAt: &apos;2024-11-15&apos;
   },
   {
-    id: 'future-of-artificial-intelligence',
-    title: 'The Future of Artificial Intelligence: Trends and Predictions',
-    excerpt: 'Artificial intelligence is evolving at an unprecedented pace. What does the future hold for AI technology and its impact on society, business, and daily life?',
-    generativeSeed: 'future-of-artificial-intelligence',
-    theme: 'ai',
+    id: &apos;future-of-artificial-intelligence&apos;,
+    title: &apos;The Future of Artificial Intelligence: Trends and Predictions&apos;,
+    excerpt: &apos;Artificial intelligence is evolving at an unprecedented pace. What does the future hold for AI technology and its impact on society, business, and daily life?&apos;,
+    generativeSeed: &apos;future-of-artificial-intelligence&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: How future AI trends will impact business strategy and investment decisions...',
-      developerInstance: 'For developers: Preparing for the next generation of AI technologies and development paradigms...',
-      audioNarrationUrl: '/audio/future-of-artificial-intelligence.mp3'
+      founderInstance: &apos;For founders: How future AI trends will impact business strategy and investment decisions...&apos;,
+      developerInstance: &apos;For developers: Preparing for the next generation of AI technologies and development paradigms...&apos;,
+      audioNarrationUrl: &apos;/audio/future-of-artificial-intelligence.mp3&apos;
     },
     semanticEmbedding: [0.89, -0.67, 0.64, 0.42],
-    dynamicTags: ['AI', 'Future', 'Trends', 'Predictions'],
+    dynamicTags: [&apos;AI&apos;, &apos;Future&apos;, &apos;Trends&apos;, &apos;Predictions&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_007', name: 'GPT-5' },
-      { type: 'category', id: 'cat_007', name: 'Future Tech' }
+      { type: &apos;tool&apos;, id: &apos;tool_007&apos;, name: &apos;GPT-5&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_007&apos;, name: &apos;Future Tech&apos; }
     ],
     engagementPulse: 0.93,
     author: {
-      name: 'Future Tech Team',
-      avatar: '/avatars/future-tech.jpg'
+      name: &apos;Future Tech Team&apos;,
+      avatar: &apos;/avatars/future-tech.jpg&apos;
     },
-    readTime: '8 min read',
-    publishedAt: '2024-11-14'
+    readTime: &apos;8 min read&apos;,
+    publishedAt: &apos;2024-11-14&apos;
   },
   {
-    id: 'machine-learning-beginners-guide',
-    title: 'Machine Learning for Beginners: Complete Getting Started Guide',
-    excerpt: 'Machine learning can seem intimidating, but it\'s more accessible than ever. This guide breaks down the fundamentals and helps you start your ML journey.',
-    generativeSeed: 'machine-learning-beginners-guide',
-    theme: 'development',
+    id: &apos;machine-learning-beginners-guide&apos;,
+    title: &apos;Machine Learning for Beginners: Complete Getting Started Guide&apos;,
+    excerpt: &apos;Machine learning can seem intimidating, but it\&apos;s more accessible than ever. This guide breaks down the fundamentals and helps you start your ML journey.&apos;,
+    generativeSeed: &apos;machine-learning-beginners-guide&apos;,
+    theme: &apos;development&apos;,
     content: {
-      founderInstance: 'For founders: Understanding machine learning basics for business decision-making...',
-      developerInstance: 'For developers: Getting started with ML development and practical implementations...',
-      audioNarrationUrl: '/audio/machine-learning-beginners-guide.mp3'
+      founderInstance: &apos;For founders: Understanding machine learning basics for business decision-making...&apos;,
+      developerInstance: &apos;For developers: Getting started with ML development and practical implementations...&apos;,
+      audioNarrationUrl: &apos;/audio/machine-learning-beginners-guide.mp3&apos;
     },
     semanticEmbedding: [0.91, -0.78, 0.56, 0.38],
-    dynamicTags: ['ML', 'Beginners', 'Guide', 'Tutorial'],
+    dynamicTags: [&apos;ML&apos;, &apos;Beginners&apos;, &apos;Guide&apos;, &apos;Tutorial&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_008', name: 'TensorFlow' },
-      { type: 'category', id: 'cat_008', name: 'Machine Learning' }
+      { type: &apos;tool&apos;, id: &apos;tool_008&apos;, name: &apos;TensorFlow&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_008&apos;, name: &apos;Machine Learning&apos; }
     ],
     engagementPulse: 0.88,
     author: {
-      name: 'ML Education Team',
-      avatar: '/avatars/ml-education.jpg'
+      name: &apos;ML Education Team&apos;,
+      avatar: &apos;/avatars/ml-education.jpg&apos;
     },
-    readTime: '7 min read',
-    publishedAt: '2024-11-13'
+    readTime: &apos;7 min read&apos;,
+    publishedAt: &apos;2024-11-13&apos;
   },
   {
-    id: 'top-10-ai-tools-content-creation-2024',
-    title: 'Top 10 AI Tools for Content Creation in 2024',
-    excerpt: 'The landscape of content creation has been revolutionized by artificial intelligence. From writing assistants to video generators, AI tools are empowering creators.',
-    generativeSeed: 'top-10-ai-tools-content-creation-2024',
-    theme: 'ai',
+    id: &apos;top-10-ai-tools-content-creation-2024&apos;,
+    title: &apos;Top 10 AI Tools for Content Creation in 2024&apos;,
+    excerpt: &apos;The landscape of content creation has been revolutionized by artificial intelligence. From writing assistants to video generators, AI tools are empowering creators.&apos;,
+    generativeSeed: &apos;top-10-ai-tools-content-creation-2024&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: How AI content creation tools can scale content production and reduce costs...',
-      developerInstance: 'For developers: Building AI-powered content creation systems and workflows...',
-      audioNarrationUrl: '/audio/top-10-ai-tools-content-creation-2024.mp3'
+      founderInstance: &apos;For founders: How AI content creation tools can scale content production and reduce costs...&apos;,
+      developerInstance: &apos;For developers: Building AI-powered content creation systems and workflows...&apos;,
+      audioNarrationUrl: &apos;/audio/top-10-ai-tools-content-creation-2024.mp3&apos;
     },
     semanticEmbedding: [0.72, -0.89, 0.45, 0.26],
-    dynamicTags: ['AI', 'Content', 'Creation', 'Tools'],
+    dynamicTags: [&apos;AI&apos;, &apos;Content&apos;, &apos;Creation&apos;, &apos;Tools&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_009', name: 'Copy.ai' },
-      { type: 'category', id: 'cat_009', name: 'Content Creation' }
+      { type: &apos;tool&apos;, id: &apos;tool_009&apos;, name: &apos;Copy.ai&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_009&apos;, name: &apos;Content Creation&apos; }
     ],
     engagementPulse: 0.90,
     author: {
-      name: 'AI Vault Team',
-      avatar: '/avatars/ai-vault.jpg'
+      name: &apos;AI Vault Team&apos;,
+      avatar: &apos;/avatars/ai-vault.jpg&apos;
     },
-    readTime: '5 min read',
-    publishedAt: '2024-11-12'
+    readTime: &apos;5 min read&apos;,
+    publishedAt: &apos;2024-11-12&apos;
   },
   {
-    id: 'ai-transforming-software-development',
-    title: 'How AI is Transforming Software Development',
-    excerpt: 'Artificial intelligence is fundamentally changing how software is developed, from code generation to testing and deployment.',
-    generativeSeed: 'ai-transforming-software-development',
-    theme: 'development',
+    id: &apos;ai-transforming-software-development&apos;,
+    title: &apos;How AI is Transforming Software Development&apos;,
+    excerpt: &apos;Artificial intelligence is fundamentally changing how software is developed, from code generation to testing and deployment.&apos;,
+    generativeSeed: &apos;ai-transforming-software-development&apos;,
+    theme: &apos;development&apos;,
     content: {
-      founderInstance: 'For founders: How AI development tools can accelerate product development and reduce costs...',
-      developerInstance: 'For developers: Deep dive into AI-assisted coding workflows and best practices...',
-      audioNarrationUrl: '/audio/ai-transforming-software-development.mp3'
+      founderInstance: &apos;For founders: How AI development tools can accelerate product development and reduce costs...&apos;,
+      developerInstance: &apos;For developers: Deep dive into AI-assisted coding workflows and best practices...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-transforming-software-development.mp3&apos;
     },
     semanticEmbedding: [0.83, -0.91, 0.34, 0.29],
-    dynamicTags: ['AI', 'Development', 'Software', 'Transformation'],
+    dynamicTags: [&apos;AI&apos;, &apos;Development&apos;, &apos;Software&apos;, &apos;Transformation&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_010', name: 'GitHub Copilot' },
-      { type: 'category', id: 'cat_010', name: 'Development' }
+      { type: &apos;tool&apos;, id: &apos;tool_010&apos;, name: &apos;GitHub Copilot&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_010&apos;, name: &apos;Development&apos; }
     ],
     engagementPulse: 0.92,
     author: {
-      name: 'Tech Editor',
-      avatar: '/avatars/tech-editor.jpg'
+      name: &apos;Tech Editor&apos;,
+      avatar: &apos;/avatars/tech-editor.jpg&apos;
     },
-    readTime: '7 min read',
-    publishedAt: '2024-11-10'
+    readTime: &apos;7 min read&apos;,
+    publishedAt: &apos;2024-11-10&apos;
   },
   {
-    id: 'future-ai-business-analytics',
-    title: 'The Future of AI in Business Analytics',
-    excerpt: 'Business intelligence is being transformed by artificial intelligence, enabling deeper insights and more accurate predictions.',
-    generativeSeed: 'future-ai-business-analytics',
-    theme: 'analytics',
+    id: &apos;future-ai-business-analytics&apos;,
+    title: &apos;The Future of AI in Business Analytics&apos;,
+    excerpt: &apos;Business intelligence is being transformed by artificial intelligence, enabling deeper insights and more accurate predictions.&apos;,
+    generativeSeed: &apos;future-ai-business-analytics&apos;,
+    theme: &apos;analytics&apos;,
     content: {
-      founderInstance: 'For founders: How AI analytics can transform business decision-making and strategy...',
-      developerInstance: 'For developers: Building AI-powered analytics systems and data pipelines...',
-      audioNarrationUrl: '/audio/future-ai-business-analytics.mp3'
+      founderInstance: &apos;For founders: How AI analytics can transform business decision-making and strategy...&apos;,
+      developerInstance: &apos;For developers: Building AI-powered analytics systems and data pipelines...&apos;,
+      audioNarrationUrl: &apos;/audio/future-ai-business-analytics.mp3&apos;
     },
     semanticEmbedding: [0.94, -0.82, 0.23, 0.41],
-    dynamicTags: ['AI', 'Analytics', 'Business', 'Intelligence'],
+    dynamicTags: [&apos;AI&apos;, &apos;Analytics&apos;, &apos;Business&apos;, &apos;Intelligence&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_011', name: 'Tableau AI' },
-      { type: 'category', id: 'cat_011', name: 'Analytics' }
+      { type: &apos;tool&apos;, id: &apos;tool_011&apos;, name: &apos;Tableau AI&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_011&apos;, name: &apos;Analytics&apos; }
     ],
     engagementPulse: 0.86,
     author: {
-      name: 'Business Analyst',
-      avatar: '/avatars/business-analyst.jpg'
+      name: &apos;Business Analyst&apos;,
+      avatar: &apos;/avatars/business-analyst.jpg&apos;
     },
-    readTime: '6 min read',
-    publishedAt: '2024-11-05'
+    readTime: &apos;6 min read&apos;,
+    publishedAt: &apos;2024-11-05&apos;
   },
   {
-    id: 'ai-productivity-tools-2024',
-    title: 'AI Productivity Tools 2024: Ultimate Guide to Getting More Done',
-    excerpt: 'Discover how AI productivity tools are revolutionizing workplace efficiency, from task automation to intelligent scheduling.',
-    generativeSeed: 'ai-productivity-tools-2024',
-    theme: 'ai',
+    id: &apos;ai-productivity-tools-2024&apos;,
+    title: &apos;AI Productivity Tools 2024: Ultimate Guide to Getting More Done&apos;,
+    excerpt: &apos;Discover how AI productivity tools are revolutionizing workplace efficiency, from task automation to intelligent scheduling.&apos;,
+    generativeSeed: &apos;ai-productivity-tools-2024&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: Leveraging AI productivity tools to maximize team output and streamline operations...',
-      developerInstance: 'For developers: Building AI-powered productivity solutions and integrating existing tools...',
-      audioNarrationUrl: '/audio/ai-productivity-tools-2024.mp3'
+      founderInstance: &apos;For founders: Leveraging AI productivity tools to maximize team output and streamline operations...&apos;,
+      developerInstance: &apos;For developers: Building AI-powered productivity solutions and integrating existing tools...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-productivity-tools-2024.mp3&apos;
     },
     semanticEmbedding: [0.67, 0.34, -0.23, 0.89],
-    dynamicTags: ['Productivity', 'AI Tools', 'Workplace', 'Automation'],
+    dynamicTags: [&apos;Productivity&apos;, &apos;AI Tools&apos;, &apos;Workplace&apos;, &apos;Automation&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_008', name: 'Notion AI' },
-      { type: 'category', id: 'cat_008', name: 'Productivity Tools' }
+      { type: &apos;tool&apos;, id: &apos;tool_008&apos;, name: &apos;Notion AI&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_008&apos;, name: &apos;Productivity Tools&apos; }
     ],
     engagementPulse: 0.91,
     author: {
-      name: 'Productivity Expert',
-      avatar: '/avatars/productivity-expert.jpg'
+      name: &apos;Productivity Expert&apos;,
+      avatar: &apos;/avatars/productivity-expert.jpg&apos;
     },
-    readTime: '7 min read',
-    publishedAt: '2024-11-04'
+    readTime: &apos;7 min read&apos;,
+    publishedAt: &apos;2024-11-04&apos;
   },
   {
-    id: 'ai-tools-comparison-2024',
-    title: 'AI Tools Comparison 2024: Best AI Software for Every Need',
-    excerpt: 'Comprehensive comparison of the best AI tools available in 2024, helping you choose the right software for your specific needs.',
-    generativeSeed: 'ai-tools-comparison-2024',
-    theme: 'ai',
+    id: &apos;ai-tools-comparison-2024&apos;,
+    title: &apos;AI Tools Comparison 2024: Best AI Software for Every Need&apos;,
+    excerpt: &apos;Comprehensive comparison of the best AI tools available in 2024, helping you choose the right software for your specific needs.&apos;,
+    generativeSeed: &apos;ai-tools-comparison-2024&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: Making informed decisions about AI tool investments and implementations...',
-      developerInstance: 'For developers: Understanding the technical differences between AI platforms and APIs...',
-      audioNarrationUrl: '/audio/ai-tools-comparison-2024.mp3'
+      founderInstance: &apos;For founders: Making informed decisions about AI tool investments and implementations...&apos;,
+      developerInstance: &apos;For developers: Understanding the technical differences between AI platforms and APIs...&apos;,
+      audioNarrationUrl: &apos;/audio/ai-tools-comparison-2024.mp3&apos;
     },
     semanticEmbedding: [0.45, -0.67, 0.78, 0.23],
-    dynamicTags: ['Comparison', 'AI Tools', 'Software', 'Reviews'],
+    dynamicTags: [&apos;Comparison&apos;, &apos;AI Tools&apos;, &apos;Software&apos;, &apos;Reviews&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_009', name: 'ChatGPT' },
-      { type: 'category', id: 'cat_009', name: 'AI Comparison' }
+      { type: &apos;tool&apos;, id: &apos;tool_009&apos;, name: &apos;ChatGPT&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_009&apos;, name: &apos;AI Comparison&apos; }
     ],
     engagementPulse: 0.94,
     author: {
-      name: 'Tech Reviewer',
-      avatar: '/avatars/tech-reviewer.jpg'
+      name: &apos;Tech Reviewer&apos;,
+      avatar: &apos;/avatars/tech-reviewer.jpg&apos;
     },
-    readTime: '10 min read',
-    publishedAt: '2024-11-03'
+    readTime: &apos;10 min read&apos;,
+    publishedAt: &apos;2024-11-03&apos;
   },
   {
-    id: 'future-of-artificial-intelligence',
-    title: 'The Future of Artificial Intelligence: Trends and Predictions',
-    excerpt: 'Exploring the emerging trends and making predictions about the future of AI and its impact on society, business, and technology.',
-    generativeSeed: 'future-of-artificial-intelligence',
-    theme: 'ai',
+    id: &apos;future-of-artificial-intelligence&apos;,
+    title: &apos;The Future of Artificial Intelligence: Trends and Predictions&apos;,
+    excerpt: &apos;Exploring the emerging trends and making predictions about the future of AI and its impact on society, business, and technology.&apos;,
+    generativeSeed: &apos;future-of-artificial-intelligence&apos;,
+    theme: &apos;ai&apos;,
     content: {
-      founderInstance: 'For founders: Understanding how future AI trends will shape business strategies and opportunities...',
-      developerInstance: 'For developers: Preparing for the next wave of AI technologies and development paradigms...',
-      audioNarrationUrl: '/audio/future-of-artificial-intelligence.mp3'
+      founderInstance: &apos;For founders: Understanding how future AI trends will shape business strategies and opportunities...&apos;,
+      developerInstance: &apos;For developers: Preparing for the next wave of AI technologies and development paradigms...&apos;,
+      audioNarrationUrl: &apos;/audio/future-of-artificial-intelligence.mp3&apos;
     },
     semanticEmbedding: [0.78, 0.45, -0.56, 0.91],
-    dynamicTags: ['Future', 'AI Trends', 'Predictions', 'Technology'],
+    dynamicTags: [&apos;Future&apos;, &apos;AI Trends&apos;, &apos;Predictions&apos;, &apos;Technology&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_010', name: 'GPT-5' },
-      { type: 'category', id: 'cat_010', name: 'AI Future' }
+      { type: &apos;tool&apos;, id: &apos;tool_010&apos;, name: &apos;GPT-5&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_010&apos;, name: &apos;AI Future&apos; }
     ],
     engagementPulse: 0.96,
     author: {
-      name: 'AI Futurist',
-      avatar: '/avatars/ai-futurist.jpg'
+      name: &apos;AI Futurist&apos;,
+      avatar: &apos;/avatars/ai-futurist.jpg&apos;
     },
-    readTime: '12 min read',
-    publishedAt: '2024-11-02'
+    readTime: &apos;12 min read&apos;,
+    publishedAt: &apos;2024-11-02&apos;
   },
   {
-    id: 'machine-learning-beginners-guide',
-    title: 'Machine Learning for Beginners: Complete Getting Started Guide',
-    excerpt: 'A comprehensive guide for beginners looking to understand and start their journey into machine learning and AI development.',
-    generativeSeed: 'machine-learning-beginners-guide',
-    theme: 'development',
+    id: &apos;machine-learning-beginners-guide&apos;,
+    title: &apos;Machine Learning for Beginners: Complete Getting Started Guide&apos;,
+    excerpt: &apos;A comprehensive guide for beginners looking to understand and start their journey into machine learning and AI development.&apos;,
+    generativeSeed: &apos;machine-learning-beginners-guide&apos;,
+    theme: &apos;development&apos;,
     content: {
-      founderInstance: 'For founders: Understanding the basics of machine learning to make better business decisions...',
-      developerInstance: 'For developers: Step-by-step guide to getting started with ML development and best practices...',
-      audioNarrationUrl: '/audio/machine-learning-beginners-guide.mp3'
+      founderInstance: &apos;For founders: Understanding the basics of machine learning to make better business decisions...&apos;,
+      developerInstance: &apos;For developers: Step-by-step guide to getting started with ML development and best practices...&apos;,
+      audioNarrationUrl: &apos;/audio/machine-learning-beginners-guide.mp3&apos;
     },
     semanticEmbedding: [0.34, 0.67, 0.89, -0.12],
-    dynamicTags: ['Machine Learning', 'Beginners', 'Tutorial', 'Guide'],
+    dynamicTags: [&apos;Machine Learning&apos;, &apos;Beginners&apos;, &apos;Tutorial&apos;, &apos;Guide&apos;],
     linkedEntities: [
-      { type: 'tool', id: 'tool_011', name: 'TensorFlow' },
-      { type: 'category', id: 'cat_011', name: 'ML Education' }
+      { type: &apos;tool&apos;, id: &apos;tool_011&apos;, name: &apos;TensorFlow&apos; },
+      { type: &apos;category&apos;, id: &apos;cat_011&apos;, name: &apos;ML Education&apos; }
     ],
     engagementPulse: 0.88,
     author: {
-      name: 'ML Educator',
-      avatar: '/avatars/ml-educator.jpg'
+      name: &apos;ML Educator&apos;,
+      avatar: &apos;/avatars/ml-educator.jpg&apos;
     },
-    readTime: '15 min read',
-    publishedAt: '2024-11-01'
+    readTime: &apos;15 min read&apos;,
+    publishedAt: &apos;2024-11-01&apos;
   }
 ];
 
@@ -484,22 +484,22 @@ const KnowledgeNode: React.FC<{ node: KnowledgeNode; index: number; onExpand: (n
       transition={{ 
         duration: 0.6, 
         delay: index * 0.1,
-        type: "spring",
+        type: &quot;spring&quot;,
         stiffness: 100
       }}
       whileHover={{ scale: 1.02, z: 50 }}
-      className="relative h-64 mb-8 cursor-pointer"
+      className="relative h-64 mb-8 cursor-pointer&quot;
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={handleMouseMove}
       onClick={handleClick}
       style={{
-        perspective: '1000px',
-        transformStyle: 'preserve-3d'
+        perspective: &apos;1000px&apos;,
+        transformStyle: &apos;preserve-3d
       }}
     >
       {/* Neural Background */}
-      <div className="absolute inset-0 overflow-hidden rounded-2xl">
+      <div className="absolute inset-0 overflow-hidden rounded-2xl&quot;>
         <Canvas camera={{ position: [0, 0, 1], fov: 75 }}>
           <ambientLight intensity={0.5} />
           <Points>
@@ -510,11 +510,11 @@ const KnowledgeNode: React.FC<{ node: KnowledgeNode; index: number; onExpand: (n
 
       {/* Glassmorphic Panel */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl border border-white/20 p-6"
+        className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl border border-white/20 p-6&quot;
         style={{
           rotateX: springRotateX,
           rotateY: springRotateY,
-          transformStyle: 'preserve-3d'
+          transformStyle: &apos;preserve-3d
         }}
       >
         {/* Holographic Effect on Hover */}
@@ -524,26 +524,26 @@ const KnowledgeNode: React.FC<{ node: KnowledgeNode; index: number; onExpand: (n
               initial={{ opacity: 0, scale: 0.8, y: -20 }}
               animate={{ opacity: 1, scale: 1, y: -30 }}
               exit={{ opacity: 0, scale: 0.8, y: -20 }}
-              className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-50"
+              className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-50&quot;
               style={{ transformStyle: 'preserve-3d' }}
             >
-              <div className="bg-black/80 backdrop-blur-lg rounded-xl p-4 border border-cyan-400/50 shadow-2xl shadow-cyan-400/20">
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">{node.author.name.split(' ').map(n => n[0]).join('')}</span>
+              <div className="bg-black/80 backdrop-blur-lg rounded-xl p-4 border border-cyan-400/50 shadow-2xl shadow-cyan-400/20&quot;>
+                <div className="flex items-center space-x-3 mb-2&quot;>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center&quot;>
+                    <span className="text-white text-xs font-bold&quot;>{node.author.name.split(&apos; ).map(n => n[0]).join(&apos;&apos;)}</span>
                   </div>
                   <div>
-                    <p className="text-white text-sm font-medium">{node.author.name}</p>
-                    <p className="text-gray-400 text-xs">{node.readTime}</p>
+                    <p className="text-white text-sm font-medium&quot;>{node.author.name}</p>
+                    <p className="text-gray-400 text-xs&quot;>{node.readTime}</p>
                   </div>
                 </div>
                 
                 {/* Dynamic Tag Cloud */}
-                <div className="flex flex-wrap gap-1 mb-2">
+                <div className="flex flex-wrap gap-1 mb-2&quot;>
                   {node.dynamicTags.slice(0, 3).map((tag, i) => (
                     <span 
                       key={i}
-                      className="px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded-full border border-cyan-400/30"
+                      className="px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded-full border border-cyan-400/30&quot;
                       style={{ fontSize: `${10 + Math.random() * 4}px` }}
                     >
                       {tag}
@@ -552,9 +552,9 @@ const KnowledgeNode: React.FC<{ node: KnowledgeNode; index: number; onExpand: (n
                 </div>
 
                 {/* Engagement Pulse */}
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-gray-400 text-xs">{Math.round(node.engagementPulse * 100)}% engagement</span>
+                <div className="flex items-center space-x-2&quot;>
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse&quot;></div>
+                  <span className="text-gray-400 text-xs&quot;>{Math.round(node.engagementPulse * 100)}% engagement</span>
                 </div>
               </div>
             </motion.div>
@@ -562,33 +562,33 @@ const KnowledgeNode: React.FC<{ node: KnowledgeNode; index: number; onExpand: (n
         </AnimatePresence>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-between">
+        <div className="relative z-10 h-full flex flex-col justify-between&quot;>
           <div>
-            <div className="flex items-center space-x-2 mb-3">
+            <div className="flex items-center space-x-2 mb-3&quot;>
               <span className={`px-2 py-1 text-xs rounded-full border ${
-                node.theme === 'ai' ? 'bg-cyan-500/20 text-cyan-300 border-cyan-400/30' :
-                node.theme === 'cybersecurity' ? 'bg-green-500/20 text-green-300 border-green-400/30' :
-                node.theme === 'development' ? 'bg-blue-500/20 text-blue-300 border-blue-400/30' :
-                'bg-purple-500/20 text-purple-300 border-purple-400/30'
+                node.theme === &apos;ai&apos; ? &apos;bg-cyan-500/20 text-cyan-300 border-cyan-400/30&apos; :
+                node.theme === &apos;cybersecurity&apos; ? &apos;bg-green-500/20 text-green-300 border-green-400/30&apos; :
+                node.theme === &apos;development&apos; ? &apos;bg-blue-500/20 text-blue-300 border-blue-400/30&apos; :
+                &apos;bg-purple-500/20 text-purple-300 border-purple-400/30
               }`}>
                 {node.theme.toUpperCase()}
               </span>
-              <span className="text-gray-400 text-xs">{node.publishedAt}</span>
+              <span className="text-gray-400 text-xs&quot;>{node.publishedAt}</span>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">{node.title}</h3>
-            <p className="text-gray-300 text-sm line-clamp-3">{node.excerpt}</p>
+            <h3 className="text-xl font-bold text-white mb-2 line-clamp-2&quot;>{node.title}</h3>
+            <p className="text-gray-300 text-sm line-clamp-3&quot;>{node.excerpt}</p>
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400"></div>
-              <span className="text-gray-400 text-xs">{node.author.name}</span>
+          <div className="flex items-center justify-between&quot;>
+            <div className="flex items-center space-x-2&quot;>
+              <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400&quot;></div>
+              <span className="text-gray-400 text-xs&quot;>{node.author.name}</span>
             </div>
-            <div className="flex items-center space-x-2 text-gray-400 text-xs">
+            <div className="flex items-center space-x-2 text-gray-400 text-xs&quot;>
               <span>{node.readTime}</span>
               <span>•</span>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse&quot;></div>
             </div>
           </div>
         </div>
@@ -596,7 +596,7 @@ const KnowledgeNode: React.FC<{ node: KnowledgeNode; index: number; onExpand: (n
         {/* Hard Light Effect */}
         {isHovered && (
           <motion.div
-            className="absolute inset-0 bg-gradient-to-t from-cyan-400/20 to-transparent rounded-2xl pointer-events-none"
+            className="absolute inset-0 bg-gradient-to-t from-cyan-400/20 to-transparent rounded-2xl pointer-events-none&quot;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
@@ -615,30 +615,30 @@ const ContextualNexus: React.FC<{ selectedNode?: KnowledgeNode; hoveredNode?: Kn
     <motion.div
       initial={{ x: 300, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      className="fixed right-0 top-0 h-full w-80 bg-black/40 backdrop-blur-xl border-l border-white/10 p-6 overflow-y-auto z-40"
+      className="fixed right-0 top-0 h-full w-80 bg-black/40 backdrop-blur-xl border-l border-white/10 p-6 overflow-y-auto z-40&quot;
     >
-      <h2 className="text-xl font-bold text-white mb-6">Contextual Nexus</h2>
+      <h2 className="text-xl font-bold text-white mb-6&quot;>Contextual Nexus</h2>
       
       {activeNode ? (
-        <div className="space-y-6">
+        <div className="space-y-6&quot;>
           {/* Neural Connections */}
           <div>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-3">Neural Connections</h3>
-            <div className="space-y-2">
+            <h3 className="text-sm font-semibold text-cyan-400 mb-3&quot;>Neural Connections</h3>
+            <div className="space-y-2&quot;>
               {activeNode.linkedEntities.map((entity, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white/5 rounded-lg p-3 border border-white/10"
+                  className="bg-white/5 rounded-lg p-3 border border-white/10&quot;
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between&quot;>
                     <div>
-                      <p className="text-white text-sm font-medium">{entity.name}</p>
-                      <p className="text-gray-400 text-xs">{entity.type}</p>
+                      <p className="text-white text-sm font-medium&quot;>{entity.name}</p>
+                      <p className="text-gray-400 text-xs&quot;>{entity.type}</p>
                     </div>
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse&quot;></div>
                   </div>
                 </motion.div>
               ))}
@@ -647,45 +647,45 @@ const ContextualNexus: React.FC<{ selectedNode?: KnowledgeNode; hoveredNode?: Kn
 
           {/* Conversation Pulse */}
           <div>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-3">Conversation Pulse</h3>
-            <div className="space-y-2">
-              <div className="bg-white/5 rounded-lg p-3 border border-white/10">
-                <p className="text-gray-300 text-sm mb-1">"Revolutionary insights!"</p>
-                <p className="text-gray-500 text-xs">- @tech_enthusiast</p>
+            <h3 className="text-sm font-semibold text-cyan-400 mb-3&quot;>Conversation Pulse</h3>
+            <div className="space-y-2&quot;>
+              <div className="bg-white/5 rounded-lg p-3 border border-white/10&quot;>
+                <p className="text-gray-300 text-sm mb-1&quot;>&quot;Revolutionary insights!&quot;</p>
+                <p className="text-gray-500 text-xs&quot;>- @tech_enthusiast</p>
               </div>
-              <div className="bg-white/5 rounded-lg p-3 border border-white/10">
-                <p className="text-gray-300 text-sm mb-1">"Game changer for our team"</p>
-                <p className="text-gray-500 text-xs">- @startup_founder</p>
+              <div className="bg-white/5 rounded-lg p-3 border border-white/10&quot;>
+                <p className="text-gray-300 text-sm mb-1&quot;>&quot;Game changer for our team&quot;</p>
+                <p className="text-gray-500 text-xs&quot;>- @startup_founder</p>
               </div>
             </div>
           </div>
 
           {/* Knowledge Depth */}
           <div>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-3">Knowledge Depth</h3>
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-gray-400 text-xs">Executive Summary</span>
-                <span className="text-gray-400 text-xs">Technical Deep Dive</span>
+            <h3 className="text-sm font-semibold text-cyan-400 mb-3&quot;>Knowledge Depth</h3>
+            <div className="bg-white/5 rounded-lg p-4 border border-white/10&quot;>
+              <div className="flex justify-between items-center mb-2&quot;>
+                <span className="text-gray-400 text-xs&quot;>Executive Summary</span>
+                <span className="text-gray-400 text-xs&quot;>Technical Deep Dive</span>
               </div>
-              <div className="relative h-2 bg-white/10 rounded-full">
+              <div className="relative h-2 bg-white/10 rounded-full&quot;>
                 <motion.div
-                  className="absolute left-0 top-0 h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"
-                  initial={{ width: "30%" }}
-                  animate={{ width: "30%" }}
+                  className="absolute left-0 top-0 h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full&quot;
+                  initial={{ width: &quot;30%&quot; }}
+                  animate={{ width: &quot;30%&quot; }}
                 />
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <div className="text-center py-12">
-          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <div className="text-center py-12&quot;>
+          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center&quot;>
+            <svg className="w-8 h-8 text-white&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+              <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z&quot; />
             </svg>
           </div>
-          <p className="text-gray-400 text-sm">Hover over or select a Knowledge Node to see connections</p>
+          <p className="text-gray-400 text-sm&quot;>Hover over or select a Knowledge Node to see connections</p>
         </div>
       )}
     </motion.div>
@@ -728,8 +728,8 @@ export default function NeuralStream() {
 
     const element = streamRef.current;
     if (element) {
-      element.addEventListener('scroll', handleScroll);
-      return () => element.removeEventListener('scroll', handleScroll);
+      element.addEventListener(&apos;scroll, handleScroll);
+      return () => element.removeEventListener(&apos;scroll&apos;, handleScroll);
     }
   }, [loadingMore, loadMoreNodes]);
 
@@ -737,110 +737,110 @@ export default function NeuralStream() {
     <>
       <Head>
         <title>Neural Stream - Interactive AI Blog Experience | AI Vault</title>
-        <meta name="description" content="Experience the future of content with AI Vault's Neural Stream. Interactive AI blog posts in a 3D neural network visualization with real-time knowledge connections." />
-        <meta name="keywords" content="neural stream, AI blog, interactive content, 3D visualization, AI insights, knowledge network, artificial intelligence" />
-        <meta name="author" content="AI Vault Team" />
-        <link rel="canonical" href="https://aether-nexus.vercel.app/blog/neural-stream" />
+        <meta name="description&quot; content="Experience the future of content with AI Vault's Neural Stream. Interactive AI blog posts in a 3D neural network visualization with real-time knowledge connections.&quot; />
+        <meta name="keywords&quot; content="neural stream, AI blog, interactive content, 3D visualization, AI insights, knowledge network, artificial intelligence&quot; />
+        <meta name="author&quot; content="AI Vault Team&quot; />
+        <link rel="canonical&quot; href="https://aether-nexus.vercel.app/blog/neural-stream&quot; />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Neural Stream - Interactive AI Blog Experience | AI Vault" />
-        <meta property="og:description" content="Experience the future of content with AI Vault's Neural Stream. Interactive AI blog posts in a 3D neural network visualization with real-time knowledge connections." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://aether-nexus.vercel.app/blog/neural-stream" />
-        <meta property="og:image" content="https://aether-nexus.vercel.app/images/neural-stream-og-image.jpg" />
-        <meta property="og:site_name" content="AI Vault" />
+        <meta property="og:title&quot; content="Neural Stream - Interactive AI Blog Experience | AI Vault&quot; />
+        <meta property="og:description&quot; content="Experience the future of content with AI Vault's Neural Stream. Interactive AI blog posts in a 3D neural network visualization with real-time knowledge connections.&quot; />
+        <meta property="og:type&quot; content="website&quot; />
+        <meta property="og:url&quot; content="https://aether-nexus.vercel.app/blog/neural-stream&quot; />
+        <meta property="og:image&quot; content="https://aether-nexus.vercel.app/images/neural-stream-og-image.jpg&quot; />
+        <meta property="og:site_name&quot; content="AI Vault&quot; />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Neural Stream - Interactive AI Blog Experience" />
-        <meta name="twitter:description" content="Experience the future of content with AI Vault's Neural Stream. Interactive AI blog posts in a 3D neural network visualization." />
-        <meta name="twitter:image" content="https://aether-nexus.vercel.app/images/neural-stream-og-image.jpg" />
-        <meta name="twitter:site" content="@aivault" />
+        <meta name="twitter:card&quot; content="summary_large_image&quot; />
+        <meta name="twitter:title&quot; content="Neural Stream - Interactive AI Blog Experience&quot; />
+        <meta name="twitter:description&quot; content="Experience the future of content with AI Vault's Neural Stream. Interactive AI blog posts in a 3D neural network visualization.&quot; />
+        <meta name="twitter:image&quot; content="https://aether-nexus.vercel.app/images/neural-stream-og-image.jpg&quot; />
+        <meta name="twitter:site&quot; content="@aivault&quot; />
         
         {/* Structured Data - Article */}
-        <script type="application/ld+json">
+        <script type="application/ld+json&quot;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://aether-nexus.vercel.app/blog/neural-stream"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;Article&quot;,
+            &quot;mainEntityOfPage&quot;: {
+              &quot;@type&quot;: &quot;WebPage&quot;,
+              &quot;@id&quot;: &quot;https://aether-nexus.vercel.app/blog/neural-stream&quot;
             },
-            "headline": "Neural Stream - Interactive AI Blog Experience",
-            "description": "Experience the future of content with AI Vault's Neural Stream. Interactive AI blog posts in a 3D neural network visualization with real-time knowledge connections.",
-            "author": {
-              "@type": "Organization",
-              "name": "AI Vault Team"
+            &quot;headline&quot;: &quot;Neural Stream - Interactive AI Blog Experience&quot;,
+            &quot;description&quot;: &quot;Experience the future of content with AI Vault&apos;s Neural Stream. Interactive AI blog posts in a 3D neural network visualization with real-time knowledge connections.&quot;,
+            &quot;author&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;AI Vault Team&quot;
             },
-            "publisher": {
-              "@type": "Organization",
-              "name": "AI Vault",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://aether-nexus.vercel.app/images/logo.png"
+            &quot;publisher&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;AI Vault&quot;,
+              &quot;logo&quot;: {
+                &quot;@type&quot;: &quot;ImageObject&quot;,
+                &quot;url&quot;: &quot;https://aether-nexus.vercel.app/images/logo.png&quot;
               }
             },
-            "datePublished": "2025-11-19",
-            "dateModified": "2025-11-19",
-            "wordCount": 1200,
-            "image": "https://aether-nexus.vercel.app/images/neural-stream-og-image.jpg",
-            "keywords": "neural stream, AI blog, interactive content, 3D visualization, AI insights, knowledge network, artificial intelligence",
-            "articleSection": "Technology"
+            &quot;datePublished&quot;: &quot;2025-11-19&quot;,
+            &quot;dateModified&quot;: &quot;2025-11-19&quot;,
+            &quot;wordCount&quot;: 1200,
+            &quot;image&quot;: &quot;https://aether-nexus.vercel.app/images/neural-stream-og-image.jpg&quot;,
+            &quot;keywords&quot;: &quot;neural stream, AI blog, interactive content, 3D visualization, AI insights, knowledge network, artificial intelligence&quot;,
+            &quot;articleSection&quot;: &quot;Technology&quot;
           })}
         </script>
         
         {/* Structured Data - Breadcrumb */}
-        <script type="application/ld+json">
+        <script type="application/ld+json&quot;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://aether-nexus.vercel.app"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+            &quot;itemListElement&quot;: [{
+              &quot;@type&quot;: &quot;ListItem&quot;,
+              &quot;position&quot;: 1,
+              &quot;name&quot;: &quot;Home&quot;,
+              &quot;item&quot;: &quot;https://aether-nexus.vercel.app&quot;
             },{
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Blog",
-              "item": "https://aether-nexus.vercel.app/blog"
+              &quot;@type&quot;: &quot;ListItem&quot;,
+              &quot;position&quot;: 2,
+              &quot;name&quot;: &quot;Blog&quot;,
+              &quot;item&quot;: &quot;https://aether-nexus.vercel.app/blog&quot;
             },{
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Neural Stream",
-              "item": "https://aether-nexus.vercel.app/blog/neural-stream"
+              &quot;@type&quot;: &quot;ListItem&quot;,
+              &quot;position&quot;: 3,
+              &quot;name&quot;: &quot;Neural Stream&quot;,
+              &quot;item&quot;: &quot;https://aether-nexus.vercel.app/blog/neural-stream&quot;
             }]
           })}
         </script>
         
         {/* Structured Data - FAQ for Answer Engine Optimization */}
-        <script type="application/ld+json">
+        <script type="application/ld+json&quot;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;FAQPage&quot;,
+            &quot;mainEntity&quot;: [
               {
-                "@type": "Question",
-                "name": "What is Neural Stream and how does it work?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Neural Stream is AI Vault's interactive blog experience that visualizes content in a 3D neural network. It connects related knowledge nodes in real-time, allowing users to explore AI topics through an immersive, interactive interface with dynamic knowledge connections."
+                &quot;@type&quot;: &quot;Question&quot;,
+                &quot;name&quot;: &quot;What is Neural Stream and how does it work?&quot;,
+                &quot;acceptedAnswer&quot;: {
+                  &quot;@type&quot;: &quot;Answer&quot;,
+                  &quot;text&quot;: &quot;Neural Stream is AI Vault&apos;s interactive blog experience that visualizes content in a 3D neural network. It connects related knowledge nodes in real-time, allowing users to explore AI topics through an immersive, interactive interface with dynamic knowledge connections.&quot;
                 }
               },
               {
-                "@type": "Question",
-                "name": "How can Neural Stream improve my understanding of AI topics?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Neural Stream enhances learning by showing connections between related concepts, providing multiple perspectives on topics, and allowing interactive exploration. The 3D visualization helps users see how different AI concepts relate to each other in a more intuitive way than traditional text."
+                &quot;@type&quot;: &quot;Question&quot;,
+                &quot;name&quot;: &quot;How can Neural Stream improve my understanding of AI topics?&quot;,
+                &quot;acceptedAnswer&quot;: {
+                  &quot;@type&quot;: &quot;Answer&quot;,
+                  &quot;text&quot;: &quot;Neural Stream enhances learning by showing connections between related concepts, providing multiple perspectives on topics, and allowing interactive exploration. The 3D visualization helps users see how different AI concepts relate to each other in a more intuitive way than traditional text.&quot;
                 }
               },
               {
-                "@type": "Question",
-                "name": "What makes Neural Stream different from traditional blogs?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Unlike traditional linear blogs, Neural Stream presents content as interconnected knowledge nodes in a 3D space. Users can explore topics non-linearly, see real-time connections between concepts, and experience content through interactive visualizations that adapt to their interests."
+                &quot;@type&quot;: &quot;Question&quot;,
+                &quot;name&quot;: &quot;What makes Neural Stream different from traditional blogs?&quot;,
+                &quot;acceptedAnswer&quot;: {
+                  &quot;@type&quot;: &quot;Answer&quot;,
+                  &quot;text&quot;: &quot;Unlike traditional linear blogs, Neural Stream presents content as interconnected knowledge nodes in a 3D space. Users can explore topics non-linearly, see real-time connections between concepts, and experience content through interactive visualizations that adapt to their interests.&quot;
                 }
               }
             ]
@@ -848,15 +848,15 @@ export default function NeuralStream() {
         </script>
       </Head>
 
-      <div className="min-h-screen bg-black text-white overflow-hidden">
+      <div className="min-h-screen bg-black text-white overflow-hidden&quot;>
         {/* Parallax Background */}
-        <div className="fixed inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20"></div>
-          <div className="absolute inset-0">
+        <div className="fixed inset-0 z-0&quot;>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20&quot;></div>
+          <div className="absolute inset-0&quot;>
             {[...Array(50)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
+                className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse&quot;
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -869,26 +869,26 @@ export default function NeuralStream() {
         </div>
 
         {/* Main Content */}
-        <div className="relative z-10">
+        <div className="relative z-10&quot;>
           {/* Header */}
           <motion.header
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-8 text-center"
+            className="p-8 text-center&quot;
           >
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent&quot;>
               Neural Stream
             </h1>
-            <p className="text-gray-400 text-lg">The voice of Atlas Neo • Intelligent • Beautiful • Alive</p>
+            <p className="text-gray-400 text-lg&quot;>The voice of Atlas Neo • Intelligent • Beautiful • Alive</p>
           </motion.header>
 
           {/* Knowledge Stream */}
           <div
             ref={streamRef}
-            className="max-w-4xl mx-auto px-8 pb-16 h-[calc(100vh-200px)] overflow-y-auto"
-            style={{ scrollBehavior: 'smooth' }}
+            className="max-w-4xl mx-auto px-8 pb-16 h-[calc(100vh-200px)] overflow-y-auto&quot;
+            style={{ scrollBehavior: &apos;smooth }}
           >
-            <div className="space-y-0">
+            <div className="space-y-0&quot;>
               {visibleNodes.map((node, index) => (
                 <KnowledgeNode
                   key={node.id}
@@ -904,12 +904,12 @@ export default function NeuralStream() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-center py-8"
+                className="text-center py-8&quot;
               >
-                <div className="inline-flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                <div className="inline-flex items-center space-x-2&quot;>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce&quot;></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce&quot; style={{ animationDelay: &apos;0.1s }}></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce&quot; style={{ animationDelay: '0.2s' }}></div>
                 </div>
               </motion.div>
             )}
@@ -926,20 +926,20 @@ export default function NeuralStream() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-xl z-50 flex items-center justify-center p-8"
+              className="fixed inset-0 bg-black/80 backdrop-blur-xl z-50 flex items-center justify-center p-8&quot;
               onClick={() => setExpandedNode(undefined)}
             >
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
-                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl border border-white/20 max-w-4xl w-full max-h-[80vh] overflow-y-auto p-8"
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl border border-white/20 max-w-4xl w-full max-h-[80vh] overflow-y-auto p-8&quot;
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex justify-between items-start mb-6&quot;>
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">{expandedNode.title}</h2>
-                    <div className="flex items-center space-x-4 text-gray-400 text-sm">
+                    <h2 className="text-3xl font-bold text-white mb-2&quot;>{expandedNode.title}</h2>
+                    <div className="flex items-center space-x-4 text-gray-400 text-sm&quot;>
                       <span>{expandedNode.author.name}</span>
                       <span>•</span>
                       <span>{expandedNode.readTime}</span>
@@ -949,25 +949,25 @@ export default function NeuralStream() {
                   </div>
                   <button
                     onClick={() => setExpandedNode(undefined)}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors&quot;
                   >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg className="w-6 h-6&quot; fill="none&quot; stroke="currentColor&quot; viewBox="0 0 24 24&quot;>
+                      <path strokeLinecap="round&quot; strokeLinejoin="round&quot; strokeWidth={2} d="M6 18L18 6M6 6l12 12&quot; />
                     </svg>
                   </button>
                 </div>
 
-                <div className="prose prose-invert max-w-none">
-                  <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                <div className="prose prose-invert max-w-none&quot;>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-4&quot;>
                     {expandedNode.content.developerInstance}
                   </p>
-                  <div className="bg-white/5 rounded-lg p-4 border border-white/10 mt-6">
-                    <h3 className="text-cyan-400 font-semibold mb-2">Instance Switcher</h3>
-                    <div className="flex space-x-2">
-                      <button className="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-lg border border-cyan-400/30">
+                  <div className="bg-white/5 rounded-lg p-4 border border-white/10 mt-6&quot;>
+                    <h3 className="text-cyan-400 font-semibold mb-2&quot;>Instance Switcher</h3>
+                    <div className="flex space-x-2&quot;>
+                      <button className="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-lg border border-cyan-400/30&quot;>
                         Developer View
                       </button>
-                      <button className="px-4 py-2 bg-white/10 text-gray-300 rounded-lg border border-white/20">
+                      <button className="px-4 py-2 bg-white/10 text-gray-300 rounded-lg border border-white/20&quot;>
                         Founder View
                       </button>
                     </div>

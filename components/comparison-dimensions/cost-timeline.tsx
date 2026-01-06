@@ -41,78 +41,78 @@ export default function CostTimeline({ tools, userPreferences, onReady }: CostTi
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6&quot;>
       {/* Header */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-2">Cost Timeline</h2>
-        <p className="text-gray-400">Pricing projection and ROI analysis</p>
+      <div className="mb-6&quot;>
+        <h2 className="text-2xl font-bold mb-2&quot;>Cost Timeline</h2>
+        <p className="text-gray-400&quot;>Pricing projection and ROI analysis</p>
       </div>
 
       {/* Controls */}
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-2 gap-6 mb-6&quot;>
         <div>
-          <label className="block text-sm font-medium mb-2">Timeframe (years)</label>
+          <label className="block text-sm font-medium mb-2&quot;>Timeframe (years)</label>
           <input
-            type="range"
-            min="1"
-            max="5"
+            type="range&quot;
+            min="1&quot;
+            max="5&quot;
             value={timeframe}
             onChange={(e) => setTimeframe(Number(e.target.value))}
-            className="w-full"
+            className="w-full&quot;
           />
-          <div className="text-center mt-2">{timeframe} years</div>
+          <div className="text-center mt-2&quot;>{timeframe} years</div>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">Team Size</label>
+          <label className="block text-sm font-medium mb-2&quot;>Team Size</label>
           <input
-            type="range"
-            min="1"
-            max="50"
+            type="range&quot;
+            min="1&quot;
+            max="50&quot;
             value={teamSize}
             onChange={(e) => setTeamSize(Number(e.target.value))}
-            className="w-full"
+            className="w-full&quot;
           />
-          <div className="text-center mt-2">{teamSize} users</div>
+          <div className="text-center mt-2&quot;>{teamSize} users</div>
         </div>
       </div>
 
       {/* Cost Comparison */}
-      <div className="space-y-4">
+      <div className="space-y-4&quot;>
         {tools.map((toolName) => {
           const pricing = getPricingData(toolName);
           const totalCost = calculateTotalCost(toolName, timeframe, teamSize);
           const roi = calculateROI(toolName, totalCost);
 
           return (
-            <div key={toolName} className="bg-white/10 rounded-lg p-4 border border-white/20">
-              <h3 className="font-semibold mb-3">{toolName}</h3>
+            <div key={toolName} className="bg-white/10 rounded-lg p-4 border border-white/20&quot;>
+              <h3 className="font-semibold mb-3&quot;>{toolName}</h3>
               
-              <div className="grid grid-cols-3 gap-4 text-sm">
+              <div className="grid grid-cols-3 gap-4 text-sm&quot;>
                 <div>
-                  <div className="text-gray-400">Monthly Cost</div>
-                  <div className="text-lg font-bold">${pricing.base + (pricing.perUser * teamSize)}</div>
+                  <div className="text-gray-400&quot;>Monthly Cost</div>
+                  <div className="text-lg font-bold&quot;>${pricing.base + (pricing.perUser * teamSize)}</div>
                 </div>
                 <div>
-                  <div className="text-gray-400">Total ({timeframe} years)</div>
-                  <div className="text-lg font-bold">${totalCost.toLocaleString()}</div>
+                  <div className="text-gray-400&quot;>Total ({timeframe} years)</div>
+                  <div className="text-lg font-bold&quot;>${totalCost.toLocaleString()}</div>
                 </div>
                 <div>
-                  <div className="text-gray-400">Estimated ROI</div>
-                  <div className="text-lg font-bold text-green-400">${roi.toLocaleString()}</div>
+                  <div className="text-gray-400&quot;>Estimated ROI</div>
+                  <div className="text-lg font-bold text-green-400&quot;>${roi.toLocaleString()}</div>
                 </div>
               </div>
 
               {/* Cost Breakdown */}
-              <div className="mt-4 space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Base Price:</span>
+              <div className="mt-4 space-y-2&quot;>
+                <div className="flex justify-between text-sm&quot;>
+                  <span className="text-gray-400&quot;>Base Price:</span>
                   <span>${pricing.base}/mo</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Per User:</span>
+                <div className="flex justify-between text-sm&quot;>
+                  <span className="text-gray-400&quot;>Per User:</span>
                   <span>${pricing.perUser} × {teamSize} = ${pricing.perUser * teamSize}/mo</span>
                 </div>
-                <div className="flex justify-between text-sm font-semibold pt-2 border-t border-white/20">
+                <div className="flex justify-between text-sm font-semibold pt-2 border-t border-white/20&quot;>
                   <span>Total Monthly:</span>
                   <span>${pricing.base + (pricing.perUser * teamSize)}</span>
                 </div>
@@ -123,10 +123,10 @@ export default function CostTimeline({ tools, userPreferences, onReady }: CostTi
       </div>
 
       {/* Comparison Chart */}
-      <div className="mt-8">
-        <h3 className="font-semibold mb-4">Cost Comparison Chart</h3>
-        <div className="bg-white/5 rounded-lg p-4 border border-white/20">
-          <div className="space-y-3">
+      <div className="mt-8&quot;>
+        <h3 className="font-semibold mb-4&quot;>Cost Comparison Chart</h3>
+        <div className="bg-white/5 rounded-lg p-4 border border-white/20&quot;>
+          <div className="space-y-3&quot;>
             {tools.map((toolName) => {
               const totalCost = calculateTotalCost(toolName, timeframe, teamSize);
               const maxCost = Math.max(...tools.map(t => calculateTotalCost(t, timeframe, teamSize)));
@@ -134,13 +134,13 @@ export default function CostTimeline({ tools, userPreferences, onReady }: CostTi
 
               return (
                 <div key={toolName}>
-                  <div className="flex justify-between text-sm mb-1">
+                  <div className="flex justify-between text-sm mb-1&quot;>
                     <span>{toolName}</span>
                     <span>${totalCost.toLocaleString()}</span>
                   </div>
-                  <div className="w-full bg-white/20 rounded-full h-2">
+                  <div className="w-full bg-white/20 rounded-full h-2&quot;>
                     <div
-                      className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-500"
+                      className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-500&quot;
                       style={{ width: `${percentage}%` }}
                     ></div>
                   </div>
