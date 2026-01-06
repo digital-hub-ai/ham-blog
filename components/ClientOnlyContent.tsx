@@ -26,7 +26,7 @@ const ClientOnlyContent = () => {
 
   // Mouse tracking for interactive effects
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     

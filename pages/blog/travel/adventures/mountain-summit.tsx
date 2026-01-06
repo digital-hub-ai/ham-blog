@@ -6,7 +6,7 @@ export default function MountainSummit() {
   return (
     <>
       <Head>
-        <title>Conquering Hidden Peaks | Chrono-Wanderer's Atlas</title>
+        <title>Conquering Hidden Peaks | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Tackle challenging mountain climbs with expert guides and breathtaking summit views in some of the world's most remote and spectacular high-altitude destinations in 2025." />
         <meta name="keywords" content="mountain climbing, summit expeditions, adventure travel, high altitude hiking, expert guides, peak climbing, outdoor adventures" />
         <meta name="author" content="Extreme Adventure Correspondent" />
@@ -32,7 +32,7 @@ export default function MountainSummit() {
             "dateModified": "2025-12-18T15:00:00Z",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://example.com/logo.png"

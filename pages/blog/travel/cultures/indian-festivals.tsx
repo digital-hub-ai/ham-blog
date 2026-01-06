@@ -6,7 +6,7 @@ export default function IndianFestivals2025() {
   return (
     <>
       <Head>
-        <title>Indian Festivals: A Celebration of Diversity | Chrono-Wanderer's Atlas</title>
+        <title>Indian Festivals: A Celebration of Diversity | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Explore the vibrant festivals that showcase India's rich cultural tapestry and spiritual traditions through ancient celebrations adapted for modern times in 2025." />
         <meta name="keywords" content="Indian festivals, cultural diversity, spiritual traditions, Holi, Diwali, cultural celebrations, Indian culture" />
         <meta name="author" content="Cultural Anthropologist" />
@@ -26,7 +26,7 @@ export default function IndianFestivals2025() {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai-tools-directory.com/images/logo.png"
@@ -42,7 +42,7 @@ export default function IndianFestivals2025() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -122,7 +122,7 @@ export default function IndianFestivals2025() {
             </p>
             
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
               <p>
                 Participate in Holi celebrations with respectful awareness of cultural significance. Use natural, skin-safe 
                 colors and follow local customs regarding appropriate behavior. Many communities organize tourist-friendly 

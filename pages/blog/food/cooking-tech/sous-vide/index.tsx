@@ -86,7 +86,7 @@ export default function SousVideMastery() {
 
               <h2 className="text-2xl font-bold mt-10 mb-4 text-blue-300">Troubleshooting Common Issues</h2>
               <p>
-                Bag floating can be remedied by removing more air or using clips to keep the bag submerged. If food has a "cooked" texture rather than "roasted," it's likely due to lack of searing after the sous vide process.
+                Bag floating can be remedied by removing more air or using clips to keep the bag submerged. If food has a &ldquo;cooked&rdquo; texture rather than &ldquo;roasted,&rdquo; it&rsquo;s likely due to lack of searing after the sous vide process.
               </p>
 
               <h3 className="text-xl font-semibold mt-8 mb-3 text-blue-400">Food Safety Considerations</h3>

@@ -6,7 +6,7 @@ export default function IcelandicHighlandsExplorer() {
   return (
     <>
       <Head>
-        <title>Icelandic Highlands: Untouched Wilderness and Geothermal Wonders | Chrono-Wanderer's Atlas</title>
+        <title>Icelandic Highlands: Untouched Wilderness and Geothermal Wonders | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Discover Iceland's most spectacular natural wonders from the Golden Circle to the South Coast with our comprehensive guide to the Land of Fire and Ice." />
         <meta name="keywords" content="Iceland travel, Icelandic Highlands, geothermal wonders, Northern Lights, volcanic landscapes, adventure travel" />
         <meta name="author" content="Adventure Travel Writer" />
@@ -26,7 +26,7 @@ export default function IcelandicHighlandsExplorer() {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai-tools-directory.com/images/logo.png"
@@ -42,7 +42,7 @@ export default function IcelandicHighlandsExplorer() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -121,7 +121,7 @@ export default function IcelandicHighlandsExplorer() {
             </p>
             
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
               <p>
                 Visit the Golden Circle early in the morning or late afternoon to avoid crowds and capture stunning 
                 photographs with optimal lighting conditions. The interplay of light and shadow creates dramatic effects 

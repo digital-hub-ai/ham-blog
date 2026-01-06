@@ -53,12 +53,12 @@ export default function PlantBasedProteins() {
 
               <h2 className="text-2xl font-bold text-green-400 mt-8 mb-4">Complete Plant Proteins</h2>
               <p className="mb-4">
-                Some plant foods are considered "complete proteins" because they contain all nine essential amino acids in adequate amounts:
+                Some plant foods are considered &ldquo;complete proteins&rdquo; because they contain all nine essential amino acids in adequate amounts:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gray-800/50 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-green-400 mb-2">Quinoa</h3>
-                  <p className="text-gray-300 text-sm">Often called a "super grain," quinoa contains all essential amino acids and is also rich in fiber, iron, and magnesium. It's versatile and can replace rice in most dishes.</p>
+                  <p className="text-gray-300 text-sm">Often called a &ldquo;super grain,&rdquo; quinoa contains all essential amino acids and is also rich in fiber, iron, and magnesium. It&rsquo;s versatile and can replace rice in most dishes.</p>
                 </div>
                 <div className="bg-gray-800/50 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-green-400 mb-2">Hemp Seeds</h3>

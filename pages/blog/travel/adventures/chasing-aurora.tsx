@@ -6,7 +6,7 @@ export default function ChasingAurora() {
   return (
     <>
       <Head>
-        <title>Chasing Aurora: Iceland's Celestial Dance | Chrono-Wanderer's Atlas</title>
+        <title>Chasing Aurora: Iceland's Celestial Dance | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Witness the magical northern lights in Iceland's untouched wilderness with our expert guide." />
       </Head>
 
@@ -14,7 +14,7 @@ export default function ChasingAurora() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">

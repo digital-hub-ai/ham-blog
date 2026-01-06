@@ -25,7 +25,7 @@ export default function DestinationsIndex() {
             "description": "Explore destinations around the world through our curated travel guides.",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai-tools-directory.com/images/logo.png"

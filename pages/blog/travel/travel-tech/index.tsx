@@ -15,7 +15,7 @@ export default function TravelTechIndex() {
   return (
     <>
       <Head>
-        <title>Travel Technology | Chrono-Wanderer's Atlas</title>
+        <title>Travel Technology | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Explore the latest travel technology innovations transforming how we plan, book, and experience our journeys around the world." />
         <meta name="keywords" content="travel technology, smart luggage, travel apps, AI travel, VR travel, biometric boarding" />
       </Head>
@@ -24,7 +24,7 @@ export default function TravelTechIndex() {
         <div className="container mx-auto px-4 py-12 max-w-6xl">
           <Link href="/blog/travel" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <div className="mb-12">

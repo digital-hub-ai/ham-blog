@@ -191,7 +191,7 @@ export default function SourdoughStarter() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Q: How do I know if my starter is ready to use?</h3>
-                    <p className="text-gray-300">A: A starter is ready when it has doubled in size, is full of bubbles, and passes the "float test" (a spoonful floats in water). This typically occurs 4-8 hours after feeding when the starter is at peak activity.</p>
+                    <p className="text-gray-300">A: A starter is ready when it has doubled in size, is full of bubbles, and passes the &ldquo;float test&rdquo; (a spoonful floats in water). This typically occurs 4-8 hours after feeding when the starter is at peak activity.</p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Q: What if I see liquid on top of my starter?</h3>
@@ -229,7 +229,7 @@ export default function SourdoughStarter() {
                     </ul>
                   </div>
                   <div className="pt-2">
-                    <p className="text-green-400 font-semibold">Answer: b) 4-8 hours when it's at peak activity</p>
+                    <p className="text-green-400 font-semibold">Answer: b) 4-8 hours when it&rsquo;s at peak activity</p>
                   </div>
                 </div>
               </div>

@@ -6,7 +6,7 @@ export default function IcelandHighlights() {
   return (
     <>
       <Head>
-        <title>Iceland Highlights: Geysers to Glaciers | Chrono-Wanderer's Atlas</title>
+        <title>Iceland Highlights: Geysers to Glaciers | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Discover Iceland's most spectacular natural wonders from the Golden Circle to the South Coast including geysers, waterfalls, glaciers, and the Northern Lights in 2025." />
         <meta name="keywords" content="Iceland travel, Golden Circle, Northern Lights, geysers, waterfalls, glaciers, South Coast, Icelandic nature" />
         <meta name="author" content="Arctic Travel Specialist" />
@@ -32,7 +32,7 @@ export default function IcelandHighlights() {
             "dateModified": "2025-12-20T14:00:00Z",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://example.com/logo.png"
@@ -130,7 +130,7 @@ export default function IcelandHighlights() {
               </p>
 
               <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-                <h3 class="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+                <h3 class="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
                 <p>
                   Rent a robust vehicle suitable for F-road conditions if planning Highland adventures, and always check weather forecasts before departing. Icelandic weather changes rapidly, and preparation ensures safe exploration of remote areas.
                 </p>

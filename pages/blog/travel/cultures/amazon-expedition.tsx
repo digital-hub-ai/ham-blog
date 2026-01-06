@@ -6,7 +6,7 @@ export default function AmazonExpedition() {
   return (
     <>
       <Head>
-        <title>Into the Green Heart: Amazon Rainforest Expedition | Chrono-Wanderer's Atlas</title>
+        <title>Into the Green Heart: Amazon Rainforest Expedition | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="An immersive journey into the lungs of the Earth with indigenous communities and wildlife." />
       </Head>
 
@@ -14,7 +14,7 @@ export default function AmazonExpedition() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-2xl border border-emerald-700/50 p-8">

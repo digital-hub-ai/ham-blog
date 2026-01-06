@@ -15,7 +15,7 @@ export default function AdventuresIndex() {
   return (
     <>
       <Head>
-        <title>Adventures | Chrono-Wanderer's Atlas</title>
+        <title>Adventures | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Thrilling adventures and outdoor experiences around the globe." />
       </Head>
 
@@ -23,7 +23,7 @@ export default function AdventuresIndex() {
         <div className="container mx-auto px-4 py-12 max-w-6xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <div className="mb-12">

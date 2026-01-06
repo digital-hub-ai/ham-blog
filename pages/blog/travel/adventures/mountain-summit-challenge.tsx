@@ -6,7 +6,7 @@ export default function MountainSummitChallenge() {
   return (
     <>
       <Head>
-        <title>Conquering Hidden Peaks: Extreme Mountain Climbing Adventures | Chrono-Wanderer's Atlas</title>
+        <title>Conquering Hidden Peaks: Extreme Mountain Climbing Adventures | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Tackle challenging mountain climbs with expert guides and breathtaking summit views for adrenaline seekers in 2025." />
         <meta name="keywords" content="mountain climbing, extreme sports, adventure travel, summit challenge, expert guides, outdoor adventure" />
         <meta name="author" content="Extreme Sports Correspondent" />
@@ -26,7 +26,7 @@ export default function MountainSummitChallenge() {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai-tools-directory.com/images/logo.png"
@@ -42,7 +42,7 @@ export default function MountainSummitChallenge() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -120,7 +120,7 @@ export default function MountainSummitChallenge() {
             </p>
             
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
               <p>
                 Invest in modular gear systems that allow customization for specific mountain conditions. Lightweight 
                 carbon fiber equipment has reduced pack weights significantly while maintaining structural integrity in 

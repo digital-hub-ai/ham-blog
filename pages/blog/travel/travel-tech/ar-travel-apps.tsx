@@ -6,7 +6,7 @@ export default function ARTravelApps() {
   return (
     <>
       <Head>
-        <title>Augmented Reality Travel Apps Changing How We Explore | Chrono-Wanderer's Atlas</title>
+        <title>Augmented Reality Travel Apps Changing How We Explore | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="How AR apps are transforming city exploration with real-time translations, historical overlays, and navigation assistance for modern travelers in 2025." />
         <meta name="keywords" content="AR travel apps, augmented reality travel, travel technology, city exploration, real-time translation, navigation apps" />
         <meta name="author" content="Tech Travel Writer" />
@@ -32,7 +32,7 @@ export default function ARTravelApps() {
             "dateModified": "2025-12-20T11:00:00Z",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://example.com/logo.png"
@@ -130,7 +130,7 @@ export default function ARTravelApps() {
               </p>
 
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
-                <h3 className="text-xl font-bold mb-4 text-blue-800">Traveler's Tip</h3>
+                <h3 className="text-xl font-bold mb-4 text-blue-800">Traveler&apos;s Tip</h3>
                 <p>
                   Download offline maps and language packs before traveling to ensure functionality in areas with limited connectivity. Most AR travel apps offer offline modes that store essential data locally for uninterrupted exploration.
                 </p>

@@ -27,7 +27,7 @@ export default function UltraLuxuryResorts2025() {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai-tools-directory.com/images/logo.png"

@@ -6,7 +6,7 @@ export default function MoroccanHospitality2025() {
   return (
     <>
       <Head>
-        <title>Moroccan Hospitality and Customs: Warmth of North African Culture | Chrono-Wanderer's Atlas</title>
+        <title>Moroccan Hospitality and Customs: Warmth of North African Culture | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Experience the warmth of Moroccan culture through traditional meals and social customs that have been passed down through generations in 2025." />
         <meta name="keywords" content="Moroccan culture, hospitality traditions, North African customs, traditional meals, cultural immersion, Moroccan etiquette" />
         <meta name="author" content="Cultural Anthropologist" />
@@ -26,7 +26,7 @@ export default function MoroccanHospitality2025() {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai-tools-directory.com/images/logo.png"
@@ -42,7 +42,7 @@ export default function MoroccanHospitality2025() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -122,7 +122,7 @@ export default function MoroccanHospitality2025() {
             </p>
             
             <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
               <p>
                 Accept invitations to share meals whenever offered, as declining hospitality can be interpreted as disrespectful. 
                 Wash hands before and after eating using the provided basin and pitcher, following traditional cleansing rituals 

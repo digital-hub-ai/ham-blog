@@ -6,7 +6,7 @@ export default function UnderwaterCaveDiving() {
   return (
     <>
       <Head>
-        <title>Underwater Cave Diving: Exploring Submerged Caverns | Chrono-Wanderer's Atlas</title>
+        <title>Underwater Cave Diving: Exploring Submerged Caverns | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Explore submerged caverns and encounter unique marine life in crystal-clear waters with expert guidance for certified divers in 2025." />
         <meta name="keywords" content="underwater cave diving, scuba diving, marine exploration, cavern diving, underwater caves, marine biology" />
         <meta name="author" content="Marine Exploration Specialist" />
@@ -26,7 +26,7 @@ export default function UnderwaterCaveDiving() {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai-tools-directory.com/images/logo.png"
@@ -42,7 +42,7 @@ export default function UnderwaterCaveDiving() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link href="/blog/travel" className="inline-flex items-center text-emerald-600 hover:text-emerald-800 mb-8">
             <span className="mr-2">←</span>
-            Back to Chrono-Wanderer's Atlas
+            Back to Chrono-Wanderer&apos;s Atlas
           </Link>
 
           <article className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
@@ -122,7 +122,7 @@ export default function UnderwaterCaveDiving() {
             </p>
             
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 my-8">
-              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler's Tip</h3>
+              <h3 className="text-xl font-bold mb-4 text-emerald-800">Traveler&apos;s Tip</h3>
               <p>
                 Invest in high-quality redundant equipment systems including multiple breathing gas sources, backup lights, 
                 and redundant guideline reels. Regular equipment maintenance and practice drills are essential for safe cave 

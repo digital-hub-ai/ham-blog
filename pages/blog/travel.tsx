@@ -91,7 +91,7 @@ export default function TravelReality() {
   return (
     <>
       <Head>
-        <title>Chrono-Wanderer's Atlas - Travel Dimension</title>
+        <title>Chrono-Wanderer&apos;s Atlas - Travel Dimension</title>
         <meta name="description" content="Journey through时空continuums to explore cultures, destinations, and adventures beyond imagination." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -124,7 +124,7 @@ export default function TravelReality() {
           {/* Reality Header */}
           <div className="text-center mb-16 pt-4">
             <div className="mb-6">
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent mb-4">Chrono-Wanderer's Atlas</h1>
+              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent mb-4">Chrono-Wanderer&apos;s Atlas</h1>
               <div className="w-32 h-1 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto rounded-full mb-6"></div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">The Travel Dimension - Journey through时空continuums to explore cultures, destinations, and adventures beyond imagination.</p>
             </div>

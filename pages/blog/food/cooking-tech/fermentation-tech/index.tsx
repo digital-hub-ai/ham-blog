@@ -35,7 +35,7 @@ export default function FermentationTechnology() {
 
             <div className="prose prose-invert max-w-none">
               <p className="text-xl text-green-200 mb-6">
-                Fermentation is one of humanity's oldest food preservation techniques, but modern technology has revolutionized how we approach these ancient processes. Today's fermentation tools provide precise control over temperature, humidity, and timing, allowing home cooks to create complex fermented foods with consistent, reliable results.
+                Fermentation is one of humanity&rsquo;s oldest food preservation techniques, but modern technology has revolutionized how we approach these ancient processes. Today&rsquo;s fermentation tools provide precise control over temperature, humidity, and timing, allowing home cooks to create complex fermented foods with consistent, reliable results.
               </p>
 
               <h2 className="text-2xl font-bold mt-10 mb-4 text-green-300">The Science of Fermentation</h2>

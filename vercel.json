@@ -5,10 +5,16 @@
       "src": "package.json",
       "use": "@vercel/next",
       "config": {
-        "includeFiles": ["prisma/**"]
+        "includeFiles": ["prisma/**"],
+        "maxLambdaSize": "15mb"
       }
     }
   ],
+  "build": {
+    "env": {
+      "NODE_VERSION": "20.x"
+    }
+  },
   "github": {
     "silent": true
   },

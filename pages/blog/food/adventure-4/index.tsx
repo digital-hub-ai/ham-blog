@@ -186,7 +186,7 @@ export default function WinePairing() {
                     <p className="text-gray-300">A: Not necessarily. While regional pairings often work well due to shared history and climate, many successful pairings cross regional boundaries. The key is matching the wine's characteristics with the food's flavors and textures.</p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Q: What if I don&rsquo;t like the "recommended" pairing?</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">Q: What if I don&rsquo;t like the &ldquo;recommended&rdquo; pairing?</h3>
                     <p className="text-gray-300">A: Personal preference is paramount. Wine pairing guidelines are just that—guidelines. If you enjoy a particular combination, that's the right pairing for you. The goal is to enhance your dining pleasure.</p>
                   </div>
                   <div>

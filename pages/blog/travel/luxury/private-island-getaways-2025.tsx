@@ -33,7 +33,7 @@ export default function PrivateIslandGetaways2025() {
             "dateModified": "2025-12-21T10:00:00Z",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://example.com/logo.png"

@@ -6,7 +6,7 @@ export default function SmartLuggage2025() {
   return (
     <>
       <Head>
-        <title>Smart Luggage Revolution: GPS Tracking and More | Chrono-Wanderer's Atlas</title>
+        <title>Smart Luggage Revolution: GPS Tracking and More | Chrono-Wanderer&apos;s Atlas</title>
         <meta name="description" content="Discover the latest innovations in smart luggage with GPS tracking, weight sensors, and built-in charging stations for 2025 travelers." />
         <meta name="keywords" content="smart luggage, GPS tracking, travel technology, luggage innovation, 2025 travel, smart travel accessories" />
         <meta name="author" content="Travel Tech Reporter" />
@@ -32,7 +32,7 @@ export default function SmartLuggage2025() {
             "dateModified": "2025-12-21T08:00:00Z",
             "publisher": {
               "@type": "Organization",
-              "name": "Chrono-Wanderer's Atlas",
+              "name": "Chrono-Wanderer&apos;s Atlas",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://example.com/logo.png"
@@ -130,7 +130,7 @@ export default function SmartLuggage2025() {
               </p>
 
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
-                <h3 className="text-xl font-bold mb-4 text-blue-800">Traveler's Tip</h3>
+                <h3 className="text-xl font-bold mb-4 text-blue-800">Traveler&apos;s Tip</h3>
                 <p>
                   When purchasing smart luggage, ensure the power bank capacity complies with airline regulations for carry-on items. Most airlines permit power banks up to 100Wh (approximately 27,000mAh) without special approval.
                 </p>

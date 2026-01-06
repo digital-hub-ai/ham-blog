@@ -48,7 +48,7 @@ export default function AIRecipeGenerator() {
                 Recipe technology has evolved from simple digital databases to sophisticated AI systems that can understand complex flavor profiles, nutritional requirements, and cooking techniques. Early recipe websites offered basic search functionality, but modern AI systems can analyze millions of recipes, understand ingredient interactions, and generate entirely new combinations based on user preferences.
               </p>
               <p className="mb-4">
-                Today's AI recipe generators use natural language processing to understand ingredient descriptions, cooking methods, and flavor profiles. They can predict how ingredients will interact, suggest substitutions, and even recommend cooking techniques that complement specific flavor combinations.
+                Today&rsquo;s AI recipe generators use natural language processing to understand ingredient descriptions, cooking methods, and flavor profiles. They can predict how ingredients will interact, suggest substitutions, and even recommend cooking techniques that complement specific flavor combinations.
               </p>
 
               <h2 className="text-2xl font-bold text-blue-400 mt-8 mb-4">How AI Recipe Generators Work</h2>
